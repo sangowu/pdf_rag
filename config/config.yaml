@@ -1,0 +1,69 @@
+# OCR Settings
+ocr:
+  lang: "ch"
+  use_angle_cls: true
+  confidence_threshold: 0.8
+
+# Chunking Settings
+chunking:
+  chunk_size: 512
+  chunk_overlap: 128
+  separators:
+    - "\n\n"
+    - "\n"
+    - "。"
+    - "，"
+    - "、"
+    - ","
+    - "."
+    - ""
+
+# Embedding Settings
+embedding:
+  model: "Qwen/Qwen3-Embedding-0.6B"  # Or your Qwen3-Embedding model name
+  dimension: 1024
+  api_base: "https://api-inference.modelscope.cn/v1"  # Fill in your OpenAI-compatible API endpoint
+  api_key: ""   # Fill in your API key (or use env var OPENAI_API_KEY)
+  batch_size: 32
+
+# ChromaDB Settings
+chromadb:
+  persist_directory: "vectors/chroma_db"
+  collection_name: "pdf_chunks"
+  distance_fn: "cosine"
+
+# LLM Settings (local transformers)
+llm:
+  mode: "api"  # "local" 或 "api"
+  
+  # API 模式配置
+  api:
+    model: "Qwen/Qwen3-4B-Instruct-2507"
+    api_base: "https://api-inference.modelscope.cn/v1"
+    api_key: ""
+  
+  # 本地模式配置（备用）
+  local:
+    model_name: "Qwen/Qwen3-4B-Instruct-2507"
+    device: "cuda"
+    max_tokens: 512
+    temperature: 0.1
+    torch_dtype: "auto"
+
+# Evaluation Settings
+evaluation:
+  top_k: 5
+  num_samples: 10
+
+# Paths
+paths:
+  pdf_dir: "data/raw/OpenDataLab___OmniDocBench/pdfs"
+  omnidoc_json: "data/raw/OpenDataLab___OmniDocBench/OmniDocBench.json"
+  gold_answers_csv: "data/answers/gold_answers.csv"
+  metrics_csv: "results/metrics.csv"
+  log_dir: "results/logs"
+  ocr_output_dir: "results/ocr_outputs"
+  ocr_structured_dir: "results/ocr_structured"
+  chunk_results_dir: "results/chunk_results"
+  vector_store_dir: "vectors/chroma_db"
+  all_chunk_path: "results/chunk_results/all_chunks.json"
