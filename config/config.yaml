@@ -1,0 +1,111 @@
+# OCR Settings
+ocr:
+  lang: "ch"
+  use_angle_cls: true
+  confidence_threshold: 0.8
+
+# Chunking Settings
+# type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
+chunking:
+  type: "recursive"
+  chunk_size: 768
+  chunk_overlap: 256
+  # Used when type is "recursive"; tried in order until chunks are <= chunk_size
+  separators:
+    - "。"     # 中文句号
+    - "．"     # 全角英文句号
+    - "."      # 英文句号
+    - "！"     # 中文感叹号
+    - "!"      # 英文感叹号
+    - "？"     # 中文问号
+    - "?"      # 英文问号
+    # 弱语义边界（句内停顿）
+    - "；"     # 中文分号
+    - ";"      # 英文分号
+    - "，"     # 中文逗号
+    - ","      # 英文逗号
+    - "、"     # 顿号
+    # 结构符号（OCR噪声，降到最低优先级）
+    - "\n\n"
+    - "\n"
+    - " "
+    - ""
+  # Optional: only for recursive; whether to keep separator at end of chunk (default false)
+  keep_separator: false
+
+# Embedding Settings
+embedding:
+  model: "Qwen/Qwen3-Embedding-0.6B"  # Or your Qwen3-Embedding model name
+  dimension: 1024
+  api_base: "https://api-inference.modelscope.cn/v1"  # Fill in your OpenAI-compatible API endpoint
+  api_key: ""   # Fill in your API key (or use env var OPENAI_API_KEY)
+  batch_size: 32
+
+  mode: "local"                    # 或 "api"，统一切换用
+  local_model_path: "models/Qwen3-Embedding-0.6B"  # 你本地保存 embedding 的目录
+  torch_dtype: "auto" 
+  device: "cuda"
+
+# ChromaDB Settings
+chromadb:
+  persist_directory: "vectors/chroma_db"
+  collection_name: "pdf_chunks"
+  distance_fn: "cosine"
+
+# LLM Settings (local transformers)
+llm:
+  mode: "local"  # 默认使用本地模型；可选 "local" 或 "api"
+  
+  # API 模式配置（备用）
+  api:
+    model: "Qwen/Qwen3-8B"
+    api_base: "https://api-inference.modelscope.cn/v1"
+    api_key: ""
+  
+  # 本地模式配置（默认）
+  local:
+    # Use local downloaded model under project root, to avoid re-downloading
+    model_name: "models/Qwen3-8B"
+    device: "cuda"
+    max_tokens: 512
+    temperature: 0.7  # 推荐：非思考模式下 0.7
+    torch_dtype: "auto"
+    top_p: 0.8        # 推荐：TopP=0.8
+    top_k: 20         # 推荐：TopK=20
+    min_p: 0.0        # 推荐：MinP=0
+    do_sample: true
+
+# Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
+# When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
+reranker:
+  enabled: true
+  top_r: 20
+  model_name: "Qwen/Qwen3-Reranker-4B"
+  local_model_path: "models/Qwen3-Reranker-4B"
+  device: "cuda"
+  torch_dtype: "auto"
+  batch_size: 2
+  max_length: 7168
+  # Document QA: judge if passage helps answer the question; content/answer may be in Chinese or English
+  instruction: "Judge whether this document passage contains information needed to answer the question. The passage or the answer may be in Chinese or English."
+
+# Evaluation Settings
+evaluation:
+  top_k: 5
+  num_samples: 10
+
+# Paths
+# pipeline_version: set to a short label (e.g. "fixed", "recursive") to keep chunk/embedding outputs per version; leave empty to overwrite.
+paths:
+  pipeline_version: ""
+  pdf_dir: "data/raw/OpenDataLab___OmniDocBench/pdfs"
+  omnidoc_json: "data/raw/OpenDataLab___OmniDocBench/OmniDocBench.json"
+  gold_answers_csv: "data/answers/gold_answers.csv"
+  metrics_csv: "results/metrics.csv"
+  log_dir: "results/logs"
+  ocr_output_dir: "results/ocr_outputs"
+  ocr_structured_dir: "results/ocr_structured"
+  chunk_results_dir: "results/chunk_results"
+  vector_store_dir: "vectors/chroma_db"
+  all_chunk_path: "results/chunk_results/all_chunks.json"
+  normalized_data_path: "data/answers/normalized_data.json"
