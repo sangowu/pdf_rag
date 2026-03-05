@@ -7,9 +7,11 @@ ocr:
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
 chunking:
-  type: "recursive"
-  chunk_size: 768
-  chunk_overlap: 256
+  type: "fixed"
+  chunk_size: 800
+  chunk_overlap: 200
+  # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
+  file_limit: 0
   # Used when type is "recursive"; tried in order until chunks are <= chunk_size
   separators:
     - "。"     # 中文句号
@@ -78,8 +80,8 @@ llm:
 # Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: true
-  top_r: 20
+  enabled: false
+  top_r: 15
   model_name: "Qwen/Qwen3-Reranker-4B"
   local_model_path: "models/Qwen3-Reranker-4B"
   device: "cuda"

@@ -118,7 +118,7 @@ class ChunkManager:
         for chunk_s in chunk_schema_list:
             out_path = chunk_schema_path / f"{chunk_s['file_name']}_{chunk_s['page_index']}_{chunk_s['chunk_index']}.json"
             self._write_chunk_schema(chunk_s, out_path)
-            logger.info("Chunk schema generated and saved to %s", out_path)
+            logger.debug("Chunk schema generated and saved to %s", out_path)
 
         return chunk_schema_list
 
