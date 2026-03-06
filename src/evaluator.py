@@ -4,6 +4,8 @@ import time
 from pathlib import Path
 from typing import Iterable
 
+from tqdm import tqdm
+
 from src.utils import load_config
 from src.vector_store import VectorStore
 
@@ -120,6 +122,7 @@ class RAGEvaluator:
 
         with gold_path.open("r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
+            rows = []
             for row in reader:
                 question = (row.get("question") or "").strip()
                 gold_ids_str = (row.get("gold_chunk_ids") or "").strip()
@@ -128,45 +131,47 @@ class RAGEvaluator:
                 gold_ids = {cid for cid in gold_ids_str.split(",") if cid}
                 if not gold_ids:
                     continue
+                rows.append((question, gold_ids))
 
-                retrieved_ids_full, timings = self._search_once(question, max_k)
-                timing_details.append({
-                    "question_index": len(timing_details) + 1,
-                    "embed_s": round(timings["embed_time_s"], 4),
-                    "chroma_s": round(timings["chroma_time_s"], 4),
-                    "rerank_s": round(timings["rerank_time_s"], 4),
-                    "total_s": round(timings["total_time_s"], 4),
-                })
+        for question, gold_ids in tqdm(rows, desc="Evaluating", unit="query"):
+            retrieved_ids_full, timings = self._search_once(question, max_k)
+            timing_details.append({
+                "question_index": len(timing_details) + 1,
+                "embed_s": round(timings["embed_time_s"], 4),
+                "chroma_s": round(timings["chroma_time_s"], 4),
+                "rerank_s": round(timings["rerank_time_s"], 4),
+                "total_s": round(timings["total_time_s"], 4),
+            })
 
-                for k in ks:
-                    result = self.calculate_hit_at_k(retrieved_ids_full, gold_ids, k)
-                    retrieved_ids = result["retrieved_chunk_ids"]
-                    s = stats[k]
-                    s["total"] += 1
-                    s["sum_hit_rate"] += result["hit_rate"]
+            for k in ks:
+                result = self.calculate_hit_at_k(retrieved_ids_full, gold_ids, k)
+                retrieved_ids = result["retrieved_chunk_ids"]
+                s = stats[k]
+                s["total"] += 1
+                s["sum_hit_rate"] += result["hit_rate"]
 
-                    first_rank = 0
-                    for idx, cid in enumerate(retrieved_ids, start=1):
-                        if cid in gold_ids:
-                            first_rank = idx
-                            break
-                    if first_rank > 0:
-                        s["sum_reciprocal_rank"] += 1.0 / first_rank
+                first_rank = 0
+                for idx, cid in enumerate(retrieved_ids, start=1):
+                    if cid in gold_ids:
+                        first_rank = idx
+                        break
+                if first_rank > 0:
+                    s["sum_reciprocal_rank"] += 1.0 / first_rank
 
-                    if result["hit"]:
-                        s["num_hit"] += 1
+                if result["hit"]:
+                    s["num_hit"] += 1
 
-                    details.append(
-                        {
-                            "question": question,
-                            "k": k,
-                            "gold_chunk_ids": ",".join(sorted(gold_ids)),
-                            "retrieved_chunk_ids": ",".join(retrieved_ids),
-                            "first_hit_rank": first_rank,
-                            "hit": result["hit"],
-                            "hit_rate": result["hit_rate"],
-                        }
-                    )
+                details.append(
+                    {
+                        "question": question,
+                        "k": k,
+                        "gold_chunk_ids": ",".join(sorted(gold_ids)),
+                        "retrieved_chunk_ids": ",".join(retrieved_ids),
+                        "first_hit_rank": first_rank,
+                        "hit": result["hit"],
+                        "hit_rate": result["hit_rate"],
+                    }
+                )
 
         base_metrics_path = Path(self.metrics_csv)
         metrics_dir = base_metrics_path.parent

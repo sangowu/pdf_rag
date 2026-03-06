@@ -1,0 +1,157 @@
+[
+  {
+    "filename": "yanbaopptmerge_yanbaoPPT_1685.pdf",
+    "page_index": 1685,
+    "core_content": {
+      "parsing_res_list": [
+        {
+          "block_label": "doc_title",
+          "block_content": "第一PPT模板网",
+          "block_bbox": [
+            686,
+            665,
+            2288,
+            1116
+          ],
+          "block_id": 0,
+          "block_order": 1
+        },
+        {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            0,
+            1380,
+            1252,
+            2250
+          ],
+          "block_id": 1,
+          "block_order": null
+        }
+      ],
+      "markdown": "# 第一PPT模板网\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_1380_1252_2250.jpg\" alt=\"Image\" width=\"41%\" /></div>\n",
+      "tables": [],
+      "formulas": [],
+      "seals": []
+    },
+    "metadata": {
+      "width": 3000,
+      "height": 2250,
+      "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_orientation_classify": true,
+          "use_doc_unwarping": true
+        },
+        "angle": 0
+      },
+      "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.5716327428817749,
+            "coordinate": [
+              0.017822265625,
+              1380.69482421875,
+              1252.47998046875,
+              2250
+            ]
+          },
+          {
+            "cls_id": 10,
+            "label": "doc_title",
+            "score": 0.5289798974990845,
+            "coordinate": [
+              686.0892944335938,
+              665.81201171875,
+              2288.40283203125,
+              1116.998779296875
+            ]
+          }
+        ]
+      },
+      "region_det_res": {},
+      "overall_ocr_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_preprocessor": false,
+          "use_textline_orientation": true
+        },
+        "dt_polys": [],
+        "text_det_params": {
+          "limit_side_len": 736,
+          "limit_type": "min",
+          "thresh": 0.3,
+          "max_side_limit": 4000,
+          "box_thresh": 0.6,
+          "unclip_ratio": 1.5
+        },
+        "text_type": "general",
+        "text_rec_score_thresh": 0.0,
+        "return_word_box": false,
+        "rec_texts": [
+          "第一PPT模板网"
+        ],
+        "rec_scores": [
+          0.9636343717575073
+        ],
+        "rec_polys": [
+          [
+            [
+              686,
+              665
+            ],
+            [
+              2288,
+              665
+            ],
+            [
+              2288,
+              1116
+            ],
+            [
+              686,
+              1116
+            ]
+          ]
+        ],
+        "rec_boxes": [
+          [
+            686.0892944335938,
+            665.81201171875,
+            2288.40283203125,
+            1116.998779296875
+          ]
+        ]
+      },
+      "table_res_list": [],
+      "seal_res_list": [],
+      "chart_res_list": [],
+      "formula_res_list": [],
+      "imgs_in_doc": [],
+      "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_seal_recognition": false,
+        "use_table_recognition": true,
+        "use_formula_recognition": true,
+        "use_chart_recognition": false,
+        "use_region_detection": true,
+        "format_block_content": false,
+        "markdown_ignore_labels": [
+          "number",
+          "footnote",
+          "header",
+          "header_image",
+          "footer",
+          "footer_image",
+          "aside_text"
+        ]
+      }
+    }
+  }
+]

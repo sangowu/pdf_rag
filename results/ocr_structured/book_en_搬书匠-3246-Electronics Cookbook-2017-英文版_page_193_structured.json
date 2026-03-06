@@ -1,0 +1,2144 @@
+[
+  {
+    "filename": "book_en_搬书匠-3246-Electronics Cookbook-2017-英文版_page_193.pdf",
+    "page_index": 193,
+    "core_content": {
+      "parsing_res_list": [
+        {
+          "block_label": "image",
+          "block_content": "+V \nR2\nW E Q2\nR1\n\n—WW Q1\nGPIO pin LOAD \nGND \n\n",
+          "block_bbox": [
+            225,
+            78,
+            1881,
+            551
+          ],
+          "block_id": 0,
+          "block_order": null
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "Figure 11-4. High-side Switching with an NPN BJT Driving a PNP BJT ",
+          "block_bbox": [
+            214,
+            573,
+            1562,
+            623
+          ],
+          "block_id": 1,
+          "block_order": null
+        },
+        {
+          "block_label": "text",
+          "block_content": "Low-side switching (Recipe 11.1) is the most common and simplest arrangement,and unless you have a good reason such as the need for one end of the load to be connected to ground, you should use low-side switching.\n",
+          "block_bbox": [
+            208,
+            689,
+            1881,
+            857
+          ],
+          "block_id": 2,
+          "block_order": 1
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "See Also ",
+          "block_bbox": [
+            210,
+            911,
+            420,
+            969
+          ],
+          "block_id": 3,
+          "block_order": 2
+        },
+        {
+          "block_label": "text",
+          "block_content": "For a discussion of NPN and PNP bipolar transistors, see Recipe 5.1.",
+          "block_bbox": [
+            209,
+            1018,
+            1553,
+            1071
+          ],
+          "block_id": 4,
+          "block_order": 3
+        },
+        {
+          "block_label": "text",
+          "block_content": "GPIO portsand thir output logicare described in Reip10.7.",
+          "block_bbox": [
+            208,
+            1105,
+            1452,
+            1155
+          ],
+          "block_id": 5,
+          "block_order": 4
+        },
+        {
+          "block_label": "text",
+          "block_content": "You will find an exampleof swiching withatransistorusinan Arduinoin Recipe 11.6 and for a Raspberry Pi in Recipe 11.7.\n",
+          "block_bbox": [
+            208,
+            1193,
+            1889,
+            1301
+          ],
+          "block_id": 6,
+          "block_order": 5
+        },
+        {
+          "block_label": "text",
+          "block_content": "For switching using a MOSFET, see Recipe 11.3.",
+          "block_bbox": [
+            209,
+            1341,
+            1157,
+            1391
+          ],
+          "block_id": 7,
+          "block_order": 6
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "11.3 Switch Much More Power ",
+          "block_bbox": [
+            212,
+            1457,
+            1087,
+            1525
+          ],
+          "block_id": 8,
+          "block_order": 7
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "Problem ",
+          "block_bbox": [
+            211,
+            1595,
+            426,
+            1651
+          ],
+          "block_id": 9,
+          "block_order": 8
+        },
+        {
+          "block_label": "text",
+          "block_content": "You want to allow a GPIO pin to control more power than it otherwise could, but a BJT isn't enough.\n",
+          "block_bbox": [
+            208,
+            1694,
+            1890,
+            1808
+          ],
+          "block_id": 10,
+          "block_order": 9
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "Solution ",
+          "block_bbox": [
+            211,
+            1871,
+            421,
+            1926
+          ],
+          "block_id": 11,
+          "block_order": 10
+        },
+        {
+          "block_label": "text",
+          "block_content": "You can use a MOSFET as an electronic switch. Use the transistor in a commonsource arrangement.Figure 11-5 shows the schematicfor this circuit. Along with Recipe 11.1, you will find yourself using this circuit a lot.",
+          "block_bbox": [
+            207,
+            1970,
+            1891,
+            2138
+          ],
+          "block_id": 12,
+          "block_order": 11
+        },
+        {
+          "block_label": "text",
+          "block_content": "This typeof switching is called\"low-side\"switching because the transistor acts as a switch between the low voltage of GND and the load.\n",
+          "block_bbox": [
+            207,
+            2174,
+            1888,
+            2283
+          ],
+          "block_id": 13,
+          "block_order": 12
+        },
+        {
+          "block_label": "text",
+          "block_content": "If the GPIOpinishigh(3.3Vor5V)andexceedsthegate-threholdvoltageof the MOSFET, theMOSFET will turn,llowincurrenttolwfrom+Vthrough the load to GND.\n",
+          "block_bbox": [
+            207,
+            2317,
+            1886,
+            2491
+          ],
+          "block_id": 14,
+          "block_order": 13
+        },
+        {
+          "block_label": "footer",
+          "block_content": "11.3 Switch Much More Power ",
+          "block_bbox": [
+            1330,
+            2708,
+            1749,
+            2753
+          ],
+          "block_id": 15,
+          "block_order": null
+        },
+        {
+          "block_label": "number",
+          "block_content": "173",
+          "block_bbox": [
+            1841,
+            2698,
+            1889,
+            2732
+          ],
+          "block_id": 16,
+          "block_order": null
+        }
+      ],
+      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_225_78_1881_551.jpg\" alt=\"Image\" width=\"78%\" /></div>\n\n\n<div style=\"text-align: center;\">Figure 11-4. High-side Switching with an NPN BJT Driving a PNP BJT </div>\n\n\nLow-side switching (Recipe 11.1) is the most common and simplest arrangement,and unless you have a good reason such as the need for one end of the load to be connected to ground, you should use low-side switching.\n\n\n\n## See Also \n\nFor a discussion of NPN and PNP bipolar transistors, see Recipe 5.1.\n\nGPIO portsand thir output logicare described in Reip10.7.\n\nYou will find an exampleof swiching withatransistorusinan Arduinoin Recipe 11.6 and for a Raspberry Pi in Recipe 11.7.\n\n\n\nFor switching using a MOSFET, see Recipe 11.3.\n\n### 11.3 Switch Much More Power \n\n## Problem \n\nYou want to allow a GPIO pin to control more power than it otherwise could, but a BJT isn't enough.\n\n\n\n## Solution \n\nYou can use a MOSFET as an electronic switch. Use the transistor in a commonsource arrangement.Figure 11-5 shows the schematicfor this circuit. Along with Recipe 11.1, you will find yourself using this circuit a lot.\n\nThis typeof switching is called\"low-side\"switching because the transistor acts as a switch between the low voltage of GND and the load.\n\n\n\nIf the GPIOpinishigh(3.3Vor5V)andexceedsthegate-threholdvoltageof the MOSFET, theMOSFET will turn,llowincurrenttolwfrom+Vthrough the load to GND.\n\n",
+      "tables": [],
+      "formulas": [],
+      "seals": []
+    },
+    "metadata": {
+      "width": 2100,
+      "height": 2757,
+      "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_orientation_classify": true,
+          "use_doc_unwarping": true
+        },
+        "angle": 0
+      },
+      "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9717680811882019,
+            "coordinate": [
+              207.1590576171875,
+              1970.443115234375,
+              1891.3975830078125,
+              2138.802001953125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9698261022567749,
+            "coordinate": [
+              207.62213134765625,
+              2317.7685546875,
+              1886.9697265625,
+              2491.0
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9690662026405334,
+            "coordinate": [
+              208.70318603515625,
+              689.6474609375,
+              1881.1513671875,
+              857.341552734375
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9599176645278931,
+            "coordinate": [
+              208.52972412109375,
+              1193.2158203125,
+              1889.71240234375,
+              1301.788330078125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9590121507644653,
+            "coordinate": [
+              208.235107421875,
+              1694.60400390625,
+              1890.778564453125,
+              1808.5380859375
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.957587718963623,
+            "coordinate": [
+              207.09356689453125,
+              2174.39208984375,
+              1888.887451171875,
+              2283.1845703125
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.9366641044616699,
+            "coordinate": [
+              212.50628662109375,
+              1457.144287109375,
+              1087.99853515625,
+              1525.016357421875
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.9143282771110535,
+            "coordinate": [
+              211.13316345214844,
+              1871.47265625,
+              421.55615234375,
+              1926.9814453125
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.9125484228134155,
+            "coordinate": [
+              211.43829345703125,
+              1595.570068359375,
+              426.18096923828125,
+              1651.624267578125
+            ]
+          },
+          {
+            "cls_id": 14,
+            "label": "footer",
+            "score": 0.9118769764900208,
+            "coordinate": [
+              1330.86669921875,
+              2708.12890625,
+              1749.5859375,
+              2753.0869140625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9084311723709106,
+            "coordinate": [
+              209.8958740234375,
+              1341.972900390625,
+              1157.4180908203125,
+              1391.628173828125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9067549705505371,
+            "coordinate": [
+              208.7933349609375,
+              1105.650146484375,
+              1452.3609619140625,
+              1155.900634765625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.9052225947380066,
+            "coordinate": [
+              209.0068359375,
+              1018.8211669921875,
+              1553.33154296875,
+              1071.3431396484375
+            ]
+          },
+          {
+            "cls_id": 6,
+            "label": "figure_title",
+            "score": 0.9045974612236023,
+            "coordinate": [
+              214.68536376953125,
+              573.49609375,
+              1562.0263671875,
+              623.8304443359375
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.9013616442680359,
+            "coordinate": [
+              210.05291748046875,
+              911.673583984375,
+              420.0889892578125,
+              969.188232421875
+            ]
+          },
+          {
+            "cls_id": 3,
+            "label": "number",
+            "score": 0.8454281687736511,
+            "coordinate": [
+              1841.23095703125,
+              2698.046875,
+              1889.98974609375,
+              2732.1259765625
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.7540596127510071,
+            "coordinate": [
+              225.1595458984375,
+              78.7890625,
+              1881.1827392578125,
+              551.4814453125
+            ]
+          }
+        ]
+      },
+      "region_det_res": {},
+      "overall_ocr_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_preprocessor": false,
+          "use_textline_orientation": true
+        },
+        "dt_polys": [
+          [
+            [
+              1288,
+              128
+            ],
+            [
+              1349,
+              128
+            ],
+            [
+              1349,
+              178
+            ],
+            [
+              1288,
+              178
+            ]
+          ],
+          [
+            [
+              1083,
+              185
+            ],
+            [
+              1143,
+              185
+            ],
+            [
+              1143,
+              230
+            ],
+            [
+              1083,
+              230
+            ]
+          ],
+          [
+            [
+              1202,
+              211
+            ],
+            [
+              1230,
+              211
+            ],
+            [
+              1230,
+              238
+            ],
+            [
+              1202,
+              238
+            ]
+          ],
+          [
+            [
+              1235,
+              208
+            ],
+            [
+              1294,
+              214
+            ],
+            [
+              1289,
+              262
+            ],
+            [
+              1230,
+              255
+            ]
+          ],
+          [
+            [
+              1064,
+              223
+            ],
+            [
+              1151,
+              223
+            ],
+            [
+              1151,
+              273
+            ],
+            [
+              1064,
+              273
+            ]
+          ],
+          [
+            [
+              886,
+              258
+            ],
+            [
+              941,
+              258
+            ],
+            [
+              941,
+              301
+            ],
+            [
+              886,
+              301
+            ]
+          ],
+          [
+            [
+              835,
+              294
+            ],
+            [
+              952,
+              297
+            ],
+            [
+              951,
+              344
+            ],
+            [
+              834,
+              341
+            ]
+          ],
+          [
+            [
+              1032,
+              288
+            ],
+            [
+              1088,
+              288
+            ],
+            [
+              1088,
+              330
+            ],
+            [
+              1032,
+              330
+            ]
+          ],
+          [
+            [
+              766,
+              348
+            ],
+            [
+              913,
+              351
+            ],
+            [
+              912,
+              397
+            ],
+            [
+              765,
+              394
+            ]
+          ],
+          [
+            [
+              1261,
+              362
+            ],
+            [
+              1365,
+              366
+            ],
+            [
+              1363,
+              409
+            ],
+            [
+              1259,
+              405
+            ]
+          ],
+          [
+            [
+              966,
+              491
+            ],
+            [
+              1048,
+              491
+            ],
+            [
+              1048,
+              528
+            ],
+            [
+              966,
+              528
+            ]
+          ],
+          [
+            [
+              219,
+              569
+            ],
+            [
+              1569,
+              575
+            ],
+            [
+              1569,
+              629
+            ],
+            [
+              219,
+              623
+            ]
+          ],
+          [
+            [
+              212,
+              681
+            ],
+            [
+              1888,
+              693
+            ],
+            [
+              1888,
+              750
+            ],
+            [
+              212,
+              738
+            ]
+          ],
+          [
+            [
+              212,
+              739
+            ],
+            [
+              1890,
+              746
+            ],
+            [
+              1890,
+              808
+            ],
+            [
+              212,
+              800
+            ]
+          ],
+          [
+            [
+              212,
+              800
+            ],
+            [
+              1335,
+              808
+            ],
+            [
+              1335,
+              865
+            ],
+            [
+              212,
+              857
+            ]
+          ],
+          [
+            [
+              210,
+              904
+            ],
+            [
+              429,
+              910
+            ],
+            [
+              427,
+              982
+            ],
+            [
+              208,
+              976
+            ]
+          ],
+          [
+            [
+              210,
+              1011
+            ],
+            [
+              1559,
+              1026
+            ],
+            [
+              1559,
+              1080
+            ],
+            [
+              210,
+              1065
+            ]
+          ],
+          [
+            [
+              211,
+              1098
+            ],
+            [
+              1461,
+              1104
+            ],
+            [
+              1460,
+              1168
+            ],
+            [
+              211,
+              1162
+            ]
+          ],
+          [
+            [
+              207,
+              1184
+            ],
+            [
+              1899,
+              1188
+            ],
+            [
+              1899,
+              1255
+            ],
+            [
+              207,
+              1251
+            ]
+          ],
+          [
+            [
+              212,
+              1249
+            ],
+            [
+              1060,
+              1249
+            ],
+            [
+              1060,
+              1310
+            ],
+            [
+              212,
+              1310
+            ]
+          ],
+          [
+            [
+              208,
+              1339
+            ],
+            [
+              1166,
+              1336
+            ],
+            [
+              1166,
+              1397
+            ],
+            [
+              208,
+              1401
+            ]
+          ],
+          [
+            [
+              210,
+              1452
+            ],
+            [
+              1101,
+              1452
+            ],
+            [
+              1101,
+              1537
+            ],
+            [
+              210,
+              1537
+            ]
+          ],
+          [
+            [
+              209,
+              1589
+            ],
+            [
+              434,
+              1594
+            ],
+            [
+              432,
+              1666
+            ],
+            [
+              207,
+              1662
+            ]
+          ],
+          [
+            [
+              207,
+              1693
+            ],
+            [
+              1903,
+              1684
+            ],
+            [
+              1903,
+              1748
+            ],
+            [
+              207,
+              1757
+            ]
+          ],
+          [
+            [
+              212,
+              1756
+            ],
+            [
+              557,
+              1758
+            ],
+            [
+              557,
+              1812
+            ],
+            [
+              212,
+              1810
+            ]
+          ],
+          [
+            [
+              210,
+              1865
+            ],
+            [
+              431,
+              1869
+            ],
+            [
+              430,
+              1940
+            ],
+            [
+              208,
+              1936
+            ]
+          ],
+          [
+            [
+              210,
+              1970
+            ],
+            [
+              1899,
+              1965
+            ],
+            [
+              1899,
+              2019
+            ],
+            [
+              210,
+              2024
+            ]
+          ],
+          [
+            [
+              654,
+              2026
+            ],
+            [
+              1901,
+              2014
+            ],
+            [
+              1901,
+              2075
+            ],
+            [
+              655,
+              2086
+            ]
+          ],
+          [
+            [
+              213,
+              2039
+            ],
+            [
+              635,
+              2037
+            ],
+            [
+              635,
+              2079
+            ],
+            [
+              213,
+              2081
+            ]
+          ],
+          [
+            [
+              208,
+              2086
+            ],
+            [
+              1431,
+              2078
+            ],
+            [
+              1431,
+              2141
+            ],
+            [
+              208,
+              2149
+            ]
+          ],
+          [
+            [
+              207,
+              2172
+            ],
+            [
+              1900,
+              2166
+            ],
+            [
+              1900,
+              2229
+            ],
+            [
+              207,
+              2235
+            ]
+          ],
+          [
+            [
+              208,
+              2235
+            ],
+            [
+              1259,
+              2226
+            ],
+            [
+              1260,
+              2287
+            ],
+            [
+              208,
+              2296
+            ]
+          ],
+          [
+            [
+              204,
+              2317
+            ],
+            [
+              1898,
+              2304
+            ],
+            [
+              1898,
+              2376
+            ],
+            [
+              204,
+              2390
+            ]
+          ],
+          [
+            [
+              206,
+              2381
+            ],
+            [
+              1899,
+              2364
+            ],
+            [
+              1899,
+              2432
+            ],
+            [
+              206,
+              2449
+            ]
+          ],
+          [
+            [
+              209,
+              2442
+            ],
+            [
+              487,
+              2447
+            ],
+            [
+              487,
+              2498
+            ],
+            [
+              209,
+              2493
+            ]
+          ],
+          [
+            [
+              1831,
+              2692
+            ],
+            [
+              1903,
+              2689
+            ],
+            [
+              1905,
+              2741
+            ],
+            [
+              1833,
+              2745
+            ]
+          ],
+          [
+            [
+              1330,
+              2715
+            ],
+            [
+              1760,
+              2700
+            ],
+            [
+              1761,
+              2748
+            ],
+            [
+              1332,
+              2757
+            ]
+          ]
+        ],
+        "text_det_params": {
+          "limit_side_len": 736,
+          "limit_type": "min",
+          "thresh": 0.3,
+          "max_side_limit": 4000,
+          "box_thresh": 0.6,
+          "unclip_ratio": 1.5
+        },
+        "text_type": "general",
+        "textline_orientation_angles": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "text_rec_score_thresh": 0.0,
+        "return_word_box": false,
+        "rec_texts": [
+          "+V",
+          "R2",
+          "E",
+          "Q2",
+          "W",
+          "R1",
+          "—WW",
+          "Q1",
+          "GPIO pin",
+          "LOAD",
+          "GND",
+          "Figure 11-4. High-side Switching with an NPN BJT Driving a PNP BJT",
+          "Low-side switching (Recipe 11.1) is the most common and simplest arrangement,",
+          "and unless you have a good reason such as the need for one end of the load to be",
+          "connected to ground, you should use low-side switching.",
+          "See Also",
+          "For a discussion of NPN and PNP bipolar transistors, see Recipe 5.1.",
+          "GPIO portsand thir output logicare described in Reip10.7.",
+          "You will find an exampleof swiching withatransistorusinan Arduinoin Recipe",
+          "11.6 and for a Raspberry Pi in Recipe 11.7.",
+          "For switching using a MOSFET, see Recipe 11.3.",
+          "11.3 Switch Much More Power",
+          "Problem",
+          "You want to allow a GPIO pin to control more power than it otherwise could, but a",
+          "BJT isn't enough.",
+          "Solution",
+          "You can use a MOSFET as an electronic switch. Use the transistor in a common-",
+          "Figure 11-5 shows the schematicfor this circuit. Along",
+          "source arrangement.",
+          "with Recipe 11.1, you will find yourself using this circuit a lot.",
+          "This typeof switching is called\"low-side\"switching because the transistor acts as a",
+          "switch between the low voltage of GND and the load.",
+          "If the GPIOpinishigh(3.3Vor5V)andexceedsthegate-threholdvoltageof the",
+          "MOSFET, theMOSFET will turn,llowincurrenttolwfrom+Vthrough the",
+          "load to GND.",
+          "173",
+          "11.3 Switch Much More Power"
+        ],
+        "rec_scores": [
+          0.992514967918396,
+          0.9991768598556519,
+          0.1298607736825943,
+          0.9879631400108337,
+          0.6396014094352722,
+          0.9982943534851074,
+          0.508200466632843,
+          0.9971774816513062,
+          0.9577867984771729,
+          0.999250590801239,
+          0.9985082745552063,
+          0.9797573685646057,
+          0.9467455148696899,
+          0.9541918039321899,
+          0.9672026634216309,
+          0.9916011691093445,
+          0.9822043180465698,
+          0.8285629749298096,
+          0.8989973068237305,
+          0.9701051115989685,
+          0.9554737210273743,
+          0.9695305824279785,
+          0.9990865588188171,
+          0.9713799953460693,
+          0.9590253233909607,
+          0.9996428489685059,
+          0.9691368937492371,
+          0.9198490977287292,
+          0.9674220681190491,
+          0.9271090030670166,
+          0.955215573310852,
+          0.9403114914894104,
+          0.806339681148529,
+          0.8828017711639404,
+          0.9753006100654602,
+          0.9997267723083496,
+          0.9672888517379761
+        ],
+        "rec_polys": [
+          [
+            [
+              1288,
+              128
+            ],
+            [
+              1349,
+              128
+            ],
+            [
+              1349,
+              178
+            ],
+            [
+              1288,
+              178
+            ]
+          ],
+          [
+            [
+              1083,
+              185
+            ],
+            [
+              1143,
+              185
+            ],
+            [
+              1143,
+              230
+            ],
+            [
+              1083,
+              230
+            ]
+          ],
+          [
+            [
+              1202,
+              211
+            ],
+            [
+              1230,
+              211
+            ],
+            [
+              1230,
+              238
+            ],
+            [
+              1202,
+              238
+            ]
+          ],
+          [
+            [
+              1235,
+              208
+            ],
+            [
+              1294,
+              214
+            ],
+            [
+              1289,
+              262
+            ],
+            [
+              1230,
+              255
+            ]
+          ],
+          [
+            [
+              1064,
+              223
+            ],
+            [
+              1151,
+              223
+            ],
+            [
+              1151,
+              273
+            ],
+            [
+              1064,
+              273
+            ]
+          ],
+          [
+            [
+              886,
+              258
+            ],
+            [
+              941,
+              258
+            ],
+            [
+              941,
+              301
+            ],
+            [
+              886,
+              301
+            ]
+          ],
+          [
+            [
+              835,
+              294
+            ],
+            [
+              952,
+              297
+            ],
+            [
+              951,
+              344
+            ],
+            [
+              834,
+              341
+            ]
+          ],
+          [
+            [
+              1032,
+              288
+            ],
+            [
+              1088,
+              288
+            ],
+            [
+              1088,
+              330
+            ],
+            [
+              1032,
+              330
+            ]
+          ],
+          [
+            [
+              766,
+              348
+            ],
+            [
+              913,
+              351
+            ],
+            [
+              912,
+              397
+            ],
+            [
+              765,
+              394
+            ]
+          ],
+          [
+            [
+              1261,
+              362
+            ],
+            [
+              1365,
+              366
+            ],
+            [
+              1363,
+              409
+            ],
+            [
+              1259,
+              405
+            ]
+          ],
+          [
+            [
+              966,
+              491
+            ],
+            [
+              1048,
+              491
+            ],
+            [
+              1048,
+              528
+            ],
+            [
+              966,
+              528
+            ]
+          ],
+          [
+            [
+              219,
+              569
+            ],
+            [
+              1569,
+              575
+            ],
+            [
+              1569,
+              629
+            ],
+            [
+              219,
+              623
+            ]
+          ],
+          [
+            [
+              212,
+              681
+            ],
+            [
+              1888,
+              693
+            ],
+            [
+              1888,
+              750
+            ],
+            [
+              212,
+              738
+            ]
+          ],
+          [
+            [
+              212,
+              739
+            ],
+            [
+              1890,
+              746
+            ],
+            [
+              1890,
+              808
+            ],
+            [
+              212,
+              800
+            ]
+          ],
+          [
+            [
+              212,
+              800
+            ],
+            [
+              1335,
+              808
+            ],
+            [
+              1335,
+              865
+            ],
+            [
+              212,
+              857
+            ]
+          ],
+          [
+            [
+              210,
+              904
+            ],
+            [
+              429,
+              910
+            ],
+            [
+              427,
+              982
+            ],
+            [
+              208,
+              976
+            ]
+          ],
+          [
+            [
+              210,
+              1011
+            ],
+            [
+              1559,
+              1026
+            ],
+            [
+              1559,
+              1080
+            ],
+            [
+              210,
+              1065
+            ]
+          ],
+          [
+            [
+              211,
+              1098
+            ],
+            [
+              1461,
+              1104
+            ],
+            [
+              1460,
+              1168
+            ],
+            [
+              211,
+              1162
+            ]
+          ],
+          [
+            [
+              207,
+              1184
+            ],
+            [
+              1899,
+              1188
+            ],
+            [
+              1899,
+              1255
+            ],
+            [
+              207,
+              1251
+            ]
+          ],
+          [
+            [
+              212,
+              1249
+            ],
+            [
+              1060,
+              1249
+            ],
+            [
+              1060,
+              1310
+            ],
+            [
+              212,
+              1310
+            ]
+          ],
+          [
+            [
+              208,
+              1339
+            ],
+            [
+              1166,
+              1336
+            ],
+            [
+              1166,
+              1397
+            ],
+            [
+              208,
+              1401
+            ]
+          ],
+          [
+            [
+              210,
+              1452
+            ],
+            [
+              1101,
+              1452
+            ],
+            [
+              1101,
+              1537
+            ],
+            [
+              210,
+              1537
+            ]
+          ],
+          [
+            [
+              209,
+              1589
+            ],
+            [
+              434,
+              1594
+            ],
+            [
+              432,
+              1666
+            ],
+            [
+              207,
+              1662
+            ]
+          ],
+          [
+            [
+              207,
+              1693
+            ],
+            [
+              1903,
+              1684
+            ],
+            [
+              1903,
+              1748
+            ],
+            [
+              207,
+              1757
+            ]
+          ],
+          [
+            [
+              212,
+              1756
+            ],
+            [
+              557,
+              1758
+            ],
+            [
+              557,
+              1812
+            ],
+            [
+              212,
+              1810
+            ]
+          ],
+          [
+            [
+              210,
+              1865
+            ],
+            [
+              431,
+              1869
+            ],
+            [
+              430,
+              1940
+            ],
+            [
+              208,
+              1936
+            ]
+          ],
+          [
+            [
+              210,
+              1970
+            ],
+            [
+              1899,
+              1965
+            ],
+            [
+              1899,
+              2019
+            ],
+            [
+              210,
+              2024
+            ]
+          ],
+          [
+            [
+              654,
+              2026
+            ],
+            [
+              1901,
+              2014
+            ],
+            [
+              1901,
+              2075
+            ],
+            [
+              655,
+              2086
+            ]
+          ],
+          [
+            [
+              213,
+              2039
+            ],
+            [
+              635,
+              2037
+            ],
+            [
+              635,
+              2079
+            ],
+            [
+              213,
+              2081
+            ]
+          ],
+          [
+            [
+              208,
+              2086
+            ],
+            [
+              1431,
+              2078
+            ],
+            [
+              1431,
+              2141
+            ],
+            [
+              208,
+              2149
+            ]
+          ],
+          [
+            [
+              207,
+              2172
+            ],
+            [
+              1900,
+              2166
+            ],
+            [
+              1900,
+              2229
+            ],
+            [
+              207,
+              2235
+            ]
+          ],
+          [
+            [
+              208,
+              2235
+            ],
+            [
+              1259,
+              2226
+            ],
+            [
+              1260,
+              2287
+            ],
+            [
+              208,
+              2296
+            ]
+          ],
+          [
+            [
+              204,
+              2317
+            ],
+            [
+              1898,
+              2304
+            ],
+            [
+              1898,
+              2376
+            ],
+            [
+              204,
+              2390
+            ]
+          ],
+          [
+            [
+              206,
+              2381
+            ],
+            [
+              1899,
+              2364
+            ],
+            [
+              1899,
+              2432
+            ],
+            [
+              206,
+              2449
+            ]
+          ],
+          [
+            [
+              209,
+              2442
+            ],
+            [
+              487,
+              2447
+            ],
+            [
+              487,
+              2498
+            ],
+            [
+              209,
+              2493
+            ]
+          ],
+          [
+            [
+              1831,
+              2692
+            ],
+            [
+              1903,
+              2689
+            ],
+            [
+              1905,
+              2741
+            ],
+            [
+              1833,
+              2745
+            ]
+          ],
+          [
+            [
+              1330,
+              2715
+            ],
+            [
+              1760,
+              2700
+            ],
+            [
+              1761,
+              2748
+            ],
+            [
+              1332,
+              2757
+            ]
+          ]
+        ],
+        "rec_boxes": [
+          [
+            1288,
+            128,
+            1349,
+            178
+          ],
+          [
+            1083,
+            185,
+            1143,
+            230
+          ],
+          [
+            1202,
+            211,
+            1230,
+            238
+          ],
+          [
+            1230,
+            208,
+            1294,
+            262
+          ],
+          [
+            1064,
+            223,
+            1151,
+            273
+          ],
+          [
+            886,
+            258,
+            941,
+            301
+          ],
+          [
+            834,
+            294,
+            952,
+            344
+          ],
+          [
+            1032,
+            288,
+            1088,
+            330
+          ],
+          [
+            765,
+            348,
+            913,
+            397
+          ],
+          [
+            1259,
+            362,
+            1365,
+            409
+          ],
+          [
+            966,
+            491,
+            1048,
+            528
+          ],
+          [
+            219,
+            569,
+            1569,
+            629
+          ],
+          [
+            212,
+            681,
+            1888,
+            750
+          ],
+          [
+            212,
+            739,
+            1890,
+            808
+          ],
+          [
+            212,
+            800,
+            1335,
+            865
+          ],
+          [
+            208,
+            904,
+            429,
+            982
+          ],
+          [
+            210,
+            1011,
+            1559,
+            1080
+          ],
+          [
+            211,
+            1098,
+            1461,
+            1168
+          ],
+          [
+            207,
+            1184,
+            1899,
+            1255
+          ],
+          [
+            212,
+            1249,
+            1060,
+            1310
+          ],
+          [
+            208,
+            1336,
+            1166,
+            1401
+          ],
+          [
+            210,
+            1452,
+            1101,
+            1537
+          ],
+          [
+            207,
+            1589,
+            434,
+            1666
+          ],
+          [
+            207,
+            1684,
+            1903,
+            1757
+          ],
+          [
+            212,
+            1756,
+            557,
+            1812
+          ],
+          [
+            208,
+            1865,
+            431,
+            1940
+          ],
+          [
+            210,
+            1965,
+            1899,
+            2024
+          ],
+          [
+            654,
+            2014,
+            1901,
+            2086
+          ],
+          [
+            213,
+            2037,
+            635,
+            2081
+          ],
+          [
+            208,
+            2078,
+            1431,
+            2149
+          ],
+          [
+            207,
+            2166,
+            1900,
+            2235
+          ],
+          [
+            208,
+            2226,
+            1260,
+            2296
+          ],
+          [
+            204,
+            2304,
+            1898,
+            2390
+          ],
+          [
+            206,
+            2364,
+            1899,
+            2449
+          ],
+          [
+            209,
+            2442,
+            487,
+            2498
+          ],
+          [
+            1831,
+            2689,
+            1905,
+            2745
+          ],
+          [
+            1330,
+            2700,
+            1761,
+            2757
+          ]
+        ]
+      },
+      "table_res_list": [],
+      "seal_res_list": [],
+      "chart_res_list": [],
+      "formula_res_list": [],
+      "imgs_in_doc": [],
+      "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_seal_recognition": false,
+        "use_table_recognition": true,
+        "use_formula_recognition": true,
+        "use_chart_recognition": false,
+        "use_region_detection": true,
+        "format_block_content": false,
+        "markdown_ignore_labels": [
+          "number",
+          "footnote",
+          "header",
+          "header_image",
+          "footer",
+          "footer_image",
+          "aside_text"
+        ]
+      }
+    }
+  }
+]

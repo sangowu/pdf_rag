@@ -1,0 +1,183 @@
+[
+  {
+    "filename": "PPT_esea-app101_page_015.pdf",
+    "page_index": 15,
+    "core_content": {
+      "parsing_res_list": [
+        {
+          "block_label": "paragraph_title",
+          "block_content": "Questions:",
+          "block_bbox": [
+            1090,
+            0,
+            2415,
+            334
+          ],
+          "block_id": 0,
+          "block_order": 1
+        },
+        {
+          "block_label": "text",
+          "block_content": "TnrLE ",
+          "block_bbox": [
+            327,
+            897,
+            3255,
+            2100
+          ],
+          "block_id": 1,
+          "block_order": 2
+        }
+      ],
+      "markdown": "## Questions:\n\nTnrLE ",
+      "tables": [],
+      "formulas": [],
+      "seals": []
+    },
+    "metadata": {
+      "width": 4000,
+      "height": 3000,
+      "doc_preprocessor_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_orientation_classify": true,
+          "use_doc_unwarping": true
+        },
+        "angle": 0
+      },
+      "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.8742279410362244,
+            "coordinate": [
+              327.3150634765625,
+              897.57177734375,
+              3255.36083984375,
+              2100.49609375
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.5519371032714844,
+            "coordinate": [
+              1090.6533203125,
+              0,
+              2415.62841796875,
+              334.08087158203125
+            ]
+          }
+        ]
+      },
+      "region_det_res": {},
+      "overall_ocr_res": {
+        "input_path": null,
+        "page_index": null,
+        "model_settings": {
+          "use_doc_preprocessor": false,
+          "use_textline_orientation": true
+        },
+        "dt_polys": [],
+        "text_det_params": {
+          "limit_side_len": 736,
+          "limit_type": "min",
+          "thresh": 0.3,
+          "max_side_limit": 4000,
+          "box_thresh": 0.6,
+          "unclip_ratio": 1.5
+        },
+        "text_type": "general",
+        "text_rec_score_thresh": 0.0,
+        "return_word_box": false,
+        "rec_texts": [
+          "TnrLE ",
+          "Questions:"
+        ],
+        "rec_scores": [
+          0.32674023509025574,
+          0.9974318742752075
+        ],
+        "rec_polys": [
+          [
+            [
+              327,
+              897
+            ],
+            [
+              3255,
+              897
+            ],
+            [
+              3255,
+              2100
+            ],
+            [
+              327,
+              2100
+            ]
+          ],
+          [
+            [
+              1090,
+              0
+            ],
+            [
+              2415,
+              0
+            ],
+            [
+              2415,
+              334
+            ],
+            [
+              1090,
+              334
+            ]
+          ]
+        ],
+        "rec_boxes": [
+          [
+            327.3150634765625,
+            897.57177734375,
+            3255.36083984375,
+            2100.49609375
+          ],
+          [
+            1090.6533203125,
+            0.0,
+            2415.62841796875,
+            334.08087158203125
+          ]
+        ]
+      },
+      "table_res_list": [],
+      "seal_res_list": [],
+      "chart_res_list": [],
+      "formula_res_list": [],
+      "imgs_in_doc": [],
+      "model_settings": {
+        "use_doc_preprocessor": true,
+        "use_seal_recognition": false,
+        "use_table_recognition": true,
+        "use_formula_recognition": true,
+        "use_chart_recognition": false,
+        "use_region_detection": true,
+        "format_block_content": false,
+        "markdown_ignore_labels": [
+          "number",
+          "footnote",
+          "header",
+          "header_image",
+          "footer",
+          "footer_image",
+          "aside_text"
+        ]
+      }
+    }
+  }
+]

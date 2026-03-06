@@ -80,7 +80,7 @@ llm:
 # Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: false
+  enabled: true
   top_r: 15
   model_name: "Qwen/Qwen3-Reranker-4B"
   local_model_path: "models/Qwen3-Reranker-4B"
