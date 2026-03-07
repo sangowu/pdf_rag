@@ -12,6 +12,24 @@ from src.vector_store import VectorStore
 logger = logging.getLogger(__name__)
 
 
+def _reciprocal_rank_fusion(
+    list_ids: list[list[str]],
+    rrf_k: int = 60,
+    top_n: int | None = None,
+) -> list[str]:
+    """Merge multiple ranked id lists with RRF. Returns ordered list of unique chunk_ids."""
+    scores: dict[str, float] = {}
+    for ids in list_ids:
+        for rank, cid in enumerate(ids, start=1):
+            if cid not in scores:
+                scores[cid] = 0.0
+            scores[cid] += 1.0 / (rrf_k + rank)
+    ordered = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
+    if top_n is not None:
+        ordered = ordered[:top_n]
+    return ordered
+
+
 class RAGEvaluator:
 
     def __init__(self, vector_store: VectorStore | None = None) -> None:
@@ -19,7 +37,24 @@ class RAGEvaluator:
         self._paths = self._config.get("paths", {})
         self._evaluation_cfg = self._config.get("evaluation", {})
         self._reranker_cfg = self._config.get("reranker", {})
-        self.vector_store = vector_store or VectorStore()
+        retrieval_cfg = self._config.get("retrieval", {})
+        self._retrieval_method = (retrieval_cfg.get("method") or "vector").strip().lower()
+        self._rrf_k = int(retrieval_cfg.get("rrf_k", 60))
+
+        if vector_store is not None:
+            self.vector_store = vector_store
+            self._bm25_store = None
+        elif self._retrieval_method == "bm25":
+            from src.bm25_store import BM25Store
+            self.vector_store = BM25Store()
+            self._bm25_store = None
+        elif self._retrieval_method == "hybrid":
+            self.vector_store = VectorStore()
+            from src.bm25_store import BM25Store
+            self._bm25_store = BM25Store()
+        else:
+            self.vector_store = VectorStore()
+            self._bm25_store = None
 
         self.gold_answers_csv = self._paths.get("gold_answers_csv", "data/answers/gold_answers.csv")
         self.metrics_csv = self._paths.get("metrics_csv", "results/metrics.csv")
@@ -40,18 +75,34 @@ class RAGEvaluator:
         """
         Run search (and optional rerank) once; return (top max_k chunk ids, timing dict).
         Timing dict: embed_time_s, chroma_time_s, rerank_time_s, total_time_s.
+        Supports retrieval.method: vector, bm25, or hybrid (RRF of vector + BM25).
         """
         timings = {"embed_time_s": 0.0, "chroma_time_s": 0.0, "rerank_time_s": 0.0, "total_time_s": 0.0}
         if not query:
             return [], timings
         t_total_start = time.perf_counter()
-        result = self.vector_store.search_by_text(query, k=self._top_r if self._reranker_enabled else max_k)
-        timings["embed_time_s"] = float(result.get("embed_time_s", 0))
-        timings["chroma_time_s"] = float(result.get("chroma_time_s", 0))
-        ids_per_query = result.get("ids", [[]])
-        docs_per_query = result.get("documents", [[]])
-        ids = ids_per_query[0] if ids_per_query else []
-        docs = docs_per_query[0] if docs_per_query else []
+        k_retrieve = self._top_r if self._reranker_enabled else max_k
+
+        if self._retrieval_method == "hybrid" and self._bm25_store is not None:
+            vec_res = self.vector_store.search_by_text(query, k=k_retrieve)
+            bm_res = self._bm25_store.search_by_text(query, k=k_retrieve)
+            ids_vec = (vec_res.get("ids") or [[]])[0]
+            ids_bm = (bm_res.get("ids") or [[]])[0]
+            docs_vec = (vec_res.get("documents") or [[]])[0]
+            docs_bm = (bm_res.get("documents") or [[]])[0]
+            id_to_doc = dict(zip(ids_bm, docs_bm))
+            id_to_doc.update(zip(ids_vec, docs_vec))
+            ids = _reciprocal_rank_fusion([ids_vec, ids_bm], self._rrf_k, top_n=k_retrieve)
+            docs = [id_to_doc.get(cid, "") for cid in ids]
+            timings["embed_time_s"] = float(vec_res.get("embed_time_s", 0))
+            timings["chroma_time_s"] = float(vec_res.get("chroma_time_s", 0)) + float(bm_res.get("chroma_time_s", 0))
+        else:
+            result = self.vector_store.search_by_text(query, k=k_retrieve)
+            timings["embed_time_s"] = float(result.get("embed_time_s", 0))
+            timings["chroma_time_s"] = float(result.get("chroma_time_s", 0))
+            ids = (result.get("ids") or [[]])[0]
+            docs = (result.get("documents") or [[]])[0]
+
         if not ids or not docs:
             timings["total_time_s"] = time.perf_counter() - t_total_start
             return [], timings

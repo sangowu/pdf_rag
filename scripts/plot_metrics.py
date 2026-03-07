@@ -142,7 +142,7 @@ def plot_metrics(
     ax1.set_xlabel("K")
     ax1.set_ylabel("Hit rate")
     ax1.set_title("Hit@K")
-    ax1.legend()
+    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=4, frameon=True, fontsize=6)
     ax1.grid(True, alpha=0.3)
     ax1.set_xticks(sorted(set(k for d in dfs for k in d["k"])))
 
@@ -153,7 +153,9 @@ def plot_metrics(
         mrr = float(df["mrr"].iloc[-1]) if len(df) else 0.0
         mrrs.append(mrr)
     x = range(len(labels))
-    ax2.bar(x, mrrs, tick_label=labels, color="steelblue", alpha=0.8)
+    ax2.bar(x, mrrs, color="steelblue", alpha=0.8)
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(labels, rotation=45, ha="right")
     ax2.set_ylabel("MRR")
     ax2.set_title("Mean Reciprocal Rank")
     ax2.set_ylim(0, 1.0)

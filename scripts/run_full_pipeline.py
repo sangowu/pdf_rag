@@ -36,6 +36,29 @@ def run_chunking(config: dict, file_limit: int | None = None) -> None:
     cm._write_all_chunk(all_chunk, out_path)
     logging.info("Chunking done: %d files -> %d chunks -> %s", len(file_list), len(all_chunk), out_path)
 
+
+def run_chunk_size_stats(config: dict) -> None:
+    """Update chunk size stats CSVs from current all_chunks.json. Run plot_metrics.py to refresh chunk_size_plot.png."""
+    paths = config.get("paths", {})
+    chunk_cfg = config.get("chunking", {})
+    all_chunk_path = paths.get("all_chunk_path", "results/chunk_results/all_chunks.json")
+    if not Path(all_chunk_path).exists():
+        logging.warning("all_chunks.json not found at %s; skipping chunk size stats.", all_chunk_path)
+        return
+    prefix = chunk_cfg.get("type") or chunk_cfg.get("stats_prefix") or "base"
+    raw = paths.get("chunk_results_dir", "results/chunk_results")
+    results_dir = raw.rsplit("/", 1)[0] if "/" in raw.rstrip("/") else "results"
+    try:
+        from scripts.validate_chunk_distribution import run as run_validate
+        run_validate(
+            all_chunk_path=all_chunk_path,
+            prefix=prefix,
+            output_dir=results_dir,
+        )
+    except Exception as e:
+        logging.warning("Chunk size validation failed: %s", e)
+
+
 def run_embedding(config: dict) -> None:
     vs = VectorStore()
     all_chunk_path = config["paths"]["all_chunk_path"]
@@ -94,6 +117,7 @@ def main() -> None:
     file_limit = args.chunk_limit if args.chunk_limit is not None else default_file_limit
     if not args.skip_chunk:
         run_chunking(config, file_limit=file_limit)
+        run_chunk_size_stats(config)
     if not args.skip_embed:
         run_embedding(config)
     if not args.skip_gold:

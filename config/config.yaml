@@ -41,12 +41,17 @@ embedding:
   dimension: 1024
   api_base: "https://api-inference.modelscope.cn/v1"  # Fill in your OpenAI-compatible API endpoint
   api_key: ""   # Fill in your API key (or use env var OPENAI_API_KEY)
-  batch_size: 32
+  batch_size: 64
 
   mode: "local"                    # 或 "api"，统一切换用
   local_model_path: "models/Qwen3-Embedding-0.6B"  # 你本地保存 embedding 的目录
   torch_dtype: "auto" 
   device: "cuda"
+
+# Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
+retrieval:
+  method: "hybrid"   # "vector" | "bm25" | "hybrid"
+  rrf_k: 60          # RRF constant (only for hybrid)
 
 # ChromaDB Settings
 chromadb:
@@ -69,6 +74,8 @@ llm:
     # Use local downloaded model under project root, to avoid re-downloading
     model_name: "models/Qwen3-8B"
     device: "cuda"
+    # Batch size for local LLM generation (QA from chunks)
+    batch_size: 32
     max_tokens: 512
     temperature: 0.7  # 推荐：非思考模式下 0.7
     torch_dtype: "auto"
@@ -81,13 +88,14 @@ llm:
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
   enabled: true
-  top_r: 15
+  top_r: 20
   model_name: "Qwen/Qwen3-Reranker-4B"
   local_model_path: "models/Qwen3-Reranker-4B"
   device: "cuda"
   torch_dtype: "auto"
-  batch_size: 2
-  max_length: 7168
+  batch_size: 16
+  # Cap input length (tokens); pad to longest in batch for efficiency. Match chunk distribution (~768 chars -> ~1024 tokens).
+  max_length: 1024
   # Document QA: judge if passage helps answer the question; content/answer may be in Chinese or English
   instruction: "Judge whether this document passage contains information needed to answer the question. The passage or the answer may be in Chinese or English."
 

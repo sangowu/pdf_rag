@@ -79,17 +79,27 @@ def _ensure_model_loaded() -> None:
 
 
 def _process_inputs(pairs: list[str]) -> dict:
+    """Tokenize and pad to longest in batch (dynamic padding). Uses attention_mask so model ignores padding."""
     global _tokenizer, _prefix_tokens, _suffix_tokens, _max_length
+    content_max = _max_length - len(_prefix_tokens) - len(_suffix_tokens)
     inputs = _tokenizer(
         pairs,
         padding=False,
         truncation="longest_first",
         return_attention_mask=False,
-        max_length=_max_length - len(_prefix_tokens) - len(_suffix_tokens),
+        max_length=content_max,
     )
     for i in range(len(inputs["input_ids"])):
         inputs["input_ids"][i] = _prefix_tokens + inputs["input_ids"][i] + _suffix_tokens
-    inputs = _tokenizer.pad(inputs, padding="max_length", return_tensors="pt", max_length=_max_length)
+    # Pad to longest in batch instead of global max_length to reduce compute.
+    if _tokenizer.pad_token_id is None:
+        _tokenizer.pad_token_id = _tokenizer.eos_token_id
+    inputs = _tokenizer.pad(
+        inputs,
+        padding="longest",
+        return_tensors="pt",
+        return_attention_mask=True,
+    )
     device = next(_model.parameters()).device
     for key in inputs:
         inputs[key] = inputs[key].to(device)

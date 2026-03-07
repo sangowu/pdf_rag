@@ -43,6 +43,7 @@ LOCAL_LLM_CONFIG = LLM_CONFIG.get("local", {})
 DEFAULT_BACKEND = LLM_CONFIG.get("mode", "api")
 API_MODEL_ID = API_LLM_CONFIG.get("model", "Qwen/Qwen3-8B")
 LOCAL_MODEL_NAME = LOCAL_LLM_CONFIG.get("model_name", "Qwen/Qwen3-4B-Instruct-2507")
+LOCAL_BATCH_SIZE = max(1, int(LOCAL_LLM_CONFIG.get("batch_size", 4)))
 
 # Block types used to generate QA; answer = block text from normalized_data.
 QA_BLOCK_TYPES = ("title", "text_block", "figure_caption", "table_caption")
@@ -181,6 +182,67 @@ def _generate_with_backend(prompt: str, backend: str, api_client: Optional[OpenA
     if full_text.startswith(prompt):
         return full_text[len(prompt) :].strip()
     return full_text.strip()
+
+
+def _generate_with_local_backend_batch(prompts: list[str]) -> list[str]:
+    """
+    Generate completions for a batch of prompts using the local backend.
+
+    This mirrors the local branch of _generate_with_backend but operates on a list of prompts,
+    sharing tokenization and generation for better throughput.
+    """
+    if not prompts:
+        return []
+
+    tokenizer, model = _ensure_local_model_loaded()
+
+    # Decoder-only models generate left-to-right; use left-padding so padding tokens
+    # are not at the "current position" during generation (avoids wrong results).
+    padding_side_orig = tokenizer.padding_side
+    try:
+        tokenizer.padding_side = "left"
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+
+        messages_batch = [[{"role": "user", "content": prompt or ""}] for prompt in prompts]
+        chat_texts: list[str] = [
+            tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=False,
+            )
+            for messages in messages_batch
+        ]
+        inputs = tokenizer(chat_texts, return_tensors="pt", padding=True).to(model.device)
+    finally:
+        tokenizer.padding_side = padding_side_orig
+
+    max_new_tokens = int(LOCAL_LLM_CONFIG.get("max_tokens", 256))
+    temperature = float(LOCAL_LLM_CONFIG.get("temperature", 0.7))
+    do_sample = bool(LOCAL_LLM_CONFIG.get("do_sample", True))
+    top_p = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
+    top_k = int(LOCAL_LLM_CONFIG.get("top_k", 20))
+    min_p = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
+
+    output_ids = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=do_sample,
+        temperature=temperature,
+        top_p=top_p,
+        top_k=top_k,
+        min_p=min_p,
+    )
+    full_texts = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
+
+    results: list[str] = []
+    for chat_text, full_text in zip(chat_texts, full_texts):
+        if full_text.startswith(chat_text):
+            results.append(full_text[len(chat_text) :].strip())
+        else:
+            results.append(full_text.strip())
+    return results
 
 
 def load_chunks(path: str) -> list[dict]:
@@ -326,6 +388,46 @@ def run_normalized_mode(
     qid = 0
     skipped = 0
     gold_rows: list[dict] = []
+
+    # Buffers for batched local generation
+    buffer_prompts: list[str] = []
+    buffer_meta: list[dict] = []
+
+    def flush_local_batch() -> None:
+        """Flush buffered local prompts, generate questions in batch, and write outputs."""
+        nonlocal qid, skipped
+        if not buffer_prompts:
+            return
+        raw_list = _generate_with_local_backend_batch(buffer_prompts)
+        for raw_q, meta in zip(raw_list, buffer_meta):
+            question = parse_question(raw_q)
+            if not question:
+                skipped += 1
+                continue
+            qid += 1
+            chunk = meta["chunk"]
+            answer_val = meta["answer"]
+            record = {
+                "qid": f"nd_{qid}",
+                "question": question,
+                "answer": answer_val,
+                "chunk_id": chunk.get("chunk_id", ""),
+                "file_name": chunk.get("file_name", ""),
+                "page_index": chunk.get("page_index", 0),
+            }
+            out.write(json.dumps(record, ensure_ascii=False) + "\n")
+            gold_rows.append(
+                {
+                    "question": question,
+                    "gold_answer": answer_val,
+                    "gold_chunk_ids": record["chunk_id"],
+                    "num_gold_chunks": 1,
+                    "doc_file_name": record["file_name"],
+                }
+            )
+        buffer_prompts.clear()
+        buffer_meta.clear()
+
     with open(output_path, "w", encoding="utf-8") as out:
         for answer, file_name, page_index, category_type in tqdm(
             candidates, desc="QA (link chunk + gen Q)" if use_llm_question else "Linking QA to chunks"
@@ -335,6 +437,18 @@ def run_normalized_mode(
                 skipped += 1
                 continue
             if use_llm_question:
+                if backend == "local":
+                    passage = (chunk.get("text", "") or "").strip()[:4000]
+                    answer_clean = (answer or "").strip()
+                    if not passage or not answer_clean:
+                        skipped += 1
+                        continue
+                    prompt = QA_QUESTION_PROMPT.format(passage=passage, answer=answer_clean)
+                    buffer_prompts.append(prompt)
+                    buffer_meta.append({"answer": answer, "chunk": chunk})
+                    if len(buffer_prompts) >= LOCAL_BATCH_SIZE:
+                        flush_local_batch()
+                    continue
                 raw_q = call_llm_question(
                     chunk.get("text", ""),
                     answer,
@@ -366,6 +480,10 @@ def run_normalized_mode(
                     "doc_file_name": record["file_name"],
                 }
             )
+
+        # Flush remaining local batch (if any).
+        if use_llm_question and backend == "local":
+            flush_local_batch()
 
     # Also write gold_answers.csv for evaluator / pipeline usage.
     if gold_rows:
