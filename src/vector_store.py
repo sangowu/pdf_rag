@@ -23,6 +23,7 @@ class VectorStore:
         self.batch_size = config.get("embedding", {}).get("batch_size", 32)
         self._chroma_client = None
         self._chroma_collection = None
+        self._parent_collection = None
         self.top_k = config.get("evaluation", {}).get("top_k", 5)
 
     def _init_chroma_client(self):
@@ -39,13 +40,53 @@ class VectorStore:
         )
         return self._chroma_collection
 
+    def _init_parent_collection(self):
+        if self._parent_collection is not None:
+            return self._parent_collection
+        chroma_cfg = config.get("chromadb", {})
+        persist_dir = chroma_cfg.get("persist_directory", "vectors/chroma_db")
+        name = chroma_cfg.get("parent_collection_name", "parent_chunks")
+        if self._chroma_client is None:
+            self._chroma_client = chromadb.PersistentClient(path=persist_dir)
+        self._parent_collection = self._chroma_client.get_or_create_collection(
+            name=name, metadata={"hnsw:space": "cosine"}
+        )
+        return self._parent_collection
+
     def _chunk_row_to_chroma_metadata(self, row: dict) -> dict:
-        return {
+        meta = {
             "file_name": str(row.get("file_name", "")),
             "page_index": int(row.get("page_index", 0)),
             "chunk_index": int(row.get("chunk_index", 0)),
             "char_count": int(row.get("char_count", 0)),
         }
+        if row.get("parent_chunk_id"):
+            meta["parent_chunk_id"] = str(row["parent_chunk_id"])
+        return meta
+
+    def add_parent_chunks_to_chroma(self, parent_table: list[dict], batch_size: int = 100) -> None:
+        if not parent_table:
+            return
+        coll = self._init_parent_collection()
+        for i in range(0, len(parent_table), batch_size):
+            batch = parent_table[i:i+batch_size]
+            coll.upsert(
+                ids=[d["chunk_id"] for d in batch],
+                documents=[d["text"] for d in batch],
+                metadatas=[{
+                    "file_name": str(d.get("file_name", "")),
+                    "page_index": int(d.get("page_index", 0)),
+                    "chunk_index": int(d.get("chunk_index", 0)),
+                    "char_count": int(d.get("char_count", 0)),
+                } for d in batch],
+            )
+        logger.info("Parent chunks ingested: %d", len(parent_table))
+
+    def get_parent_texts(self, parent_ids: list[str]) -> dict[str, str]:
+        coll = self._init_parent_collection()
+        unique_ids = list(dict.fromkeys(parent_ids))
+        result = coll.get(ids=unique_ids, include=["documents"])
+        return dict(zip(result["ids"], result["documents"]))
 
     def add_chunks_to_chroma(self, new_table: list[dict], batch_size: int = 100) -> None:
         if not new_table:

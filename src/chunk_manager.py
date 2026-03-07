@@ -77,10 +77,43 @@ class ChunkManager:
     def _generate_chunk_id(self, file_name, page_index, chunk_index):
         return f"{file_name}_p{page_index}_c{chunk_index}"
 
-    def generate_chunks(self, ocr_json_path):
+    def _split_parent_child(self, text, file_name, page_index):
+        from langchain_text_splitters import RecursiveCharacterTextSplitter
+        chunk_cfg = config.get("chunking", {})
+        parent_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_cfg.get("parent_chunk_size", 1024),
+            chunk_overlap=chunk_cfg.get("parent_chunk_overlap", 128),
+            separators=self.separators,
+        )
+        child_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_cfg.get("child_chunk_size", 256),
+            chunk_overlap=chunk_cfg.get("child_chunk_overlap", 32),
+            separators=self.separators,
+        )
+        parent_list, child_list = [], []
+        for p_idx, p_text in enumerate(parent_splitter.split_text(text)):
+            parent_id = f"{file_name}_p{page_index}_P{p_idx}"
+            parent_list.append({
+                "file_name": file_name, "page_index": page_index,
+                "chunk_id": parent_id, "chunk_index": p_idx,
+                "text": p_text, "char_count": len(p_text),
+            })
+            for c_idx, c_text in enumerate(child_splitter.split_text(p_text)):
+                child_id = f"{parent_id}_c{c_idx}"
+                child_list.append({
+                    "file_name": file_name, "page_index": page_index,
+                    "chunk_id": child_id, "chunk_index": c_idx,
+                    "text": c_text, "char_count": len(c_text),
+                    "parent_chunk_id": parent_id,
+                    "parent_text": p_text,
+                })
+        return parent_list, child_list
+
+    def generate_chunks(self, ocr_json_path) -> tuple[list[dict], list[dict]]:
         data = self._read_ocr_json(ocr_json_path)
         chunk_schema_path.mkdir(parents=True, exist_ok=True)
         chunk_schema_list = []
+        parent_schema_list = []
         for page_item in data:
             filename = page_item["filename"]
             stem = Path(filename).stem
@@ -97,8 +130,15 @@ class ChunkManager:
                 else:
                     block_content_all += "\n"
                 block_content_all += parsing_res.get("block_content", "")
-                
-            if self.chunk_type == "fixed":
+
+            if self.chunk_type == "parent_child":
+                parent_list_page, child_list_page = self._split_parent_child(
+                    block_content_all, stem, page_index
+                )
+                parent_schema_list.extend(parent_list_page)
+                chunk_schema_list.extend(child_list_page)
+                continue
+            elif self.chunk_type == "fixed":
                 chunks = self._split_text_by_chunk_size(block_content_all)
             elif self.chunk_type == "recursive":
                 chunks = self._split_text_recursive(block_content_all)
@@ -120,7 +160,7 @@ class ChunkManager:
             self._write_chunk_schema(chunk_s, out_path)
             logger.debug("Chunk schema generated and saved to %s", out_path)
 
-        return chunk_schema_list
+        return chunk_schema_list, parent_schema_list
 
 if __name__ == "__main__":
     logging.basicConfig(
@@ -131,5 +171,6 @@ if __name__ == "__main__":
     file_list = cm.list_full_paths(ocr_structured_path, "*.json", limit=50)
     all_chunk = []
     for file_path in file_list:
-        all_chunk.extend(cm.generate_chunks(file_path))
+        child_list, _ = cm.generate_chunks(file_path)
+        all_chunk.extend(child_list)
     cm._write_all_chunk(all_chunk, chunk_schema_path / "all_chunks.json")

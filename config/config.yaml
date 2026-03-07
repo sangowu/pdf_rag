@@ -35,6 +35,12 @@ chunking:
   # Optional: only for recursive; whether to keep separator at end of chunk (default false)
   keep_separator: false
 
+  # Parent-Child chunking (used when type is "parent_child")
+  parent_chunk_size: 1024
+  parent_chunk_overlap: 128
+  child_chunk_size: 256
+  child_chunk_overlap: 32
+
 # Embedding Settings
 embedding:
   model: "Qwen/Qwen3-Embedding-0.6B"  # Or your Qwen3-Embedding model name
@@ -58,6 +64,7 @@ chromadb:
   persist_directory: "vectors/chroma_db"
   collection_name: "pdf_chunks"
   distance_fn: "cosine"
+  parent_collection_name: "parent_chunks"
 
 # LLM Settings (local transformers)
 llm:
@@ -118,4 +125,5 @@ paths:
   chunk_results_dir: "results/chunk_results"
   vector_store_dir: "vectors/chroma_db"
   all_chunk_path: "results/chunk_results/all_chunks.json"
+  all_parent_chunk_path: "results/chunk_results/all_parent_chunks.json"
   normalized_data_path: "data/answers/normalized_data.json"

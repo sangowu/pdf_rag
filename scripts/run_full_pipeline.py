@@ -28,13 +28,23 @@ def run_chunking(config: dict, file_limit: int | None = None) -> None:
         return
 
     all_chunk = []
+    all_parent_chunk = []
     for file_path in tqdm(file_list, desc="Chunking", unit="file"):
-        all_chunk.extend(cm.generate_chunks(file_path))
+        child_list, parent_list = cm.generate_chunks(file_path)
+        all_chunk.extend(child_list)
+        all_parent_chunk.extend(parent_list)
 
     out_path = Path(all_chunk_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     cm._write_all_chunk(all_chunk, out_path)
     logging.info("Chunking done: %d files -> %d chunks -> %s", len(file_list), len(all_chunk), out_path)
+
+    # 写 parent chunks（parent_child 模式才有数据，其他模式为空列表，写入无副作用）
+    all_parent_chunk_path = paths.get("all_parent_chunk_path", "results/chunk_results/all_parent_chunks.json")
+    parent_out_path = Path(all_parent_chunk_path)
+    cm._write_all_chunk(all_parent_chunk, parent_out_path)
+    if all_parent_chunk:
+        logging.info("Parent chunks written: %d -> %s", len(all_parent_chunk), parent_out_path)
 
 
 def run_chunk_size_stats(config: dict) -> None:
@@ -62,10 +72,18 @@ def run_chunk_size_stats(config: dict) -> None:
 def run_embedding(config: dict) -> None:
     vs = VectorStore()
     all_chunk_path = config["paths"]["all_chunk_path"]
-    # 读 all_chunks.json
     all_chunk_data = vs._read_all_chunk(all_chunk_path)
     new_table = vs.embed_chunks(all_chunk_data)
     vs.add_chunks_to_chroma(new_table)
+
+    # parent_child 模式：将 parent chunks 写入独立 collection（无 embedding）
+    all_parent_chunk_path = config.get("paths", {}).get(
+        "all_parent_chunk_path", "results/chunk_results/all_parent_chunks.json"
+    )
+    if Path(all_parent_chunk_path).exists():
+        parent_data = vs._read_all_chunk(all_parent_chunk_path)
+        if parent_data:
+            vs.add_parent_chunks_to_chroma(parent_data)
 
 def run_generate_gold(config: dict) -> None:
     # Call QA generation with default args so it does not parse this script's argv (--skip-ocr, --eval-prefix, etc.)
