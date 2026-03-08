@@ -33,6 +33,7 @@ load_dotenv()
 CONFIG = load_config()
 PATHS = CONFIG.get("paths", {})
 ALL_CHUNK_PATH = PATHS.get("all_chunk_path", "results/chunk_results/all_chunks.json")
+ALL_PARENT_CHUNK_PATH = PATHS.get("all_parent_chunk_path", "results/chunk_results/all_parent_chunks.json")
 NORMALIZED_DATA_PATH = PATHS.get("normalized_data_path", "data/answers/normalized_data.json")
 QA_OUTPUT_PATH = "data/answers/qa_pairs.jsonl"
 QA_NORMALIZED_OUTPUT_PATH = "data/answers/qa_from_normalized.jsonl"
@@ -252,6 +253,26 @@ def load_chunks(path: str) -> list[dict]:
     return data if isinstance(data, list) else []
 
 
+def load_parent_chunks(path: str | None = None) -> dict[str, dict]:
+    """Load all_parent_chunks.json if present. Returns chunk_id -> chunk dict (for parent text lookup)."""
+    p = path or ALL_PARENT_CHUNK_PATH
+    if not p or not Path(p).exists():
+        return {}
+    with open(p, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, list):
+        return {}
+    return {d.get("chunk_id", ""): d for d in data if d.get("chunk_id")}
+
+
+def passage_for_chunk(chunk: dict, parent_by_id: dict[str, dict]) -> str:
+    """Passage text for QA: prefer parent chunk text when child has parent_chunk_id and parent exists."""
+    pid = chunk.get("parent_chunk_id")
+    if pid and pid in parent_by_id:
+        return (parent_by_id[pid].get("text") or "").strip()
+    return (chunk.get("text") or "").strip()
+
+
 def load_normalized(path: str) -> list[dict]:
     """Load normalized_data.json. Returns list of page items (page_dets, relation, page_no, image_path)."""
     with open(path, "r", encoding="utf-8") as f:
@@ -380,6 +401,9 @@ def run_normalized_mode(
     if not chunks:
         logger.warning("No chunks at %s", chunks_path)
         return
+    parent_by_id = load_parent_chunks()
+    if parent_by_id:
+        logger.info("Using parent chunk text for passages: %d parents loaded", len(parent_by_id))
     if use_llm_question and backend == "api" and api_client is None:
         raise ValueError("use_llm_question=True with api backend requires api_client (set API key or use --backend local)")
     index = build_page_chunk_index(chunks)
@@ -437,8 +461,8 @@ def run_normalized_mode(
                 skipped += 1
                 continue
             if use_llm_question:
+                passage = passage_for_chunk(chunk, parent_by_id)[:4000]
                 if backend == "local":
-                    passage = (chunk.get("text", "") or "").strip()[:4000]
                     answer_clean = (answer or "").strip()
                     if not passage or not answer_clean:
                         skipped += 1
@@ -450,7 +474,7 @@ def run_normalized_mode(
                         flush_local_batch()
                     continue
                 raw_q = call_llm_question(
-                    chunk.get("text", ""),
+                    passage,
                     answer,
                     backend=backend,
                     api_client=api_client,

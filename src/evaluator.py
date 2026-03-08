@@ -106,6 +106,25 @@ class RAGEvaluator:
         if not ids or not docs:
             timings["total_time_s"] = time.perf_counter() - t_total_start
             return [], timings
+
+        id_to_doc = dict(zip(ids, docs))
+        if hasattr(self.vector_store, "get_metadata_for_ids") and hasattr(
+            self.vector_store, "get_parent_texts"
+        ):
+            meta = self.vector_store.get_metadata_for_ids(ids)
+            parent_ids = [
+                meta.get(i, {}).get("parent_chunk_id")
+                for i in ids
+                if meta.get(i, {}).get("parent_chunk_id")
+            ]
+            if parent_ids:
+                parent_texts = self.vector_store.get_parent_texts(parent_ids)
+                for i in ids:
+                    pid = meta.get(i, {}).get("parent_chunk_id")
+                    if pid and pid in parent_texts:
+                        id_to_doc[i] = parent_texts[pid]
+                docs = [id_to_doc[i] for i in ids]
+
         if self._reranker_enabled:
             from src.reranker import rerank
             doc_list = list(zip(ids, docs))

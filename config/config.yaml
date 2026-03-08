@@ -7,7 +7,7 @@ ocr:
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
 chunking:
-  type: "fixed"
+  type: "parent_child"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
@@ -36,10 +36,10 @@ chunking:
   keep_separator: false
 
   # Parent-Child chunking (used when type is "parent_child")
-  parent_chunk_size: 1024
-  parent_chunk_overlap: 128
-  child_chunk_size: 256
-  child_chunk_overlap: 32
+  parent_chunk_size: 800
+  parent_chunk_overlap: 200
+  child_chunk_size: 200
+  child_chunk_overlap: 50
 
 # Embedding Settings
 embedding:

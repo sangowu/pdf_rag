@@ -88,6 +88,19 @@ class VectorStore:
         result = coll.get(ids=unique_ids, include=["documents"])
         return dict(zip(result["ids"], result["documents"]))
 
+    def get_metadata_for_ids(self, ids: list[str]) -> dict[str, dict]:
+        """Get Chroma metadata for given chunk ids (e.g. to read parent_chunk_id). Returns id -> metadata dict."""
+        if not ids:
+            return {}
+        coll = self._init_chroma_client()
+        unique_ids = list(dict.fromkeys(ids))
+        result = coll.get(ids=unique_ids, include=["metadatas"])
+        id_to_meta = {}
+        for i, mid in enumerate(result.get("ids") or []):
+            meta = (result.get("metadatas") or [])[i]
+            id_to_meta[mid] = meta if isinstance(meta, dict) else {}
+        return id_to_meta
+
     def add_chunks_to_chroma(self, new_table: list[dict], batch_size: int = 100) -> None:
         if not new_table:
             return
