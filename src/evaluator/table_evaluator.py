@@ -185,13 +185,17 @@ class TableEvaluator:
         if not ref_table.get('rows') and not pred_table.get('rows'):
             return 100.0
 
-        # 方法1：基于HTML结构的编辑距离
+        # 方法1：基于HTML结构的编辑距离（带标准化）
         pred_html = TableEvaluator._table_to_html(pred_table)
         ref_html = TableEvaluator._table_to_html(ref_table)
 
         if pred_html and ref_html:
-            dist = editdistance.eval(pred_html, ref_html)
-            max_len = max(len(pred_html), len(ref_html))
+            # 标准化HTML格式（OmniDocBench方法），减少格式差异
+            pred_html_normalized = TableEvaluator.normalize_html(pred_html)
+            ref_html_normalized = TableEvaluator.normalize_html(ref_html)
+
+            dist = editdistance.eval(pred_html_normalized, ref_html_normalized)
+            max_len = max(len(pred_html_normalized), len(ref_html_normalized))
             structure_score = (1.0 - dist / max_len) if max_len > 0 else 0.0
         else:
             structure_score = TableEvaluator.structure_similarity(pred_table, ref_table)
@@ -203,6 +207,59 @@ class TableEvaluator:
         teds = (lambda_ * structure_score + (1 - lambda_) * content_score) * 100
 
         return round(max(0.0, min(100.0, teds)), 2)
+
+    @staticmethod
+    def normalize_html(html_str: str) -> str:
+        """
+        标准化HTML表格格式（OmniDocBench方法）
+        目的：减少OCR与GT的HTML格式差异，提高TEDS准确性
+
+        处理内容：
+        1. 移除所有属性（style、class、id等）
+        2. 统一标签大小写为小写
+        3. 规范化空白（连续空白变为单空格）
+        4. 移除空标签和注释
+        5. 统一属性顺序
+        """
+        if not html_str:
+            return ""
+
+        # 移除HTML注释
+        html_str = re.sub(r'<!--.*?-->', '', html_str, flags=re.DOTALL)
+
+        # 移除所有属性（保留标签本身）
+        # 匹配 <tag attr="value" ...> 形式，替换为 <tag>
+        html_str = re.sub(r'<([\w/]+)\s+[^>]*>', r'<\1>', html_str)
+
+        # 转换为小写
+        html_str = html_str.lower()
+
+        # 规范化空白：
+        # 1. 标签之间的换行符替换为空格
+        html_str = re.sub(r'>\s+<', '><', html_str)
+
+        # 2. 标签内的连续空白替换为单空格
+        html_str = re.sub(r'>\s+', '> ', html_str)
+        html_str = re.sub(r'\s+<', ' <', html_str)
+        html_str = re.sub(r'\s+', ' ', html_str)
+
+        # 3. 移除标签前后的空格
+        html_str = re.sub(r'\s*<', '<', html_str)
+        html_str = re.sub(r'>\s*', '>', html_str)
+
+        # 移除空的 tbody、thead、tfoot 标签
+        html_str = re.sub(r'<(tbody|thead|tfoot)\s*>\s*</\1>', '', html_str)
+
+        # 移除多余的html、body标签
+        html_str = re.sub(r'<html[^>]*>', '', html_str)
+        html_str = re.sub(r'</html>', '', html_str)
+        html_str = re.sub(r'<body[^>]*>', '', html_str)
+        html_str = re.sub(r'</body>', '', html_str)
+
+        # 清理前后空格
+        html_str = html_str.strip()
+
+        return html_str
 
     @staticmethod
     def _table_to_html(table: Dict) -> str:
@@ -283,8 +340,10 @@ class TableEvaluator:
             }
 
         if not pred_tables or not ref_tables:
-            # 一个为空，尝试基于原始HTML的文本相似度
-            text_sim = MetricsCalculator.sequence_similarity(pred_html, ref_html)
+            # 一个为空，尝试基于标准化HTML的文本相似度
+            pred_normalized = TableEvaluator.normalize_html(pred_html)
+            ref_normalized = TableEvaluator.normalize_html(ref_html)
+            text_sim = MetricsCalculator.sequence_similarity(pred_normalized, ref_normalized)
             return {
                 'teds_score': text_sim * 100,
                 'structure_similarity': text_sim,
