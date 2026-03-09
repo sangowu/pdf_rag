@@ -1,8 +1,34 @@
 # OCR Settings
 ocr:
+  # Legacy flat settings (still read by some scripts, keep for compatibility)
   lang: "ch"
   use_angle_cls: true
   confidence_threshold: 0.8
+
+  # PP-StructureV3 pipeline configuration (models + runtime knobs)
+  ppstructurev3:
+    # Path to PaddleX pipeline config exported via:
+    # from paddleocr import PPStructureV3
+    # PPStructureV3(lang="ch").export_paddlex_config_to_yaml("config/PP-StructureV3.yaml")
+    paddlex_config: "config/PP-StructureV3.yaml"
+
+    # Optional: force device (e.g. "cpu", "gpu:0"); when null use PaddleX default
+    device: "gpu:0"
+
+    # Sub-pipeline switches (see PP-StructureV3 docs)
+    use_doc_orientation_classify: false
+    use_doc_unwarping: false
+    use_textline_orientation: false
+    use_table_recognition: true
+    use_formula_recognition: true
+    use_region_detection: true
+    use_seal_recognition: false
+    use_chart_recognition: false
+
+    # Text detection / recognition thresholds
+    text_det_thresh: 0.3          # pixel-level threshold
+    text_det_box_thresh: 0.6      # box average score threshold
+    text_rec_score_thresh: 0.0    # recognition score filter
 
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)

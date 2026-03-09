@@ -31,7 +31,23 @@ class OCRProcessor:
     @property
     def pipeline(self) -> PPStructureV3:
         if self._pipeline is None:
-            self._pipeline = PPStructureV3(lang="ch")
+            ocr_cfg: Dict[str, Any] = self.config.get("ocr", {})
+            pp_cfg: Dict[str, Any] = ocr_cfg.get("ppstructurev3", {})
+
+            paddlex_config = pp_cfg.get("paddlex_config")
+            init_kwargs: Dict[str, Any] = {}
+
+            device = pp_cfg.get("device")
+            if device:
+                init_kwargs["device"] = device
+
+            if paddlex_config:
+                init_kwargs["paddlex_config"] = paddlex_config
+            else:
+                # Fallback to simple lang-based init when no paddlex_config provided
+                init_kwargs["lang"] = ocr_cfg.get("lang", "ch")
+
+            self._pipeline = PPStructureV3(**init_kwargs)
         return self._pipeline
 
     def _build_cache_path(self, pdf_path: str, cache_type: Literal["raw", "structured"]) -> Path:
@@ -154,7 +170,21 @@ class OCRProcessor:
             self._save_structured_cache(pdf_path, res_list)
             return res_list
 
-        output = self.pipeline.predict(input=pdf_path)
+        pp_cfg: Dict[str, Any] = self.config.get("ocr", {}).get("ppstructurev3", {})
+        output = self.pipeline.predict(
+            input=pdf_path,
+            use_doc_orientation_classify=pp_cfg.get("use_doc_orientation_classify"),
+            use_doc_unwarping=pp_cfg.get("use_doc_unwarping"),
+            use_textline_orientation=pp_cfg.get("use_textline_orientation"),
+            use_seal_recognition=pp_cfg.get("use_seal_recognition"),
+            use_table_recognition=pp_cfg.get("use_table_recognition"),
+            use_formula_recognition=pp_cfg.get("use_formula_recognition"),
+            use_chart_recognition=pp_cfg.get("use_chart_recognition"),
+            use_region_detection=pp_cfg.get("use_region_detection"),
+            text_det_thresh=pp_cfg.get("text_det_thresh"),
+            text_det_box_thresh=pp_cfg.get("text_det_box_thresh"),
+            text_rec_score_thresh=pp_cfg.get("text_rec_score_thresh"),
+        )
 
         raw_pages = []
         for res in output:

@@ -37,6 +37,7 @@ PATHS = CONFIG.get("paths", {})
 OCR_STRUCTURED_DIR = PATHS.get("ocr_structured_dir", "results/ocr_structured")
 NORMALIZED_DATA_PATH = PATHS.get("normalized_data_path", "data/answers/normalized_data.json")
 OUTPUT_CSV = "results/ocr_quality_evaluation_full.csv"
+OUTPUT_MD = "results/ocr_quality_report.md"
 
 
 class OCRQualityEvaluator:
@@ -314,6 +315,9 @@ class OCRQualityEvaluator:
         # 保存结果
         self._save_results(results)
 
+        # 保存Markdown报告
+        self._save_markdown_report(results, OUTPUT_MD)
+
         # 打印统计信息
         self._print_statistics(results)
 
@@ -332,7 +336,203 @@ class OCRQualityEvaluator:
             writer.writeheader()
             writer.writerows(results)
 
-        logger.info(f"Results saved to {output_path}")
+        logger.info("Results saved to %s", output_path)
+
+    def _save_markdown_report(self, results: list, path: str) -> None:
+        """
+        保存OCR评估结果的Markdown报告。
+
+        Args:
+            results: 每一页的评估结果列表。
+            path: Markdown报告输出路径。
+        """
+        output_path = Path(path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if not results:
+            logger.warning("No results to generate markdown report")
+            output_path.write_text("# OCR Quality Evaluation Report\n\nNo results.\n", encoding="utf-8")
+            return
+
+        char_accs = [r["character_accuracy"] for r in results]
+        seq_sims = [r["sequence_similarity"] for r in results]
+        jaccard_sims = [r["jaccard_similarity"] for r in results]
+        composite_scores = [
+            r.get("composite_score", 0.0) for r in results if r.get("composite_score") is not None
+        ]
+
+        table_results = [r for r in results if r.get("table_teds") is not None]
+        if table_results:
+            teds_scores = [
+                r["table_teds"] for r in table_results if r.get("table_teds") is not None
+            ]
+            struct_sims = [
+                r["table_structure_similarity"]
+                for r in table_results
+                if r.get("table_structure_similarity") is not None
+            ]
+            content_sims = [
+                r["table_content_similarity"]
+                for r in table_results
+                if r.get("table_content_similarity") is not None
+            ]
+        else:
+            teds_scores = []
+            struct_sims = []
+            content_sims = []
+
+        formula_results = [r for r in results if r.get("formula_average_accuracy") is not None]
+        if formula_results:
+            formula_accs = [
+                r["formula_average_accuracy"]
+                for r in formula_results
+                if r.get("formula_average_accuracy") is not None
+            ]
+            correct_counts = [
+                r["formula_correct_count"]
+                for r in formula_results
+                if r.get("formula_correct_count") is not None
+            ]
+            total_formulas = sum(
+                [
+                    r["formula_count"]
+                    for r in formula_results
+                    if r.get("formula_count") is not None
+                ]
+            )
+        else:
+            formula_accs = []
+            correct_counts = []
+            total_formulas = 0
+
+        lines = []
+
+        # 总览
+        lines.append("# OCR Quality Evaluation Report")
+        lines.append("")
+        lines.append(
+            f"- Generated at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        )
+        lines.append(f"- Total evaluated pages: {len(results)}")
+        lines.append("")
+
+        # 文本质量
+        lines.append("## Text Quality Metrics")
+        lines.append("")
+        lines.append("| Metric | Mean |")
+        lines.append("| --- | --- |")
+        lines.append(f"| Character Accuracy | {sum(char_accs) / len(char_accs):.4f} |")
+        lines.append(f"| Sequence Similarity | {sum(seq_sims) / len(seq_sims):.4f} |")
+        lines.append(f"| Jaccard Similarity | {sum(jaccard_sims) / len(jaccard_sims):.4f} |")
+        lines.append("")
+
+        # 表格质量
+        if table_results and teds_scores:
+            lines.append("## Table Quality Metrics")
+            lines.append("")
+            lines.append(f"- Pages with tables: **{len(table_results)}**")
+            lines.append("")
+            lines.append("| Metric | Mean |")
+            lines.append("| --- | --- |")
+            lines.append(f"| TEDS Score (0-100) | {sum(teds_scores) / len(teds_scores):.2f} |")
+            if struct_sims:
+                lines.append(
+                    f"| Structure Similarity | {sum(struct_sims) / len(struct_sims):.4f} |"
+                )
+            if content_sims:
+                lines.append(
+                    f"| Content Similarity | {sum(content_sims) / len(content_sims):.4f} |"
+                )
+            lines.append("")
+
+        # 公式质量
+        if formula_results and formula_accs and total_formulas > 0:
+            lines.append("## Formula Quality Metrics")
+            lines.append("")
+            lines.append(f"- Pages with formulas: **{len(formula_results)}**")
+            lines.append(f"- Total formulas: **{total_formulas}**")
+            lines.append("")
+            lines.append("| Metric | Value |")
+            lines.append("| --- | --- |")
+            lines.append(
+                f"| Average Accuracy | {sum(formula_accs) / len(formula_accs):.4f} |"
+            )
+            lines.append(
+                f"| Correct Formulas | {sum(correct_counts)}/{total_formulas} |"
+            )
+            lines.append(
+                f"| Accuracy Rate (%) | {sum(correct_counts) / total_formulas * 100:.1f} |"
+            )
+            lines.append("")
+
+        # 综合评分
+        if composite_scores:
+            mean_score = sum(composite_scores) / len(composite_scores)
+            median_score = sorted(composite_scores)[len(composite_scores) // 2]
+            std_score = (
+                sum((s - mean_score) ** 2 for s in composite_scores) / len(composite_scores)
+            ) ** 0.5
+
+            lines.append("## Composite Score Distribution (0-100)")
+            lines.append("")
+            lines.append("| Stat | Value |")
+            lines.append("| --- | --- |")
+            lines.append(f"| Mean | {mean_score:.2f} |")
+            lines.append(f"| Median | {median_score:.2f} |")
+            lines.append(f"| Std Dev | {std_score:.2f} |")
+            lines.append(f"| Min | {min(composite_scores):.2f} |")
+            lines.append(f"| Max | {max(composite_scores):.2f} |")
+            lines.append("")
+
+            excellent = sum(1 for s in composite_scores if s >= 90)
+            good = sum(1 for s in composite_scores if 80 <= s < 90)
+            fair = sum(1 for s in composite_scores if 70 <= s < 80)
+            poor = sum(1 for s in composite_scores if s < 70)
+
+            lines.append("| Grade | Pages | Ratio |")
+            lines.append("| --- | --- | --- |")
+            lines.append(
+                f"| Excellent (≥90) | {excellent} | {excellent / len(composite_scores) * 100:5.1f}% |"
+            )
+            lines.append(
+                f"| Good (80-90) | {good} | {good / len(composite_scores) * 100:5.1f}% |"
+            )
+            lines.append(
+                f"| Fair (70-80) | {fair} | {fair / len(composite_scores) * 100:5.1f}% |"
+            )
+            lines.append(
+                f"| Poor (<70) | {poor} | {poor / len(composite_scores) * 100:5.1f}% |"
+            )
+            lines.append("")
+
+        # 最差 / 最好页面列表
+        worst = sorted(results, key=lambda r: r["character_accuracy"])[:10]
+        best = sorted(results, key=lambda r: r["character_accuracy"], reverse=True)[:10]
+
+        lines.append("## Worst 10 Pages by Character Accuracy")
+        lines.append("")
+        lines.append("| filename | page | char_acc | text_len_ocr | text_len_gt |")
+        lines.append("| --- | --- | --- | --- | --- |")
+        for r in worst:
+            lines.append(
+                f"| {r['filename']} | {r['page_index']} | {r['character_accuracy']:.4f} | "
+                f"{r['text_length_ocr']} | {r['text_length_gt']} |"
+            )
+        lines.append("")
+
+        lines.append("## Best 10 Pages by Character Accuracy")
+        lines.append("")
+        lines.append("| filename | page | char_acc | text_len_ocr | text_len_gt |")
+        lines.append("| --- | --- | --- | --- | --- |")
+        for r in best:
+            lines.append(
+                f"| {r['filename']} | {r['page_index']} | {r['character_accuracy']:.4f} | "
+                f"{r['text_length_ocr']} | {r['text_length_gt']} |"
+            )
+        lines.append("")
+
+        output_path.write_text("\n".join(lines), encoding="utf-8")
+        logger.info("Markdown report saved to %s", output_path)
 
     def _print_statistics(self, results: list) -> None:
         """打印详细统计信息"""
@@ -344,6 +544,9 @@ class OCRQualityEvaluator:
         seq_sims = [r["sequence_similarity"] for r in results]
         jaccard_sims = [r["jaccard_similarity"] for r in results]
         composite_scores = [r.get("composite_score", 0) for r in results if r.get("composite_score")]
+        # 为后续诊断建议准备默认值，避免未定义变量
+        teds_scores = []
+        formula_accs = []
 
         print("\n" + "="*80)
         print("OCR QUALITY EVALUATION - COMPLETE REPORT".center(80))
@@ -361,14 +564,14 @@ class OCRQualityEvaluator:
         # 表格质量
         table_results = [r for r in results if r.get("table_teds") is not None]
         if table_results:
-            teds_scores = [r["table_teds"] for r in table_results if r.get("table_teds")]
-            struct_sims = [r["table_structure_similarity"] for r in table_results if r.get("table_structure_similarity")]
-            content_sims = [r["table_content_similarity"] for r in table_results if r.get("table_content_similarity")]
+            teds_scores = [r["table_teds"] for r in table_results if r.get("table_teds") is not None]
+            struct_sims = [r["table_structure_similarity"] for r in table_results if r.get("table_structure_similarity") is not None]
+            content_sims = [r["table_content_similarity"] for r in table_results if r.get("table_content_similarity") is not None]
 
             print(f"\n📋 TABLE QUALITY METRICS ({len(table_results)} pages with tables):")
             print(f"  ├─ TEDS Score:                {sum(teds_scores)/len(teds_scores):.2f} (Mean, 0-100)")
-            print(f"  ├─ Structure Similarity:      {sum(struct_sims)/len(struct_sims):.4f} (Mean)")
-            print(f"  └─ Content Similarity:        {sum(content_sims)/len(content_sims):.4f} (Mean)")
+            print(f"  ├─ Structure Similarity:      {sum(struct_sims)/len(struct_sims):.4f} (Mean)" if struct_sims else "  ├─ Structure Similarity:      N/A (no data)")
+            print(f"  └─ Content Similarity:        {sum(content_sims)/len(content_sims):.4f} (Mean)" if content_sims else "  └─ Content Similarity:        N/A (no data)")
 
             # 表格统计
             table_count_mismatch = sum(1 for r in table_results if r.get("table_count_pred") != r.get("table_count_ref"))
@@ -379,9 +582,9 @@ class OCRQualityEvaluator:
         # 公式质量
         formula_results = [r for r in results if r.get("formula_average_accuracy") is not None]
         if formula_results:
-            formula_accs = [r["formula_average_accuracy"] for r in formula_results]
-            correct_counts = [r["formula_correct_count"] for r in formula_results]
-            total_formulas = sum([r["formula_count"] for r in formula_results])
+            formula_accs = [r["formula_average_accuracy"] for r in formula_results if r.get("formula_average_accuracy") is not None]
+            correct_counts = [r["formula_correct_count"] for r in formula_results if r.get("formula_correct_count") is not None]
+            total_formulas = sum([r["formula_count"] for r in formula_results if r.get("formula_count") is not None])
 
             print(f"\n📐 FORMULA QUALITY METRICS ({len(formula_results)} pages with formulas):")
             print(f"  ├─ Average Accuracy:      {sum(formula_accs)/len(formula_accs):.4f} (Mean)")
@@ -414,11 +617,11 @@ class OCRQualityEvaluator:
 
         # 诊断建议
         print(f"\n💡 DIAGNOSTIC RECOMMENDATIONS:")
-        if char_accs and sum(char_accs)/len(char_accs) < 0.80:
+        if char_accs and len(char_accs) > 0 and sum(char_accs)/len(char_accs) < 0.80:
             print(f"  ⚠️  Text accuracy < 80%: Check OCR confidence_threshold or image quality")
-        if table_results and sum(teds_scores)/len(teds_scores) < 70:
+        if teds_scores and len(teds_scores) > 0 and sum(teds_scores)/len(teds_scores) < 70:
             print(f"  ⚠️  Table TEDS < 70: Table structure or content extraction needs improvement")
-        if formula_results and sum(formula_accs)/len(formula_accs) < 0.85:
+        if formula_accs and len(formula_accs) > 0 and sum(formula_accs)/len(formula_accs) < 0.85:
             print(f"  ⚠️  Formula accuracy < 85%: LaTeX parsing or OCR formula recognition needs work")
 
         print("="*80 + "\n")
