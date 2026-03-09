@@ -1,6 +1,6 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 02:08:42
+- Generated at: 2026-03-10 02:57:02
 - Total evaluated pages: 1005
 
 ## Text Quality Metrics
@@ -8,7 +8,7 @@
 | Metric | Mean |
 | --- | --- |
 | Character Accuracy | 0.6942 |
-| Sequence Similarity | 0.6682 |
+| Sequence Similarity | 0.6684 |
 | Jaccard Similarity | 0.8085 |
 
 ## Table Quality Metrics
@@ -25,7 +25,7 @@
 
 | Stat | Value |
 | --- | --- |
-| Mean | 71.52 |
+| Mean | 71.53 |
 | Median | 83.54 |
 | Std Dev | 27.89 |
 | Min | 0.00 |
