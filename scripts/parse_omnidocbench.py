@@ -28,12 +28,22 @@ def analyze_omnidocbench(data: list[dict]) -> dict:
             order = det.get("order", 0)
             anno_id = det.get("anno_id", 0)
             text = det.get("text", "")
-            page_dets.append({
+
+            # 构建页面元素字典
+            det_dict = {
                 "category_type": category_type,
                 "order": order,
                 "anno_id": anno_id,
                 "text": text
-            })
+            }
+
+            # 为表格提取HTML字段（用于TEDS评估）
+            if category_type == "table":
+                table_html = det.get("html", "")
+                if table_html:
+                    det_dict["table_html"] = table_html
+
+            page_dets.append(det_dict)
         relation = item.get("extra", {}).get("relation", [])
         page_no =  item.get("page_info", {}).get("page_no", 0)
         image_path = item.get("page_info", {}).get("image_path", "")
