@@ -1,15 +1,15 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 02:57:02
+- Generated at: 2026-03-10 03:49:52
 - Total evaluated pages: 1005
 
 ## Text Quality Metrics
 
 | Metric | Mean |
 | --- | --- |
-| Character Accuracy | 0.6942 |
+| Character Accuracy | 0.6943 |
 | Sequence Similarity | 0.6684 |
-| Jaccard Similarity | 0.8085 |
+| Jaccard Similarity | 0.8086 |
 
 ## Table Quality Metrics
 
@@ -34,8 +34,8 @@
 | Grade | Pages | Ratio |
 | --- | --- | --- |
 | Excellent (≥90) | 315 |  31.3% |
-| Good (80-90) | 253 |  25.2% |
-| Fair (70-80) | 104 |  10.3% |
+| Good (80-90) | 254 |  25.3% |
+| Fair (70-80) | 103 |  10.2% |
 | Poor (<70) | 333 |  33.1% |
 
 ## Worst 10 Pages by Character Accuracy
