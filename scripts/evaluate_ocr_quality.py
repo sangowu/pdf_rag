@@ -176,6 +176,7 @@ class OCRQualityEvaluator:
                         table_bboxes.append(block_bbox)
 
         # 第二步：遍历所有块，提取文本但排除表格重叠区域
+        # 注：overlap_threshold=0.05 - 只在明显重叠时过滤，避免过度过滤真实文本
         for res in parsing_res_list:
             block_label = res.get("block_label", "")
             block_content = res.get("block_content", "")
@@ -183,14 +184,14 @@ class OCRQualityEvaluator:
 
             # 只提取文本块和标题，过滤图片
             if block_label in ["text", "paragraph", "title", "list_item", "paragraph_title"]:
-                # 使用bbox隔离：检查是否与表格重叠
+                # 使用bbox隔离：检查是否与表格明显重叠（阈值降低到0.05）
                 if use_bbox_isolation and block_bbox and table_bboxes:
                     overlaps_with_table = any(
-                        self._bbox_overlap(block_bbox, table_bbox)
+                        self._bbox_overlap(block_bbox, table_bbox, overlap_threshold=0.05)
                         for table_bbox in table_bboxes
                     )
                     if overlaps_with_table:
-                        logger.debug(f"文本块 {block_label} 与表格重叠，已排除")
+                        logger.debug(f"文本块 {block_label} 与表格明显重叠，已排除")
                         continue
 
                 if block_content:
@@ -198,10 +199,10 @@ class OCRQualityEvaluator:
 
             # 对于其他标签，如果识别为文本，记录标签类型但不包含图片OCR结果
             elif block_label in ["doc_title", "header", "footer", "page_num"]:
-                # 同样应用bbox隔离
+                # 同样应用bbox隔离（更宽松的阈值）
                 if use_bbox_isolation and block_bbox and table_bboxes:
                     overlaps_with_table = any(
-                        self._bbox_overlap(block_bbox, table_bbox)
+                        self._bbox_overlap(block_bbox, table_bbox, overlap_threshold=0.05)
                         for table_bbox in table_bboxes
                     )
                     if overlaps_with_table:
@@ -460,9 +461,20 @@ class OCRQualityEvaluator:
                         })
 
                 # 综合评分（动态权重，改进版）
+                # 判断页面类型：是否为纯文本/纯表格/混合/空白
+                gt_text_len = int(result.get("text_length_gt", 0))
+                gt_table_count = int(result.get("table_count_ref", 0))
+
                 # 基础：文本评估（最重要，权重1.0）
+                # 但如果GT中没有文本内容，降低文本权重（因为期望本就为0）
+                if gt_text_len == 0 and gt_table_count == 0:
+                    # 纯图片或空白页：不应该有文本，降低文本权重
+                    component_weights = {"text": 0.2}
+                else:
+                    # 正常页面：文本权重正常
+                    component_weights = {"text": 1.0}
+
                 score_components = {"text": char_acc}
-                component_weights = {"text": 1.0}
 
                 # 表格评估（如果有）
                 if self.include_tables and "table_teds" in result and result["table_teds"] is not None:
