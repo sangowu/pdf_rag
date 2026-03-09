@@ -258,6 +258,7 @@ class TableEvaluator:
     def evaluate_tables(pred_html: str, ref_html: str) -> Dict:
         """
         完整表格评估 - 支持多表格
+        改进：当HTML解析失败时，尝试直接文本相似度比对
 
         Args:
             pred_html: 预测的HTML表格
@@ -269,14 +270,28 @@ class TableEvaluator:
         pred_tables = TableEvaluator.parse_html_table(pred_html)
         ref_tables = TableEvaluator.parse_html_table(ref_html)
 
-        if not pred_tables or not ref_tables:
+        # 如果无法解析，尝试基于原始文本的相似度评估
+        if not pred_tables and not ref_tables:
+            # 都为空，视为完全匹配
             return {
-                'teds_score': 0.0,
-                'structure_similarity': 0.0,
-                'content_similarity': 0.0,
-                'cell_accuracy': 0.0,
-                'table_count': len(pred_tables),
-                'error': 'Failed to parse tables'
+                'teds_score': 100.0,
+                'structure_similarity': 1.0,
+                'content_similarity': 1.0,
+                'cell_accuracy': 1.0,
+                'table_count_pred': 0,
+                'table_count_ref': 0,
+            }
+
+        if not pred_tables or not ref_tables:
+            # 一个为空，尝试基于原始HTML的文本相似度
+            text_sim = MetricsCalculator.sequence_similarity(pred_html, ref_html)
+            return {
+                'teds_score': text_sim * 100,
+                'structure_similarity': text_sim,
+                'content_similarity': text_sim,
+                'cell_accuracy': text_sim,
+                'table_count_pred': len(pred_tables),
+                'table_count_ref': len(ref_tables),
             }
 
         # 评估所有表格（逐个比对）

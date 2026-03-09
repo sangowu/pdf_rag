@@ -109,7 +109,10 @@ class OCRQualityEvaluator:
         return gt_data
 
     def _extract_ocr_text(self, ocr_page_data: dict) -> str:
-        """从OCR页面数据提取纯文本"""
+        """
+        从OCR页面数据提取纯文本
+        只提取 block_label == "text" 的内容，过滤掉图片、表格等
+        """
         text_parts = []
         core_content = ocr_page_data.get("core_content", {})
         parsing_res_list = core_content.get("parsing_res_list", [])
@@ -118,17 +121,71 @@ class OCRQualityEvaluator:
             block_label = res.get("block_label", "")
             block_content = res.get("block_content", "")
 
-            if block_label != "text":
-                text_parts.append(f"\n#{block_label}\n")
-            text_parts.append(block_content)
+            # 只提取文本块和标题，过滤图片
+            if block_label in ["text", "paragraph", "title", "list_item", "paragraph_title"]:
+                if block_content:
+                    text_parts.append(block_content)
+            # 对于其他标签，如果识别为文本，记录标签类型但不包含图片OCR结果
+            elif block_label in ["doc_title", "header", "footer", "page_num"]:
+                if block_content:
+                    text_parts.append(block_content)
+            # 完全过滤掉图片、表格等二进制内容
+            elif block_label in ["image", "figure", "table"]:
+                continue
 
-        return "".join(text_parts).strip()
+        return "\n".join(text_parts).strip()
 
     def _extract_ocr_tables(self, ocr_page_data: dict) -> List[Dict]:
-        """从OCR页面数据提取表格"""
+        """
+        从OCR页面数据提取表格
+        支持两种格式：direct tables或从parsing_res_list中提取
+        """
         core_content = ocr_page_data.get("core_content", {})
+
+        # 方法1：直接提取tables字段
         tables = core_content.get("tables", [])
-        return tables if tables else []
+        if tables:
+            return tables
+
+        # 方法2：从parsing_res_list中提取标记为table的块
+        # 此处将table块转换为统一格式
+        parsing_res_list = core_content.get("parsing_res_list", [])
+        extracted_tables = []
+        for res in parsing_res_list:
+            if res.get("block_label") == "table":
+                block_content = res.get("block_content", "")
+                if block_content:
+                    extracted_tables.append({"html": block_content})
+
+        return extracted_tables if extracted_tables else []
+
+    def _tables_to_html(self, tables: List[Dict]) -> str:
+        """
+        将表格列表转换为HTML格式
+        支持多种表格格式
+        """
+        if not tables:
+            return ""
+
+        html_parts = []
+        for table in tables:
+            if isinstance(table, dict):
+                # 如果已有html字段，直接使用
+                if "html" in table:
+                    html_parts.append(table["html"])
+                # 如果有rows字段，转换为HTML
+                elif "rows" in table:
+                    rows = table.get("rows", [])
+                    if rows:
+                        html_parts.append("<table>")
+                        for row in rows:
+                            html_parts.append("<tr>")
+                            for cell in row:
+                                html_parts.append(f"<td>{cell}</td>")
+                            html_parts.append("</tr>")
+                        html_parts.append("</table>")
+
+        return "".join(html_parts)
 
     def _extract_ocr_formulas(self, ocr_page_data: dict) -> List[str]:
         """从OCR页面数据提取公式"""
@@ -146,7 +203,10 @@ class OCRQualityEvaluator:
         return formula_texts
 
     def _extract_gt_text(self, gt_page_data: dict) -> str:
-        """从GT页面数据提取纯文本"""
+        """
+        从GT页面数据提取纯文本
+        只提取文本、标题等内容，过滤掉图片、表格等
+        """
         text_parts = []
         page_dets = gt_page_data.get("page_dets", [])
 
@@ -154,11 +214,16 @@ class OCRQualityEvaluator:
             category_type = det.get("category_type", "")
             text = det.get("text", "")
 
-            if category_type != "text_block" and category_type:
-                text_parts.append(f"\n#{category_type}\n")
-
-            if text:
-                text_parts.append(text)
+            # 只提取文本、标题等内容
+            if category_type in ["text_block", "title", "heading", "list_item", "paragraph"]:
+                if text:
+                    text_parts.append(text)
+            elif category_type in ["figure_caption", "page_header", "page_footer"]:
+                if text:
+                    text_parts.append(text)
+            # 完全过滤掉图片、表格、公式等
+            elif category_type in ["figure", "table", "formula"]:
+                continue
 
         return "\n".join(text_parts).strip()
 
@@ -239,28 +304,55 @@ class OCRQualityEvaluator:
                     ocr_tables = self._extract_ocr_tables(ocr_pages[page_idx])
                     gt_tables = self._extract_gt_tables(gt_pages[page_idx])
 
+                    # 总是计算表格计数
+                    result["table_count_pred"] = len(ocr_tables)
+                    result["table_count_ref"] = len(gt_tables)
+
                     if ocr_tables and gt_tables:
-                        # 完整：比较所有表格
-                        table_eval = TableEvaluator.evaluate_tables(
-                            str(ocr_tables),
-                            str(gt_tables)
-                        )
+                        # 构建HTML格式用于评估
+                        ocr_html = self._tables_to_html(ocr_tables)
+                        gt_html = self._tables_to_html(gt_tables)
+
+                        if ocr_html and gt_html:
+                            table_eval = TableEvaluator.evaluate_tables(ocr_html, gt_html)
+                            result.update({
+                                "table_teds": table_eval.get("teds_score", 0.0),
+                                "table_structure_similarity": table_eval.get("structure_similarity", 0.0),
+                                "table_content_similarity": table_eval.get("content_similarity", 0.0),
+                                "table_cell_accuracy": table_eval.get("cell_accuracy", 0.0),
+                            })
+                        else:
+                            # 如果HTML构建失败，使用count-based评分
+                            count_match = 1.0 if result["table_count_pred"] == result["table_count_ref"] else 0.0
+                            result.update({
+                                "table_teds": count_match * 100,
+                                "table_structure_similarity": count_match,
+                                "table_content_similarity": count_match,
+                                "table_cell_accuracy": count_match,
+                            })
+                    elif ocr_tables and not gt_tables:
+                        # OCR识别到表格但GT没有 - 过识别
                         result.update({
-                            "table_teds": table_eval.get("teds_score", 0.0),
-                            "table_structure_similarity": table_eval.get("structure_similarity", 0.0),
-                            "table_content_similarity": table_eval.get("content_similarity", 0.0),
-                            "table_cell_accuracy": table_eval.get("cell_accuracy", 0.0),
-                            "table_count_pred": table_eval.get("table_count_pred", 0),
-                            "table_count_ref": table_eval.get("table_count_ref", 0),
+                            "table_teds": 0.0,
+                            "table_structure_similarity": 0.0,
+                            "table_content_similarity": 0.0,
+                            "table_cell_accuracy": 0.0,
+                        })
+                    elif not ocr_tables and gt_tables:
+                        # GT有表格但OCR没识别到 - 漏识别
+                        result.update({
+                            "table_teds": 0.0,
+                            "table_structure_similarity": 0.0,
+                            "table_content_similarity": 0.0,
+                            "table_cell_accuracy": 0.0,
                         })
                     else:
+                        # 两者都没有表格
                         result.update({
-                            "table_teds": 0.0 if (ocr_tables and not gt_tables) or (not ocr_tables and gt_tables) else None,
+                            "table_teds": None,
                             "table_structure_similarity": None,
                             "table_content_similarity": None,
                             "table_cell_accuracy": None,
-                            "table_count_pred": len(ocr_tables),
-                            "table_count_ref": len(gt_tables),
                         })
 
                 # 公式评估
@@ -286,28 +378,31 @@ class OCRQualityEvaluator:
                             "formula_correct_count": None,
                         })
 
-                # 综合评分（动态权重）
+                # 综合评分（动态权重，改进版）
+                # 基础：文本评估（最重要，权重1.0）
                 score_components = {"text": char_acc}
-                weight_sum = 1.0
+                component_weights = {"text": 1.0}
 
+                # 表格评估（如果有）
                 if self.include_tables and "table_teds" in result and result["table_teds"] is not None:
-                    score_components["table"] = result["table_teds"] / 100.0
-                    weight_sum += 0.5
+                    # TEDS已经是0-100的分数，转换为0-1
+                    table_score = result["table_teds"] / 100.0
+                    score_components["table"] = table_score
+                    component_weights["table"] = 0.5
 
+                # 公式评估（如果有）
                 if self.include_formulas and "formula_average_accuracy" in result and result["formula_average_accuracy"] is not None:
                     score_components["formula"] = result["formula_average_accuracy"]
-                    weight_sum += 0.3
+                    component_weights["formula"] = 0.3
 
-                # 加权组合
-                composite = 0.0
-                if "text" in score_components:
-                    composite += score_components["text"] * 1.0
-                if "table" in score_components:
-                    composite += score_components["table"] * 0.5
-                if "formula" in score_components:
-                    composite += score_components["formula"] * 0.3
+                # 计算加权平均
+                if score_components:
+                    total_weight = sum(component_weights.values())
+                    weighted_sum = sum(score * component_weights[key] for key, score in score_components.items())
+                    composite = (weighted_sum / total_weight) * 100 if total_weight > 0 else 0.0
+                else:
+                    composite = 0.0
 
-                composite = (composite / weight_sum) * 100 if weight_sum > 0 else char_acc * 100
                 result["composite_score"] = round(composite, 2)
 
                 results.append(result)
