@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile scripts/evaluate_ocr_quality.py)",
+      "Bash(python scripts/evaluate_ocr_quality.py --num-samples 50)",
+      "Bash(PYTHONPATH=. python scripts/evaluate_ocr_quality.py --num-samples 50)",
+      "Bash(pip install -q editdistance tqdm)",
+      "Bash(python3 -m pip install -q editdistance)",
+      "Bash(python3 -c \"import editdistance; print\\(''✓ editdistance loaded''\\)\")",
+      "Bash(pip install --no-binary :all: editdistance -q)"
+    ]
+  }
+}
