@@ -108,27 +108,108 @@ class OCRQualityEvaluator:
 
         return gt_data
 
-    def _extract_ocr_text(self, ocr_page_data: dict) -> str:
+    @staticmethod
+    def _bbox_overlap(bbox1: list, bbox2: list, overlap_threshold: float = 0.2) -> bool:
+        """
+        检测两个bbox是否重叠
+
+        Args:
+            bbox1: [x1, y1, x2, y2] 第一个边界框
+            bbox2: [x1, y1, x2, y2] 第二个边界框
+            overlap_threshold: 重叠面积占较小面积的比例阈值
+
+        Returns:
+            bool: 是否重叠
+        """
+        if not bbox1 or not bbox2 or len(bbox1) < 4 or len(bbox2) < 4:
+            return False
+
+        x1_1, y1_1, x2_1, y2_1 = bbox1[:4]
+        x1_2, y1_2, x2_2, y2_2 = bbox2[:4]
+
+        # 计算交集区域
+        inter_x1 = max(x1_1, x1_2)
+        inter_y1 = max(y1_1, y1_2)
+        inter_x2 = min(x2_1, x2_2)
+        inter_y2 = min(y2_1, y2_2)
+
+        # 如果没有交集
+        if inter_x1 >= inter_x2 or inter_y1 >= inter_y2:
+            return False
+
+        # 计算交集面积和两个bbox的面积
+        inter_area = (inter_x2 - inter_x1) * (inter_y2 - inter_y1)
+        area1 = (x2_1 - x1_1) * (y2_1 - y1_1)
+        area2 = (x2_2 - x1_2) * (y2_2 - y1_2)
+
+        # 计算重叠率（相对于较小的面积）
+        min_area = min(area1, area2)
+        if min_area <= 0:
+            return False
+
+        overlap_ratio = inter_area / min_area
+        return overlap_ratio >= overlap_threshold
+
+    def _extract_ocr_text(self, ocr_page_data: dict, use_bbox_isolation: bool = True) -> str:
         """
         从OCR页面数据提取纯文本
         只提取 block_label == "text" 的内容，过滤掉图片、表格等
+
+        Args:
+            ocr_page_data: OCR输出页面数据
+            use_bbox_isolation: 是否使用bbox隔离来排除与表格重叠的文本块
+
+        Returns:
+            提取的纯文本
         """
         text_parts = []
         core_content = ocr_page_data.get("core_content", {})
         parsing_res_list = core_content.get("parsing_res_list", [])
 
+        # 第一步：收集所有表格的bbox
+        table_bboxes = []
+        if use_bbox_isolation:
+            for res in parsing_res_list:
+                if res.get("block_label") == "table":
+                    block_bbox = res.get("block_bbox")
+                    if block_bbox:
+                        table_bboxes.append(block_bbox)
+
+        # 第二步：遍历所有块，提取文本但排除表格重叠区域
         for res in parsing_res_list:
             block_label = res.get("block_label", "")
             block_content = res.get("block_content", "")
+            block_bbox = res.get("block_bbox")
 
             # 只提取文本块和标题，过滤图片
             if block_label in ["text", "paragraph", "title", "list_item", "paragraph_title"]:
+                # 使用bbox隔离：检查是否与表格重叠
+                if use_bbox_isolation and block_bbox and table_bboxes:
+                    overlaps_with_table = any(
+                        self._bbox_overlap(block_bbox, table_bbox)
+                        for table_bbox in table_bboxes
+                    )
+                    if overlaps_with_table:
+                        logger.debug(f"文本块 {block_label} 与表格重叠，已排除")
+                        continue
+
                 if block_content:
                     text_parts.append(block_content)
+
             # 对于其他标签，如果识别为文本，记录标签类型但不包含图片OCR结果
             elif block_label in ["doc_title", "header", "footer", "page_num"]:
+                # 同样应用bbox隔离
+                if use_bbox_isolation and block_bbox and table_bboxes:
+                    overlaps_with_table = any(
+                        self._bbox_overlap(block_bbox, table_bbox)
+                        for table_bbox in table_bboxes
+                    )
+                    if overlaps_with_table:
+                        continue
+
                 if block_content:
                     text_parts.append(block_content)
+
             # 完全过滤掉图片、表格等二进制内容
             elif block_label in ["image", "figure", "table"]:
                 continue
