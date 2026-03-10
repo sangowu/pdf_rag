@@ -268,13 +268,15 @@ class OCRQualityEvaluator:
         core_content = ocr_page_data.get("core_content", {})
         formulas = core_content.get("formulas", [])
 
-        # 提取公式文本
+        # 提取公式文本（rec_formula 是 PP-StructureV3 的字段名）
         formula_texts = []
         for formula in formulas:
             if isinstance(formula, dict):
-                formula_texts.append(formula.get("content", ""))
+                text = formula.get("rec_formula", "") or formula.get("content", "")
             else:
-                formula_texts.append(str(formula))
+                text = str(formula)
+            if text:
+                formula_texts.append(text)
 
         return formula_texts
 
@@ -323,7 +325,14 @@ class OCRQualityEvaluator:
             if det.get("category_type") in ("equation_isolated", "equation_caption", "formula"):
                 formula_text = det.get("latex", "") or det.get("text", "") or det.get("content", "")
                 if formula_text:
-                    formulas.append(formula_text)
+                    # 去除 $$ ... $$ 或 $ ... $ 包裹符号
+                    formula_text = formula_text.strip()
+                    if formula_text.startswith("$$") and formula_text.endswith("$$"):
+                        formula_text = formula_text[2:-2].strip()
+                    elif formula_text.startswith("$") and formula_text.endswith("$"):
+                        formula_text = formula_text[1:-1].strip()
+                    if formula_text:
+                        formulas.append(formula_text)
 
         return formulas
 
