@@ -1,65 +1,67 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 09:11:35
+- Generated at: 2026-03-10 09:24:33
 - Total evaluated pages: 1005
+- Pages with content (used for metrics): 991
+- Empty pages excluded (OCR=0 & GT=0): 14
 
 ## Text Quality Metrics
 
 | Metric | Mean |
 | --- | --- |
-| Character Accuracy | 0.7010 |
-| Sequence Similarity | 0.6684 |
-| Jaccard Similarity | 0.8086 |
+| Character Accuracy | 0.6996 |
+| Sequence Similarity | 0.6637 |
+| Jaccard Similarity | 0.8059 |
 
 ## Character Accuracy Distribution
 
 | Range | Pages | Ratio |
 | --- | --- | --- |
-| [0.0, 0.2) | 120 |  11.9% |
-| [0.2, 0.5) | 94 |   9.4% |
-| [0.5, 0.7) | 124 |  12.3% |
-| [0.7, 0.8) | 103 |  10.2% |
-| [0.8, 0.9) | 256 |  25.5% |
-| [0.9, 1.0) | 286 |  28.5% |
-| 1.0 (exact) | 22 |   2.2% |
+| [0.0, 0.2) | 120 |  12.1% |
+| [0.2, 0.5) | 93 |   9.4% |
+| [0.5, 0.7) | 118 |  11.9% |
+| [0.7, 0.8) | 105 |  10.6% |
+| [0.8, 0.9) | 247 |  24.9% |
+| [0.9, 1.0) | 298 |  30.1% |
+| 1.0 (exact) | 10 |   1.0% |
 
 ## Table Quality Metrics
 
-- Pages with tables: **238**
+- Pages with tables: **227**
 
 | Metric | Mean |
 | --- | --- |
-| TEDS Score (0-100) | 87.39 |
-| Structure Similarity | 0.8739 |
-| Content Similarity | 0.8739 |
+| TEDS Score (0-100) | 86.78 |
+| Structure Similarity | 0.8678 |
+| Content Similarity | 0.8678 |
 
 ## Formula Quality Metrics
 
-- Pages with formulas: **162**
-- Total formulas: **1146**
+- Pages with formulas: **161**
+- Total formulas: **1143**
 
 | Metric | Value |
 | --- | --- |
-| Average Accuracy | 0.3610 |
-| Correct Formulas | 7/1146 |
+| Average Accuracy | 0.3627 |
+| Correct Formulas | 7/1143 |
 | Accuracy Rate (%) | 0.6 |
 
 ## Composite Score Distribution (0-100)
 
 | Stat | Value |
 | --- | --- |
-| Mean | 70.73 |
-| Median | 80.14 |
-| Std Dev | 27.52 |
+| Mean | 70.62 |
+| Median | 80.31 |
+| Std Dev | 27.58 |
 | Min | 0.00 |
 | Max | 100.00 |
 
 | Grade | Pages | Ratio |
 | --- | --- | --- |
-| Excellent (≥90) | 309 |  30.7% |
-| Good (80-90) | 196 |  19.5% |
-| Fair (70-80) | 151 |  15.0% |
-| Poor (<70) | 349 |  34.7% |
+| Excellent (≥90) | 307 |  31.0% |
+| Good (80-90) | 193 |  19.5% |
+| Fair (70-80) | 148 |  14.9% |
+| Poor (<70) | 343 |  34.6% |
 
 ## Worst 10 Pages by Character Accuracy
 
