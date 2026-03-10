@@ -43,6 +43,12 @@ def analyze_omnidocbench(data: list[dict]) -> dict:
                 if table_html:
                     det_dict["table_html"] = table_html
 
+            # 为公式提取LaTeX字段
+            if category_type in ("equation_isolated", "equation_caption"):
+                latex = det.get("latex", "")
+                if latex:
+                    det_dict["latex"] = latex
+
             page_dets.append(det_dict)
         relation = item.get("extra", {}).get("relation", [])
         page_no =  item.get("page_info", {}).get("page_no", 0)

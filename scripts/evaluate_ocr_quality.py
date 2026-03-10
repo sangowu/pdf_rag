@@ -320,8 +320,8 @@ class OCRQualityEvaluator:
         formulas = []
 
         for det in page_dets:
-            if det.get("category_type") == "formula":
-                formula_text = det.get("text", "") or det.get("content", "")
+            if det.get("category_type") in ("equation_isolated", "equation_caption", "formula"):
+                formula_text = det.get("latex", "") or det.get("text", "") or det.get("content", "")
                 if formula_text:
                     formulas.append(formula_text)
 
