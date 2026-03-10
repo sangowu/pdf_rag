@@ -355,13 +355,16 @@ class OCRQualityEvaluator:
             ocr_pages = self.ocr_data[filename]
             gt_pages = self.gt_data[filename]
 
-            # 获取共同的页码
-            page_indices = sorted(set(ocr_pages.keys()) & set(gt_pages.keys()))
+            # 每个 stem 唯一对应一页：GT page_no 是全局流水号，OCR page_index 是文档内编号
+            # 两套编号不同，直接取各自唯一的页面数据配对
+            ocr_page_data = next(iter(ocr_pages.values()))
+            gt_page_data = next(iter(gt_pages.values()))
+            page_idx = next(iter(gt_pages.keys()))
 
-            for page_idx in page_indices:
+            if True:  # 保持原有缩进结构不变
                 # 文本评估
-                ocr_text = self._extract_ocr_text(ocr_pages[page_idx])
-                gt_text = self._extract_gt_text(gt_pages[page_idx])
+                ocr_text = self._extract_ocr_text(ocr_page_data)
+                gt_text = self._extract_gt_text(gt_page_data)
 
                 char_acc = MetricsCalculator.character_accuracy(ocr_text, gt_text)
                 char_err = MetricsCalculator.character_error_rate(ocr_text, gt_text)
@@ -381,8 +384,8 @@ class OCRQualityEvaluator:
 
                 # 表格评估
                 if self.include_tables:
-                    ocr_tables = self._extract_ocr_tables(ocr_pages[page_idx])
-                    gt_tables = self._extract_gt_tables(gt_pages[page_idx])
+                    ocr_tables = self._extract_ocr_tables(ocr_page_data)
+                    gt_tables = self._extract_gt_tables(gt_page_data)
 
                     # 总是计算表格计数
                     result["table_count_pred"] = len(ocr_tables)
@@ -437,8 +440,8 @@ class OCRQualityEvaluator:
 
                 # 公式评估
                 if self.include_formulas:
-                    ocr_formulas = self._extract_ocr_formulas(ocr_pages[page_idx])
-                    gt_formulas = self._extract_gt_formulas(gt_pages[page_idx])
+                    ocr_formulas = self._extract_ocr_formulas(ocr_page_data)
+                    gt_formulas = self._extract_gt_formulas(gt_page_data)
 
                     if ocr_formulas and gt_formulas:
                         formula_eval = FormulaEvaluator.evaluate_formulas(
