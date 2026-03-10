@@ -23,7 +23,7 @@ import argparse
 from tqdm import tqdm
 
 from src.utils import load_config
-from src.evaluator import MetricsCalculator, TableEvaluator, FormulaEvaluator
+from src.ocr_evaluator import MetricsCalculator, TableEvaluator, FormulaEvaluator
 
 logging.basicConfig(
     level=logging.INFO,

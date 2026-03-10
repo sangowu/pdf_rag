@@ -6,18 +6,18 @@
       "parsing_res_list": [
         {
           "block_label": "text",
-          "block_content": "y ",
+          "block_content": "ym ",
           "block_bbox": [
-            1,
-            0,
-            2998,
-            1163
+            67,
+            119,
+            2870,
+            1232
           ],
           "block_id": 0,
           "block_order": 1
         }
       ],
-      "markdown": "y ",
+      "markdown": "ym ",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -25,15 +25,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -41,12 +33,12 @@
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9181461334228516,
+            "score": 0.9524589776992798,
             "coordinate": [
-              1.03759765625,
-              0.50384521484375,
-              2998.88232421875,
-              1163.394775390625
+              67.215087890625,
+              119.5606689453125,
+              2870.250244140625,
+              1232.03759765625
             ]
           }
         ]
@@ -57,28 +49,9 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
-        "dt_polys": [
-          [
-            [
-              221,
-              1531
-            ],
-            [
-              622,
-              1479
-            ],
-            [
-              670,
-              1857
-            ],
-            [
-              269,
-              1909
-            ]
-          ]
-        ],
+        "dt_polys": [],
         "text_det_params": {
           "limit_side_len": 736,
           "limit_type": "min",
@@ -88,69 +61,40 @@
           "unclip_ratio": 1.5
         },
         "text_type": "general",
-        "textline_orientation_angles": [
-          0
-        ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "-",
-          "y"
+          "ym"
         ],
         "rec_scores": [
-          0.2657606303691864,
-          0.39006179571151733
+          0.5318237543106079
         ],
         "rec_polys": [
           [
             [
-              221,
-              1531
+              67,
+              119
             ],
             [
-              622,
-              1479
+              2870,
+              119
             ],
             [
-              670,
-              1857
+              2870,
+              1232
             ],
             [
-              269,
-              1909
-            ]
-          ],
-          [
-            [
-              1,
-              0
-            ],
-            [
-              2998,
-              0
-            ],
-            [
-              2998,
-              1163
-            ],
-            [
-              1,
-              1163
+              67,
+              1232
             ]
           ]
         ],
         "rec_boxes": [
           [
-            221.0,
-            1479.0,
-            670.0,
-            1909.0
-          ],
-          [
-            1.03759765625,
-            0.50384521484375,
-            2998.88232421875,
-            1163.394775390625
+            67.215087890625,
+            119.5606689453125,
+            2870.250244140625,
+            1232.03759765625
           ]
         ]
       },
@@ -160,7 +104,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

@@ -9,7 +9,7 @@ from tqdm import tqdm
 from src.utils import load_config
 from src.chunk_manager import ChunkManager
 from src.vector_store import VectorStore
-from src.evaluator import RAGEvaluator
+from src.ocr_evaluator import RAGEvaluator
 
 
 def run_chunking(config: dict, file_limit: int | None = None) -> None:

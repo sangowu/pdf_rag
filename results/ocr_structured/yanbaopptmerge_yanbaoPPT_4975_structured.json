@@ -6,12 +6,12 @@
       "parsing_res_list": [
         {
           "block_label": "image",
-          "block_content": "",
+          "block_content": ".\n\n",
           "block_bbox": [
-            301,
-            29,
-            2985,
-            1829
+            472,
+            143,
+            2349,
+            1713
           ],
           "block_id": 0,
           "block_order": null
@@ -20,16 +20,16 @@
           "block_label": "vision_footnote",
           "block_content": "谁带着泡泡旅行呢？",
           "block_bbox": [
-            749,
-            1924,
-            1977,
-            2072
+            805,
+            1832,
+            1816,
+            1964
           ],
           "block_id": 1,
           "block_order": null
         }
       ],
-      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_301_29_2985_1829.jpg\" alt=\"Image\" width=\"89%\" /></div>\n\n\n谁带着泡泡旅行呢？",
+      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_472_143_2349_1713.jpg\" alt=\"Image\" width=\"62%\" /></div>\n\n\n谁带着泡泡旅行呢？",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -37,15 +37,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -53,23 +45,23 @@
           {
             "cls_id": 1,
             "label": "image",
-            "score": 0.7257286310195923,
+            "score": 0.8330484628677368,
             "coordinate": [
-              301.8319091796875,
-              29.91510009765625,
-              2985.39794921875,
-              1829.2373046875
+              472.72296142578125,
+              143.74072265625,
+              2349.110595703125,
+              1713.1171875
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.5543148517608643,
+            "score": 0.5780307054519653,
             "coordinate": [
-              749.3900756835938,
-              1924.78466796875,
-              1977.7900390625,
-              2072.60986328125
+              805.495849609375,
+              1832.107666015625,
+              1816.711181640625,
+              1964.219970703125
             ]
           }
         ]
@@ -80,25 +72,43 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              743,
-              1910
+              1419,
+              1190
             ],
             [
-              1976,
-              1925
+              1649,
+              950
             ],
             [
-              1974,
-              2083
+              1821,
+              1118
             ],
             [
-              741,
-              2068
+              1591,
+              1358
+            ]
+          ],
+          [
+            [
+              803,
+              1825
+            ],
+            [
+              1817,
+              1827
+            ],
+            [
+              1817,
+              1965
+            ],
+            [
+              803,
+              1963
             ]
           ]
         ],
@@ -112,42 +122,69 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
+          ".",
           "谁带着泡泡旅行呢？"
         ],
         "rec_scores": [
-          0.9877676367759705
+          0.669818103313446,
+          0.988673210144043
         ],
         "rec_polys": [
           [
             [
-              743,
-              1910
+              1419,
+              1190
             ],
             [
-              1976,
-              1925
+              1649,
+              950
             ],
             [
-              1974,
-              2083
+              1821,
+              1118
             ],
             [
-              741,
-              2068
+              1591,
+              1358
+            ]
+          ],
+          [
+            [
+              803,
+              1825
+            ],
+            [
+              1817,
+              1827
+            ],
+            [
+              1817,
+              1965
+            ],
+            [
+              803,
+              1963
             ]
           ]
         ],
         "rec_boxes": [
           [
-            741,
-            1910,
-            1976,
-            2083
+            1419,
+            950,
+            1821,
+            1358
+          ],
+          [
+            803,
+            1825,
+            1817,
+            1965
           ]
         ]
       },
@@ -157,7 +194,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

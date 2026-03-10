@@ -8,34 +8,34 @@
           "block_label": "number",
           "block_content": "8",
           "block_bbox": [
-            323,
-            56,
-            355,
-            112
+            474,
+            241,
+            503,
+            283
           ],
           "block_id": 0,
           "block_order": null
         },
         {
           "block_label": "header",
-          "block_content": "ChaptertnGi ",
+          "block_content": "Chapter 1 Matrices and Gaussian Elimination ",
           "block_bbox": [
-            1148,
-            52,
-            2278,
-            137
+            1218,
+            234,
+            2243,
+            290
           ],
           "block_id": 1,
           "block_order": null
         },
         {
           "block_label": "text",
-          "block_content": "Ourtruelooimm.equationsinunknowns,threarnplnesitheowpicturTherearnvectors in thecolum,lurei.Thquiokriar combinationofthencolumnsthatequalsb.Forcertainequationsthat willbeimpossible.Paradoxically,thewaytounderstandthegoodcaseisto studythebadone. Therefore ",
+          "block_content": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible.Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.",
           "block_bbox": [
-            315,
-            275,
-            3066,
-            877
+            460,
+            397,
+            2994,
+            940
           ],
           "block_id": 2,
           "block_order": 1
@@ -44,10 +44,10 @@
           "block_label": "text",
           "block_content": "Row picture: Intersection of planes Column picture: Combination of columns ",
           "block_bbox": [
-            366,
-            1002,
-            3019,
-            1097
+            520,
+            1077,
+            2949,
+            1155
           ],
           "block_id": 3,
           "block_order": 2
@@ -56,22 +56,22 @@
           "block_label": "paragraph_title",
           "block_content": "The Singular Case ",
           "block_bbox": [
-            308,
-            1291,
-            1011,
-            1369
+            467,
+            1352,
+            1103,
+            1426
           ],
           "block_id": 4,
           "block_order": 3
         },
         {
           "block_label": "text",
-          "block_content": "Suppose waaaiintedimeins,andtetelaesintheowcture do not intersect. What can go wrong?Oneposibilityisthat twoplanes maybeparallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n",
+          "block_content": "Suppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n",
           "block_bbox": [
-            302,
-            1484,
-            3082,
-            2054
+            461,
+            1531,
+            2993,
+            2067
           ],
           "block_id": 5,
           "block_order": 4
@@ -80,34 +80,34 @@
           "block_label": "image",
           "block_content": "two parallel planes no intersection line of intersection all planes parallel (a)(b)(c)(d)",
           "block_bbox": [
-            445,
-            2120,
-            2911,
-            2937
+            596,
+            2125,
+            2842,
+            2880
           ],
           "block_id": 6,
           "block_order": null
         },
         {
           "block_label": "figure_title",
-          "block_content": "Figure 1.5: Singular cases: no solution for (a), (b), or (d), an infinity of solutions for (c).",
+          "block_content": "Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).",
           "block_bbox": [
-            604,
-            3022,
-            2757,
-            3090
+            740,
+            2962,
+            2716,
+            3022
           ],
           "block_id": 7,
           "block_order": null
         },
         {
           "block_label": "text",
-          "block_content": "The most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ :",
+          "block_content": "The most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ \n",
           "block_bbox": [
-            300,
-            3253,
-            3062,
-            3627
+            460,
+            3179,
+            2993,
+            3535
           ],
           "block_id": 8,
           "block_order": 5
@@ -116,34 +116,34 @@
           "block_label": "paragraph_title",
           "block_content": "No solution, as in Figure 1.5b ",
           "block_bbox": [
-            676,
-            3810,
-            1656,
-            3886
+            810,
+            3708,
+            1716,
+            3781
           ],
           "block_id": 9,
           "block_order": 6
         },
         {
           "block_label": "formula",
-          "block_content": "\\begin{array}{c c c c c}{{u}}&{{+}}&{{v}}&{{+}}&{{w}}&{{=}}&{{2}}\\\\ {{2u}}&{{}}&{{+}}&{{3w}}&{{=}}&{{5}}\\\\ {{3u}}&{{+}}&{{v}}&{{+}}&{{4w}}&{{=}}&{{6.}}\\end{array}",
+          "block_content": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
           "block_bbox": [
-            1823,
-            3710,
-            2654,
-            3986
+            1870,
+            3615,
+            2631,
+            3876
           ],
           "block_id": 10,
           "block_order": 7
         },
         {
           "block_label": "text",
-          "block_content": "The fi rst two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0{=}1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
+          "block_content": "The first two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0=1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
           "block_bbox": [
-            293,
-            4072,
-            3054,
-            4347
+            463,
+            3956,
+            2993,
+            4217
           ],
           "block_id": 11,
           "block_order": 8
@@ -152,28 +152,28 @@
           "block_label": "formula_number",
           "block_content": "(3)",
           "block_bbox": [
-            2966,
-            3814,
-            3054,
-            3886
+            2912,
+            3714,
+            2993,
+            3781
           ],
           "block_id": 12,
           "block_order": null
         }
       ],
-      "markdown": "Ourtruelooimm.equationsinunknowns,threarnplnesitheowpicturTherearnvectors in thecolum,lurei.Thquiokriar combinationofthencolumnsthatequalsb.Forcertainequationsthat willbeimpossible.Paradoxically,thewaytounderstandthegoodcaseisto studythebadone. Therefore \n\nRow picture: Intersection of planes Column picture: Combination of columns \n\n## The Singular Case \n\nSuppose waaaiintedimeins,andtetelaesintheowcture do not intersect. What can go wrong?Oneposibilityisthat twoplanes maybeparallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_445_2120_2911_2937.jpg\" alt=\"Image\" width=\"74%\" /></div>\n\n\n<div style=\"text-align: center;\">Figure 1.5: Singular cases: no solution for (a), (b), or (d), an infinity of solutions for (c).</div>\n\n\nThe most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ :\n\n### No solution, as in Figure 1.5b \n\n$$\\begin{array}{c c c c c}{{u}}&{{+}}&{{v}}&{{+}}&{{w}}&{{=}}&{{2}}\\\\ {{2u}}&{{}}&{{+}}&{{3w}}&{{=}}&{{5}}\\\\ {{3u}}&{{+}}&{{v}}&{{+}}&{{4w}}&{{=}}&{{6.}}\\end{array}$$\n\nThe fi rst two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0{=}1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
+      "markdown": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible.Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.\n\nRow picture: Intersection of planes Column picture: Combination of columns \n\n## The Singular Case \n\nSuppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_596_2125_2842_2880.jpg\" alt=\"Image\" width=\"67%\" /></div>\n\n\n<div style=\"text-align: center;\">Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).</div>\n\n\nThe most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ \n\n\n\n### No solution, as in Figure 1.5b \n\n$$\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}$$\n\nThe first two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0=1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
       "tables": [],
       "formulas": [
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "\\begin{array}{c c c c c}{{u}}&{{+}}&{{v}}&{{+}}&{{w}}&{{=}}&{{2}}\\\\ {{2u}}&{{}}&{{+}}&{{3w}}&{{=}}&{{5}}\\\\ {{3u}}&{{+}}&{{v}}&{{+}}&{{4w}}&{{=}}&{{6.}}\\end{array}",
+          "rec_formula": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            1823.5185546875,
-            3710.908203125,
-            2654.58447265625,
-            3986.0458984375
+            1870.15283203125,
+            3615.185546875,
+            2631.7861328125,
+            3876.6669921875
           ]
         },
         {
@@ -182,10 +182,10 @@
           "rec_formula": "b=(2,5,6)",
           "formula_region_id": 2,
           "dt_polys": [
-            1660.716552734375,
-            3541.27783203125,
-            2040.081298828125,
-            3622.51123046875
+            1720.109375,
+            3456.265380859375,
+            2067.49853515625,
+            3532.147216796875
           ]
         },
         {
@@ -194,22 +194,22 @@
           "rec_formula": "2+5\\ne6",
           "formula_region_id": 3,
           "dt_polys": [
-            2436.756103515625,
-            4075.9970703125,
-            2732.200927734375,
-            4151.2939453125
+            2435.888427734375,
+            3958.90283203125,
+            2702.497802734375,
+            4029.82861328125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "0{=}1",
+          "rec_formula": "0=1",
           "formula_region_id": 4,
           "dt_polys": [
-            2252.818115234375,
-            4171.48681640625,
-            2419.113525390625,
-            4241.96240234375
+            2261.73486328125,
+            4053.41845703125,
+            2418.15283203125,
+            4115.48095703125
           ]
         },
         {
@@ -218,10 +218,10 @@
           "rec_formula": "2u+v+w=5and4u+2v+2w=11",
           "formula_region_id": 5,
           "dt_polys": [
-            634.571044921875,
-            1680.25634765625,
-            1877.9345703125,
-            1756.36572265625
+            766.2139892578125,
+            1716.34375,
+            1901.9510498046875,
+            1788.24658203125
           ]
         }
       ],
@@ -230,15 +230,7 @@
     "metadata": {
       "width": 3308,
       "height": 4678,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -246,210 +238,210 @@
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9832116961479187,
+            "score": 0.983458399772644,
             "coordinate": [
-              302.4595947265625,
-              1484.327392578125,
-              3082.865234375,
-              2054.83251953125
+              461.6107177734375,
+              1531.1142578125,
+              2993.4296875,
+              2067.78515625
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.972468912601471,
+            "score": 0.9782832860946655,
             "coordinate": [
-              300.9339599609375,
-              3253.7490234375,
-              3062.17578125,
-              3627.537109375
+              460.56591796875,
+              397.84893798828125,
+              2994.84765625,
+              940.6647338867188
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9717254042625427,
+            "score": 0.9743704795837402,
             "coordinate": [
-              315.9097900390625,
-              275.6091613769531,
-              3066.01318359375,
-              877.1435546875
+              460.930419921875,
+              3179.27587890625,
+              2993.279052734375,
+              3535.07275390625
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9681347608566284,
+            "score": 0.9706935286521912,
             "coordinate": [
-              293.24853515625,
-              4072.94580078125,
-              3054.583984375,
-              4347.82763671875
+              463.4686279296875,
+              3956.673828125,
+              2993.03857421875,
+              4217.40380859375
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.9447511434555054,
+            "score": 0.9400563836097717,
             "coordinate": [
-              1823.5185546875,
-              3710.908203125,
-              2654.58447265625,
-              3986.0458984375
+              1870.15283203125,
+              3615.185546875,
+              2631.7861328125,
+              3876.6669921875
             ]
           },
           {
             "cls_id": 6,
             "label": "figure_title",
-            "score": 0.8965171575546265,
+            "score": 0.9012822508811951,
             "coordinate": [
-              604.759521484375,
-              3022.56494140625,
-              2757.016357421875,
-              3090.19873046875
+              740.3726196289062,
+              2962.81298828125,
+              2716.51318359375,
+              3022.82861328125
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.8974007368087769,
+            "coordinate": [
+              467.903564453125,
+              1352.81298828125,
+              1103.20458984375,
+              1426.22021484375
             ]
           },
           {
             "cls_id": 17,
             "label": "formula_number",
-            "score": 0.8870542645454407,
+            "score": 0.8915495276451111,
             "coordinate": [
-              2966.208740234375,
-              3814.58056640625,
-              3054.423583984375,
-              3886.33251953125
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.8849246501922607,
-            "coordinate": [
-              308.69219970703125,
-              1291.820068359375,
-              1011.0759887695312,
-              1369.903564453125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8199368119239807,
-            "coordinate": [
-              1660.716552734375,
-              3541.27783203125,
-              2040.081298828125,
-              3622.51123046875
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8062792420387268,
-            "coordinate": [
-              323.17999267578125,
-              56.293128967285156,
-              355.53594970703125,
-              112.96562957763672
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.7591710090637207,
-            "coordinate": [
-              676.9676513671875,
-              3810.76611328125,
-              1656.9224853515625,
-              3886.7978515625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.731330394744873,
-            "coordinate": [
-              2436.756103515625,
-              4075.9970703125,
-              2732.200927734375,
-              4151.2939453125
+              2912.92724609375,
+              3714.598388671875,
+              2993.33837890625,
+              3781.266357421875
             ]
           },
           {
             "cls_id": 12,
             "label": "header",
-            "score": 0.7140645980834961,
+            "score": 0.8913531303405762,
             "coordinate": [
-              1148.76806640625,
-              52.17934799194336,
-              2278.051025390625,
-              137.4066162109375
+              1218.591552734375,
+              234.63223266601562,
+              2243.833740234375,
+              290.1548767089844
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.6790145635604858,
+            "score": 0.8160001635551453,
             "coordinate": [
-              2252.818115234375,
-              4171.48681640625,
-              2419.113525390625,
-              4241.96240234375
+              1720.109375,
+              3456.265380859375,
+              2067.49853515625,
+              3532.147216796875
+            ]
+          },
+          {
+            "cls_id": 3,
+            "label": "number",
+            "score": 0.7936387658119202,
+            "coordinate": [
+              474.4808654785156,
+              241.41978454589844,
+              503.3744812011719,
+              283.5450439453125
+            ]
+          },
+          {
+            "cls_id": 7,
+            "label": "formula",
+            "score": 0.7657619118690491,
+            "coordinate": [
+              2435.888427734375,
+              3958.90283203125,
+              2702.497802734375,
+              4029.82861328125
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.7522327899932861,
+            "coordinate": [
+              810.2261962890625,
+              3708.6572265625,
+              1716.3179931640625,
+              3781.6630859375
+            ]
+          },
+          {
+            "cls_id": 7,
+            "label": "formula",
+            "score": 0.6969252824783325,
+            "coordinate": [
+              2261.73486328125,
+              4053.41845703125,
+              2418.15283203125,
+              4115.48095703125
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.6457529067993164,
+            "score": 0.6608052849769592,
             "coordinate": [
-              366.1505126953125,
-              1002.3203125,
-              3019.69873046875,
-              1097.48779296875
+              520.652099609375,
+              1077.339111328125,
+              2949.422607421875,
+              1155.613037109375
             ]
           },
           {
             "cls_id": 1,
             "label": "image",
-            "score": 0.6101243495941162,
+            "score": 0.5719470977783203,
             "coordinate": [
-              445.794189453125,
-              2120.7919921875,
-              2911.441650390625,
-              2937.6474609375
+              596.0494384765625,
+              2125.4794921875,
+              2842.4306640625,
+              2880.6611328125
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.4378910958766937,
+            "score": 0.47090935707092285,
             "coordinate": [
-              369.55804443359375,
-              1000.8404541015625,
-              1509.140625,
-              1084.0018310546875
+              1709.858642578125,
+              1079.8565673828125,
+              2945.559814453125,
+              1154.2926025390625
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.426298588514328,
+            "score": 0.4219350814819336,
             "coordinate": [
-              1673.92236328125,
-              1002.7847900390625,
-              3015.0771484375,
-              1102.5482177734375
+              523.5089111328125,
+              1079.658203125,
+              1557.4388427734375,
+              1155.20458984375
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.34677109122276306,
+            "score": 0.33882737159729004,
             "coordinate": [
-              634.571044921875,
-              1680.25634765625,
-              1877.9345703125,
-              1756.36572265625
+              766.2139892578125,
+              1716.34375,
+              1901.9510498046875,
+              1788.24658203125
             ]
           }
         ]
@@ -460,781 +452,781 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              1147,
-              31
+              471,
+              236
             ],
             [
-              2302,
-              53
+              515,
+              236
             ],
             [
-              2300,
-              169
+              515,
+              295
             ],
             [
-              1145,
-              147
+              471,
+              295
             ]
           ],
           [
             [
-              316,
-              49
+              1224,
+              241
             ],
             [
-              369,
-              47
+              2254,
+              236
             ],
             [
-              372,
-              126
+              2254,
+              292
             ],
             [
-              319,
-              128
+              1224,
+              297
             ]
           ],
           [
             [
-              412,
-              245
-            ],
-            [
-              3098,
-              286
-            ],
-            [
-              3096,
-              411
-            ],
-            [
-              411,
-              370
-            ]
-          ],
-          [
-            [
-              324,
-              359
-            ],
-            [
-              3096,
+              553,
               398
             ],
             [
-              3094,
-              520
+              3010,
+              395
             ],
             [
-              323,
-              480
+              3010,
+              474
+            ],
+            [
+              553,
+              476
             ]
           ],
           [
             [
-              321,
-              468
+              473,
+              494
             ],
             [
-              3085,
-              508
+              3009,
+              488
             ],
             [
-              3084,
-              618
+              3010,
+              567
             ],
             [
-              319,
-              578
+              474,
+              573
             ]
           ],
           [
             [
-              317,
-              568
+              470,
+              585
             ],
             [
-              3082,
-              606
+              3003,
+              585
             ],
             [
-              3080,
-              713
+              3003,
+              663
             ],
             [
-              316,
-              674
+              470,
+              663
             ]
           ],
           [
             [
-              312,
-              671
+              466,
+              677
             ],
             [
-              3088,
-              701
+              3005,
+              678
             ],
             [
-              3086,
-              806
+              3005,
+              760
             ],
             [
-              311,
-              776
+              466,
+              759
             ]
           ],
           [
             [
-              373,
-              1004
+              469,
+              774
             ],
             [
-              1520,
-              995
+              3007,
+              774
             ],
             [
-              1520,
+              3007,
+              853
+            ],
+            [
+              469,
+              853
+            ]
+          ],
+          [
+            [
+              470,
+              864
+            ],
+            [
+              2649,
+              867
+            ],
+            [
+              2649,
+              946
+            ],
+            [
+              470,
+              944
+            ]
+          ],
+          [
+            [
+              528,
+              1079
+            ],
+            [
+              1562,
               1083
             ],
             [
-              374,
-              1091
+              1562,
+              1159
+            ],
+            [
+              527,
+              1155
             ]
           ],
           [
             [
-              1677,
-              998
+              1712,
+              1082
             ],
             [
-              3022,
-              1032
+              2950,
+              1082
             ],
             [
-              3020,
-              1115
+              2950,
+              1157
             ],
             [
-              1675,
-              1081
+              1712,
+              1157
             ]
           ],
           [
             [
-              310,
-              1288
+              470,
+              1353
             ],
             [
-              1023,
-              1288
+              1115,
+              1351
             ],
             [
-              1023,
-              1375
+              1115,
+              1430
             ],
             [
-              310,
-              1375
+              470,
+              1433
             ]
           ],
           [
             [
-              304,
-              1459
+              470,
+              1530
             ],
             [
-              3110,
-              1478
+              3011,
+              1529
             ],
             [
-              3109,
-              1592
+              3011,
+              1608
             ],
             [
-              303,
-              1573
+              470,
+              1609
             ]
           ],
           [
             [
-              304,
-              1561
+              469,
+              1623
             ],
             [
-              3110,
-              1583
+              3011,
+              1620
             ],
             [
-              3109,
-              1696
+              3011,
+              1703
             ],
             [
-              303,
-              1674
+              469,
+              1706
             ]
           ],
           [
             [
-              1893,
-              1678
+              471,
+              1721
             ],
             [
-              3105,
-              1689
+              763,
+              1718
             ],
             [
-              3104,
-              1788
+              764,
+              1796
             ],
             [
-              1892,
-              1777
+              472,
+              1799
             ]
           ],
           [
             [
-              313,
-              1689
+              1918,
+              1717
             ],
             [
-              630,
-              1686
+              3008,
+              1717
             ],
             [
-              631,
-              1769
+              3008,
+              1796
             ],
             [
-              314,
-              1772
+              1918,
+              1796
             ]
           ],
           [
             [
-              307,
-              1771
+              470,
+              1809
             ],
             [
-              3112,
-              1778
+              3011,
+              1803
             ],
             [
-              3112,
-              1884
+              3011,
+              1886
             ],
             [
-              307,
-              1877
+              470,
+              1892
             ]
           ],
           [
             [
-              308,
-              1872
+              470,
+              1906
             ],
             [
-              3112,
-              1875
+              3008,
+              1899
             ],
             [
-              3112,
-              1973
+              3009,
+              1978
             ],
             [
-              308,
-              1971
+              470,
+              1985
             ]
           ],
           [
             [
-              306,
-              1983
+              470,
+              2000
             ],
             [
-              1281,
-              1974
+              1354,
+              1997
             ],
             [
-              1282,
-              2060
+              1355,
+              2072
             ],
             [
-              307,
-              2069
+              470,
+              2075
             ]
           ],
           [
             [
-              485,
-              2765
+              638,
+              2727
             ],
             [
-              1034,
-              2756
+              1133,
+              2725
             ],
             [
-              1035,
-              2833
+              1134,
+              2793
             ],
             [
-              486,
-              2842
+              638,
+              2795
             ]
           ],
           [
             [
-              1184,
-              2774
+              1806,
+              2733
             ],
             [
-              1601,
-              2776
+              2286,
+              2736
             ],
             [
-              1601,
-              2834
+              2286,
+              2792
             ],
             [
-              1184,
-              2831
+              1805,
+              2789
             ]
           ],
           [
             [
-              1759,
-              2779
+              2394,
+              2724
             ],
             [
-              2287,
-              2785
+              2860,
+              2723
             ],
             [
-              2287,
-              2846
+              2860,
+              2792
             ],
             [
-              1758,
-              2839
+              2394,
+              2793
             ]
           ],
           [
             [
-              2407,
-              2773
-            ],
-            [
-              2930,
-              2773
-            ],
-            [
-              2930,
-              2845
-            ],
-            [
-              2407,
-              2845
-            ]
-          ],
-          [
-            [
-              711,
-              2848
-            ],
-            [
-              816,
-              2848
-            ],
-            [
-              816,
-              2940
-            ],
-            [
-              711,
-              2940
-            ]
-          ],
-          [
-            [
-              1347,
-              2850
-            ],
-            [
-              1446,
-              2850
-            ],
-            [
-              1446,
-              2940
-            ],
-            [
-              1347,
-              2940
-            ]
-          ],
-          [
-            [
-              1973,
-              2855
-            ],
-            [
-              2074,
-              2859
-            ],
-            [
-              2070,
-              2954
-            ],
-            [
-              1969,
-              2950
-            ]
-          ],
-          [
-            [
-              2606,
-              2856
-            ],
-            [
-              2715,
-              2856
-            ],
-            [
-              2715,
-              2948
-            ],
-            [
-              2606,
-              2948
-            ]
-          ],
-          [
-            [
-              613,
-              3023
-            ],
-            [
-              2767,
-              3031
-            ],
-            [
-              2766,
-              3098
-            ],
-            [
-              613,
-              3090
-            ]
-          ],
-          [
-            [
-              397,
-              3248
-            ],
-            [
-              3078,
-              3254
-            ],
-            [
-              3078,
-              3340
-            ],
-            [
-              397,
-              3334
-            ]
-          ],
-          [
-            [
-              306,
-              3341
-            ],
-            [
-              3081,
-              3346
-            ],
-            [
-              3081,
-              3441
-            ],
-            [
-              305,
-              3436
-            ]
-          ],
-          [
-            [
-              309,
-              3442
-            ],
-            [
-              3073,
-              3447
-            ],
-            [
-              3073,
-              3533
-            ],
-            [
-              309,
-              3528
-            ]
-          ],
-          [
-            [
-              306,
-              3540
+              1270,
+              2737
             ],
             [
               1658,
-              3546
+              2734
             ],
             [
-              1657,
-              3634
+              1659,
+              2790
             ],
             [
-              305,
-              3628
+              1270,
+              2793
             ]
           ],
           [
             [
-              2042,
-              3567
+              839,
+              2803
             ],
             [
-              2071,
-              3567
+              937,
+              2803
             ],
             [
-              2071,
-              3607
+              937,
+              2890
             ],
             [
-              2042,
-              3607
+              839,
+              2890
             ]
           ],
           [
             [
-              674,
-              3811
+              1423,
+              2802
             ],
             [
-              1663,
-              3808
+              1517,
+              2806
             ],
             [
-              1663,
-              3891
+              1513,
+              2891
             ],
             [
-              675,
-              3895
+              1419,
+              2887
             ]
           ],
           [
             [
-              2956,
-              3803
+              2003,
+              2804
             ],
             [
-              3077,
-              3803
+              2091,
+              2804
             ],
             [
-              3077,
-              3903
+              2091,
+              2889
             ],
             [
-              2956,
-              3903
+              2003,
+              2889
             ]
           ],
           [
             [
-              296,
-              4066
+              2577,
+              2802
             ],
             [
-              2430,
-              4066
+              2678,
+              2802
             ],
             [
-              2430,
-              4160
+              2678,
+              2889
             ],
             [
-              296,
-              4160
+              2577,
+              2889
             ]
           ],
           [
             [
-              2730,
-              4069
+              751,
+              2965
             ],
             [
-              3072,
-              4069
+              2724,
+              2965
             ],
             [
-              3072,
-              4154
+              2724,
+              3027
             ],
             [
-              2730,
-              4154
+              751,
+              3027
             ]
           ],
           [
             [
-              298,
-              4167
+              552,
+              3174
             ],
             [
-              2259,
-              4165
+              3006,
+              3178
             ],
             [
-              2259,
-              4259
+              3006,
+              3257
             ],
             [
-              298,
-              4262
+              552,
+              3254
             ]
           ],
           [
             [
-              2420,
-              4173
+              469,
+              3271
             ],
             [
-              3070,
-              4169
+              3007,
+              3270
             ],
             [
-              3071,
-              4249
+              3007,
+              3348
             ],
             [
-              2420,
-              4252
+              469,
+              3349
             ]
           ],
           [
             [
-              303,
-              4270
+              471,
+              3365
             ],
             [
-              2514,
-              4270
+              3005,
+              3362
             ],
             [
-              2514,
-              4353
+              3005,
+              3441
             ],
             [
-              303,
-              4353
+              471,
+              3443
             ]
           ],
           [
             [
-              1823,
-              3710
+              469,
+              3456
             ],
             [
-              2654,
-              3710
+              1716,
+              3459
             ],
             [
-              2654,
-              3986
+              1716,
+              3538
             ],
             [
-              1823,
-              3986
+              469,
+              3534
             ]
           ],
           [
             [
-              1660,
-              3541
+              809,
+              3712
             ],
             [
-              2040,
-              3541
+              1722,
+              3708
             ],
             [
-              2040,
-              3622
+              1722,
+              3784
             ],
             [
-              1660,
-              3622
+              810,
+              3788
             ]
           ],
           [
             [
-              2436,
-              4075
+              2900,
+              3703
             ],
             [
-              2732,
-              4075
+              3015,
+              3703
             ],
             [
-              2732,
-              4151
+              3015,
+              3797
             ],
             [
-              2436,
-              4151
+              2900,
+              3797
             ]
           ],
           [
             [
-              2252,
-              4171
+              469,
+              3952
             ],
             [
-              2419,
-              4171
+              2426,
+              3956
             ],
             [
-              2419,
-              4241
+              2426,
+              4035
             ],
             [
-              2252,
-              4241
+              469,
+              4030
             ]
           ],
           [
             [
-              634,
-              1680
+              2696,
+              3954
             ],
             [
-              1877,
-              1680
+              3008,
+              3954
             ],
             [
-              1877,
-              1756
+              3008,
+              4036
             ],
             [
-              634,
-              1756
+              2696,
+              4036
+            ]
+          ],
+          [
+            [
+              473,
+              4050
+            ],
+            [
+              2264,
+              4050
+            ],
+            [
+              2264,
+              4132
+            ],
+            [
+              473,
+              4132
+            ]
+          ],
+          [
+            [
+              2422,
+              4050
+            ],
+            [
+              3004,
+              4055
+            ],
+            [
+              3003,
+              4127
+            ],
+            [
+              2421,
+              4122
+            ]
+          ],
+          [
+            [
+              472,
+              4140
+            ],
+            [
+              2501,
+              4145
+            ],
+            [
+              2501,
+              4224
+            ],
+            [
+              472,
+              4220
+            ]
+          ],
+          [
+            [
+              1870,
+              3615
+            ],
+            [
+              2631,
+              3615
+            ],
+            [
+              2631,
+              3876
+            ],
+            [
+              1870,
+              3876
+            ]
+          ],
+          [
+            [
+              1720,
+              3456
+            ],
+            [
+              2067,
+              3456
+            ],
+            [
+              2067,
+              3532
+            ],
+            [
+              1720,
+              3532
+            ]
+          ],
+          [
+            [
+              2435,
+              3958
+            ],
+            [
+              2702,
+              3958
+            ],
+            [
+              2702,
+              4029
+            ],
+            [
+              2435,
+              4029
+            ]
+          ],
+          [
+            [
+              2261,
+              4053
+            ],
+            [
+              2418,
+              4053
+            ],
+            [
+              2418,
+              4115
+            ],
+            [
+              2261,
+              4115
+            ]
+          ],
+          [
+            [
+              766,
+              1716
+            ],
+            [
+              1901,
+              1716
+            ],
+            [
+              1901,
+              1788
+            ],
+            [
+              766,
+              1788
             ]
           ]
         ],
@@ -1248,131 +1240,131 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "ChaptertnGi",
           "8",
-          "Ourtruelooimm.",
-          "equationsinunknowns,threarnplnesitheowpicturTherearnvectors in",
-          "thecolum,lurei.Thquiokriar com-",
-          "binationofthencolumnsthatequalsb.Forcertainequationsthat willbeimpossible.",
-          "Paradoxically,thewaytounderstandthegoodcaseisto studythebadone. Therefore",
+          "Chapter 1 Matrices and Gaussian Elimination",
+          "Our true goal is to look beyond two or three dimensions into n dimensions. With n",
+          "equations in n unknowns, there are n planes in the row picture. There are n vectors in",
+          "the column picture, plus a vector b on the right side. The equations ask for a linear com-",
+          "bination of the n columns that equals b. For certain equations that will be impossible.",
+          "Paradoxically, the way to understand the good case is to study the bad one. Therefore",
+          "we look at the geometry exactly when it breaks down, in the singular case.",
           "Row picture: Intersection of planes",
           "Column picture: Combination of columns",
           "The Singular Case",
-          "Suppose waaaiintedimeins,andtetelaesintheowcture do not",
-          "intersect. What can go wrong?Oneposibilityisthat twoplanes maybeparallel. The",
-          "are inconsistent—and parallel planes",
+          "Suppose we are again in three dimensions, and the three planes in the row picture do not",
+          "intersect. What can go wrong? One possibility is that two planes may be parallel. The",
           "equations",
+          "are inconsistent—and parallel planes",
           "give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines",
           "are the only possibility for breakdown. But three planes in three dimensions can be in",
           "trouble without being parallel.",
           "two parallel planes",
-          "no intersection",
           "line of intersection",
           "all planes parallel",
+          "no intersection",
           "(a)",
           "(b)",
           "(c)",
           "(d)",
-          "Figure 1.5: Singular cases: no solution for (a), (b), or (d), an infinity of solutions for (c).",
+          "Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).",
           "The most common diffi culty is shown in Figure 1.5b. From the end view the planes",
           "form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The",
           "third plane is not parallel to the other planes, but it is parallel to their line of intersection.",
           "This corresponds to a singular system with",
-          ":",
           "No solution, as in Figure 1.5b",
           "(3)",
-          "The fi rst two left sides add up to the third. On the right side that fails:",
+          "The first two left sides add up to the third. On the right side that fails:",
           ". Equation",
           "1 plus equation 2 minus equation 3 is the impossible statement",
           ". Thus the equations",
           "are inconsistent, as Gaussian elimination will systematically discover.",
-          "\\begin{array}{c c c c c}{{u}}&{{+}}&{{v}}&{{+}}&{{w}}&{{=}}&{{2}}\\\\ {{2u}}&{{}}&{{+}}&{{3w}}&{{=}}&{{5}}\\\\ {{3u}}&{{+}}&{{v}}&{{+}}&{{4w}}&{{=}}&{{6.}}\\end{array}",
+          "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
           "b=(2,5,6)",
           "2+5\\ne6",
-          "0{=}1",
+          "0=1",
           "2u+v+w=5and4u+2v+2w=11"
         ],
         "rec_scores": [
-          0.7774279117584229,
-          0.9998488426208496,
-          0.7368443608283997,
-          0.788263201713562,
-          0.7974254488945007,
-          0.9125515818595886,
-          0.9441368579864502,
-          0.9794980883598328,
-          0.9993091225624084,
-          0.9729883670806885,
-          0.7554462552070618,
-          0.9101532697677612,
-          0.934396505355835,
-          0.9997848868370056,
-          0.9462401866912842,
-          0.9548877477645874,
-          0.9710614085197449,
-          0.9931928515434265,
-          0.9990760684013367,
-          0.9986392259597778,
-          0.9377958178520203,
-          0.9952827095985413,
-          0.9983142018318176,
-          0.95222407579422,
-          0.9978967308998108,
-          0.9186533093452454,
-          0.9694044589996338,
-          0.9375178217887878,
-          0.9639435410499573,
-          0.9944245219230652,
-          0.6448250412940979,
-          0.9655656218528748,
-          0.9950408935546875,
-          0.9189057350158691,
-          0.9707506895065308,
-          0.9718670845031738,
-          0.9856710433959961,
-          0.9740706086158752,
+          0.9998481273651123,
+          0.9693806767463684,
+          0.9763847589492798,
+          0.9603025913238525,
+          0.9651702046394348,
+          0.9723868370056152,
+          0.9755685329437256,
+          0.9777122735977173,
+          0.9974479675292969,
+          0.9890666007995605,
+          0.9879481196403503,
+          0.975633442401886,
+          0.9619028568267822,
+          0.9997290372848511,
+          0.9763202667236328,
+          0.9724385142326355,
+          0.9730913043022156,
+          0.9842973351478577,
+          0.9874823689460754,
+          0.9993945360183716,
+          0.9761402010917664,
+          0.9994356632232666,
+          0.995852530002594,
+          0.998493492603302,
+          0.8844190239906311,
+          0.9965026378631592,
+          0.9073632955551147,
+          0.9621540307998657,
+          0.9635162949562073,
+          0.9466404914855957,
+          0.9717063903808594,
+          0.9696807265281677,
+          0.9901487827301025,
+          0.9452069997787476,
+          0.9616118669509888,
+          0.9601521492004395,
+          0.9559705853462219,
+          0.955659806728363,
           1,
           1,
           1,
@@ -1382,1037 +1374,1037 @@
         "rec_polys": [
           [
             [
-              1147,
-              31
+              471,
+              236
             ],
             [
-              2302,
-              53
+              515,
+              236
             ],
             [
-              2300,
-              169
+              515,
+              295
             ],
             [
-              1145,
-              147
+              471,
+              295
             ]
           ],
           [
             [
-              316,
-              49
+              1224,
+              241
             ],
             [
-              369,
-              47
+              2254,
+              236
             ],
             [
-              372,
-              126
+              2254,
+              292
             ],
             [
-              319,
-              128
+              1224,
+              297
             ]
           ],
           [
             [
-              412,
-              245
-            ],
-            [
-              3098,
-              286
-            ],
-            [
-              3096,
-              411
-            ],
-            [
-              411,
-              370
-            ]
-          ],
-          [
-            [
-              324,
-              359
-            ],
-            [
-              3096,
+              553,
               398
             ],
             [
-              3094,
-              520
+              3010,
+              395
             ],
             [
-              323,
-              480
+              3010,
+              474
+            ],
+            [
+              553,
+              476
             ]
           ],
           [
             [
-              321,
-              468
+              473,
+              494
             ],
             [
-              3085,
-              508
+              3009,
+              488
             ],
             [
-              3084,
-              618
+              3010,
+              567
             ],
             [
-              319,
-              578
+              474,
+              573
             ]
           ],
           [
             [
-              317,
-              568
+              470,
+              585
             ],
             [
-              3082,
-              606
+              3003,
+              585
             ],
             [
-              3080,
-              713
+              3003,
+              663
             ],
             [
-              316,
-              674
+              470,
+              663
             ]
           ],
           [
             [
-              312,
-              671
+              466,
+              677
             ],
             [
-              3088,
-              701
+              3005,
+              678
             ],
             [
-              3086,
-              806
+              3005,
+              760
             ],
             [
-              311,
-              776
+              466,
+              759
             ]
           ],
           [
             [
-              373,
-              1004
+              469,
+              774
             ],
             [
-              1520,
-              995
+              3007,
+              774
             ],
             [
-              1520,
+              3007,
+              853
+            ],
+            [
+              469,
+              853
+            ]
+          ],
+          [
+            [
+              470,
+              864
+            ],
+            [
+              2649,
+              867
+            ],
+            [
+              2649,
+              946
+            ],
+            [
+              470,
+              944
+            ]
+          ],
+          [
+            [
+              528,
+              1079
+            ],
+            [
+              1562,
               1083
             ],
             [
-              374,
-              1091
+              1562,
+              1159
+            ],
+            [
+              527,
+              1155
             ]
           ],
           [
             [
-              1677,
-              998
+              1712,
+              1082
             ],
             [
-              3022,
-              1032
+              2950,
+              1082
             ],
             [
-              3020,
-              1115
+              2950,
+              1157
             ],
             [
-              1675,
-              1081
+              1712,
+              1157
             ]
           ],
           [
             [
-              310,
-              1288
+              470,
+              1353
             ],
             [
-              1023,
-              1288
+              1115,
+              1351
             ],
             [
-              1023,
-              1375
+              1115,
+              1430
             ],
             [
-              310,
-              1375
+              470,
+              1433
             ]
           ],
           [
             [
-              304,
-              1459
+              470,
+              1530
             ],
             [
-              3110,
-              1478
+              3011,
+              1529
             ],
             [
-              3109,
-              1592
+              3011,
+              1608
             ],
             [
-              303,
-              1573
+              470,
+              1609
             ]
           ],
           [
             [
-              304,
-              1561
+              469,
+              1623
             ],
             [
-              3110,
-              1583
+              3011,
+              1620
             ],
             [
-              3109,
-              1696
+              3011,
+              1703
             ],
             [
-              303,
-              1674
+              469,
+              1706
             ]
           ],
           [
             [
-              1893,
-              1678
+              471,
+              1721
             ],
             [
-              3105,
-              1689
+              763,
+              1718
             ],
             [
-              3104,
-              1788
+              764,
+              1796
             ],
             [
-              1892,
-              1777
+              472,
+              1799
             ]
           ],
           [
             [
-              313,
-              1689
+              1918,
+              1717
             ],
             [
-              630,
-              1686
+              3008,
+              1717
             ],
             [
-              631,
-              1769
+              3008,
+              1796
             ],
             [
-              314,
-              1772
+              1918,
+              1796
             ]
           ],
           [
             [
-              307,
-              1771
+              470,
+              1809
             ],
             [
-              3112,
-              1778
+              3011,
+              1803
             ],
             [
-              3112,
-              1884
+              3011,
+              1886
             ],
             [
-              307,
-              1877
+              470,
+              1892
             ]
           ],
           [
             [
-              308,
-              1872
+              470,
+              1906
             ],
             [
-              3112,
-              1875
+              3008,
+              1899
             ],
             [
-              3112,
-              1973
+              3009,
+              1978
             ],
             [
-              308,
-              1971
+              470,
+              1985
             ]
           ],
           [
             [
-              306,
-              1983
+              470,
+              2000
             ],
             [
-              1281,
-              1974
+              1354,
+              1997
             ],
             [
-              1282,
-              2060
+              1355,
+              2072
             ],
             [
-              307,
-              2069
+              470,
+              2075
             ]
           ],
           [
             [
-              485,
-              2765
+              638,
+              2727
             ],
             [
-              1034,
-              2756
+              1133,
+              2725
             ],
             [
-              1035,
-              2833
+              1134,
+              2793
             ],
             [
-              486,
-              2842
+              638,
+              2795
             ]
           ],
           [
             [
-              1184,
-              2774
+              1806,
+              2733
             ],
             [
-              1601,
-              2776
+              2286,
+              2736
             ],
             [
-              1601,
-              2834
+              2286,
+              2792
             ],
             [
-              1184,
-              2831
+              1805,
+              2789
             ]
           ],
           [
             [
-              1759,
-              2779
+              2394,
+              2724
             ],
             [
-              2287,
-              2785
+              2860,
+              2723
             ],
             [
-              2287,
-              2846
+              2860,
+              2792
             ],
             [
-              1758,
-              2839
+              2394,
+              2793
             ]
           ],
           [
             [
-              2407,
-              2773
-            ],
-            [
-              2930,
-              2773
-            ],
-            [
-              2930,
-              2845
-            ],
-            [
-              2407,
-              2845
-            ]
-          ],
-          [
-            [
-              711,
-              2848
-            ],
-            [
-              816,
-              2848
-            ],
-            [
-              816,
-              2940
-            ],
-            [
-              711,
-              2940
-            ]
-          ],
-          [
-            [
-              1347,
-              2850
-            ],
-            [
-              1446,
-              2850
-            ],
-            [
-              1446,
-              2940
-            ],
-            [
-              1347,
-              2940
-            ]
-          ],
-          [
-            [
-              1973,
-              2855
-            ],
-            [
-              2074,
-              2859
-            ],
-            [
-              2070,
-              2954
-            ],
-            [
-              1969,
-              2950
-            ]
-          ],
-          [
-            [
-              2606,
-              2856
-            ],
-            [
-              2715,
-              2856
-            ],
-            [
-              2715,
-              2948
-            ],
-            [
-              2606,
-              2948
-            ]
-          ],
-          [
-            [
-              613,
-              3023
-            ],
-            [
-              2767,
-              3031
-            ],
-            [
-              2766,
-              3098
-            ],
-            [
-              613,
-              3090
-            ]
-          ],
-          [
-            [
-              397,
-              3248
-            ],
-            [
-              3078,
-              3254
-            ],
-            [
-              3078,
-              3340
-            ],
-            [
-              397,
-              3334
-            ]
-          ],
-          [
-            [
-              306,
-              3341
-            ],
-            [
-              3081,
-              3346
-            ],
-            [
-              3081,
-              3441
-            ],
-            [
-              305,
-              3436
-            ]
-          ],
-          [
-            [
-              309,
-              3442
-            ],
-            [
-              3073,
-              3447
-            ],
-            [
-              3073,
-              3533
-            ],
-            [
-              309,
-              3528
-            ]
-          ],
-          [
-            [
-              306,
-              3540
+              1270,
+              2737
             ],
             [
               1658,
-              3546
+              2734
             ],
             [
-              1657,
-              3634
+              1659,
+              2790
             ],
             [
-              305,
-              3628
+              1270,
+              2793
             ]
           ],
           [
             [
-              2042,
-              3567
+              839,
+              2803
             ],
             [
-              2071,
-              3567
+              937,
+              2803
             ],
             [
-              2071,
-              3607
+              937,
+              2890
             ],
             [
-              2042,
-              3607
+              839,
+              2890
             ]
           ],
           [
             [
-              674,
-              3811
+              1423,
+              2802
             ],
             [
-              1663,
-              3808
+              1517,
+              2806
             ],
             [
-              1663,
-              3891
+              1513,
+              2891
             ],
             [
-              675,
-              3895
+              1419,
+              2887
             ]
           ],
           [
             [
-              2956,
-              3803
+              2003,
+              2804
             ],
             [
-              3077,
-              3803
+              2091,
+              2804
             ],
             [
-              3077,
-              3903
+              2091,
+              2889
             ],
             [
-              2956,
-              3903
+              2003,
+              2889
             ]
           ],
           [
             [
-              296,
-              4066
+              2577,
+              2802
             ],
             [
-              2430,
-              4066
+              2678,
+              2802
             ],
             [
-              2430,
-              4160
+              2678,
+              2889
             ],
             [
-              296,
-              4160
+              2577,
+              2889
             ]
           ],
           [
             [
-              2730,
-              4069
+              751,
+              2965
             ],
             [
-              3072,
-              4069
+              2724,
+              2965
             ],
             [
-              3072,
-              4154
+              2724,
+              3027
             ],
             [
-              2730,
-              4154
+              751,
+              3027
             ]
           ],
           [
             [
-              298,
-              4167
+              552,
+              3174
             ],
             [
-              2259,
-              4165
+              3006,
+              3178
             ],
             [
-              2259,
-              4259
+              3006,
+              3257
             ],
             [
-              298,
-              4262
+              552,
+              3254
             ]
           ],
           [
             [
-              2420,
-              4173
+              469,
+              3271
             ],
             [
-              3070,
-              4169
+              3007,
+              3270
             ],
             [
-              3071,
-              4249
+              3007,
+              3348
             ],
             [
-              2420,
-              4252
+              469,
+              3349
             ]
           ],
           [
             [
-              303,
-              4270
+              471,
+              3365
             ],
             [
-              2514,
-              4270
+              3005,
+              3362
             ],
             [
-              2514,
-              4353
+              3005,
+              3441
             ],
             [
-              303,
-              4353
+              471,
+              3443
             ]
           ],
           [
             [
-              1823,
-              3710
+              469,
+              3456
             ],
             [
-              2654,
-              3710
+              1716,
+              3459
             ],
             [
-              2654,
-              3986
+              1716,
+              3538
             ],
             [
-              1823,
-              3986
+              469,
+              3534
             ]
           ],
           [
             [
-              1660,
-              3541
+              809,
+              3712
             ],
             [
-              2040,
-              3541
+              1722,
+              3708
             ],
             [
-              2040,
-              3622
+              1722,
+              3784
             ],
             [
-              1660,
-              3622
+              810,
+              3788
             ]
           ],
           [
             [
-              2436,
-              4075
+              2900,
+              3703
             ],
             [
-              2732,
-              4075
+              3015,
+              3703
             ],
             [
-              2732,
-              4151
+              3015,
+              3797
             ],
             [
-              2436,
-              4151
+              2900,
+              3797
             ]
           ],
           [
             [
-              2252,
-              4171
+              469,
+              3952
             ],
             [
-              2419,
-              4171
+              2426,
+              3956
             ],
             [
-              2419,
-              4241
+              2426,
+              4035
             ],
             [
-              2252,
-              4241
+              469,
+              4030
             ]
           ],
           [
             [
-              634,
-              1680
+              2696,
+              3954
             ],
             [
-              1877,
-              1680
+              3008,
+              3954
             ],
             [
-              1877,
-              1756
+              3008,
+              4036
             ],
             [
-              634,
-              1756
+              2696,
+              4036
+            ]
+          ],
+          [
+            [
+              473,
+              4050
+            ],
+            [
+              2264,
+              4050
+            ],
+            [
+              2264,
+              4132
+            ],
+            [
+              473,
+              4132
+            ]
+          ],
+          [
+            [
+              2422,
+              4050
+            ],
+            [
+              3004,
+              4055
+            ],
+            [
+              3003,
+              4127
+            ],
+            [
+              2421,
+              4122
+            ]
+          ],
+          [
+            [
+              472,
+              4140
+            ],
+            [
+              2501,
+              4145
+            ],
+            [
+              2501,
+              4224
+            ],
+            [
+              472,
+              4220
+            ]
+          ],
+          [
+            [
+              1870,
+              3615
+            ],
+            [
+              2631,
+              3615
+            ],
+            [
+              2631,
+              3876
+            ],
+            [
+              1870,
+              3876
+            ]
+          ],
+          [
+            [
+              1720,
+              3456
+            ],
+            [
+              2067,
+              3456
+            ],
+            [
+              2067,
+              3532
+            ],
+            [
+              1720,
+              3532
+            ]
+          ],
+          [
+            [
+              2435,
+              3958
+            ],
+            [
+              2702,
+              3958
+            ],
+            [
+              2702,
+              4029
+            ],
+            [
+              2435,
+              4029
+            ]
+          ],
+          [
+            [
+              2261,
+              4053
+            ],
+            [
+              2418,
+              4053
+            ],
+            [
+              2418,
+              4115
+            ],
+            [
+              2261,
+              4115
+            ]
+          ],
+          [
+            [
+              766,
+              1716
+            ],
+            [
+              1901,
+              1716
+            ],
+            [
+              1901,
+              1788
+            ],
+            [
+              766,
+              1788
             ]
           ]
         ],
         "rec_boxes": [
           [
-            1145.0,
-            31.0,
-            2302.0,
-            169.0
+            471.0,
+            236.0,
+            515.0,
+            295.0
           ],
           [
-            316.0,
-            47.0,
-            372.0,
-            128.0
+            1224.0,
+            236.0,
+            2254.0,
+            297.0
           ],
           [
-            411.0,
-            245.0,
-            3098.0,
-            411.0
+            553.0,
+            395.0,
+            3010.0,
+            476.0
           ],
           [
-            323.0,
-            359.0,
-            3096.0,
-            520.0
+            473.0,
+            488.0,
+            3010.0,
+            573.0
           ],
           [
-            319.0,
-            468.0,
-            3085.0,
-            618.0
+            470.0,
+            585.0,
+            3003.0,
+            663.0
           ],
           [
-            316.0,
-            568.0,
-            3082.0,
-            713.0
+            466.0,
+            677.0,
+            3005.0,
+            760.0
           ],
           [
-            311.0,
-            671.0,
-            3088.0,
-            806.0
+            469.0,
+            774.0,
+            3007.0,
+            853.0
           ],
           [
-            373.0,
-            995.0,
-            1520.0,
-            1091.0
+            470.0,
+            864.0,
+            2649.0,
+            946.0
           ],
           [
-            1675.0,
-            998.0,
-            3022.0,
-            1115.0
+            527.0,
+            1079.0,
+            1562.0,
+            1159.0
           ],
           [
-            310.0,
-            1288.0,
-            1023.0,
-            1375.0
+            1712.0,
+            1082.0,
+            2950.0,
+            1157.0
           ],
           [
-            303.0,
-            1459.0,
-            3110.0,
-            1592.0
+            470.0,
+            1351.0,
+            1115.0,
+            1433.0
           ],
           [
-            303.0,
-            1561.0,
-            3110.0,
-            1696.0
+            470.0,
+            1529.0,
+            3011.0,
+            1609.0
           ],
           [
-            1892.0,
-            1678.0,
-            3105.0,
-            1788.0
+            469.0,
+            1620.0,
+            3011.0,
+            1706.0
           ],
           [
-            313.0,
-            1686.0,
-            631.0,
-            1772.0
+            471.0,
+            1718.0,
+            764.0,
+            1799.0
           ],
           [
-            307.0,
-            1771.0,
-            3112.0,
-            1884.0
+            1918.0,
+            1717.0,
+            3008.0,
+            1796.0
           ],
           [
-            308.0,
-            1872.0,
-            3112.0,
-            1973.0
+            470.0,
+            1803.0,
+            3011.0,
+            1892.0
           ],
           [
-            306.0,
-            1974.0,
-            1282.0,
-            2069.0
+            470.0,
+            1899.0,
+            3009.0,
+            1985.0
           ],
           [
-            485.0,
-            2756.0,
-            1035.0,
-            2842.0
+            470.0,
+            1997.0,
+            1355.0,
+            2075.0
           ],
           [
-            1184.0,
-            2774.0,
-            1601.0,
-            2834.0
+            638.0,
+            2725.0,
+            1134.0,
+            2795.0
           ],
           [
-            1758.0,
-            2779.0,
-            2287.0,
-            2846.0
+            1805.0,
+            2733.0,
+            2286.0,
+            2792.0
           ],
           [
-            2407.0,
-            2773.0,
-            2930.0,
-            2845.0
+            2394.0,
+            2723.0,
+            2860.0,
+            2793.0
           ],
           [
-            711.0,
-            2848.0,
-            816.0,
-            2940.0
+            1270.0,
+            2734.0,
+            1659.0,
+            2793.0
           ],
           [
-            1347.0,
-            2850.0,
-            1446.0,
-            2940.0
+            839.0,
+            2803.0,
+            937.0,
+            2890.0
           ],
           [
-            1969.0,
-            2855.0,
-            2074.0,
-            2954.0
+            1419.0,
+            2802.0,
+            1517.0,
+            2891.0
           ],
           [
-            2606.0,
-            2856.0,
-            2715.0,
-            2948.0
+            2003.0,
+            2804.0,
+            2091.0,
+            2889.0
           ],
           [
-            613.0,
-            3023.0,
-            2767.0,
-            3098.0
+            2577.0,
+            2802.0,
+            2678.0,
+            2889.0
           ],
           [
-            397.0,
-            3248.0,
-            3078.0,
-            3340.0
+            751.0,
+            2965.0,
+            2724.0,
+            3027.0
           ],
           [
-            305.0,
-            3341.0,
-            3081.0,
-            3441.0
+            552.0,
+            3174.0,
+            3006.0,
+            3257.0
           ],
           [
-            309.0,
-            3442.0,
-            3073.0,
-            3533.0
+            469.0,
+            3270.0,
+            3007.0,
+            3349.0
           ],
           [
-            305.0,
-            3540.0,
-            1658.0,
-            3634.0
+            471.0,
+            3362.0,
+            3005.0,
+            3443.0
           ],
           [
-            2042.0,
-            3567.0,
-            2071.0,
-            3607.0
+            469.0,
+            3456.0,
+            1716.0,
+            3538.0
           ],
           [
-            674.0,
-            3808.0,
-            1663.0,
-            3895.0
+            809.0,
+            3708.0,
+            1722.0,
+            3788.0
           ],
           [
-            2956.0,
-            3803.0,
-            3077.0,
-            3903.0
+            2900.0,
+            3703.0,
+            3015.0,
+            3797.0
           ],
           [
-            296.0,
-            4066.0,
-            2430.0,
-            4160.0
+            469.0,
+            3952.0,
+            2426.0,
+            4035.0
           ],
           [
-            2730.0,
-            4069.0,
-            3072.0,
-            4154.0
+            2696.0,
+            3954.0,
+            3008.0,
+            4036.0
           ],
           [
-            298.0,
-            4165.0,
-            2259.0,
-            4262.0
+            473.0,
+            4050.0,
+            2264.0,
+            4132.0
           ],
           [
-            2420.0,
-            4169.0,
-            3071.0,
-            4252.0
+            2421.0,
+            4050.0,
+            3004.0,
+            4127.0
           ],
           [
-            303.0,
-            4270.0,
-            2514.0,
-            4353.0
+            472.0,
+            4140.0,
+            2501.0,
+            4224.0
           ],
           [
-            1823.5185546875,
-            3710.908203125,
-            2654.58447265625,
-            3986.0458984375
+            1870.15283203125,
+            3615.185546875,
+            2631.7861328125,
+            3876.6669921875
           ],
           [
-            1660.716552734375,
-            3541.27783203125,
-            2040.081298828125,
-            3622.51123046875
+            1720.109375,
+            3456.265380859375,
+            2067.49853515625,
+            3532.147216796875
           ],
           [
-            2436.756103515625,
-            4075.9970703125,
-            2732.200927734375,
-            4151.2939453125
+            2435.888427734375,
+            3958.90283203125,
+            2702.497802734375,
+            4029.82861328125
           ],
           [
-            2252.818115234375,
-            4171.48681640625,
-            2419.113525390625,
-            4241.96240234375
+            2261.73486328125,
+            4053.41845703125,
+            2418.15283203125,
+            4115.48095703125
           ],
           [
-            634.571044921875,
-            1680.25634765625,
-            1877.9345703125,
-            1756.36572265625
+            766.2139892578125,
+            1716.34375,
+            1901.9510498046875,
+            1788.24658203125
           ]
         ]
       },
@@ -2423,13 +2415,13 @@
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "\\begin{array}{c c c c c}{{u}}&{{+}}&{{v}}&{{+}}&{{w}}&{{=}}&{{2}}\\\\ {{2u}}&{{}}&{{+}}&{{3w}}&{{=}}&{{5}}\\\\ {{3u}}&{{+}}&{{v}}&{{+}}&{{4w}}&{{=}}&{{6.}}\\end{array}",
+          "rec_formula": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            1823.5185546875,
-            3710.908203125,
-            2654.58447265625,
-            3986.0458984375
+            1870.15283203125,
+            3615.185546875,
+            2631.7861328125,
+            3876.6669921875
           ]
         },
         {
@@ -2438,10 +2430,10 @@
           "rec_formula": "b=(2,5,6)",
           "formula_region_id": 2,
           "dt_polys": [
-            1660.716552734375,
-            3541.27783203125,
-            2040.081298828125,
-            3622.51123046875
+            1720.109375,
+            3456.265380859375,
+            2067.49853515625,
+            3532.147216796875
           ]
         },
         {
@@ -2450,22 +2442,22 @@
           "rec_formula": "2+5\\ne6",
           "formula_region_id": 3,
           "dt_polys": [
-            2436.756103515625,
-            4075.9970703125,
-            2732.200927734375,
-            4151.2939453125
+            2435.888427734375,
+            3958.90283203125,
+            2702.497802734375,
+            4029.82861328125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "0{=}1",
+          "rec_formula": "0=1",
           "formula_region_id": 4,
           "dt_polys": [
-            2252.818115234375,
-            4171.48681640625,
-            2419.113525390625,
-            4241.96240234375
+            2261.73486328125,
+            4053.41845703125,
+            2418.15283203125,
+            4115.48095703125
           ]
         },
         {
@@ -2474,16 +2466,16 @@
           "rec_formula": "2u+v+w=5and4u+2v+2w=11",
           "formula_region_id": 5,
           "dt_polys": [
-            634.571044921875,
-            1680.25634765625,
-            1877.9345703125,
-            1756.36572265625
+            766.2139892578125,
+            1716.34375,
+            1901.9510498046875,
+            1788.24658203125
           ]
         }
       ],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

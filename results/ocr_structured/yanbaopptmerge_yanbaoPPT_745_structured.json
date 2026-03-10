@@ -5,25 +5,25 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "doc_title",
+          "block_label": "paragraph_title",
           "block_content": "课后作业",
           "block_bbox": [
-            279,
-            130,
-            949,
-            305
+            399,
+            397,
+            1015,
+            553
           ],
           "block_id": 0,
           "block_order": 1
         },
         {
           "block_label": "text",
-          "block_content": "1.课后习题；",
+          "block_content": "1. 课完后习练题习册本课时的习题。",
           "block_bbox": [
-            737,
-            593,
-            1554,
-            751
+            821,
+            783,
+            2528,
+            1104
           ],
           "block_id": 1,
           "block_order": 2
@@ -32,40 +32,16 @@
           "block_label": "image",
           "block_content": "",
           "block_bbox": [
-            3551,
-            198,
-            4089,
-            808
+            3393,
+            446,
+            3896,
+            951
           ],
           "block_id": 2,
           "block_order": null
-        },
-        {
-          "block_label": "text",
-          "block_content": "2.完成练习册本课时的习题。",
-          "block_bbox": [
-            726,
-            814,
-            2567,
-            967
-          ],
-          "block_id": 3,
-          "block_order": 3
-        },
-        {
-          "block_label": "image",
-          "block_content": "",
-          "block_bbox": [
-            369,
-            1174,
-            783,
-            1616
-          ],
-          "block_id": 4,
-          "block_order": null
         }
       ],
-      "markdown": "# 课后作业\n\n1.课后习题；\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_3551_198_4089_808.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n2.完成练习册本课时的习题。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_369_1174_783_1616.jpg\" alt=\"Image\" width=\"10%\" /></div>\n",
+      "markdown": "## 课后作业\n\n1. 课完后习练题习册本课时的习题。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_3393_446_3896_951.jpg\" alt=\"Image\" width=\"12%\" /></div>\n",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -73,72 +49,64 @@
     "metadata": {
       "width": 4134,
       "height": 2330,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
         "boxes": [
           {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8281379342079163,
-            "coordinate": [
-              726.6319580078125,
-              814.0623168945312,
-              2567.47998046875,
-              967.5493774414062
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8227397203445435,
-            "coordinate": [
-              737.9837036132812,
-              593.2412109375,
-              1554.504638671875,
-              751.4583740234375
-            ]
-          },
-          {
             "cls_id": 0,
             "label": "paragraph_title",
-            "score": 0.7479549050331116,
+            "score": 0.7326948642730713,
             "coordinate": [
-              279.5119323730469,
-              130.620849609375,
-              949.1318359375,
-              305.523193359375
+              399.9435729980469,
+              397.0364990234375,
+              1015.8896484375,
+              553.513916015625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.6267428398132324,
+            "coordinate": [
+              821.7659301757812,
+              783.1220703125,
+              2528.010986328125,
+              1104.08447265625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.5643228888511658,
+            "coordinate": [
+              832.3045654296875,
+              782.90576171875,
+              1595.5230712890625,
+              917.93896484375
             ]
           },
           {
             "cls_id": 1,
             "label": "image",
-            "score": 0.7288593053817749,
+            "score": 0.5343300104141235,
             "coordinate": [
-              369.509765625,
-              1174.65869140625,
-              783.9576416015625,
-              1616.642578125
+              3393.8544921875,
+              446.54095458984375,
+              3896.55859375,
+              951.8217163085938
             ]
           },
           {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.5475485324859619,
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.5073005557060242,
             "coordinate": [
-              3551.82763671875,
-              198.02120971679688,
-              4089.90576171875,
-              808.0179443359375
+              822.7012939453125,
+              970.27392578125,
+              2525.44287109375,
+              1103.45068359375
             ]
           }
         ]
@@ -149,28 +117,9 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
-        "dt_polys": [
-          [
-            [
-              1494,
-              1846
-            ],
-            [
-              1979,
-              1896
-            ],
-            [
-              1939,
-              2290
-            ],
-            [
-              1454,
-              2239
-            ]
-          ]
-        ],
+        "dt_polys": [],
         "text_det_params": {
           "limit_side_len": 736,
           "limit_type": "min",
@@ -180,121 +129,66 @@
           "unclip_ratio": 1.5
         },
         "text_type": "general",
-        "textline_orientation_angles": [
-          0
-        ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "0",
-          "2.完成练习册本课时的习题。",
-          "1.课后习题；",
-          "课后作业"
+          "课后作业",
+          "1. 课完后习练题习册本课时的习题。"
         ],
         "rec_scores": [
-          0.18778063356876373,
-          0.982081413269043,
-          0.9675174951553345,
-          0.9992538094520569
+          0.9992414712905884,
+          0.7948846817016602
         ],
         "rec_polys": [
           [
             [
-              1494,
-              1846
+              399,
+              397
             ],
             [
-              1979,
-              1896
+              1015,
+              397
             ],
             [
-              1939,
-              2290
+              1015,
+              553
             ],
             [
-              1454,
-              2239
+              399,
+              553
             ]
           ],
           [
             [
-              726,
-              814
+              821,
+              783
             ],
             [
-              2567,
-              814
+              2528,
+              783
             ],
             [
-              2567,
-              967
+              2528,
+              1104
             ],
             [
-              726,
-              967
-            ]
-          ],
-          [
-            [
-              737,
-              593
-            ],
-            [
-              1554,
-              593
-            ],
-            [
-              1554,
-              751
-            ],
-            [
-              737,
-              751
-            ]
-          ],
-          [
-            [
-              279,
-              130
-            ],
-            [
-              949,
-              130
-            ],
-            [
-              949,
-              305
-            ],
-            [
-              279,
-              305
+              821,
+              1104
             ]
           ]
         ],
         "rec_boxes": [
           [
-            1454.0,
-            1846.0,
-            1979.0,
-            2290.0
+            399.9435729980469,
+            397.0364990234375,
+            1015.8896484375,
+            553.513916015625
           ],
           [
-            726.6319580078125,
-            814.0623168945312,
-            2567.47998046875,
-            967.5493774414062
-          ],
-          [
-            737.9837036132812,
-            593.2412109375,
-            1554.504638671875,
-            751.4583740234375
-          ],
-          [
-            279.5119323730469,
-            130.620849609375,
-            949.1318359375,
-            305.523193359375
+            821.7659301757812,
+            783.1220703125,
+            2528.010986328125,
+            1104.08447265625
           ]
         ]
       },
@@ -304,7 +198,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

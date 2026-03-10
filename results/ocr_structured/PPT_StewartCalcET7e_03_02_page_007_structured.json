@@ -8,22 +8,22 @@
           "block_label": "paragraph_title",
           "block_content": "The Product Rule ",
           "block_bbox": [
-            89,
-            98,
-            1428,
-            238
+            138,
+            188,
+            1435,
+            327
           ],
           "block_id": 0,
           "block_order": 1
         },
         {
           "block_label": "text",
-          "block_content": "If we divide by ∆x, we get ",
+          "block_content": "If we divide by $\\Delta X,$ we get ",
           "block_bbox": [
-            52,
-            418,
-            1288,
-            527
+            167,
+            506,
+            1307,
+            609
           ],
           "block_id": 1,
           "block_order": 2
@@ -32,10 +32,10 @@
           "block_label": "formula",
           "block_content": "\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}",
           "block_bbox": [
-            469,
-            616,
-            1880,
-            852
+            562,
+            694,
+            1835,
+            900
           ],
           "block_id": 2,
           "block_order": 3
@@ -44,10 +44,10 @@
           "block_label": "text",
           "block_content": "If we now let $\\Delta x\\rightarrow0$ , we get the derivative of uv:",
           "block_bbox": [
-            24,
-            933,
-            2446,
-            1049
+            165,
+            974,
+            2329,
+            1076
           ],
           "block_id": 3,
           "block_order": 4
@@ -56,16 +56,28 @@
           "block_label": "formula",
           "block_content": "\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}",
           "block_bbox": [
-            237,
-            1178,
-            2816,
-            2136
+            376,
+            1191,
+            2633,
+            2020
           ],
           "block_id": 4,
           "block_order": 5
+        },
+        {
+          "block_label": "number",
+          "block_content": "7",
+          "block_bbox": [
+            2814,
+            2123,
+            2854,
+            2181
+          ],
+          "block_id": 5,
+          "block_order": null
         }
       ],
-      "markdown": "## The Product Rule \n\nIf we divide by ∆x, we get \n\n$$\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}$$\n\nIf we now let $\\Delta x\\rightarrow0$ , we get the derivative of uv:\n\n$$\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}$$",
+      "markdown": "## The Product Rule \n\nIf we divide by $\\Delta X,$ we get \n\n$$\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}$$\n\nIf we now let $\\Delta x\\rightarrow0$ , we get the derivative of uv:\n\n$$\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}$$",
       "tables": [],
       "formulas": [
         {
@@ -74,10 +86,10 @@
           "rec_formula": "\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            237.401123046875,
-            1178.472412109375,
-            2816.584228515625,
-            2136.341552734375
+            376.6517333984375,
+            1191.3955078125,
+            2633.23388671875,
+            2020.5654296875
           ]
         },
         {
@@ -86,10 +98,10 @@
           "rec_formula": "\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}",
           "formula_region_id": 2,
           "dt_polys": [
-            469.6851806640625,
-            616.9970703125,
-            1880.0008544921875,
-            852.76611328125
+            562.36083984375,
+            694.466064453125,
+            1835.59130859375,
+            900.435791015625
           ]
         },
         {
@@ -98,10 +110,22 @@
           "rec_formula": "\\Delta x\\rightarrow0",
           "formula_region_id": 3,
           "dt_polys": [
-            679.7255859375,
-            945.259521484375,
-            1045.6922607421875,
-            1044.289306640625
+            757.05810546875,
+            981.433837890625,
+            1081.771240234375,
+            1067.972412109375
+          ]
+        },
+        {
+          "input_path": null,
+          "page_index": null,
+          "rec_formula": "\\Delta X,",
+          "formula_region_id": 4,
+          "dt_polys": [
+            833.581298828125,
+            519.2636108398438,
+            969.4752197265625,
+            605.3569946289062
           ]
         }
       ],
@@ -110,15 +134,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -126,67 +142,89 @@
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.9618127942085266,
+            "score": 0.9637646079063416,
             "coordinate": [
-              237.401123046875,
-              1178.472412109375,
-              2816.584228515625,
-              2136.341552734375
+              376.6517333984375,
+              1191.3955078125,
+              2633.23388671875,
+              2020.5654296875
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.9615374207496643,
+            "score": 0.9627760648727417,
             "coordinate": [
-              469.6851806640625,
-              616.9970703125,
-              1880.0008544921875,
-              852.76611328125
+              562.36083984375,
+              694.466064453125,
+              1835.59130859375,
+              900.435791015625
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9186909198760986,
+            "score": 0.9202374815940857,
             "coordinate": [
-              24.1798095703125,
-              933.2763671875,
-              2446.94677734375,
-              1049.5401611328125
+              165.808837890625,
+              974.759033203125,
+              2329.2744140625,
+              1076.541748046875
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.885894238948822,
+            "score": 0.9081064462661743,
             "coordinate": [
-              52.35174560546875,
-              418.3973388671875,
-              1288.74169921875,
-              527.119384765625
+              167.45123291015625,
+              506.36614990234375,
+              1307.84423828125,
+              609.1538696289062
+            ]
+          },
+          {
+            "cls_id": 3,
+            "label": "number",
+            "score": 0.8489534854888916,
+            "coordinate": [
+              2814.557861328125,
+              2123.4580078125,
+              2854.365966796875,
+              2181.3896484375
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.7656070590019226,
+            "score": 0.8064888119697571,
             "coordinate": [
-              679.7255859375,
-              945.259521484375,
-              1045.6922607421875,
-              1044.289306640625
+              757.05810546875,
+              981.433837890625,
+              1081.771240234375,
+              1067.972412109375
             ]
           },
           {
             "cls_id": 0,
             "label": "paragraph_title",
-            "score": 0.7420385479927063,
+            "score": 0.696178138256073,
             "coordinate": [
-              89.6077880859375,
-              98.64238739013672,
-              1428.5057373046875,
-              238.2664794921875
+              138.24737548828125,
+              188.64208984375,
+              1435.629638671875,
+              327.02923583984375
+            ]
+          },
+          {
+            "cls_id": 7,
+            "label": "formula",
+            "score": 0.5285589694976807,
+            "coordinate": [
+              833.581298828125,
+              519.2636108398438,
+              969.4752197265625,
+              605.3569946289062
             ]
           }
         ]
@@ -197,187 +235,223 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              93,
-              102
+              139,
+              188
             ],
             [
-              399,
-              108
+              452,
+              188
             ],
             [
-              396,
-              251
+              452,
+              336
             ],
             [
-              90,
-              244
+              139,
+              336
             ]
           ],
           [
             [
-              440,
-              105
+              483,
+              191
             ],
-            [
-              1038,
-              110
-            ],
-            [
-              1036,
-              254
-            ],
-            [
-              439,
-              250
-            ]
-          ],
-          [
-            [
-              1075,
-              96
-            ],
-            [
-              1436,
-              89
-            ],
-            [
-              1439,
-              238
-            ],
-            [
-              1078,
-              246
-            ]
-          ],
-          [
-            [
-              37,
-              394
-            ],
-            [
-              1315,
-              400
-            ],
-            [
-              1314,
-              562
-            ],
-            [
-              37,
-              555
-            ]
-          ],
-          [
-            [
-              5,
-              910
-            ],
-            [
-              690,
-              918
-            ],
-            [
-              688,
-              1068
-            ],
-            [
-              3,
-              1060
-            ]
-          ],
-          [
             [
               1062,
-              929
+              194
             ],
             [
-              2467,
-              897
+              1062,
+              338
             ],
             [
-              2470,
-              1054
-            ],
-            [
-              1065,
-              1086
+              482,
+              334
             ]
           ],
           [
             [
-              1046,
-              1018
+              1098,
+              185
             ],
             [
-              1071,
-              1018
+              1448,
+              187
             ],
             [
-              1071,
-              1051
+              1447,
+              342
             ],
             [
-              1046,
-              1051
+              1097,
+              339
             ]
           ],
           [
             [
-              237,
-              1178
+              159,
+              490
             ],
             [
-              2816,
-              1178
+              830,
+              498
             ],
             [
-              2816,
-              2136
+              829,
+              630
             ],
             [
-              237,
-              2136
+              157,
+              622
             ]
           ],
           [
             [
-              469,
-              616
+              984,
+              514
             ],
             [
-              1880,
-              616
+              1321,
+              503
             ],
             [
-              1880,
-              852
+              1325,
+              622
             ],
             [
-              469,
-              852
+              987,
+              633
             ]
           ],
           [
             [
-              679,
-              945
+              154,
+              957
             ],
             [
-              1045,
-              945
+              761,
+              959
             ],
             [
-              1045,
-              1044
+              761,
+              1084
             ],
             [
-              679,
-              1044
+              153,
+              1082
+            ]
+          ],
+          [
+            [
+              1084,
+              973
+            ],
+            [
+              2339,
+              964
+            ],
+            [
+              2340,
+              1084
+            ],
+            [
+              1085,
+              1092
+            ]
+          ],
+          [
+            [
+              2811,
+              2118
+            ],
+            [
+              2866,
+              2120
+            ],
+            [
+              2863,
+              2194
+            ],
+            [
+              2808,
+              2192
+            ]
+          ],
+          [
+            [
+              376,
+              1191
+            ],
+            [
+              2633,
+              1191
+            ],
+            [
+              2633,
+              2020
+            ],
+            [
+              376,
+              2020
+            ]
+          ],
+          [
+            [
+              562,
+              694
+            ],
+            [
+              1835,
+              694
+            ],
+            [
+              1835,
+              900
+            ],
+            [
+              562,
+              900
+            ]
+          ],
+          [
+            [
+              757,
+              981
+            ],
+            [
+              1081,
+              981
+            ],
+            [
+              1081,
+              1067
+            ],
+            [
+              757,
+              1067
+            ]
+          ],
+          [
+            [
+              833,
+              519
+            ],
+            [
+              969,
+              519
+            ],
+            [
+              969,
+              605
+            ],
+            [
+              833,
+              605
             ]
           ]
         ],
@@ -391,36 +465,41 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
           "The",
           "Product",
           "Rule",
-          "If we divide by ∆x, we get",
+          "If we divide by",
+          "we get",
           "If we now let",
-          " we get the derivative of uv:",
-          ",",
+          ", we get the derivative of uv:",
+          "7",
           "\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}",
           "\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}",
-          "\\Delta x\\rightarrow0"
+          "\\Delta x\\rightarrow0",
+          "\\Delta X,"
         ],
         "rec_scores": [
-          0.9965596199035645,
-          0.9998215436935425,
-          0.9996594190597534,
-          0.9329109191894531,
-          0.9908981919288635,
-          0.9632699489593506,
-          0.9025494456291199,
+          0.9957899451255798,
+          0.9999127984046936,
+          0.999541163444519,
+          0.9375117421150208,
+          0.9880043864250183,
+          0.9762817025184631,
+          0.9814532399177551,
+          0.9999347925186157,
+          1,
           1,
           1,
           1
@@ -428,245 +507,293 @@
         "rec_polys": [
           [
             [
-              93,
-              102
+              139,
+              188
             ],
             [
-              399,
-              108
+              452,
+              188
             ],
             [
-              396,
-              251
+              452,
+              336
             ],
             [
-              90,
-              244
+              139,
+              336
             ]
           ],
           [
             [
-              440,
-              105
+              483,
+              191
             ],
-            [
-              1038,
-              110
-            ],
-            [
-              1036,
-              254
-            ],
-            [
-              439,
-              250
-            ]
-          ],
-          [
-            [
-              1075,
-              96
-            ],
-            [
-              1436,
-              89
-            ],
-            [
-              1439,
-              238
-            ],
-            [
-              1078,
-              246
-            ]
-          ],
-          [
-            [
-              37,
-              394
-            ],
-            [
-              1315,
-              400
-            ],
-            [
-              1314,
-              562
-            ],
-            [
-              37,
-              555
-            ]
-          ],
-          [
-            [
-              5,
-              910
-            ],
-            [
-              690,
-              918
-            ],
-            [
-              688,
-              1068
-            ],
-            [
-              3,
-              1060
-            ]
-          ],
-          [
             [
               1062,
-              929
+              194
             ],
             [
-              2467,
-              897
+              1062,
+              338
             ],
             [
-              2470,
-              1054
-            ],
-            [
-              1065,
-              1086
+              482,
+              334
             ]
           ],
           [
             [
-              1046,
-              1018
+              1098,
+              185
             ],
             [
-              1071,
-              1018
+              1448,
+              187
             ],
             [
-              1071,
-              1051
+              1447,
+              342
             ],
             [
-              1046,
-              1051
+              1097,
+              339
             ]
           ],
           [
             [
-              237,
-              1178
+              159,
+              490
             ],
             [
-              2816,
-              1178
+              830,
+              498
             ],
             [
-              2816,
-              2136
+              829,
+              630
             ],
             [
-              237,
-              2136
+              157,
+              622
             ]
           ],
           [
             [
-              469,
-              616
+              984,
+              514
             ],
             [
-              1880,
-              616
+              1321,
+              503
             ],
             [
-              1880,
-              852
+              1325,
+              622
             ],
             [
-              469,
-              852
+              987,
+              633
             ]
           ],
           [
             [
-              679,
-              945
+              154,
+              957
             ],
             [
-              1045,
-              945
+              761,
+              959
             ],
             [
-              1045,
-              1044
+              761,
+              1084
             ],
             [
-              679,
-              1044
+              153,
+              1082
+            ]
+          ],
+          [
+            [
+              1084,
+              973
+            ],
+            [
+              2339,
+              964
+            ],
+            [
+              2340,
+              1084
+            ],
+            [
+              1085,
+              1092
+            ]
+          ],
+          [
+            [
+              2811,
+              2118
+            ],
+            [
+              2866,
+              2120
+            ],
+            [
+              2863,
+              2194
+            ],
+            [
+              2808,
+              2192
+            ]
+          ],
+          [
+            [
+              376,
+              1191
+            ],
+            [
+              2633,
+              1191
+            ],
+            [
+              2633,
+              2020
+            ],
+            [
+              376,
+              2020
+            ]
+          ],
+          [
+            [
+              562,
+              694
+            ],
+            [
+              1835,
+              694
+            ],
+            [
+              1835,
+              900
+            ],
+            [
+              562,
+              900
+            ]
+          ],
+          [
+            [
+              757,
+              981
+            ],
+            [
+              1081,
+              981
+            ],
+            [
+              1081,
+              1067
+            ],
+            [
+              757,
+              1067
+            ]
+          ],
+          [
+            [
+              833,
+              519
+            ],
+            [
+              969,
+              519
+            ],
+            [
+              969,
+              605
+            ],
+            [
+              833,
+              605
             ]
           ]
         ],
         "rec_boxes": [
           [
-            90.0,
-            102.0,
-            399.0,
-            251.0
+            139.0,
+            188.0,
+            452.0,
+            336.0
           ],
           [
-            439.0,
-            105.0,
-            1038.0,
-            254.0
-          ],
-          [
-            1075.0,
-            89.0,
-            1439.0,
-            246.0
-          ],
-          [
-            37.0,
-            394.0,
-            1315.0,
-            562.0
-          ],
-          [
-            3.0,
-            910.0,
-            690.0,
-            1068.0
-          ],
-          [
+            482.0,
+            191.0,
             1062.0,
-            897.0,
-            2470.0,
-            1086.0
+            338.0
           ],
           [
-            1046.0,
-            1018.0,
-            1071.0,
-            1051.0
+            1097.0,
+            185.0,
+            1448.0,
+            342.0
           ],
           [
-            237.401123046875,
-            1178.472412109375,
-            2816.584228515625,
-            2136.341552734375
+            157.0,
+            490.0,
+            830.0,
+            630.0
           ],
           [
-            469.6851806640625,
-            616.9970703125,
-            1880.0008544921875,
-            852.76611328125
+            984.0,
+            503.0,
+            1325.0,
+            633.0
           ],
           [
-            679.7255859375,
-            945.259521484375,
-            1045.6922607421875,
-            1044.289306640625
+            153.0,
+            957.0,
+            761.0,
+            1084.0
+          ],
+          [
+            1084.0,
+            964.0,
+            2340.0,
+            1092.0
+          ],
+          [
+            2808.0,
+            2118.0,
+            2866.0,
+            2194.0
+          ],
+          [
+            376.6517333984375,
+            1191.3955078125,
+            2633.23388671875,
+            2020.5654296875
+          ],
+          [
+            562.36083984375,
+            694.466064453125,
+            1835.59130859375,
+            900.435791015625
+          ],
+          [
+            757.05810546875,
+            981.433837890625,
+            1081.771240234375,
+            1067.972412109375
+          ],
+          [
+            833.581298828125,
+            519.2636108398438,
+            969.4752197265625,
+            605.3569946289062
           ]
         ]
       },
@@ -680,10 +807,10 @@
           "rec_formula": "\\begin{aligned}\\frac{d}{dx}\\left(uv\\right)&=\\lim_{\\Delta x\\to0}\\frac{\\Delta(uv)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\left(u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}+v\\lim_{\\Delta x\\to0}\\frac{\\Delta u}{\\Delta x}+\\left(\\lim_{\\Delta x\\to0}\\Delta u\\right)\\left(\\lim_{\\Delta x\\to0}\\frac{\\Delta v}{\\Delta x}\\right)\\\\&=u\\frac{dv}{dx}+v\\frac{du}{dx}+0\\cdot\\frac{dv}{dx}\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            237.401123046875,
-            1178.472412109375,
-            2816.584228515625,
-            2136.341552734375
+            376.6517333984375,
+            1191.3955078125,
+            2633.23388671875,
+            2020.5654296875
           ]
         },
         {
@@ -692,10 +819,10 @@
           "rec_formula": "\\frac{\\Delta(u v)}{\\Delta x}=u\\frac{\\Delta v}{\\Delta x}+v\\frac{\\Delta u}{\\Delta x}+\\Delta u\\frac{\\Delta v}{\\Delta x}",
           "formula_region_id": 2,
           "dt_polys": [
-            469.6851806640625,
-            616.9970703125,
-            1880.0008544921875,
-            852.76611328125
+            562.36083984375,
+            694.466064453125,
+            1835.59130859375,
+            900.435791015625
           ]
         },
         {
@@ -704,16 +831,28 @@
           "rec_formula": "\\Delta x\\rightarrow0",
           "formula_region_id": 3,
           "dt_polys": [
-            679.7255859375,
-            945.259521484375,
-            1045.6922607421875,
-            1044.289306640625
+            757.05810546875,
+            981.433837890625,
+            1081.771240234375,
+            1067.972412109375
+          ]
+        },
+        {
+          "input_path": null,
+          "page_index": null,
+          "rec_formula": "\\Delta X,",
+          "formula_region_id": 4,
+          "dt_polys": [
+            833.581298828125,
+            519.2636108398438,
+            969.4752197265625,
+            605.3569946289062
           ]
         }
       ],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

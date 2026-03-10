@@ -8,22 +8,22 @@
           "block_label": "paragraph_title",
           "block_content": "Changes to English (in America)",
           "block_bbox": [
-            12,
-            183,
-            2454,
-            364
+            207,
+            321,
+            2447,
+            483
           ],
           "block_id": 0,
           "block_order": 1
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "□Change7 (pronunciation)",
+          "block_content": "□ Change 7 (pronunciation)",
           "block_bbox": [
-            4,
-            487,
-            1803,
-            639
+            209,
+            609,
+            1859,
+            736
           ],
           "block_id": 1,
           "block_order": 2
@@ -32,28 +32,40 @@
           "block_label": "text",
           "block_content": "",
           "block_bbox": [
-            290,
-            678,
-            2611,
-            1081
+            364,
+            780,
+            2596,
+            1142
           ],
           "block_id": 2,
           "block_order": 3
         },
         {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            503,
+            1192,
+            749,
+            1295
+          ],
+          "block_id": 3,
+          "block_order": null
+        },
+        {
           "block_label": "text",
           "block_content": "□2)",
           "block_bbox": [
-            229,
-            1434,
-            529,
-            1556
+            499,
+            1465,
+            754,
+            1572
           ],
-          "block_id": 3,
+          "block_id": 4,
           "block_order": 4
         }
       ],
-      "markdown": "## Changes to English (in America)\n\n## □Change7 (pronunciation)\n\n\n\n□2)",
+      "markdown": "## Changes to English (in America)\n\n## □ Change 7 (pronunciation)\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_503_1192_749_1295.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n□2)",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -61,15 +73,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -77,45 +81,89 @@
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.6409217715263367,
+            "score": 0.6419832706451416,
             "coordinate": [
-              290.8468017578125,
-              678.9915771484375,
-              2611.0908203125,
-              1081.62353515625
+              364.96923828125,
+              780.3057861328125,
+              2596.29345703125,
+              1142.7984619140625
             ]
           },
           {
             "cls_id": 0,
             "label": "paragraph_title",
-            "score": 0.6092513799667358,
+            "score": 0.5981559753417969,
             "coordinate": [
-              4.9921875,
-              487.9407958984375,
-              1803.03271484375,
-              639.6982421875
+              209.79205322265625,
+              609.1175537109375,
+              1859.429931640625,
+              736.1834716796875
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.5198051929473877,
+            "coordinate": [
+              503.8197326660156,
+              1192.5755615234375,
+              749.2379150390625,
+              1295.2056884765625
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.5127314329147339,
+            "coordinate": [
+              207.37744140625,
+              321.3193664550781,
+              2447.610595703125,
+              483.3493347167969
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.5538483262062073,
+            "score": 0.4529147148132324,
             "coordinate": [
-              229.32919311523438,
-              1434.61279296875,
-              529.1572265625,
-              1556.22021484375
+              499.0094299316406,
+              1465.49267578125,
+              754.3131103515625,
+              1572.15869140625
             ]
           },
           {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.5115126371383667,
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.3029741644859314,
             "coordinate": [
-              12.0269775390625,
-              183.78115844726562,
-              2454.78369140625,
-              364.6839904785156
+              514.158203125,
+              1047.052978515625,
+              758.2032470703125,
+              1142.696044921875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2721783518791199,
+            "coordinate": [
+              500.369140625,
+              908.3836669921875,
+              2587.404541015625,
+              1024.9412841796875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.26981258392333984,
+            "coordinate": [
+              498.85296630859375,
+              779.1420288085938,
+              1957.50634765625,
+              889.5372924804688
             ]
           }
         ]
@@ -126,25 +174,25 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              606,
-              1959
-            ],
-            [
-              938,
-              1959
-            ],
-            [
-              938,
+              391,
               1966
             ],
             [
-              606,
+              2618,
               1966
+            ],
+            [
+              2618,
+              1973
+            ],
+            [
+              391,
+              1973
             ]
           ]
         ],
@@ -158,146 +206,94 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          1
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "",
-          "",
-          "□Change7 (pronunciation)",
-          "□2)",
-          "Changes to English (in America)"
+          "□ Change 7 (pronunciation)",
+          "Changes to English (in America)",
+          "□2)"
         ],
         "rec_scores": [
-          0.0,
-          0.0,
-          0.9472010731697083,
-          0.9032894968986511,
-          0.9635515809059143
+          0.9429727792739868,
+          0.9907900094985962,
+          0.8917407393455505
         ],
         "rec_polys": [
           [
             [
-              606,
-              1959
+              209,
+              609
             ],
             [
-              938,
-              1959
+              1859,
+              609
             ],
             [
-              938,
-              1966
+              1859,
+              736
             ],
             [
-              606,
-              1966
+              209,
+              736
             ]
           ],
           [
             [
-              290,
-              678
+              207,
+              321
             ],
             [
-              2611,
-              678
+              2447,
+              321
             ],
             [
-              2611,
-              1081
+              2447,
+              483
             ],
             [
-              290,
-              1081
+              207,
+              483
             ]
           ],
           [
             [
-              4,
-              487
+              499,
+              1465
             ],
             [
-              1803,
-              487
+              754,
+              1465
             ],
             [
-              1803,
-              639
+              754,
+              1572
             ],
             [
-              4,
-              639
-            ]
-          ],
-          [
-            [
-              229,
-              1434
-            ],
-            [
-              529,
-              1434
-            ],
-            [
-              529,
-              1556
-            ],
-            [
-              229,
-              1556
-            ]
-          ],
-          [
-            [
-              12,
-              183
-            ],
-            [
-              2454,
-              183
-            ],
-            [
-              2454,
-              364
-            ],
-            [
-              12,
-              364
+              499,
+              1572
             ]
           ]
         ],
         "rec_boxes": [
           [
-            606.0,
-            1959.0,
-            938.0,
-            1966.0
+            209.79205322265625,
+            609.1175537109375,
+            1859.429931640625,
+            736.1834716796875
           ],
           [
-            290.8468017578125,
-            678.9915771484375,
-            2611.0908203125,
-            1081.62353515625
+            207.37744140625,
+            321.3193664550781,
+            2447.610595703125,
+            483.3493347167969
           ],
           [
-            4.9921875,
-            487.9407958984375,
-            1803.03271484375,
-            639.6982421875
-          ],
-          [
-            229.32919311523438,
-            1434.61279296875,
-            529.1572265625,
-            1556.22021484375
-          ],
-          [
-            12.0269775390625,
-            183.78115844726562,
-            2454.78369140625,
-            364.6839904785156
+            499.0094299316406,
+            1465.49267578125,
+            754.3131103515625,
+            1572.15869140625
           ]
         ]
       },
@@ -307,7 +303,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

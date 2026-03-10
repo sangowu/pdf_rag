@@ -5,67 +5,79 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "paragraph_title",
-          "block_content": "HOMOGENEOUS LINEARSYSTEMS ",
+          "block_label": "header",
+          "block_content": "HOMOGENEOUSLINEAR SYSTEMS ",
           "block_bbox": [
-            2,
-            117,
-            2129,
-            257
+            165,
+            191,
+            2038,
+            306
           ],
           "block_id": 0,
+          "block_order": null
+        },
+        {
+          "block_label": "formula",
+          "block_content": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
+          "block_bbox": [
+            137,
+            413,
+            2848,
+            942
+          ],
+          "block_id": 1,
           "block_order": 1
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}\\left[\\begin{matrix}3&5&-4&0\\\\ -3&-2&4&0\\\\ 6&1&-8&0\\end{matrix}\\right]&\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&-9&0&0\\end{matrix}\\right]\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&0&0&0\\end{matrix}\\right]\\end{aligned}",
+          "block_label": "text",
+          "block_content": "Since $x_{3}$ is a free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}.$ ",
           "block_bbox": [
-            1,
-            373,
-            3000,
-            945
+            164,
+            1029,
+            2550,
+            1290
           ],
-          "block_id": 1,
+          "block_id": 2,
           "block_order": 2
         },
         {
-          "block_label": "text",
-          "block_content": "Since $x_{3}$ isaf free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}$ ",
+          "block_label": "formula",
+          "block_content": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
           "block_bbox": [
-            8,
-            1038,
-            2724,
-            1320
+            167,
+            1333,
+            2546,
+            2194
           ],
-          "block_id": 2,
+          "block_id": 3,
           "block_order": 3
         },
         {
-          "block_label": "formula",
-          "block_content": "{\\scriptstyle{\\mathrm{~\\tiny~C o n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{matrix}{A}&{0}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{matrix}{1}&{0}&{-{\\cfrac{4}{3}}}&{0}\\\\ {0}&{1}&{0}&{0}\\\\ {0}&{0}&{0}&{0}\\end{matrix}\\right]}}&{x_{\\mathrm{1}}-{\\cfrac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {x_{\\mathrm{2}}=0}\\\\ {0}&{0}&{x_{\\mathrm{4}}=0}\\\\ {0}&{0}&{x_{\\mathrm{5}}=0}\\end{matrix}\\right]} Slide 1 5.",
+          "block_label": "footer",
+          "block_content": "Slide 1.5- 4",
           "block_bbox": [
-            36,
-            1362,
-            2719,
-            2250
+            2549,
+            2151,
+            2818,
+            2198
           ],
-          "block_id": 3,
-          "block_order": 4
+          "block_id": 4,
+          "block_order": null
         }
       ],
-      "markdown": "## HOMOGENEOUS LINEARSYSTEMS \n\n$$\\begin{aligned}\\left[\\begin{matrix}3&5&-4&0\\\\ -3&-2&4&0\\\\ 6&1&-8&0\\end{matrix}\\right]&\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&-9&0&0\\end{matrix}\\right]\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&0&0&0\\end{matrix}\\right]\\end{aligned}$$\n\nSince $x_{3}$ isaf free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}$ \n\n$${\\scriptstyle{\\mathrm{~\\tiny~C o n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{matrix}{A}&{0}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{matrix}{1}&{0}&{-{\\cfrac{4}{3}}}&{0}\\\\ {0}&{1}&{0}&{0}\\\\ {0}&{0}&{0}&{0}\\end{matrix}\\right]}}&{x_{\\mathrm{1}}-{\\cfrac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {x_{\\mathrm{2}}=0}\\\\ {0}&{0}&{x_{\\mathrm{4}}=0}\\\\ {0}&{0}&{x_{\\mathrm{5}}=0}\\end{matrix}\\right]} Slide 1 5.$$",
+      "markdown": "$$\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}$$\n\nSince $x_{3}$ is a free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}.$ \n\n$${\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}$$",
       "tables": [],
       "formulas": [
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "\\begin{aligned}\\left[\\begin{matrix}3&5&-4&0\\\\ -3&-2&4&0\\\\ 6&1&-8&0\\end{matrix}\\right]&\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&-9&0&0\\end{matrix}\\right]\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&0&0&0\\end{matrix}\\right]\\end{aligned}",
+          "rec_formula": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            1.4322509765625,
-            373.72052001953125,
-            3000,
-            945.2955932617188
+            137.6458740234375,
+            413.4891357421875,
+            2848.97265625,
+            942.4898681640625
           ]
         },
         {
@@ -74,10 +86,10 @@
           "rec_formula": "A\\mathbf{x}=0",
           "formula_region_id": 2,
           "dt_polys": [
-            1559.340087890625,
-            1042.18212890625,
-            1951.654541015625,
-            1151.5869140625
+            1528.37060546875,
+            1031.500244140625,
+            1871.327880859375,
+            1132.818603515625
           ]
         },
         {
@@ -86,34 +98,34 @@
           "rec_formula": "x_{3}",
           "formula_region_id": 3,
           "dt_polys": [
-            482.73419189453125,
-            1078.3243408203125,
-            596.1837768554688,
-            1178.3221435546875
+            569.7955932617188,
+            1063.5966796875,
+            670.8488159179688,
+            1159.206298828125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "x_{3}",
+          "rec_formula": "x_{3}.",
           "formula_region_id": 4,
           "dt_polys": [
-            1912.653564453125,
-            1215.8289794921875,
-            2031.009521484375,
-            1326.9544677734375
+            1836.68359375,
+            1188.883056640625,
+            1951.2041015625,
+            1296.1845703125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C o n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{matrix}{A}&{0}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{matrix}{1}&{0}&{-{\\cfrac{4}{3}}}&{0}\\\\ {0}&{1}&{0}&{0}\\\\ {0}&{0}&{0}&{0}\\end{matrix}\\right]}}&{x_{\\mathrm{1}}-{\\cfrac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {x_{\\mathrm{2}}=0}\\\\ {0}&{0}&{x_{\\mathrm{4}}=0}\\\\ {0}&{0}&{x_{\\mathrm{5}}=0}\\end{matrix}\\right]}",
+          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
           "formula_region_id": 5,
           "dt_polys": [
-            36.575439453125,
-            1362.0458984375,
-            2719.6025390625,
-            2250
+            167.1817626953125,
+            1333.953369140625,
+            2546.2001953125,
+            2194.2080078125
           ]
         }
       ],
@@ -122,15 +134,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -138,78 +142,100 @@
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.9593636989593506,
+            "score": 0.9618529081344604,
             "coordinate": [
-              1.4322509765625,
-              373.72052001953125,
-              3000,
-              945.2955932617188
+              137.6458740234375,
+              413.4891357421875,
+              2848.97265625,
+              942.4898681640625
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9461777806282043,
+            "score": 0.9517152905464172,
             "coordinate": [
-              8.0897216796875,
-              1038.876708984375,
-              2724.49560546875,
-              1320.307373046875
+              164.05224609375,
+              1029.9979248046875,
+              2550.4658203125,
+              1290.4986572265625
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.8350921869277954,
+            "score": 0.8535083532333374,
             "coordinate": [
-              1559.340087890625,
-              1042.18212890625,
-              1951.654541015625,
-              1151.5869140625
+              1528.37060546875,
+              1031.500244140625,
+              1871.327880859375,
+              1132.818603515625
+            ]
+          },
+          {
+            "cls_id": 12,
+            "label": "header",
+            "score": 0.7317896485328674,
+            "coordinate": [
+              165.082763671875,
+              191.12210083007812,
+              2038.248046875,
+              306.131103515625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.7075386047363281,
+            "coordinate": [
+              178.23162841796875,
+              2150.70849609375,
+              896.6426391601562,
+              2201.68017578125
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.6987789273262024,
+            "score": 0.6712295413017273,
             "coordinate": [
-              482.73419189453125,
-              1078.3243408203125,
-              596.1837768554688,
-              1178.3221435546875
+              569.7955932617188,
+              1063.5966796875,
+              670.8488159179688,
+              1159.206298828125
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.6688209176063538,
+            "score": 0.6090410351753235,
             "coordinate": [
-              1912.653564453125,
-              1215.8289794921875,
-              2031.009521484375,
-              1326.9544677734375
+              1836.68359375,
+              1188.883056640625,
+              1951.2041015625,
+              1296.1845703125
+            ]
+          },
+          {
+            "cls_id": 14,
+            "label": "footer",
+            "score": 0.5131712555885315,
+            "coordinate": [
+              2549.6162109375,
+              2151.62548828125,
+              2818.529296875,
+              2198.85205078125
             ]
           },
           {
             "cls_id": 7,
             "label": "formula",
-            "score": 0.6250500679016113,
+            "score": 0.42412522435188293,
             "coordinate": [
-              36.575439453125,
-              1362.0458984375,
-              2719.6025390625,
-              2250
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.577456533908844,
-            "coordinate": [
-              2.4608154296875,
-              117.97515869140625,
-              2129.8837890625,
-              257.5680847167969
+              167.1817626953125,
+              1333.953369140625,
+              2546.2001953125,
+              2194.2080078125
             ]
           }
         ]
@@ -220,223 +246,241 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              35,
-              121
+              181,
+              203
             ],
             [
-              2136,
-              124
+              1494,
+              201
             ],
             [
-              2136,
-              274
+              1494,
+              310
             ],
             [
-              35,
-              272
+              182,
+              312
             ]
           ],
           [
             [
-              157,
-              1045
+              1521,
+              203
             ],
             [
-              471,
-              1045
+              2045,
+              203
             ],
             [
-              471,
-              1160
+              2045,
+              311
             ],
             [
-              157,
-              1160
+              1521,
+              311
             ]
           ],
           [
             [
-              814,
-              1040
+              280,
+              1032
             ],
             [
-              1537,
-              1042
+              563,
+              1029
             ],
             [
-              1537,
-              1172
+              564,
+              1143
             ],
             [
-              814,
+              281,
+              1145
+            ]
+          ],
+          [
+            [
+              670,
+              1029
+            ],
+            [
+              1509,
+              1029
+            ],
+            [
+              1509,
+              1155
+            ],
+            [
+              670,
+              1155
+            ]
+          ],
+          [
+            [
+              1889,
+              1030
+            ],
+            [
+              2559,
+              1026
+            ],
+            [
+              2559,
+              1141
+            ],
+            [
+              1889,
+              1144
+            ]
+          ],
+          [
+            [
+              276,
               1170
+            ],
+            [
+              1843,
+              1159
+            ],
+            [
+              1844,
+              1285
+            ],
+            [
+              277,
+              1297
             ]
           ],
           [
             [
-              1973,
-              1040
+              2551,
+              2152
             ],
             [
-              2732,
+              2827,
+              2152
+            ],
+            [
+              2827,
+              2208
+            ],
+            [
+              2551,
+              2208
+            ]
+          ],
+          [
+            [
+              774,
+              2193
+            ],
+            [
+              805,
+              2193
+            ],
+            [
+              805,
+              2204
+            ],
+            [
+              774,
+              2204
+            ]
+          ],
+          [
+            [
+              137,
+              413
+            ],
+            [
+              2848,
+              413
+            ],
+            [
+              2848,
+              942
+            ],
+            [
+              137,
+              942
+            ]
+          ],
+          [
+            [
+              1528,
               1031
             ],
             [
-              2733,
-              1156
+              1871,
+              1031
             ],
             [
-              1975,
-              1165
+              1871,
+              1132
+            ],
+            [
+              1528,
+              1132
             ]
           ],
           [
             [
-              606,
-              1051
+              569,
+              1063
             ],
             [
-              869,
-              1051
+              670,
+              1063
             ],
             [
-              869,
-              1170
+              670,
+              1159
             ],
             [
-              606,
-              1170
+              569,
+              1159
             ]
           ],
           [
             [
-              155,
-              1185
-            ],
-            [
-              1920,
-              1178
-            ],
-            [
-              1921,
-              1321
-            ],
-            [
-              156,
-              1328
-            ]
-          ],
-          [
-            [
-              2715,
-              2219
-            ],
-            [
-              2950,
-              2219
-            ],
-            [
-              2950,
-              2250
-            ],
-            [
-              2715,
-              2250
-            ]
-          ],
-          [
-            [
-              1,
-              373
-            ],
-            [
-              3000,
-              373
-            ],
-            [
-              3000,
-              945
-            ],
-            [
-              1,
-              945
-            ]
-          ],
-          [
-            [
-              1559,
-              1042
+              1836,
+              1188
             ],
             [
               1951,
-              1042
+              1188
             ],
             [
               1951,
-              1151
+              1296
             ],
             [
-              1559,
-              1151
+              1836,
+              1296
             ]
           ],
           [
             [
-              482,
-              1078
+              167,
+              1333
             ],
             [
-              596,
-              1078
+              2546,
+              1333
             ],
             [
-              596,
-              1178
+              2546,
+              2194
             ],
             [
-              482,
-              1178
-            ]
-          ],
-          [
-            [
-              1912,
-              1215
-            ],
-            [
-              2031,
-              1215
-            ],
-            [
-              2031,
-              1326
-            ],
-            [
-              1912,
-              1326
-            ]
-          ],
-          [
-            [
-              36,
-              1362
-            ],
-            [
-              2719,
-              1362
-            ],
-            [
-              2719,
-              2250
-            ],
-            [
-              36,
-              2250
+              167,
+              2194
             ]
           ]
         ],
@@ -450,38 +494,39 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "HOMOGENEOUS LINEARSYSTEMS",
+          "HOMOGENEOUSLINEAR",
+          "SYSTEMS",
           "Since",
-          "free variable,",
+          "is a free variable,",
           "has nontrivial",
-          "isaf",
           "solutions (one for each choice of",
-          "Slide 1 5.",
-          "\\begin{aligned}\\left[\\begin{matrix}3&5&-4&0\\\\ -3&-2&4&0\\\\ 6&1&-8&0\\end{matrix}\\right]&\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&-9&0&0\\end{matrix}\\right]\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&0&0&0\\end{matrix}\\right]\\end{aligned}",
+          "Slide 1.5- 4",
+          "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
           "A\\mathbf{x}=0",
           "x_{3}",
-          "x_{3}",
-          "{\\scriptstyle{\\mathrm{~\\tiny~C o n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{matrix}{A}&{0}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{matrix}{1}&{0}&{-{\\cfrac{4}{3}}}&{0}\\\\ {0}&{1}&{0}&{0}\\\\ {0}&{0}&{0}&{0}\\end{matrix}\\right]}}&{x_{\\mathrm{1}}-{\\cfrac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {x_{\\mathrm{2}}=0}\\\\ {0}&{0}&{x_{\\mathrm{4}}=0}\\\\ {0}&{0}&{x_{\\mathrm{5}}=0}\\end{matrix}\\right]}"
+          "x_{3}.",
+          "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}"
         ],
         "rec_scores": [
-          0.9795820713043213,
-          0.999839186668396,
-          0.9985957145690918,
-          0.9992140531539917,
-          0.8771883249282837,
-          0.9624137282371521,
-          0.9259331822395325,
+          0.997460663318634,
+          0.9994034767150879,
+          0.9997240304946899,
+          0.9769698977470398,
+          0.9982131123542786,
+          0.956627368927002,
+          0.9296867847442627,
           1,
           1,
           1,
@@ -491,293 +536,293 @@
         "rec_polys": [
           [
             [
-              35,
-              121
+              181,
+              203
             ],
             [
-              2136,
-              124
+              1494,
+              201
             ],
             [
-              2136,
-              274
+              1494,
+              310
             ],
             [
-              35,
-              272
+              182,
+              312
             ]
           ],
           [
             [
-              157,
-              1045
+              1521,
+              203
             ],
             [
-              471,
-              1045
+              2045,
+              203
             ],
             [
-              471,
-              1160
+              2045,
+              311
             ],
             [
-              157,
-              1160
+              1521,
+              311
             ]
           ],
           [
             [
-              814,
-              1040
+              280,
+              1032
             ],
             [
-              1537,
-              1042
+              563,
+              1029
             ],
             [
-              1537,
-              1172
+              564,
+              1143
             ],
             [
-              814,
+              281,
+              1145
+            ]
+          ],
+          [
+            [
+              670,
+              1029
+            ],
+            [
+              1509,
+              1029
+            ],
+            [
+              1509,
+              1155
+            ],
+            [
+              670,
+              1155
+            ]
+          ],
+          [
+            [
+              1889,
+              1030
+            ],
+            [
+              2559,
+              1026
+            ],
+            [
+              2559,
+              1141
+            ],
+            [
+              1889,
+              1144
+            ]
+          ],
+          [
+            [
+              276,
               1170
+            ],
+            [
+              1843,
+              1159
+            ],
+            [
+              1844,
+              1285
+            ],
+            [
+              277,
+              1297
             ]
           ],
           [
             [
-              1973,
-              1040
+              2551,
+              2152
             ],
             [
-              2732,
+              2827,
+              2152
+            ],
+            [
+              2827,
+              2208
+            ],
+            [
+              2551,
+              2208
+            ]
+          ],
+          [
+            [
+              137,
+              413
+            ],
+            [
+              2848,
+              413
+            ],
+            [
+              2848,
+              942
+            ],
+            [
+              137,
+              942
+            ]
+          ],
+          [
+            [
+              1528,
               1031
             ],
             [
-              2733,
-              1156
+              1871,
+              1031
             ],
             [
-              1975,
-              1165
+              1871,
+              1132
+            ],
+            [
+              1528,
+              1132
             ]
           ],
           [
             [
-              606,
-              1051
+              569,
+              1063
             ],
             [
-              869,
-              1051
+              670,
+              1063
             ],
             [
-              869,
-              1170
+              670,
+              1159
             ],
             [
-              606,
-              1170
+              569,
+              1159
             ]
           ],
           [
             [
-              155,
-              1185
-            ],
-            [
-              1920,
-              1178
-            ],
-            [
-              1921,
-              1321
-            ],
-            [
-              156,
-              1328
-            ]
-          ],
-          [
-            [
-              2715,
-              2219
-            ],
-            [
-              2950,
-              2219
-            ],
-            [
-              2950,
-              2250
-            ],
-            [
-              2715,
-              2250
-            ]
-          ],
-          [
-            [
-              1,
-              373
-            ],
-            [
-              3000,
-              373
-            ],
-            [
-              3000,
-              945
-            ],
-            [
-              1,
-              945
-            ]
-          ],
-          [
-            [
-              1559,
-              1042
+              1836,
+              1188
             ],
             [
               1951,
-              1042
+              1188
             ],
             [
               1951,
-              1151
+              1296
             ],
             [
-              1559,
-              1151
+              1836,
+              1296
             ]
           ],
           [
             [
-              482,
-              1078
+              167,
+              1333
             ],
             [
-              596,
-              1078
+              2546,
+              1333
             ],
             [
-              596,
-              1178
+              2546,
+              2194
             ],
             [
-              482,
-              1178
-            ]
-          ],
-          [
-            [
-              1912,
-              1215
-            ],
-            [
-              2031,
-              1215
-            ],
-            [
-              2031,
-              1326
-            ],
-            [
-              1912,
-              1326
-            ]
-          ],
-          [
-            [
-              36,
-              1362
-            ],
-            [
-              2719,
-              1362
-            ],
-            [
-              2719,
-              2250
-            ],
-            [
-              36,
-              2250
+              167,
+              2194
             ]
           ]
         ],
         "rec_boxes": [
           [
-            35.0,
-            121.0,
-            2136.0,
-            274.0
+            181.0,
+            201.0,
+            1494.0,
+            312.0
           ],
           [
-            157.0,
-            1045.0,
-            471.0,
-            1160.0
+            1521.0,
+            203.0,
+            2045.0,
+            311.0
           ],
           [
-            814.0,
-            1040.0,
-            1537.0,
-            1172.0
+            280.0,
+            1029.0,
+            564.0,
+            1145.0
           ],
           [
-            1973.0,
-            1031.0,
-            2733.0,
-            1165.0
+            670.0,
+            1029.0,
+            1509.0,
+            1155.0
           ],
           [
-            606.0,
-            1051.0,
-            869.0,
-            1170.0
+            1889.0,
+            1026.0,
+            2559.0,
+            1144.0
           ],
           [
-            155.0,
-            1178.0,
-            1921.0,
-            1328.0
+            276.0,
+            1159.0,
+            1844.0,
+            1297.0
           ],
           [
-            2715.0,
-            2219.0,
-            2950.0,
-            2250.0
+            2551.0,
+            2152.0,
+            2827.0,
+            2208.0
           ],
           [
-            1.4322509765625,
-            373.72052001953125,
-            3000.0,
-            945.2955932617188
+            137.6458740234375,
+            413.4891357421875,
+            2848.97265625,
+            942.4898681640625
           ],
           [
-            1559.340087890625,
-            1042.18212890625,
-            1951.654541015625,
-            1151.5869140625
+            1528.37060546875,
+            1031.500244140625,
+            1871.327880859375,
+            1132.818603515625
           ],
           [
-            482.73419189453125,
-            1078.3243408203125,
-            596.1837768554688,
-            1178.3221435546875
+            569.7955932617188,
+            1063.5966796875,
+            670.8488159179688,
+            1159.206298828125
           ],
           [
-            1912.653564453125,
-            1215.8289794921875,
-            2031.009521484375,
-            1326.9544677734375
+            1836.68359375,
+            1188.883056640625,
+            1951.2041015625,
+            1296.1845703125
           ],
           [
-            36.575439453125,
-            1362.0458984375,
-            2719.6025390625,
-            2250.0
+            167.1817626953125,
+            1333.953369140625,
+            2546.2001953125,
+            2194.2080078125
           ]
         ]
       },
@@ -788,13 +833,13 @@
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "\\begin{aligned}\\left[\\begin{matrix}3&5&-4&0\\\\ -3&-2&4&0\\\\ 6&1&-8&0\\end{matrix}\\right]&\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&-9&0&0\\end{matrix}\\right]\\sim\\left[\\begin{matrix}3&5&-4&0\\\\ 0&3&0&0\\\\ 0&0&0&0\\end{matrix}\\right]\\end{aligned}",
+          "rec_formula": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
           "formula_region_id": 1,
           "dt_polys": [
-            1.4322509765625,
-            373.72052001953125,
-            3000,
-            945.2955932617188
+            137.6458740234375,
+            413.4891357421875,
+            2848.97265625,
+            942.4898681640625
           ]
         },
         {
@@ -803,10 +848,10 @@
           "rec_formula": "A\\mathbf{x}=0",
           "formula_region_id": 2,
           "dt_polys": [
-            1559.340087890625,
-            1042.18212890625,
-            1951.654541015625,
-            1151.5869140625
+            1528.37060546875,
+            1031.500244140625,
+            1871.327880859375,
+            1132.818603515625
           ]
         },
         {
@@ -815,40 +860,40 @@
           "rec_formula": "x_{3}",
           "formula_region_id": 3,
           "dt_polys": [
-            482.73419189453125,
-            1078.3243408203125,
-            596.1837768554688,
-            1178.3221435546875
+            569.7955932617188,
+            1063.5966796875,
+            670.8488159179688,
+            1159.206298828125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "x_{3}",
+          "rec_formula": "x_{3}.",
           "formula_region_id": 4,
           "dt_polys": [
-            1912.653564453125,
-            1215.8289794921875,
-            2031.009521484375,
-            1326.9544677734375
+            1836.68359375,
+            1188.883056640625,
+            1951.2041015625,
+            1296.1845703125
           ]
         },
         {
           "input_path": null,
           "page_index": null,
-          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C o n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{matrix}{A}&{0}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{matrix}{1}&{0}&{-{\\cfrac{4}{3}}}&{0}\\\\ {0}&{1}&{0}&{0}\\\\ {0}&{0}&{0}&{0}\\end{matrix}\\right]}}&{x_{\\mathrm{1}}-{\\cfrac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {x_{\\mathrm{2}}=0}\\\\ {0}&{0}&{x_{\\mathrm{4}}=0}\\\\ {0}&{0}&{x_{\\mathrm{5}}=0}\\end{matrix}\\right]}",
+          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
           "formula_region_id": 5,
           "dt_polys": [
-            36.575439453125,
-            1362.0458984375,
-            2719.6025390625,
-            2250
+            167.1817626953125,
+            1333.953369140625,
+            2546.2001953125,
+            2194.2080078125
           ]
         }
       ],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

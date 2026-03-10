@@ -27,8 +27,8 @@ def process_all_pdfs():
             processor.process_pdf(pdf_path)
             fcount += 1
         except Exception as e:
-            logger.error("处理文件 %s 时发生错误: %s", filename, e)
-        if fcount % 5 == 0:
+            logger.exception("处理文件 %s 时发生错误", filename)
+        if fcount % 50 == 0:
             import gc
             gc.collect()
             try:

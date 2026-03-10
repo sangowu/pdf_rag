@@ -1,7 +1,7 @@
 import argparse
 import logging
 
-from src.evaluator import RAGEvaluator
+from src.ocr_evaluator import RAGEvaluator
 
 
 def main() -> None:

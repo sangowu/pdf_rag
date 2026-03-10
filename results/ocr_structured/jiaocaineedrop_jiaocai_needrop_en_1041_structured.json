@@ -5,19 +5,31 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "doc_title",
+          "block_label": "text",
           "block_content": "测小灯泡电功率的其他方法",
           "block_bbox": [
-            328,
-            197,
-            1007,
-            277
+            450,
+            370,
+            1056,
+            424
           ],
           "block_id": 0,
           "block_order": 1
+        },
+        {
+          "block_label": "footer",
+          "block_content": "第十讲 电功率突破（中）157",
+          "block_bbox": [
+            1649,
+            3213,
+            2214,
+            3259
+          ],
+          "block_id": 1,
+          "block_order": null
         }
       ],
-      "markdown": "# 测小灯泡电功率的其他方法",
+      "markdown": "测小灯泡电功率的其他方法",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -25,28 +37,31 @@
     "metadata": {
       "width": 2552,
       "height": 3438,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
         "boxes": [
           {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.6695513725280762,
+            "cls_id": 14,
+            "label": "footer",
+            "score": 0.8672142028808594,
             "coordinate": [
-              328.90997314453125,
-              197.24758911132812,
-              1007.3410034179688,
-              277.7817077636719
+              1649.156982421875,
+              3213.24609375,
+              2214.72802734375,
+              3259.9228515625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.45960262417793274,
+            "coordinate": [
+              450.6650390625,
+              370.39666748046875,
+              1056.635986328125,
+              424.59222412109375
             ]
           }
         ]
@@ -57,25 +72,43 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              328,
-              190
+              453,
+              372
             ],
             [
-              1017,
-              224
+              1059,
+              372
             ],
             [
-              1014,
-              291
+              1059,
+              430
             ],
             [
-              325,
-              257
+              453,
+              430
+            ]
+          ],
+          [
+            [
+              1648,
+              3209
+            ],
+            [
+              2223,
+              3209
+            ],
+            [
+              2223,
+              3270
+            ],
+            [
+              1648,
+              3270
             ]
           ]
         ],
@@ -89,42 +122,69 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "测小灯泡电功率的其他方法"
+          "测小灯泡电功率的其他方法",
+          "第十讲 电功率突破（中）157"
         ],
         "rec_scores": [
-          0.9979434013366699
+          0.998009204864502,
+          0.9239687323570251
         ],
         "rec_polys": [
           [
             [
-              328,
-              190
+              453,
+              372
             ],
             [
-              1017,
-              224
+              1059,
+              372
             ],
             [
-              1014,
-              291
+              1059,
+              430
             ],
             [
-              325,
-              257
+              453,
+              430
+            ]
+          ],
+          [
+            [
+              1648,
+              3209
+            ],
+            [
+              2223,
+              3209
+            ],
+            [
+              2223,
+              3270
+            ],
+            [
+              1648,
+              3270
             ]
           ]
         ],
         "rec_boxes": [
           [
-            325,
-            190,
-            1017,
-            291
+            453,
+            372,
+            1059,
+            430
+          ],
+          [
+            1648,
+            3209,
+            2223,
+            3270
           ]
         ]
       },
@@ -134,7 +194,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

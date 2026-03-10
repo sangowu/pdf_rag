@@ -33,7 +33,7 @@ ocr:
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
 chunking:
-  type: "parent_child"
+  type: "fixed"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
@@ -82,7 +82,7 @@ embedding:
 
 # Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
 retrieval:
-  method: "hybrid"   # "vector" | "bm25" | "hybrid"
+  method: "vector"   # "vector" | "bm25" | "hybrid"
   rrf_k: 60          # RRF constant (only for hybrid)
 
 # ChromaDB Settings
@@ -108,7 +108,7 @@ llm:
     model_name: "models/Qwen3-8B"
     device: "cuda"
     # Batch size for local LLM generation (QA from chunks)
-    batch_size: 32
+    batch_size: 8
     max_tokens: 512
     temperature: 0.7  # 推荐：非思考模式下 0.7
     torch_dtype: "auto"
@@ -120,13 +120,13 @@ llm:
 # Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: true
+  enabled: false
   top_r: 20
   model_name: "Qwen/Qwen3-Reranker-4B"
   local_model_path: "models/Qwen3-Reranker-4B"
   device: "cuda"
   torch_dtype: "auto"
-  batch_size: 16
+  batch_size: 8
   # Cap input length (tokens); pad to longest in batch for efficiency. Match chunk distribution (~768 chars -> ~1024 tokens).
   max_length: 1024
   # Document QA: judge if passage helps answer the question; content/answer may be in Chinese or English

@@ -5,43 +5,115 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "paragraph_title",
-          "block_content": "Les's Reer ",
+          "block_label": "header",
+          "block_content": "Revision 1",
           "block_bbox": [
-            0,
-            290,
-            1441,
-            708
+            170,
+            118,
+            954,
+            262
           ],
           "block_id": 0,
+          "block_order": null
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "Lest'sn Revieumber.",
+          "block_bbox": [
+            97,
+            561,
+            1456,
+            913
+          ],
+          "block_id": 1,
           "block_order": 1
         },
         {
           "block_label": "image",
-          "block_content": "Let's play.\n\n",
+          "block_content": "",
           "block_bbox": [
-            0,
-            685,
-            3020,
-            4470
+            157,
+            960,
+            1491,
+            1664
           ],
-          "block_id": 1,
+          "block_id": 2,
+          "block_order": null
+        },
+        {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            1780,
+            909,
+            2898,
+            1677
+          ],
+          "block_id": 3,
+          "block_order": null
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "B Let's play.",
+          "block_bbox": [
+            108,
+            2623,
+            804,
+            2767
+          ],
+          "block_id": 4,
+          "block_order": 2
+        },
+        {
+          "block_label": "image",
+          "block_content": "B Let's play.\n\n",
+          "block_bbox": [
+            150,
+            2761,
+            2903,
+            4283
+          ],
+          "block_id": 5,
+          "block_order": null
+        },
+        {
+          "block_label": "image",
+          "block_content": "B Let's play.\n\n",
+          "block_bbox": [
+            210,
+            1691,
+            1332,
+            2633
+          ],
+          "block_id": 6,
+          "block_order": null
+        },
+        {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            1816,
+            1787,
+            2896,
+            2622
+          ],
+          "block_id": 7,
           "block_order": null
         },
         {
           "block_label": "number",
           "block_content": "38",
           "block_bbox": [
-            1,
-            4576,
-            105,
-            4664
+            195,
+            4400,
+            292,
+            4472
           ],
-          "block_id": 2,
+          "block_id": 8,
           "block_order": null
         }
       ],
-      "markdown": "## Les's Reer \n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_685_3020_4470.jpg\" alt=\"Image\" width=\"91%\" /></div>\n",
+      "markdown": "## Lest'sn Revieumber\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_157_960_1491_1664.jpg\" alt=\"Image\" width=\"40%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1780_909_2898_1677.jpg\" alt=\"Image\" width=\"33%\" /></div>\n\n\n## B Let's play\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_150_2761_2903_4283.jpg\" alt=\"Image\" width=\"83%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_210_1691_1332_2633.jpg\" alt=\"Image\" width=\"33%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1816_1787_2896_2622.jpg\" alt=\"Image\" width=\"32%\" /></div>\n",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -49,15 +121,7 @@
     "metadata": {
       "width": 3306,
       "height": 4678,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -65,34 +129,100 @@
           {
             "cls_id": 3,
             "label": "number",
-            "score": 0.7728813290596008,
+            "score": 0.8571245670318604,
             "coordinate": [
-              1.4503326416015625,
-              4576.61865234375,
-              105.16287994384766,
-              4664.68310546875
+              195.05978393554688,
+              4400.7666015625,
+              292.6067810058594,
+              4472.8544921875
+            ]
+          },
+          {
+            "cls_id": 12,
+            "label": "header",
+            "score": 0.7350965142250061,
+            "coordinate": [
+              170.08642578125,
+              118.08362579345703,
+              954.638427734375,
+              262.6717529296875
             ]
           },
           {
             "cls_id": 1,
             "label": "image",
-            "score": 0.516424834728241,
+            "score": 0.7280293703079224,
             "coordinate": [
-              0,
-              685.1966552734375,
-              3020.85791015625,
-              4470.33251953125
+              1816.228759765625,
+              1787.7255859375,
+              2896.396240234375,
+              2622.50634765625
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.7143937945365906,
+            "coordinate": [
+              150.1451416015625,
+              2761.17138671875,
+              2903.9169921875,
+              4283.9697265625
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.6599964499473572,
+            "coordinate": [
+              1780.0791015625,
+              909.98486328125,
+              2898.3408203125,
+              1677.0703125
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.6508129239082336,
+            "coordinate": [
+              157.89007568359375,
+              960.27734375,
+              1491.527587890625,
+              1664.542236328125
+            ]
+          },
+          {
+            "cls_id": 1,
+            "label": "image",
+            "score": 0.5417487025260925,
+            "coordinate": [
+              210.0716552734375,
+              1691.238037109375,
+              1332.443115234375,
+              2633.584228515625
             ]
           },
           {
             "cls_id": 0,
             "label": "paragraph_title",
-            "score": 0.32214000821113586,
+            "score": 0.47815489768981934,
             "coordinate": [
-              0,
-              290.76080322265625,
-              1441.911865234375,
-              708.3204345703125
+              108.38729858398438,
+              2623.63916015625,
+              804.50732421875,
+              2767.75244140625
+            ]
+          },
+          {
+            "cls_id": 0,
+            "label": "paragraph_title",
+            "score": 0.31122857332229614,
+            "coordinate": [
+              97.24066162109375,
+              561.9422607421875,
+              1456.115966796875,
+              913.2459716796875
             ]
           }
         ]
@@ -103,43 +233,62 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
+          null,
           [
             [
-              109,
-              2575
+              112,
+              2611
             ],
             [
-              721,
-              2582
+              814,
+              2615
             ],
             [
-              720,
-              2725
+              813,
+              2766
             ],
             [
-              108,
-              2719
+              111,
+              2762
             ]
           ],
           [
             [
-              0,
-              4577
+              1482,
+              3330
             ],
             [
-              110,
-              4573
+              1785,
+              3492
             ],
             [
-              113,
-              4676
+              1643,
+              3755
             ],
             [
-              0,
-              4678
+              1341,
+              3593
+            ]
+          ],
+          [
+            [
+              187,
+              4395
+            ],
+            [
+              302,
+              4395
+            ],
+            [
+              302,
+              4489
+            ],
+            [
+              187,
+              4489
             ]
           ]
         ],
@@ -153,95 +302,106 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0
+          -1,
+          -1,
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "Let's play.",
+          "B Let's play.",
           "38",
-          "Les's Reer"
+          "Revision 1",
+          "Lest'sn Revieumber. "
         ],
         "rec_scores": [
-          0.9393199682235718,
-          0.9993547201156616,
-          0.34152951836586
+          0.956084668636322,
+          0.9997327923774719,
+          0.953007698059082,
+          0.5281326174736023
         ],
         "rec_polys": [
+          null,
           [
             [
-              109,
-              2575
+              187,
+              4395
             ],
             [
-              721,
-              2582
+              302,
+              4395
             ],
             [
-              720,
-              2725
+              302,
+              4489
             ],
             [
-              108,
-              2719
+              187,
+              4489
             ]
           ],
           [
             [
-              0,
-              4577
+              170,
+              118
             ],
             [
-              110,
-              4573
+              954,
+              118
             ],
             [
-              113,
-              4676
+              954,
+              262
             ],
             [
-              0,
-              4678
+              170,
+              262
             ]
           ],
           [
             [
-              0,
-              290
+              97,
+              561
             ],
             [
-              1441,
-              290
+              1456,
+              561
             ],
             [
-              1441,
-              708
+              1456,
+              913
             ],
             [
-              0,
-              708
+              97,
+              913
             ]
           ]
         ],
         "rec_boxes": [
           [
-            108.0,
-            2575.0,
-            721.0,
-            2725.0
+            111.0,
+            2623.0,
+            804.0,
+            2766.0
           ],
           [
-            0.0,
-            4573.0,
-            113.0,
-            4678.0
+            187.0,
+            4395.0,
+            302.0,
+            4489.0
           ],
           [
-            0.0,
-            290.76080322265625,
-            1441.911865234375,
-            708.3204345703125
+            170.08642578125,
+            118.08362579345703,
+            954.638427734375,
+            262.6717529296875
+          ],
+          [
+            97.24066162109375,
+            561.9422607421875,
+            1456.115966796875,
+            913.2459716796875
           ]
         ]
       },
@@ -251,7 +411,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

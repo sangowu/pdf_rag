@@ -6,12 +6,12 @@
       "parsing_res_list": [
         {
           "block_label": "header",
-          "block_content": "Chapter 1. The Reactive Way· 2",
+          "block_content": "Chapter 1.The Reactive Way· 2",
           "block_bbox": [
-            1527,
-            23,
-            2092,
-            68
+            1423,
+            117,
+            1870,
+            149
           ],
           "block_id": 0,
           "block_order": null
@@ -20,88 +20,124 @@
           "block_label": "text",
           "block_content": "Using RxJS, we would write something like this:",
           "block_bbox": [
-            233,
-            142,
-            1397,
-            208
+            366,
+            229,
+            1327,
+            269
           ],
           "block_id": 1,
           "block_order": 1
         },
         {
-          "block_label": "algorithm",
-          "block_content": "Ta \nvar button = document.getElementById('retrieveDataBtn');\nvars sourcel = Rx.DOM.getJSON('/resourcel').pluck('name');\nvar s source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');\nfunction getResults(amount) {\n\nreturn sourcel.merge(source2)\n\n.pluck('names')\n\n.flatMap(function(array){ return Rx.Observable.from(array);})\n.distinct()\n\n.take(amount);\n}\n\nvar clicks = Rx.Observable.fromEvent(button,click');\nclicks.debounce(1000)\n\n.flatMap(getResults(5))\n\n.subscribe(\n\nfunction(value) { console.log('Received value'， value);},\nfunction(err) { console.error(err);},\nfunction() { console.log('All values retrieved!');}\n)；\n",
+          "block_label": "text",
+          "block_content": "var button = document.getElementById('retrieveDataBtn');var sourcel= Rx.DOM.getJSoN('/resourcel').pluck('name');var source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');",
           "block_bbox": [
-            230,
-            201,
-            1830,
-            1241
+            363,
+            309,
+            1659,
+            437
           ],
           "block_id": 2,
           "block_order": 2
         },
         {
           "block_label": "text",
-          "block_content": "Don't worry about understanding what's going on here; let's focus on the 10,000-foot view for now. The first thing you see is that we express more with fewer lines of code. We accomplish this by using Observables.",
+          "block_content": "function getResults(amount) {\n\nreturn sourcel.merge(source2)\n\n.pluck('names')\n\n.flatMap(function(array){ return Rx.Observable.from(array);})\n.distinct()\n\n.take(amount);\n}\n\n",
           "block_bbox": [
-            242,
-            1285,
-            1962,
-            1447
+            368,
+            490,
+            1718,
+            795
           ],
           "block_id": 3,
           "block_order": 3
         },
         {
           "block_label": "text",
-          "block_content": "An Observable represents a stream of data. Programs can be expressed largely as streams of data. In the preceding example, both remote sources are Observables, and so are the mouse clicks from the user. In fact, our program is essentially a single Observable made from a button's click event that we transform to get the results we want.\n",
+          "block_content": "var clicks = Rx.Observable.fromEvent(button,click');\nclicks.debounce(1000)\n\n.flatMap(getResults(5))\n\n.subscribe(\n\nfunction(value) { console.log('Received value',value);},\nfunction(err){ console.error(err);},\nfunction(){ console.log('All values retrieved!');}\n)；\n",
           "block_bbox": [
-            238,
-            1487,
-            1954,
-            1756
+            368,
+            850,
+            1584,
+            1207
           ],
           "block_id": 4,
           "block_order": 4
         },
         {
           "block_label": "text",
-          "block_content": "Reactive programming is expressive. Take, for instance, throttling mouse clicks in our example. Imagine how complex it would be to do that using callbacks or promises: we'd need to reset a timer every second and keep state of whether a second has passed since the last time the user clicked the button.It's a lot of complexity for so little functionality, and the code for it is not even related to your program's actual functionality. In bigger applications, these little complexities add up very quickly to make for a tangled code base.",
+          "block_content": "Don't worry about understanding what's going on here; let's focus on the 10,000-foot view for now. The first thing you see is that we express more with fewer lines of code. We accomplish this by using Observables.",
           "block_bbox": [
-            236,
-            1800,
-            1943,
-            2183
+            363,
+            1249,
+            1872,
+            1401
           ],
           "block_id": 5,
           "block_order": 5
         },
         {
           "block_label": "text",
-          "block_content": "With the reactive approach, we use the method debounce to throttle the stream of clicks. This ensures that there is at least a second between each click, and discards any clicks in between. We don't care how this happens internally;we just express what we want our code to do, not how to do it.",
+          "block_content": "An Observable represents a stream of data. Programs can be expressed largely as streams of data. In the preceding example, both remote sources are Observables, and so are the mouse clicks from the user. In fact, our program is essentially a single Observable made from a button's click event that we transform to get the results we want.\n",
           "block_bbox": [
-            233,
-            2223,
-            1927,
-            2432
+            361,
+            1444,
+            1873,
+            1710
           ],
           "block_id": 6,
           "block_order": 6
         },
         {
           "block_label": "text",
-          "block_content": "It gets much more interesting. Next you'll see how reactive programming can help us make our programs more efficient and expressive.",
+          "block_content": "Reactive programming is expressive. Take, for instance, throttling mouse clicks in our example. Imagine how complex it would be to do that using callbacks or promises: we'd need to reset a timer every second and keep state of whether a second has passed since the last time the user clicked the button.It's a lot of complexity for so little functionality, and the code for it is not even related to your program's actual functionality. In bigger applications, these little complexities add up very quickly to make for a tangled code base.",
           "block_bbox": [
-            236,
-            2470,
-            1914,
-            2567
+            362,
+            1752,
+            1873,
+            2132
           ],
           "block_id": 7,
           "block_order": 7
+        },
+        {
+          "block_label": "text",
+          "block_content": "With the reactive approach, we use the method debounce to throttle the stream of clicks. This ensures that there is at least a second between each click, and discards any clicks in between. We don't care how this happens internally;we just express what we want our code to do, not how to do it.",
+          "block_bbox": [
+            361,
+            2173,
+            1873,
+            2383
+          ],
+          "block_id": 8,
+          "block_order": 8
+        },
+        {
+          "block_label": "text",
+          "block_content": "It gets much more interesting. Next you'll see how reactive programming can help us make our programs more efficient and expressive.",
+          "block_bbox": [
+            363,
+            2424,
+            1872,
+            2523
+          ],
+          "block_id": 9,
+          "block_order": 9
+        },
+        {
+          "block_label": "footer",
+          "block_content": "report erratum·discuss ",
+          "block_bbox": [
+            1885,
+            2656,
+            2185,
+            2680
+          ],
+          "block_id": 10,
+          "block_order": null
         }
       ],
-      "markdown": "Using RxJS, we would write something like this:\n\nTa \nvar button = document.getElementById('retrieveDataBtn');\nvars sourcel = Rx.DOM.getJSON('/resourcel').pluck('name');\nvar s source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');\nfunction getResults(amount) {\n\nreturn sourcel.merge(source2)\n\n.pluck('names')\n\n.flatMap(function(array){ return Rx.Observable.from(array);})\n.distinct()\n\n.take(amount);\n}\n\nvar clicks = Rx.Observable.fromEvent(button,click');\nclicks.debounce(1000)\n\n.flatMap(getResults(5))\n\n.subscribe(\n\nfunction(value) { console.log('Received value'， value);},\nfunction(err) { console.error(err);},\nfunction() { console.log('All values retrieved!');}\n)；\n\nDon't worry about understanding what's going on here; let's focus on the 10,000-foot view for now. The first thing you see is that we express more with fewer lines of code. We accomplish this by using Observables.\n\nAn Observable represents a stream of data. Programs can be expressed largely as streams of data. In the preceding example, both remote sources are Observables, and so are the mouse clicks from the user. In fact, our program is essentially a single Observable made from a button's click event that we transform to get the results we want.\n\n\n\nReactive programming is expressive. Take, for instance, throttling mouse clicks in our example. Imagine how complex it would be to do that using callbacks or promises: we'd need to reset a timer every second and keep state of whether a second has passed since the last time the user clicked the button.It's a lot of complexity for so little functionality, and the code for it is not even related to your program's actual functionality. In bigger applications, these little complexities add up very quickly to make for a tangled code base.\n\nWith the reactive approach, we use the method debounce to throttle the stream of clicks. This ensures that there is at least a second between each click, and discards any clicks in between. We don't care how this happens internally;we just express what we want our code to do, not how to do it.\n\nIt gets much more interesting. Next you'll see how reactive programming can help us make our programs more efficient and expressive.",
+      "markdown": "Using RxJS, we would write something like this:\n\nvar button = document.getElementById('retrieveDataBtn');var sourcel= Rx.DOM.getJSoN('/resourcel').pluck('name');var source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');\n\nfunction getResults(amount) {\n\nreturn sourcel.merge(source2)\n\n.pluck('names')\n\n.flatMap(function(array){ return Rx.Observable.from(array);})\n\n.distinct()\n\n.take(amount);\n\n}\n\n\n\nvar clicks = Rx.Observable.fromEvent(button,click');\n\nclicks.debounce(1000)\n\n.flatMap(getResults(5))\n\n.subscribe(\n\nfunction(value) { console.log('Received value',value);},\n\nfunction(err){ console.error(err);},\n\nfunction(){ console.log('All values retrieved!');}\n\n)；\n\n\n\nDon't worry about understanding what's going on here; let's focus on the 10,000-foot view for now. The first thing you see is that we express more with fewer lines of code. We accomplish this by using Observables.\n\nAn Observable represents a stream of data. Programs can be expressed largely as streams of data. In the preceding example, both remote sources are Observables, and so are the mouse clicks from the user. In fact, our program is essentially a single Observable made from a button's click event that we transform to get the results we want.\n\n\n\nReactive programming is expressive. Take, for instance, throttling mouse clicks in our example. Imagine how complex it would be to do that using callbacks or promises: we'd need to reset a timer every second and keep state of whether a second has passed since the last time the user clicked the button.It's a lot of complexity for so little functionality, and the code for it is not even related to your program's actual functionality. In bigger applications, these little complexities add up very quickly to make for a tangled code base.\n\nWith the reactive approach, we use the method debounce to throttle the stream of clicks. This ensures that there is at least a second between each click, and discards any clicks in between. We don't care how this happens internally;we just express what we want our code to do, not how to do it.\n\nIt gets much more interesting. Next you'll see how reactive programming can help us make our programs more efficient and expressive.",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -109,15 +145,7 @@
     "metadata": {
       "width": 2250,
       "height": 2700,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -125,111 +153,353 @@
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.983477771282196,
+            "score": 0.9868196845054626,
             "coordinate": [
-              236.2437744140625,
-              1800.0859375,
-              1943.5125732421875,
-              2183.583984375
+              362.136962890625,
+              1752.983154296875,
+              1873.652099609375,
+              2132.809326171875
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9818627238273621,
+            "score": 0.9854812026023865,
             "coordinate": [
-              238.8968505859375,
-              1487.2467041015625,
-              1954.9215087890625,
-              1756.1832275390625
+              361.63555908203125,
+              1444.4559326171875,
+              1873.3466796875,
+              1710.4520263671875
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9795645475387573,
+            "score": 0.9835582375526428,
             "coordinate": [
-              233.43316650390625,
-              2223.411376953125,
-              1927.332275390625,
-              2432.568603515625
+              361.980224609375,
+              2173.67822265625,
+              1873.08984375,
+              2383.24951171875
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9717335104942322,
+            "score": 0.980724573135376,
             "coordinate": [
-              242.08282470703125,
-              1285.421875,
-              1962.1279296875,
-              1447.43017578125
+              363.7734375,
+              1249.3763427734375,
+              1872.9375,
+              1401.7960205078125
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.9573180675506592,
+            "score": 0.9723715782165527,
             "coordinate": [
-              236.3870849609375,
-              2470.875,
-              1914.0850830078125,
-              2567.3642578125
+              363.410400390625,
+              2424.568603515625,
+              1872.754638671875,
+              2523.697509765625
             ]
           },
           {
             "cls_id": 12,
             "label": "header",
-            "score": 0.8330986499786377,
+            "score": 0.9056167006492615,
             "coordinate": [
-              1527.260986328125,
-              23.779937744140625,
-              2092.015380859375,
-              68.10171508789062
+              1423.616943359375,
+              117.7379150390625,
+              1870.94287109375,
+              149.35910034179688
+            ]
+          },
+          {
+            "cls_id": 14,
+            "label": "footer",
+            "score": 0.8771049380302429,
+            "coordinate": [
+              1885.490966796875,
+              2656.8564453125,
+              2185.899658203125,
+              2680.064453125
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.5993672013282776,
+            "score": 0.8530504703521729,
             "coordinate": [
-              233.33306884765625,
-              142.46324157714844,
-              1397.551513671875,
-              208.2507781982422
-            ]
-          },
-          {
-            "cls_id": 13,
-            "label": "algorithm",
-            "score": 0.5123449563980103,
-            "coordinate": [
-              230.02044677734375,
-              201.213623046875,
-              1830.044677734375,
-              1241.784912109375
+              366.5867919921875,
+              229.775634765625,
+              1327.382568359375,
+              269.730224609375
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.4131983816623688,
+            "score": 0.6703963279724121,
             "coordinate": [
-              237.9635009765625,
-              850.2620239257812,
-              1640.49560546875,
-              1238.456298828125
+              363.78485107421875,
+              309.88775634765625,
+              1659.845703125,
+              437.73712158203125
             ]
           },
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.4088314473628998,
+            "score": 0.5303761959075928,
             "coordinate": [
-              235.0611572265625,
-              441.83966064453125,
-              1831.3280029296875,
-              786.7449340820312
+              368.0013427734375,
+              490.6285705566406,
+              1718.7691650390625,
+              795.0028076171875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.4832378923892975,
+            "coordinate": [
+              368.25946044921875,
+              850.9276123046875,
+              1584.87744140625,
+              1207.6815185546875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.4339140057563782,
+            "coordinate": [
+              412.38616943359375,
+              942.317138671875,
+              860.6843872070312,
+              978.9986572265625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.42951637506484985,
+            "coordinate": [
+              413.33636474609375,
+              990.5089111328125,
+              628.9629516601562,
+              1023.1676025390625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.40482935309410095,
+            "coordinate": [
+              446.04449462890625,
+              1078.78857421875,
+              1189.56201171875,
+              1116.545654296875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.39373132586479187,
+            "coordinate": [
+              365.83331298828125,
+              852.4171142578125,
+              1425.412109375,
+              888.5811767578125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.3811080753803253,
+            "coordinate": [
+              438.2213134765625,
+              1031.9912109375,
+              1578.5404052734375,
+              1072.797119140625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.3647582530975342,
+            "coordinate": [
+              367.7451171875,
+              491.23394775390625,
+              944.8157958984375,
+              526.7731323242188
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.3580295443534851,
+            "coordinate": [
+              441.51483154296875,
+              1123.6103515625,
+              1467.692626953125,
+              1161.413818359375
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.356524795293808,
+            "coordinate": [
+              364.651123046875,
+              851.689208984375,
+              1426.672119140625,
+              933.0018310546875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.34571781754493713,
+            "coordinate": [
+              367.3170166015625,
+              764.0389404296875,
+              392.7735595703125,
+              799.5604248046875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.34258291125297546,
+            "coordinate": [
+              408.69091796875,
+              1122.264892578125,
+              1466.7442626953125,
+              1205.202392578125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.33559921383857727,
+            "coordinate": [
+              366.0643310546875,
+              309.55657958984375,
+              1464.9696044921875,
+              346.517822265625
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.32324767112731934,
+            "coordinate": [
+              369.3707275390625,
+              897.1570434570312,
+              783.0572509765625,
+              933.8925170898438
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2890007197856903,
+            "coordinate": [
+              447.5594177246094,
+              537.498291015625,
+              1015.0172119140625,
+              573.9990234375
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2754339575767517,
+            "coordinate": [
+              367.8321838378906,
+              491.20001220703125,
+              1008.9173583984375,
+              800.4915161132812
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2747294008731842,
+            "coordinate": [
+              489.8291015625,
+              624.0213012695312,
+              1716.46533203125,
+              666.9374389648438
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.27195629477500916,
+            "coordinate": [
+              367.9732666015625,
+              353.8910217285156,
+              1482.3675537109375,
+              392.2134094238281
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2675822377204895,
+            "coordinate": [
+              367.03076171875,
+              401.38909912109375,
+              1656.732421875,
+              436.877685546875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.25938230752944946,
+            "coordinate": [
+              492.78778076171875,
+              582.2540893554688,
+              780.9805297851562,
+              618.7053833007812
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.25882014632225037,
+            "coordinate": [
+              491.580810546875,
+              717.6934814453125,
+              762.4608154296875,
+              753.2091064453125
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2539290487766266,
+            "coordinate": [
+              492.2728271484375,
+              672.4879150390625,
+              704.3704833984375,
+              708.2513427734375
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.2531791627407074,
+            "coordinate": [
+              410.1820068359375,
+              1029.1865234375,
+              1578.8646240234375,
+              1205.75732421875
             ]
           }
         ]
@@ -240,817 +510,763 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              1531,
-              26
+              1427,
+              117
             ],
             [
-              2100,
-              18
+              1876,
+              119
             ],
             [
-              2101,
-              69
+              1876,
+              153
             ],
             [
-              1531,
-              78
+              1427,
+              152
             ]
           ],
           [
             [
-              235,
-              142
+              371,
+              230
             ],
             [
-              1397,
-              142
+              1329,
+              230
             ],
             [
-              1397,
-              208
+              1329,
+              273
             ],
             [
-              235,
-              208
+              371,
+              273
             ]
           ],
           [
             [
-              237,
-              235
+              371,
+              311
             ],
             [
-              326,
-              235
+              1463,
+              311
             ],
             [
-              326,
-              275
+              1463,
+              349
             ],
             [
-              237,
-              275
+              371,
+              349
             ]
           ],
           [
             [
-              325,
-              233
+              369,
+              358
             ],
             [
-              1559,
-              259
+              1482,
+              356
             ],
             [
-              1558,
-              303
+              1482,
+              393
             ],
             [
-              324,
-              276
+              369,
+              395
             ]
           ],
           [
             [
-              235,
-              289
+              368,
+              399
             ],
             [
-              347,
-              289
+              1659,
+              399
             ],
             [
-              347,
-              328
+              1659,
+              442
             ],
             [
-              235,
-              328
+              368,
+              442
             ]
           ],
           [
             [
-              325,
-              285
+              373,
+              490
+            ],
+            [
+              943,
+              493
+            ],
+            [
+              943,
+              531
+            ],
+            [
+              373,
+              528
+            ]
+          ],
+          [
+            [
+              454,
+              539
+            ],
+            [
+              1014,
+              539
+            ],
+            [
+              1014,
+              574
+            ],
+            [
+              454,
+              574
+            ]
+          ],
+          [
+            [
+              494,
+              583
+            ],
+            [
+              783,
+              582
+            ],
+            [
+              784,
+              620
+            ],
+            [
+              494,
+              621
+            ]
+          ],
+          [
+            [
+              492,
+              625
+            ],
+            [
+              1718,
+              627
+            ],
+            [
+              1718,
+              667
+            ],
+            [
+              492,
+              665
+            ]
+          ],
+          [
+            [
+              494,
+              673
+            ],
+            [
+              704,
+              673
+            ],
+            [
+              704,
+              708
+            ],
+            [
+              494,
+              708
+            ]
+          ],
+          [
+            [
+              493,
+              718
+            ],
+            [
+              761,
+              718
+            ],
+            [
+              761,
+              755
+            ],
+            [
+              493,
+              755
+            ]
+          ],
+          [
+            [
+              367,
+              762
+            ],
+            [
+              401,
+              762
+            ],
+            [
+              401,
+              805
+            ],
+            [
+              367,
+              805
+            ]
+          ],
+          [
+            [
+              372,
+              854
+            ],
+            [
+              1422,
+              854
+            ],
+            [
+              1422,
+              891
+            ],
+            [
+              372,
+              891
+            ]
+          ],
+          [
+            [
+              375,
+              899
+            ],
+            [
+              782,
+              901
+            ],
+            [
+              781,
+              935
+            ],
+            [
+              375,
+              933
+            ]
+          ],
+          [
+            [
+              416,
+              943
+            ],
+            [
+              861,
+              945
+            ],
+            [
+              861,
+              982
+            ],
+            [
+              416,
+              980
+            ]
+          ],
+          [
+            [
+              417,
+              990
+            ],
+            [
+              630,
+              990
+            ],
+            [
+              630,
+              1026
+            ],
+            [
+              417,
+              1026
+            ]
+          ],
+          [
+            [
+              450,
+              1034
             ],
             [
               1578,
-              310
+              1036
             ],
             [
-              1577,
-              354
+              1578,
+              1073
             ],
             [
-              324,
-              329
+              450,
+              1071
             ]
           ],
           [
             [
-              236,
-              343
+              451,
+              1080
             ],
             [
-              346,
-              343
+              1187,
+              1082
             ],
             [
-              346,
-              379
+              1187,
+              1117
             ],
             [
-              236,
-              379
+              451,
+              1115
             ]
           ],
           [
             [
-              324,
-              337
+              450,
+              1123
             ],
             [
-              1786,
-              360
+              1467,
+              1125
             ],
             [
-              1785,
-              410
+              1466,
+              1162
             ],
             [
-              323,
-              387
+              450,
+              1160
             ]
           ],
           [
             [
-              238,
-              440
+              406,
+              1168
             ],
             [
-              926,
-              450
+              457,
+              1168
             ],
             [
-              926,
-              498
+              457,
+              1212
             ],
             [
-              237,
-              488
+              406,
+              1212
             ]
           ],
           [
             [
-              334,
-              498
+              371,
+              1249
             ],
             [
-              1007,
-              503
+              1877,
+              1249
             ],
             [
-              1006,
-              544
+              1877,
+              1293
             ],
             [
-              333,
-              538
+              371,
+              1293
             ]
           ],
           [
             [
-              384,
-              551
+              371,
+              1304
             ],
             [
-              732,
-              548
+              1877,
+              1305
             ],
             [
-              732,
-              591
+              1877,
+              1352
             ],
             [
-              384,
-              593
+              371,
+              1351
             ]
           ],
           [
             [
-              381,
-              589
+              369,
+              1362
             ],
             [
-              1836,
-              611
+              1594,
+              1362
             ],
             [
-              1836,
-              662
+              1594,
+              1406
             ],
             [
-              380,
-              641
+              369,
+              1406
             ]
           ],
           [
             [
-              385,
-              649
+              369,
+              1443
             ],
             [
-              635,
-              651
-            ],
-            [
-              635,
-              689
-            ],
-            [
-              385,
-              687
-            ]
-          ],
-          [
-            [
-              386,
-              701
-            ],
-            [
-              701,
-              701
-            ],
-            [
-              701,
-              738
-            ],
-            [
-              386,
-              738
-            ]
-          ],
-          [
-            [
-              238,
-              744
-            ],
-            [
-              271,
-              744
-            ],
-            [
-              271,
-              790
-            ],
-            [
-              238,
-              790
-            ]
-          ],
-          [
-            [
-              238,
-              845
-            ],
-            [
-              1471,
-              861
-            ],
-            [
-              1470,
-              905
-            ],
-            [
-              238,
-              889
-            ]
-          ],
-          [
-            [
-              245,
-              896
-            ],
-            [
-              725,
-              902
-            ],
-            [
-              725,
-              942
-            ],
-            [
-              245,
-              936
-            ]
-          ],
-          [
-            [
-              300,
-              949
-            ],
-            [
-              816,
-              952
-            ],
-            [
-              815,
-              993
-            ],
-            [
-              299,
-              990
-            ]
-          ],
-          [
-            [
-              300,
-              1001
-            ],
-            [
-              547,
-              1004
-            ],
-            [
-              546,
-              1042
-            ],
-            [
-              299,
-              1040
-            ]
-          ],
-          [
-            [
-              335,
-              1040
-            ],
-            [
-              1640,
-              1060
-            ],
-            [
-              1639,
-              1113
-            ],
-            [
-              334,
-              1094
-            ]
-          ],
-          [
-            [
-              338,
-              1092
-            ],
-            [
-              1189,
-              1103
-            ],
-            [
-              1189,
-              1151
-            ],
-            [
-              337,
-              1140
-            ]
-          ],
-          [
-            [
-              336,
-              1137
-            ],
-            [
-              1506,
-              1154
-            ],
-            [
-              1505,
-              1209
-            ],
-            [
-              335,
-              1191
-            ]
-          ],
-          [
-            [
-              289,
-              1193
-            ],
-            [
-              348,
-              1193
-            ],
-            [
-              348,
-              1246
-            ],
-            [
-              289,
-              1246
-            ]
-          ],
-          [
-            [
-              244,
-              1274
-            ],
-            [
-              1974,
-              1288
-            ],
-            [
-              1973,
-              1345
-            ],
-            [
-              244,
-              1331
-            ]
-          ],
-          [
-            [
-              248,
-              1334
-            ],
-            [
-              1970,
-              1349
-            ],
-            [
-              1969,
-              1403
-            ],
-            [
-              248,
-              1388
-            ]
-          ],
-          [
-            [
-              244,
-              1394
-            ],
-            [
-              1638,
-              1404
-            ],
-            [
-              1638,
-              1455
-            ],
-            [
-              244,
+              1876,
               1444
+            ],
+            [
+              1876,
+              1489
+            ],
+            [
+              369,
+              1488
             ]
           ],
           [
             [
-              245,
-              1476
+              370,
+              1500
             ],
             [
-              1964,
-              1493
+              1876,
+              1500
             ],
             [
-              1963,
-              1544
+              1876,
+              1543
             ],
             [
-              245,
-              1528
+              370,
+              1543
             ]
           ],
           [
             [
-              245,
-              1536
+              370,
+              1556
             ],
             [
-              1964,
-              1547
+              1876,
+              1558
             ],
             [
-              1964,
-              1597
+              1876,
+              1602
             ],
             [
-              245,
-              1586
+              370,
+              1600
             ]
           ],
           [
             [
-              245,
-              1591
+              371,
+              1616
             ],
             [
-              1960,
-              1605
+              1880,
+              1610
             ],
             [
-              1959,
-              1655
+              1880,
+              1653
             ],
             [
-              245,
-              1641
+              371,
+              1659
             ]
           ],
           [
             [
-              245,
-              1652
+              371,
+              1673
             ],
             [
-              1963,
-              1658
+              1170,
+              1673
             ],
             [
-              1963,
-              1709
+              1170,
+              1714
             ],
             [
-              245,
-              1703
+              371,
+              1714
             ]
           ],
           [
             [
-              246,
-              1715
+              371,
+              1753
             ],
             [
-              1150,
-              1717
+              1878,
+              1753
             ],
             [
-              1150,
-              1758
+              1878,
+              1797
             ],
             [
-              246,
-              1756
+              371,
+              1797
             ]
           ],
           [
             [
-              244,
-              1793
+              371,
+              1808
             ],
             [
-              1957,
-              1800
+              1878,
+              1810
             ],
             [
-              1957,
+              1878,
+              1853
+            ],
+            [
+              371,
               1851
-            ],
-            [
-              244,
-              1844
             ]
           ],
           [
             [
-              245,
-              1851
+              372,
+              1864
             ],
             [
-              1954,
-              1859
+              1877,
+              1865
             ],
             [
-              1954,
+              1877,
               1908
             ],
             [
-              245,
-              1899
+              372,
+              1907
             ]
           ],
           [
             [
-              246,
-              1908
+              372,
+              1923
             ],
             [
-              1951,
-              1916
+              1874,
+              1923
             ],
             [
-              1951,
-              1962
+              1874,
+              1963
             ],
             [
-              246,
-              1955
+              372,
+              1963
             ]
           ],
           [
             [
-              245,
-              1965
+              369,
+              1979
             ],
             [
-              1945,
-              1970
+              1877,
+              1979
             ],
             [
-              1945,
-              2017
-            ],
-            [
-              245,
-              2012
-            ]
-          ],
-          [
-            [
-              243,
+              1877,
               2022
             ],
             [
-              1947,
-              2026
-            ],
-            [
-              1947,
-              2073
-            ],
-            [
-              243,
-              2069
+              369,
+              2022
             ]
           ],
           [
             [
-              241,
-              2078
+              370,
+              2036
             ],
             [
-              1944,
-              2081
+              1878,
+              2036
             ],
             [
-              1944,
-              2133
+              1878,
+              2080
             ],
             [
-              241,
-              2129
+              370,
+              2080
             ]
           ],
           [
             [
-              241,
-              2136
+              370,
+              2091
             ],
             [
-              1822,
-              2140
+              1775,
+              2091
             ],
             [
-              1822,
-              2188
+              1775,
+              2135
             ],
             [
-              241,
-              2185
+              370,
+              2135
             ]
           ],
           [
             [
-              239,
+              368,
+              2172
+            ],
+            [
+              1877,
+              2173
+            ],
+            [
+              1877,
+              2217
+            ],
+            [
+              368,
               2216
-            ],
-            [
-              1937,
-              2221
-            ],
-            [
-              1937,
-              2271
-            ],
-            [
-              239,
-              2266
             ]
           ],
           [
             [
-              243,
-              2275
+              373,
+              2231
             ],
             [
-              1932,
-              2280
+              1875,
+              2231
             ],
             [
-              1931,
-              2324
+              1875,
+              2268
             ],
             [
-              243,
-              2319
+              373,
+              2268
             ]
           ],
           [
             [
-              243,
+              371,
+              2285
+            ],
+            [
+              1875,
+              2286
+            ],
+            [
+              1875,
               2330
             ],
             [
-              1927,
-              2336
-            ],
-            [
-              1926,
-              2385
-            ],
-            [
-              243,
-              2379
+              371,
+              2329
             ]
           ],
           [
             [
-              241,
-              2389
+              370,
+              2346
             ],
             [
-              1631,
-              2390
+              1612,
+              2341
             ],
             [
-              1631,
-              2438
+              1612,
+              2383
             ],
             [
-              241,
-              2437
+              370,
+              2388
             ]
           ],
           [
             [
-              239,
-              2462
+              370,
+              2425
             ],
             [
-              1922,
-              2471
+              1877,
+              2425
             ],
             [
-              1921,
+              1877,
+              2469
+            ],
+            [
+              370,
+              2469
+            ]
+          ],
+          [
+            [
+              371,
+              2482
+            ],
+            [
+              1522,
+              2482
+            ],
+            [
+              1522,
               2525
             ],
             [
-              239,
-              2516
+              371,
+              2525
             ]
           ],
           [
             [
-              243,
-              2522
+              1885,
+              2654
             ],
             [
-              1524,
-              2528
+              2194,
+              2652
             ],
             [
-              1524,
-              2572
+              2194,
+              2686
             ],
             [
-              243,
-              2566
-            ]
-          ],
-          [
-            [
-              235,
-              201
-            ],
-            [
-              1404,
-              201
-            ],
-            [
-              1404,
-              217
-            ],
-            [
-              235,
-              217
+              1886,
+              2688
             ]
           ]
         ],
@@ -1064,62 +1280,57 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
-          "Chapter 1. The Reactive Way· 2",
+          "Chapter 1.The Reactive Way· 2",
           "Using RxJS, we would write something like this:",
-          "var",
-          "button = document.getElementById('retrieveDataBtn');",
-          "vars",
-          "sourcel = Rx.DOM.getJSON('/resourcel').pluck('name');",
-          "var s",
-          "source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');",
+          "var button = document.getElementById('retrieveDataBtn');",
+          "var sourcel= Rx.DOM.getJSoN('/resourcel').pluck('name');",
+          "var source2 = Rx.DOM.getJSON('/resource2').pluck('props','name');",
           "function getResults(amount) {",
           "return sourcel.merge(source2)",
           ".pluck('names')",
@@ -1131,9 +1342,9 @@
           "clicks.debounce(1000)",
           ".flatMap(getResults(5))",
           ".subscribe(",
-          "function(value) { console.log('Received value'， value);},",
-          "function(err) { console.error(err);},",
-          "function() { console.log('All values retrieved!');}",
+          "function(value) { console.log('Received value',value);},",
+          "function(err){ console.error(err);},",
+          "function(){ console.log('All values retrieved!');}",
           ")；",
           "Don't worry about understanding what's going on here; let's focus on the",
           "10,000-foot view for now. The first thing you see is that we express more with",
@@ -1156,1137 +1367,1062 @@
           "we just express what we want our code to do, not how to do it.",
           "It gets much more interesting. Next you'll see how reactive programming can",
           "help us make our programs more efficient and expressive.",
-          "Ta"
+          "report erratum·discuss"
         ],
         "rec_scores": [
-          0.9034052491188049,
-          0.9869194626808167,
-          0.9992995858192444,
-          0.9784963130950928,
-          0.8844602108001709,
-          0.9357999563217163,
-          0.8387017250061035,
-          0.9384483098983765,
-          0.957405149936676,
-          0.9870790839195251,
-          0.9862856268882751,
-          0.9800136089324951,
-          0.9935013055801392,
-          0.9772404432296753,
-          0.993685781955719,
-          0.975756049156189,
-          0.9928857088088989,
-          0.9871813654899597,
-          0.9919336438179016,
-          0.9470227956771851,
-          0.9697645306587219,
-          0.9624829292297363,
-          0.5997681021690369,
-          0.9712178707122803,
-          0.9669673442840576,
-          0.9912503957748413,
-          0.9689387083053589,
-          0.9855791926383972,
-          0.9639929533004761,
-          0.9733343720436096,
-          0.973697304725647,
-          0.9770081639289856,
-          0.9704079627990723,
-          0.9833489060401917,
-          0.9667545557022095,
-          0.9651457667350769,
-          0.9684282541275024,
-          0.9764387607574463,
-          0.9686295390129089,
-          0.9686287045478821,
-          0.9899793863296509,
-          0.9529573321342468,
-          0.9506834745407104,
-          0.9777053594589233,
-          0.325968474149704
+          0.9490319490432739,
+          0.9634422659873962,
+          0.970012366771698,
+          0.9327183365821838,
+          0.9160463809967041,
+          0.9687517881393433,
+          0.9951271414756775,
+          0.967629075050354,
+          0.9554688930511475,
+          0.9966539144515991,
+          0.9775316119194031,
+          0.9812348484992981,
+          0.9694570302963257,
+          0.994705855846405,
+          0.986675500869751,
+          0.9918979406356812,
+          0.9421888589859009,
+          0.9736109972000122,
+          0.9544185400009155,
+          0.6068264245986938,
+          0.9726999998092651,
+          0.9483305811882019,
+          0.9835304021835327,
+          0.9719135165214539,
+          0.9826465845108032,
+          0.9708488583564758,
+          0.9729254841804504,
+          0.9832829236984253,
+          0.974151611328125,
+          0.9692946672439575,
+          0.9851774573326111,
+          0.96923828125,
+          0.9675566554069519,
+          0.970973551273346,
+          0.975749671459198,
+          0.9623781442642212,
+          0.9824255704879761,
+          0.9832495450973511,
+          0.9730959534645081,
+          0.9822982549667358,
+          0.9811204075813293,
+          0.9785800576210022
         ],
         "rec_polys": [
           [
             [
-              1531,
-              26
+              1427,
+              117
             ],
             [
-              2100,
-              18
+              1876,
+              119
             ],
             [
-              2101,
-              69
+              1876,
+              153
             ],
             [
-              1531,
-              78
+              1427,
+              152
             ]
           ],
           [
             [
-              235,
-              142
+              371,
+              230
             ],
             [
-              1397,
-              142
+              1329,
+              230
             ],
             [
-              1397,
-              208
+              1329,
+              273
             ],
             [
-              235,
-              208
+              371,
+              273
             ]
           ],
           [
             [
-              237,
-              235
+              371,
+              311
             ],
             [
-              326,
-              235
+              1463,
+              311
             ],
             [
-              326,
-              275
+              1463,
+              349
             ],
             [
-              237,
-              275
+              371,
+              349
             ]
           ],
           [
             [
-              325,
-              233
+              369,
+              358
             ],
             [
-              1559,
-              259
+              1482,
+              356
             ],
             [
-              1558,
-              303
+              1482,
+              393
             ],
             [
-              324,
-              276
+              369,
+              395
             ]
           ],
           [
             [
-              235,
-              289
+              368,
+              399
             ],
             [
-              347,
-              289
+              1659,
+              399
             ],
             [
-              347,
-              328
+              1659,
+              442
             ],
             [
-              235,
-              328
+              368,
+              442
             ]
           ],
           [
             [
-              325,
-              285
+              373,
+              490
+            ],
+            [
+              943,
+              493
+            ],
+            [
+              943,
+              531
+            ],
+            [
+              373,
+              528
+            ]
+          ],
+          [
+            [
+              454,
+              539
+            ],
+            [
+              1014,
+              539
+            ],
+            [
+              1014,
+              574
+            ],
+            [
+              454,
+              574
+            ]
+          ],
+          [
+            [
+              494,
+              583
+            ],
+            [
+              783,
+              582
+            ],
+            [
+              784,
+              620
+            ],
+            [
+              494,
+              621
+            ]
+          ],
+          [
+            [
+              492,
+              625
+            ],
+            [
+              1718,
+              627
+            ],
+            [
+              1718,
+              667
+            ],
+            [
+              492,
+              665
+            ]
+          ],
+          [
+            [
+              494,
+              673
+            ],
+            [
+              704,
+              673
+            ],
+            [
+              704,
+              708
+            ],
+            [
+              494,
+              708
+            ]
+          ],
+          [
+            [
+              493,
+              718
+            ],
+            [
+              761,
+              718
+            ],
+            [
+              761,
+              755
+            ],
+            [
+              493,
+              755
+            ]
+          ],
+          [
+            [
+              367,
+              762
+            ],
+            [
+              401,
+              762
+            ],
+            [
+              401,
+              805
+            ],
+            [
+              367,
+              805
+            ]
+          ],
+          [
+            [
+              372,
+              854
+            ],
+            [
+              1422,
+              854
+            ],
+            [
+              1422,
+              891
+            ],
+            [
+              372,
+              891
+            ]
+          ],
+          [
+            [
+              375,
+              899
+            ],
+            [
+              782,
+              901
+            ],
+            [
+              781,
+              935
+            ],
+            [
+              375,
+              933
+            ]
+          ],
+          [
+            [
+              416,
+              943
+            ],
+            [
+              861,
+              945
+            ],
+            [
+              861,
+              982
+            ],
+            [
+              416,
+              980
+            ]
+          ],
+          [
+            [
+              417,
+              990
+            ],
+            [
+              630,
+              990
+            ],
+            [
+              630,
+              1026
+            ],
+            [
+              417,
+              1026
+            ]
+          ],
+          [
+            [
+              450,
+              1034
             ],
             [
               1578,
-              310
+              1036
             ],
             [
-              1577,
-              354
+              1578,
+              1073
             ],
             [
-              324,
-              329
+              450,
+              1071
             ]
           ],
           [
             [
-              236,
-              343
+              451,
+              1080
             ],
             [
-              346,
-              343
+              1187,
+              1082
             ],
             [
-              346,
-              379
+              1187,
+              1117
             ],
             [
-              236,
-              379
+              451,
+              1115
             ]
           ],
           [
             [
-              324,
-              337
+              450,
+              1123
             ],
             [
-              1786,
-              360
+              1467,
+              1125
             ],
             [
-              1785,
-              410
+              1466,
+              1162
             ],
             [
-              323,
-              387
+              450,
+              1160
             ]
           ],
           [
             [
-              238,
-              440
+              406,
+              1168
             ],
             [
-              926,
-              450
+              457,
+              1168
             ],
             [
-              926,
-              498
+              457,
+              1212
             ],
             [
-              237,
-              488
+              406,
+              1212
             ]
           ],
           [
             [
-              334,
-              498
+              371,
+              1249
             ],
             [
-              1007,
-              503
+              1877,
+              1249
             ],
             [
-              1006,
-              544
+              1877,
+              1293
             ],
             [
-              333,
-              538
+              371,
+              1293
             ]
           ],
           [
             [
-              384,
-              551
+              371,
+              1304
             ],
             [
-              732,
-              548
+              1877,
+              1305
             ],
             [
-              732,
-              591
+              1877,
+              1352
             ],
             [
-              384,
-              593
+              371,
+              1351
             ]
           ],
           [
             [
-              381,
-              589
+              369,
+              1362
             ],
             [
-              1836,
-              611
+              1594,
+              1362
             ],
             [
-              1836,
-              662
+              1594,
+              1406
             ],
             [
-              380,
-              641
+              369,
+              1406
             ]
           ],
           [
             [
-              385,
-              649
+              369,
+              1443
             ],
             [
-              635,
-              651
-            ],
-            [
-              635,
-              689
-            ],
-            [
-              385,
-              687
-            ]
-          ],
-          [
-            [
-              386,
-              701
-            ],
-            [
-              701,
-              701
-            ],
-            [
-              701,
-              738
-            ],
-            [
-              386,
-              738
-            ]
-          ],
-          [
-            [
-              238,
-              744
-            ],
-            [
-              271,
-              744
-            ],
-            [
-              271,
-              790
-            ],
-            [
-              238,
-              790
-            ]
-          ],
-          [
-            [
-              238,
-              845
-            ],
-            [
-              1471,
-              861
-            ],
-            [
-              1470,
-              905
-            ],
-            [
-              238,
-              889
-            ]
-          ],
-          [
-            [
-              245,
-              896
-            ],
-            [
-              725,
-              902
-            ],
-            [
-              725,
-              942
-            ],
-            [
-              245,
-              936
-            ]
-          ],
-          [
-            [
-              300,
-              949
-            ],
-            [
-              816,
-              952
-            ],
-            [
-              815,
-              993
-            ],
-            [
-              299,
-              990
-            ]
-          ],
-          [
-            [
-              300,
-              1001
-            ],
-            [
-              547,
-              1004
-            ],
-            [
-              546,
-              1042
-            ],
-            [
-              299,
-              1040
-            ]
-          ],
-          [
-            [
-              335,
-              1040
-            ],
-            [
-              1640,
-              1060
-            ],
-            [
-              1639,
-              1113
-            ],
-            [
-              334,
-              1094
-            ]
-          ],
-          [
-            [
-              338,
-              1092
-            ],
-            [
-              1189,
-              1103
-            ],
-            [
-              1189,
-              1151
-            ],
-            [
-              337,
-              1140
-            ]
-          ],
-          [
-            [
-              336,
-              1137
-            ],
-            [
-              1506,
-              1154
-            ],
-            [
-              1505,
-              1209
-            ],
-            [
-              335,
-              1191
-            ]
-          ],
-          [
-            [
-              289,
-              1193
-            ],
-            [
-              348,
-              1193
-            ],
-            [
-              348,
-              1246
-            ],
-            [
-              289,
-              1246
-            ]
-          ],
-          [
-            [
-              244,
-              1274
-            ],
-            [
-              1974,
-              1288
-            ],
-            [
-              1973,
-              1345
-            ],
-            [
-              244,
-              1331
-            ]
-          ],
-          [
-            [
-              248,
-              1334
-            ],
-            [
-              1970,
-              1349
-            ],
-            [
-              1969,
-              1403
-            ],
-            [
-              248,
-              1388
-            ]
-          ],
-          [
-            [
-              244,
-              1394
-            ],
-            [
-              1638,
-              1404
-            ],
-            [
-              1638,
-              1455
-            ],
-            [
-              244,
+              1876,
               1444
+            ],
+            [
+              1876,
+              1489
+            ],
+            [
+              369,
+              1488
             ]
           ],
           [
             [
-              245,
-              1476
+              370,
+              1500
             ],
             [
-              1964,
-              1493
+              1876,
+              1500
             ],
             [
-              1963,
-              1544
+              1876,
+              1543
             ],
             [
-              245,
-              1528
+              370,
+              1543
             ]
           ],
           [
             [
-              245,
-              1536
+              370,
+              1556
             ],
             [
-              1964,
-              1547
+              1876,
+              1558
             ],
             [
-              1964,
-              1597
+              1876,
+              1602
             ],
             [
-              245,
-              1586
+              370,
+              1600
             ]
           ],
           [
             [
-              245,
-              1591
+              371,
+              1616
             ],
             [
-              1960,
-              1605
+              1880,
+              1610
             ],
             [
-              1959,
-              1655
+              1880,
+              1653
             ],
             [
-              245,
-              1641
+              371,
+              1659
             ]
           ],
           [
             [
-              245,
-              1652
+              371,
+              1673
             ],
             [
-              1963,
-              1658
+              1170,
+              1673
             ],
             [
-              1963,
-              1709
+              1170,
+              1714
             ],
             [
-              245,
-              1703
+              371,
+              1714
             ]
           ],
           [
             [
-              246,
-              1715
+              371,
+              1753
             ],
             [
-              1150,
-              1717
+              1878,
+              1753
             ],
             [
-              1150,
-              1758
+              1878,
+              1797
             ],
             [
-              246,
-              1756
+              371,
+              1797
             ]
           ],
           [
             [
-              244,
-              1793
+              371,
+              1808
             ],
             [
-              1957,
-              1800
+              1878,
+              1810
             ],
             [
-              1957,
+              1878,
+              1853
+            ],
+            [
+              371,
               1851
-            ],
-            [
-              244,
-              1844
             ]
           ],
           [
             [
-              245,
-              1851
+              372,
+              1864
             ],
             [
-              1954,
-              1859
+              1877,
+              1865
             ],
             [
-              1954,
+              1877,
               1908
             ],
             [
-              245,
-              1899
+              372,
+              1907
             ]
           ],
           [
             [
-              246,
-              1908
+              372,
+              1923
             ],
             [
-              1951,
-              1916
+              1874,
+              1923
             ],
             [
-              1951,
-              1962
+              1874,
+              1963
             ],
             [
-              246,
-              1955
+              372,
+              1963
             ]
           ],
           [
             [
-              245,
-              1965
+              369,
+              1979
             ],
             [
-              1945,
-              1970
+              1877,
+              1979
             ],
             [
-              1945,
-              2017
-            ],
-            [
-              245,
-              2012
-            ]
-          ],
-          [
-            [
-              243,
+              1877,
               2022
             ],
             [
-              1947,
-              2026
-            ],
-            [
-              1947,
-              2073
-            ],
-            [
-              243,
-              2069
+              369,
+              2022
             ]
           ],
           [
             [
-              241,
-              2078
+              370,
+              2036
             ],
             [
-              1944,
-              2081
+              1878,
+              2036
             ],
             [
-              1944,
-              2133
+              1878,
+              2080
             ],
             [
-              241,
-              2129
+              370,
+              2080
             ]
           ],
           [
             [
-              241,
-              2136
+              370,
+              2091
             ],
             [
-              1822,
-              2140
+              1775,
+              2091
             ],
             [
-              1822,
-              2188
+              1775,
+              2135
             ],
             [
-              241,
-              2185
+              370,
+              2135
             ]
           ],
           [
             [
-              239,
+              368,
+              2172
+            ],
+            [
+              1877,
+              2173
+            ],
+            [
+              1877,
+              2217
+            ],
+            [
+              368,
               2216
-            ],
-            [
-              1937,
-              2221
-            ],
-            [
-              1937,
-              2271
-            ],
-            [
-              239,
-              2266
             ]
           ],
           [
             [
-              243,
-              2275
+              373,
+              2231
             ],
             [
-              1932,
-              2280
+              1875,
+              2231
             ],
             [
-              1931,
-              2324
+              1875,
+              2268
             ],
             [
-              243,
-              2319
+              373,
+              2268
             ]
           ],
           [
             [
-              243,
+              371,
+              2285
+            ],
+            [
+              1875,
+              2286
+            ],
+            [
+              1875,
               2330
             ],
             [
-              1927,
-              2336
-            ],
-            [
-              1926,
-              2385
-            ],
-            [
-              243,
-              2379
+              371,
+              2329
             ]
           ],
           [
             [
-              241,
-              2389
+              370,
+              2346
             ],
             [
-              1631,
-              2390
+              1612,
+              2341
             ],
             [
-              1631,
-              2438
+              1612,
+              2383
             ],
             [
-              241,
-              2437
+              370,
+              2388
             ]
           ],
           [
             [
-              239,
-              2462
+              370,
+              2425
             ],
             [
-              1922,
-              2471
+              1877,
+              2425
             ],
             [
-              1921,
+              1877,
+              2469
+            ],
+            [
+              370,
+              2469
+            ]
+          ],
+          [
+            [
+              371,
+              2482
+            ],
+            [
+              1522,
+              2482
+            ],
+            [
+              1522,
               2525
             ],
             [
-              239,
-              2516
+              371,
+              2525
             ]
           ],
           [
             [
-              243,
-              2522
+              1885,
+              2654
             ],
             [
-              1524,
-              2528
+              2194,
+              2652
             ],
             [
-              1524,
-              2572
+              2194,
+              2686
             ],
             [
-              243,
-              2566
-            ]
-          ],
-          [
-            [
-              235,
-              201
-            ],
-            [
-              1404,
-              201
-            ],
-            [
-              1404,
-              217
-            ],
-            [
-              235,
-              217
+              1886,
+              2688
             ]
           ]
         ],
         "rec_boxes": [
           [
-            1531.0,
-            18.0,
-            2101.0,
-            78.0
+            1427,
+            117,
+            1876,
+            153
           ],
           [
-            235.0,
-            142.0,
-            1397.0,
-            208.0
+            371,
+            230,
+            1329,
+            273
           ],
           [
-            237.0,
-            235.0,
-            326.0,
-            275.0
+            371,
+            311,
+            1463,
+            349
           ],
           [
-            324.0,
-            233.0,
-            1559.0,
-            303.0
+            369,
+            356,
+            1482,
+            395
           ],
           [
-            235.0,
-            289.0,
-            347.0,
-            328.0
+            368,
+            399,
+            1659,
+            442
           ],
           [
-            324.0,
-            285.0,
-            1578.0,
-            354.0
+            373,
+            490,
+            943,
+            531
           ],
           [
-            236.0,
-            343.0,
-            346.0,
-            379.0
+            454,
+            539,
+            1014,
+            574
           ],
           [
-            323.0,
-            337.0,
-            1786.0,
-            410.0
+            494,
+            582,
+            784,
+            621
           ],
           [
-            237.0,
-            440.0,
-            926.0,
-            498.0
+            492,
+            625,
+            1718,
+            667
           ],
           [
-            333.0,
-            498.0,
-            1007.0,
-            544.0
+            494,
+            673,
+            704,
+            708
           ],
           [
-            384.0,
-            548.0,
-            732.0,
-            593.0
+            493,
+            718,
+            761,
+            755
           ],
           [
-            380.0,
-            589.0,
-            1836.0,
-            662.0
+            367,
+            762,
+            401,
+            805
           ],
           [
-            385.0,
-            649.0,
-            635.0,
-            689.0
+            372,
+            854,
+            1422,
+            891
           ],
           [
-            386.0,
-            701.0,
-            701.0,
-            738.0
+            375,
+            899,
+            782,
+            935
           ],
           [
-            238.0,
-            744.0,
-            271.0,
-            790.0
+            416,
+            943,
+            861,
+            982
           ],
           [
-            238.0,
-            845.0,
-            1471.0,
-            905.0
+            417,
+            990,
+            630,
+            1026
           ],
           [
-            245.0,
-            896.0,
-            725.0,
-            942.0
+            450,
+            1034,
+            1578,
+            1073
           ],
           [
-            299.0,
-            949.0,
-            816.0,
-            993.0
+            451,
+            1080,
+            1187,
+            1117
           ],
           [
-            299.0,
-            1001.0,
-            547.0,
-            1042.0
+            450,
+            1123,
+            1467,
+            1162
           ],
           [
-            334.0,
-            1040.0,
-            1640.0,
-            1113.0
+            406,
+            1168,
+            457,
+            1212
           ],
           [
-            337.0,
-            1092.0,
-            1189.0,
-            1151.0
+            371,
+            1249,
+            1877,
+            1293
           ],
           [
-            335.0,
-            1137.0,
-            1506.0,
-            1209.0
+            371,
+            1304,
+            1877,
+            1352
           ],
           [
-            289.0,
-            1193.0,
-            348.0,
-            1246.0
+            369,
+            1362,
+            1594,
+            1406
           ],
           [
-            244.0,
-            1274.0,
-            1974.0,
-            1345.0
+            369,
+            1443,
+            1876,
+            1489
           ],
           [
-            248.0,
-            1334.0,
-            1970.0,
-            1403.0
+            370,
+            1500,
+            1876,
+            1543
           ],
           [
-            244.0,
-            1394.0,
-            1638.0,
-            1455.0
+            370,
+            1556,
+            1876,
+            1602
           ],
           [
-            245.0,
-            1476.0,
-            1964.0,
-            1544.0
+            371,
+            1610,
+            1880,
+            1659
           ],
           [
-            245.0,
-            1536.0,
-            1964.0,
-            1597.0
+            371,
+            1673,
+            1170,
+            1714
           ],
           [
-            245.0,
-            1591.0,
-            1960.0,
-            1655.0
+            371,
+            1753,
+            1878,
+            1797
           ],
           [
-            245.0,
-            1652.0,
-            1963.0,
-            1709.0
+            371,
+            1808,
+            1878,
+            1853
           ],
           [
-            246.0,
-            1715.0,
-            1150.0,
-            1758.0
+            372,
+            1864,
+            1877,
+            1908
           ],
           [
-            244.0,
-            1793.0,
-            1957.0,
-            1851.0
+            372,
+            1923,
+            1874,
+            1963
           ],
           [
-            245.0,
-            1851.0,
-            1954.0,
-            1908.0
+            369,
+            1979,
+            1877,
+            2022
           ],
           [
-            246.0,
-            1908.0,
-            1951.0,
-            1962.0
+            370,
+            2036,
+            1878,
+            2080
           ],
           [
-            245.0,
-            1965.0,
-            1945.0,
-            2017.0
+            370,
+            2091,
+            1775,
+            2135
           ],
           [
-            243.0,
-            2022.0,
-            1947.0,
-            2073.0
+            368,
+            2172,
+            1877,
+            2217
           ],
           [
-            241.0,
-            2078.0,
-            1944.0,
-            2133.0
+            373,
+            2231,
+            1875,
+            2268
           ],
           [
-            241.0,
-            2136.0,
-            1822.0,
-            2188.0
+            371,
+            2285,
+            1875,
+            2330
           ],
           [
-            239.0,
-            2216.0,
-            1937.0,
-            2271.0
+            370,
+            2341,
+            1612,
+            2388
           ],
           [
-            243.0,
-            2275.0,
-            1932.0,
-            2324.0
+            370,
+            2425,
+            1877,
+            2469
           ],
           [
-            243.0,
-            2330.0,
-            1927.0,
-            2385.0
+            371,
+            2482,
+            1522,
+            2525
           ],
           [
-            241.0,
-            2389.0,
-            1631.0,
-            2438.0
-          ],
-          [
-            239.0,
-            2462.0,
-            1922.0,
-            2525.0
-          ],
-          [
-            243.0,
-            2522.0,
-            1524.0,
-            2572.0
-          ],
-          [
-            235.0,
-            201.213623046875,
-            1404.0,
-            217.0
+            1885,
+            2652,
+            2194,
+            2688
           ]
         ]
       },
@@ -2296,7 +2432,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,

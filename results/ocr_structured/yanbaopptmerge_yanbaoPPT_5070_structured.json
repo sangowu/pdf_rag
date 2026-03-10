@@ -8,16 +8,28 @@
           "block_label": "text",
           "block_content": "感谢聆听！",
           "block_bbox": [
-            791,
-            772,
-            1794,
-            1028
+            930,
+            749,
+            1817,
+            983
           ],
           "block_id": 0,
           "block_order": 1
+        },
+        {
+          "block_label": "text",
+          "block_content": "e ",
+          "block_bbox": [
+            1484,
+            1169,
+            2335,
+            1533
+          ],
+          "block_id": 1,
+          "block_order": 2
         }
       ],
-      "markdown": "感谢聆听！",
+      "markdown": "感谢聆听！\n\ne ",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -25,15 +37,7 @@
     "metadata": {
       "width": 3000,
       "height": 2250,
-      "doc_preprocessor_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_orientation_classify": true,
-          "use_doc_unwarping": true
-        },
-        "angle": 0
-      },
+      "doc_preprocessor_res": {},
       "layout_det_res": {
         "input_path": null,
         "page_index": null,
@@ -41,12 +45,23 @@
           {
             "cls_id": 2,
             "label": "text",
-            "score": 0.4641936123371124,
+            "score": 0.45286428928375244,
             "coordinate": [
-              791.8698120117188,
-              772.9383544921875,
-              1794.441162109375,
-              1028.62890625
+              930.4705810546875,
+              749.6807861328125,
+              1817.4498291015625,
+              983.0526123046875
+            ]
+          },
+          {
+            "cls_id": 2,
+            "label": "text",
+            "score": 0.27423974871635437,
+            "coordinate": [
+              1484.7705078125,
+              1169.483154296875,
+              2335.6669921875,
+              1533.494384765625
             ]
           }
         ]
@@ -57,43 +72,43 @@
         "page_index": null,
         "model_settings": {
           "use_doc_preprocessor": false,
-          "use_textline_orientation": true
+          "use_textline_orientation": false
         },
         "dt_polys": [
           [
             [
-              758,
-              764
+              909,
+              749
             ],
             [
-              1814,
-              757
+              1829,
+              746
             ],
             [
-              1816,
-              1044
+              1829,
+              990
             ],
             [
-              760,
-              1051
+              910,
+              993
             ]
           ],
           [
             [
-              1749,
-              1289
+              1843,
+              1233
             ],
             [
-              2448,
-              1190
+              2347,
+              1201
             ],
             [
-              2499,
-              1555
+              2364,
+              1472
             ],
             [
-              1800,
-              1654
+              1860,
+              1504
             ]
           ]
         ],
@@ -107,69 +122,69 @@
         },
         "text_type": "general",
         "textline_orientation_angles": [
-          0,
-          0
+          -1,
+          -1
         ],
-        "text_rec_score_thresh": 0.0,
+        "text_rec_score_thresh": 0.5,
         "return_word_box": false,
         "rec_texts": [
           "感谢聆听！",
-          ""
+          "e"
         ],
         "rec_scores": [
-          0.9908379316329956,
-          0.0
+          0.9865486025810242,
+          0.5128723382949829
         ],
         "rec_polys": [
           [
             [
-              758,
-              764
+              909,
+              749
             ],
             [
-              1814,
-              757
+              1829,
+              746
             ],
             [
-              1816,
-              1044
+              1829,
+              990
             ],
             [
-              760,
-              1051
+              910,
+              993
             ]
           ],
           [
             [
-              1749,
-              1289
+              1843,
+              1233
             ],
             [
-              2448,
-              1190
+              2347,
+              1201
             ],
             [
-              2499,
-              1555
+              2364,
+              1472
             ],
             [
-              1800,
-              1654
+              1860,
+              1504
             ]
           ]
         ],
         "rec_boxes": [
           [
-            758,
-            757,
-            1816,
-            1051
+            909,
+            746,
+            1829,
+            993
           ],
           [
-            1749,
-            1190,
-            2499,
-            1654
+            1843,
+            1201,
+            2364,
+            1504
           ]
         ]
       },
@@ -179,7 +194,7 @@
       "formula_res_list": [],
       "imgs_in_doc": [],
       "model_settings": {
-        "use_doc_preprocessor": true,
+        "use_doc_preprocessor": false,
         "use_seal_recognition": false,
         "use_table_recognition": true,
         "use_formula_recognition": true,
