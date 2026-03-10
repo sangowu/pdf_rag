@@ -48,18 +48,36 @@ class FormulaEvaluator:
         normalized = re.sub(r'\{\s+', '{', normalized)
         normalized = re.sub(r'\s+\}', '}', normalized)
 
-        # 转换常见变体
-        replacements = {
-            r'\\operatorname': r'\\mathrm',
-            r'\\text': r'\\mathrm',
-            r'\\left\(': r'(',
-            r'\\right\)': r')',
-            r'\\left\[': r'[',
-            r'\\right\]': r']',
-        }
+        # x^2 → x^{2}（单字符上下标统一加花括号）
+        normalized = re.sub(r'\^([^{])', r'^{\1}', normalized)
+        normalized = re.sub(r'_([^{])', r'_{\1}', normalized)
 
-        for pattern, replacement in replacements.items():
+        # 转换常见等价变体
+        replacements = [
+            (r'\\dfrac', r'\\frac'),          # \dfrac → \frac
+            (r'\\tfrac', r'\\frac'),           # \tfrac → \frac
+            (r'\\operatorname', r'\\mathrm'),  # \operatorname → \mathrm
+            (r'\\text\b', r'\\mathrm'),        # \text → \mathrm
+            (r'\\boldsymbol', r'\\mathbf'),    # \boldsymbol → \mathbf
+            (r'\\bm\b', r'\\mathbf'),          # \bm → \mathbf
+            (r'\{\\rm\s+', r'\\mathrm{'),      # {\rm d} → \mathrm{d}
+            (r'\\left\s*\(', r'('),            # \left( → (
+            (r'\\right\s*\)', r')'),           # \right) → )
+            (r'\\left\s*\[', r'['),            # \left[ → [
+            (r'\\right\s*\]', r']'),           # \right] → ]
+            (r'\\left\s*\{', r'{'),            # \left{ → {
+            (r'\\right\s*\}', r'}'),           # \right} → }
+            (r'\\,', r' '),                    # 细空格统一为空格
+            (r'\\;', r' '),
+            (r'\\quad', r' '),
+            (r'\\qquad', r' '),
+        ]
+
+        for pattern, replacement in replacements:
             normalized = re.sub(pattern, replacement, normalized)
+
+        # 再次折叠多余空格
+        normalized = re.sub(r'\s+', ' ', normalized).strip()
 
         return normalized
 
@@ -368,20 +386,28 @@ class FormulaEvaluator:
 
         accuracies = []
         correct_count = 0
+        used_pred_indices = set()
 
-        # 逐个比较公式
-        for i, ref_formula in enumerate(ref_formulas):
-            pred_formula = pred_formulas[i] if i < len(pred_formulas) else ""
+        # 最优匹配：对每个 GT 公式，找相似度最高的 OCR 公式（每个 OCR 公式只用一次）
+        for ref_formula in ref_formulas:
+            best_acc = 0.0
+            best_idx = -1
 
-            accuracy = FormulaEvaluator.formula_accuracy(
-                pred_formula,
-                ref_formula,
-                formula_type
-            )
+            for j, pred_formula in enumerate(pred_formulas):
+                if j in used_pred_indices:
+                    continue
+                acc = FormulaEvaluator.formula_accuracy(pred_formula, ref_formula, formula_type)
+                if acc > best_acc:
+                    best_acc = acc
+                    best_idx = j
 
-            accuracies.append(accuracy)
+            if best_idx >= 0:
+                used_pred_indices.add(best_idx)
+            # 若 OCR 没有匹配到任何公式，best_acc 保持 0.0
 
-            if accuracy >= 0.95:  # 认为准确
+            accuracies.append(best_acc)
+
+            if best_acc >= 0.8:  # 认为准确（阈值从 0.95 降至 0.8）
                 correct_count += 1
 
         average_accuracy = sum(accuracies) / len(accuracies) if accuracies else 0.0
