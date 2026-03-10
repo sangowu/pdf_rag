@@ -35,8 +35,6 @@ class OCRProcessor:
             init_kwargs: Dict[str, Any] = {}
             if vl_cfg.get("device"):
                 init_kwargs["device"] = vl_cfg["device"]
-            if vl_cfg.get("dtype"):
-                init_kwargs["dtype"] = vl_cfg["dtype"]
             self._pipeline = PaddleOCRVL(**init_kwargs)
         return self._pipeline
 

@@ -9,9 +9,6 @@ ocr:
   paddleocrv1:
     # Optional: force device (e.g. "cpu", "gpu:0"); when null use PaddleX default
     device: "gpu:0"
-    # bf16 inference for 4090D (faster than fp32, minimal quality loss)
-    dtype: "bfloat16"
-
     # Sub-pipeline switches
     use_doc_orientation_classify: false
     use_doc_unwarping: false
