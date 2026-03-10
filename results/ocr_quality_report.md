@@ -1,6 +1,6 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 20:50:45
+- Generated at: 2026-03-10 20:59:24
 - Total evaluated pages: 1355
 - Pages with content (used for metrics): 1315
 - Empty pages excluded (OCR=0 & GT=0): 40
@@ -31,9 +31,9 @@
 
 | Metric | Mean |
 | --- | --- |
-| TEDS Score (0-100) | 88.50 |
-| Structure Similarity | 0.8850 |
-| Content Similarity | 0.8850 |
+| TEDS Score (0-100) | 58.57 |
+| Structure Similarity | 0.8466 |
+| Content Similarity | 0.6310 |
 
 ## Formula Quality Metrics
 
@@ -50,18 +50,18 @@
 
 | Stat | Value |
 | --- | --- |
-| Mean | 72.66 |
-| Median | 82.43 |
-| Std Dev | 26.15 |
+| Mean | 70.11 |
+| Median | 78.36 |
+| Std Dev | 26.09 |
 | Min | 0.00 |
 | Max | 100.00 |
 
 | Grade | Pages | Ratio |
 | --- | --- | --- |
-| Excellent (≥90) | 401 |  30.5% |
-| Good (80-90) | 311 |  23.7% |
-| Fair (70-80) | 174 |  13.2% |
-| Poor (<70) | 429 |  32.6% |
+| Excellent (≥90) | 312 |  23.7% |
+| Good (80-90) | 304 |  23.1% |
+| Fair (70-80) | 209 |  15.9% |
+| Poor (<70) | 490 |  37.3% |
 
 ## Worst 10 Pages by Character Accuracy
 
