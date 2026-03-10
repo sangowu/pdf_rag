@@ -175,31 +175,27 @@ class OCRQualityEvaluator:
                     if block_bbox:
                         table_bboxes.append(block_bbox)
 
-        # 第二步：遍历所有块，提取文本但排除表格重叠区域
+        # 第二步：按 parsing_res_list 原始顺序提取文本（保持 pipeline 输出顺序，不重排）
         # 注：overlap_threshold=0.05 - 只在明显重叠时过滤，避免过度过滤真实文本
+        text_parts = []
         for res in parsing_res_list:
             block_label = res.get("block_label", "")
             block_content = res.get("block_content", "")
             block_bbox = res.get("block_bbox")
 
-            # 只提取文本块和标题，过滤图片
             if block_label in ["text", "paragraph", "title", "list_item", "paragraph_title"]:
-                # 使用bbox隔离：检查是否与表格明显重叠（阈值降低到0.05）
                 if use_bbox_isolation and block_bbox and table_bboxes:
                     overlaps_with_table = any(
                         self._bbox_overlap(block_bbox, table_bbox, overlap_threshold=0.05)
                         for table_bbox in table_bboxes
                     )
                     if overlaps_with_table:
-                        logger.debug(f"文本块 {block_label} 与表格明显重叠，已排除")
+                        logger.debug("Text block %s overlaps table, skipped", block_label)
                         continue
-
                 if block_content:
                     text_parts.append(block_content)
 
-            # 对于其他标签，如果识别为文本，记录标签类型但不包含图片OCR结果
             elif block_label in ["doc_title", "header", "footer", "page_num"]:
-                # 同样应用bbox隔离（更宽松的阈值）
                 if use_bbox_isolation and block_bbox and table_bboxes:
                     overlaps_with_table = any(
                         self._bbox_overlap(block_bbox, table_bbox, overlap_threshold=0.05)
@@ -207,11 +203,9 @@ class OCRQualityEvaluator:
                     )
                     if overlaps_with_table:
                         continue
-
                 if block_content:
                     text_parts.append(block_content)
 
-            # 完全过滤掉图片、表格等二进制内容
             elif block_label in ["image", "figure", "table"]:
                 continue
 
@@ -287,7 +281,7 @@ class OCRQualityEvaluator:
     def _extract_gt_text(self, gt_page_data: dict) -> str:
         """
         从GT页面数据提取纯文本
-        只提取文本、标题等内容，过滤掉图片、表格等
+        只提取文本、标题等内容，过滤掉图片、表格等。按 page_dets 原始顺序拼接。
         """
         text_parts = []
         page_dets = gt_page_data.get("page_dets", [])
@@ -296,14 +290,12 @@ class OCRQualityEvaluator:
             category_type = det.get("category_type", "")
             text = det.get("text", "")
 
-            # 只提取文本、标题等内容
             if category_type in ["text_block", "title", "heading", "list_item", "paragraph"]:
                 if text:
                     text_parts.append(text)
             elif category_type in ["figure_caption", "page_header", "page_footer"]:
                 if text:
                     text_parts.append(text)
-            # 完全过滤掉图片、表格、公式等
             elif category_type in ["figure", "table", "formula"]:
                 continue
 
@@ -612,6 +604,33 @@ class OCRQualityEvaluator:
         lines.append(f"| Character Accuracy | {sum(char_accs) / len(char_accs):.4f} |")
         lines.append(f"| Sequence Similarity | {sum(seq_sims) / len(seq_sims):.4f} |")
         lines.append(f"| Jaccard Similarity | {sum(jaccard_sims) / len(jaccard_sims):.4f} |")
+        lines.append("")
+
+        # Character accuracy distribution (bins 0-0.2, 0.2-0.5, 0.5-0.7, 0.7-0.8, 0.8-0.9, 0.9-1.0, 1.0)
+        bins = [
+            (0.0, 0.2, "[0.0, 0.2)"),
+            (0.2, 0.5, "[0.2, 0.5)"),
+            (0.5, 0.7, "[0.5, 0.7)"),
+            (0.7, 0.8, "[0.7, 0.8)"),
+            (0.8, 0.9, "[0.8, 0.9)"),
+            (0.9, 1.0, "[0.9, 1.0)"),
+            (1.0, 1.0, "1.0 (exact)"),
+        ]
+        dist_counts = []
+        for low, high, label in bins:
+            if low == high:
+                count = sum(1 for a in char_accs if a >= 1.0)
+            else:
+                count = sum(1 for a in char_accs if low <= a < high)
+            dist_counts.append((label, count))
+        total_pages = len(char_accs)
+        lines.append("## Character Accuracy Distribution")
+        lines.append("")
+        lines.append("| Range | Pages | Ratio |")
+        lines.append("| --- | --- | --- |")
+        for label, count in dist_counts:
+            pct = count / total_pages * 100 if total_pages else 0
+            lines.append(f"| {label} | {count} | {pct:5.1f}% |")
         lines.append("")
 
         # 表格质量

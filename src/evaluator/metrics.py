@@ -15,7 +15,23 @@ class MetricsCalculator:
     """通用指标计算器"""
 
     @staticmethod
-    def character_error_rate(pred: str, ref: str) -> float:
+    def normalize_text_for_compare(text: str) -> str:
+        """
+        Collapse whitespace and strip for fair character-level comparison.
+        Reduces impact of newline/space differences on CER and character_accuracy.
+
+        Args:
+            text: Raw text.
+
+        Returns:
+            Normalized string (single spaces, stripped).
+        """
+        if not text:
+            return text
+        return re.sub(r"\s+", " ", text).strip()
+
+    @staticmethod
+    def character_error_rate(pred: str, ref: str, normalize: bool = True) -> float:
         """
         计算字符错误率 (Character Error Rate, CER)
         CER = (插入+删除+替换) / 标准字符数
@@ -23,23 +39,25 @@ class MetricsCalculator:
         Args:
             pred: 预测文本
             ref: 参考文本
+            normalize: 是否先做空白归一化再比较
 
         Returns:
             CER值 (0-1)，越小越好
         """
+        if normalize:
+            pred = MetricsCalculator.normalize_text_for_compare(pred)
+            ref = MetricsCalculator.normalize_text_for_compare(ref)
         if not ref:
             return 0.0 if not pred else 1.0
-
         if not pred:
             return 1.0
-
         dist = editdistance.eval(pred, ref)
         return min(1.0, dist / len(ref))
 
     @staticmethod
-    def character_accuracy(pred: str, ref: str) -> float:
-        """字符准确率 = 1 - CER"""
-        return 1.0 - MetricsCalculator.character_error_rate(pred, ref)
+    def character_accuracy(pred: str, ref: str, normalize: bool = True) -> float:
+        """字符准确率 = 1 - CER。默认先做空白归一化再比较。"""
+        return 1.0 - MetricsCalculator.character_error_rate(pred, ref, normalize=normalize)
 
     @staticmethod
     def word_error_rate(pred: str, ref: str) -> float:

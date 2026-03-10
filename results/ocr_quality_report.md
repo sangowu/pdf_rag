@@ -1,15 +1,27 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 03:49:52
+- Generated at: 2026-03-10 07:28:25
 - Total evaluated pages: 1005
 
 ## Text Quality Metrics
 
 | Metric | Mean |
 | --- | --- |
-| Character Accuracy | 0.6943 |
+| Character Accuracy | 0.7010 |
 | Sequence Similarity | 0.6684 |
 | Jaccard Similarity | 0.8086 |
+
+## Character Accuracy Distribution
+
+| Range | Pages | Ratio |
+| --- | --- | --- |
+| [0.0, 0.2) | 120 |  11.9% |
+| [0.2, 0.5) | 94 |   9.4% |
+| [0.5, 0.7) | 124 |  12.3% |
+| [0.7, 0.8) | 103 |  10.2% |
+| [0.8, 0.9) | 256 |  25.5% |
+| [0.9, 1.0) | 286 |  28.5% |
+| 1.0 (exact) | 22 |   2.2% |
 
 ## Table Quality Metrics
 
@@ -25,18 +37,18 @@
 
 | Stat | Value |
 | --- | --- |
-| Mean | 71.53 |
-| Median | 83.54 |
-| Std Dev | 27.89 |
+| Mean | 72.15 |
+| Median | 84.48 |
+| Std Dev | 27.97 |
 | Min | 0.00 |
 | Max | 100.00 |
 
 | Grade | Pages | Ratio |
 | --- | --- | --- |
-| Excellent (≥90) | 315 |  31.3% |
-| Good (80-90) | 254 |  25.3% |
-| Fair (70-80) | 103 |  10.2% |
-| Poor (<70) | 333 |  33.1% |
+| Excellent (≥90) | 333 |  33.1% |
+| Good (80-90) | 248 |  24.7% |
+| Fair (70-80) | 100 |  10.0% |
+| Poor (<70) | 324 |  32.2% |
 
 ## Worst 10 Pages by Character Accuracy
 
