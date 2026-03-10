@@ -44,6 +44,12 @@ class FormulaEvaluator:
         # 去除多余空格
         normalized = re.sub(r'\s+', ' ', latex_str.strip())
 
+        # 修复 OCR 常见问题：花括号内字符被空格隔开，如 {c o r r} → {corr}，{e x p} → {exp}
+        def collapse_spaced_chars(m):
+            inner = re.sub(r'\s+', '', m.group(1))
+            return '{' + inner + '}'
+        normalized = re.sub(r'\{([a-zA-Z](?:\s[a-zA-Z])+)\}', collapse_spaced_chars, normalized)
+
         # 统一花括号和空格
         normalized = re.sub(r'\{\s+', '{', normalized)
         normalized = re.sub(r'\s+\}', '}', normalized)
@@ -56,6 +62,7 @@ class FormulaEvaluator:
         replacements = [
             (r'\\dfrac', r'\\frac'),          # \dfrac → \frac
             (r'\\tfrac', r'\\frac'),           # \tfrac → \frac
+            (r'\\operatorname\s*\{([^}]+)\}', lambda m: '\\mathrm{' + re.sub(r'\s+', '', m.group(1)) + '}'),
             (r'\\operatorname', r'\\mathrm'),  # \operatorname → \mathrm
             (r'\\text\b', r'\\mathrm'),        # \text → \mathrm
             (r'\\boldsymbol', r'\\mathbf'),    # \boldsymbol → \mathbf
@@ -67,14 +74,19 @@ class FormulaEvaluator:
             (r'\\right\s*\]', r']'),           # \right] → ]
             (r'\\left\s*\{', r'{'),            # \left{ → {
             (r'\\right\s*\}', r'}'),           # \right} → }
-            (r'\\,', r' '),                    # 细空格统一为空格
-            (r'\\;', r' '),
+            (r'\\,', r''),                     # 去除细空格
+            (r'\\;', r''),
+            (r'\\!', r''),
             (r'\\quad', r' '),
             (r'\\qquad', r' '),
+            (r'\\mathsf', r'\\mathrm'),        # \mathsf → \mathrm
         ]
 
         for pattern, replacement in replacements:
-            normalized = re.sub(pattern, replacement, normalized)
+            if callable(replacement):
+                normalized = re.sub(pattern, replacement, normalized)
+            else:
+                normalized = re.sub(pattern, replacement, normalized)
 
         # 再次折叠多余空格
         normalized = re.sub(r'\s+', ' ', normalized).strip()
@@ -287,21 +299,11 @@ class FormulaEvaluator:
         if pred_norm == ref_norm:
             return 1.0
 
-        # 尝试AST匹配（如果sympy可用）
-        if SYMPY_AVAILABLE:
-            ast_sim = FormulaEvaluator.ast_similarity(pred_norm, ref_norm)
-            if ast_sim >= 0.95:
-                return round(ast_sim, 4)
-
-        # 综合多个指标
-        sym_acc = FormulaEvaluator.symbol_accuracy(pred_norm, ref_norm)
-        struct_sim = FormulaEvaluator.structure_similarity(pred_norm, ref_norm)
-        edit_acc = FormulaEvaluator.sequence_edit_distance(pred_norm, ref_norm)
-
-        # 加权组合：编辑距离 60%，符号 20%，结构 20%
-        accuracy = (edit_acc * 0.6 + sym_acc * 0.2 + struct_sim * 0.2)
-
-        return round(accuracy, 4)
+        # NED（归一化编辑距离）：与 OmniDocBench 官方对齐
+        # NED = edit_distance / max(len(pred), len(ref))
+        # Score = 1 - NED
+        ned_score = MetricsCalculator.normalized_edit_distance(pred_norm, ref_norm)
+        return round(1.0 - ned_score, 4)
 
     @staticmethod
     def mathml_accuracy(pred_mathml: str, ref_mathml: str) -> float:
