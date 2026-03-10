@@ -9,6 +9,8 @@ ocr:
   paddleocrv1:
     # Optional: force device (e.g. "cpu", "gpu:0"); when null use PaddleX default
     device: "gpu:0"
+    # bf16 inference for 4090D (faster than fp32, minimal quality loss)
+    dtype: "bfloat16"
 
     # Sub-pipeline switches
     use_doc_orientation_classify: false
@@ -21,6 +23,9 @@ ocr:
     layout_threshold: 0.5
     # Shape mode: "rect", "quad", "poly", "auto"
     layout_shape_mode: "auto"
+
+    # Batch processing: number of PDFs passed to pipeline.predict() at once
+    batch_size: 4
 
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)

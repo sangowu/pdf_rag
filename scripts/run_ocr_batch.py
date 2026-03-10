@@ -18,24 +18,26 @@ def process_all_pdfs():
     input_dir = config.get("paths", {}).get("pdf_dir", "data/raw/OpenDataLab___OmniDocBench/pdfs")
     pdf_files = processor.list_pdf_files(directory=input_dir)
 
-    logger.info("开始批量处理 %d 个文件...", len(pdf_files))
+    # 过滤已有缓存的文件，跳过不重跑
+    pending = [f for f in pdf_files if not processor._build_cache_path(f, "structured").exists()]
+    logger.info("总文件 %d，已缓存 %d，待处理 %d", len(pdf_files), len(pdf_files) - len(pending), len(pending))
 
-    for filename in tqdm(pdf_files):
-        fcount = 0
-        pdf_path = filename
-        try:
-            processor.process_pdf(pdf_path)
-            fcount += 1
-        except Exception as e:
-            logger.exception("处理文件 %s 时发生错误", filename)
-        if fcount % 50 == 0:
-            import gc
-            gc.collect()
+    batch_size = config.get("ocr", {}).get("paddleocrv1", {}).get("batch_size", 4)
+
+    for i in tqdm(range(0, len(pending), batch_size), desc="batch"):
+        batch = pending[i:i + batch_size]
+        for pdf_path in batch:
             try:
-                if paddle.device.is_compiled_with_cuda():
-                    paddle.device.cuda.empty_cache()
-            except Exception:
-                pass
+                processor.process_pdf(pdf_path)
+            except Exception as e:
+                logger.exception("处理文件 %s 时发生错误", pdf_path)
+
+        gc.collect()
+        try:
+            if paddle.device.is_compiled_with_cuda():
+                paddle.device.cuda.empty_cache()
+        except Exception:
+            pass
 
     logger.info("批量处理完成")
             
