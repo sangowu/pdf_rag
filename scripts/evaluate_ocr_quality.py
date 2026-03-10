@@ -264,17 +264,25 @@ class OCRQualityEvaluator:
     def _extract_ocr_formulas(self, ocr_page_data: dict) -> List[str]:
         """从OCR页面数据提取公式"""
         core_content = ocr_page_data.get("core_content", {})
-        formulas = core_content.get("formulas", [])
-
-        # 提取公式文本（rec_formula 是 PP-StructureV3 的字段名）
         formula_texts = []
+
+        # 方法1：直接从 formulas 字段提取（PP-StructureV3 / 已预处理）
+        formulas = core_content.get("formulas", [])
         for formula in formulas:
             if isinstance(formula, dict):
-                text = formula.get("rec_formula", "") or formula.get("content", "")
+                text = formula.get("rec_formula", "") or formula.get("block_content", "") or formula.get("content", "")
             else:
                 text = str(formula)
             if text:
                 formula_texts.append(text)
+
+        # 方法2：从 parsing_res_list 提取（PaddleOCR-VL fallback）
+        if not formula_texts:
+            for block in core_content.get("parsing_res_list", []):
+                if block.get("block_label") in ("formula", "equation_isolated", "equation_block", "equation"):
+                    text = block.get("block_content", "")
+                    if text:
+                        formula_texts.append(text)
 
         return formula_texts
 

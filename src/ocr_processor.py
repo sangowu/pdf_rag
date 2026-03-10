@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional
 import paddle
-from paddleocr import PPStructureV3
+from paddleocr import PaddleOCRVL
 import gc
 
 from src.utils import load_config
@@ -29,25 +29,14 @@ class OCRProcessor:
         self._pipeline = None
 
     @property
-    def pipeline(self) -> PPStructureV3:
+    def pipeline(self) -> PaddleOCRVL:
         if self._pipeline is None:
-            ocr_cfg: Dict[str, Any] = self.config.get("ocr", {})
-            pp_cfg: Dict[str, Any] = ocr_cfg.get("ppstructurev3", {})
-
-            paddlex_config = pp_cfg.get("paddlex_config")
+            vl_cfg: Dict[str, Any] = self.config.get("ocr", {}).get("paddleocrv1", {})
             init_kwargs: Dict[str, Any] = {}
-
-            device = pp_cfg.get("device")
+            device = vl_cfg.get("device")
             if device:
                 init_kwargs["device"] = device
-
-            if paddlex_config:
-                init_kwargs["paddlex_config"] = paddlex_config
-            else:
-                # Fallback to simple lang-based init when no paddlex_config provided
-                init_kwargs["lang"] = ocr_cfg.get("lang", "ch")
-
-            self._pipeline = PPStructureV3(**init_kwargs)
+            self._pipeline = PaddleOCRVL(**init_kwargs)
         return self._pipeline
 
     def _build_cache_path(self, pdf_path: str, cache_type: Literal["raw", "structured"]) -> Path:
@@ -111,6 +100,20 @@ class OCRProcessor:
         numbers = re.findall(r'\d+', base)
         return int(numbers[-1]) if numbers else 0
 
+    @staticmethod
+    def _markdown_table_to_html(md_table: str) -> str:
+        """Convert Markdown table to HTML. Falls back to original string if not a valid table."""
+        lines = [l.strip() for l in md_table.strip().splitlines() if l.strip()]
+        rows = [l for l in lines if l.startswith("|") and not re.match(r'^\|[-| :]+\|$', l)]
+        if not rows:
+            return md_table
+        html = ["<table>"]
+        for row in rows:
+            cells = [c.strip() for c in row.strip("|").split("|")]
+            html.append("<tr>" + "".join(f"<td>{c}</td>" for c in cells) + "</tr>")
+        html.append("</table>")
+        return "".join(html)
+
     def _build_structured_item(self, pdf_path: str, page_index: int, data: dict[str, Any]) -> dict[str, Any]:
         base = Path(pdf_path).stem.replace(".pdf", "")
         md_text = ""
@@ -126,28 +129,42 @@ class OCRProcessor:
             markdown_path.mkdir(parents=True, exist_ok=True)
         if "res" in data and isinstance(data["res"], dict):
             data = data["res"]
+
+        parsing_res_list = data.get("parsing_res_list", [])
+
+        # Extract tables: use table_res_list (PP-StructureV3) or fall back to parsing_res_list (VL)
+        tables = data.get("table_res_list", [])
+        if not tables:
+            for block in parsing_res_list:
+                if block.get("block_label") == "table":
+                    content = block.get("block_content", "")
+                    if content:
+                        html = content if content.strip().startswith("<") else self._markdown_table_to_html(content)
+                        tables.append({"pred_html": html})
+
+        # Extract formulas: use formula_res_list (PP-StructureV3) or fall back to parsing_res_list (VL)
+        formulas = data.get("formula_res_list", [])
+        if not formulas:
+            for block in parsing_res_list:
+                if block.get("block_label") in ("formula", "equation_isolated", "equation_block", "equation"):
+                    content = block.get("block_content", "")
+                    if content:
+                        formulas.append({"rec_formula": content})
+
         return {
             "filename": os.path.basename(pdf_path),
             "page_index": page_index,
             "core_content": {
-                "parsing_res_list": data.get("parsing_res_list", []),
+                "parsing_res_list": parsing_res_list,
                 "markdown": md_text,
-                "tables": data.get("table_res_list", []),
-                "formulas": data.get("formula_res_list", []),
+                "tables": tables,
+                "formulas": formulas,
                 "seals": data.get("seal_res_list", []),
             },
             "metadata": {
                 "width": data.get("width", 0),
                 "height": data.get("height", 0),
                 "doc_preprocessor_res": data.get("doc_preprocessor_res", {}),
-                "layout_det_res": data.get("layout_det_res", {}),
-                "region_det_res": data.get("region_det_res", {}),
-                "overall_ocr_res": data.get("overall_ocr_res", {}),
-                "table_res_list": data.get("table_res_list", []),
-                "seal_res_list": data.get("seal_res_list", []),
-                "chart_res_list": data.get("chart_res_list", []),
-                "formula_res_list": data.get("formula_res_list", []),
-                "imgs_in_doc": data.get("imgs_in_doc", []),
                 "model_settings": data.get("model_settings", {}),
             },
         }
@@ -170,20 +187,16 @@ class OCRProcessor:
             self._save_structured_cache(pdf_path, res_list)
             return res_list
 
-        pp_cfg: Dict[str, Any] = self.config.get("ocr", {}).get("ppstructurev3", {})
+        vl_cfg: Dict[str, Any] = self.config.get("ocr", {}).get("paddleocrv1", {})
         output = self.pipeline.predict(
             input=pdf_path,
-            use_doc_orientation_classify=pp_cfg.get("use_doc_orientation_classify"),
-            use_doc_unwarping=pp_cfg.get("use_doc_unwarping"),
-            use_textline_orientation=pp_cfg.get("use_textline_orientation"),
-            use_seal_recognition=pp_cfg.get("use_seal_recognition"),
-            use_table_recognition=pp_cfg.get("use_table_recognition"),
-            use_formula_recognition=pp_cfg.get("use_formula_recognition"),
-            use_chart_recognition=pp_cfg.get("use_chart_recognition"),
-            use_region_detection=pp_cfg.get("use_region_detection"),
-            text_det_thresh=pp_cfg.get("text_det_thresh"),
-            text_det_box_thresh=pp_cfg.get("text_det_box_thresh"),
-            text_rec_score_thresh=pp_cfg.get("text_rec_score_thresh"),
+            use_doc_orientation_classify=vl_cfg.get("use_doc_orientation_classify"),
+            use_doc_unwarping=vl_cfg.get("use_doc_unwarping"),
+            use_layout_detection=vl_cfg.get("use_layout_detection", True),
+            use_chart_recognition=vl_cfg.get("use_chart_recognition", False),
+            use_seal_recognition=vl_cfg.get("use_seal_recognition", False),
+            layout_threshold=vl_cfg.get("layout_threshold"),
+            layout_shape_mode=vl_cfg.get("layout_shape_mode"),
         )
 
         raw_pages = []

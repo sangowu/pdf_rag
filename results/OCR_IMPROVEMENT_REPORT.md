@@ -130,6 +130,58 @@
 
 ---
 
+## Round 6：修复表格 pred_html 字段 + score_thresh 过滤
+
+**提交**：`fix: read pred_html for table HTML and tune: raise text_rec_score_thresh 0.0→0.5`
+
+**改动**：
+- `evaluate_ocr_quality.py`：表格 HTML 读取字段从 `html` 改为 `pred_html`（PP-StructureV3 实际输出字段），修复 TEDS 长期为假值（count-based fallback）的问题
+- `config.yaml` / `PP-StructureV3.yaml`：`text_rec_score_thresh` 0.0 → **0.5**，过滤低置信度识别结果，减少过度识别噪声
+
+| 指标 | Round 5 | Round 6（当前） | 变化 |
+|---|---|---|---|
+| 有效评估页数 | 991 | **1312** | 页面匹配修复后增加 |
+| Character Accuracy | 0.6996 | **0.7498** | +0.050 ↑ |
+| Sequence Similarity | 0.6637 | **0.6988** | +0.035 ↑ |
+| Jaccard Similarity | 0.8086 | **0.8578** | +0.049 ↑ |
+| Table TEDS | 86.78（假值） | **64.67**（真实） | 首次得到真实 TEDS |
+| Table Structure Sim | — | **0.8607** | — |
+| Table Content Sim | — | **0.6899** | — |
+| Formula Avg Accuracy | 0.5971 | **0.5722** | 基本持平 |
+| Correct Formulas | 332/1143 (29.0%) | **370/1318 (28.1%)** | 分母增大（更多页面纳入） |
+| Composite Mean | 71.49 | **73.87** | +2.38 ↑ |
+| Excellent (≥90) | 312 (31.5%) | **413 (31.5%)** | 比例持平，绝对数增加 |
+| Poor (<70) | 324 (32.7%) | **398 (30.3%)** | 比例下降 ↓ |
+
+**备注**：
+- 表格 TEDS 从 86.78 降至 64.67 是**修复假值**，不是回退——之前因读取空字段导致所有表格走 count-based fallback（0或100）
+- `score_thresh=0.5` 有效减少过度识别噪声，文本指标全面提升
+
+---
+
+## PP-StructureV3 最终基线（供模型切换对比用）
+
+**生成时间**：2026-03-11 01:35:36
+**模型**：PP-StructureV3（PP-OCRv5_server + PP-DocLayout_plus-L）
+**score_thresh**：0.5
+
+| 指标 | 值 |
+|---|---|
+| Character Accuracy | **0.7498** |
+| Sequence Similarity | **0.6988** |
+| Jaccard Similarity | **0.8578** |
+| Table TEDS | **64.67** |
+| Table Structure Similarity | **0.8607** |
+| Table Content Similarity | **0.6899** |
+| Formula Avg Accuracy | **0.5722** |
+| Correct Formulas | **370/1318 (28.1%)** |
+| Composite Mean | **73.87** |
+| Composite Median | **82.34** |
+| Excellent (≥90) | **413 (31.5%)** |
+| Poor (<70) | **398 (30.3%)** |
+
+---
+
 ## 当前瓶颈分析
 
 ### 文本（主要瓶颈）
