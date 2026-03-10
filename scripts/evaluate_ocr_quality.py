@@ -196,15 +196,8 @@ class OCRQualityEvaluator:
                     text_parts.append(block_content)
 
             elif block_label in ["doc_title", "header", "footer", "page_num"]:
-                if use_bbox_isolation and block_bbox and table_bboxes:
-                    overlaps_with_table = any(
-                        self._bbox_overlap(block_bbox, table_bbox, overlap_threshold=0.05)
-                        for table_bbox in table_bboxes
-                    )
-                    if overlaps_with_table:
-                        continue
-                if block_content:
-                    text_parts.append(block_content)
+                # GT 标注不包含页眉/页脚/页码，过滤掉避免评估时误判为过度识别
+                continue
 
             elif block_label in ["image", "figure", "table"]:
                 continue
@@ -295,9 +288,13 @@ class OCRQualityEvaluator:
             if category_type in ["text_block", "title", "heading", "list_item", "paragraph"]:
                 if text:
                     text_parts.append(text)
-            elif category_type in ["figure_caption", "page_header", "page_footer"]:
+            elif category_type in ["figure_caption"]:
                 if text:
                     text_parts.append(text)
+            elif category_type in ["page_header", "page_footer", "page_number",
+                                    "header", "footer", "page_footnote"]:
+                # 与 OCR 侧保持一致，过滤页眉/页脚/页码
+                continue
             elif category_type in ["figure", "table", "formula"]:
                 continue
 
