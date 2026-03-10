@@ -1,6 +1,6 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 20:29:07
+- Generated at: 2026-03-10 20:50:45
 - Total evaluated pages: 1355
 - Pages with content (used for metrics): 1315
 - Empty pages excluded (OCR=0 & GT=0): 40
