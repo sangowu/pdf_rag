@@ -1,67 +1,67 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 10:50:03
-- Total evaluated pages: 1005
-- Pages with content (used for metrics): 970
-- Empty pages excluded (OCR=0 & GT=0): 35
+- Generated at: 2026-03-10 20:29:07
+- Total evaluated pages: 1355
+- Pages with content (used for metrics): 1315
+- Empty pages excluded (OCR=0 & GT=0): 40
 
 ## Text Quality Metrics
 
 | Metric | Mean |
 | --- | --- |
-| Character Accuracy | 0.7249 |
-| Sequence Similarity | 0.6706 |
-| Jaccard Similarity | 0.8298 |
+| Character Accuracy | 0.7150 |
+| Sequence Similarity | 0.6595 |
+| Jaccard Similarity | 0.8350 |
 
 ## Character Accuracy Distribution
 
 | Range | Pages | Ratio |
 | --- | --- | --- |
-| [0.0, 0.2) | 97 |  10.0% |
-| [0.2, 0.5) | 81 |   8.4% |
-| [0.5, 0.7) | 117 |  12.1% |
-| [0.7, 0.8) | 102 |  10.5% |
-| [0.8, 0.9) | 240 |  24.7% |
-| [0.9, 1.0) | 315 |  32.5% |
-| 1.0 (exact) | 18 |   1.9% |
+| [0.0, 0.2) | 117 |   8.9% |
+| [0.2, 0.5) | 117 |   8.9% |
+| [0.5, 0.7) | 210 |  16.0% |
+| [0.7, 0.8) | 161 |  12.2% |
+| [0.8, 0.9) | 319 |  24.3% |
+| [0.9, 1.0) | 372 |  28.3% |
+| 1.0 (exact) | 19 |   1.4% |
 
 ## Table Quality Metrics
 
-- Pages with tables: **212**
+- Pages with tables: **339**
 
 | Metric | Mean |
 | --- | --- |
-| TEDS Score (0-100) | 86.32 |
-| Structure Similarity | 0.8632 |
-| Content Similarity | 0.8632 |
+| TEDS Score (0-100) | 88.50 |
+| Structure Similarity | 0.8850 |
+| Content Similarity | 0.8850 |
 
 ## Formula Quality Metrics
 
-- Pages with formulas: **161**
-- Total formulas: **1143**
+- Pages with formulas: **195**
+- Total formulas: **1318**
 
 | Metric | Value |
 | --- | --- |
-| Average Accuracy | 0.5971 |
-| Correct Formulas | 332/1143 |
-| Accuracy Rate (%) | 29.0 |
+| Average Accuracy | 0.5755 |
+| Correct Formulas | 367/1318 |
+| Accuracy Rate (%) | 27.8 |
 
 ## Composite Score Distribution (0-100)
 
 | Stat | Value |
 | --- | --- |
-| Mean | 73.14 |
-| Median | 84.00 |
-| Std Dev | 27.26 |
+| Mean | 72.66 |
+| Median | 82.43 |
+| Std Dev | 26.15 |
 | Min | 0.00 |
 | Max | 100.00 |
 
 | Grade | Pages | Ratio |
 | --- | --- | --- |
-| Excellent (≥90) | 331 |  34.1% |
-| Good (80-90) | 227 |  23.4% |
-| Fair (70-80) | 114 |  11.8% |
-| Poor (<70) | 298 |  30.7% |
+| Excellent (≥90) | 401 |  30.5% |
+| Good (80-90) | 311 |  23.7% |
+| Fair (70-80) | 174 |  13.2% |
+| Poor (<70) | 429 |  32.6% |
 
 ## Worst 10 Pages by Character Accuracy
 
