@@ -211,13 +211,18 @@ class OCRQualityEvaluator:
         """
         core_content = ocr_page_data.get("core_content", {})
 
-        # 方法1：直接提取tables字段
-        tables = core_content.get("tables", [])
-        if tables:
-            return tables
+        # 方法1：直接提取tables字段，统一 pred_html / html 字段名
+        raw_tables = core_content.get("tables", [])
+        if raw_tables:
+            normalized = []
+            for t in raw_tables:
+                html = t.get("pred_html") or t.get("html", "")
+                if html:
+                    normalized.append({"html": html})
+            if normalized:
+                return normalized
 
         # 方法2：从parsing_res_list中提取标记为table的块
-        # 此处将table块转换为统一格式
         parsing_res_list = core_content.get("parsing_res_list", [])
         extracted_tables = []
         for res in parsing_res_list:
