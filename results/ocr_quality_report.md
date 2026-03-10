@@ -1,6 +1,6 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 08:51:01
+- Generated at: 2026-03-10 09:01:57
 - Total evaluated pages: 1005
 
 ## Text Quality Metrics
@@ -40,26 +40,26 @@
 
 | Metric | Value |
 | --- | --- |
-| Average Accuracy | 0.0000 |
-| Correct Formulas | 0/1146 |
-| Accuracy Rate (%) | 0.0 |
+| Average Accuracy | 0.3610 |
+| Correct Formulas | 7/1146 |
+| Accuracy Rate (%) | 0.6 |
 
 ## Composite Score Distribution (0-100)
 
 | Stat | Value |
 | --- | --- |
-| Mean | 69.43 |
-| Median | 77.78 |
-| Std Dev | 27.82 |
+| Mean | 70.73 |
+| Median | 80.14 |
+| Std Dev | 27.52 |
 | Min | 0.00 |
 | Max | 100.00 |
 
 | Grade | Pages | Ratio |
 | --- | --- | --- |
-| Excellent (≥90) | 308 |  30.6% |
-| Good (80-90) | 169 |  16.8% |
-| Fair (70-80) | 102 |  10.1% |
-| Poor (<70) | 426 |  42.4% |
+| Excellent (≥90) | 309 |  30.7% |
+| Good (80-90) | 196 |  19.5% |
+| Fair (70-80) | 151 |  15.0% |
+| Poor (<70) | 349 |  34.7% |
 
 ## Worst 10 Pages by Character Accuracy
 
