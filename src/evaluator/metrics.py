@@ -4,6 +4,7 @@
 """
 
 import logging
+import unicodedata
 from difflib import SequenceMatcher
 import editdistance
 import re
@@ -28,6 +29,8 @@ class MetricsCalculator:
         """
         if not text:
             return text
+        # NFKC 统一全角→半角（如 １２３→123，ＡＢＣ→ABC）
+        text = unicodedata.normalize("NFKC", text)
         return re.sub(r"\s+", " ", text).strip()
 
     @staticmethod

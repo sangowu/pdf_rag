@@ -543,14 +543,21 @@ class OCRQualityEvaluator:
             output_path.write_text("# OCR Quality Evaluation Report\n\nNo results.\n", encoding="utf-8")
             return
 
-        char_accs = [r["character_accuracy"] for r in results]
-        seq_sims = [r["sequence_similarity"] for r in results]
-        jaccard_sims = [r["jaccard_similarity"] for r in results]
+        # 过滤双空页（OCR和GT都为空，无评估意义）
+        content_results = [
+            r for r in results
+            if not (r.get("text_length_ocr", 0) == 0 and r.get("text_length_gt", 0) == 0)
+        ]
+        empty_page_count = len(results) - len(content_results)
+
+        char_accs = [r["character_accuracy"] for r in content_results]
+        seq_sims = [r["sequence_similarity"] for r in content_results]
+        jaccard_sims = [r["jaccard_similarity"] for r in content_results]
         composite_scores = [
-            r.get("composite_score", 0.0) for r in results if r.get("composite_score") is not None
+            r.get("composite_score", 0.0) for r in content_results if r.get("composite_score") is not None
         ]
 
-        table_results = [r for r in results if r.get("table_teds") is not None]
+        table_results = [r for r in content_results if r.get("table_teds") is not None]
         if table_results:
             teds_scores = [
                 r["table_teds"] for r in table_results if r.get("table_teds") is not None
@@ -570,7 +577,7 @@ class OCRQualityEvaluator:
             struct_sims = []
             content_sims = []
 
-        formula_results = [r for r in results if r.get("formula_average_accuracy") is not None]
+        formula_results = [r for r in content_results if r.get("formula_average_accuracy") is not None]
         if formula_results:
             formula_accs = [
                 r["formula_average_accuracy"]
@@ -603,6 +610,8 @@ class OCRQualityEvaluator:
             f"- Generated at: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         )
         lines.append(f"- Total evaluated pages: {len(results)}")
+        lines.append(f"- Pages with content (used for metrics): {len(content_results)}")
+        lines.append(f"- Empty pages excluded (OCR=0 & GT=0): {empty_page_count}")
         lines.append("")
 
         # 文本质量
@@ -756,10 +765,16 @@ class OCRQualityEvaluator:
             logger.warning("No results to print")
             return
 
-        char_accs = [r["character_accuracy"] for r in results]
-        seq_sims = [r["sequence_similarity"] for r in results]
-        jaccard_sims = [r["jaccard_similarity"] for r in results]
-        composite_scores = [r.get("composite_score", 0) for r in results if r.get("composite_score")]
+        content_results = [
+            r for r in results
+            if not (r.get("text_length_ocr", 0) == 0 and r.get("text_length_gt", 0) == 0)
+        ]
+        empty_page_count = len(results) - len(content_results)
+
+        char_accs = [r["character_accuracy"] for r in content_results]
+        seq_sims = [r["sequence_similarity"] for r in content_results]
+        jaccard_sims = [r["jaccard_similarity"] for r in content_results]
+        composite_scores = [r.get("composite_score", 0) for r in content_results if r.get("composite_score")]
         # 为后续诊断建议准备默认值，避免未定义变量
         teds_scores = []
         formula_accs = []
@@ -769,6 +784,8 @@ class OCRQualityEvaluator:
         print("="*80)
         print(f"\n📊 Evaluation Summary:")
         print(f"  Total evaluated pages: {len(results)}")
+        print(f"  Pages with content (used for metrics): {len(content_results)}")
+        print(f"  Empty pages excluded: {empty_page_count}")
         print(f"  Date: {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
         # 文本质量
@@ -778,7 +795,7 @@ class OCRQualityEvaluator:
         print(f"  └─ Jaccard Similarity:    {sum(jaccard_sims)/len(jaccard_sims):.4f} (Mean)")
 
         # 表格质量
-        table_results = [r for r in results if r.get("table_teds") is not None]
+        table_results = [r for r in content_results if r.get("table_teds") is not None]
         if table_results:
             teds_scores = [r["table_teds"] for r in table_results if r.get("table_teds") is not None]
             struct_sims = [r["table_structure_similarity"] for r in table_results if r.get("table_structure_similarity") is not None]
@@ -796,7 +813,7 @@ class OCRQualityEvaluator:
             print(f"  └─ Mismatches: {table_count_mismatch} pages")
 
         # 公式质量
-        formula_results = [r for r in results if r.get("formula_average_accuracy") is not None]
+        formula_results = [r for r in content_results if r.get("formula_average_accuracy") is not None]
         if formula_results:
             formula_accs = [r["formula_average_accuracy"] for r in formula_results if r.get("formula_average_accuracy") is not None]
             correct_counts = [r["formula_correct_count"] for r in formula_results if r.get("formula_correct_count") is not None]
