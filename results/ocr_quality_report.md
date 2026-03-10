@@ -1,6 +1,6 @@
 # OCR Quality Evaluation Report
 
-- Generated at: 2026-03-10 09:01:57
+- Generated at: 2026-03-10 09:11:35
 - Total evaluated pages: 1005
 
 ## Text Quality Metrics
