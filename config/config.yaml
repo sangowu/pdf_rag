@@ -28,7 +28,7 @@ ocr:
     # Text detection / recognition thresholds
     text_det_thresh: 0.3          # pixel-level threshold
     text_det_box_thresh: 0.6      # box average score threshold
-    text_rec_score_thresh: 0.0    # recognition score filter
+    text_rec_score_thresh: 0.5    # recognition score filter
 
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)

@@ -110,7 +110,7 @@ SubPipelines:
         model_dir: null
         model_name: PP-OCRv5_server_rec
         module_name: text_recognition
-        score_thresh: 0.0
+        score_thresh: 0.5
     batch_size: 8
     pipeline_name: OCR
     text_type: general
@@ -195,7 +195,7 @@ SubPipelines:
             model_name: PP-OCRv5_server_rec
             module_name: text_recognition
         pipeline_name: OCR
-        score_thresh: 0.0
+        score_thresh: 0.5
         text_type: general
         use_doc_preprocessor: false
         use_textline_orientation: true
