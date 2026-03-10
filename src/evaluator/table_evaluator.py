@@ -136,12 +136,12 @@ class TableEvaluator:
         if pred_rows == 0 or ref_rows == 0:
             return 0.0
 
-        # 行列都匹配才给最高分，否则降分
-        row_match = 1.0 if pred_rows == ref_rows else abs(pred_rows - ref_rows) / max(pred_rows, ref_rows)
-        col_match = 1.0 if pred_cols == ref_cols else abs(pred_cols - ref_cols) / max(pred_cols, ref_cols)
+        # 行列相似度：1 - 差值比例
+        row_sim = 1.0 - abs(pred_rows - ref_rows) / max(pred_rows, ref_rows)
+        col_sim = 1.0 - abs(pred_cols - ref_cols) / max(pred_cols, ref_cols, 1)
 
-        # 结构相似度 = (行匹配 + 列匹配) / 2
-        structure_sim = (2.0 - row_match - col_match) / 2.0
+        # 结构相似度 = (行相似度 + 列相似度) / 2
+        structure_sim = (row_sim + col_sim) / 2.0
         return max(0.0, min(1.0, structure_sim))
 
     @staticmethod

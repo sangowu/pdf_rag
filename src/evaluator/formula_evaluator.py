@@ -148,7 +148,7 @@ class FormulaEvaluator:
         ref_symbols = FormulaEvaluator.extract_math_symbols(ref_formula)
 
         if not ref_symbols:
-            return 0.0 if not pred_symbols else 0.0
+            return 1.0 if not pred_symbols else 0.0
 
         correct_symbols = len(pred_symbols & ref_symbols)
         return correct_symbols / len(ref_symbols)
