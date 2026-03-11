@@ -194,11 +194,10 @@ def _generate_with_backend(prompt: str, backend: str, api_client: Optional[OpenA
         gen_kwargs["top_p"] = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
         gen_kwargs["top_k"] = int(LOCAL_LLM_CONFIG.get("top_k", 20))
         gen_kwargs["min_p"] = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
+    input_len = inputs["input_ids"].shape[1]
     output_ids = model.generate(**inputs, **gen_kwargs)
-    full_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    if full_text.startswith(prompt):
-        return full_text[len(prompt) :].strip()
-    return full_text.strip()
+    generated_ids = output_ids[0][input_len:]
+    return tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
 
 
 def _generate_with_local_backend_batch(prompts: list[str]) -> list[str]:
@@ -244,16 +243,10 @@ def _generate_with_local_backend_batch(prompts: list[str]) -> list[str]:
         gen_kwargs["top_k"] = int(LOCAL_LLM_CONFIG.get("top_k", 20))
         gen_kwargs["min_p"] = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
 
+    input_len = inputs["input_ids"].shape[1]
     output_ids = model.generate(**inputs, **gen_kwargs)
-    full_texts = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
-
-    results: list[str] = []
-    for chat_text, full_text in zip(chat_texts, full_texts):
-        if full_text.startswith(chat_text):
-            results.append(full_text[len(chat_text) :].strip())
-        else:
-            results.append(full_text.strip())
-    return results
+    generated_ids = output_ids[:, input_len:]
+    return [t.strip() for t in tokenizer.batch_decode(generated_ids, skip_special_tokens=True)]
 
 
 def load_chunks(path: str) -> list[dict]:
