@@ -10,7 +10,7 @@ config = load_config()
 
 embedding_cfg = config.get("embedding", {})
 EMBED_MODE = embedding_cfg.get("mode", "local")
-LOCAL_EMB_PATH = embedding_cfg.get("local_model_path", "models/Qwen3-Embedding-0.6B")
+LOCAL_EMB_PATH = embedding_cfg.get("local_model_path", "models/bge-m3")
 
 _embed_tokenizer = None
 _embed_model = None
@@ -214,13 +214,11 @@ class VectorStore:
         with torch.no_grad():
             outputs = model(**encoded)
 
-        if hasattr(outputs, "pooler_output"):
-            emb = outputs.pooler_output  
-        else:
-            last_hidden = outputs[0]     
-            emb = last_hidden.mean(dim=1)
+        # BGE-M3: CLS token (first token of last hidden state) + L2 normalize
+        emb = outputs.last_hidden_state[:, 0]
+        emb = torch.nn.functional.normalize(emb, p=2, dim=1)
 
-        return emb.cpu().tolist() 
+        return emb.cpu().tolist()
 
     def embed_chunks(self, all_chunk_data) -> list[dict]:
         text_list, _ = self._extract_text_and_metadata(all_chunk_data)
@@ -237,7 +235,7 @@ class VectorStore:
         return new_table
 
     def _ensure_local_embed_model(self):
-        """懒加载本地 Qwen3-Embedding 模型。"""
+        """懒加载本地 BGE-M3 embedding 模型。"""
         global _embed_tokenizer, _embed_model
         if _embed_model is not None and _embed_tokenizer is not None:
             return _embed_tokenizer, _embed_model
