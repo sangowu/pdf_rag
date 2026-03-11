@@ -117,10 +117,7 @@ reranker:
   device: "cuda"
   torch_dtype: "auto"
   batch_size: 32
-  # Cap input length (tokens); pad to longest in batch for efficiency. Match chunk distribution (~768 chars -> ~1024 tokens).
-  max_length: 1024
-  # Document QA: judge if passage helps answer the question; content/answer may be in Chinese or English
-  instruction: "Judge whether this document passage contains information needed to answer the question. The passage or the answer may be in Chinese or English."
+  max_length: 512
 
 # Evaluation Settings
 evaluation:
