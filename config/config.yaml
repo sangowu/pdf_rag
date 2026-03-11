@@ -107,7 +107,7 @@ llm:
     min_p: 0.0        # 推荐：MinP=0
     do_sample: true
 
-# Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
+# Reranker Settings (bge-reranker-v2-m3; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
   enabled: true
