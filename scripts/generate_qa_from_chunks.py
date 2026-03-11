@@ -80,13 +80,13 @@ QA_QUESTION_PROMPT = """你现在要为一个问答数据集生成中文问题�
 {answer}
 ---"""
 
-QA_PROMPT = """你是一个问答数据集构建助手。请根据下面的文档片段，生成恰好一对问答。
+QA_PROMPT_ZH = """你是一个问答数据集构建助手。请根据下面的文档片段，生成恰好一对**中文**问答。
 
 要求：
-- 问题和答案的语言必须与文档片段的语言一致（中文文档用中文，英文文档用英文）。
+- 问题和答案都必须使用中文。
 - 问题必须是完整句子，以问号结尾。
 - 问题要足够具体，使得只有阅读本段内容才能回答，避免泛泛而问。
-- 问题长度不少于 8 个词（中文）或 6 个单词（英文）。
+- 问题长度不少于 8 个词。
 - 答案必须是文档片段中的连续原文子串，直接从原文复制，不得改写。
 - 不要在问题里直接完整复述答案内容。
 - 只输出一个 JSON 对象，格式为 {{"question": "<你生成的问题>", "answer": "<从原文复制的答案>"}}，不要输出任何解释性文字。
@@ -95,6 +95,72 @@ QA_PROMPT = """你是一个问答数据集构建助手。请根据下面的文�
 ---
 {text}
 ---"""
+
+QA_PROMPT_EN = """You are a QA dataset builder. Based on the document fragment below, generate exactly one QA pair in **English**.
+
+Requirements:
+- Both the question and answer must be in English.
+- The question must be a complete sentence ending with a question mark.
+- The question must be specific enough that only someone who read this fragment could answer it.
+- The question must be at least 6 words long.
+- The answer must be a continuous verbatim substring copied directly from the fragment, no paraphrasing.
+- Do not repeat the answer word-for-word in the question.
+- Output only a single JSON object: {{"question": "<your question>", "answer": "<verbatim answer from text>"}}, no other text.
+
+Document fragment:
+---
+{text}
+---"""
+
+
+def _detect_lang(text: str) -> str:
+    """Return 'zh' if >15% Chinese characters, else 'en'."""
+    if not text:
+        return "en"
+    zh_count = sum(1 for c in text if '\u4e00' <= c <= '\u9fff')
+    return "zh" if zh_count / len(text) > 0.15 else "en"
+
+
+def _make_qa_prompt(text: str) -> str:
+    """Select prompt template based on detected language of the chunk."""
+    lang = _detect_lang(text)
+    template = QA_PROMPT_ZH if lang == "zh" else QA_PROMPT_EN
+    return template.format(text=text.strip()[:4000])
+
+
+def _is_low_quality_chunk(text: str) -> bool:
+    """Return True if chunk should be skipped before QA generation.
+
+    Filters:
+    - Too short to yield a meaningful QA pair (<50 chars).
+    - Single-line all-caps heading (e.g. 'AIMS AND OBJECTIVES OF LEARNING ENGLISH').
+    """
+    t = text.strip()
+    if len(t) < 50:
+        return True
+    lines = [l.strip() for l in t.splitlines() if l.strip()]
+    if len(lines) == 1 and lines[0] == lines[0].upper() and len(lines[0]) < 120:
+        return True
+    return False
+
+
+def _is_valid_qa(question: str, answer: str, chunk_text: str) -> bool:
+    """Post-processing validation for a generated QA pair.
+
+    Checks:
+    1. answer is a verbatim substring of chunk_text (exact or whitespace-normalised).
+    2. question language matches chunk language.
+    """
+    if not question or not answer:
+        return False
+    # Check answer is substring of chunk
+    norm = lambda s: " ".join(s.split())
+    if answer not in chunk_text and norm(answer) not in norm(chunk_text):
+        return False
+    # Check language consistency
+    if _detect_lang(chunk_text) != _detect_lang(question):
+        return False
+    return True
 
 logger = logging.getLogger(__name__)
 
@@ -533,7 +599,7 @@ def call_llm(text: str, backend: str, api_client: Optional[OpenAI]) -> str:
     """Generate one QA JSON string for a chunk of text (llm mode)."""
     if not text or not text.strip():
         return ""
-    prompt = QA_PROMPT.format(text=text.strip()[:4000])
+    prompt = _make_qa_prompt(text)
     return _generate_with_backend(prompt, backend=backend, api_client=api_client)
 
 
@@ -581,11 +647,11 @@ def run_llm_mode(
         nonlocal qid
         if not buffer_texts:
             return
-        prompts = [QA_PROMPT.format(text=t.strip()[:4000]) for t in buffer_texts]
+        prompts = [_make_qa_prompt(t) for t in buffer_texts]
         raw_list = _generate_with_local_backend_batch(prompts)
         for raw, chunk in zip(raw_list, buffer_chunks):
             question, answer = parse_qa(raw)
-            if not question or not answer:
+            if not _is_valid_qa(question, answer, chunk.get("text", "")):
                 continue
             qid += 1
             chunk_id = chunk.get("chunk_id", "")
@@ -608,10 +674,15 @@ def run_llm_mode(
         buffer_texts.clear()
         buffer_chunks.clear()
 
+    skipped_low_quality = 0
     with open(output_path, "w", encoding="utf-8") as out:
         for chunk in tqdm(chunks, desc="Generating QA"):
             text = chunk.get("text", "")
             if not text or not text.strip():
+                continue
+            # Pre-filter: skip low-quality chunks before calling LLM
+            if _is_low_quality_chunk(text):
+                skipped_low_quality += 1
                 continue
             if backend == "local":
                 buffer_texts.append(text)
@@ -621,7 +692,7 @@ def run_llm_mode(
                 continue
             raw = call_llm(text, backend=backend, api_client=api_client)
             question, answer = parse_qa(raw)
-            if not question or not answer:
+            if not _is_valid_qa(question, answer, text):
                 continue
             qid += 1
             chunk_id = chunk.get("chunk_id", "")
@@ -642,7 +713,7 @@ def run_llm_mode(
                 "doc_file_name": chunk.get("file_name", ""),
             })
         flush_batch()  # flush remaining
-    logger.info("Wrote %d QA pairs to %s", qid, output_path)
+    logger.info("Wrote %d QA pairs to %s (skipped low-quality chunks: %d)", qid, output_path, skipped_low_quality)
     if gold_rows:
         import csv
         os.makedirs(os.path.dirname(GOLD_ANSWERS_CSV_PATH) or ".", exist_ok=True)
