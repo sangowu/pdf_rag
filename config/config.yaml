@@ -67,9 +67,9 @@ embedding:
   dimension: 1024
   batch_size: 64
 
-  mode: "local"                   
+  mode: "local"
   local_model_path: "models/bge-m3"  # 你本地保存 embedding 的目录
-  torch_dtype: "auto" 
+  torch_dtype: "bfloat16"
   device: "cuda"
 
 # Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
@@ -101,7 +101,7 @@ llm:
     batch_size: 8
     max_tokens: 512
     temperature: 0.7  # 推荐：非思考模式下 0.7
-    torch_dtype: "auto"
+    torch_dtype: "bfloat16"
     top_p: 0.8        # 推荐：TopP=0.8
     top_k: 20         # 推荐：TopK=20
     min_p: 0.0        # 推荐：MinP=0
@@ -111,11 +111,11 @@ llm:
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
   enabled: true
-  top_r: 20
+  top_r: 10
   model_name: "BAAI/bge-reranker-v2-m3"
   local_model_path: "models/bge-reranker-v2-m3"
   device: "cuda"
-  torch_dtype: "auto"
+  torch_dtype: "bfloat16"
   batch_size: 32
   max_length: 512
 
