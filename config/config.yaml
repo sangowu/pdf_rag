@@ -27,7 +27,7 @@ ocr:
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
 chunking:
-  type: "recursive"
+  type: "fixed"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
@@ -63,24 +63,24 @@ chunking:
 
 # Embedding Settings
 embedding:
-  model: "BAAI/bge-m3"  # Or your Qwen3-Embedding model name
+  model: "BAAI/bge-m3"  
   dimension: 1024
   batch_size: 64
 
   mode: "local"
-  local_model_path: "models/bge-m3"  # 你本地保存 embedding 的目录
-  torch_dtype: "bfloat16"
+  local_model_path: "models/bge-m3"  
+  dtype: "bfloat16"
   device: "cuda"
 
 # Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
 retrieval:
-  method: "hybrid"   # "vector" | "bm25" | "hybrid"
+  method: "vector"   # "vector" | "bm25" | "hybrid"
   rrf_k: 60          # RRF constant (only for hybrid)
 
 # Reranker Settings (bge-reranker-v2-m3; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: true
+  enabled: false
   top_r: 20
   model_name: "BAAI/bge-reranker-v2-m3"
   local_model_path: "models/bge-reranker-v2-m3"
@@ -110,7 +110,7 @@ llm:
     model_name: "models/Qwen3-8B"
     device: "cuda"
     # Batch size for local LLM generation (QA from chunks)
-    batch_size: 8
+    batch_size: 32
     max_tokens: 512
     torch_dtype: "bfloat16"
     do_sample: false  # greedy decoding; faster and deterministic
