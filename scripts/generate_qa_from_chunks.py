@@ -123,6 +123,7 @@ def _ensure_local_model_loaded() -> tuple[AutoTokenizer, AutoModelForCausalLM]:
         torch_dtype=torch_dtype,
         device_map="auto",
         trust_remote_code=True,
+        attn_implementation="flash_attention_2",
     )
     _LOCAL_TOKENIZER = tokenizer
     _LOCAL_MODEL = model
@@ -575,10 +576,52 @@ def run_llm_mode(
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     qid = 0
     gold_rows: list[dict] = []
+
+    # Buffers for batched local generation
+    buffer_texts: list[str] = []
+    buffer_chunks: list[dict] = []
+
+    def flush_batch() -> None:
+        nonlocal qid
+        if not buffer_texts:
+            return
+        prompts = [QA_PROMPT.format(text=t.strip()[:4000]) for t in buffer_texts]
+        raw_list = _generate_with_local_backend_batch(prompts)
+        for raw, chunk in zip(raw_list, buffer_chunks):
+            question, answer = parse_qa(raw)
+            if not question or not answer:
+                continue
+            qid += 1
+            chunk_id = chunk.get("chunk_id", "")
+            record = {
+                "qid": f"qa_{qid}",
+                "question": question,
+                "answer": answer,
+                "chunk_id": chunk_id,
+                "file_name": chunk.get("file_name", ""),
+                "page_index": chunk.get("page_index", 0),
+            }
+            out.write(json.dumps(record, ensure_ascii=False) + "\n")
+            gold_rows.append({
+                "question": question,
+                "gold_answer": answer,
+                "gold_chunk_ids": chunk_id,
+                "num_gold_chunks": 1,
+                "doc_file_name": chunk.get("file_name", ""),
+            })
+        buffer_texts.clear()
+        buffer_chunks.clear()
+
     with open(output_path, "w", encoding="utf-8") as out:
         for chunk in tqdm(chunks, desc="Generating QA"):
             text = chunk.get("text", "")
             if not text or not text.strip():
+                continue
+            if backend == "local":
+                buffer_texts.append(text)
+                buffer_chunks.append(chunk)
+                if len(buffer_texts) >= LOCAL_BATCH_SIZE:
+                    flush_batch()
                 continue
             raw = call_llm(text, backend=backend, api_client=api_client)
             question, answer = parse_qa(raw)
@@ -602,6 +645,7 @@ def run_llm_mode(
                 "num_gold_chunks": 1,
                 "doc_file_name": chunk.get("file_name", ""),
             })
+        flush_batch()  # flush remaining
     logger.info("Wrote %d QA pairs to %s", qid, output_path)
     if gold_rows:
         import csv
