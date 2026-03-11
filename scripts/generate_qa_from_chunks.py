@@ -89,7 +89,7 @@ QA_PROMPT = """你是一个问答数据集构建助手。请根据下面的文�
 - 问题长度不少于 8 个词（中文）或 6 个单词（英文）。
 - 答案必须是文档片段中的连续原文子串，直接从原文复制，不得改写。
 - 不要在问题里直接完整复述答案内容。
-- 只输出一个 JSON 对象，格式为 {{"question": "...", "answer": "..."}}，不要输出任何解释性文字。
+- 只输出一个 JSON 对象，格式为 {{"question": "<你生成的问题>", "answer": "<从原文复制的答案>"}}，不要输出任何解释性文字。
 
 文档片段：
 ---
@@ -117,21 +117,29 @@ def _ensure_local_model_loaded() -> tuple[AutoTokenizer, AutoModelForCausalLM]:
     else:
         torch_dtype = "auto"
 
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_use_double_quant=True,
+    load_in_4bit = bool(LOCAL_LLM_CONFIG.get("load_in_4bit", False))
+    bnb_config = (
+        BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_use_double_quant=True,
+        )
+        if load_in_4bit
+        else None
     )
-    logger.info("Loading local LLM model (4-bit NF4): %s", model_name)
+    logger.info("Loading local LLM model (%s): %s", "4-bit NF4" if load_in_4bit else torch_dtype_cfg, model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        quantization_config=bnb_config,
-        device_map="auto",
-        trust_remote_code=True,
-        attn_implementation="flash_attention_2",
-    )
+    model_kwargs: dict = {
+        "device_map": "auto",
+        "trust_remote_code": True,
+        "attn_implementation": "flash_attention_2",
+    }
+    if bnb_config is not None:
+        model_kwargs["quantization_config"] = bnb_config
+    else:
+        model_kwargs["torch_dtype"] = torch_dtype
+    model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
     _LOCAL_TOKENIZER = tokenizer
     _LOCAL_MODEL = model
     return tokenizer, model
