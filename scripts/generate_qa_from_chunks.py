@@ -24,6 +24,7 @@ import torch
 from dotenv import load_dotenv
 from modelscope import AutoModelForCausalLM, AutoTokenizer
 from openai import OpenAI
+from transformers import BitsAndBytesConfig
 from tqdm import tqdm
 
 from src.utils import load_config
@@ -116,11 +117,17 @@ def _ensure_local_model_loaded() -> tuple[AutoTokenizer, AutoModelForCausalLM]:
     else:
         torch_dtype = "auto"
 
-    logger.info("Loading local LLM model: %s", model_name)
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_use_double_quant=True,
+    )
+    logger.info("Loading local LLM model (4-bit NF4): %s", model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        torch_dtype=torch_dtype,
+        quantization_config=bnb_config,
         device_map="auto",
         trust_remote_code=True,
         attn_implementation="flash_attention_2",
@@ -172,20 +179,14 @@ def _generate_with_backend(prompt: str, backend: str, api_client: Optional[OpenA
     )
     inputs = tokenizer([chat_text], return_tensors="pt").to(model.device)
     max_new_tokens = int(LOCAL_LLM_CONFIG.get("max_tokens", 256))
-    temperature = float(LOCAL_LLM_CONFIG.get("temperature", 0.7))
-    do_sample = bool(LOCAL_LLM_CONFIG.get("do_sample", True))
-    top_p = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
-    top_k = int(LOCAL_LLM_CONFIG.get("top_k", 20))
-    min_p = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
-    output_ids = model.generate(
-        **inputs,
-        max_new_tokens=max_new_tokens,
-        do_sample=do_sample,
-        temperature=temperature,
-        top_p=top_p,
-        top_k=top_k,
-        min_p=min_p,
-    )
+    do_sample = bool(LOCAL_LLM_CONFIG.get("do_sample", False))
+    gen_kwargs: dict = {"max_new_tokens": max_new_tokens, "do_sample": do_sample}
+    if do_sample:
+        gen_kwargs["temperature"] = float(LOCAL_LLM_CONFIG.get("temperature", 0.7))
+        gen_kwargs["top_p"] = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
+        gen_kwargs["top_k"] = int(LOCAL_LLM_CONFIG.get("top_k", 20))
+        gen_kwargs["min_p"] = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
+    output_ids = model.generate(**inputs, **gen_kwargs)
     full_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
     if full_text.startswith(prompt):
         return full_text[len(prompt) :].strip()
@@ -227,21 +228,15 @@ def _generate_with_local_backend_batch(prompts: list[str]) -> list[str]:
         tokenizer.padding_side = padding_side_orig
 
     max_new_tokens = int(LOCAL_LLM_CONFIG.get("max_tokens", 256))
-    temperature = float(LOCAL_LLM_CONFIG.get("temperature", 0.7))
-    do_sample = bool(LOCAL_LLM_CONFIG.get("do_sample", True))
-    top_p = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
-    top_k = int(LOCAL_LLM_CONFIG.get("top_k", 20))
-    min_p = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
+    do_sample = bool(LOCAL_LLM_CONFIG.get("do_sample", False))
+    gen_kwargs: dict = {"max_new_tokens": max_new_tokens, "do_sample": do_sample}
+    if do_sample:
+        gen_kwargs["temperature"] = float(LOCAL_LLM_CONFIG.get("temperature", 0.7))
+        gen_kwargs["top_p"] = float(LOCAL_LLM_CONFIG.get("top_p", 0.8))
+        gen_kwargs["top_k"] = int(LOCAL_LLM_CONFIG.get("top_k", 20))
+        gen_kwargs["min_p"] = float(LOCAL_LLM_CONFIG.get("min_p", 0.0))
 
-    output_ids = model.generate(
-        **inputs,
-        max_new_tokens=max_new_tokens,
-        do_sample=do_sample,
-        temperature=temperature,
-        top_p=top_p,
-        top_k=top_k,
-        min_p=min_p,
-    )
+    output_ids = model.generate(**inputs, **gen_kwargs)
     full_texts = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
 
     results: list[str] = []
