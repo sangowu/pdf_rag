@@ -5,244 +5,97 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "text",
-          "block_content": "DL/T1090—20C8",
+          "block_label": "header",
+          "block_content": "DL/T 1090—2008",
           "block_bbox": [
             96,
             108,
-            233,
-            123
+            237,
+            127
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              96.0,
+              108.0
+            ],
+            [
+              236.0,
+              108.0
+            ],
+            [
+              236.0,
+              126.0
+            ],
+            [
+              96.0,
+              126.0
+            ]
+          ]
         },
         {
-          "block_label": "paragraph_title",
-          "block_content": "4.1.3可用系数（AF）",
+          "block_label": "text",
+          "block_content": "4.1.3 可用系数（AF）",
           "block_bbox": [
             96,
             142,
-            257,
-            158
+            260,
+            162
           ],
           "block_id": 1,
-          "block_order": 2
+          "block_order": 1,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              95.99998474121094,
+              141.99998474121094
+            ],
+            [
+              258.99993896484375,
+              141.99998474121094
+            ],
+            [
+              258.99993896484375,
+              160.99998474121094
+            ],
+            [
+              95.99998474121094,
+              160.99998474121094
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "AF=\\frac{ 串联补偿装置的可用小时效 }{ 串联补偿装置的统计期间小时效 }\\times100\\%=\\frac{AH}{2\\pi}\\times100\\%",
+          "block_label": "display_formula",
+          "block_content": " $$ \\mathrm{AF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{AH}}{\\mathrm{PH}}\\times100\\% $$ ",
           "block_bbox": [
             239,
             166,
-            632,
-            205
+            635,
+            208
           ],
           "block_id": 2,
-          "block_order": 3
-        },
-        {
-          "block_label": "paragraph_title",
-          "block_content": "4.1.4运行系数（SF)",
-          "block_bbox": [
-            96,
-            216,
-            255,
-            231
-          ],
-          "block_id": 3,
-          "block_order": 4
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\mathrm{SF}=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{SH}}{\\mathrm{PH}}\\times100\\%",
-          "block_bbox": [
-            206,
-            239,
-            596,
-            279
-          ],
-          "block_id": 4,
-          "block_order": 5
-        },
-        {
-          "block_label": "text",
-          "block_content": "4.1.5平均无故障可用小时数（MTBF）",
-          "block_bbox": [
-            96,
-            290,
-            375,
-            306
-          ],
-          "block_id": 5,
-          "block_order": 6
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}}",
-          "block_bbox": [
-            238,
-            314,
-            569,
-            353
-          ],
-          "block_id": 6,
-          "block_order": 7
-        },
-        {
-          "block_label": "text",
-          "block_content": "4.1.6不可用系数（UF）",
-          "block_bbox": [
-            96,
-            364,
-            273,
-            380
-          ],
-          "block_id": 7,
-          "block_order": 8
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times\\mathrm{tt}00\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\%",
-          "block_bbox": [
-            238,
-            388,
-            689,
-            427
-          ],
-          "block_id": 8,
-          "block_order": 9
-        },
-        {
-          "block_label": "text",
-          "block_content": "4.2对由两个及以上串联补偿装置组成的串联补偿系统，串联补偿系统的评价指标为串联等效可用系数（SeriesEquivalentAvailableFactor，SEAF），其计算公式按式（7）进行统计。",
-          "block_bbox": [
-            95,
-            438,
-            796,
-            478
-          ],
-          "block_id": 9,
-          "block_order": 10
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\mathrm{SEAF}=\\frac{\\sum( 各串联补偿装豆的额定补偿容认 \\times 该串联补偿装罕的可用时间 )}{ 该串联补偿系统的额定补偿容盐 \\times 统计期间 }",
-          "block_bbox": [
-            206,
-            485,
-            714,
-            577
-          ],
-          "block_id": 10,
-          "block_order": 11
-        },
-        {
-          "block_label": "paragraph_title",
-          "block_content": "5填表要求",
-          "block_bbox": [
-            96,
-            599,
-            185,
-            615
-          ],
-          "block_id": 11,
-          "block_order": 12
-        },
-        {
-          "block_label": "text",
-          "block_content": "5.1串联补偿装置基本情况表见表1。",
-          "block_bbox": [
-            96,
-            635,
-            360,
-            651
-          ],
-          "block_id": 12,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "5.2串联补偿装置基础事件表见表2。",
-          "block_bbox": [
-            96,
-            658,
-            359,
-            674
-          ],
-          "block_id": 13,
-          "block_order": 14
-        },
-        {
-          "block_label": "text",
-          "block_content": "5.3串联补偿装置可靠性指标汇总表见表3.",
-          "block_bbox": [
-            96,
-            682,
-            405,
-            698
-          ],
-          "block_id": 14,
-          "block_order": 15
-        },
-        {
-          "block_label": "text",
-          "block_content": "5.4串联补偿装置停运部件原因分类表见表4，其中串联补偿装置部件分类参见附录B。",
-          "block_bbox": [
-            95,
-            705,
-            699,
-            721
-          ],
-          "block_id": 15,
-          "block_order": 16
-        },
-        {
-          "block_label": "figure_title",
-          "block_content": "表1串联补偿装置基本情况表",
-          "block_bbox": [
-            338,
-            740,
-            557,
-            756
-          ],
-          "block_id": 16,
-          "block_order": null
-        },
-        {
-          "block_label": "text",
-          "block_content": "填报日期 ：_年月__日",
-          "block_bbox": [
-            97,
-            767,
-            287,
-            782
-          ],
-          "block_id": 17,
-          "block_order": 17
-        },
-        {
-          "block_label": "vision_footnote",
-          "block_content": "报单位：",
-          "block_bbox": [
-            620,
-            767,
-            682,
-            781
-          ],
-          "block_id": 18,
-          "block_order": null
-        },
-        {
-          "block_label": "table",
-          "block_content": "<html><body><table><tr><td rowspan=\"6\">中联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>中联补装的类型</td><td></td></tr><tr><td>投运日期</td><td>年月1</td></tr><tr><td>系统电压 kV</td><td></td></tr><tr><td>设备供货</td><td></td></tr><tr><td></td><td></td></tr><tr><td rowspan=\"5\">申联补偿装置主要技术 指标</td><td>补偿度 %</td><td></td></tr><tr><td>额定容抗 Ω/单相</td><td></td></tr><tr><td>额定电流 kA</td><td></td></tr><tr><td>固定申联电容补偿装置的站大插摆电流 kA,10s $I_{\\tau}$</td><td></td></tr><tr><td></td><td></td></tr></tbody></table></body></html>",
-          "block_bbox": [
-            98,
-            781,
-            801,
-            1135
-          ],
-          "block_id": 19,
-          "block_order": null
+          "block_order": 2,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              239.0,
+              166.0
+            ],
+            [
+              635.0,
+              166.0
+            ],
+            [
+              635.0,
+              208.0
+            ],
+            [
+              239.0,
+              208.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -250,23 +103,185 @@
           "block_bbox": [
             764,
             176,
-            788,
-            191
+            791,
+            195
           ],
-          "block_id": 20,
-          "block_order": null
+          "block_id": 3,
+          "block_order": 3,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              764.0,
+              176.0
+            ],
+            [
+              790.0,
+              176.0
+            ],
+            [
+              790.0,
+              194.0
+            ],
+            [
+              764.0,
+              194.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "4.1.4 运行系数（SF）",
+          "block_bbox": [
+            96,
+            215,
+            258,
+            236
+          ],
+          "block_id": 4,
+          "block_order": 4,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              96.0,
+              215.0
+            ],
+            [
+              257.0,
+              215.0
+            ],
+            [
+              257.0,
+              235.0
+            ],
+            [
+              96.0,
+              235.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$  SF=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{SH}{PH}\\times100\\% $$ ",
+          "block_bbox": [
+            205,
+            240,
+            600,
+            282
+          ],
+          "block_id": 5,
+          "block_order": 5,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              205.0,
+              240.0
+            ],
+            [
+              600.0,
+              240.0
+            ],
+            [
+              600.0,
+              282.0
+            ],
+            [
+              205.0,
+              282.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(4)",
           "block_bbox": [
-            765,
-            250,
-            788,
-            265
+            764,
+            251,
+            791,
+            268
           ],
-          "block_id": 21,
-          "block_order": null
+          "block_id": 6,
+          "block_order": 6,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              764.0,
+              251.0
+            ],
+            [
+              790.0,
+              251.0
+            ],
+            [
+              790.0,
+              267.0
+            ],
+            [
+              764.0,
+              267.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "4.1.5 平均无故障可用小时数（MTBF）",
+          "block_bbox": [
+            95,
+            289,
+            377,
+            310
+          ],
+          "block_id": 7,
+          "block_order": 7,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              95.0,
+              289.0
+            ],
+            [
+              376.0,
+              289.0
+            ],
+            [
+              376.0,
+              309.0
+            ],
+            [
+              95.0,
+              309.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}} $$ ",
+          "block_bbox": [
+            236,
+            314,
+            571,
+            356
+          ],
+          "block_id": 8,
+          "block_order": 8,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              236.0,
+              314.0
+            ],
+            [
+              571.0,
+              314.0
+            ],
+            [
+              571.0,
+              356.0
+            ],
+            [
+              236.0,
+              356.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -274,11 +289,92 @@
           "block_bbox": [
             765,
             324,
-            788,
-            339
+            791,
+            342
           ],
-          "block_id": 22,
-          "block_order": null
+          "block_id": 9,
+          "block_order": 9,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              765.0,
+              324.0
+            ],
+            [
+              790.0,
+              324.0
+            ],
+            [
+              790.0,
+              341.0
+            ],
+            [
+              765.0,
+              341.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "4.1.6 不可用系数（UF）",
+          "block_bbox": [
+            96,
+            364,
+            276,
+            384
+          ],
+          "block_id": 10,
+          "block_order": 10,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              96.0,
+              364.0
+            ],
+            [
+              275.0,
+              364.0
+            ],
+            [
+              275.0,
+              383.0
+            ],
+            [
+              96.0,
+              383.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\% $$ ",
+          "block_bbox": [
+            237,
+            389,
+            692,
+            431
+          ],
+          "block_id": 11,
+          "block_order": 11,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              237.0,
+              389.0
+            ],
+            [
+              692.0,
+              389.0
+            ],
+            [
+              692.0,
+              431.0
+            ],
+            [
+              237.0,
+              431.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -286,4317 +382,425 @@
           "block_bbox": [
             766,
             399,
-            789,
-            413
+            792,
+            417
           ],
-          "block_id": 23,
-          "block_order": null
+          "block_id": 12,
+          "block_order": 12,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              766.0,
+              399.0
+            ],
+            [
+              791.0,
+              399.0
+            ],
+            [
+              791.0,
+              416.0
+            ],
+            [
+              766.0,
+              416.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "4.2 对由两个及以上串联补偿装置组成的串联补偿系统，串联补偿系统的评价指标为串联等效可用系数（Series Equivalent Available Factor SEAF），其计算公式按式（7）进行统计。",
+          "block_bbox": [
+            94,
+            438,
+            801,
+            482
+          ],
+          "block_id": 13,
+          "block_order": 13,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              94.0,
+              438.0
+            ],
+            [
+              801.0,
+              438.0
+            ],
+            [
+              801.0,
+              482.0
+            ],
+            [
+              94.0,
+              482.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{aligned}SEAF=&\\frac{\\sum( 各串联补偿装置的额定补偿容量 \\times 该串联补偿装置的可用时间 )}{ 该串联补偿系统的额定补偿容量 \\times 统计期间 }\\\\=&\\frac{\\sum(Q_{N}\\times AH)}{Q_{N}\\times PH}\\times100\\%\\end{aligned} $$ ",
+          "block_bbox": [
+            205,
+            484,
+            717,
+            581
+          ],
+          "block_id": 14,
+          "block_order": 14,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              205.0,
+              484.0
+            ],
+            [
+              717.0,
+              484.0
+            ],
+            [
+              717.0,
+              581.0
+            ],
+            [
+              205.0,
+              581.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(7)",
           "block_bbox": [
-            766,
+            765,
             521,
-            789,
-            536
+            792,
+            539
+          ],
+          "block_id": 15,
+          "block_order": 15,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              765.0,
+              521.0
+            ],
+            [
+              791.0,
+              521.0
+            ],
+            [
+              791.0,
+              538.0
+            ],
+            [
+              765.0,
+              538.0
+            ]
+          ]
+        },
+        {
+          "block_label": "paragraph_title",
+          "block_content": "5 填表要求",
+          "block_bbox": [
+            95,
+            599,
+            190,
+            620
+          ],
+          "block_id": 16,
+          "block_order": 16,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              94.99999237060547,
+              598.9999389648438
+            ],
+            [
+              188.99996948242188,
+              598.9999389648438
+            ],
+            [
+              188.99996948242188,
+              618.9999389648438
+            ],
+            [
+              94.99999237060547,
+              618.9999389648438
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "5.1 串联补偿装置基本情况表见表1。",
+          "block_bbox": [
+            95,
+            635,
+            362,
+            655
+          ],
+          "block_id": 17,
+          "block_order": 17,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              95.0,
+              635.0
+            ],
+            [
+              361.0,
+              635.0
+            ],
+            [
+              361.0,
+              654.0
+            ],
+            [
+              95.0,
+              654.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "5.2 串联补偿装置基础事件表见表2。",
+          "block_bbox": [
+            96,
+            659,
+            362,
+            678
+          ],
+          "block_id": 18,
+          "block_order": 18,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              96.0,
+              659.0
+            ],
+            [
+              361.0,
+              659.0
+            ],
+            [
+              361.0,
+              677.0
+            ],
+            [
+              96.0,
+              677.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "5.3 串联补偿装置可靠性指标汇总表见表3.",
+          "block_bbox": [
+            96,
+            682,
+            407,
+            701
+          ],
+          "block_id": 19,
+          "block_order": 19,
+          "group_id": 19,
+          "block_polygon_points": [
+            [
+              96.0,
+              682.0
+            ],
+            [
+              406.0,
+              682.0
+            ],
+            [
+              406.0,
+              700.0
+            ],
+            [
+              96.0,
+              700.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "5.4 串联补偿装置停运部件原因分类表见表4，其中串联补偿装置部件分类参见附录B。",
+          "block_bbox": [
+            95,
+            705,
+            704,
+            725
+          ],
+          "block_id": 20,
+          "block_order": 20,
+          "group_id": 20,
+          "block_polygon_points": [
+            [
+              95.0,
+              705.0
+            ],
+            [
+              699.0,
+              705.0
+            ],
+            [
+              699.0,
+              724.0
+            ],
+            [
+              95.0,
+              724.0
+            ]
+          ]
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "表 1 串联补偿装置基本情况表",
+          "block_bbox": [
+            338,
+            740,
+            561,
+            760
+          ],
+          "block_id": 21,
+          "block_order": null,
+          "group_id": 21,
+          "block_polygon_points": [
+            [
+              338.0,
+              740.0
+            ],
+            [
+              560.0,
+              740.0
+            ],
+            [
+              560.0,
+              759.0
+            ],
+            [
+              338.0,
+              759.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "填报日期：___年___月___日",
+          "block_bbox": [
+            98,
+            767,
+            290,
+            785
+          ],
+          "block_id": 22,
+          "block_order": null,
+          "group_id": 22,
+          "block_polygon_points": [
+            [
+              98.0,
+              767.0
+            ],
+            [
+              289.0,
+              767.0
+            ],
+            [
+              289.0,
+              784.0
+            ],
+            [
+              98.0,
+              784.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "挡跟单位：___",
+          "block_bbox": [
+            620,
+            766,
+            736,
+            783
+          ],
+          "block_id": 23,
+          "block_order": null,
+          "group_id": 23,
+          "block_polygon_points": [
+            [
+              619.9999389648438,
+              765.9999389648438
+            ],
+            [
+              734.9999389648438,
+              765.9999389648438
+            ],
+            [
+              734.9999389648438,
+              781.9999389648438
+            ],
+            [
+              619.9999389648438,
+              781.9999389648438
+            ]
+          ]
+        },
+        {
+          "block_label": "table",
+          "block_content": "<table><tr><td rowspan=\"5\">串联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>串联补偿装置的类型</td><td></td></tr><tr><td>投运日期</td><td>年 月 日</td></tr><tr><td>系统电压\nkV</td><td></td></tr><tr><td>设备供应商</td><td></td></tr><tr><td rowspan=\"5\">串联补偿装置主要技术指标</td><td>补偿度\n%</td><td></td></tr><tr><td>额定容量 $ Q_{s} $\nMvar/三相</td><td></td></tr><tr><td>额定容抗\n $ \\Omega/ $单相</td><td></td></tr><tr><td>额定电流\nkA</td><td></td></tr><tr><td>固定串联电容补偿装置的最大短路电流 $ I_{f} $\nkA, 10s</td><td></td></tr></table>",
+          "block_bbox": [
+            98,
+            782,
+            802,
+            1139
           ],
           "block_id": 24,
-          "block_order": null
-        },
-        {
-          "block_label": "number",
-          "block_content": "4",
-          "block_bbox": [
-            112,
-            1156,
-            120,
-            1167
-          ],
-          "block_id": 25,
-          "block_order": null
+          "block_order": null,
+          "group_id": 24,
+          "block_polygon_points": [
+            [
+              98.0,
+              782.0
+            ],
+            [
+              802.0,
+              782.0
+            ],
+            [
+              802.0,
+              1139.0
+            ],
+            [
+              98.0,
+              1139.0
+            ]
+          ]
         }
       ],
-      "markdown": "DL/T1090—20C8\n\n#### 4.1.3 可用系数（AF）\n\n$$AF=\\frac{ 串联补偿装置的可用小时效 }{ 串联补偿装置的统计期间小时效 }\\times100\\%=\\frac{AH}{2\\pi}\\times100\\%$$\n\n#### 4.1.4 运行系数（SF)\n\n$$\\mathrm{SF}=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{SH}}{\\mathrm{PH}}\\times100\\%$$\n\n4.1.5平均无故障可用小时数（MTBF）\n\n$$\\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}}$$\n\n4.1.6不可用系数（UF）\n\n$$\\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times\\mathrm{tt}00\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\%$$\n\n4.2对由两个及以上串联补偿装置组成的串联补偿系统，串联补偿系统的评价指标为串联等效可用系数（SeriesEquivalentAvailableFactor，SEAF），其计算公式按式（7）进行统计。\n\n$$\\mathrm{SEAF}=\\frac{\\sum( 各串联补偿装豆的额定补偿容认 \\times 该串联补偿装罕的可用时间 )}{ 该串联补偿系统的额定补偿容盐 \\times 统计期间 }$$\n\n## 5 填表要求\n\n5.1串联补偿装置基本情况表见表1。\n\n5.2串联补偿装置基础事件表见表2。\n\n5.3串联补偿装置可靠性指标汇总表见表3.\n\n5.4串联补偿装置停运部件原因分类表见表4，其中串联补偿装置部件分类参见附录B。\n\n<div style=\"text-align: center;\">表1串联补偿装置基本情况表</div>\n\n\n填报日期 ：_年月__日\n\n报单位：\n\n\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tr><td rowspan=\"6\">中联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>中联补装的类型</td><td></td></tr><tr><td>投运日期</td><td>年月1</td></tr><tr><td>系统电压 kV</td><td></td></tr><tr><td>设备供货</td><td></td></tr><tr><td></td><td></td></tr><tr><td rowspan=\"5\">申联补偿装置主要技术 指标</td><td>补偿度 %</td><td></td></tr><tr><td>额定容抗 Ω/单相</td><td></td></tr><tr><td>额定电流 kA</td><td></td></tr><tr><td>固定申联电容补偿装置的站大插摆电流 kA,10s $I_{\\tau}$</td><td></td></tr><tr><td></td><td></td></tr></tbody></table></body></html></div>\n",
+      "markdown": "4.1.3 可用系数（AF）\n\n $$ \\mathrm{AF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{AH}}{\\mathrm{PH}}\\times100\\% $$ \n\n4.1.4 运行系数（SF）\n\n $$  SF=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{SH}{PH}\\times100\\% $$ \n\n4.1.5 平均无故障可用小时数（MTBF）\n\n $$ \\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}} $$ \n\n4.1.6 不可用系数（UF）\n\n $$ \\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\% $$ \n\n4.2 对由两个及以上串联补偿装置组成的串联补偿系统，串联补偿系统的评价指标为串联等效可用系数（Series Equivalent Available Factor SEAF），其计算公式按式（7）进行统计。\n\n $$ \\begin{aligned}SEAF=&\\frac{\\sum( 各串联补偿装置的额定补偿容量 \\times 该串联补偿装置的可用时间 )}{ 该串联补偿系统的额定补偿容量 \\times 统计期间 }\\\\=&\\frac{\\sum(Q_{N}\\times AH)}{Q_{N}\\times PH}\\times100\\%\\end{aligned} $$ \n\n## 5 填表要求\n\n5.1 串联补偿装置基本情况表见表1。\n\n5.2 串联补偿装置基础事件表见表2。\n\n5.3 串联补偿装置可靠性指标汇总表见表3.\n\n5.4 串联补偿装置停运部件原因分类表见表4，其中串联补偿装置部件分类参见附录B。\n\n<div style=\"text-align: center;\">表 1 串联补偿装置基本情况表</div>\n\n\n填报日期：___年___月___日\n\n挡跟单位：___\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"5\">串联补偿装置工程简况</td><td style='text-align: center; word-wrap: break-word;'>系统名称</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>串联补偿装置的类型</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>投运日期</td><td style='text-align: center; word-wrap: break-word;'>年 月 日</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>系统电压\nkV</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>设备供应商</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td rowspan=\"5\">串联补偿装置主要技术指标</td><td style='text-align: center; word-wrap: break-word;'>补偿度\n%</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>额定容量 $ Q_{s} $\nMvar/三相</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>额定容抗\n $ \\Omega/ $单相</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>额定电流\nkA</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>固定串联电容补偿装置的最大短路电流 $ I_{f} $\nkA, 10s</td><td style='text-align: center; word-wrap: break-word;'></td></tr></table>",
       "tables": [
         {
-          "cell_box_list": [
-            [
-              100.10993349552155,
-              787.2453589439392,
-              271.1787414550781,
-              924.5623474121094
-            ],
-            [
-              270.8656768798828,
-              787.691951751709,
-              534.27099609375,
-              812.3781261444092
-            ],
-            [
-              534.1197509765625,
-              787.0984511375427,
-              798.0360717773438,
-              812.0068511962891
-            ],
-            [
-              270.7436981201172,
-              812.3173809051514,
-              534.0972900390625,
-              836.8782806396484
-            ],
-            [
-              534.1957397460938,
-              811.9036540985107,
-              797.193603515625,
-              836.6920623779297
-            ],
-            [
-              270.8748779296875,
-              836.7912445068359,
-              534.1205139160156,
-              860.8187713623047
-            ],
-            [
-              534.2842102050781,
-              836.6295394897461,
-              797.3292846679688,
-              860.5973815917969
-            ],
-            [
-              270.8865966796875,
-              860.7546844482422,
-              534.2109375,
-              901.0867462158203
-            ],
-            [
-              534.0963439941406,
-              860.5344390869141,
-              796.8165893554688,
-              900.4461441040039
-            ],
-            [
-              271.0079040527344,
-              901.0109786987305,
-              534.4233703613281,
-              924.6230926513672
-            ],
-            [
-              534.3471069335938,
-              900.2611694335938,
-              797.9275512695312,
-              924.2207336425781
-            ],
-            [
-              100.10686409473419,
-              924.265380859375,
-              271.57884216308594,
-              1131.381591796875
-            ],
-            [
-              270.5955810546875,
-              924.5911560058594,
-              534.3662719726562,
-              966.3837738037109
-            ],
-            [
-              534.2354125976562,
-              924.0387115478516,
-              797.7364501953125,
-              965.8855438232422
-            ],
-            [
-              271.07801818847656,
-              966.3716888427734,
-              534.4655456542969,
-              1013.2208709716797
-            ],
-            [
-              534.5143432617188,
-              965.7890319824219,
-              797.5127563476562,
-              1012.6877593994141
-            ],
-            [
-              271.63685607910156,
-              1013.1954345703125,
-              534.9000549316406,
-              1054.7812194824219
-            ],
-            [
-              534.6651000976562,
-              1012.6846771240234,
-              797.6701049804688,
-              1054.366455078125
-            ],
-            [
-              271.5675048828125,
-              1054.7349548339844,
-              535.37890625,
-              1094.193359375
-            ],
-            [
-              535.2246398925781,
-              1054.3656616210938,
-              797.751220703125,
-              1093.7932434082031
-            ],
-            [
-              271.671142578125,
-              1094.1128845214844,
-              535.6435241699219,
-              1132.4014282226562
-            ],
-            [
-              535.5814208984375,
-              1093.6751403808594,
-              797.1647338867188,
-              1132.2156372070312
-            ]
-          ],
-          "pred_html": "<html><body><table><tr><td rowspan=\"6\">中联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>中联补装的类型</td><td></td></tr><tr><td>投运日期</td><td>年月1</td></tr><tr><td>系统电压 kV</td><td></td></tr><tr><td>设备供货</td><td></td></tr><tr><td></td><td></td></tr><tr><td rowspan=\"5\">申联补偿装置主要技术 指标</td><td>补偿度 %</td><td></td></tr><tr><td>额定容抗 Ω/单相</td><td></td></tr><tr><td>额定电流 kA</td><td></td></tr><tr><td>固定申联电容补偿装置的站大插摆电流 kA,10s $I_{\\tau}$</td><td></td></tr><tr><td></td><td></td></tr></tbody></table></body></html>",
-          "table_ocr_pred": {
-            "rec_polys": [
-              [
-                [
-                  97,
-                  764
-                ],
-                [
-                  290,
-                  764
-                ],
-                [
-                  290,
-                  785
-                ],
-                [
-                  97,
-                  785
-                ]
-              ],
-              [
-                [
-                  618,
-                  763
-                ],
-                [
-                  687,
-                  763
-                ],
-                [
-                  687,
-                  785
-                ],
-                [
-                  618,
-                  785
-                ]
-              ],
-              [
-                [
-                  373,
-                  790
-                ],
-                [
-                  433,
-                  790
-                ],
-                [
-                  433,
-                  811
-                ],
-                [
-                  373,
-                  811
-                ]
-              ],
-              [
-                [
-                  341,
-                  814
-                ],
-                [
-                  466,
-                  814
-                ],
-                [
-                  466,
-                  835
-                ],
-                [
-                  341,
-                  835
-                ]
-              ],
-              [
-                [
-                  373,
-                  838
-                ],
-                [
-                  434,
-                  838
-                ],
-                [
-                  434,
-                  859
-                ],
-                [
-                  373,
-                  859
-                ]
-              ],
-              [
-                [
-                  700,
-                  837
-                ],
-                [
-                  774,
-                  837
-                ],
-                [
-                  774,
-                  858
-                ],
-                [
-                  700,
-                  858
-                ]
-              ],
-              [
-                [
-                  121,
-                  847
-                ],
-                [
-                  257,
-                  847
-                ],
-                [
-                  257,
-                  864
-                ],
-                [
-                  121,
-                  864
-                ]
-              ],
-              [
-                [
-                  373,
-                  862
-                ],
-                [
-                  433,
-                  862
-                ],
-                [
-                  433,
-                  883
-                ],
-                [
-                  373,
-                  883
-                ]
-              ],
-              [
-                [
-                  390,
-                  879
-                ],
-                [
-                  416,
-                  879
-                ],
-                [
-                  416,
-                  900
-                ],
-                [
-                  390,
-                  900
-                ]
-              ],
-              [
-                [
-                  368,
-                  904
-                ],
-                [
-                  438,
-                  904
-                ],
-                [
-                  438,
-                  922
-                ],
-                [
-                  368,
-                  922
-                ]
-              ],
-              [
-                [
-                  380,
-                  926
-                ],
-                [
-                  427,
-                  926
-                ],
-                [
-                  427,
-                  948
-                ],
-                [
-                  380,
-                  948
-                ]
-              ],
-              [
-                [
-                  393,
-                  945
-                ],
-                [
-                  413,
-                  945
-                ],
-                [
-                  413,
-                  964
-                ],
-                [
-                  393,
-                  964
-                ]
-              ],
-              [
-                [
-                  363,
-                  969
-                ],
-                [
-                  425,
-                  969
-                ],
-                [
-                  425,
-                  991
-                ],
-                [
-                  363,
-                  991
-                ]
-              ],
-              [
-                [
-                  370,
-                  990
-                ],
-                [
-                  437,
-                  990
-                ],
-                [
-                  437,
-                  1012
-                ],
-                [
-                  370,
-                  1012
-                ]
-              ],
-              [
-                [
-                  121,
-                  1013
-                ],
-                [
-                  266,
-                  1013
-                ],
-                [
-                  266,
-                  1030
-                ],
-                [
-                  121,
-                  1030
-                ]
-              ],
-              [
-                [
-                  374,
-                  1015
-                ],
-                [
-                  434,
-                  1015
-                ],
-                [
-                  434,
-                  1036
-                ],
-                [
-                  374,
-                  1036
-                ]
-              ],
-              [
-                [
-                  104,
-                  1027
-                ],
-                [
-                  140,
-                  1027
-                ],
-                [
-                  140,
-                  1050
-                ],
-                [
-                  104,
-                  1050
-                ]
-              ],
-              [
-                [
-                  378,
-                  1032
-                ],
-                [
-                  429,
-                  1032
-                ],
-                [
-                  429,
-                  1053
-                ],
-                [
-                  378,
-                  1053
-                ]
-              ],
-              [
-                [
-                  374,
-                  1056
-                ],
-                [
-                  434,
-                  1056
-                ],
-                [
-                  434,
-                  1077
-                ],
-                [
-                  374,
-                  1077
-                ]
-              ],
-              [
-                [
-                  391,
-                  1075
-                ],
-                [
-                  416,
-                  1075
-                ],
-                [
-                  416,
-                  1092
-                ],
-                [
-                  391,
-                  1092
-                ]
-              ],
-              [
-                [
-                  283,
-                  1097
-                ],
-                [
-                  512,
-                  1097
-                ],
-                [
-                  512,
-                  1115
-                ],
-                [
-                  283,
-                  1115
-                ]
-              ],
-              [
-                [
-                  377,
-                  1116
-                ],
-                [
-                  432,
-                  1116
-                ],
-                [
-                  432,
-                  1133
-                ],
-                [
-                  377,
-                  1133
-                ]
-              ],
-              [
-                [
-                  513,
-                  1100
-                ],
-                [
-                  525,
-                  1100
-                ],
-                [
-                  525,
-                  1116
-                ],
-                [
-                  513,
-                  1116
-                ]
-              ],
-              [
-                [
-                  421,
-                  974
-                ],
-                [
-                  438,
-                  974
-                ],
-                [
-                  438,
-                  990
-                ],
-                [
-                  421,
-                  990
-                ]
-              ]
-            ],
-            "rec_texts": [
-              "填报日期 ：_年月__日",
-              "报单位：",
-              "系统名称",
-              "中联补装的类型",
-              "投运日期",
-              "年月1",
-              "中联补偿装置工程简况",
-              "系统电压",
-              "kV",
-              "设备供货",
-              "补偿度",
-              "%",
-              "额定容量",
-              "Mvar/三相",
-              "申联补偿装置主要技术",
-              "额定容抗",
-              "指标",
-              "Ω/单相",
-              "额定电流",
-              "kA",
-              "固定申联电容补偿装置的站大插摆电流",
-              "kA,10s",
-              "$I_{\\tau}$",
-              "$Q_{\\mathrm{s}}$"
-            ],
-            "rec_scores": [
-              0.7199456095695496,
-              0.8163822889328003,
-              0.9951065182685852,
-              0.8696683645248413,
-              0.9530840516090393,
-              0.8131652474403381,
-              0.8702841997146606,
-              0.9884850978851318,
-              0.9187464714050293,
-              0.886096715927124,
-              0.9328174591064453,
-              0.9929553866386414,
-              0.9849134683609009,
-              0.8012699484825134,
-              0.8594961166381836,
-              0.8837214708328247,
-              0.9862837791442871,
-              0.8323295712471008,
-              0.9583379030227661,
-              0.988523006439209,
-              0.8569663166999817,
-              0.8137746453285217,
-              1.0,
-              1.0
-            ],
-            "rec_boxes": [
-              [
-                97.0,
-                764.0,
-                290.0,
-                785.0
-              ],
-              [
-                618.0,
-                763.0,
-                687.0,
-                785.0
-              ],
-              [
-                373.0,
-                790.0,
-                433.0,
-                811.0
-              ],
-              [
-                341.0,
-                814.0,
-                466.0,
-                835.0
-              ],
-              [
-                373.0,
-                838.0,
-                434.0,
-                859.0
-              ],
-              [
-                700.0,
-                837.0,
-                774.0,
-                858.0
-              ],
-              [
-                121.0,
-                847.0,
-                257.0,
-                864.0
-              ],
-              [
-                373.0,
-                862.0,
-                433.0,
-                883.0
-              ],
-              [
-                390.0,
-                879.0,
-                416.0,
-                900.0
-              ],
-              [
-                368.0,
-                904.0,
-                438.0,
-                922.0
-              ],
-              [
-                380.0,
-                926.0,
-                427.0,
-                948.0
-              ],
-              [
-                393.0,
-                945.0,
-                413.0,
-                964.0
-              ],
-              [
-                363.0,
-                969.0,
-                425.0,
-                991.0
-              ],
-              [
-                370.0,
-                990.0,
-                437.0,
-                1012.0
-              ],
-              [
-                121.0,
-                1013.0,
-                266.0,
-                1030.0
-              ],
-              [
-                374.0,
-                1015.0,
-                434.0,
-                1036.0
-              ],
-              [
-                104.0,
-                1027.0,
-                140.0,
-                1050.0
-              ],
-              [
-                378.0,
-                1032.0,
-                429.0,
-                1053.0
-              ],
-              [
-                374.0,
-                1056.0,
-                434.0,
-                1077.0
-              ],
-              [
-                391.0,
-                1075.0,
-                416.0,
-                1092.0
-              ],
-              [
-                283.0,
-                1097.0,
-                512.0,
-                1115.0
-              ],
-              [
-                377.0,
-                1116.0,
-                432.0,
-                1133.0
-              ],
-              [
-                513.5643310546875,
-                1100.6015625,
-                525.8438720703125,
-                1116.70849609375
-              ],
-              [
-                421.332763671875,
-                974.2879028320312,
-                438.1214599609375,
-                990.5426635742188
-              ]
-            ]
-          }
+          "pred_html": "<table><tr><td rowspan=\"5\">串联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>串联补偿装置的类型</td><td></td></tr><tr><td>投运日期</td><td>年 月 日</td></tr><tr><td>系统电压\nkV</td><td></td></tr><tr><td>设备供应商</td><td></td></tr><tr><td rowspan=\"5\">串联补偿装置主要技术指标</td><td>补偿度\n%</td><td></td></tr><tr><td>额定容量 $ Q_{s} $\nMvar/三相</td><td></td></tr><tr><td>额定容抗\n $ \\Omega/ $单相</td><td></td></tr><tr><td>额定电流\nkA</td><td></td></tr><tr><td>固定串联电容补偿装置的最大短路电流 $ I_{f} $\nkA, 10s</td><td></td></tr></table>"
         }
       ],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times\\mathrm{tt}00\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\%",
-          "formula_region_id": 1,
-          "dt_polys": [
-            238.78079223632812,
-            388.34417724609375,
-            689.6669921875,
-            427.73846435546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "AF=\\frac{ 串联补偿装置的可用小时效 }{ 串联补偿装置的统计期间小时效 }\\times100\\%=\\frac{AH}{2\\pi}\\times100\\%",
-          "formula_region_id": 2,
-          "dt_polys": [
-            239.12945556640625,
-            166.02708435058594,
-            632.1985473632812,
-            205.4370880126953
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{SF}=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{SH}}{\\mathrm{PH}}\\times100\\%",
-          "formula_region_id": 3,
-          "dt_polys": [
-            206.21560668945312,
-            239.94796752929688,
-            596.983642578125,
-            279.6053161621094
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            238.1744384765625,
-            314.3731689453125,
-            569.1630859375,
-            353.45849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{SEAF}=\\frac{\\sum( 各串联补偿装豆的额定补偿容认 \\times 该串联补偿装罕的可用时间 )}{ 该串联补偿系统的额定补偿容盐 \\times 统计期间 }",
-          "formula_region_id": 5,
-          "dt_polys": [
-            206.60264587402344,
-            485.5479736328125,
-            714.096435546875,
-            577.0775146484375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "I_{\\tau}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            513.5643310546875,
-            1100.6015625,
-            525.8438720703125,
-            1116.70849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "Q_{\\mathrm{s}}",
-          "formula_region_id": 7,
-          "dt_polys": [
-            421.332763671875,
-            974.2879028320312,
-            438.1214599609375,
-            990.5426635742188
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 888,
       "height": 1260,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 8,
-            "label": "table",
-            "score": 0.9849957823753357,
-            "coordinate": [
-              98.6048583984375,
-              781.1536865234375,
-              801.090576171875,
-              1135.6419677734375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9624902606010437,
-            "coordinate": [
-              95.76303100585938,
-              438.1355285644531,
-              796.881103515625,
-              478.7585144042969
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9604042768478394,
-            "coordinate": [
-              238.78079223632812,
-              388.34417724609375,
-              689.6669921875,
-              427.73846435546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9597586393356323,
-            "coordinate": [
-              239.12945556640625,
-              166.02708435058594,
-              632.1985473632812,
-              205.4370880126953
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9584509134292603,
-            "coordinate": [
-              206.21560668945312,
-              239.94796752929688,
-              596.983642578125,
-              279.6053161621094
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9574363231658936,
-            "coordinate": [
-              238.1744384765625,
-              314.3731689453125,
-              569.1630859375,
-              353.45849609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9369648694992065,
-            "coordinate": [
-              206.60264587402344,
-              485.5479736328125,
-              714.096435546875,
-              577.0775146484375
-            ]
-          },
-          {
-            "cls_id": 6,
-            "label": "figure_title",
-            "score": 0.9140822887420654,
-            "coordinate": [
-              338.64617919921875,
-              740.4934692382812,
-              557.740234375,
-              756.3411254882812
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9134630560874939,
-            "coordinate": [
-              95.72061157226562,
-              705.00732421875,
-              699.6170654296875,
-              721.21435546875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9100302457809448,
-            "coordinate": [
-              96.06742858886719,
-              635.190673828125,
-              360.17291259765625,
-              651.29931640625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9042584896087646,
-            "coordinate": [
-              96.52294921875,
-              682.098388671875,
-              405.26739501953125,
-              698.124755859375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8986769914627075,
-            "coordinate": [
-              96.66946411132812,
-              658.8399658203125,
-              359.9189758300781,
-              674.5645751953125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8828167915344238,
-            "coordinate": [
-              765.67919921875,
-              324.6387939453125,
-              788.9404296875,
-              339.904541015625
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8818361163139343,
-            "coordinate": [
-              764.8975830078125,
-              176.5213623046875,
-              788.052001953125,
-              191.878662109375
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8817619681358337,
-            "coordinate": [
-              766.23193359375,
-              521.70654296875,
-              789.629638671875,
-              536.6513671875
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8811740875244141,
-            "coordinate": [
-              766.4215087890625,
-              399.2738037109375,
-              789.3177490234375,
-              413.91748046875
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8799432516098022,
-            "coordinate": [
-              765.2083740234375,
-              250.8273162841797,
-              788.4691162109375,
-              265.67279052734375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.8201994299888611,
-            "coordinate": [
-              96.33135986328125,
-              599.97705078125,
-              185.555419921875,
-              615.952392578125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8021901845932007,
-            "coordinate": [
-              97.92290496826172,
-              767.58740234375,
-              287.68994140625,
-              782.60693359375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7181368470191956,
-            "coordinate": [
-              96.10824584960938,
-              290.044189453125,
-              375.50762939453125,
-              306.1112060546875
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.6874389052391052,
-            "coordinate": [
-              112.2084732055664,
-              1156.9749755859375,
-              120.82755279541016,
-              1167.5433349609375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.6531750559806824,
-            "coordinate": [
-              96.50068664550781,
-              216.02439880371094,
-              255.43067932128906,
-              231.9931182861328
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.6514074802398682,
-            "coordinate": [
-              96.29312896728516,
-              142.031494140625,
-              257.5856018066406,
-              158.03515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.6083183884620667,
-            "coordinate": [
-              96.49041748046875,
-              108.16840362548828,
-              233.8421630859375,
-              123.09044647216797
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.5743662118911743,
-            "coordinate": [
-              96.45113372802734,
-              364.613037109375,
-              273.3653869628906,
-              380.119140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5534824132919312,
-            "coordinate": [
-              513.5643310546875,
-              1100.6015625,
-              525.8438720703125,
-              1116.70849609375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.4390879273414612,
-            "coordinate": [
-              620.7569580078125,
-              767.222900390625,
-              682.8902587890625,
-              781.8465576171875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.4233548939228058,
-            "coordinate": [
-              421.332763671875,
-              974.2879028320312,
-              438.1214599609375,
-              990.5426635742188
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              97,
-              106
-            ],
-            [
-              235,
-              106
-            ],
-            [
-              235,
-              126
-            ],
-            [
-              97,
-              126
-            ]
-          ],
-          [
-            [
-              98,
-              141
-            ],
-            [
-              143,
-              141
-            ],
-            [
-              143,
-              161
-            ],
-            [
-              98,
-              161
-            ]
-          ],
-          [
-            [
-              145,
-              140
-            ],
-            [
-              259,
-              140
-            ],
-            [
-              259,
-              161
-            ],
-            [
-              145,
-              161
-            ]
-          ],
-          [
-            [
-              761,
-              172
-            ],
-            [
-              794,
-              172
-            ],
-            [
-              794,
-              197
-            ],
-            [
-              761,
-              197
-            ]
-          ],
-          [
-            [
-              97,
-              215
-            ],
-            [
-              256,
-              213
-            ],
-            [
-              256,
-              234
-            ],
-            [
-              97,
-              236
-            ]
-          ],
-          [
-            [
-              760,
-              246
-            ],
-            [
-              795,
-              246
-            ],
-            [
-              795,
-              272
-            ],
-            [
-              760,
-              272
-            ]
-          ],
-          [
-            [
-              99,
-              290
-            ],
-            [
-              375,
-              290
-            ],
-            [
-              375,
-              307
-            ],
-            [
-              99,
-              307
-            ]
-          ],
-          [
-            [
-              760,
-              320
-            ],
-            [
-              795,
-              320
-            ],
-            [
-              795,
-              345
-            ],
-            [
-              760,
-              345
-            ]
-          ],
-          [
-            [
-              98,
-              361
-            ],
-            [
-              274,
-              361
-            ],
-            [
-              274,
-              382
-            ],
-            [
-              98,
-              382
-            ]
-          ],
-          [
-            [
-              761,
-              394
-            ],
-            [
-              796,
-              394
-            ],
-            [
-              796,
-              419
-            ],
-            [
-              761,
-              419
-            ]
-          ],
-          [
-            [
-              98,
-              436
-            ],
-            [
-              798,
-              436
-            ],
-            [
-              798,
-              456
-            ],
-            [
-              98,
-              456
-            ]
-          ],
-          [
-            [
-              98,
-              459
-            ],
-            [
-              635,
-              458
-            ],
-            [
-              635,
-              479
-            ],
-            [
-              98,
-              480
-            ]
-          ],
-          [
-            [
-              760,
-              515
-            ],
-            [
-              797,
-              515
-            ],
-            [
-              797,
-              543
-            ],
-            [
-              760,
-              543
-            ]
-          ],
-          [
-            [
-              96,
-              598
-            ],
-            [
-              187,
-              598
-            ],
-            [
-              187,
-              619
-            ],
-            [
-              96,
-              619
-            ]
-          ],
-          [
-            [
-              95,
-              631
-            ],
-            [
-              361,
-              631
-            ],
-            [
-              361,
-              654
-            ],
-            [
-              95,
-              654
-            ]
-          ],
-          [
-            [
-              94,
-              654
-            ],
-            [
-              360,
-              654
-            ],
-            [
-              360,
-              678
-            ],
-            [
-              94,
-              678
-            ]
-          ],
-          [
-            [
-              95,
-              678
-            ],
-            [
-              406,
-              678
-            ],
-            [
-              406,
-              702
-            ],
-            [
-              95,
-              702
-            ]
-          ],
-          [
-            [
-              96,
-              703
-            ],
-            [
-              700,
-              703
-            ],
-            [
-              700,
-              723
-            ],
-            [
-              96,
-              723
-            ]
-          ],
-          [
-            [
-              341,
-              740
-            ],
-            [
-              557,
-              740
-            ],
-            [
-              557,
-              757
-            ],
-            [
-              341,
-              757
-            ]
-          ],
-          [
-            [
-              97,
-              764
-            ],
-            [
-              290,
-              764
-            ],
-            [
-              290,
-              785
-            ],
-            [
-              97,
-              785
-            ]
-          ],
-          [
-            [
-              618,
-              763
-            ],
-            [
-              687,
-              763
-            ],
-            [
-              687,
-              785
-            ],
-            [
-              618,
-              785
-            ]
-          ],
-          [
-            [
-              373,
-              790
-            ],
-            [
-              433,
-              790
-            ],
-            [
-              433,
-              811
-            ],
-            [
-              373,
-              811
-            ]
-          ],
-          [
-            [
-              341,
-              814
-            ],
-            [
-              466,
-              814
-            ],
-            [
-              466,
-              835
-            ],
-            [
-              341,
-              835
-            ]
-          ],
-          [
-            [
-              373,
-              838
-            ],
-            [
-              434,
-              838
-            ],
-            [
-              434,
-              859
-            ],
-            [
-              373,
-              859
-            ]
-          ],
-          [
-            [
-              700,
-              837
-            ],
-            [
-              774,
-              837
-            ],
-            [
-              774,
-              858
-            ],
-            [
-              700,
-              858
-            ]
-          ],
-          [
-            [
-              121,
-              847
-            ],
-            [
-              257,
-              847
-            ],
-            [
-              257,
-              864
-            ],
-            [
-              121,
-              864
-            ]
-          ],
-          [
-            [
-              373,
-              862
-            ],
-            [
-              433,
-              862
-            ],
-            [
-              433,
-              883
-            ],
-            [
-              373,
-              883
-            ]
-          ],
-          [
-            [
-              390,
-              879
-            ],
-            [
-              416,
-              879
-            ],
-            [
-              416,
-              900
-            ],
-            [
-              390,
-              900
-            ]
-          ],
-          [
-            [
-              368,
-              904
-            ],
-            [
-              438,
-              904
-            ],
-            [
-              438,
-              922
-            ],
-            [
-              368,
-              922
-            ]
-          ],
-          [
-            [
-              380,
-              926
-            ],
-            [
-              427,
-              926
-            ],
-            [
-              427,
-              948
-            ],
-            [
-              380,
-              948
-            ]
-          ],
-          [
-            [
-              393,
-              945
-            ],
-            [
-              413,
-              945
-            ],
-            [
-              413,
-              964
-            ],
-            [
-              393,
-              964
-            ]
-          ],
-          [
-            [
-              363,
-              969
-            ],
-            [
-              425,
-              969
-            ],
-            [
-              425,
-              991
-            ],
-            [
-              363,
-              991
-            ]
-          ],
-          [
-            [
-              370,
-              990
-            ],
-            [
-              437,
-              990
-            ],
-            [
-              437,
-              1012
-            ],
-            [
-              370,
-              1012
-            ]
-          ],
-          [
-            [
-              121,
-              1013
-            ],
-            [
-              266,
-              1013
-            ],
-            [
-              266,
-              1030
-            ],
-            [
-              121,
-              1030
-            ]
-          ],
-          [
-            [
-              374,
-              1015
-            ],
-            [
-              434,
-              1015
-            ],
-            [
-              434,
-              1036
-            ],
-            [
-              374,
-              1036
-            ]
-          ],
-          [
-            [
-              104,
-              1027
-            ],
-            [
-              140,
-              1027
-            ],
-            [
-              140,
-              1050
-            ],
-            [
-              104,
-              1050
-            ]
-          ],
-          [
-            [
-              378,
-              1032
-            ],
-            [
-              429,
-              1032
-            ],
-            [
-              429,
-              1053
-            ],
-            [
-              378,
-              1053
-            ]
-          ],
-          [
-            [
-              374,
-              1056
-            ],
-            [
-              434,
-              1056
-            ],
-            [
-              434,
-              1077
-            ],
-            [
-              374,
-              1077
-            ]
-          ],
-          [
-            [
-              391,
-              1075
-            ],
-            [
-              416,
-              1075
-            ],
-            [
-              416,
-              1092
-            ],
-            [
-              391,
-              1092
-            ]
-          ],
-          [
-            [
-              283,
-              1097
-            ],
-            [
-              512,
-              1097
-            ],
-            [
-              512,
-              1115
-            ],
-            [
-              283,
-              1115
-            ]
-          ],
-          [
-            [
-              377,
-              1116
-            ],
-            [
-              432,
-              1116
-            ],
-            [
-              432,
-              1133
-            ],
-            [
-              377,
-              1133
-            ]
-          ],
-          [
-            [
-              112,
-              1157
-            ],
-            [
-              122,
-              1157
-            ],
-            [
-              122,
-              1167
-            ],
-            [
-              112,
-              1167
-            ]
-          ],
-          [
-            [
-              238,
-              388
-            ],
-            [
-              689,
-              388
-            ],
-            [
-              689,
-              427
-            ],
-            [
-              238,
-              427
-            ]
-          ],
-          [
-            [
-              239,
-              166
-            ],
-            [
-              632,
-              166
-            ],
-            [
-              632,
-              205
-            ],
-            [
-              239,
-              205
-            ]
-          ],
-          [
-            [
-              206,
-              239
-            ],
-            [
-              596,
-              239
-            ],
-            [
-              596,
-              279
-            ],
-            [
-              206,
-              279
-            ]
-          ],
-          [
-            [
-              238,
-              314
-            ],
-            [
-              569,
-              314
-            ],
-            [
-              569,
-              353
-            ],
-            [
-              238,
-              353
-            ]
-          ],
-          [
-            [
-              206,
-              485
-            ],
-            [
-              714,
-              485
-            ],
-            [
-              714,
-              577
-            ],
-            [
-              206,
-              577
-            ]
-          ],
-          [
-            [
-              513,
-              1100
-            ],
-            [
-              525,
-              1100
-            ],
-            [
-              525,
-              1116
-            ],
-            [
-              513,
-              1116
-            ]
-          ],
-          [
-            [
-              421,
-              974
-            ],
-            [
-              438,
-              974
-            ],
-            [
-              438,
-              990
-            ],
-            [
-              421,
-              990
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "DL/T1090—20C8",
-          "4.1.3",
-          "可用系数（AF）",
-          "(3)",
-          "4.1.4运行系数（SF)",
-          "(4)",
-          "4.1.5平均无故障可用小时数（MTBF）",
-          "(5)",
-          "4.1.6不可用系数（UF）",
-          "(6)",
-          "4.2对由两个及以上串联补偿装置组成的串联补偿系统，串联补偿系统的评价指标为串联等效可用系",
-          "数（SeriesEquivalentAvailableFactor，SEAF），其计算公式按式（7）进行统计。",
-          "(7)",
-          "5填表要求",
-          "5.1串联补偿装置基本情况表见表1。",
-          "5.2串联补偿装置基础事件表见表2。",
-          "5.3串联补偿装置可靠性指标汇总表见表3.",
-          "5.4串联补偿装置停运部件原因分类表见表4，其中串联补偿装置部件分类参见附录B。",
-          "表1串联补偿装置基本情况表",
-          "填报日期 ：_年月__日",
-          "报单位：",
-          "系统名称",
-          "中联补装的类型",
-          "投运日期",
-          "年月1",
-          "中联补偿装置工程简况",
-          "系统电压",
-          "kV",
-          "设备供货",
-          "补偿度",
-          "%",
-          "额定容量",
-          "Mvar/三相",
-          "申联补偿装置主要技术",
-          "额定容抗",
-          "指标",
-          "Ω/单相",
-          "额定电流",
-          "kA",
-          "固定申联电容补偿装置的站大插摆电流",
-          "kA,10s",
-          "4",
-          "\\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times\\mathrm{tt}00\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\%",
-          "AF=\\frac{ 串联补偿装置的可用小时效 }{ 串联补偿装置的统计期间小时效 }\\times100\\%=\\frac{AH}{2\\pi}\\times100\\%",
-          "\\mathrm{SF}=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{SH}}{\\mathrm{PH}}\\times100\\%",
-          "\\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}}",
-          "\\mathrm{SEAF}=\\frac{\\sum( 各串联补偿装豆的额定补偿容认 \\times 该串联补偿装罕的可用时间 )}{ 该串联补偿系统的额定补偿容盐 \\times 统计期间 }",
-          "I_{\\tau}",
-          "Q_{\\mathrm{s}}"
-        ],
-        "rec_scores": [
-          0.9554111957550049,
-          0.9973028302192688,
-          0.9466919898986816,
-          0.9228237271308899,
-          0.9200174808502197,
-          0.9159479737281799,
-          0.9686352610588074,
-          0.9117810726165771,
-          0.9416171312332153,
-          0.932689905166626,
-          0.9840466976165771,
-          0.9567012190818787,
-          0.9389405846595764,
-          0.9955587387084961,
-          0.9951911568641663,
-          0.9742453694343567,
-          0.9503505229949951,
-          0.9686517715454102,
-          0.988101065158844,
-          0.7199456095695496,
-          0.8163822889328003,
-          0.9951065182685852,
-          0.8696683645248413,
-          0.9530840516090393,
-          0.8131652474403381,
-          0.8702841997146606,
-          0.9884850978851318,
-          0.9187464714050293,
-          0.886096715927124,
-          0.9328174591064453,
-          0.9929553866386414,
-          0.9849134683609009,
-          0.8012699484825134,
-          0.8594961166381836,
-          0.8837214708328247,
-          0.9862837791442871,
-          0.8323295712471008,
-          0.9583379030227661,
-          0.988523006439209,
-          0.8569663166999817,
-          0.8137746453285217,
-          0.744727611541748,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              97,
-              106
-            ],
-            [
-              235,
-              106
-            ],
-            [
-              235,
-              126
-            ],
-            [
-              97,
-              126
-            ]
-          ],
-          [
-            [
-              98,
-              141
-            ],
-            [
-              143,
-              141
-            ],
-            [
-              143,
-              161
-            ],
-            [
-              98,
-              161
-            ]
-          ],
-          [
-            [
-              145,
-              140
-            ],
-            [
-              259,
-              140
-            ],
-            [
-              259,
-              161
-            ],
-            [
-              145,
-              161
-            ]
-          ],
-          [
-            [
-              761,
-              172
-            ],
-            [
-              794,
-              172
-            ],
-            [
-              794,
-              197
-            ],
-            [
-              761,
-              197
-            ]
-          ],
-          [
-            [
-              97,
-              215
-            ],
-            [
-              256,
-              213
-            ],
-            [
-              256,
-              234
-            ],
-            [
-              97,
-              236
-            ]
-          ],
-          [
-            [
-              760,
-              246
-            ],
-            [
-              795,
-              246
-            ],
-            [
-              795,
-              272
-            ],
-            [
-              760,
-              272
-            ]
-          ],
-          [
-            [
-              99,
-              290
-            ],
-            [
-              375,
-              290
-            ],
-            [
-              375,
-              307
-            ],
-            [
-              99,
-              307
-            ]
-          ],
-          [
-            [
-              760,
-              320
-            ],
-            [
-              795,
-              320
-            ],
-            [
-              795,
-              345
-            ],
-            [
-              760,
-              345
-            ]
-          ],
-          [
-            [
-              98,
-              361
-            ],
-            [
-              274,
-              361
-            ],
-            [
-              274,
-              382
-            ],
-            [
-              98,
-              382
-            ]
-          ],
-          [
-            [
-              761,
-              394
-            ],
-            [
-              796,
-              394
-            ],
-            [
-              796,
-              419
-            ],
-            [
-              761,
-              419
-            ]
-          ],
-          [
-            [
-              98,
-              436
-            ],
-            [
-              798,
-              436
-            ],
-            [
-              798,
-              456
-            ],
-            [
-              98,
-              456
-            ]
-          ],
-          [
-            [
-              98,
-              459
-            ],
-            [
-              635,
-              458
-            ],
-            [
-              635,
-              479
-            ],
-            [
-              98,
-              480
-            ]
-          ],
-          [
-            [
-              760,
-              515
-            ],
-            [
-              797,
-              515
-            ],
-            [
-              797,
-              543
-            ],
-            [
-              760,
-              543
-            ]
-          ],
-          [
-            [
-              96,
-              598
-            ],
-            [
-              187,
-              598
-            ],
-            [
-              187,
-              619
-            ],
-            [
-              96,
-              619
-            ]
-          ],
-          [
-            [
-              95,
-              631
-            ],
-            [
-              361,
-              631
-            ],
-            [
-              361,
-              654
-            ],
-            [
-              95,
-              654
-            ]
-          ],
-          [
-            [
-              94,
-              654
-            ],
-            [
-              360,
-              654
-            ],
-            [
-              360,
-              678
-            ],
-            [
-              94,
-              678
-            ]
-          ],
-          [
-            [
-              95,
-              678
-            ],
-            [
-              406,
-              678
-            ],
-            [
-              406,
-              702
-            ],
-            [
-              95,
-              702
-            ]
-          ],
-          [
-            [
-              96,
-              703
-            ],
-            [
-              700,
-              703
-            ],
-            [
-              700,
-              723
-            ],
-            [
-              96,
-              723
-            ]
-          ],
-          [
-            [
-              341,
-              740
-            ],
-            [
-              557,
-              740
-            ],
-            [
-              557,
-              757
-            ],
-            [
-              341,
-              757
-            ]
-          ],
-          [
-            [
-              97,
-              764
-            ],
-            [
-              290,
-              764
-            ],
-            [
-              290,
-              785
-            ],
-            [
-              97,
-              785
-            ]
-          ],
-          [
-            [
-              618,
-              763
-            ],
-            [
-              687,
-              763
-            ],
-            [
-              687,
-              785
-            ],
-            [
-              618,
-              785
-            ]
-          ],
-          [
-            [
-              373,
-              790
-            ],
-            [
-              433,
-              790
-            ],
-            [
-              433,
-              811
-            ],
-            [
-              373,
-              811
-            ]
-          ],
-          [
-            [
-              341,
-              814
-            ],
-            [
-              466,
-              814
-            ],
-            [
-              466,
-              835
-            ],
-            [
-              341,
-              835
-            ]
-          ],
-          [
-            [
-              373,
-              838
-            ],
-            [
-              434,
-              838
-            ],
-            [
-              434,
-              859
-            ],
-            [
-              373,
-              859
-            ]
-          ],
-          [
-            [
-              700,
-              837
-            ],
-            [
-              774,
-              837
-            ],
-            [
-              774,
-              858
-            ],
-            [
-              700,
-              858
-            ]
-          ],
-          [
-            [
-              121,
-              847
-            ],
-            [
-              257,
-              847
-            ],
-            [
-              257,
-              864
-            ],
-            [
-              121,
-              864
-            ]
-          ],
-          [
-            [
-              373,
-              862
-            ],
-            [
-              433,
-              862
-            ],
-            [
-              433,
-              883
-            ],
-            [
-              373,
-              883
-            ]
-          ],
-          [
-            [
-              390,
-              879
-            ],
-            [
-              416,
-              879
-            ],
-            [
-              416,
-              900
-            ],
-            [
-              390,
-              900
-            ]
-          ],
-          [
-            [
-              368,
-              904
-            ],
-            [
-              438,
-              904
-            ],
-            [
-              438,
-              922
-            ],
-            [
-              368,
-              922
-            ]
-          ],
-          [
-            [
-              380,
-              926
-            ],
-            [
-              427,
-              926
-            ],
-            [
-              427,
-              948
-            ],
-            [
-              380,
-              948
-            ]
-          ],
-          [
-            [
-              393,
-              945
-            ],
-            [
-              413,
-              945
-            ],
-            [
-              413,
-              964
-            ],
-            [
-              393,
-              964
-            ]
-          ],
-          [
-            [
-              363,
-              969
-            ],
-            [
-              425,
-              969
-            ],
-            [
-              425,
-              991
-            ],
-            [
-              363,
-              991
-            ]
-          ],
-          [
-            [
-              370,
-              990
-            ],
-            [
-              437,
-              990
-            ],
-            [
-              437,
-              1012
-            ],
-            [
-              370,
-              1012
-            ]
-          ],
-          [
-            [
-              121,
-              1013
-            ],
-            [
-              266,
-              1013
-            ],
-            [
-              266,
-              1030
-            ],
-            [
-              121,
-              1030
-            ]
-          ],
-          [
-            [
-              374,
-              1015
-            ],
-            [
-              434,
-              1015
-            ],
-            [
-              434,
-              1036
-            ],
-            [
-              374,
-              1036
-            ]
-          ],
-          [
-            [
-              104,
-              1027
-            ],
-            [
-              140,
-              1027
-            ],
-            [
-              140,
-              1050
-            ],
-            [
-              104,
-              1050
-            ]
-          ],
-          [
-            [
-              378,
-              1032
-            ],
-            [
-              429,
-              1032
-            ],
-            [
-              429,
-              1053
-            ],
-            [
-              378,
-              1053
-            ]
-          ],
-          [
-            [
-              374,
-              1056
-            ],
-            [
-              434,
-              1056
-            ],
-            [
-              434,
-              1077
-            ],
-            [
-              374,
-              1077
-            ]
-          ],
-          [
-            [
-              391,
-              1075
-            ],
-            [
-              416,
-              1075
-            ],
-            [
-              416,
-              1092
-            ],
-            [
-              391,
-              1092
-            ]
-          ],
-          [
-            [
-              283,
-              1097
-            ],
-            [
-              512,
-              1097
-            ],
-            [
-              512,
-              1115
-            ],
-            [
-              283,
-              1115
-            ]
-          ],
-          [
-            [
-              377,
-              1116
-            ],
-            [
-              432,
-              1116
-            ],
-            [
-              432,
-              1133
-            ],
-            [
-              377,
-              1133
-            ]
-          ],
-          [
-            [
-              112,
-              1157
-            ],
-            [
-              122,
-              1157
-            ],
-            [
-              122,
-              1167
-            ],
-            [
-              112,
-              1167
-            ]
-          ],
-          [
-            [
-              238,
-              388
-            ],
-            [
-              689,
-              388
-            ],
-            [
-              689,
-              427
-            ],
-            [
-              238,
-              427
-            ]
-          ],
-          [
-            [
-              239,
-              166
-            ],
-            [
-              632,
-              166
-            ],
-            [
-              632,
-              205
-            ],
-            [
-              239,
-              205
-            ]
-          ],
-          [
-            [
-              206,
-              239
-            ],
-            [
-              596,
-              239
-            ],
-            [
-              596,
-              279
-            ],
-            [
-              206,
-              279
-            ]
-          ],
-          [
-            [
-              238,
-              314
-            ],
-            [
-              569,
-              314
-            ],
-            [
-              569,
-              353
-            ],
-            [
-              238,
-              353
-            ]
-          ],
-          [
-            [
-              206,
-              485
-            ],
-            [
-              714,
-              485
-            ],
-            [
-              714,
-              577
-            ],
-            [
-              206,
-              577
-            ]
-          ],
-          [
-            [
-              513,
-              1100
-            ],
-            [
-              525,
-              1100
-            ],
-            [
-              525,
-              1116
-            ],
-            [
-              513,
-              1116
-            ]
-          ],
-          [
-            [
-              421,
-              974
-            ],
-            [
-              438,
-              974
-            ],
-            [
-              438,
-              990
-            ],
-            [
-              421,
-              990
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            97.0,
-            106.0,
-            235.0,
-            126.0
-          ],
-          [
-            98.0,
-            141.0,
-            143.0,
-            161.0
-          ],
-          [
-            145.0,
-            140.0,
-            259.0,
-            161.0
-          ],
-          [
-            761.0,
-            172.0,
-            794.0,
-            197.0
-          ],
-          [
-            97.0,
-            213.0,
-            256.0,
-            236.0
-          ],
-          [
-            760.0,
-            246.0,
-            795.0,
-            272.0
-          ],
-          [
-            99.0,
-            290.0,
-            375.0,
-            307.0
-          ],
-          [
-            760.0,
-            320.0,
-            795.0,
-            345.0
-          ],
-          [
-            98.0,
-            361.0,
-            274.0,
-            382.0
-          ],
-          [
-            761.0,
-            394.0,
-            796.0,
-            419.0
-          ],
-          [
-            98.0,
-            436.0,
-            798.0,
-            456.0
-          ],
-          [
-            98.0,
-            458.0,
-            635.0,
-            480.0
-          ],
-          [
-            760.0,
-            515.0,
-            797.0,
-            543.0
-          ],
-          [
-            96.0,
-            598.0,
-            187.0,
-            619.0
-          ],
-          [
-            95.0,
-            631.0,
-            361.0,
-            654.0
-          ],
-          [
-            94.0,
-            654.0,
-            360.0,
-            678.0
-          ],
-          [
-            95.0,
-            678.0,
-            406.0,
-            702.0
-          ],
-          [
-            96.0,
-            703.0,
-            700.0,
-            723.0
-          ],
-          [
-            341.0,
-            740.0,
-            557.0,
-            757.0
-          ],
-          [
-            97.0,
-            764.0,
-            290.0,
-            785.0
-          ],
-          [
-            618.0,
-            763.0,
-            687.0,
-            785.0
-          ],
-          [
-            373.0,
-            790.0,
-            433.0,
-            811.0
-          ],
-          [
-            341.0,
-            814.0,
-            466.0,
-            835.0
-          ],
-          [
-            373.0,
-            838.0,
-            434.0,
-            859.0
-          ],
-          [
-            700.0,
-            837.0,
-            774.0,
-            858.0
-          ],
-          [
-            121.0,
-            847.0,
-            257.0,
-            864.0
-          ],
-          [
-            373.0,
-            862.0,
-            433.0,
-            883.0
-          ],
-          [
-            390.0,
-            879.0,
-            416.0,
-            900.0
-          ],
-          [
-            368.0,
-            904.0,
-            438.0,
-            922.0
-          ],
-          [
-            380.0,
-            926.0,
-            427.0,
-            948.0
-          ],
-          [
-            393.0,
-            945.0,
-            413.0,
-            964.0
-          ],
-          [
-            363.0,
-            969.0,
-            425.0,
-            991.0
-          ],
-          [
-            370.0,
-            990.0,
-            437.0,
-            1012.0
-          ],
-          [
-            121.0,
-            1013.0,
-            266.0,
-            1030.0
-          ],
-          [
-            374.0,
-            1015.0,
-            434.0,
-            1036.0
-          ],
-          [
-            104.0,
-            1027.0,
-            140.0,
-            1050.0
-          ],
-          [
-            378.0,
-            1032.0,
-            429.0,
-            1053.0
-          ],
-          [
-            374.0,
-            1056.0,
-            434.0,
-            1077.0
-          ],
-          [
-            391.0,
-            1075.0,
-            416.0,
-            1092.0
-          ],
-          [
-            283.0,
-            1097.0,
-            512.0,
-            1115.0
-          ],
-          [
-            377.0,
-            1116.0,
-            432.0,
-            1133.0
-          ],
-          [
-            112.0,
-            1157.0,
-            122.0,
-            1167.0
-          ],
-          [
-            238.78079223632812,
-            388.34417724609375,
-            689.6669921875,
-            427.73846435546875
-          ],
-          [
-            239.12945556640625,
-            166.02708435058594,
-            632.1985473632812,
-            205.4370880126953
-          ],
-          [
-            206.21560668945312,
-            239.94796752929688,
-            596.983642578125,
-            279.6053161621094
-          ],
-          [
-            238.1744384765625,
-            314.3731689453125,
-            569.1630859375,
-            353.45849609375
-          ],
-          [
-            206.60264587402344,
-            485.5479736328125,
-            714.096435546875,
-            577.0775146484375
-          ],
-          [
-            513.5643310546875,
-            1100.6015625,
-            525.8438720703125,
-            1116.70849609375
-          ],
-          [
-            421.332763671875,
-            974.2879028320312,
-            438.1214599609375,
-            990.5426635742188
-          ]
-        ]
-      },
-      "table_res_list": [
-        {
-          "cell_box_list": [
-            [
-              100.10993349552155,
-              787.2453589439392,
-              271.1787414550781,
-              924.5623474121094
-            ],
-            [
-              270.8656768798828,
-              787.691951751709,
-              534.27099609375,
-              812.3781261444092
-            ],
-            [
-              534.1197509765625,
-              787.0984511375427,
-              798.0360717773438,
-              812.0068511962891
-            ],
-            [
-              270.7436981201172,
-              812.3173809051514,
-              534.0972900390625,
-              836.8782806396484
-            ],
-            [
-              534.1957397460938,
-              811.9036540985107,
-              797.193603515625,
-              836.6920623779297
-            ],
-            [
-              270.8748779296875,
-              836.7912445068359,
-              534.1205139160156,
-              860.8187713623047
-            ],
-            [
-              534.2842102050781,
-              836.6295394897461,
-              797.3292846679688,
-              860.5973815917969
-            ],
-            [
-              270.8865966796875,
-              860.7546844482422,
-              534.2109375,
-              901.0867462158203
-            ],
-            [
-              534.0963439941406,
-              860.5344390869141,
-              796.8165893554688,
-              900.4461441040039
-            ],
-            [
-              271.0079040527344,
-              901.0109786987305,
-              534.4233703613281,
-              924.6230926513672
-            ],
-            [
-              534.3471069335938,
-              900.2611694335938,
-              797.9275512695312,
-              924.2207336425781
-            ],
-            [
-              100.10686409473419,
-              924.265380859375,
-              271.57884216308594,
-              1131.381591796875
-            ],
-            [
-              270.5955810546875,
-              924.5911560058594,
-              534.3662719726562,
-              966.3837738037109
-            ],
-            [
-              534.2354125976562,
-              924.0387115478516,
-              797.7364501953125,
-              965.8855438232422
-            ],
-            [
-              271.07801818847656,
-              966.3716888427734,
-              534.4655456542969,
-              1013.2208709716797
-            ],
-            [
-              534.5143432617188,
-              965.7890319824219,
-              797.5127563476562,
-              1012.6877593994141
-            ],
-            [
-              271.63685607910156,
-              1013.1954345703125,
-              534.9000549316406,
-              1054.7812194824219
-            ],
-            [
-              534.6651000976562,
-              1012.6846771240234,
-              797.6701049804688,
-              1054.366455078125
-            ],
-            [
-              271.5675048828125,
-              1054.7349548339844,
-              535.37890625,
-              1094.193359375
-            ],
-            [
-              535.2246398925781,
-              1054.3656616210938,
-              797.751220703125,
-              1093.7932434082031
-            ],
-            [
-              271.671142578125,
-              1094.1128845214844,
-              535.6435241699219,
-              1132.4014282226562
-            ],
-            [
-              535.5814208984375,
-              1093.6751403808594,
-              797.1647338867188,
-              1132.2156372070312
-            ]
-          ],
-          "pred_html": "<html><body><table><tr><td rowspan=\"6\">中联补偿装置工程简况</td><td>系统名称</td><td></td></tr><tr><td>中联补装的类型</td><td></td></tr><tr><td>投运日期</td><td>年月1</td></tr><tr><td>系统电压 kV</td><td></td></tr><tr><td>设备供货</td><td></td></tr><tr><td></td><td></td></tr><tr><td rowspan=\"5\">申联补偿装置主要技术 指标</td><td>补偿度 %</td><td></td></tr><tr><td>额定容抗 Ω/单相</td><td></td></tr><tr><td>额定电流 kA</td><td></td></tr><tr><td>固定申联电容补偿装置的站大插摆电流 kA,10s $I_{\\tau}$</td><td></td></tr><tr><td></td><td></td></tr></tbody></table></body></html>",
-          "table_ocr_pred": {
-            "rec_polys": [
-              [
-                [
-                  97,
-                  764
-                ],
-                [
-                  290,
-                  764
-                ],
-                [
-                  290,
-                  785
-                ],
-                [
-                  97,
-                  785
-                ]
-              ],
-              [
-                [
-                  618,
-                  763
-                ],
-                [
-                  687,
-                  763
-                ],
-                [
-                  687,
-                  785
-                ],
-                [
-                  618,
-                  785
-                ]
-              ],
-              [
-                [
-                  373,
-                  790
-                ],
-                [
-                  433,
-                  790
-                ],
-                [
-                  433,
-                  811
-                ],
-                [
-                  373,
-                  811
-                ]
-              ],
-              [
-                [
-                  341,
-                  814
-                ],
-                [
-                  466,
-                  814
-                ],
-                [
-                  466,
-                  835
-                ],
-                [
-                  341,
-                  835
-                ]
-              ],
-              [
-                [
-                  373,
-                  838
-                ],
-                [
-                  434,
-                  838
-                ],
-                [
-                  434,
-                  859
-                ],
-                [
-                  373,
-                  859
-                ]
-              ],
-              [
-                [
-                  700,
-                  837
-                ],
-                [
-                  774,
-                  837
-                ],
-                [
-                  774,
-                  858
-                ],
-                [
-                  700,
-                  858
-                ]
-              ],
-              [
-                [
-                  121,
-                  847
-                ],
-                [
-                  257,
-                  847
-                ],
-                [
-                  257,
-                  864
-                ],
-                [
-                  121,
-                  864
-                ]
-              ],
-              [
-                [
-                  373,
-                  862
-                ],
-                [
-                  433,
-                  862
-                ],
-                [
-                  433,
-                  883
-                ],
-                [
-                  373,
-                  883
-                ]
-              ],
-              [
-                [
-                  390,
-                  879
-                ],
-                [
-                  416,
-                  879
-                ],
-                [
-                  416,
-                  900
-                ],
-                [
-                  390,
-                  900
-                ]
-              ],
-              [
-                [
-                  368,
-                  904
-                ],
-                [
-                  438,
-                  904
-                ],
-                [
-                  438,
-                  922
-                ],
-                [
-                  368,
-                  922
-                ]
-              ],
-              [
-                [
-                  380,
-                  926
-                ],
-                [
-                  427,
-                  926
-                ],
-                [
-                  427,
-                  948
-                ],
-                [
-                  380,
-                  948
-                ]
-              ],
-              [
-                [
-                  393,
-                  945
-                ],
-                [
-                  413,
-                  945
-                ],
-                [
-                  413,
-                  964
-                ],
-                [
-                  393,
-                  964
-                ]
-              ],
-              [
-                [
-                  363,
-                  969
-                ],
-                [
-                  425,
-                  969
-                ],
-                [
-                  425,
-                  991
-                ],
-                [
-                  363,
-                  991
-                ]
-              ],
-              [
-                [
-                  370,
-                  990
-                ],
-                [
-                  437,
-                  990
-                ],
-                [
-                  437,
-                  1012
-                ],
-                [
-                  370,
-                  1012
-                ]
-              ],
-              [
-                [
-                  121,
-                  1013
-                ],
-                [
-                  266,
-                  1013
-                ],
-                [
-                  266,
-                  1030
-                ],
-                [
-                  121,
-                  1030
-                ]
-              ],
-              [
-                [
-                  374,
-                  1015
-                ],
-                [
-                  434,
-                  1015
-                ],
-                [
-                  434,
-                  1036
-                ],
-                [
-                  374,
-                  1036
-                ]
-              ],
-              [
-                [
-                  104,
-                  1027
-                ],
-                [
-                  140,
-                  1027
-                ],
-                [
-                  140,
-                  1050
-                ],
-                [
-                  104,
-                  1050
-                ]
-              ],
-              [
-                [
-                  378,
-                  1032
-                ],
-                [
-                  429,
-                  1032
-                ],
-                [
-                  429,
-                  1053
-                ],
-                [
-                  378,
-                  1053
-                ]
-              ],
-              [
-                [
-                  374,
-                  1056
-                ],
-                [
-                  434,
-                  1056
-                ],
-                [
-                  434,
-                  1077
-                ],
-                [
-                  374,
-                  1077
-                ]
-              ],
-              [
-                [
-                  391,
-                  1075
-                ],
-                [
-                  416,
-                  1075
-                ],
-                [
-                  416,
-                  1092
-                ],
-                [
-                  391,
-                  1092
-                ]
-              ],
-              [
-                [
-                  283,
-                  1097
-                ],
-                [
-                  512,
-                  1097
-                ],
-                [
-                  512,
-                  1115
-                ],
-                [
-                  283,
-                  1115
-                ]
-              ],
-              [
-                [
-                  377,
-                  1116
-                ],
-                [
-                  432,
-                  1116
-                ],
-                [
-                  432,
-                  1133
-                ],
-                [
-                  377,
-                  1133
-                ]
-              ],
-              [
-                [
-                  513,
-                  1100
-                ],
-                [
-                  525,
-                  1100
-                ],
-                [
-                  525,
-                  1116
-                ],
-                [
-                  513,
-                  1116
-                ]
-              ],
-              [
-                [
-                  421,
-                  974
-                ],
-                [
-                  438,
-                  974
-                ],
-                [
-                  438,
-                  990
-                ],
-                [
-                  421,
-                  990
-                ]
-              ]
-            ],
-            "rec_texts": [
-              "填报日期 ：_年月__日",
-              "报单位：",
-              "系统名称",
-              "中联补装的类型",
-              "投运日期",
-              "年月1",
-              "中联补偿装置工程简况",
-              "系统电压",
-              "kV",
-              "设备供货",
-              "补偿度",
-              "%",
-              "额定容量",
-              "Mvar/三相",
-              "申联补偿装置主要技术",
-              "额定容抗",
-              "指标",
-              "Ω/单相",
-              "额定电流",
-              "kA",
-              "固定申联电容补偿装置的站大插摆电流",
-              "kA,10s",
-              "$I_{\\tau}$",
-              "$Q_{\\mathrm{s}}$"
-            ],
-            "rec_scores": [
-              0.7199456095695496,
-              0.8163822889328003,
-              0.9951065182685852,
-              0.8696683645248413,
-              0.9530840516090393,
-              0.8131652474403381,
-              0.8702841997146606,
-              0.9884850978851318,
-              0.9187464714050293,
-              0.886096715927124,
-              0.9328174591064453,
-              0.9929553866386414,
-              0.9849134683609009,
-              0.8012699484825134,
-              0.8594961166381836,
-              0.8837214708328247,
-              0.9862837791442871,
-              0.8323295712471008,
-              0.9583379030227661,
-              0.988523006439209,
-              0.8569663166999817,
-              0.8137746453285217,
-              1.0,
-              1.0
-            ],
-            "rec_boxes": [
-              [
-                97.0,
-                764.0,
-                290.0,
-                785.0
-              ],
-              [
-                618.0,
-                763.0,
-                687.0,
-                785.0
-              ],
-              [
-                373.0,
-                790.0,
-                433.0,
-                811.0
-              ],
-              [
-                341.0,
-                814.0,
-                466.0,
-                835.0
-              ],
-              [
-                373.0,
-                838.0,
-                434.0,
-                859.0
-              ],
-              [
-                700.0,
-                837.0,
-                774.0,
-                858.0
-              ],
-              [
-                121.0,
-                847.0,
-                257.0,
-                864.0
-              ],
-              [
-                373.0,
-                862.0,
-                433.0,
-                883.0
-              ],
-              [
-                390.0,
-                879.0,
-                416.0,
-                900.0
-              ],
-              [
-                368.0,
-                904.0,
-                438.0,
-                922.0
-              ],
-              [
-                380.0,
-                926.0,
-                427.0,
-                948.0
-              ],
-              [
-                393.0,
-                945.0,
-                413.0,
-                964.0
-              ],
-              [
-                363.0,
-                969.0,
-                425.0,
-                991.0
-              ],
-              [
-                370.0,
-                990.0,
-                437.0,
-                1012.0
-              ],
-              [
-                121.0,
-                1013.0,
-                266.0,
-                1030.0
-              ],
-              [
-                374.0,
-                1015.0,
-                434.0,
-                1036.0
-              ],
-              [
-                104.0,
-                1027.0,
-                140.0,
-                1050.0
-              ],
-              [
-                378.0,
-                1032.0,
-                429.0,
-                1053.0
-              ],
-              [
-                374.0,
-                1056.0,
-                434.0,
-                1077.0
-              ],
-              [
-                391.0,
-                1075.0,
-                416.0,
-                1092.0
-              ],
-              [
-                283.0,
-                1097.0,
-                512.0,
-                1115.0
-              ],
-              [
-                377.0,
-                1116.0,
-                432.0,
-                1133.0
-              ],
-              [
-                513.5643310546875,
-                1100.6015625,
-                525.8438720703125,
-                1116.70849609375
-              ],
-              [
-                421.332763671875,
-                974.2879028320312,
-                438.1214599609375,
-                990.5426635742188
-              ]
-            ]
-          }
-        }
-      ],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{UF}=1-\\mathrm{AF}=\\frac{ 串联补偿装置的不可用小时数 }{ 串联补偿装置的统计期间小时数 }\\times\\mathrm{tt}00\\%=\\frac{\\mathrm{UH}}{\\mathrm{PH}}\\times100\\%",
-          "formula_region_id": 1,
-          "dt_polys": [
-            238.78079223632812,
-            388.34417724609375,
-            689.6669921875,
-            427.73846435546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "AF=\\frac{ 串联补偿装置的可用小时效 }{ 串联补偿装置的统计期间小时效 }\\times100\\%=\\frac{AH}{2\\pi}\\times100\\%",
-          "formula_region_id": 2,
-          "dt_polys": [
-            239.12945556640625,
-            166.02708435058594,
-            632.1985473632812,
-            205.4370880126953
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{SF}=\\frac{ 串联补偿装置的运行小时数 }{ 串联补偿装置的统计期间小时数 }\\times100\\%=\\frac{\\mathrm{SH}}{\\mathrm{PH}}\\times100\\%",
-          "formula_region_id": 3,
-          "dt_polys": [
-            206.21560668945312,
-            239.94796752929688,
-            596.983642578125,
-            279.6053161621094
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{MTBF}=\\frac{ 串联补偿装置的可用小时数 }{ 串联补偿装置的强迫停运的次数 }=\\frac{\\mathrm{AH}}{\\mathrm{FOT}}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            238.1744384765625,
-            314.3731689453125,
-            569.1630859375,
-            353.45849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{SEAF}=\\frac{\\sum( 各串联补偿装豆的额定补偿容认 \\times 该串联补偿装罕的可用时间 )}{ 该串联补偿系统的额定补偿容盐 \\times 统计期间 }",
-          "formula_region_id": 5,
-          "dt_polys": [
-            206.60264587402344,
-            485.5479736328125,
-            714.096435546875,
-            577.0775146484375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "I_{\\tau}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            513.5643310546875,
-            1100.6015625,
-            525.8438720703125,
-            1116.70849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "Q_{\\mathrm{s}}",
-          "formula_region_id": 7,
-          "dt_polys": [
-            421.332763671875,
-            974.2879028320312,
-            438.1214599609375,
-            990.5426635742188
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -4605,7 +809,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

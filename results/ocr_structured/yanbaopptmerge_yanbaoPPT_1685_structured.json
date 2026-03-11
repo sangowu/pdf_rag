@@ -5,31 +5,69 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "text",
-          "block_content": "第一PPT 模板网",
+          "block_label": "paragraph_title",
+          "block_content": "第一 PPT 模板网\nwww.lppt.com",
           "block_bbox": [
-            881,
-            679,
-            2192,
-            1066
+            875,
+            681,
+            2205,
+            1079
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              875.0,
+              681.0
+            ],
+            [
+              2205.0,
+              681.0
+            ],
+            [
+              2205.0,
+              1079.0
+            ],
+            [
+              875.0,
+              1079.0
+            ]
+          ]
         },
         {
           "block_label": "image",
           "block_content": "",
           "block_bbox": [
             0,
-            1191,
-            1187,
-            2250
+            1193,
+            1212,
+            2249
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              -3.0,
+              1193.0
+            ],
+            [
+              1212.0,
+              1193.0
+            ],
+            [
+              1212.0,
+              2249.0
+            ],
+            [
+              -3.0,
+              2249.0
+            ]
+          ]
         }
       ],
-      "markdown": "第一PPT 模板网\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_1191_1187_2250.jpg\" alt=\"Image\" width=\"39%\" /></div>\n",
+      "markdown": "#### 第一 PPT 模板网 www.lppt.com\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_1193_1212_2249.jpg\" alt=\"Image\" width=\"40%\" /></div>\n",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -38,146 +76,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.6582246422767639,
-            "coordinate": [
-              0,
-              1191.035888671875,
-              1187.095458984375,
-              2250
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.4587550163269043,
-            "coordinate": [
-              881.167724609375,
-              679.4188232421875,
-              2192.614013671875,
-              1066.9295654296875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.4240649342536926,
-            "coordinate": [
-              1045.281005859375,
-              939.614013671875,
-              1874.237060546875,
-              1071.27685546875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.33128616213798523,
-            "coordinate": [
-              881.1786499023438,
-              681.4738159179688,
-              2191.77880859375,
-              864.7168579101562
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              1592,
-              1529
-            ],
-            [
-              2468,
-              1172
-            ],
-            [
-              2751,
-              1879
-            ],
-            [
-              1875,
-              2235
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "第一PPT 模板网"
-        ],
-        "rec_scores": [
-          0.9392942786216736
-        ],
-        "rec_polys": [
-          [
-            [
-              881,
-              679
-            ],
-            [
-              2192,
-              679
-            ],
-            [
-              2192,
-              1066
-            ],
-            [
-              881,
-              1066
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            881.167724609375,
-            679.4188232421875,
-            2192.614013671875,
-            1066.9295654296875
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -186,7 +92,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

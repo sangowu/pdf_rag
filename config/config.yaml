@@ -27,7 +27,7 @@ ocr:
 # Chunking Settings
 # type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
 chunking:
-  type: "fixed"
+  type: "recursive"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
@@ -63,20 +63,18 @@ chunking:
 
 # Embedding Settings
 embedding:
-  model: "Qwen/Qwen3-Embedding-0.6B"  # Or your Qwen3-Embedding model name
+  model: "BAAI/bge-m3"  # Or your Qwen3-Embedding model name
   dimension: 1024
-  api_base: "https://api-inference.modelscope.cn/v1"  # Fill in your OpenAI-compatible API endpoint
-  api_key: ""   # Fill in your API key (or use env var OPENAI_API_KEY)
   batch_size: 64
 
-  mode: "local"                    # 或 "api"，统一切换用
-  local_model_path: "models/Qwen3-Embedding-0.6B"  # 你本地保存 embedding 的目录
+  mode: "local"                   
+  local_model_path: "models/bge-m3"  # 你本地保存 embedding 的目录
   torch_dtype: "auto" 
   device: "cuda"
 
 # Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
 retrieval:
-  method: "vector"   # "vector" | "bm25" | "hybrid"
+  method: "hybrid"   # "vector" | "bm25" | "hybrid"
   rrf_k: 60          # RRF constant (only for hybrid)
 
 # ChromaDB Settings
@@ -93,8 +91,6 @@ llm:
   # API 模式配置（备用）
   api:
     model: "Qwen/Qwen3-8B"
-    api_base: "https://api-inference.modelscope.cn/v1"
-    api_key: ""
   
   # 本地模式配置（默认）
   local:
@@ -114,13 +110,13 @@ llm:
 # Reranker Settings (Qwen3-Reranker; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: false
+  enabled: true
   top_r: 20
-  model_name: "Qwen/Qwen3-Reranker-4B"
-  local_model_path: "models/Qwen3-Reranker-4B"
+  model_name: "BAAI/bge-reranker-v2-m3"
+  local_model_path: "models/bge-reranker-v2-m3"
   device: "cuda"
   torch_dtype: "auto"
-  batch_size: 8
+  batch_size: 32
   # Cap input length (tokens); pad to longest in batch for efficiency. Match chunk distribution (~768 chars -> ~1024 tokens).
   max_length: 1024
   # Document QA: judge if passage helps answer the question; content/answer may be in Chinese or English

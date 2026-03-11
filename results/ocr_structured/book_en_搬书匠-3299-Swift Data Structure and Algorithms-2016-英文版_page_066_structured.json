@@ -6,114 +6,285 @@
       "parsing_res_list": [
         {
           "block_label": "header",
-          "block_content": "Working with Commonly Used Data Structures ",
+          "block_content": "Working with Commonly Used Data Structures",
           "block_bbox": [
             230,
-            186,
-            960,
-            225
+            187,
+            972,
+            233
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              230.0,
+              187.0
+            ],
+            [
+              972.0,
+              187.0
+            ],
+            [
+              972.0,
+              233.0
+            ],
+            [
+              230.0,
+              233.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "Implementing subscripting ",
+          "block_content": "Implementing subscripting",
           "block_bbox": [
-            225,
+            227,
             305,
-            1298,
-            385
+            1306,
+            394
           ],
           "block_id": 1,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              227.0,
+              305.0
+            ],
+            [
+              1306.0,
+              305.0
+            ],
+            [
+              1306.0,
+              394.0
+            ],
+            [
+              227.0,
+              394.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Subscripts can be defined for classes, structures, and enumerations. They are used to provide a shortcut to elements in collections, lists, and sequence types by allowing terser syntax. They can be used to set and get elements by specifying an index instead of using separate methods to set or retrieve values.\n",
+          "block_content": "Subscripts can be defined for classes, structures, and enumerations. They are used to provide a shortcut to elements in collections, lists, and sequence types by allowing terser syntax. They can be used to set and get elements by specifying an index instead of using separate methods to set or retrieve values.",
           "block_bbox": [
-            223,
-            412,
-            1944,
-            613
+            224,
+            413,
+            1959,
+            626
           ],
           "block_id": 2,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              224.0,
+              413.0
+            ],
+            [
+              1959.0,
+              413.0
+            ],
+            [
+              1959.0,
+              626.0
+            ],
+            [
+              224.0,
+              626.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "Subscript syntax ",
+          "block_content": "Subscript syntax",
           "block_bbox": [
-            225,
-            731,
-            838,
-            800
+            228,
+            730,
+            848,
+            809
           ],
           "block_id": 3,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              228.0,
+              730.0
+            ],
+            [
+              848.0,
+              730.0
+            ],
+            [
+              848.0,
+              809.0
+            ],
+            [
+              228.0,
+              809.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "You can define a subscript that accepts one or more input parameters, the parameters can be of different types, and their return value can be of any type. Use the subscript keyword to define a subscript, which can be defined as read-only, or provide a getter and setter to access elements:",
           "block_bbox": [
-            223,
-            828,
-            1962,
-            1028
+            225,
+            829,
+            1972,
+            1044
           ],
           "block_id": 4,
-          "block_order": 4
+          "block_order": 4,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              225.0,
+              829.0
+            ],
+            [
+              1972.0,
+              829.0
+            ],
+            [
+              1972.0,
+              1044.0
+            ],
+            [
+              225.0,
+              1044.0
+            ]
+          ]
         },
         {
           "block_label": "algorithm",
-          "block_content": "class MovieList {\n\nprivate var tracks = [\"The Godfather\", \"The Dark Knight\", \"Pulp \nFiction\"]\n\nsubscript (index: Int) -> String {\n\nget {\n\nreturn self.tracks[index]\n\n}\n\nset {\n\nself.tracks[index] = newValue \n}\n\n}\n\n}\n\nvar movieList = MovieList()\n\nvar aMovie = movieList[0]\n\n// The Godfather \n\nmovieList[1] = \"Forest Gump\"\naMovie = movieList[1]\n\n// Forest Gump \n\n",
+          "block_content": "class MovieList {\n    private var tracks = [\"The Godfather\", \"The Dark Knight\", \"Pulp Fiction\"]\n        subscript(index: Int) -> String {\n            get {\n                return self.tracks[index]\n            }\n            set {\n                self.tracks[index] = newValue\n            }\n        }\n    }\n\n    var movieList = MovieList()\n\n    var aMovie = movieList[0]\n    // The Godfather\n\n    movieList[1] = \"Forest Gump\"\n    aMovie = movieList[1]\n    // Forest Gump",
           "block_bbox": [
-            296,
-            1073,
-            1815,
-            2021
+            292,
+            1074,
+            1834,
+            2040
           ],
           "block_id": 5,
-          "block_order": 5
+          "block_order": 5,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              292.0,
+              1074.0
+            ],
+            [
+              1834.0,
+              1074.0
+            ],
+            [
+              1834.0,
+              2040.0
+            ],
+            [
+              292.0,
+              2040.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "Subscript options ",
+          "block_content": "Subscript options",
           "block_bbox": [
-            225,
-            2131,
-            871,
-            2201
+            227,
+            2130,
+            878,
+            2210
           ],
           "block_id": 6,
-          "block_order": 6
+          "block_order": 6,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              227.0,
+              2130.0
+            ],
+            [
+              878.0,
+              2130.0
+            ],
+            [
+              878.0,
+              2210.0
+            ],
+            [
+              227.0,
+              2210.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Classes and structures can return as many subscript implementations as needed. The support for multiple subscripts is known as subscript overloading, the correct subscript to be used will be inferred based on the subscript value types.\n",
+          "block_content": "Classes and structures can return as many subscript implementations as needed. The support for multiple subscripts is known as subscript overloading, the correct subscript to be used will be inferred based on the subscript value types.",
           "block_bbox": [
-            222,
-            2227,
-            1986,
-            2378
+            224,
+            2228,
+            1998,
+            2390
           ],
           "block_id": 7,
-          "block_order": 7
+          "block_order": 7,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              224.0,
+              2228.0
+            ],
+            [
+              1998.0,
+              2228.0
+            ],
+            [
+              1998.0,
+              2390.0
+            ],
+            [
+              224.0,
+              2390.0
+            ]
+          ]
         },
         {
           "block_label": "number",
           "block_content": "[52]",
           "block_bbox": [
-            1077,
+            1078,
             2529,
-            1171,
-            2567
+            1178,
+            2574
           ],
           "block_id": 8,
-          "block_order": null
+          "block_order": null,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              1078.0,
+              2529.0
+            ],
+            [
+              1178.0,
+              2529.0
+            ],
+            [
+              1178.0,
+              2574.0
+            ],
+            [
+              1078.0,
+              2574.0
+            ]
+          ]
         }
       ],
-      "markdown": "## Implementing subscripting \n\nSubscripts can be defined for classes, structures, and enumerations. They are used to provide a shortcut to elements in collections, lists, and sequence types by allowing terser syntax. They can be used to set and get elements by specifying an index instead of using separate methods to set or retrieve values.\n\n\n\n## Subscript syntax \n\nYou can define a subscript that accepts one or more input parameters, the parameters can be of different types, and their return value can be of any type. Use the subscript keyword to define a subscript, which can be defined as read-only, or provide a getter and setter to access elements:\n\nclass MovieList {\n\nprivate var tracks = [\"The Godfather\", \"The Dark Knight\", \"Pulp \nFiction\"]\n\nsubscript (index: Int) -> String {\n\nget {\n\nreturn self.tracks[index]\n\n}\n\nset {\n\nself.tracks[index] = newValue \n}\n\n}\n\n}\n\nvar movieList = MovieList()\n\nvar aMovie = movieList[0]\n\n// The Godfather \n\nmovieList[1] = \"Forest Gump\"\naMovie = movieList[1]\n\n// Forest Gump \n\n## Subscript options \n\nClasses and structures can return as many subscript implementations as needed. The support for multiple subscripts is known as subscript overloading, the correct subscript to be used will be inferred based on the subscript value types.\n\n",
+      "markdown": "## Implementing subscripting\n\nSubscripts can be defined for classes, structures, and enumerations. They are used to provide a shortcut to elements in collections, lists, and sequence types by allowing terser syntax. They can be used to set and get elements by specifying an index instead of using separate methods to set or retrieve values.\n\n## Subscript syntax\n\nYou can define a subscript that accepts one or more input parameters, the parameters can be of different types, and their return value can be of any type. Use the subscript keyword to define a subscript, which can be defined as read-only, or provide a getter and setter to access elements:\n\nclass MovieList {\n    private var tracks = [\"The Godfather\", \"The Dark Knight\", \"Pulp Fiction\"]\n        subscript(index: Int) -> String {\n            get {\n                return self.tracks[index]\n            }\n            set {\n                self.tracks[index] = newValue\n            }\n        }\n    }\n\n    var movieList = MovieList()\n\n    var aMovie = movieList[0]\n    // The Godfather\n\n    movieList[1] = \"Forest Gump\"\n    aMovie = movieList[1]\n    // Forest Gump\n\n## Subscript options\n\nClasses and structures can return as many subscript implementations as needed. The support for multiple subscripts is known as subscript overloading, the correct subscript to be used will be inferred based on the subscript value types.",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -122,1697 +293,14 @@
       "width": 2256,
       "height": 2777,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9799537658691406,
-            "coordinate": [
-              223.6246337890625,
-              412.5648498535156,
-              1944.2095947265625,
-              613.3311767578125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9793633818626404,
-            "coordinate": [
-              223.32421875,
-              828.3358154296875,
-              1962.343994140625,
-              1028.90673828125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9717506170272827,
-            "coordinate": [
-              222.24945068359375,
-              2227.96484375,
-              1986.98681640625,
-              2378.95068359375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.9378790855407715,
-            "coordinate": [
-              225.733642578125,
-              731.9392700195312,
-              838.9755859375,
-              800.3457641601562
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.9361822605133057,
-            "coordinate": [
-              225.8094482421875,
-              305.389892578125,
-              1298.8551025390625,
-              385.80047607421875
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.9339438676834106,
-            "coordinate": [
-              225.67062377929688,
-              2131.71630859375,
-              871.320068359375,
-              2201.70068359375
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.9193690419197083,
-            "coordinate": [
-              230.89056396484375,
-              186.88278198242188,
-              960.8418579101562,
-              225.30917358398438
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8764920830726624,
-            "coordinate": [
-              1077.100341796875,
-              2529.3408203125,
-              1171.834228515625,
-              2567.2109375
-            ]
-          },
-          {
-            "cls_id": 13,
-            "label": "algorithm",
-            "score": 0.6150713562965393,
-            "coordinate": [
-              296.9947509765625,
-              1073.861572265625,
-              1815.8748779296875,
-              2021.396240234375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.3141593039035797,
-            "coordinate": [
-              297.5220642089844,
-              1078.26806640625,
-              1238.8836669921875,
-              2018.08349609375
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              231,
-              184
-            ],
-            [
-              969,
-              187
-            ],
-            [
-              969,
-              230
-            ],
-            [
-              231,
-              228
-            ]
-          ],
-          [
-            [
-              224,
-              295
-            ],
-            [
-              1308,
-              300
-            ],
-            [
-              1308,
-              399
-            ],
-            [
-              223,
-              394
-            ]
-          ],
-          [
-            [
-              230,
-              411
-            ],
-            [
-              1872,
-              411
-            ],
-            [
-              1872,
-              461
-            ],
-            [
-              230,
-              461
-            ]
-          ],
-          [
-            [
-              228,
-              463
-            ],
-            [
-              1952,
-              462
-            ],
-            [
-              1952,
-              516
-            ],
-            [
-              228,
-              517
-            ]
-          ],
-          [
-            [
-              230,
-              517
-            ],
-            [
-              1944,
-              517
-            ],
-            [
-              1944,
-              570
-            ],
-            [
-              230,
-              570
-            ]
-          ],
-          [
-            [
-              232,
-              573
-            ],
-            [
-              1053,
-              566
-            ],
-            [
-              1054,
-              613
-            ],
-            [
-              232,
-              620
-            ]
-          ],
-          [
-            [
-              226,
-              724
-            ],
-            [
-              850,
-              729
-            ],
-            [
-              850,
-              811
-            ],
-            [
-              225,
-              806
-            ]
-          ],
-          [
-            [
-              229,
-              826
-            ],
-            [
-              1968,
-              830
-            ],
-            [
-              1968,
-              877
-            ],
-            [
-              229,
-              873
-            ]
-          ],
-          [
-            [
-              228,
-              879
-            ],
-            [
-              1837,
-              881
-            ],
-            [
-              1837,
-              928
-            ],
-            [
-              228,
-              926
-            ]
-          ],
-          [
-            [
-              229,
-              934
-            ],
-            [
-              1967,
-              935
-            ],
-            [
-              1967,
-              986
-            ],
-            [
-              229,
-              985
-            ]
-          ],
-          [
-            [
-              233,
-              993
-            ],
-            [
-              717,
-              991
-            ],
-            [
-              717,
-              1029
-            ],
-            [
-              233,
-              1030
-            ]
-          ],
-          [
-            [
-              310,
-              1078
-            ],
-            [
-              696,
-              1078
-            ],
-            [
-              696,
-              1112
-            ],
-            [
-              310,
-              1112
-            ]
-          ],
-          [
-            [
-              396,
-              1121
-            ],
-            [
-              1819,
-              1121
-            ],
-            [
-              1819,
-              1161
-            ],
-            [
-              396,
-              1161
-            ]
-          ],
-          [
-            [
-              304,
-              1165
-            ],
-            [
-              513,
-              1167
-            ],
-            [
-              512,
-              1205
-            ],
-            [
-              304,
-              1203
-            ]
-          ],
-          [
-            [
-              401,
-              1213
-            ],
-            [
-              1144,
-              1213
-            ],
-            [
-              1144,
-              1250
-            ],
-            [
-              401,
-              1250
-            ]
-          ],
-          [
-            [
-              484,
-              1257
-            ],
-            [
-              609,
-              1253
-            ],
-            [
-              611,
-              1296
-            ],
-            [
-              485,
-              1300
-            ]
-          ],
-          [
-            [
-              578,
-              1305
-            ],
-            [
-              1139,
-              1303
-            ],
-            [
-              1139,
-              1337
-            ],
-            [
-              578,
-              1339
-            ]
-          ],
-          [
-            [
-              484,
-              1347
-            ],
-            [
-              520,
-              1347
-            ],
-            [
-              520,
-              1387
-            ],
-            [
-              484,
-              1387
-            ]
-          ],
-          [
-            [
-              483,
-              1388
-            ],
-            [
-              612,
-              1388
-            ],
-            [
-              612,
-              1433
-            ],
-            [
-              483,
-              1433
-            ]
-          ],
-          [
-            [
-              581,
-              1438
-            ],
-            [
-              1233,
-              1438
-            ],
-            [
-              1233,
-              1472
-            ],
-            [
-              581,
-              1472
-            ]
-          ],
-          [
-            [
-              484,
-              1481
-            ],
-            [
-              520,
-              1481
-            ],
-            [
-              520,
-              1520
-            ],
-            [
-              484,
-              1520
-            ]
-          ],
-          [
-            [
-              397,
-              1529
-            ],
-            [
-              427,
-              1529
-            ],
-            [
-              427,
-              1564
-            ],
-            [
-              397,
-              1564
-            ]
-          ],
-          [
-            [
-              307,
-              1573
-            ],
-            [
-              337,
-              1573
-            ],
-            [
-              337,
-              1610
-            ],
-            [
-              307,
-              1610
-            ]
-          ],
-          [
-            [
-              305,
-              1663
-            ],
-            [
-              912,
-              1662
-            ],
-            [
-              912,
-              1699
-            ],
-            [
-              305,
-              1700
-            ]
-          ],
-          [
-            [
-              306,
-              1753
-            ],
-            [
-              870,
-              1753
-            ],
-            [
-              870,
-              1789
-            ],
-            [
-              306,
-              1789
-            ]
-          ],
-          [
-            [
-              310,
-              1797
-            ],
-            [
-              672,
-              1797
-            ],
-            [
-              672,
-              1831
-            ],
-            [
-              310,
-              1831
-            ]
-          ],
-          [
-            [
-              306,
-              1886
-            ],
-            [
-              942,
-              1886
-            ],
-            [
-              942,
-              1926
-            ],
-            [
-              306,
-              1926
-            ]
-          ],
-          [
-            [
-              309,
-              1933
-            ],
-            [
-              780,
-              1935
-            ],
-            [
-              779,
-              1968
-            ],
-            [
-              309,
-              1966
-            ]
-          ],
-          [
-            [
-              312,
-              1976
-            ],
-            [
-              627,
-              1980
-            ],
-            [
-              626,
-              2017
-            ],
-            [
-              311,
-              2013
-            ]
-          ],
-          [
-            [
-              226,
-              2125
-            ],
-            [
-              881,
-              2128
-            ],
-            [
-              881,
-              2213
-            ],
-            [
-              225,
-              2209
-            ]
-          ],
-          [
-            [
-              231,
-              2226
-            ],
-            [
-              1880,
-              2226
-            ],
-            [
-              1880,
-              2276
-            ],
-            [
-              231,
-              2276
-            ]
-          ],
-          [
-            [
-              229,
-              2280
-            ],
-            [
-              1994,
-              2278
-            ],
-            [
-              1994,
-              2332
-            ],
-            [
-              229,
-              2334
-            ]
-          ],
-          [
-            [
-              228,
-              2329
-            ],
-            [
-              1384,
-              2336
-            ],
-            [
-              1384,
-              2384
-            ],
-            [
-              228,
-              2377
-            ]
-          ],
-          [
-            [
-              1072,
-              2525
-            ],
-            [
-              1185,
-              2525
-            ],
-            [
-              1185,
-              2577
-            ],
-            [
-              1072,
-              2577
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "Working with Commonly Used Data Structures",
-          "Implementing subscripting",
-          "Subscripts can be defined for classes, structures, and enumerations. They are used to",
-          "provide a shortcut to elements in collections, lists, and sequence types by allowing terser",
-          "syntax. They can be used to set and get elements by specifying an index instead of using",
-          "separate methods to set or retrieve values.",
-          "Subscript syntax",
-          "You can define a subscript that accepts one or more input parameters, the parameters can",
-          "be of different types, and their return value can be of any type. Use the subscript",
-          "keyword to define a subscript, which can be defined as read-only, or provide a getter and",
-          "setter to access elements:",
-          "class MovieList {",
-          "private var tracks = [\"The Godfather\", \"The Dark Knight\", \"Pulp",
-          "Fiction\"]",
-          "subscript (index: Int) -> String {",
-          "get {",
-          "return self.tracks[index]",
-          "}",
-          "set {",
-          "self.tracks[index] = newValue",
-          "}",
-          "}",
-          "}",
-          "var movieList = MovieList()",
-          "var aMovie = movieList[0]",
-          "// The Godfather",
-          "movieList[1] = \"Forest Gump\"",
-          "aMovie = movieList[1]",
-          "// Forest Gump",
-          "Subscript options",
-          "Classes and structures can return as many subscript implementations as needed. The",
-          "support for multiple subscripts is known as subscript overloading, the correct subscript to",
-          "be used will be inferred based on the subscript value types.",
-          "[52]"
-        ],
-        "rec_scores": [
-          0.9507293701171875,
-          0.9744696617126465,
-          0.9773046970367432,
-          0.9678233861923218,
-          0.9723970293998718,
-          0.985808253288269,
-          0.996537983417511,
-          0.9782594442367554,
-          0.9789198637008667,
-          0.9546616077423096,
-          0.9812480211257935,
-          0.957116961479187,
-          0.9453732967376709,
-          0.966210126876831,
-          0.9411642551422119,
-          0.9840964078903198,
-          0.979342520236969,
-          0.9888932108879089,
-          0.9613415598869324,
-          0.9629331231117249,
-          0.9915708303451538,
-          0.9898866415023804,
-          0.9884322285652161,
-          0.9575113654136658,
-          0.957909345626831,
-          0.9642292261123657,
-          0.961138129234314,
-          0.9758253693580627,
-          0.9656241536140442,
-          0.9848082065582275,
-          0.9725006818771362,
-          0.9817562103271484,
-          0.9740763902664185,
-          0.8398423194885254
-        ],
-        "rec_polys": [
-          [
-            [
-              231,
-              184
-            ],
-            [
-              969,
-              187
-            ],
-            [
-              969,
-              230
-            ],
-            [
-              231,
-              228
-            ]
-          ],
-          [
-            [
-              224,
-              295
-            ],
-            [
-              1308,
-              300
-            ],
-            [
-              1308,
-              399
-            ],
-            [
-              223,
-              394
-            ]
-          ],
-          [
-            [
-              230,
-              411
-            ],
-            [
-              1872,
-              411
-            ],
-            [
-              1872,
-              461
-            ],
-            [
-              230,
-              461
-            ]
-          ],
-          [
-            [
-              228,
-              463
-            ],
-            [
-              1952,
-              462
-            ],
-            [
-              1952,
-              516
-            ],
-            [
-              228,
-              517
-            ]
-          ],
-          [
-            [
-              230,
-              517
-            ],
-            [
-              1944,
-              517
-            ],
-            [
-              1944,
-              570
-            ],
-            [
-              230,
-              570
-            ]
-          ],
-          [
-            [
-              232,
-              573
-            ],
-            [
-              1053,
-              566
-            ],
-            [
-              1054,
-              613
-            ],
-            [
-              232,
-              620
-            ]
-          ],
-          [
-            [
-              226,
-              724
-            ],
-            [
-              850,
-              729
-            ],
-            [
-              850,
-              811
-            ],
-            [
-              225,
-              806
-            ]
-          ],
-          [
-            [
-              229,
-              826
-            ],
-            [
-              1968,
-              830
-            ],
-            [
-              1968,
-              877
-            ],
-            [
-              229,
-              873
-            ]
-          ],
-          [
-            [
-              228,
-              879
-            ],
-            [
-              1837,
-              881
-            ],
-            [
-              1837,
-              928
-            ],
-            [
-              228,
-              926
-            ]
-          ],
-          [
-            [
-              229,
-              934
-            ],
-            [
-              1967,
-              935
-            ],
-            [
-              1967,
-              986
-            ],
-            [
-              229,
-              985
-            ]
-          ],
-          [
-            [
-              233,
-              993
-            ],
-            [
-              717,
-              991
-            ],
-            [
-              717,
-              1029
-            ],
-            [
-              233,
-              1030
-            ]
-          ],
-          [
-            [
-              310,
-              1078
-            ],
-            [
-              696,
-              1078
-            ],
-            [
-              696,
-              1112
-            ],
-            [
-              310,
-              1112
-            ]
-          ],
-          [
-            [
-              396,
-              1121
-            ],
-            [
-              1819,
-              1121
-            ],
-            [
-              1819,
-              1161
-            ],
-            [
-              396,
-              1161
-            ]
-          ],
-          [
-            [
-              304,
-              1165
-            ],
-            [
-              513,
-              1167
-            ],
-            [
-              512,
-              1205
-            ],
-            [
-              304,
-              1203
-            ]
-          ],
-          [
-            [
-              401,
-              1213
-            ],
-            [
-              1144,
-              1213
-            ],
-            [
-              1144,
-              1250
-            ],
-            [
-              401,
-              1250
-            ]
-          ],
-          [
-            [
-              484,
-              1257
-            ],
-            [
-              609,
-              1253
-            ],
-            [
-              611,
-              1296
-            ],
-            [
-              485,
-              1300
-            ]
-          ],
-          [
-            [
-              578,
-              1305
-            ],
-            [
-              1139,
-              1303
-            ],
-            [
-              1139,
-              1337
-            ],
-            [
-              578,
-              1339
-            ]
-          ],
-          [
-            [
-              484,
-              1347
-            ],
-            [
-              520,
-              1347
-            ],
-            [
-              520,
-              1387
-            ],
-            [
-              484,
-              1387
-            ]
-          ],
-          [
-            [
-              483,
-              1388
-            ],
-            [
-              612,
-              1388
-            ],
-            [
-              612,
-              1433
-            ],
-            [
-              483,
-              1433
-            ]
-          ],
-          [
-            [
-              581,
-              1438
-            ],
-            [
-              1233,
-              1438
-            ],
-            [
-              1233,
-              1472
-            ],
-            [
-              581,
-              1472
-            ]
-          ],
-          [
-            [
-              484,
-              1481
-            ],
-            [
-              520,
-              1481
-            ],
-            [
-              520,
-              1520
-            ],
-            [
-              484,
-              1520
-            ]
-          ],
-          [
-            [
-              397,
-              1529
-            ],
-            [
-              427,
-              1529
-            ],
-            [
-              427,
-              1564
-            ],
-            [
-              397,
-              1564
-            ]
-          ],
-          [
-            [
-              307,
-              1573
-            ],
-            [
-              337,
-              1573
-            ],
-            [
-              337,
-              1610
-            ],
-            [
-              307,
-              1610
-            ]
-          ],
-          [
-            [
-              305,
-              1663
-            ],
-            [
-              912,
-              1662
-            ],
-            [
-              912,
-              1699
-            ],
-            [
-              305,
-              1700
-            ]
-          ],
-          [
-            [
-              306,
-              1753
-            ],
-            [
-              870,
-              1753
-            ],
-            [
-              870,
-              1789
-            ],
-            [
-              306,
-              1789
-            ]
-          ],
-          [
-            [
-              310,
-              1797
-            ],
-            [
-              672,
-              1797
-            ],
-            [
-              672,
-              1831
-            ],
-            [
-              310,
-              1831
-            ]
-          ],
-          [
-            [
-              306,
-              1886
-            ],
-            [
-              942,
-              1886
-            ],
-            [
-              942,
-              1926
-            ],
-            [
-              306,
-              1926
-            ]
-          ],
-          [
-            [
-              309,
-              1933
-            ],
-            [
-              780,
-              1935
-            ],
-            [
-              779,
-              1968
-            ],
-            [
-              309,
-              1966
-            ]
-          ],
-          [
-            [
-              312,
-              1976
-            ],
-            [
-              627,
-              1980
-            ],
-            [
-              626,
-              2017
-            ],
-            [
-              311,
-              2013
-            ]
-          ],
-          [
-            [
-              226,
-              2125
-            ],
-            [
-              881,
-              2128
-            ],
-            [
-              881,
-              2213
-            ],
-            [
-              225,
-              2209
-            ]
-          ],
-          [
-            [
-              231,
-              2226
-            ],
-            [
-              1880,
-              2226
-            ],
-            [
-              1880,
-              2276
-            ],
-            [
-              231,
-              2276
-            ]
-          ],
-          [
-            [
-              229,
-              2280
-            ],
-            [
-              1994,
-              2278
-            ],
-            [
-              1994,
-              2332
-            ],
-            [
-              229,
-              2334
-            ]
-          ],
-          [
-            [
-              228,
-              2329
-            ],
-            [
-              1384,
-              2336
-            ],
-            [
-              1384,
-              2384
-            ],
-            [
-              228,
-              2377
-            ]
-          ],
-          [
-            [
-              1072,
-              2525
-            ],
-            [
-              1185,
-              2525
-            ],
-            [
-              1185,
-              2577
-            ],
-            [
-              1072,
-              2577
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            231,
-            184,
-            969,
-            230
-          ],
-          [
-            223,
-            295,
-            1308,
-            399
-          ],
-          [
-            230,
-            411,
-            1872,
-            461
-          ],
-          [
-            228,
-            462,
-            1952,
-            517
-          ],
-          [
-            230,
-            517,
-            1944,
-            570
-          ],
-          [
-            232,
-            566,
-            1054,
-            620
-          ],
-          [
-            225,
-            724,
-            850,
-            811
-          ],
-          [
-            229,
-            826,
-            1968,
-            877
-          ],
-          [
-            228,
-            879,
-            1837,
-            928
-          ],
-          [
-            229,
-            934,
-            1967,
-            986
-          ],
-          [
-            233,
-            991,
-            717,
-            1030
-          ],
-          [
-            310,
-            1078,
-            696,
-            1112
-          ],
-          [
-            396,
-            1121,
-            1819,
-            1161
-          ],
-          [
-            304,
-            1165,
-            513,
-            1205
-          ],
-          [
-            401,
-            1213,
-            1144,
-            1250
-          ],
-          [
-            484,
-            1253,
-            611,
-            1300
-          ],
-          [
-            578,
-            1303,
-            1139,
-            1339
-          ],
-          [
-            484,
-            1347,
-            520,
-            1387
-          ],
-          [
-            483,
-            1388,
-            612,
-            1433
-          ],
-          [
-            581,
-            1438,
-            1233,
-            1472
-          ],
-          [
-            484,
-            1481,
-            520,
-            1520
-          ],
-          [
-            397,
-            1529,
-            427,
-            1564
-          ],
-          [
-            307,
-            1573,
-            337,
-            1610
-          ],
-          [
-            305,
-            1662,
-            912,
-            1700
-          ],
-          [
-            306,
-            1753,
-            870,
-            1789
-          ],
-          [
-            310,
-            1797,
-            672,
-            1831
-          ],
-          [
-            306,
-            1886,
-            942,
-            1926
-          ],
-          [
-            309,
-            1933,
-            780,
-            1968
-          ],
-          [
-            311,
-            1976,
-            627,
-            2017
-          ],
-          [
-            225,
-            2125,
-            881,
-            2213
-          ],
-          [
-            231,
-            2226,
-            1880,
-            2276
-          ],
-          [
-            229,
-            2278,
-            1994,
-            2334
-          ],
-          [
-            228,
-            2329,
-            1384,
-            2384
-          ],
-          [
-            1072,
-            2525,
-            1185,
-            2577
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -1821,7 +309,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

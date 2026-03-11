@@ -6,3121 +6,456 @@
       "parsing_res_list": [
         {
           "block_label": "header",
-          "block_content": "Conditional code execution ",
+          "block_content": "Conditional code execution",
           "block_bbox": [
             921,
             107,
-            1322,
-            138
+            1332,
+            148
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              921.0,
+              107.0
+            ],
+            [
+              1332.0,
+              107.0
+            ],
+            [
+              1332.0,
+              148.0
+            ],
+            [
+              921.0,
+              148.0
+            ]
+          ]
         },
         {
           "block_label": "number",
           "block_content": "165",
           "block_bbox": [
-            1914,
-            107,
-            1969,
-            135
+            1912,
+            108,
+            1980,
+            145
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              1912.0,
+              108.0
+            ],
+            [
+              1980.0,
+              108.0
+            ],
+            [
+              1980.0,
+              145.0
+            ],
+            [
+              1912.0,
+              145.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": ">> end Entire if statement evaluates => nil to nil because it fails ",
+          "block_content": "Conditional statements interact with other aspects of Ruby syntax in a couple of ways that you need to be aware of—in particular, with assignment syntax. It’s worth looking in some detail at how conditionals behave in assignments, because it involves some interesting points about how Ruby parses code.",
           "block_bbox": [
-            414,
-            211,
-            1146,
-            289
+            411,
+            333,
+            1983,
+            548
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              411.0,
+              333.0
+            ],
+            [
+              1983.0,
+              333.0
+            ],
+            [
+              1983.0,
+              548.0
+            ],
+            [
+              411.0,
+              548.0
+            ]
+          ]
         },
         {
-          "block_label": "text",
-          "block_content": "Conditional statements interact with other aspects of Ruby syntax in a couple of ways that you need to be aware of—in particular, with assignment syntax. It's worth looking in some detail at how conditionals behave in assignments, because it involves some interesting points about how Ruby parses code.\n",
+          "block_label": "paragraph_title",
+          "block_content": "6.1.2 Assignment syntax in condition bodies and tests",
           "block_bbox": [
-            411,
-            332,
-            1971,
-            537
+            264,
+            586,
+            1365,
+            635
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              264.0,
+              586.0
+            ],
+            [
+              1365.0,
+              586.0
+            ],
+            [
+              1365.0,
+              635.0
+            ],
+            [
+              264.0,
+              635.0
+            ]
+          ]
         },
         {
-          "block_label": "paragraph_title",
-          "block_content": "6.1.2Assignment syntax in condition bodies and tests ",
+          "block_label": "text",
+          "block_content": "Assignment syntax and conditional expressions cross paths at two points: in the bodies of conditional expressions, where the assignments may or may not happen at all, and in the conditional tests themselves:",
           "block_bbox": [
-            265,
-            586,
-            1355,
-            625
+            410,
+            659,
+            1982,
+            814
           ],
           "block_id": 4,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              410.0,
+              659.0
+            ],
+            [
+              1982.0,
+              659.0
+            ],
+            [
+              1982.0,
+              814.0
+            ],
+            [
+              410.0,
+              814.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "and conditional expressions cross paths at two points: in the bodies of conditional expressions, where the assignments may or may not happen at all, and in the conditional tests themselves:",
-          "block_bbox": [
-            409,
-            659,
-            1971,
-            803
-          ],
-          "block_id": 5,
-          "block_order": 4
-        },
-        {
-          "block_label": "text",
-          "block_content": "ifx = 1Assignment in conditional y = 2Assignment in conditional end \n",
-          "block_bbox": [
-            414,
-            846,
-            1206,
-            959
-          ],
-          "block_id": 6,
-          "block_order": 5
-        },
-        {
-          "block_label": "text",
-          "block_content": "What happens (or doesn't) when you usethese idioms? We'll look at both, starting with variable assignment in thebody of the conditional—specifically, local-variable assignment, which displays some perhaps unexpected behavior in this context.",
+          "block_content": "What happens (or doesn't) when you use these idioms? We'll look at both, starting with variable assignment in the body of the conditional—specifically, local-variable assignment, which displays some perhaps unexpected behavior in this context.",
           "block_bbox": [
             411,
-            996,
-            1972,
-            1146
+            995,
+            1982,
+            1158
           ],
-          "block_id": 7,
-          "block_order": 6
+          "block_id": 5,
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              411.0,
+              995.0
+            ],
+            [
+              1982.0,
+              995.0
+            ],
+            [
+              1982.0,
+              1158.0
+            ],
+            [
+              411.0,
+              1158.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "LOCAL-VARIABLE ASSIGNMENT IN A CONDITIONAL BODY ",
+          "block_content": "LOCAL-VARIABLE ASSIGNMENT IN A CONDITIONAL BODY",
           "block_bbox": [
             414,
-            1181,
-            1262,
-            1212
+            1179,
+            1269,
+            1224
           ],
-          "block_id": 8,
-          "block_order": 7
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              414.0,
+              1179.0
+            ],
+            [
+              1269.0,
+              1179.0
+            ],
+            [
+              1269.0,
+              1224.0
+            ],
+            [
+              414.0,
+              1224.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Ruby doesn't draw as clear a line as compiled languages do between“compile time\"and\"runtime,\" but the interpreter does parse your code before running it,and certain decisions are made during that process. An important one is the recognition and allocation of local variables.\n",
+          "block_content": "Ruby doesn’t draw as clear a line as compiled languages do between “compile time” and “runtime,” but the interpreter does parse your code before running it, and certain decisions are made during that process. An important one is the recognition and allocation of local variables.",
           "block_bbox": [
-            412,
+            411,
             1231,
-            1972,
-            1431
+            1982,
+            1441
           ],
-          "block_id": 9,
-          "block_order": 8
+          "block_id": 7,
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              411.0,
+              1231.0
+            ],
+            [
+              1982.0,
+              1231.0
+            ],
+            [
+              1982.0,
+              1441.0
+            ],
+            [
+              411.0,
+              1441.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "When the Ruby parser sees the sequenceidentifier, equal-sign, and value, as in this expression,",
+          "block_content": "When the Ruby parser sees the sequence identifier, equal-sign, and value, as in this expression,",
           "block_bbox": [
             412,
             1448,
-            1971,
-            1541
+            1981,
+            1552
           ],
-          "block_id": 10,
-          "block_order": 9
+          "block_id": 8,
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              412.0,
+              1448.0
+            ],
+            [
+              1981.0,
+              1448.0
+            ],
+            [
+              1981.0,
+              1552.0
+            ],
+            [
+              412.0,
+              1552.0
+            ]
+          ]
         },
         {
-          "block_label": "text",
-          "block_content": "x = 1",
+          "block_label": "display_formula",
+          "block_content": " $$ x=1 $$ ",
           "block_bbox": [
-            415,
-            1592,
-            523,
-            1620
+            417,
+            1591,
+            531,
+            1630
           ],
-          "block_id": 11,
-          "block_order": 10
+          "block_id": 9,
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              417.0,
+              1591.0
+            ],
+            [
+              531.0,
+              1591.0
+            ],
+            [
+              531.0,
+              1630.0
+            ],
+            [
+              417.0,
+              1630.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "it allocates space for a local variable called x. The creation of the variable—not the assignment of a value to it, but the internal creation of a variable—always takes place as a result of this kind of expression, even if the code isn't executed!",
+          "block_content": "it allocates space for a local variable called x. The creation of the variable—not the assignment of a value to it, but the internal creation of a variable—always takes place as a result of this kind of expression, even if the code isn’t executed!",
           "block_bbox": [
             411,
             1664,
-            1971,
-            1812
+            1981,
+            1822
           ],
-          "block_id": 12,
-          "block_order": 11
+          "block_id": 10,
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              411.0,
+              1664.0
+            ],
+            [
+              1981.0,
+              1664.0
+            ],
+            [
+              1981.0,
+              1822.0
+            ],
+            [
+              411.0,
+              1822.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "Consider this example:",
           "block_bbox": [
-            475,
+            476,
             1828,
-            904,
-            1868
+            911,
+            1877
           ],
-          "block_id": 13,
-          "block_order": 12
+          "block_id": 11,
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              476.0,
+              1828.0
+            ],
+            [
+              911.0,
+              1828.0
+            ],
+            [
+              911.0,
+              1877.0
+            ],
+            [
+              476.0,
+              1877.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "if false \nx = 1Output: nil end \npx NameError: undefined local pY variable or method y'",
-          "block_bbox": [
-            413,
-            1906,
-            1239,
-            2106
-          ],
-          "block_id": 14,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "The assignment to x isn't executed, because it's wrapped in a failing conditional test.But the Ruby parser sees the sequence $x=1$ ., from which it deduces that the program involves a local variable x.The parser doesn't care whether x is ever assigned a value. Its job is just to scour the code for local variables for which space needs to be allocated.",
+          "block_content": "The assignment to x isn’t executed, because it’s wrapped in a failing conditional test. But the Ruby parser sees the sequence x = 1, from which it deduces that the program involves a local variable x. The parser doesn’t care whether x is ever assigned a value. Its job is just to scour the code for local variables for which space needs to be allocated.",
           "block_bbox": [
             409,
-            2148,
-            1973,
-            2350
+            2147,
+            1983,
+            2360
           ],
-          "block_id": 15,
-          "block_order": 14
+          "block_id": 12,
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              409.0,
+              2147.0
+            ],
+            [
+              1983.0,
+              2147.0
+            ],
+            [
+              1983.0,
+              2360.0
+            ],
+            [
+              409.0,
+              2360.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "The resultisthatxinhabitsastrangekindofvariable limbo.Ithasbeen brought into beingandinitialized to nil.Inthat respect, itdifersfrom avariablethat has no existence atall; as you can see in the example,examiningx gives you thevalue nil,",
+          "block_content": "The result is that x inhabits a strange kind of variable limbo. It has been brought into being and initialized to nil. In that respect, it differs from a variable that has no existence at all; as you can see in the example, examining x gives you the value nil,",
           "block_bbox": [
             410,
             2365,
-            1974,
-            2515
+            1985,
+            2524
           ],
-          "block_id": 16,
-          "block_order": 15
-        }
-      ],
-      "markdown": ">> end Entire if statement evaluates => nil to nil because it fails \n\nConditional statements interact with other aspects of Ruby syntax in a couple of ways that you need to be aware of—in particular, with assignment syntax. It's worth looking in some detail at how conditionals behave in assignments, because it involves some interesting points about how Ruby parses code.\n\n\n\n#### 6.1.2 Assignment syntax in condition bodies and tests \n\nand conditional expressions cross paths at two points: in the bodies of conditional expressions, where the assignments may or may not happen at all, and in the conditional tests themselves:\n\nifx = 1Assignment in conditional y = 2Assignment in conditional end \n\n\n\nWhat happens (or doesn't) when you usethese idioms? We'll look at both, starting with variable assignment in thebody of the conditional—specifically, local-variable assignment, which displays some perhaps unexpected behavior in this context.\n\n## LOCAL-VARIABLE ASSIGNMENT IN A CONDITIONAL BODY \n\nRuby doesn't draw as clear a line as compiled languages do between“compile time\"and\"runtime,\" but the interpreter does parse your code before running it,and certain decisions are made during that process. An important one is the recognition and allocation of local variables.\n\n\n\nWhen the Ruby parser sees the sequenceidentifier, equal-sign, and value, as in this expression,\n\nx = 1\n\nit allocates space for a local variable called x. The creation of the variable—not the assignment of a value to it, but the internal creation of a variable—always takes place as a result of this kind of expression, even if the code isn't executed!\n\nConsider this example:\n\nif false \n\nx = 1Output: nil end \n\npx NameError: undefined local pY variable or method y'\n\nThe assignment to x isn't executed, because it's wrapped in a failing conditional test.But the Ruby parser sees the sequence $x=1$ ., from which it deduces that the program involves a local variable x.The parser doesn't care whether x is ever assigned a value. Its job is just to scour the code for local variables for which space needs to be allocated.\n\nThe resultisthatxinhabitsastrangekindofvariable limbo.Ithasbeen brought into beingandinitialized to nil.Inthat respect, itdifersfrom avariablethat has no existence atall; as you can see in the example,examiningx gives you thevalue nil,",
-      "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=1",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1130.85791015625,
-            2207.4833984375,
-            1218.9951171875,
-            2241.60302734375
+          "block_id": 13,
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              410.0,
+              2365.0
+            ],
+            [
+              1985.0,
+              2365.0
+            ],
+            [
+              1985.0,
+              2524.0
+            ],
+            [
+              410.0,
+              2524.0
+            ]
           ]
         }
       ],
+      "markdown": "Conditional statements interact with other aspects of Ruby syntax in a couple of ways that you need to be aware of—in particular, with assignment syntax. It’s worth looking in some detail at how conditionals behave in assignments, because it involves some interesting points about how Ruby parses code.\n\n#### 6.1.2 Assignment syntax in condition bodies and tests\n\nAssignment syntax and conditional expressions cross paths at two points: in the bodies of conditional expressions, where the assignments may or may not happen at all, and in the conditional tests themselves:\n\nWhat happens (or doesn't) when you use these idioms? We'll look at both, starting with variable assignment in the body of the conditional—specifically, local-variable assignment, which displays some perhaps unexpected behavior in this context.\n\n## LOCAL-VARIABLE ASSIGNMENT IN A CONDITIONAL BODY\n\nRuby doesn’t draw as clear a line as compiled languages do between “compile time” and “runtime,” but the interpreter does parse your code before running it, and certain decisions are made during that process. An important one is the recognition and allocation of local variables.\n\nWhen the Ruby parser sees the sequence identifier, equal-sign, and value, as in this expression,\n\n $$ x=1 $$ \n\nit allocates space for a local variable called x. The creation of the variable—not the assignment of a value to it, but the internal creation of a variable—always takes place as a result of this kind of expression, even if the code isn’t executed!\n\nConsider this example:\n\nThe assignment to x isn’t executed, because it’s wrapped in a failing conditional test. But the Ruby parser sees the sequence x = 1, from which it deduces that the program involves a local variable x. The parser doesn’t care whether x is ever assigned a value. Its job is just to scour the code for local variables for which space needs to be allocated.\n\nThe result is that x inhabits a strange kind of variable limbo. It has been brought into being and initialized to nil. In that respect, it differs from a variable that has no existence at all; as you can see in the example, examining x gives you the value nil,",
+      "tables": [],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2214,
       "height": 2775,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9851135015487671,
-            "coordinate": [
-              411.243896484375,
-              332.8345947265625,
-              1971.833740234375,
-              537.439697265625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.983722984790802,
-            "coordinate": [
-              409.836181640625,
-              2148.39404296875,
-              1973.106689453125,
-              2350.80419921875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9836632013320923,
-            "coordinate": [
-              412.4837646484375,
-              1231.2872314453125,
-              1972.9888916015625,
-              1431.0574951171875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9823898077011108,
-            "coordinate": [
-              411.9697265625,
-              996.114013671875,
-              1972.29150390625,
-              1146.4462890625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9803548455238342,
-            "coordinate": [
-              409.896484375,
-              659.1705322265625,
-              1971.98779296875,
-              803.8292236328125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9800627827644348,
-            "coordinate": [
-              411.18896484375,
-              1664.543212890625,
-              1971.553466796875,
-              1812.469482421875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9768952131271362,
-            "coordinate": [
-              410.4735107421875,
-              2365.05419921875,
-              1974.4801025390625,
-              2515.18408203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.971589982509613,
-            "coordinate": [
-              412.93524169921875,
-              1448.8916015625,
-              1971.821044921875,
-              1541.41552734375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.9410600066184998,
-            "coordinate": [
-              265.24871826171875,
-              586.9420166015625,
-              1355.384765625,
-              625.1673583984375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.8983384370803833,
-            "coordinate": [
-              414.2688903808594,
-              1181.0899658203125,
-              1262.0726318359375,
-              1212.9407958984375
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.8956735730171204,
-            "coordinate": [
-              921.7252197265625,
-              107.03230285644531,
-              1322.9190673828125,
-              138.47911071777344
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8843697309494019,
-            "coordinate": [
-              1914.4642333984375,
-              107.50424194335938,
-              1969.6209716796875,
-              135.83851623535156
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8421326279640198,
-            "coordinate": [
-              475.79052734375,
-              1828.269775390625,
-              904.9569091796875,
-              1868.951416015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7898032069206238,
-            "coordinate": [
-              414.6029357910156,
-              211.3416748046875,
-              1146.7952880859375,
-              289.1247863769531
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7172210812568665,
-            "coordinate": [
-              414.189208984375,
-              846.5499267578125,
-              1206.3128662109375,
-              959.712158203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.6605413556098938,
-            "coordinate": [
-              413.5207214355469,
-              1906.31640625,
-              1239.198486328125,
-              2106.55322265625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.5487017035484314,
-            "coordinate": [
-              415.4542236328125,
-              1592.009765625,
-              523.4496459960938,
-              1620.95068359375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.46062156558036804,
-            "coordinate": [
-              1130.85791015625,
-              2207.4833984375,
-              1218.9951171875,
-              2241.60302734375
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              926,
-              106
-            ],
-            [
-              1328,
-              108
-            ],
-            [
-              1327,
-              142
-            ],
-            [
-              925,
-              139
-            ]
-          ],
-          [
-            [
-              1909,
-              102
-            ],
-            [
-              1981,
-              102
-            ],
-            [
-              1981,
-              146
-            ],
-            [
-              1909,
-              146
-            ]
-          ],
-          [
-            [
-              419,
-              217
-            ],
-            [
-              550,
-              217
-            ],
-            [
-              550,
-              253
-            ],
-            [
-              419,
-              253
-            ]
-          ],
-          [
-            [
-              723,
-              209
-            ],
-            [
-              1148,
-              211
-            ],
-            [
-              1148,
-              245
-            ],
-            [
-              723,
-              243
-            ]
-          ],
-          [
-            [
-              419,
-              256
-            ],
-            [
-              548,
-              256
-            ],
-            [
-              548,
-              295
-            ],
-            [
-              419,
-              295
-            ]
-          ],
-          [
-            [
-              721,
-              249
-            ],
-            [
-              1030,
-              249
-            ],
-            [
-              1030,
-              283
-            ],
-            [
-              721,
-              283
-            ]
-          ],
-          [
-            [
-              418,
-              331
-            ],
-            [
-              1978,
-              332
-            ],
-            [
-              1978,
-              379
-            ],
-            [
-              418,
-              378
-            ]
-          ],
-          [
-            [
-              420,
-              388
-            ],
-            [
-              1978,
-              388
-            ],
-            [
-              1978,
-              432
-            ],
-            [
-              420,
-              432
-            ]
-          ],
-          [
-            [
-              416,
-              440
-            ],
-            [
-              1978,
-              442
-            ],
-            [
-              1978,
-              485
-            ],
-            [
-              416,
-              483
-            ]
-          ],
-          [
-            [
-              417,
-              493
-            ],
-            [
-              1283,
-              493
-            ],
-            [
-              1283,
-              544
-            ],
-            [
-              417,
-              544
-            ]
-          ],
-          [
-            [
-              271,
-              585
-            ],
-            [
-              375,
-              585
-            ],
-            [
-              375,
-              630
-            ],
-            [
-              271,
-              630
-            ]
-          ],
-          [
-            [
-              417,
-              584
-            ],
-            [
-              794,
-              587
-            ],
-            [
-              794,
-              636
-            ],
-            [
-              417,
-              633
-            ]
-          ],
-          [
-            [
-              776,
-              589
-            ],
-            [
-              839,
-              589
-            ],
-            [
-              839,
-              627
-            ],
-            [
-              776,
-              627
-            ]
-          ],
-          [
-            [
-              841,
-              591
-            ],
-            [
-              1027,
-              591
-            ],
-            [
-              1027,
-              626
-            ],
-            [
-              841,
-              626
-            ]
-          ],
-          [
-            [
-              1034,
-              587
-            ],
-            [
-              1359,
-              587
-            ],
-            [
-              1359,
-              628
-            ],
-            [
-              1034,
-              628
-            ]
-          ],
-          [
-            [
-              419,
-              659
-            ],
-            [
-              782,
-              662
-            ],
-            [
-              782,
-              707
-            ],
-            [
-              419,
-              704
-            ]
-          ],
-          [
-            [
-              757,
-              656
-            ],
-            [
-              1978,
-              657
-            ],
-            [
-              1978,
-              705
-            ],
-            [
-              757,
-              704
-            ]
-          ],
-          [
-            [
-              417,
-              710
-            ],
-            [
-              1979,
-              711
-            ],
-            [
-              1979,
-              761
-            ],
-            [
-              417,
-              760
-            ]
-          ],
-          [
-            [
-              419,
-              768
-            ],
-            [
-              1057,
-              768
-            ],
-            [
-              1057,
-              807
-            ],
-            [
-              419,
-              807
-            ]
-          ],
-          [
-            [
-              422,
-              847
-            ],
-            [
-              589,
-              847
-            ],
-            [
-              589,
-              881
-            ],
-            [
-              422,
-              881
-            ]
-          ],
-          [
-            [
-              825,
-              851
-            ],
-            [
-              1207,
-              849
-            ],
-            [
-              1207,
-              887
-            ],
-            [
-              825,
-              889
-            ]
-          ],
-          [
-            [
-              454,
-              892
-            ],
-            [
-              570,
-              888
-            ],
-            [
-              571,
-              924
-            ],
-            [
-              455,
-              928
-            ]
-          ],
-          [
-            [
-              801,
-              893
-            ],
-            [
-              1184,
-              890
-            ],
-            [
-              1184,
-              931
-            ],
-            [
-              801,
-              934
-            ]
-          ],
-          [
-            [
-              418,
-              930
-            ],
-            [
-              490,
-              928
-            ],
-            [
-              492,
-              966
-            ],
-            [
-              419,
-              968
-            ]
-          ],
-          [
-            [
-              418,
-              995
-            ],
-            [
-              1978,
-              995
-            ],
-            [
-              1978,
-              1042
-            ],
-            [
-              418,
-              1042
-            ]
-          ],
-          [
-            [
-              416,
-              1049
-            ],
-            [
-              1976,
-              1050
-            ],
-            [
-              1976,
-              1093
-            ],
-            [
-              416,
-              1092
-            ]
-          ],
-          [
-            [
-              417,
-              1101
-            ],
-            [
-              1850,
-              1100
-            ],
-            [
-              1850,
-              1151
-            ],
-            [
-              417,
-              1152
-            ]
-          ],
-          [
-            [
-              422,
-              1180
-            ],
-            [
-              885,
-              1180
-            ],
-            [
-              885,
-              1214
-            ],
-            [
-              422,
-              1214
-            ]
-          ],
-          [
-            [
-              888,
-              1186
-            ],
-            [
-              935,
-              1186
-            ],
-            [
-              935,
-              1214
-            ],
-            [
-              888,
-              1214
-            ]
-          ],
-          [
-            [
-              930,
-              1185
-            ],
-            [
-              967,
-              1185
-            ],
-            [
-              967,
-              1213
-            ],
-            [
-              930,
-              1213
-            ]
-          ],
-          [
-            [
-              957,
-              1183
-            ],
-            [
-              1261,
-              1183
-            ],
-            [
-              1261,
-              1214
-            ],
-            [
-              957,
-              1214
-            ]
-          ],
-          [
-            [
-              416,
-              1229
-            ],
-            [
-              1983,
-              1224
-            ],
-            [
-              1983,
-              1277
-            ],
-            [
-              416,
-              1282
-            ]
-          ],
-          [
-            [
-              415,
-              1277
-            ],
-            [
-              1981,
-              1283
-            ],
-            [
-              1981,
-              1338
-            ],
-            [
-              415,
-              1332
-            ]
-          ],
-          [
-            [
-              417,
-              1338
-            ],
-            [
-              1978,
-              1340
-            ],
-            [
-              1978,
-              1387
-            ],
-            [
-              417,
-              1384
-            ]
-          ],
-          [
-            [
-              423,
-              1394
-            ],
-            [
-              927,
-              1394
-            ],
-            [
-              927,
-              1431
-            ],
-            [
-              423,
-              1431
-            ]
-          ],
-          [
-            [
-              481,
-              1445
-            ],
-            [
-              1979,
-              1445
-            ],
-            [
-              1979,
-              1495
-            ],
-            [
-              481,
-              1495
-            ]
-          ],
-          [
-            [
-              422,
-              1507
-            ],
-            [
-              631,
-              1507
-            ],
-            [
-              631,
-              1548
-            ],
-            [
-              422,
-              1548
-            ]
-          ],
-          [
-            [
-              417,
-              1592
-            ],
-            [
-              529,
-              1590
-            ],
-            [
-              530,
-              1625
-            ],
-            [
-              418,
-              1627
-            ]
-          ],
-          [
-            [
-              419,
-              1666
-            ],
-            [
-              1976,
-              1664
-            ],
-            [
-              1976,
-              1707
-            ],
-            [
-              419,
-              1709
-            ]
-          ],
-          [
-            [
-              421,
-              1720
-            ],
-            [
-              1975,
-              1720
-            ],
-            [
-              1975,
-              1764
-            ],
-            [
-              421,
-              1764
-            ]
-          ],
-          [
-            [
-              416,
-              1771
-            ],
-            [
-              1661,
-              1769
-            ],
-            [
-              1662,
-              1816
-            ],
-            [
-              416,
-              1818
-            ]
-          ],
-          [
-            [
-              481,
-              1825
-            ],
-            [
-              905,
-              1828
-            ],
-            [
-              904,
-              1871
-            ],
-            [
-              480,
-              1868
-            ]
-          ],
-          [
-            [
-              420,
-              1906
-            ],
-            [
-              589,
-              1908
-            ],
-            [
-              588,
-              1943
-            ],
-            [
-              420,
-              1941
-            ]
-          ],
-          [
-            [
-              455,
-              1950
-            ],
-            [
-              570,
-              1946
-            ],
-            [
-              571,
-              1982
-            ],
-            [
-              456,
-              1986
-            ]
-          ],
-          [
-            [
-              763,
-              1942
-            ],
-            [
-              929,
-              1940
-            ],
-            [
-              930,
-              1978
-            ],
-            [
-              763,
-              1981
-            ]
-          ],
-          [
-            [
-              419,
-              1991
-            ],
-            [
-              491,
-              1991
-            ],
-            [
-              491,
-              2027
-            ],
-            [
-              419,
-              2027
-            ]
-          ],
-          [
-            [
-              416,
-              2035
-            ],
-            [
-              492,
-              2035
-            ],
-            [
-              492,
-              2072
-            ],
-            [
-              416,
-              2072
-            ]
-          ],
-          [
-            [
-              833,
-              2026
-            ],
-            [
-              1238,
-              2026
-            ],
-            [
-              1238,
-              2056
-            ],
-            [
-              833,
-              2056
-            ]
-          ],
-          [
-            [
-              826,
-              2060
-            ],
-            [
-              1162,
-              2060
-            ],
-            [
-              1162,
-              2104
-            ],
-            [
-              826,
-              2104
-            ]
-          ],
-          [
-            [
-              417,
-              2079
-            ],
-            [
-              490,
-              2079
-            ],
-            [
-              490,
-              2113
-            ],
-            [
-              417,
-              2113
-            ]
-          ],
-          [
-            [
-              418,
-              2149
-            ],
-            [
-              1975,
-              2149
-            ],
-            [
-              1975,
-              2192
-            ],
-            [
-              418,
-              2192
-            ]
-          ],
-          [
-            [
-              416,
-              2201
-            ],
-            [
-              1124,
-              2205
-            ],
-            [
-              1124,
-              2250
-            ],
-            [
-              416,
-              2246
-            ]
-          ],
-          [
-            [
-              1207,
-              2200
-            ],
-            [
-              1978,
-              2198
-            ],
-            [
-              1978,
-              2249
-            ],
-            [
-              1207,
-              2251
-            ]
-          ],
-          [
-            [
-              418,
-              2256
-            ],
-            [
-              1978,
-              2256
-            ],
-            [
-              1978,
-              2300
-            ],
-            [
-              418,
-              2300
-            ]
-          ],
-          [
-            [
-              411,
-              2307
-            ],
-            [
-              1932,
-              2307
-            ],
-            [
-              1932,
-              2360
-            ],
-            [
-              411,
-              2360
-            ]
-          ],
-          [
-            [
-              474,
-              2355
-            ],
-            [
-              1984,
-              2359
-            ],
-            [
-              1984,
-              2416
-            ],
-            [
-              474,
-              2412
-            ]
-          ],
-          [
-            [
-              415,
-              2414
-            ],
-            [
-              1983,
-              2414
-            ],
-            [
-              1983,
-              2467
-            ],
-            [
-              415,
-              2467
-            ]
-          ],
-          [
-            [
-              416,
-              2469
-            ],
-            [
-              1983,
-              2466
-            ],
-            [
-              1983,
-              2523
-            ],
-            [
-              416,
-              2526
-            ]
-          ],
-          [
-            [
-              1130,
-              2207
-            ],
-            [
-              1218,
-              2207
-            ],
-            [
-              1218,
-              2241
-            ],
-            [
-              1130,
-              2241
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "Conditional code execution",
-          "165",
-          ">> end",
-          "Entire if statement evaluates",
-          "=> nil",
-          "to nil because it fails",
-          "Conditional statements interact with other aspects of Ruby syntax in a couple of ways",
-          "that you need to be aware of—in particular, with assignment syntax. It's worth looking",
-          "in some detail at how conditionals behave in assignments, because it involves some",
-          "interesting points about how Ruby parses code.",
-          "6.1.2",
-          "Assignment syntax",
-          "in",
-          "condition",
-          "bodies and tests",
-          "and conditional expressions cross paths at two points: in the bodies",
-          "of conditional expressions, where the assignments may or may not happen at all, and",
-          "in the conditional tests themselves:",
-          "ifx = 1",
-          "Assignment in conditional",
-          "y = 2",
-          "Assignment in conditional",
-          "end",
-          "What happens (or doesn't) when you usethese idioms? We'll look at both, starting",
-          "with variable assignment in thebody of the conditional—specifically, local-variable",
-          "assignment, which displays some perhaps unexpected behavior in this context.",
-          "LOCAL-VARIABLE ASSIGNMENT",
-          "IN",
-          "A",
-          "CONDITIONAL BODY",
-          "Ruby doesn't draw as clear a line as compiled languages do between“compile time\"",
-          "and\"runtime,\" but the interpreter does parse your code before running it,and cer-",
-          "tain decisions are made during that process. An important one is the recognition and",
-          "allocation of local variables.",
-          "When the Ruby parser sees the sequenceidentifier, equal-sign, and value, as in this",
-          "expression,",
-          "x = 1",
-          "it allocates space for a local variable called x. The creation of the variable—not the",
-          "assignment of a value to it, but the internal creation of a variable—always takes place",
-          "as a result of this kind of expression, even if the code isn't executed!",
-          "Consider this example:",
-          "if false",
-          "x = 1",
-          "Output: nil",
-          "end",
-          "px",
-          "NameError: undefined local",
-          "variable or method y'",
-          "pY",
-          "The assignment to x isn't executed, because it's wrapped in a failing conditional test.",
-          "But the Ruby parser sees the sequence",
-          "., from which it deduces that the program",
-          "involves a local variable x.The parser doesn't care whether x is ever assigned a value. Its",
-          "job is just to scour the code for local variables for which space needs to be allocated.",
-          "The resultisthatxinhabitsastrangekindofvariable limbo.Ithasbeen brought",
-          "into beingandinitialized to nil.Inthat respect, itdifersfrom avariablethat has no",
-          "existence atall; as you can see in the example,examiningx gives you thevalue nil,",
-          "x=1"
-        ],
-        "rec_scores": [
-          0.9777361750602722,
-          0.9999485015869141,
-          0.9458885192871094,
-          0.995631992816925,
-          0.9160335063934326,
-          0.9865835309028625,
-          0.9688999056816101,
-          0.9614211916923523,
-          0.9628618955612183,
-          0.9684810042381287,
-          0.9998906254768372,
-          0.9810241460800171,
-          0.9689246416091919,
-          0.9996192455291748,
-          0.9738322496414185,
-          0.965545654296875,
-          0.9490837454795837,
-          0.9807372689247131,
-          0.9140352606773376,
-          0.9761111736297607,
-          0.7860755920410156,
-          0.9846035242080688,
-          0.9990003108978271,
-          0.9555090069770813,
-          0.9418193697929382,
-          0.9629470705986023,
-          0.9056780338287354,
-          0.9966608285903931,
-          0.6842107176780701,
-          0.9679049253463745,
-          0.9542911648750305,
-          0.9508749842643738,
-          0.9722084999084473,
-          0.987589418888092,
-          0.9617382884025574,
-          0.9987958669662476,
-          0.8361932635307312,
-          0.941349446773529,
-          0.9615519642829895,
-          0.9630118608474731,
-          0.9855331778526306,
-          0.9928902983665466,
-          0.8769140243530273,
-          0.9719118475914001,
-          0.9992002844810486,
-          0.7362380027770996,
-          0.9699319005012512,
-          0.9655662775039673,
-          0.5487286448478699,
-          0.9543352723121643,
-          0.9745872020721436,
-          0.9456450343132019,
-          0.9509578943252563,
-          0.938694417476654,
-          0.9546674489974976,
-          0.9301444292068481,
-          0.9507148861885071,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              926,
-              106
-            ],
-            [
-              1328,
-              108
-            ],
-            [
-              1327,
-              142
-            ],
-            [
-              925,
-              139
-            ]
-          ],
-          [
-            [
-              1909,
-              102
-            ],
-            [
-              1981,
-              102
-            ],
-            [
-              1981,
-              146
-            ],
-            [
-              1909,
-              146
-            ]
-          ],
-          [
-            [
-              419,
-              217
-            ],
-            [
-              550,
-              217
-            ],
-            [
-              550,
-              253
-            ],
-            [
-              419,
-              253
-            ]
-          ],
-          [
-            [
-              723,
-              209
-            ],
-            [
-              1148,
-              211
-            ],
-            [
-              1148,
-              245
-            ],
-            [
-              723,
-              243
-            ]
-          ],
-          [
-            [
-              419,
-              256
-            ],
-            [
-              548,
-              256
-            ],
-            [
-              548,
-              295
-            ],
-            [
-              419,
-              295
-            ]
-          ],
-          [
-            [
-              721,
-              249
-            ],
-            [
-              1030,
-              249
-            ],
-            [
-              1030,
-              283
-            ],
-            [
-              721,
-              283
-            ]
-          ],
-          [
-            [
-              418,
-              331
-            ],
-            [
-              1978,
-              332
-            ],
-            [
-              1978,
-              379
-            ],
-            [
-              418,
-              378
-            ]
-          ],
-          [
-            [
-              420,
-              388
-            ],
-            [
-              1978,
-              388
-            ],
-            [
-              1978,
-              432
-            ],
-            [
-              420,
-              432
-            ]
-          ],
-          [
-            [
-              416,
-              440
-            ],
-            [
-              1978,
-              442
-            ],
-            [
-              1978,
-              485
-            ],
-            [
-              416,
-              483
-            ]
-          ],
-          [
-            [
-              417,
-              493
-            ],
-            [
-              1283,
-              493
-            ],
-            [
-              1283,
-              544
-            ],
-            [
-              417,
-              544
-            ]
-          ],
-          [
-            [
-              271,
-              585
-            ],
-            [
-              375,
-              585
-            ],
-            [
-              375,
-              630
-            ],
-            [
-              271,
-              630
-            ]
-          ],
-          [
-            [
-              417,
-              584
-            ],
-            [
-              794,
-              587
-            ],
-            [
-              794,
-              636
-            ],
-            [
-              417,
-              633
-            ]
-          ],
-          [
-            [
-              776,
-              589
-            ],
-            [
-              839,
-              589
-            ],
-            [
-              839,
-              627
-            ],
-            [
-              776,
-              627
-            ]
-          ],
-          [
-            [
-              841,
-              591
-            ],
-            [
-              1027,
-              591
-            ],
-            [
-              1027,
-              626
-            ],
-            [
-              841,
-              626
-            ]
-          ],
-          [
-            [
-              1034,
-              587
-            ],
-            [
-              1359,
-              587
-            ],
-            [
-              1359,
-              628
-            ],
-            [
-              1034,
-              628
-            ]
-          ],
-          [
-            [
-              757,
-              656
-            ],
-            [
-              1978,
-              657
-            ],
-            [
-              1978,
-              705
-            ],
-            [
-              757,
-              704
-            ]
-          ],
-          [
-            [
-              417,
-              710
-            ],
-            [
-              1979,
-              711
-            ],
-            [
-              1979,
-              761
-            ],
-            [
-              417,
-              760
-            ]
-          ],
-          [
-            [
-              419,
-              768
-            ],
-            [
-              1057,
-              768
-            ],
-            [
-              1057,
-              807
-            ],
-            [
-              419,
-              807
-            ]
-          ],
-          [
-            [
-              422,
-              847
-            ],
-            [
-              589,
-              847
-            ],
-            [
-              589,
-              881
-            ],
-            [
-              422,
-              881
-            ]
-          ],
-          [
-            [
-              825,
-              851
-            ],
-            [
-              1207,
-              849
-            ],
-            [
-              1207,
-              887
-            ],
-            [
-              825,
-              889
-            ]
-          ],
-          [
-            [
-              454,
-              892
-            ],
-            [
-              570,
-              888
-            ],
-            [
-              571,
-              924
-            ],
-            [
-              455,
-              928
-            ]
-          ],
-          [
-            [
-              801,
-              893
-            ],
-            [
-              1184,
-              890
-            ],
-            [
-              1184,
-              931
-            ],
-            [
-              801,
-              934
-            ]
-          ],
-          [
-            [
-              418,
-              930
-            ],
-            [
-              490,
-              928
-            ],
-            [
-              492,
-              966
-            ],
-            [
-              419,
-              968
-            ]
-          ],
-          [
-            [
-              418,
-              995
-            ],
-            [
-              1978,
-              995
-            ],
-            [
-              1978,
-              1042
-            ],
-            [
-              418,
-              1042
-            ]
-          ],
-          [
-            [
-              416,
-              1049
-            ],
-            [
-              1976,
-              1050
-            ],
-            [
-              1976,
-              1093
-            ],
-            [
-              416,
-              1092
-            ]
-          ],
-          [
-            [
-              417,
-              1101
-            ],
-            [
-              1850,
-              1100
-            ],
-            [
-              1850,
-              1151
-            ],
-            [
-              417,
-              1152
-            ]
-          ],
-          [
-            [
-              422,
-              1180
-            ],
-            [
-              885,
-              1180
-            ],
-            [
-              885,
-              1214
-            ],
-            [
-              422,
-              1214
-            ]
-          ],
-          [
-            [
-              888,
-              1186
-            ],
-            [
-              935,
-              1186
-            ],
-            [
-              935,
-              1214
-            ],
-            [
-              888,
-              1214
-            ]
-          ],
-          [
-            [
-              930,
-              1185
-            ],
-            [
-              967,
-              1185
-            ],
-            [
-              967,
-              1213
-            ],
-            [
-              930,
-              1213
-            ]
-          ],
-          [
-            [
-              957,
-              1183
-            ],
-            [
-              1261,
-              1183
-            ],
-            [
-              1261,
-              1214
-            ],
-            [
-              957,
-              1214
-            ]
-          ],
-          [
-            [
-              416,
-              1229
-            ],
-            [
-              1983,
-              1224
-            ],
-            [
-              1983,
-              1277
-            ],
-            [
-              416,
-              1282
-            ]
-          ],
-          [
-            [
-              415,
-              1277
-            ],
-            [
-              1981,
-              1283
-            ],
-            [
-              1981,
-              1338
-            ],
-            [
-              415,
-              1332
-            ]
-          ],
-          [
-            [
-              417,
-              1338
-            ],
-            [
-              1978,
-              1340
-            ],
-            [
-              1978,
-              1387
-            ],
-            [
-              417,
-              1384
-            ]
-          ],
-          [
-            [
-              423,
-              1394
-            ],
-            [
-              927,
-              1394
-            ],
-            [
-              927,
-              1431
-            ],
-            [
-              423,
-              1431
-            ]
-          ],
-          [
-            [
-              481,
-              1445
-            ],
-            [
-              1979,
-              1445
-            ],
-            [
-              1979,
-              1495
-            ],
-            [
-              481,
-              1495
-            ]
-          ],
-          [
-            [
-              422,
-              1507
-            ],
-            [
-              631,
-              1507
-            ],
-            [
-              631,
-              1548
-            ],
-            [
-              422,
-              1548
-            ]
-          ],
-          [
-            [
-              417,
-              1592
-            ],
-            [
-              529,
-              1590
-            ],
-            [
-              530,
-              1625
-            ],
-            [
-              418,
-              1627
-            ]
-          ],
-          [
-            [
-              419,
-              1666
-            ],
-            [
-              1976,
-              1664
-            ],
-            [
-              1976,
-              1707
-            ],
-            [
-              419,
-              1709
-            ]
-          ],
-          [
-            [
-              421,
-              1720
-            ],
-            [
-              1975,
-              1720
-            ],
-            [
-              1975,
-              1764
-            ],
-            [
-              421,
-              1764
-            ]
-          ],
-          [
-            [
-              416,
-              1771
-            ],
-            [
-              1661,
-              1769
-            ],
-            [
-              1662,
-              1816
-            ],
-            [
-              416,
-              1818
-            ]
-          ],
-          [
-            [
-              481,
-              1825
-            ],
-            [
-              905,
-              1828
-            ],
-            [
-              904,
-              1871
-            ],
-            [
-              480,
-              1868
-            ]
-          ],
-          [
-            [
-              420,
-              1906
-            ],
-            [
-              589,
-              1908
-            ],
-            [
-              588,
-              1943
-            ],
-            [
-              420,
-              1941
-            ]
-          ],
-          [
-            [
-              455,
-              1950
-            ],
-            [
-              570,
-              1946
-            ],
-            [
-              571,
-              1982
-            ],
-            [
-              456,
-              1986
-            ]
-          ],
-          [
-            [
-              763,
-              1942
-            ],
-            [
-              929,
-              1940
-            ],
-            [
-              930,
-              1978
-            ],
-            [
-              763,
-              1981
-            ]
-          ],
-          [
-            [
-              419,
-              1991
-            ],
-            [
-              491,
-              1991
-            ],
-            [
-              491,
-              2027
-            ],
-            [
-              419,
-              2027
-            ]
-          ],
-          [
-            [
-              416,
-              2035
-            ],
-            [
-              492,
-              2035
-            ],
-            [
-              492,
-              2072
-            ],
-            [
-              416,
-              2072
-            ]
-          ],
-          [
-            [
-              833,
-              2026
-            ],
-            [
-              1238,
-              2026
-            ],
-            [
-              1238,
-              2056
-            ],
-            [
-              833,
-              2056
-            ]
-          ],
-          [
-            [
-              826,
-              2060
-            ],
-            [
-              1162,
-              2060
-            ],
-            [
-              1162,
-              2104
-            ],
-            [
-              826,
-              2104
-            ]
-          ],
-          [
-            [
-              417,
-              2079
-            ],
-            [
-              490,
-              2079
-            ],
-            [
-              490,
-              2113
-            ],
-            [
-              417,
-              2113
-            ]
-          ],
-          [
-            [
-              418,
-              2149
-            ],
-            [
-              1975,
-              2149
-            ],
-            [
-              1975,
-              2192
-            ],
-            [
-              418,
-              2192
-            ]
-          ],
-          [
-            [
-              416,
-              2201
-            ],
-            [
-              1124,
-              2205
-            ],
-            [
-              1124,
-              2250
-            ],
-            [
-              416,
-              2246
-            ]
-          ],
-          [
-            [
-              1207,
-              2200
-            ],
-            [
-              1978,
-              2198
-            ],
-            [
-              1978,
-              2249
-            ],
-            [
-              1207,
-              2251
-            ]
-          ],
-          [
-            [
-              418,
-              2256
-            ],
-            [
-              1978,
-              2256
-            ],
-            [
-              1978,
-              2300
-            ],
-            [
-              418,
-              2300
-            ]
-          ],
-          [
-            [
-              411,
-              2307
-            ],
-            [
-              1932,
-              2307
-            ],
-            [
-              1932,
-              2360
-            ],
-            [
-              411,
-              2360
-            ]
-          ],
-          [
-            [
-              474,
-              2355
-            ],
-            [
-              1984,
-              2359
-            ],
-            [
-              1984,
-              2416
-            ],
-            [
-              474,
-              2412
-            ]
-          ],
-          [
-            [
-              415,
-              2414
-            ],
-            [
-              1983,
-              2414
-            ],
-            [
-              1983,
-              2467
-            ],
-            [
-              415,
-              2467
-            ]
-          ],
-          [
-            [
-              416,
-              2469
-            ],
-            [
-              1983,
-              2466
-            ],
-            [
-              1983,
-              2523
-            ],
-            [
-              416,
-              2526
-            ]
-          ],
-          [
-            [
-              1130,
-              2207
-            ],
-            [
-              1218,
-              2207
-            ],
-            [
-              1218,
-              2241
-            ],
-            [
-              1130,
-              2241
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            925.0,
-            106.0,
-            1328.0,
-            142.0
-          ],
-          [
-            1909.0,
-            102.0,
-            1981.0,
-            146.0
-          ],
-          [
-            419.0,
-            217.0,
-            550.0,
-            253.0
-          ],
-          [
-            723.0,
-            209.0,
-            1148.0,
-            245.0
-          ],
-          [
-            419.0,
-            256.0,
-            548.0,
-            295.0
-          ],
-          [
-            721.0,
-            249.0,
-            1030.0,
-            283.0
-          ],
-          [
-            418.0,
-            331.0,
-            1978.0,
-            379.0
-          ],
-          [
-            420.0,
-            388.0,
-            1978.0,
-            432.0
-          ],
-          [
-            416.0,
-            440.0,
-            1978.0,
-            485.0
-          ],
-          [
-            417.0,
-            493.0,
-            1283.0,
-            544.0
-          ],
-          [
-            271.0,
-            585.0,
-            375.0,
-            630.0
-          ],
-          [
-            417.0,
-            584.0,
-            794.0,
-            636.0
-          ],
-          [
-            776.0,
-            589.0,
-            839.0,
-            627.0
-          ],
-          [
-            841.0,
-            591.0,
-            1027.0,
-            626.0
-          ],
-          [
-            1034.0,
-            587.0,
-            1359.0,
-            628.0
-          ],
-          [
-            757.0,
-            656.0,
-            1978.0,
-            705.0
-          ],
-          [
-            417.0,
-            710.0,
-            1979.0,
-            761.0
-          ],
-          [
-            419.0,
-            768.0,
-            1057.0,
-            807.0
-          ],
-          [
-            422.0,
-            847.0,
-            589.0,
-            881.0
-          ],
-          [
-            825.0,
-            849.0,
-            1207.0,
-            889.0
-          ],
-          [
-            454.0,
-            888.0,
-            571.0,
-            928.0
-          ],
-          [
-            801.0,
-            890.0,
-            1184.0,
-            934.0
-          ],
-          [
-            418.0,
-            928.0,
-            492.0,
-            968.0
-          ],
-          [
-            418.0,
-            995.0,
-            1978.0,
-            1042.0
-          ],
-          [
-            416.0,
-            1049.0,
-            1976.0,
-            1093.0
-          ],
-          [
-            417.0,
-            1100.0,
-            1850.0,
-            1152.0
-          ],
-          [
-            422.0,
-            1180.0,
-            885.0,
-            1214.0
-          ],
-          [
-            888.0,
-            1186.0,
-            935.0,
-            1214.0
-          ],
-          [
-            930.0,
-            1185.0,
-            967.0,
-            1213.0
-          ],
-          [
-            957.0,
-            1183.0,
-            1261.0,
-            1214.0
-          ],
-          [
-            416.0,
-            1224.0,
-            1983.0,
-            1282.0
-          ],
-          [
-            415.0,
-            1277.0,
-            1981.0,
-            1338.0
-          ],
-          [
-            417.0,
-            1338.0,
-            1978.0,
-            1387.0
-          ],
-          [
-            423.0,
-            1394.0,
-            927.0,
-            1431.0
-          ],
-          [
-            481.0,
-            1445.0,
-            1979.0,
-            1495.0
-          ],
-          [
-            422.0,
-            1507.0,
-            631.0,
-            1548.0
-          ],
-          [
-            417.0,
-            1590.0,
-            530.0,
-            1627.0
-          ],
-          [
-            419.0,
-            1664.0,
-            1976.0,
-            1709.0
-          ],
-          [
-            421.0,
-            1720.0,
-            1975.0,
-            1764.0
-          ],
-          [
-            416.0,
-            1769.0,
-            1662.0,
-            1818.0
-          ],
-          [
-            480.0,
-            1825.0,
-            905.0,
-            1871.0
-          ],
-          [
-            420.0,
-            1906.0,
-            589.0,
-            1943.0
-          ],
-          [
-            455.0,
-            1946.0,
-            571.0,
-            1986.0
-          ],
-          [
-            763.0,
-            1940.0,
-            930.0,
-            1981.0
-          ],
-          [
-            419.0,
-            1991.0,
-            491.0,
-            2027.0
-          ],
-          [
-            416.0,
-            2035.0,
-            492.0,
-            2072.0
-          ],
-          [
-            833.0,
-            2026.0,
-            1238.0,
-            2056.0
-          ],
-          [
-            826.0,
-            2060.0,
-            1162.0,
-            2104.0
-          ],
-          [
-            417.0,
-            2079.0,
-            490.0,
-            2113.0
-          ],
-          [
-            418.0,
-            2149.0,
-            1975.0,
-            2192.0
-          ],
-          [
-            416.0,
-            2201.0,
-            1124.0,
-            2250.0
-          ],
-          [
-            1207.0,
-            2198.0,
-            1978.0,
-            2251.0
-          ],
-          [
-            418.0,
-            2256.0,
-            1978.0,
-            2300.0
-          ],
-          [
-            411.0,
-            2307.0,
-            1932.0,
-            2360.0
-          ],
-          [
-            474.0,
-            2355.0,
-            1984.0,
-            2416.0
-          ],
-          [
-            415.0,
-            2414.0,
-            1983.0,
-            2467.0
-          ],
-          [
-            416.0,
-            2466.0,
-            1983.0,
-            2526.0
-          ],
-          [
-            1130.85791015625,
-            2207.4833984375,
-            1218.9951171875,
-            2241.60302734375
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=1",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1130.85791015625,
-            2207.4833984375,
-            1218.9951171875,
-            2241.60302734375
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -3129,7 +464,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

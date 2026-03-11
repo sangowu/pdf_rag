@@ -6,4191 +6,673 @@
       "parsing_res_list": [
         {
           "block_label": "header",
-          "block_content": "2.7 Public Key Cryptography ",
+          "block_content": "2.7 Public Key Cryptography",
           "block_bbox": [
             1332,
             159,
-            1997,
-            206
+            2009,
+            219
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              1332.0,
+              159.0
+            ],
+            [
+              2009.0,
+              159.0
+            ],
+            [
+              2009.0,
+              219.0
+            ],
+            [
+              1332.0,
+              219.0
+            ]
+          ]
         },
         {
           "block_label": "number",
           "block_content": "79",
           "block_bbox": [
-            2102,
+            2101,
             162,
-            2151,
-            200
+            2161,
+            210
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              2101.0,
+              162.0
+            ],
+            [
+              2161.0,
+              162.0
+            ],
+            [
+              2161.0,
+              210.0
+            ],
+            [
+              2101.0,
+              210.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Theorem 2.19 Let m be an integer that is the product of two prime numbers. The prime divisors of m are the roots of the quadratic equation ",
+          "block_content": "Theorem 2.19 Let m be an integer that is the product of two prime numbers. The prime divisors of m are the roots of the quadratic equation",
           "block_bbox": [
-            351,
-            293,
-            2155,
-            414
+            350,
+            292,
+            2165,
+            424
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              350.0,
+              292.0
+            ],
+            [
+              2165.0,
+              292.0
+            ],
+            [
+              2165.0,
+              424.0
+            ],
+            [
+              350.0,
+              424.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "x^{2}-(m+1-\\varphi(m))x+m=0,",
+          "block_label": "display_formula",
+          "block_content": " $$ x^{2}-(m+1-\\varphi(m))x+m=0, $$ ",
           "block_bbox": [
             860,
-            455,
-            1647,
-            517
+            456,
+            1654,
+            529
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              860.0,
+              456.0
+            ],
+            [
+              1654.0,
+              456.0
+            ],
+            [
+              1654.0,
+              529.0
+            ],
+            [
+              860.0,
+              529.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "and so $\\varphi(m)$ determines the prime factors of m.",
-          "block_bbox": [
-            353,
-            564,
-            1533,
-            621
-          ],
-          "block_id": 4,
-          "block_order": 3
-        },
-        {
-          "block_label": "text",
-          "block_content": "Proof. If $m=p q$ _,then ",
-          "block_bbox": [
-            406,
-            667,
-            982,
-            725
-          ],
-          "block_id": 5,
-          "block_order": 4
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\varphi(m)=(p-1)(q-1)=p q-p-q+1=m-p-\\frac{m}{p}+1,",
-          "block_bbox": [
-            543,
-            756,
-            1963,
-            877
-          ],
-          "block_id": 6,
-          "block_order": 5
-        },
-        {
-          "block_label": "text",
-          "block_content": "and so ",
-          "block_bbox": [
-            352,
-            911,
-            521,
-            956
-          ],
-          "block_id": 7,
-          "block_order": 6
-        },
-        {
-          "block_label": "formula",
-          "block_content": "p-(m+1-\\varphi(m))+{\\frac{m}{p}}=0.",
-          "block_bbox": [
-            881,
-            953,
-            1621,
-            1070
-          ],
-          "block_id": 8,
-          "block_order": 7
-        },
-        {
-          "block_label": "text",
-          "block_content": "Equivalently, p and q are the solutions of the quadratic equation ",
-          "block_bbox": [
-            350,
-            1091,
-            1924,
-            1146
-          ],
-          "block_id": 9,
-          "block_order": 8
-        },
-        {
-          "block_label": "formula",
-          "block_content": "x^{2}-(m+1-\\varphi(m))x+m=0.",
-          "block_bbox": [
-            860,
-            1188,
-            1644,
-            1249
-          ],
-          "block_id": 10,
-          "block_order": 9
-        },
-        {
-          "block_label": "text",
-          "block_content": "This completes the proof.",
-          "block_bbox": [
-            353,
-            1295,
-            1043,
-            1351
-          ],
-          "block_id": 11,
-          "block_order": 10
-        },
-        {
-          "block_label": "text",
-          "block_content": "For example, if $m=221{\\mathrm{~a n d~}}\\varphi(m)=192$ , then the quadratic equation ",
-          "block_bbox": [
-            405,
-            1487,
-            2123,
-            1546
-          ],
-          "block_id": 12,
-          "block_order": 11
-        },
-        {
-          "block_label": "formula",
-          "block_content": "x^{2}-30x+221=0",
-          "block_bbox": [
-            1015,
-            1585,
-            1495,
-            1640
-          ],
-          "block_id": 13,
-          "block_order": 12
-        },
-        {
-          "block_label": "text",
-          "block_content": "has solutions $x=13$ and $x=17$ ,and $221=13\\cdot17$ ",
-          "block_bbox": [
-            350,
-            1694,
-            1602,
-            1745
-          ],
-          "block_id": 14,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "This method, known as the RSA cryptosystem, is called a public key cryptosystem, since the encryption key is made available to everyone, and the encrypted message can be transmitted through public channels. Only the possessor of the prime factors of m can decrypt the message. RSA is simple,but useful, and is the basis of many commercially valuable cryptosystems.",
+          "block_content": "and so  $ \\varphi(m) $ determines the prime factors of m.",
           "block_bbox": [
             349,
-            1760,
-            2153,
-            2082
+            564,
+            1538,
+            631
+          ],
+          "block_id": 4,
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              349.0,
+              564.0
+            ],
+            [
+              1538.0,
+              564.0
+            ],
+            [
+              1538.0,
+              631.0
+            ],
+            [
+              349.0,
+              631.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Proof. If m = pq, then",
+          "block_bbox": [
+            403,
+            668,
+            989,
+            733
+          ],
+          "block_id": 5,
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              403.0,
+              668.0
+            ],
+            [
+              989.0,
+              668.0
+            ],
+            [
+              989.0,
+              733.0
+            ],
+            [
+              403.0,
+              733.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\varphi(m)=(p-1)(q-1)=pq-p-q+1=m-p-\\frac{m}{p}+1, $$ ",
+          "block_bbox": [
+            542,
+            761,
+            1967,
+            883
+          ],
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              542.0,
+              761.0
+            ],
+            [
+              1967.0,
+              761.0
+            ],
+            [
+              1967.0,
+              883.0
+            ],
+            [
+              542.0,
+              883.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "and so",
+          "block_bbox": [
+            349,
+            913,
+            532,
+            971
+          ],
+          "block_id": 7,
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              349.0,
+              913.0
+            ],
+            [
+              532.0,
+              913.0
+            ],
+            [
+              532.0,
+              971.0
+            ],
+            [
+              349.0,
+              971.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ p-(m+1-\\varphi(m))+\\frac{m}{p}=0. $$ ",
+          "block_bbox": [
+            878,
+            953,
+            1628,
+            1076
+          ],
+          "block_id": 8,
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              878.0,
+              953.0
+            ],
+            [
+              1628.0,
+              953.0
+            ],
+            [
+              1628.0,
+              1076.0
+            ],
+            [
+              878.0,
+              1076.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Equivalently, p and q are the solutions of the quadratic equation",
+          "block_bbox": [
+            351,
+            1090,
+            1936,
+            1157
+          ],
+          "block_id": 9,
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              351.0,
+              1090.0
+            ],
+            [
+              1936.0,
+              1090.0
+            ],
+            [
+              1936.0,
+              1157.0
+            ],
+            [
+              351.0,
+              1157.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ x^{2}-(m+1-\\varphi(m))x+m=0. $$ ",
+          "block_bbox": [
+            858,
+            1187,
+            1652,
+            1261
+          ],
+          "block_id": 10,
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              858.0,
+              1187.0
+            ],
+            [
+              1652.0,
+              1187.0
+            ],
+            [
+              1652.0,
+              1261.0
+            ],
+            [
+              858.0,
+              1261.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "This completes the proof. ☐",
+          "block_bbox": [
+            352,
+            1294,
+            1050,
+            1360
+          ],
+          "block_id": 11,
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              352.0,
+              1294.0
+            ],
+            [
+              1050.0,
+              1294.0
+            ],
+            [
+              1050.0,
+              1360.0
+            ],
+            [
+              352.0,
+              1360.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "For example, if m = 221 and  $ \\varphi(m) = 192 $, then the quadratic equation",
+          "block_bbox": [
+            403,
+            1486,
+            2131,
+            1555
+          ],
+          "block_id": 12,
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              403.0,
+              1486.0
+            ],
+            [
+              2131.0,
+              1486.0
+            ],
+            [
+              2131.0,
+              1555.0
+            ],
+            [
+              403.0,
+              1555.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ x^{2}-30x+221=0 $$ ",
+          "block_bbox": [
+            1013,
+            1587,
+            1502,
+            1652
+          ],
+          "block_id": 13,
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              1013.0,
+              1587.0
+            ],
+            [
+              1502.0,
+              1587.0
+            ],
+            [
+              1502.0,
+              1652.0
+            ],
+            [
+              1013.0,
+              1652.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "has solutions  $ x = 13 $ and  $ x = 17 $, and  $ 221 = 13 \\cdot 17 $.",
+          "block_bbox": [
+            350,
+            1693,
+            1610,
+            1754
+          ],
+          "block_id": 14,
+          "block_order": 13,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              350.0,
+              1693.0
+            ],
+            [
+              1610.0,
+              1693.0
+            ],
+            [
+              1610.0,
+              1754.0
+            ],
+            [
+              350.0,
+              1754.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "This method, known as the RSA cryptosystem, is called a public key cryptosystem, since the encryption key is made available to everyone, and the encrypted message can be transmitted through public channels. Only the possessor of the prime factors of m can decrypt the message. RSA is simple, but useful, and is the basis of many commercially valuable cryptosystems.",
+          "block_bbox": [
+            349,
+            1762,
+            2166,
+            2096
           ],
           "block_id": 15,
-          "block_order": 14
+          "block_order": 14,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              349.0,
+              1762.0
+            ],
+            [
+              2166.0,
+              1762.0
+            ],
+            [
+              2166.0,
+              2096.0
+            ],
+            [
+              349.0,
+              2096.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "Exercises ",
+          "block_content": "Exercises",
           "block_bbox": [
-            359,
+            358,
             2187,
-            624,
-            2239
+            637,
+            2256
           ],
           "block_id": 16,
-          "block_order": 15
+          "block_order": 15,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              358.0,
+              2187.0
+            ],
+            [
+              637.0,
+              2187.0
+            ],
+            [
+              637.0,
+              2256.0
+            ],
+            [
+              358.0,
+              2256.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "1. Consider the secret key cryptosystem constructed from the prime $p=947$ and the encoding key $e=167$ . Encipher the plaintext $P=2$ Find a decrypting key and decipher the ciphertext $C=3$ ",
+          "block_content": "1. Consider the secret key cryptosystem constructed from the prime $p = 947$ and the encoding key $e = 167$. Encipher the plaintext $P = 2$. Find a decrypting key and decipher the ciphertext $C = 3$.",
           "block_bbox": [
-            420,
+            419,
             2293,
-            2151,
-            2483
+            2158,
+            2492
           ],
           "block_id": 17,
-          "block_order": 16
+          "block_order": 16,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              419.0,
+              2293.0
+            ],
+            [
+              2158.0,
+              2293.0
+            ],
+            [
+              2158.0,
+              2492.0
+            ],
+            [
+              419.0,
+              2492.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "2. Consider the primes $p=53$ and $q=61$ . Let $m=p q$ . Provethat $e=7$ is relatively prime to $\\varphi(m)$ . Find a positive integer d such that \n$e d\\equiv1{\\pmod{\\varphi(m)}}$ \n",
+          "block_content": "2. Consider the primes  $ p = 53 $ and  $ q = 61 $. Let m = pq. Prove that  $ e = 7 $ is relatively prime to  $ \\varphi(m) $. Find a positive integer  $ d $ such that  $ ed \\equiv 1 \\pmod{\\varphi(m)} $.",
           "block_bbox": [
-            416,
+            413,
             2530,
-            2151,
-            2719
+            2164,
+            2728
           ],
           "block_id": 18,
-          "block_order": 17
+          "block_order": 17,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              413.0,
+              2530.0
+            ],
+            [
+              2164.0,
+              2530.0
+            ],
+            [
+              2164.0,
+              2728.0
+            ],
+            [
+              413.0,
+              2728.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "3. The integer 6059 is the product of two distinct primes, and $\\varphi(6059)=$ 5904. Use Theorem 2.19 to compute the prime divisors of 6059.",
+          "block_content": "3. The integer 6059 is the product of two distinct primes, and  $ \\varphi(6059) = 5904 $. Use Theorem 2.19 to compute the prime divisors of 6059.",
           "block_bbox": [
             415,
-            2764,
-            2153,
-            2886
+            2765,
+            2161,
+            2896
           ],
           "block_id": 19,
-          "block_order": 18
+          "block_order": 18,
+          "group_id": 19,
+          "block_polygon_points": [
+            [
+              415.0,
+              2765.0
+            ],
+            [
+              2161.0,
+              2765.0
+            ],
+            [
+              2161.0,
+              2896.0
+            ],
+            [
+              415.0,
+              2896.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "4. The probability that an integer chosen at random between 1 and n is relatively prime to n is $\\varphi(n)/n.\\;\\mathrm{L e t}\\;n=p q$ , where p and q are distinct primes greater than x. Prove that the probability that a randomly chosen positive integer up to x is relatively prime to n is greater than $(1-1/x)^{2}.{\\mathrm{~I f~}}x=200$ ,this probability is greater than 0.99.",
+          "block_content": "4. The probability that an integer chosen at random between 1 and n is relatively prime to n is  $ \\varphi(n)/n $. Let  $ n = pq $, where p and q are distinct primes greater than x. Prove that the probability that a randomly chosen positive integer up to x is relatively prime to n is greater than  $ (1 - 1/x)^2 $. If x = 200, this probability is greater than 0.99.",
           "block_bbox": [
-            418,
-            2933,
-            2152,
-            3257
+            417,
+            2935,
+            2166,
+            3269
           ],
           "block_id": 20,
-          "block_order": 19
+          "block_order": 19,
+          "group_id": 20,
+          "block_polygon_points": [
+            [
+              417.0,
+              2935.0
+            ],
+            [
+              2166.0,
+              2935.0
+            ],
+            [
+              2166.0,
+              3269.0
+            ],
+            [
+              417.0,
+              3269.0
+            ]
+          ]
         }
       ],
-      "markdown": "Theorem 2.19 Let m be an integer that is the product of two prime numbers. The prime divisors of m are the roots of the quadratic equation \n\n$$x^{2}-(m+1-\\varphi(m))x+m=0,$$\n\nand so $\\varphi(m)$ determines the prime factors of m.\n\nProof. If $m=p q$ _,then \n\n$$\\varphi(m)=(p-1)(q-1)=p q-p-q+1=m-p-\\frac{m}{p}+1,$$\n\nand so \n\n$$p-(m+1-\\varphi(m))+{\\frac{m}{p}}=0.$$\n\nEquivalently, p and q are the solutions of the quadratic equation \n\n$$x^{2}-(m+1-\\varphi(m))x+m=0.$$\n\nThis completes the proof.\n\nFor example, if $m=221{\\mathrm{~a n d~}}\\varphi(m)=192$ , then the quadratic equation \n\n$$x^{2}-30x+221=0$$\n\nhas solutions $x=13$ and $x=17$ ,and $221=13\\cdot17$ \n\nThis method, known as the RSA cryptosystem, is called a public key cryptosystem, since the encryption key is made available to everyone, and the encrypted message can be transmitted through public channels. Only the possessor of the prime factors of m can decrypt the message. RSA is simple,but useful, and is the basis of many commercially valuable cryptosystems.\n\n## Exercises \n\n1. Consider the secret key cryptosystem constructed from the prime $p=947$ and the encoding key $e=167$ . Encipher the plaintext $P=2$ Find a decrypting key and decipher the ciphertext $C=3$ \n\n2. Consider the primes $p=53$ and $q=61$ . Let $m=p q$ . Provethat $e=7$ is relatively prime to $\\varphi(m)$ . Find a positive integer d such that \n\n$e d\\equiv1{\\pmod{\\varphi(m)}}$ \n\n\n\n3. The integer 6059 is the product of two distinct primes, and $\\varphi(6059)=$ 5904. Use Theorem 2.19 to compute the prime divisors of 6059.\n\n4. The probability that an integer chosen at random between 1 and n is relatively prime to n is $\\varphi(n)/n.\\;\\mathrm{L e t}\\;n=p q$ , where p and q are distinct primes greater than x. Prove that the probability that a randomly chosen positive integer up to x is relatively prime to n is greater than $(1-1/x)^{2}.{\\mathrm{~I f~}}x=200$ ,this probability is greater than 0.99.",
+      "markdown": "Theorem 2.19 Let m be an integer that is the product of two prime numbers. The prime divisors of m are the roots of the quadratic equation\n\n $$ x^{2}-(m+1-\\varphi(m))x+m=0, $$ \n\nand so  $ \\varphi(m) $ determines the prime factors of m.\n\nProof. If m = pq, then\n\n $$ \\varphi(m)=(p-1)(q-1)=pq-p-q+1=m-p-\\frac{m}{p}+1, $$ \n\nand so\n\n $$ p-(m+1-\\varphi(m))+\\frac{m}{p}=0. $$ \n\nEquivalently, p and q are the solutions of the quadratic equation\n\n $$ x^{2}-(m+1-\\varphi(m))x+m=0. $$ \n\nThis completes the proof. ☐\n\nFor example, if m = 221 and  $ \\varphi(m) = 192 $, then the quadratic equation\n\n $$ x^{2}-30x+221=0 $$ \n\nhas solutions  $ x = 13 $ and  $ x = 17 $, and  $ 221 = 13 \\cdot 17 $.\n\nThis method, known as the RSA cryptosystem, is called a public key cryptosystem, since the encryption key is made available to everyone, and the encrypted message can be transmitted through public channels. Only the possessor of the prime factors of m can decrypt the message. RSA is simple, but useful, and is the basis of many commercially valuable cryptosystems.\n\n## Exercises\n\n1. Consider the secret key cryptosystem constructed from the prime $p = 947$ and the encoding key $e = 167$. Encipher the plaintext $P = 2$. Find a decrypting key and decipher the ciphertext $C = 3$.\n\n2. Consider the primes  $ p = 53 $ and  $ q = 61 $. Let m = pq. Prove that  $ e = 7 $ is relatively prime to  $ \\varphi(m) $. Find a positive integer  $ d $ such that  $ ed \\equiv 1 \\pmod{\\varphi(m)} $.\n\n3. The integer 6059 is the product of two distinct primes, and  $ \\varphi(6059) = 5904 $. Use Theorem 2.19 to compute the prime divisors of 6059.\n\n4. The probability that an integer chosen at random between 1 and n is relatively prime to n is  $ \\varphi(n)/n $. Let  $ n = pq $, where p and q are distinct primes greater than x. Prove that the probability that a randomly chosen positive integer up to x is relatively prime to n is greater than  $ (1 - 1/x)^2 $. If x = 200, this probability is greater than 0.99.",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p-(m+1-\\varphi(m))+{\\frac{m}{p}}=0.",
-          "formula_region_id": 1,
-          "dt_polys": [
-            881.7694091796875,
-            953.4097900390625,
-            1621.3658447265625,
-            1070.0908203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)=(p-1)(q-1)=p q-p-q+1=m-p-\\frac{m}{p}+1,",
-          "formula_region_id": 2,
-          "dt_polys": [
-            543.0462646484375,
-            756.43115234375,
-            1963.0045166015625,
-            877.08740234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-(m+1-\\varphi(m))x+m=0,",
-          "formula_region_id": 3,
-          "dt_polys": [
-            860.390380859375,
-            455.51629638671875,
-            1647.103271484375,
-            517.4707641601562
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-(m+1-\\varphi(m))x+m=0.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            860.9546508789062,
-            1188.0264892578125,
-            1644.57958984375,
-            1249.1502685546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-30x+221=0",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1015.8432006835938,
-            1585.8779296875,
-            1495.11865234375,
-            1640.1591796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(6059)=",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1903.96142578125,
-            2767.7548828125,
-            2150.69677734375,
-            2825.9091796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "P=2",
-          "formula_region_id": 7,
-          "dt_polys": [
-            1994.1092529296875,
-            2361.2724609375,
-            2137.91015625,
-            2411.25
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p=53",
-          "formula_region_id": 8,
-          "dt_polys": [
-            1014.8238525390625,
-            2535.09912109375,
-            1200.8919677734375,
-            2588.56494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p=947",
-          "formula_region_id": 9,
-          "dt_polys": [
-            493.6572265625,
-            2362.73193359375,
-            684.9788818359375,
-            2419.08203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=p q",
-          "formula_region_id": 10,
-          "dt_polys": [
-            1649.2579345703125,
-            2540.84619140625,
-            1850.6776123046875,
-            2588.328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e=167",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1220.7200927734375,
-            2362.908203125,
-            1407.0050048828125,
-            2414.41015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "C=3",
-          "formula_region_id": 12,
-          "dt_polys": [
-            1737.669921875,
-            2426.283203125,
-            1886.3115234375,
-            2476.0927734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e=7",
-          "formula_region_id": 13,
-          "dt_polys": [
-            496.8116149902344,
-            2599.73193359375,
-            628.3892822265625,
-            2648.38916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=p q",
-          "formula_region_id": 14,
-          "dt_polys": [
-            657.3781127929688,
-            675.308349609375,
-            839.0274047851562,
-            726.2900390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "q=61",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1330.2196044921875,
-            2535.578125,
-            1508.6724853515625,
-            2587.6982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=13",
-          "formula_region_id": 16,
-          "dt_polys": [
-            688.6275634765625,
-            1698.541748046875,
-            852.9063720703125,
-            1743.681884765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=17",
-          "formula_region_id": 17,
-          "dt_polys": [
-            974.83740234375,
-            1698.8143310546875,
-            1141.3974609375,
-            1746.0931396484375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)",
-          "formula_region_id": 18,
-          "dt_polys": [
-            536.6656494140625,
-            567.35107421875,
-            664.1502685546875,
-            624.65478515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)",
-          "formula_region_id": 19,
-          "dt_polys": [
-            1158.73486328125,
-            2596.82470703125,
-            1284.83837890625,
-            2658.02685546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "221=13\\cdot17",
-          "formula_region_id": 20,
-          "dt_polys": [
-            1275.3350830078125,
-            1695.5789794921875,
-            1591.4547119140625,
-            1744.8487548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e d\\equiv1{\\pmod{\\varphi(m)}}",
-          "formula_region_id": 21,
-          "dt_polys": [
-            494.1008605957031,
-            2660.45458984375,
-            1005.362060546875,
-            2721.36083984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1-1/x)^{2}.{\\mathrm{~I f~}}x=200",
-          "formula_region_id": 22,
-          "dt_polys": [
-            496.4624938964844,
-            3196.47705078125,
-            1030.7501220703125,
-            3257.50732421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(n)/n.\\;\\mathrm{L e t}\\;n=p q",
-          "formula_region_id": 23,
-          "dt_polys": [
-            1049.052734375,
-            3000.6953125,
-            1516.03515625,
-            3064.13427734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=221{\\mathrm{~a n d~}}\\varphi(m)=192",
-          "formula_region_id": 24,
-          "dt_polys": [
-            793.9312744140625,
-            1488.2138671875,
-            1417.0924072265625,
-            1545.58837890625
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2506,
       "height": 3468,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9765510559082031,
-            "coordinate": [
-              349.40087890625,
-              1760.608642578125,
-              2153.912841796875,
-              2082.735595703125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9765027761459351,
-            "coordinate": [
-              418.44317626953125,
-              2933.44970703125,
-              2152.94873046875,
-              3257.7744140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9654163718223572,
-            "coordinate": [
-              420.2431640625,
-              2293.620361328125,
-              2151.2724609375,
-              2483.236572265625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9631772041320801,
-            "coordinate": [
-              416.89404296875,
-              2530.279296875,
-              2151.501708984375,
-              2719.361328125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9615658521652222,
-            "coordinate": [
-              881.7694091796875,
-              953.4097900390625,
-              1621.3658447265625,
-              1070.0908203125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.954766571521759,
-            "coordinate": [
-              543.0462646484375,
-              756.43115234375,
-              1963.0045166015625,
-              877.08740234375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9478086829185486,
-            "coordinate": [
-              415.9522705078125,
-              2764.43798828125,
-              2153.517578125,
-              2886.07421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9420428276062012,
-            "coordinate": [
-              860.390380859375,
-              455.51629638671875,
-              1647.103271484375,
-              517.4707641601562
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9397744536399841,
-            "coordinate": [
-              860.9546508789062,
-              1188.0264892578125,
-              1644.57958984375,
-              1249.1502685546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9334941506385803,
-            "coordinate": [
-              1015.8432006835938,
-              1585.8779296875,
-              1495.11865234375,
-              1640.1591796875
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.9146238565444946,
-            "coordinate": [
-              1332.3358154296875,
-              159.08396911621094,
-              1997.4041748046875,
-              206.44569396972656
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9120965003967285,
-            "coordinate": [
-              353.20941162109375,
-              564.8526611328125,
-              1533.43505859375,
-              621.6524658203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9091838002204895,
-            "coordinate": [
-              350.7725830078125,
-              1091.377685546875,
-              1924.4539794921875,
-              1146.920166015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9074713587760925,
-            "coordinate": [
-              350.1473388671875,
-              1694.089599609375,
-              1602.9417724609375,
-              1745.592529296875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9049410223960876,
-            "coordinate": [
-              405.425537109375,
-              1487.2880859375,
-              2123.496826171875,
-              1546.65185546875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8985017538070679,
-            "coordinate": [
-              353.18756103515625,
-              1295.6474609375,
-              1043.064208984375,
-              1351.544921875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8863192200660706,
-            "coordinate": [
-              352.04449462890625,
-              911.8400268554688,
-              521.4016723632812,
-              956.7194213867188
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8838714957237244,
-            "coordinate": [
-              406.8151550292969,
-              667.818359375,
-              982.310791015625,
-              725.552490234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8778286576271057,
-            "coordinate": [
-              1903.96142578125,
-              2767.7548828125,
-              2150.69677734375,
-              2825.9091796875
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.8675413727760315,
-            "coordinate": [
-              359.60260009765625,
-              2187.877685546875,
-              624.4567260742188,
-              2239.280517578125
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8536509871482849,
-            "coordinate": [
-              2102.796875,
-              162.7235107421875,
-              2151.5419921875,
-              200.75399780273438
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8219541907310486,
-            "coordinate": [
-              1994.1092529296875,
-              2361.2724609375,
-              2137.91015625,
-              2411.25
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8143758773803711,
-            "coordinate": [
-              1014.8238525390625,
-              2535.09912109375,
-              1200.8919677734375,
-              2588.56494140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8015079498291016,
-            "coordinate": [
-              493.6572265625,
-              2362.73193359375,
-              684.9788818359375,
-              2419.08203125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7824189066886902,
-            "coordinate": [
-              1649.2579345703125,
-              2540.84619140625,
-              1850.6776123046875,
-              2588.328125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.779819130897522,
-            "coordinate": [
-              1220.7200927734375,
-              2362.908203125,
-              1407.0050048828125,
-              2414.41015625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7725600600242615,
-            "coordinate": [
-              1737.669921875,
-              2426.283203125,
-              1886.3115234375,
-              2476.0927734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7700954079627991,
-            "coordinate": [
-              496.8116149902344,
-              2599.73193359375,
-              628.3892822265625,
-              2648.38916015625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.767308235168457,
-            "coordinate": [
-              657.3781127929688,
-              675.308349609375,
-              839.0274047851562,
-              726.2900390625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7657561302185059,
-            "coordinate": [
-              1330.2196044921875,
-              2535.578125,
-              1508.6724853515625,
-              2587.6982421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7329997420310974,
-            "coordinate": [
-              688.6275634765625,
-              1698.541748046875,
-              852.9063720703125,
-              1743.681884765625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7117552161216736,
-            "coordinate": [
-              351.7122802734375,
-              293.4356994628906,
-              2155.06201171875,
-              414.7892761230469
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7047738432884216,
-            "coordinate": [
-              974.83740234375,
-              1698.8143310546875,
-              1141.3974609375,
-              1746.0931396484375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6510441303253174,
-            "coordinate": [
-              536.6656494140625,
-              567.35107421875,
-              664.1502685546875,
-              624.65478515625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.626802384853363,
-            "coordinate": [
-              1158.73486328125,
-              2596.82470703125,
-              1284.83837890625,
-              2658.02685546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6167007684707642,
-            "coordinate": [
-              1275.3350830078125,
-              1695.5789794921875,
-              1591.4547119140625,
-              1744.8487548828125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.47364696860313416,
-            "coordinate": [
-              494.1008605957031,
-              2660.45458984375,
-              1005.362060546875,
-              2721.36083984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.39297783374786377,
-            "coordinate": [
-              496.4624938964844,
-              3196.47705078125,
-              1030.7501220703125,
-              3257.50732421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.35079213976860046,
-            "coordinate": [
-              1049.052734375,
-              3000.6953125,
-              1516.03515625,
-              3064.13427734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.3111109435558319,
-            "coordinate": [
-              793.9312744140625,
-              1488.2138671875,
-              1417.0924072265625,
-              1545.58837890625
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              1338,
-              156
-            ],
-            [
-              2004,
-              163
-            ],
-            [
-              2004,
-              214
-            ],
-            [
-              1337,
-              208
-            ]
-          ],
-          [
-            [
-              2093,
-              153
-            ],
-            [
-              2166,
-              153
-            ],
-            [
-              2166,
-              214
-            ],
-            [
-              2093,
-              214
-            ]
-          ],
-          [
-            [
-              359,
-              291
-            ],
-            [
-              2160,
-              296
-            ],
-            [
-              2160,
-              353
-            ],
-            [
-              358,
-              348
-            ]
-          ],
-          [
-            [
-              361,
-              358
-            ],
-            [
-              2030,
-              361
-            ],
-            [
-              2030,
-              418
-            ],
-            [
-              360,
-              415
-            ]
-          ],
-          [
-            [
-              359,
-              564
-            ],
-            [
-              530,
-              564
-            ],
-            [
-              530,
-              621
-            ],
-            [
-              359,
-              621
-            ]
-          ],
-          [
-            [
-              689,
-              566
-            ],
-            [
-              1535,
-              566
-            ],
-            [
-              1535,
-              623
-            ],
-            [
-              689,
-              623
-            ]
-          ],
-          [
-            [
-              410,
-              665
-            ],
-            [
-              654,
-              665
-            ],
-            [
-              654,
-              725
-            ],
-            [
-              410,
-              725
-            ]
-          ],
-          [
-            [
-              795,
-              669
-            ],
-            [
-              987,
-              655
-            ],
-            [
-              992,
-              727
-            ],
-            [
-              800,
-              741
-            ]
-          ],
-          [
-            [
-              355,
-              907
-            ],
-            [
-              527,
-              907
-            ],
-            [
-              527,
-              968
-            ],
-            [
-              355,
-              968
-            ]
-          ],
-          [
-            [
-              357,
-              1089
-            ],
-            [
-              1930,
-              1090
-            ],
-            [
-              1930,
-              1151
-            ],
-            [
-              357,
-              1150
-            ]
-          ],
-          [
-            [
-              357,
-              1296
-            ],
-            [
-              1043,
-              1292
-            ],
-            [
-              1043,
-              1354
-            ],
-            [
-              358,
-              1357
-            ]
-          ],
-          [
-            [
-              412,
-              1489
-            ],
-            [
-              791,
-              1489
-            ],
-            [
-              791,
-              1547
-            ],
-            [
-              412,
-              1547
-            ]
-          ],
-          [
-            [
-              1417,
-              1490
-            ],
-            [
-              2128,
-              1488
-            ],
-            [
-              2129,
-              1545
-            ],
-            [
-              1417,
-              1547
-            ]
-          ],
-          [
-            [
-              359,
-              1696
-            ],
-            [
-              676,
-              1698
-            ],
-            [
-              675,
-              1746
-            ],
-            [
-              358,
-              1744
-            ]
-          ],
-          [
-            [
-              862,
-              1694
-            ],
-            [
-              968,
-              1691
-            ],
-            [
-              969,
-              1750
-            ],
-            [
-              864,
-              1752
-            ]
-          ],
-          [
-            [
-              1130,
-              1696
-            ],
-            [
-              1270,
-              1691
-            ],
-            [
-              1272,
-              1750
-            ],
-            [
-              1132,
-              1756
-            ]
-          ],
-          [
-            [
-              411,
-              1756
-            ],
-            [
-              2160,
-              1761
-            ],
-            [
-              2159,
-              1821
-            ],
-            [
-              411,
-              1816
-            ]
-          ],
-          [
-            [
-              358,
-              1827
-            ],
-            [
-              2163,
-              1822
-            ],
-            [
-              2163,
-              1883
-            ],
-            [
-              359,
-              1889
-            ]
-          ],
-          [
-            [
-              352,
-              1894
-            ],
-            [
-              2166,
-              1888
-            ],
-            [
-              2166,
-              1956
-            ],
-            [
-              353,
-              1961
-            ]
-          ],
-          [
-            [
-              351,
-              1956
-            ],
-            [
-              2162,
-              1954
-            ],
-            [
-              2162,
-              2022
-            ],
-            [
-              351,
-              2024
-            ]
-          ],
-          [
-            [
-              355,
-              2026
-            ],
-            [
-              2160,
-              2026
-            ],
-            [
-              2160,
-              2087
-            ],
-            [
-              355,
-              2087
-            ]
-          ],
-          [
-            [
-              363,
-              2186
-            ],
-            [
-              632,
-              2193
-            ],
-            [
-              630,
-              2252
-            ],
-            [
-              361,
-              2245
-            ]
-          ],
-          [
-            [
-              420,
-              2289
-            ],
-            [
-              2163,
-              2292
-            ],
-            [
-              2163,
-              2356
-            ],
-            [
-              420,
-              2353
-            ]
-          ],
-          [
-            [
-              692,
-              2356
-            ],
-            [
-              1218,
-              2358
-            ],
-            [
-              1218,
-              2423
-            ],
-            [
-              692,
-              2421
-            ]
-          ],
-          [
-            [
-              1407,
-              2362
-            ],
-            [
-              1984,
-              2362
-            ],
-            [
-              1984,
-              2416
-            ],
-            [
-              1407,
-              2416
-            ]
-          ],
-          [
-            [
-              489,
-              2420
-            ],
-            [
-              1731,
-              2425
-            ],
-            [
-              1731,
-              2493
-            ],
-            [
-              489,
-              2488
-            ]
-          ],
-          [
-            [
-              421,
-              2526
-            ],
-            [
-              1005,
-              2530
-            ],
-            [
-              1005,
-              2591
-            ],
-            [
-              421,
-              2587
-            ]
-          ],
-          [
-            [
-              1214,
-              2528
-            ],
-            [
-              1322,
-              2525
-            ],
-            [
-              1324,
-              2586
-            ],
-            [
-              1216,
-              2590
-            ]
-          ],
-          [
-            [
-              1500,
-              2524
-            ],
-            [
-              1642,
-              2524
-            ],
-            [
-              1642,
-              2586
-            ],
-            [
-              1500,
-              2586
-            ]
-          ],
-          [
-            [
-              1843,
-              2532
-            ],
-            [
-              2159,
-              2532
-            ],
-            [
-              2159,
-              2583
-            ],
-            [
-              1843,
-              2583
-            ]
-          ],
-          [
-            [
-              639,
-              2598
-            ],
-            [
-              1151,
-              2600
-            ],
-            [
-              1150,
-              2654
-            ],
-            [
-              638,
-              2652
-            ]
-          ],
-          [
-            [
-              1280,
-              2595
-            ],
-            [
-              2162,
-              2598
-            ],
-            [
-              2161,
-              2656
-            ],
-            [
-              1280,
-              2653
-            ]
-          ],
-          [
-            [
-              420,
-              2763
-            ],
-            [
-              1900,
-              2765
-            ],
-            [
-              1900,
-              2825
-            ],
-            [
-              420,
-              2823
-            ]
-          ],
-          [
-            [
-              493,
-              2829
-            ],
-            [
-              2041,
-              2830
-            ],
-            [
-              2041,
-              2891
-            ],
-            [
-              493,
-              2890
-            ]
-          ],
-          [
-            [
-              418,
-              2930
-            ],
-            [
-              2163,
-              2930
-            ],
-            [
-              2163,
-              2994
-            ],
-            [
-              418,
-              2994
-            ]
-          ],
-          [
-            [
-              492,
-              3001
-            ],
-            [
-              1045,
-              3004
-            ],
-            [
-              1045,
-              3063
-            ],
-            [
-              492,
-              3059
-            ]
-          ],
-          [
-            [
-              1508,
-              3003
-            ],
-            [
-              2158,
-              3000
-            ],
-            [
-              2159,
-              3059
-            ],
-            [
-              1508,
-              3062
-            ]
-          ],
-          [
-            [
-              492,
-              3069
-            ],
-            [
-              2161,
-              3067
-            ],
-            [
-              2161,
-              3130
-            ],
-            [
-              492,
-              3132
-            ]
-          ],
-          [
-            [
-              492,
-              3131
-            ],
-            [
-              2162,
-              3132
-            ],
-            [
-              2162,
-              3196
-            ],
-            [
-              492,
-              3195
-            ]
-          ],
-          [
-            [
-              1024,
-              3202
-            ],
-            [
-              1943,
-              3199
-            ],
-            [
-              1943,
-              3260
-            ],
-            [
-              1024,
-              3263
-            ]
-          ],
-          [
-            [
-              881,
-              953
-            ],
-            [
-              1621,
-              953
-            ],
-            [
-              1621,
-              1070
-            ],
-            [
-              881,
-              1070
-            ]
-          ],
-          [
-            [
-              543,
-              756
-            ],
-            [
-              1963,
-              756
-            ],
-            [
-              1963,
-              877
-            ],
-            [
-              543,
-              877
-            ]
-          ],
-          [
-            [
-              860,
-              455
-            ],
-            [
-              1647,
-              455
-            ],
-            [
-              1647,
-              517
-            ],
-            [
-              860,
-              517
-            ]
-          ],
-          [
-            [
-              860,
-              1188
-            ],
-            [
-              1644,
-              1188
-            ],
-            [
-              1644,
-              1249
-            ],
-            [
-              860,
-              1249
-            ]
-          ],
-          [
-            [
-              1015,
-              1585
-            ],
-            [
-              1495,
-              1585
-            ],
-            [
-              1495,
-              1640
-            ],
-            [
-              1015,
-              1640
-            ]
-          ],
-          [
-            [
-              1903,
-              2767
-            ],
-            [
-              2150,
-              2767
-            ],
-            [
-              2150,
-              2825
-            ],
-            [
-              1903,
-              2825
-            ]
-          ],
-          [
-            [
-              1994,
-              2361
-            ],
-            [
-              2137,
-              2361
-            ],
-            [
-              2137,
-              2411
-            ],
-            [
-              1994,
-              2411
-            ]
-          ],
-          [
-            [
-              1014,
-              2535
-            ],
-            [
-              1200,
-              2535
-            ],
-            [
-              1200,
-              2588
-            ],
-            [
-              1014,
-              2588
-            ]
-          ],
-          [
-            [
-              493,
-              2362
-            ],
-            [
-              684,
-              2362
-            ],
-            [
-              684,
-              2419
-            ],
-            [
-              493,
-              2419
-            ]
-          ],
-          [
-            [
-              1649,
-              2540
-            ],
-            [
-              1850,
-              2540
-            ],
-            [
-              1850,
-              2588
-            ],
-            [
-              1649,
-              2588
-            ]
-          ],
-          [
-            [
-              1220,
-              2362
-            ],
-            [
-              1407,
-              2362
-            ],
-            [
-              1407,
-              2414
-            ],
-            [
-              1220,
-              2414
-            ]
-          ],
-          [
-            [
-              1737,
-              2426
-            ],
-            [
-              1886,
-              2426
-            ],
-            [
-              1886,
-              2476
-            ],
-            [
-              1737,
-              2476
-            ]
-          ],
-          [
-            [
-              496,
-              2599
-            ],
-            [
-              628,
-              2599
-            ],
-            [
-              628,
-              2648
-            ],
-            [
-              496,
-              2648
-            ]
-          ],
-          [
-            [
-              657,
-              675
-            ],
-            [
-              839,
-              675
-            ],
-            [
-              839,
-              726
-            ],
-            [
-              657,
-              726
-            ]
-          ],
-          [
-            [
-              1330,
-              2535
-            ],
-            [
-              1508,
-              2535
-            ],
-            [
-              1508,
-              2587
-            ],
-            [
-              1330,
-              2587
-            ]
-          ],
-          [
-            [
-              688,
-              1698
-            ],
-            [
-              852,
-              1698
-            ],
-            [
-              852,
-              1743
-            ],
-            [
-              688,
-              1743
-            ]
-          ],
-          [
-            [
-              974,
-              1698
-            ],
-            [
-              1141,
-              1698
-            ],
-            [
-              1141,
-              1746
-            ],
-            [
-              974,
-              1746
-            ]
-          ],
-          [
-            [
-              536,
-              567
-            ],
-            [
-              664,
-              567
-            ],
-            [
-              664,
-              624
-            ],
-            [
-              536,
-              624
-            ]
-          ],
-          [
-            [
-              1158,
-              2596
-            ],
-            [
-              1284,
-              2596
-            ],
-            [
-              1284,
-              2658
-            ],
-            [
-              1158,
-              2658
-            ]
-          ],
-          [
-            [
-              1275,
-              1695
-            ],
-            [
-              1591,
-              1695
-            ],
-            [
-              1591,
-              1744
-            ],
-            [
-              1275,
-              1744
-            ]
-          ],
-          [
-            [
-              494,
-              2660
-            ],
-            [
-              1005,
-              2660
-            ],
-            [
-              1005,
-              2721
-            ],
-            [
-              494,
-              2721
-            ]
-          ],
-          [
-            [
-              496,
-              3196
-            ],
-            [
-              1030,
-              3196
-            ],
-            [
-              1030,
-              3257
-            ],
-            [
-              496,
-              3257
-            ]
-          ],
-          [
-            [
-              1049,
-              3000
-            ],
-            [
-              1516,
-              3000
-            ],
-            [
-              1516,
-              3064
-            ],
-            [
-              1049,
-              3064
-            ]
-          ],
-          [
-            [
-              793,
-              1488
-            ],
-            [
-              1417,
-              1488
-            ],
-            [
-              1417,
-              1545
-            ],
-            [
-              793,
-              1545
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "2.7 Public Key Cryptography",
-          "79",
-          "Theorem 2.19 Let m be an integer that is the product of two prime num-",
-          "bers. The prime divisors of m are the roots of the quadratic equation",
-          "and so",
-          "determines the prime factors of m.",
-          "Proof. If",
-          "_,then",
-          "and so",
-          "Equivalently, p and q are the solutions of the quadratic equation",
-          "This completes the proof. ",
-          "For example, if",
-          ", then the quadratic equation",
-          "has solutions",
-          "and",
-          ",and",
-          "This method, known as the RSA cryptosystem, is called a public key cryp-",
-          "tosystem, since the encryption key is made available to everyone, and the",
-          "encrypted message can be transmitted through public channels. Only the",
-          "possessor of the prime factors of m can decrypt the message. RSA is simple,",
-          "but useful, and is the basis of many commercially valuable cryptosystems.",
-          "Exercises",
-          "1. Consider the secret key cryptosystem constructed from the prime",
-          "and the encoding key",
-          ". Encipher the plaintext",
-          "Find a decrypting key and decipher the ciphertext",
-          "2. Consider the primes",
-          "and",
-          ". Let",
-          ". Provethat",
-          "is relatively prime to",
-          ". Find a positive integer d such that",
-          "3. The integer 6059 is the product of two distinct primes, and",
-          "5904. Use Theorem 2.19 to compute the prime divisors of 6059.",
-          "4. The probability that an integer chosen at random between 1 and n is",
-          "relatively prime to n is",
-          ", where p and q are distinct",
-          "primes greater than x. Prove that the probability that a randomly",
-          "chosen positive integer up to x is relatively prime to n is greater than",
-          ",this probability is greater than 0.99.",
-          "p-(m+1-\\varphi(m))+{\\frac{m}{p}}=0.",
-          "\\varphi(m)=(p-1)(q-1)=p q-p-q+1=m-p-\\frac{m}{p}+1,",
-          "x^{2}-(m+1-\\varphi(m))x+m=0,",
-          "x^{2}-(m+1-\\varphi(m))x+m=0.",
-          "x^{2}-30x+221=0",
-          "\\varphi(6059)=",
-          "P=2",
-          "p=53",
-          "p=947",
-          "m=p q",
-          "e=167",
-          "C=3",
-          "e=7",
-          "m=p q",
-          "q=61",
-          "x=13",
-          "x=17",
-          "\\varphi(m)",
-          "\\varphi(m)",
-          "221=13\\cdot17",
-          "e d\\equiv1{\\pmod{\\varphi(m)}}",
-          "(1-1/x)^{2}.{\\mathrm{~I f~}}x=200",
-          "\\varphi(n)/n.\\;\\mathrm{L e t}\\;n=p q",
-          "m=221{\\mathrm{~a n d~}}\\varphi(m)=192"
-        ],
-        "rec_scores": [
-          0.9975806474685669,
-          0.9998281002044678,
-          0.9887287616729736,
-          0.9774087071418762,
-          0.9549279808998108,
-          0.9934080839157104,
-          0.9277278184890747,
-          0.9553501009941101,
-          0.9972898364067078,
-          0.9864201545715332,
-          0.9689624309539795,
-          0.992497444152832,
-          0.9671778678894043,
-          0.999089777469635,
-          0.9997184872627258,
-          0.9782247543334961,
-          0.9523990154266357,
-          0.9855597615242004,
-          0.9791619181632996,
-          0.9706953167915344,
-          0.9623675346374512,
-          0.9998136162757874,
-          0.9526321887969971,
-          0.9890764355659485,
-          0.9704529643058777,
-          0.9785212278366089,
-          0.9812397360801697,
-          0.9998624920845032,
-          0.9543659090995789,
-          0.9417829513549805,
-          0.9957661032676697,
-          0.9690192937850952,
-          0.9689449071884155,
-          0.9885050654411316,
-          0.979385495185852,
-          0.9535139203071594,
-          0.970485270023346,
-          0.9606425166130066,
-          0.957676351070404,
-          0.9610472321510315,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              1338,
-              156
-            ],
-            [
-              2004,
-              163
-            ],
-            [
-              2004,
-              214
-            ],
-            [
-              1337,
-              208
-            ]
-          ],
-          [
-            [
-              2093,
-              153
-            ],
-            [
-              2166,
-              153
-            ],
-            [
-              2166,
-              214
-            ],
-            [
-              2093,
-              214
-            ]
-          ],
-          [
-            [
-              359,
-              291
-            ],
-            [
-              2160,
-              296
-            ],
-            [
-              2160,
-              353
-            ],
-            [
-              358,
-              348
-            ]
-          ],
-          [
-            [
-              361,
-              358
-            ],
-            [
-              2030,
-              361
-            ],
-            [
-              2030,
-              418
-            ],
-            [
-              360,
-              415
-            ]
-          ],
-          [
-            [
-              359,
-              564
-            ],
-            [
-              530,
-              564
-            ],
-            [
-              530,
-              621
-            ],
-            [
-              359,
-              621
-            ]
-          ],
-          [
-            [
-              689,
-              566
-            ],
-            [
-              1535,
-              566
-            ],
-            [
-              1535,
-              623
-            ],
-            [
-              689,
-              623
-            ]
-          ],
-          [
-            [
-              410,
-              665
-            ],
-            [
-              654,
-              665
-            ],
-            [
-              654,
-              725
-            ],
-            [
-              410,
-              725
-            ]
-          ],
-          [
-            [
-              795,
-              669
-            ],
-            [
-              987,
-              655
-            ],
-            [
-              992,
-              727
-            ],
-            [
-              800,
-              741
-            ]
-          ],
-          [
-            [
-              355,
-              907
-            ],
-            [
-              527,
-              907
-            ],
-            [
-              527,
-              968
-            ],
-            [
-              355,
-              968
-            ]
-          ],
-          [
-            [
-              357,
-              1089
-            ],
-            [
-              1930,
-              1090
-            ],
-            [
-              1930,
-              1151
-            ],
-            [
-              357,
-              1150
-            ]
-          ],
-          [
-            [
-              357,
-              1296
-            ],
-            [
-              1043,
-              1292
-            ],
-            [
-              1043,
-              1354
-            ],
-            [
-              358,
-              1357
-            ]
-          ],
-          [
-            [
-              412,
-              1489
-            ],
-            [
-              791,
-              1489
-            ],
-            [
-              791,
-              1547
-            ],
-            [
-              412,
-              1547
-            ]
-          ],
-          [
-            [
-              1417,
-              1490
-            ],
-            [
-              2128,
-              1488
-            ],
-            [
-              2129,
-              1545
-            ],
-            [
-              1417,
-              1547
-            ]
-          ],
-          [
-            [
-              359,
-              1696
-            ],
-            [
-              676,
-              1698
-            ],
-            [
-              675,
-              1746
-            ],
-            [
-              358,
-              1744
-            ]
-          ],
-          [
-            [
-              862,
-              1694
-            ],
-            [
-              968,
-              1691
-            ],
-            [
-              969,
-              1750
-            ],
-            [
-              864,
-              1752
-            ]
-          ],
-          [
-            [
-              1130,
-              1696
-            ],
-            [
-              1270,
-              1691
-            ],
-            [
-              1272,
-              1750
-            ],
-            [
-              1132,
-              1756
-            ]
-          ],
-          [
-            [
-              411,
-              1756
-            ],
-            [
-              2160,
-              1761
-            ],
-            [
-              2159,
-              1821
-            ],
-            [
-              411,
-              1816
-            ]
-          ],
-          [
-            [
-              358,
-              1827
-            ],
-            [
-              2163,
-              1822
-            ],
-            [
-              2163,
-              1883
-            ],
-            [
-              359,
-              1889
-            ]
-          ],
-          [
-            [
-              352,
-              1894
-            ],
-            [
-              2166,
-              1888
-            ],
-            [
-              2166,
-              1956
-            ],
-            [
-              353,
-              1961
-            ]
-          ],
-          [
-            [
-              351,
-              1956
-            ],
-            [
-              2162,
-              1954
-            ],
-            [
-              2162,
-              2022
-            ],
-            [
-              351,
-              2024
-            ]
-          ],
-          [
-            [
-              355,
-              2026
-            ],
-            [
-              2160,
-              2026
-            ],
-            [
-              2160,
-              2087
-            ],
-            [
-              355,
-              2087
-            ]
-          ],
-          [
-            [
-              363,
-              2186
-            ],
-            [
-              632,
-              2193
-            ],
-            [
-              630,
-              2252
-            ],
-            [
-              361,
-              2245
-            ]
-          ],
-          [
-            [
-              420,
-              2289
-            ],
-            [
-              2163,
-              2292
-            ],
-            [
-              2163,
-              2356
-            ],
-            [
-              420,
-              2353
-            ]
-          ],
-          [
-            [
-              692,
-              2356
-            ],
-            [
-              1218,
-              2358
-            ],
-            [
-              1218,
-              2423
-            ],
-            [
-              692,
-              2421
-            ]
-          ],
-          [
-            [
-              1407,
-              2362
-            ],
-            [
-              1984,
-              2362
-            ],
-            [
-              1984,
-              2416
-            ],
-            [
-              1407,
-              2416
-            ]
-          ],
-          [
-            [
-              489,
-              2420
-            ],
-            [
-              1731,
-              2425
-            ],
-            [
-              1731,
-              2493
-            ],
-            [
-              489,
-              2488
-            ]
-          ],
-          [
-            [
-              421,
-              2526
-            ],
-            [
-              1005,
-              2530
-            ],
-            [
-              1005,
-              2591
-            ],
-            [
-              421,
-              2587
-            ]
-          ],
-          [
-            [
-              1214,
-              2528
-            ],
-            [
-              1322,
-              2525
-            ],
-            [
-              1324,
-              2586
-            ],
-            [
-              1216,
-              2590
-            ]
-          ],
-          [
-            [
-              1500,
-              2524
-            ],
-            [
-              1642,
-              2524
-            ],
-            [
-              1642,
-              2586
-            ],
-            [
-              1500,
-              2586
-            ]
-          ],
-          [
-            [
-              1843,
-              2532
-            ],
-            [
-              2159,
-              2532
-            ],
-            [
-              2159,
-              2583
-            ],
-            [
-              1843,
-              2583
-            ]
-          ],
-          [
-            [
-              639,
-              2598
-            ],
-            [
-              1151,
-              2600
-            ],
-            [
-              1150,
-              2654
-            ],
-            [
-              638,
-              2652
-            ]
-          ],
-          [
-            [
-              1280,
-              2595
-            ],
-            [
-              2162,
-              2598
-            ],
-            [
-              2161,
-              2656
-            ],
-            [
-              1280,
-              2653
-            ]
-          ],
-          [
-            [
-              420,
-              2763
-            ],
-            [
-              1900,
-              2765
-            ],
-            [
-              1900,
-              2825
-            ],
-            [
-              420,
-              2823
-            ]
-          ],
-          [
-            [
-              493,
-              2829
-            ],
-            [
-              2041,
-              2830
-            ],
-            [
-              2041,
-              2891
-            ],
-            [
-              493,
-              2890
-            ]
-          ],
-          [
-            [
-              418,
-              2930
-            ],
-            [
-              2163,
-              2930
-            ],
-            [
-              2163,
-              2994
-            ],
-            [
-              418,
-              2994
-            ]
-          ],
-          [
-            [
-              492,
-              3001
-            ],
-            [
-              1045,
-              3004
-            ],
-            [
-              1045,
-              3063
-            ],
-            [
-              492,
-              3059
-            ]
-          ],
-          [
-            [
-              1508,
-              3003
-            ],
-            [
-              2158,
-              3000
-            ],
-            [
-              2159,
-              3059
-            ],
-            [
-              1508,
-              3062
-            ]
-          ],
-          [
-            [
-              492,
-              3069
-            ],
-            [
-              2161,
-              3067
-            ],
-            [
-              2161,
-              3130
-            ],
-            [
-              492,
-              3132
-            ]
-          ],
-          [
-            [
-              492,
-              3131
-            ],
-            [
-              2162,
-              3132
-            ],
-            [
-              2162,
-              3196
-            ],
-            [
-              492,
-              3195
-            ]
-          ],
-          [
-            [
-              1024,
-              3202
-            ],
-            [
-              1943,
-              3199
-            ],
-            [
-              1943,
-              3260
-            ],
-            [
-              1024,
-              3263
-            ]
-          ],
-          [
-            [
-              881,
-              953
-            ],
-            [
-              1621,
-              953
-            ],
-            [
-              1621,
-              1070
-            ],
-            [
-              881,
-              1070
-            ]
-          ],
-          [
-            [
-              543,
-              756
-            ],
-            [
-              1963,
-              756
-            ],
-            [
-              1963,
-              877
-            ],
-            [
-              543,
-              877
-            ]
-          ],
-          [
-            [
-              860,
-              455
-            ],
-            [
-              1647,
-              455
-            ],
-            [
-              1647,
-              517
-            ],
-            [
-              860,
-              517
-            ]
-          ],
-          [
-            [
-              860,
-              1188
-            ],
-            [
-              1644,
-              1188
-            ],
-            [
-              1644,
-              1249
-            ],
-            [
-              860,
-              1249
-            ]
-          ],
-          [
-            [
-              1015,
-              1585
-            ],
-            [
-              1495,
-              1585
-            ],
-            [
-              1495,
-              1640
-            ],
-            [
-              1015,
-              1640
-            ]
-          ],
-          [
-            [
-              1903,
-              2767
-            ],
-            [
-              2150,
-              2767
-            ],
-            [
-              2150,
-              2825
-            ],
-            [
-              1903,
-              2825
-            ]
-          ],
-          [
-            [
-              1994,
-              2361
-            ],
-            [
-              2137,
-              2361
-            ],
-            [
-              2137,
-              2411
-            ],
-            [
-              1994,
-              2411
-            ]
-          ],
-          [
-            [
-              1014,
-              2535
-            ],
-            [
-              1200,
-              2535
-            ],
-            [
-              1200,
-              2588
-            ],
-            [
-              1014,
-              2588
-            ]
-          ],
-          [
-            [
-              493,
-              2362
-            ],
-            [
-              684,
-              2362
-            ],
-            [
-              684,
-              2419
-            ],
-            [
-              493,
-              2419
-            ]
-          ],
-          [
-            [
-              1649,
-              2540
-            ],
-            [
-              1850,
-              2540
-            ],
-            [
-              1850,
-              2588
-            ],
-            [
-              1649,
-              2588
-            ]
-          ],
-          [
-            [
-              1220,
-              2362
-            ],
-            [
-              1407,
-              2362
-            ],
-            [
-              1407,
-              2414
-            ],
-            [
-              1220,
-              2414
-            ]
-          ],
-          [
-            [
-              1737,
-              2426
-            ],
-            [
-              1886,
-              2426
-            ],
-            [
-              1886,
-              2476
-            ],
-            [
-              1737,
-              2476
-            ]
-          ],
-          [
-            [
-              496,
-              2599
-            ],
-            [
-              628,
-              2599
-            ],
-            [
-              628,
-              2648
-            ],
-            [
-              496,
-              2648
-            ]
-          ],
-          [
-            [
-              657,
-              675
-            ],
-            [
-              839,
-              675
-            ],
-            [
-              839,
-              726
-            ],
-            [
-              657,
-              726
-            ]
-          ],
-          [
-            [
-              1330,
-              2535
-            ],
-            [
-              1508,
-              2535
-            ],
-            [
-              1508,
-              2587
-            ],
-            [
-              1330,
-              2587
-            ]
-          ],
-          [
-            [
-              688,
-              1698
-            ],
-            [
-              852,
-              1698
-            ],
-            [
-              852,
-              1743
-            ],
-            [
-              688,
-              1743
-            ]
-          ],
-          [
-            [
-              974,
-              1698
-            ],
-            [
-              1141,
-              1698
-            ],
-            [
-              1141,
-              1746
-            ],
-            [
-              974,
-              1746
-            ]
-          ],
-          [
-            [
-              536,
-              567
-            ],
-            [
-              664,
-              567
-            ],
-            [
-              664,
-              624
-            ],
-            [
-              536,
-              624
-            ]
-          ],
-          [
-            [
-              1158,
-              2596
-            ],
-            [
-              1284,
-              2596
-            ],
-            [
-              1284,
-              2658
-            ],
-            [
-              1158,
-              2658
-            ]
-          ],
-          [
-            [
-              1275,
-              1695
-            ],
-            [
-              1591,
-              1695
-            ],
-            [
-              1591,
-              1744
-            ],
-            [
-              1275,
-              1744
-            ]
-          ],
-          [
-            [
-              494,
-              2660
-            ],
-            [
-              1005,
-              2660
-            ],
-            [
-              1005,
-              2721
-            ],
-            [
-              494,
-              2721
-            ]
-          ],
-          [
-            [
-              496,
-              3196
-            ],
-            [
-              1030,
-              3196
-            ],
-            [
-              1030,
-              3257
-            ],
-            [
-              496,
-              3257
-            ]
-          ],
-          [
-            [
-              1049,
-              3000
-            ],
-            [
-              1516,
-              3000
-            ],
-            [
-              1516,
-              3064
-            ],
-            [
-              1049,
-              3064
-            ]
-          ],
-          [
-            [
-              793,
-              1488
-            ],
-            [
-              1417,
-              1488
-            ],
-            [
-              1417,
-              1545
-            ],
-            [
-              793,
-              1545
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            1337.0,
-            156.0,
-            2004.0,
-            214.0
-          ],
-          [
-            2093.0,
-            153.0,
-            2166.0,
-            214.0
-          ],
-          [
-            358.0,
-            291.0,
-            2160.0,
-            353.0
-          ],
-          [
-            360.0,
-            358.0,
-            2030.0,
-            418.0
-          ],
-          [
-            359.0,
-            564.0,
-            530.0,
-            621.0
-          ],
-          [
-            689.0,
-            566.0,
-            1535.0,
-            623.0
-          ],
-          [
-            410.0,
-            665.0,
-            654.0,
-            725.0
-          ],
-          [
-            795.0,
-            655.0,
-            992.0,
-            741.0
-          ],
-          [
-            355.0,
-            907.0,
-            527.0,
-            968.0
-          ],
-          [
-            357.0,
-            1089.0,
-            1930.0,
-            1151.0
-          ],
-          [
-            357.0,
-            1292.0,
-            1043.0,
-            1357.0
-          ],
-          [
-            412.0,
-            1489.0,
-            791.0,
-            1547.0
-          ],
-          [
-            1417.0,
-            1488.0,
-            2129.0,
-            1547.0
-          ],
-          [
-            358.0,
-            1696.0,
-            676.0,
-            1746.0
-          ],
-          [
-            862.0,
-            1691.0,
-            969.0,
-            1752.0
-          ],
-          [
-            1130.0,
-            1691.0,
-            1272.0,
-            1756.0
-          ],
-          [
-            411.0,
-            1756.0,
-            2160.0,
-            1821.0
-          ],
-          [
-            358.0,
-            1822.0,
-            2163.0,
-            1889.0
-          ],
-          [
-            352.0,
-            1888.0,
-            2166.0,
-            1961.0
-          ],
-          [
-            351.0,
-            1954.0,
-            2162.0,
-            2024.0
-          ],
-          [
-            355.0,
-            2026.0,
-            2160.0,
-            2087.0
-          ],
-          [
-            361.0,
-            2186.0,
-            632.0,
-            2252.0
-          ],
-          [
-            420.0,
-            2289.0,
-            2163.0,
-            2356.0
-          ],
-          [
-            692.0,
-            2356.0,
-            1218.0,
-            2423.0
-          ],
-          [
-            1407.0,
-            2362.0,
-            1984.0,
-            2416.0
-          ],
-          [
-            489.0,
-            2420.0,
-            1731.0,
-            2493.0
-          ],
-          [
-            421.0,
-            2526.0,
-            1005.0,
-            2591.0
-          ],
-          [
-            1214.0,
-            2525.0,
-            1324.0,
-            2590.0
-          ],
-          [
-            1500.0,
-            2524.0,
-            1642.0,
-            2586.0
-          ],
-          [
-            1843.0,
-            2532.0,
-            2159.0,
-            2583.0
-          ],
-          [
-            638.0,
-            2598.0,
-            1151.0,
-            2654.0
-          ],
-          [
-            1280.0,
-            2595.0,
-            2162.0,
-            2656.0
-          ],
-          [
-            420.0,
-            2763.0,
-            1900.0,
-            2825.0
-          ],
-          [
-            493.0,
-            2829.0,
-            2041.0,
-            2891.0
-          ],
-          [
-            418.0,
-            2930.0,
-            2163.0,
-            2994.0
-          ],
-          [
-            492.0,
-            3001.0,
-            1045.0,
-            3063.0
-          ],
-          [
-            1508.0,
-            3000.0,
-            2159.0,
-            3062.0
-          ],
-          [
-            492.0,
-            3067.0,
-            2161.0,
-            3132.0
-          ],
-          [
-            492.0,
-            3131.0,
-            2162.0,
-            3196.0
-          ],
-          [
-            1024.0,
-            3199.0,
-            1943.0,
-            3263.0
-          ],
-          [
-            881.7694091796875,
-            953.4097900390625,
-            1621.3658447265625,
-            1070.0908203125
-          ],
-          [
-            543.0462646484375,
-            756.43115234375,
-            1963.0045166015625,
-            877.08740234375
-          ],
-          [
-            860.390380859375,
-            455.51629638671875,
-            1647.103271484375,
-            517.4707641601562
-          ],
-          [
-            860.9546508789062,
-            1188.0264892578125,
-            1644.57958984375,
-            1249.1502685546875
-          ],
-          [
-            1015.8432006835938,
-            1585.8779296875,
-            1495.11865234375,
-            1640.1591796875
-          ],
-          [
-            1903.96142578125,
-            2767.7548828125,
-            2150.69677734375,
-            2825.9091796875
-          ],
-          [
-            1994.1092529296875,
-            2361.2724609375,
-            2137.91015625,
-            2411.25
-          ],
-          [
-            1014.8238525390625,
-            2535.09912109375,
-            1200.8919677734375,
-            2588.56494140625
-          ],
-          [
-            493.6572265625,
-            2362.73193359375,
-            684.9788818359375,
-            2419.08203125
-          ],
-          [
-            1649.2579345703125,
-            2540.84619140625,
-            1850.6776123046875,
-            2588.328125
-          ],
-          [
-            1220.7200927734375,
-            2362.908203125,
-            1407.0050048828125,
-            2414.41015625
-          ],
-          [
-            1737.669921875,
-            2426.283203125,
-            1886.3115234375,
-            2476.0927734375
-          ],
-          [
-            496.8116149902344,
-            2599.73193359375,
-            628.3892822265625,
-            2648.38916015625
-          ],
-          [
-            657.3781127929688,
-            675.308349609375,
-            839.0274047851562,
-            726.2900390625
-          ],
-          [
-            1330.2196044921875,
-            2535.578125,
-            1508.6724853515625,
-            2587.6982421875
-          ],
-          [
-            688.6275634765625,
-            1698.541748046875,
-            852.9063720703125,
-            1743.681884765625
-          ],
-          [
-            974.83740234375,
-            1698.8143310546875,
-            1141.3974609375,
-            1746.0931396484375
-          ],
-          [
-            536.6656494140625,
-            567.35107421875,
-            664.1502685546875,
-            624.65478515625
-          ],
-          [
-            1158.73486328125,
-            2596.82470703125,
-            1284.83837890625,
-            2658.02685546875
-          ],
-          [
-            1275.3350830078125,
-            1695.5789794921875,
-            1591.4547119140625,
-            1744.8487548828125
-          ],
-          [
-            494.1008605957031,
-            2660.45458984375,
-            1005.362060546875,
-            2721.36083984375
-          ],
-          [
-            496.4624938964844,
-            3196.47705078125,
-            1030.7501220703125,
-            3257.50732421875
-          ],
-          [
-            1049.052734375,
-            3000.6953125,
-            1516.03515625,
-            3064.13427734375
-          ],
-          [
-            793.9312744140625,
-            1488.2138671875,
-            1417.0924072265625,
-            1545.58837890625
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p-(m+1-\\varphi(m))+{\\frac{m}{p}}=0.",
-          "formula_region_id": 1,
-          "dt_polys": [
-            881.7694091796875,
-            953.4097900390625,
-            1621.3658447265625,
-            1070.0908203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)=(p-1)(q-1)=p q-p-q+1=m-p-\\frac{m}{p}+1,",
-          "formula_region_id": 2,
-          "dt_polys": [
-            543.0462646484375,
-            756.43115234375,
-            1963.0045166015625,
-            877.08740234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-(m+1-\\varphi(m))x+m=0,",
-          "formula_region_id": 3,
-          "dt_polys": [
-            860.390380859375,
-            455.51629638671875,
-            1647.103271484375,
-            517.4707641601562
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-(m+1-\\varphi(m))x+m=0.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            860.9546508789062,
-            1188.0264892578125,
-            1644.57958984375,
-            1249.1502685546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x^{2}-30x+221=0",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1015.8432006835938,
-            1585.8779296875,
-            1495.11865234375,
-            1640.1591796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(6059)=",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1903.96142578125,
-            2767.7548828125,
-            2150.69677734375,
-            2825.9091796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "P=2",
-          "formula_region_id": 7,
-          "dt_polys": [
-            1994.1092529296875,
-            2361.2724609375,
-            2137.91015625,
-            2411.25
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p=53",
-          "formula_region_id": 8,
-          "dt_polys": [
-            1014.8238525390625,
-            2535.09912109375,
-            1200.8919677734375,
-            2588.56494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "p=947",
-          "formula_region_id": 9,
-          "dt_polys": [
-            493.6572265625,
-            2362.73193359375,
-            684.9788818359375,
-            2419.08203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=p q",
-          "formula_region_id": 10,
-          "dt_polys": [
-            1649.2579345703125,
-            2540.84619140625,
-            1850.6776123046875,
-            2588.328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e=167",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1220.7200927734375,
-            2362.908203125,
-            1407.0050048828125,
-            2414.41015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "C=3",
-          "formula_region_id": 12,
-          "dt_polys": [
-            1737.669921875,
-            2426.283203125,
-            1886.3115234375,
-            2476.0927734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e=7",
-          "formula_region_id": 13,
-          "dt_polys": [
-            496.8116149902344,
-            2599.73193359375,
-            628.3892822265625,
-            2648.38916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=p q",
-          "formula_region_id": 14,
-          "dt_polys": [
-            657.3781127929688,
-            675.308349609375,
-            839.0274047851562,
-            726.2900390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "q=61",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1330.2196044921875,
-            2535.578125,
-            1508.6724853515625,
-            2587.6982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=13",
-          "formula_region_id": 16,
-          "dt_polys": [
-            688.6275634765625,
-            1698.541748046875,
-            852.9063720703125,
-            1743.681884765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x=17",
-          "formula_region_id": 17,
-          "dt_polys": [
-            974.83740234375,
-            1698.8143310546875,
-            1141.3974609375,
-            1746.0931396484375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)",
-          "formula_region_id": 18,
-          "dt_polys": [
-            536.6656494140625,
-            567.35107421875,
-            664.1502685546875,
-            624.65478515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(m)",
-          "formula_region_id": 19,
-          "dt_polys": [
-            1158.73486328125,
-            2596.82470703125,
-            1284.83837890625,
-            2658.02685546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "221=13\\cdot17",
-          "formula_region_id": 20,
-          "dt_polys": [
-            1275.3350830078125,
-            1695.5789794921875,
-            1591.4547119140625,
-            1744.8487548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e d\\equiv1{\\pmod{\\varphi(m)}}",
-          "formula_region_id": 21,
-          "dt_polys": [
-            494.1008605957031,
-            2660.45458984375,
-            1005.362060546875,
-            2721.36083984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1-1/x)^{2}.{\\mathrm{~I f~}}x=200",
-          "formula_region_id": 22,
-          "dt_polys": [
-            496.4624938964844,
-            3196.47705078125,
-            1030.7501220703125,
-            3257.50732421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\varphi(n)/n.\\;\\mathrm{L e t}\\;n=p q",
-          "formula_region_id": 23,
-          "dt_polys": [
-            1049.052734375,
-            3000.6953125,
-            1516.03515625,
-            3064.13427734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "m=221{\\mathrm{~a n d~}}\\varphi(m)=192",
-          "formula_region_id": 24,
-          "dt_polys": [
-            793.9312744140625,
-            1488.2138671875,
-            1417.0924072265625,
-            1545.58837890625
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -4199,7 +681,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

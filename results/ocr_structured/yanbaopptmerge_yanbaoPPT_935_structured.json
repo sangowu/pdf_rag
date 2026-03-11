@@ -6,18 +6,37 @@
       "parsing_res_list": [
         {
           "block_label": "text",
-          "block_content": "ym ",
+          "block_content": "另一个朋友笑笑说：当被朋友伤害时，要写在易忘的地方，风会负责抹去它。相反的如果被帮助，我们要把它刻在心里的深处，那里任何风都不能抹灭它。朋友的相处，伤害往往是无心的，而帮助却是真心的。忘记那些无心地伤害，铭记那些对你真心地帮助。你会发现这世上你有很多真心的朋友……",
           "block_bbox": [
-            67,
-            119,
-            2870,
-            1232
+            88,
+            116,
+            2878,
+            1249
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              88.0,
+              116.0
+            ],
+            [
+              2878.0,
+              116.0
+            ],
+            [
+              2878.0,
+              1249.0
+            ],
+            [
+              88.0,
+              1249.0
+            ]
+          ]
         }
       ],
-      "markdown": "ym ",
+      "markdown": "另一个朋友笑笑说：当被朋友伤害时，要写在易忘的地方，风会负责抹去它。相反的如果被帮助，我们要把它刻在心里的深处，那里任何风都不能抹灭它。朋友的相处，伤害往往是无心的，而帮助却是真心的。忘记那些无心地伤害，铭记那些对你真心地帮助。你会发现这世上你有很多真心的朋友……",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -26,91 +45,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9524589776992798,
-            "coordinate": [
-              67.215087890625,
-              119.5606689453125,
-              2870.250244140625,
-              1232.03759765625
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "ym"
-        ],
-        "rec_scores": [
-          0.5318237543106079
-        ],
-        "rec_polys": [
-          [
-            [
-              67,
-              119
-            ],
-            [
-              2870,
-              119
-            ],
-            [
-              2870,
-              1232
-            ],
-            [
-              67,
-              1232
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            67.215087890625,
-            119.5606689453125,
-            2870.250244140625,
-            1232.03759765625
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -119,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

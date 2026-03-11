@@ -5,43 +5,38 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "text",
-          "block_content": "解冻的小溪丁丁冬冬那是春天的琴声吧？",
+          "block_label": "image",
+          "block_content": "",
           "block_bbox": [
-            724,
-            514,
-            1837,
-            939
+            2,
+            1249,
+            3000,
+            2249
           ],
           "block_id": 0,
-          "block_order": 1
-        },
-        {
-          "block_label": "text",
-          "block_content": "找春天",
-          "block_bbox": [
-            2473,
-            4,
-            2999,
-            957
-          ],
-          "block_id": 1,
-          "block_order": 2
-        },
-        {
-          "block_label": "image",
-          "block_content": "流水声\n\n",
-          "block_bbox": [
-            0,
-            1244,
-            3000,
-            2250
-          ],
-          "block_id": 2,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              2.0,
+              1249.0
+            ],
+            [
+              3002.0,
+              1249.0
+            ],
+            [
+              3002.0,
+              2249.0
+            ],
+            [
+              2.0,
+              2249.0
+            ]
+          ]
         }
       ],
-      "markdown": "解冻的小溪丁丁冬冬那是春天的琴声吧？\n\n找春天\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_1244_3000_2250.jpg\" alt=\"Image\" width=\"100%\" /></div>\n",
+      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2_1249_3000_2249.jpg\" alt=\"Image\" width=\"99%\" /></div>\n",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -50,341 +45,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.5712252259254456,
-            "coordinate": [
-              0.6998291015625,
-              1244.81298828125,
-              3000,
-              2250
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.5303829908370972,
-            "coordinate": [
-              724.5741577148438,
-              514.683837890625,
-              1837.12939453125,
-              939.357421875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.4278905689716339,
-            "coordinate": [
-              731.6005859375,
-              807.4196166992188,
-              1746.3349609375,
-              934.5521850585938
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.41846054792404175,
-            "coordinate": [
-              726.972900390625,
-              517.914306640625,
-              1838.7490234375,
-              654.62255859375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.33227115869522095,
-            "coordinate": [
-              2531.3623046875,
-              30.204795837402344,
-              2974.3837890625,
-              189.288330078125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.2855345904827118,
-            "coordinate": [
-              2473.294677734375,
-              4.629180908203125,
-              2999.807373046875,
-              957.57861328125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              2530,
-              29
-            ],
-            [
-              2962,
-              31
-            ],
-            [
-              2961,
-              194
-            ],
-            [
-              2529,
-              192
-            ]
-          ],
-          [
-            [
-              729,
-              508
-            ],
-            [
-              1819,
-              508
-            ],
-            [
-              1819,
-              667
-            ],
-            [
-              729,
-              667
-            ]
-          ],
-          [
-            [
-              735,
-              814
-            ],
-            [
-              1743,
-              809
-            ],
-            [
-              1744,
-              939
-            ],
-            [
-              735,
-              943
-            ]
-          ],
-          [
-            [
-              1415,
-              1251
-            ],
-            [
-              1583,
-              1264
-            ],
-            [
-              1572,
-              1408
-            ],
-            [
-              1404,
-              1395
-            ]
-          ],
-          [
-            [
-              173,
-              1358
-            ],
-            [
-              682,
-              1273
-            ],
-            [
-              710,
-              1445
-            ],
-            [
-              201,
-              1531
-            ]
-          ],
-          [
-            [
-              1879,
-              2143
-            ],
-            [
-              2238,
-              2139
-            ],
-            [
-              2239,
-              2250
-            ],
-            [
-              1880,
-              2250
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "找春天",
-          "解冻的小溪丁丁冬冬",
-          "那是春天的琴声吧？",
-          "流水声"
-        ],
-        "rec_scores": [
-          0.9987971782684326,
-          0.9726746082305908,
-          0.9716413021087646,
-          0.9986312389373779
-        ],
-        "rec_polys": [
-          [
-            [
-              2530,
-              29
-            ],
-            [
-              2962,
-              31
-            ],
-            [
-              2961,
-              194
-            ],
-            [
-              2529,
-              192
-            ]
-          ],
-          [
-            [
-              729,
-              508
-            ],
-            [
-              1819,
-              508
-            ],
-            [
-              1819,
-              667
-            ],
-            [
-              729,
-              667
-            ]
-          ],
-          [
-            [
-              735,
-              814
-            ],
-            [
-              1743,
-              809
-            ],
-            [
-              1744,
-              939
-            ],
-            [
-              735,
-              943
-            ]
-          ],
-          [
-            [
-              1879,
-              2143
-            ],
-            [
-              2238,
-              2139
-            ],
-            [
-              2239,
-              2250
-            ],
-            [
-              1880,
-              2250
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            2529,
-            29,
-            2962,
-            194
-          ],
-          [
-            729,
-            508,
-            1819,
-            667
-          ],
-          [
-            735,
-            809,
-            1744,
-            943
-          ],
-          [
-            1879,
-            2139,
-            2239,
-            2250
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -393,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

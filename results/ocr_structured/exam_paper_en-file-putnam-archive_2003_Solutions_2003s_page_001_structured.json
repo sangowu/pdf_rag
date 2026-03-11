@@ -6,7483 +6,921 @@
       "parsing_res_list": [
         {
           "block_label": "doc_title",
-          "block_content": "Solutions to the 64th William Lowell Putnam Mathematical Competition  Saturday, December 6, 2003",
+          "block_content": "Solutions to the 64th William Lowell Putnam Mathematical Competition\nSaturday, December 6, 2003",
           "block_bbox": [
-            505,
+            500,
             210,
-            2049,
-            321
+            2061,
+            330
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              500.0,
+              210.0
+            ],
+            [
+              2061.0,
+              210.0
+            ],
+            [
+              2061.0,
+              330.0
+            ],
+            [
+              500.0,
+              330.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Manjul Bhargava, Kiran Kedlaya, and Lenny Ng ",
+          "block_content": "Manjul Bhargava, Kiran Kedlaya, and Lenny Ng",
           "block_bbox": [
-            851,
+            848,
             378,
-            1706,
-            422
+            1716,
+            431
           ],
           "block_id": 1,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              848.0,
+              378.0
+            ],
+            [
+              1716.0,
+              378.0
+            ],
+            [
+              1716.0,
+              431.0
+            ],
+            [
+              848.0,
+              431.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "A1 There are n such sums. More precisely, there is exactly one such sum with k terms for each of $k=1,\\ldots,n$ (and clearly no others). To see this, note that if $n=a_{1}+a_{2}+$ $\\cdots+a_{k}$ with $a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1$ ,then ",
+          "block_content": "A1 There are $n$ such sums. More precisely, there is exactly one such sum with $k$ terms for each of $k=1,\\ldots,n$ (and clearly no others). To see this, note that if $n=a_{1}+a_{2}+\\cdots+a_{k}$ with $a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1$, then",
           "block_bbox": [
-            255,
-            546,
-            1244,
-            735
+            254,
+            547,
+            1250,
+            743
           ],
           "block_id": 2,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              254.0,
+              547.0
+            ],
+            [
+              1250.0,
+              547.0
+            ],
+            [
+              1250.0,
+              743.0
+            ],
+            [
+              254.0,
+              743.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}ka_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=ka_{1}+k-1.\\end{align*}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{aligned}k a_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=k a_{1}+k-1.\\end{aligned} $$ ",
           "block_bbox": [
-            393,
+            392,
             783,
-            1068,
-            938
+            1074,
+            947
           ],
           "block_id": 3,
-          "block_order": 4
+          "block_order": 4,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              392.0,
+              783.0
+            ],
+            [
+              1074.0,
+              783.0
+            ],
+            [
+              1074.0,
+              947.0
+            ],
+            [
+              392.0,
+              947.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "However, there is a unique integer $a_{1}$ satisfying these inequalities, namely $a_{1}=\\lfloor n/k\\rfloor$ . Moreover, once $a_{1}$ is fixed, there are k different possibilities for the sum $a_{1}+$ $a_{2}+\\cdots+a_{k}$ : if i is the last integer such that $a_{i}=a_{1}$ ,then the sum equals $k a_{1}+(i-1)$ ). The possible values of i are $1,\\ldots,k,$ , and exactly one of these sums comes out equal to n, proving our claim.\n",
+          "block_content": "However, there is a unique integer  $ a_1 $ satisfying these inequalities, namely  $ a_1 = \\lfloor n/k \\rfloor $. Moreover, once  $ a_1 $ is fixed, there are  $ k $ different possibilities for the sum  $ a_1 + a_2 + \\cdots + a_k $: if  $ i $ is the last integer such that  $ a_i = a_1 $, then the sum equals  $ ka_1 + (i - 1) $. The possible values of  $ i $ are  $ 1, \\ldots, k $, and exactly one of these sums comes out equal to  $ n $, proving our claim.",
           "block_bbox": [
-            315,
-            987,
-            1243,
-            1317
+            312,
+            989,
+            1250,
+            1326
           ],
           "block_id": 4,
-          "block_order": 5
+          "block_order": 5,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              312.0,
+              989.0
+            ],
+            [
+              1250.0,
+              989.0
+            ],
+            [
+              1250.0,
+              1326.0
+            ],
+            [
+              312.0,
+              1326.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Note: In summary, there is a unique partition of n with k terms that is $ ``\\mathrm{as}$ equally spaced as possible\". One can also obtain essentially the same construction inductively: except for the all-ones sum, each partition of n is obtained by \"augmenting\" a unique partition of $n-1$ ",
+          "block_content": "Note: In summary, there is a unique partition of n with k terms that is “as equally spaced as possible”. One can also obtain essentially the same construction inductively: except for the all-ones sum, each partition of n is obtained by “augmenting” a unique partition of n - 1.",
           "block_bbox": [
-            316,
-            1339,
-            1243,
-            1574
+            313,
+            1341,
+            1248,
+            1583
           ],
           "block_id": 5,
-          "block_order": 6
+          "block_order": 6,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              313.0,
+              1341.0
+            ],
+            [
+              1248.0,
+              1341.0
+            ],
+            [
+              1248.0,
+              1583.0
+            ],
+            [
+              313.0,
+              1583.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "A2 First solution: Assume without loss of generality that $a_{i}+b_{i}>0$ for each i (otherwise both sides of the desired inequality are zero). Then the AM-GM inequality gives ",
+          "block_content": "A2 First solution: Assume without loss of generality that  $ a_{i} + b_{i} > 0 $ for each  $ i $ (otherwise both sides of the desired inequality are zero). Then the AM-GM inequality gives",
           "block_bbox": [
-            255,
+            257,
             1610,
-            1245,
-            1750
+            1256,
+            1760
           ],
           "block_id": 6,
-          "block_order": 7
+          "block_order": 7,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              257.0,
+              1610.0
+            ],
+            [
+              1256.0,
+              1610.0
+            ],
+            [
+              1256.0,
+              1760.0
+            ],
+            [
+              257.0,
+              1760.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}&\\\\\\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),&\\end{align*}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}\\\\ \\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),\\end{align*} $$ ",
           "block_bbox": [
-            266,
-            1808,
-            1206,
-            2033
+            268,
+            1807,
+            1207,
+            2043
           ],
           "block_id": 7,
-          "block_order": 8
+          "block_order": 8,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              268.0,
+              1807.0
+            ],
+            [
+              1207.0,
+              1807.0
+            ],
+            [
+              1207.0,
+              2043.0
+            ],
+            [
+              268.0,
+              2043.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "and likewise with the roles of a and b reversed. Adding these two inequalities and clearing denominators yields the desired result.\n",
+          "block_content": "and likewise with the roles of a and b reversed. Adding these two inequalities and clearing denominators yields the desired result.",
           "block_bbox": [
-            317,
+            314,
             2074,
-            1243,
-            2207
+            1252,
+            2220
           ],
           "block_id": 8,
-          "block_order": 9
+          "block_order": 9,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              314.0,
+              2074.0
+            ],
+            [
+              1252.0,
+              2074.0
+            ],
+            [
+              1252.0,
+              2220.0
+            ],
+            [
+              314.0,
+              2220.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Second solution: Write the desired inequality in the form \n",
+          "block_content": "Second solution: Write the desired inequality in the form",
           "block_bbox": [
-            317,
-            2234,
-            1243,
-            2318
+            315,
+            2235,
+            1252,
+            2332
           ],
           "block_id": 9,
-          "block_order": 10
+          "block_order": 10,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              315.0,
+              2235.0
+            ],
+            [
+              1252.0,
+              2235.0
+            ],
+            [
+              1252.0,
+              2332.0
+            ],
+            [
+              315.0,
+              2332.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "(a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n},",
+          "block_label": "display_formula",
+          "block_content": " $$ (a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n}, $$ ",
           "block_bbox": [
             265,
-            2366,
-            1197,
-            2415
+            2367,
+            1204,
+            2426
           ],
           "block_id": 10,
-          "block_order": 11
+          "block_order": 11,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              265.0,
+              2367.0
+            ],
+            [
+              1204.0,
+              2367.0
+            ],
+            [
+              1204.0,
+              2426.0
+            ],
+            [
+              265.0,
+              2426.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "expand both sides, and compare the terms on both sides in which k of the terms are among the $a_{i}$ . On the left, one has the product of each k-element subset of $\\{1,\\ldots,n\\}$ ;on the right, one has ",
+          "block_content": "expand both sides, and compare the terms on both sides in which $k$ of the terms are among the $a_{i}$. On the left, one has the product of each $k$-element subset of $\\{1,\\ldots,n\\}$; on the right, one has",
           "block_bbox": [
-            316,
-            2461,
-            1245,
-            2648
+            308,
+            2462,
+            1255,
+            2657
           ],
           "block_id": 11,
-          "block_order": 12
+          "block_order": 12,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              308.0,
+              2462.0
+            ],
+            [
+              1255.0,
+              2462.0
+            ],
+            [
+              1255.0,
+              2657.0
+            ],
+            [
+              308.0,
+              2657.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "{\\binom{n}{k}}{\\left(a_{1}\\cdots a_{n}\\right)}^{k/n}\\cdots{\\left(b_{1}\\ldots b_{n}\\right)}^{\\left(n-k\\right)/n},",
+          "block_label": "display_formula",
+          "block_content": " $$ \\binom{n}{k}\\left(a_{1}\\cdots a_{n}\\right)^{k/n}\\cdots\\left(b_{1}\\cdots b_{n}\\right)^{(n-k)/n}, $$ ",
           "block_bbox": [
-            416,
-            2694,
-            1049,
-            2790
+            418,
+            2696,
+            1054,
+            2798
           ],
           "block_id": 12,
-          "block_order": 13
+          "block_order": 13,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              418.0,
+              2696.0
+            ],
+            [
+              1054.0,
+              2696.0
+            ],
+            [
+              1054.0,
+              2798.0
+            ],
+            [
+              418.0,
+              2798.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "which is precisely $\\binom{n}{k}$ times the geometric mean of the terms on the left. Thus AM-GM shows that the terms under consideration on the left exceed those on the right; adding these inequalities over all k yields the desired result.\n",
+          "block_content": "which is precisely  $ (^n)_k $ times the geometric mean of the terms on the left. Thus AM-GM shows that the terms under consideration on the left exceed those on the right; adding these inequalities over all  $ k $ yields the desired result.\n\nThird solution: Since both sides are continuous in each  $ a_i $, it is sufficient to prove the claim with  $ a_1, \\ldots, a_n $ all positive (the general case follows by taking limits as some of the  $ a_i $ tend to zero). Put  $ r_i = b_i / a_i $; then the given inequality is equivalent to",
           "block_bbox": [
-            316,
-            2839,
-            1244,
-            3069
+            315,
+            2840,
+            1256,
+            3081
           ],
           "block_id": 13,
-          "block_order": 14
+          "block_order": 14,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              315.0,
+              2840.0
+            ],
+            [
+              1256.0,
+              2840.0
+            ],
+            [
+              1256.0,
+              3081.0
+            ],
+            [
+              315.0,
+              3081.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Third solution: Since both sides are continuous in each $a_{i}$ , it is sufficient to prove the claim with $a_{1},\\ldots,a_{n}$ all positive (the general case follows by taking limits as $a_{i}$ tend to zero). Put $r_{i}=b_{i}/a_{i}$ ; then the given inequality is equivalent to ",
+          "block_content": "",
           "block_bbox": [
             1413,
-            547,
-            2339,
-            780
+            549,
+            2348,
+            794
           ],
           "block_id": 14,
-          "block_order": 15
+          "block_order": 15,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              1413.0,
+              549.0
+            ],
+            [
+              2348.0,
+              549.0
+            ],
+            [
+              2348.0,
+              794.0
+            ],
+            [
+              1413.0,
+              794.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "(1+r_{1})^{1/n}\\cdots(1+r_{n})^{1/n}\\geq1+(r_{1}\\cdots r_{n})^{1/n}.",
+          "block_label": "display_formula",
+          "block_content": " $$ \\left(1+r_{1}\\right)^{1/n}\\cdots\\left(1+r_{n}\\right)^{1/n}\\geq1+\\left(r_{1}\\cdots r_{n}\\right)^{1/n}. $$ ",
           "block_bbox": [
-            1452,
-            824,
-            2198,
-            874
+            1451,
+            823,
+            2204,
+            886
           ],
           "block_id": 15,
-          "block_order": 16
+          "block_order": 16,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              1451.0,
+              823.0
+            ],
+            [
+              2204.0,
+              823.0
+            ],
+            [
+              2204.0,
+              886.0
+            ],
+            [
+              1451.0,
+              886.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "In terms of the function ",
+          "block_content": "In terms of the function",
           "block_bbox": [
-            1415,
-            922,
-            1816,
-            959
+            1416,
+            924,
+            1826,
+            970
           ],
           "block_id": 16,
-          "block_order": 17
+          "block_order": 17,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              1416.0,
+              924.0
+            ],
+            [
+              1826.0,
+              924.0
+            ],
+            [
+              1826.0,
+              970.0
+            ],
+            [
+              1416.0,
+              970.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "f(x)=\\log(1+e^x)",
+          "block_label": "display_formula",
+          "block_content": " $$ f(x)=\\log(1+e^{x}) $$ ",
           "block_bbox": [
             1666,
             1009,
-            1986,
-            1053
+            1993,
+            1062
           ],
           "block_id": 17,
-          "block_order": 18
+          "block_order": 18,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              1666.0,
+              1009.0
+            ],
+            [
+              1993.0,
+              1009.0
+            ],
+            [
+              1993.0,
+              1062.0
+            ],
+            [
+              1666.0,
+              1062.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "and the quantities $s_{i}=\\log r_{i}$ , we can rewrite the desired inequality as \n",
-          "block_bbox": [
-            1414,
-            1101,
-            2337,
-            1188
-          ],
-          "block_id": 18,
-          "block_order": 19
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\frac{1}{n}(f(s_1)+\\cdots+f(s_n))\\geq f\\left(\\frac{s_1+\\cdots+s_n}{n}\\right).",
-          "block_bbox": [
-            1451,
-            1232,
-            2199,
-            1331
-          ],
-          "block_id": 19,
-          "block_order": 20
-        },
-        {
-          "block_label": "text",
-          "block_content": "This will follow from Jensen's inequality if we can verify that f is a convex function; it is enough to check that $\\stackrel{\\sim}{f^{\\prime\\prime}}(x)>0$ for all . In fact,",
-          "block_bbox": [
-            1414,
-            1377,
-            2338,
-            1515
-          ],
-          "block_id": 20,
-          "block_order": 21
-        },
-        {
-          "block_label": "formula",
-          "block_content": "f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}}",
-          "block_bbox": [
-            1585,
-            1555,
-            2065,
-            1650
-          ],
-          "block_id": 21,
-          "block_order": 22
-        },
-        {
-          "block_label": "text",
-          "block_content": "is an increasing function of x, so $f^{\\prime\\prime}(x)>0$ and Jensen's inequality thus yields the desired result. (As long as the $a_{i}$ are all positive, equality holds when $s_{1}=\\cdots=s_{n},$ i.e., when the vectors $\\left(a_{1},\\ldots,a_{n}\\right)$ and $\\left(b_{1},\\ldots,b_{n}\\right)$ 1. Of course other equality cases crop up if some of the $a_{i}$ vanish, i.e., if $a_{1}=b_{1}=0.)$ )\n",
+          "block_content": "and the quantities  $ s_{i} = \\log r_{i} $, we can rewrite the desired inequality as",
           "block_bbox": [
             1413,
-            1691,
-            2340,
-            1975
+            1101,
+            2347,
+            1197
+          ],
+          "block_id": 18,
+          "block_order": 19,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              1413.0,
+              1101.0
+            ],
+            [
+              2347.0,
+              1101.0
+            ],
+            [
+              2347.0,
+              1197.0
+            ],
+            [
+              1413.0,
+              1197.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\frac{1}{n}(f(s_{1})+\\cdots+f(s_{n}))\\geq f\\left(\\frac{s_{1}+\\cdots+s_{n}}{n}\\right). $$ ",
+          "block_bbox": [
+            1449,
+            1230,
+            2203,
+            1342
+          ],
+          "block_id": 19,
+          "block_order": 20,
+          "group_id": 19,
+          "block_polygon_points": [
+            [
+              1449.0,
+              1230.0
+            ],
+            [
+              2203.0,
+              1230.0
+            ],
+            [
+              2203.0,
+              1342.0
+            ],
+            [
+              1449.0,
+              1342.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "This will follow from Jensen’s inequality if we can verify that $f$ is a convex function; it is enough to check that $f''(x) > 0$ for all $x$. In fact,",
+          "block_bbox": [
+            1412,
+            1378,
+            2349,
+            1524
+          ],
+          "block_id": 20,
+          "block_order": 21,
+          "group_id": 20,
+          "block_polygon_points": [
+            [
+              1412.0,
+              1378.0
+            ],
+            [
+              2349.0,
+              1378.0
+            ],
+            [
+              2349.0,
+              1524.0
+            ],
+            [
+              1412.0,
+              1524.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}} $$ ",
+          "block_bbox": [
+            1584,
+            1557,
+            2069,
+            1659
+          ],
+          "block_id": 21,
+          "block_order": 22,
+          "group_id": 21,
+          "block_polygon_points": [
+            [
+              1584.0,
+              1557.0
+            ],
+            [
+              2069.0,
+              1557.0
+            ],
+            [
+              2069.0,
+              1659.0
+            ],
+            [
+              1584.0,
+              1659.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "is an increasing function of $x$, so $f''(x) > 0$ and Jensen's inequality thus yields the desired result. (As long as the $a_i$ are all positive, equality holds when $s_1 = \\cdots = s_n$, i.e., when the vectors $(a_1, \\ldots, a_n)$ and $(b_1, \\ldots, b_n)$. Of course other equality cases crop up if some of the $a_i$ vanish, i.e., if $a_1 = b_1 = 0$.)",
+          "block_bbox": [
+            1413,
+            1692,
+            2347,
+            1984
           ],
           "block_id": 22,
-          "block_order": 23
+          "block_order": 23,
+          "group_id": 22,
+          "block_polygon_points": [
+            [
+              1413.0,
+              1692.0
+            ],
+            [
+              2347.0,
+              1692.0
+            ],
+            [
+              2347.0,
+              1984.0
+            ],
+            [
+              1413.0,
+              1984.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Fourth solution: We apply induction on n, the case $n=$ 1 being evident. First we verify the auxiliary inequallity ",
-          "block_bbox": [
-            1414,
-            1997,
-            2340,
-            2087
-          ],
-          "block_id": 23,
-          "block_order": 24
-        },
-        {
-          "block_label": "formula",
-          "block_content": "(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(ac^{n-1}+bd^{n-1})^{n}",
-          "block_bbox": [
-            1471,
-            2126,
-            2183,
-            2174
-          ],
-          "block_id": 24,
-          "block_order": 25
-        },
-        {
-          "block_label": "text",
-          "block_content": "for $a,b,c,d\\geq0$ . The left side can be written as ",
+          "block_content": "Fourth solution: We apply induction on n, the case n = 1 being evident. First we verify the auxiliary inequality",
           "block_bbox": [
             1415,
-            2223,
-            2206,
-            2264
+            1997,
+            2348,
+            2096
           ],
-          "block_id": 25,
-          "block_order": 26
+          "block_id": 23,
+          "block_order": 24,
+          "group_id": 23,
+          "block_polygon_points": [
+            [
+              1415.0,
+              1997.0
+            ],
+            [
+              2348.0,
+              1997.0
+            ],
+            [
+              2348.0,
+              2096.0
+            ],
+            [
+              1415.0,
+              2096.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}a^{n}c^{n(n-1)}+&b^{n}d^{n(n-1)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*}",
+          "block_label": "display_formula",
+          "block_content": " $$ (a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(a c^{n-1}+b d^{n-1})^{n} $$ ",
           "block_bbox": [
-            1484,
-            2305,
-            2165,
-            2623
+            1472,
+            2126,
+            2190,
+            2185
           ],
-          "block_id": 26,
-          "block_order": 27
+          "block_id": 24,
+          "block_order": 25,
+          "group_id": 24,
+          "block_polygon_points": [
+            [
+              1472.0,
+              2126.0
+            ],
+            [
+              2190.0,
+              2126.0
+            ],
+            [
+              2190.0,
+              2185.0
+            ],
+            [
+              1472.0,
+              2185.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Applying the weighted AM-GM inequality between matching terms in the two sums yields ",
+          "block_content": "for $a,b,c,d \\geq 0$. The left side can be written as",
+          "block_bbox": [
+            1413,
+            2224,
+            2217,
+            2273
+          ],
+          "block_id": 25,
+          "block_order": 26,
+          "group_id": 25,
+          "block_polygon_points": [
+            [
+              1413.0,
+              2224.0
+            ],
+            [
+              2217.0,
+              2224.0
+            ],
+            [
+              2217.0,
+              2273.0
+            ],
+            [
+              1413.0,
+              2273.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}a^{n}c^{n(n-1)}&+b^{n}d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*} $$ ",
+          "block_bbox": [
+            1485,
+            2306,
+            2169,
+            2632
+          ],
+          "block_id": 26,
+          "block_order": 27,
+          "group_id": 26,
+          "block_polygon_points": [
+            [
+              1485.0,
+              2306.0
+            ],
+            [
+              2169.0,
+              2306.0
+            ],
+            [
+              2169.0,
+              2632.0
+            ],
+            [
+              1485.0,
+              2632.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Applying the weighted AM-GM inequality between matching terms in the two sums yields",
           "block_bbox": [
             1414,
             2670,
-            2337,
-            2761
+            2348,
+            2769
           ],
           "block_id": 27,
-          "block_order": 28
+          "block_order": 28,
+          "group_id": 27,
+          "block_polygon_points": [
+            [
+              1414.0,
+              2670.0
+            ],
+            [
+              2348.0,
+              2670.0
+            ],
+            [
+              2348.0,
+              2769.0
+            ],
+            [
+              1414.0,
+              2769.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}(a^n+b^n)(c^n+d^n)^{n-1}&\\geq a^n c^{n(n-1)}+b^n d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^i b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}&\\geq a^{n} c^{n(n-1)}+b^{n} d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^{i} b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*} $$ ",
           "block_bbox": [
             1353,
-            2816,
-            2302,
-            3001
+            2815,
+            2307,
+            3011
           ],
           "block_id": 28,
-          "block_order": 29
+          "block_order": 29,
+          "group_id": 28,
+          "block_polygon_points": [
+            [
+              1353.0,
+              2815.0
+            ],
+            [
+              2307.0,
+              2815.0
+            ],
+            [
+              2307.0,
+              3011.0
+            ],
+            [
+              1353.0,
+              3011.0
+            ]
+          ]
         }
       ],
-      "markdown": "# Solutions to the 64th William Lowell Putnam Mathematical Competition  Saturday, December 6, 2003\n\nManjul Bhargava, Kiran Kedlaya, and Lenny Ng \n\nA1 There are n such sums. More precisely, there is exactly one such sum with k terms for each of $k=1,\\ldots,n$ (and clearly no others). To see this, note that if $n=a_{1}+a_{2}+$ $\\cdots+a_{k}$ with $a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1$ ,then \n\n$$\\begin{align*}ka_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=ka_{1}+k-1.\\end{align*}$$\n\nHowever, there is a unique integer $a_{1}$ satisfying these inequalities, namely $a_{1}=\\lfloor n/k\\rfloor$ . Moreover, once $a_{1}$ is fixed, there are k different possibilities for the sum $a_{1}+$ $a_{2}+\\cdots+a_{k}$ : if i is the last integer such that $a_{i}=a_{1}$ ,then the sum equals $k a_{1}+(i-1)$ ). The possible values of i are $1,\\ldots,k,$ , and exactly one of these sums comes out equal to n, proving our claim.\n\n\n\nNote: In summary, there is a unique partition of n with k terms that is $ ``\\mathrm{as}$ equally spaced as possible\". One can also obtain essentially the same construction inductively: except for the all-ones sum, each partition of n is obtained by \"augmenting\" a unique partition of $n-1$ \n\nA2 First solution: Assume without loss of generality that $a_{i}+b_{i}>0$ for each i (otherwise both sides of the desired inequality are zero). Then the AM-GM inequality gives \n\n$$\\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}&\\\\\\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),&\\end{align*}$$\n\nand likewise with the roles of a and b reversed. Adding these two inequalities and clearing denominators yields the desired result.\n\n\n\nSecond solution: Write the desired inequality in the form \n\n\n\n$$(a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n},$$\n\nexpand both sides, and compare the terms on both sides in which k of the terms are among the $a_{i}$ . On the left, one has the product of each k-element subset of $\\{1,\\ldots,n\\}$ ;on the right, one has \n\n$${\\binom{n}{k}}{\\left(a_{1}\\cdots a_{n}\\right)}^{k/n}\\cdots{\\left(b_{1}\\ldots b_{n}\\right)}^{\\left(n-k\\right)/n},$$\n\nwhich is precisely $\\binom{n}{k}$ times the geometric mean of the terms on the left. Thus AM-GM shows that the terms under consideration on the left exceed those on the right; adding these inequalities over all k yields the desired result.\n\n\n\nThird solution: Since both sides are continuous in each $a_{i}$ , it is sufficient to prove the claim with $a_{1},\\ldots,a_{n}$ all positive (the general case follows by taking limits as $a_{i}$ tend to zero). Put $r_{i}=b_{i}/a_{i}$ ; then the given inequality is equivalent to \n\n$$(1+r_{1})^{1/n}\\cdots(1+r_{n})^{1/n}\\geq1+(r_{1}\\cdots r_{n})^{1/n}.$$\n\nIn terms of the function \n\n$$f(x)=\\log(1+e^x)$$\n\nand the quantities $s_{i}=\\log r_{i}$ , we can rewrite the desired inequality as \n\n\n\n$$\\frac{1}{n}(f(s_1)+\\cdots+f(s_n))\\geq f\\left(\\frac{s_1+\\cdots+s_n}{n}\\right).$$\n\nThis will follow from Jensen's inequality if we can verify that f is a convex function; it is enough to check that $\\stackrel{\\sim}{f^{\\prime\\prime}}(x)>0$ for all . In fact,\n\n$$f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}}$$\n\nis an increasing function of x, so $f^{\\prime\\prime}(x)>0$ and Jensen's inequality thus yields the desired result. (As long as the $a_{i}$ are all positive, equality holds when $s_{1}=\\cdots=s_{n},$ i.e., when the vectors $\\left(a_{1},\\ldots,a_{n}\\right)$ and $\\left(b_{1},\\ldots,b_{n}\\right)$ 1. Of course other equality cases crop up if some of the $a_{i}$ vanish, i.e., if $a_{1}=b_{1}=0.)$ )\n\n\n\nFourth solution: We apply induction on n, the case $n=$ 1 being evident. First we verify the auxiliary inequallity \n\n$$(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(ac^{n-1}+bd^{n-1})^{n}$$\n\nfor $a,b,c,d\\geq0$ . The left side can be written as \n\n$$\\begin{align*}a^{n}c^{n(n-1)}+&b^{n}d^{n(n-1)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*}$$\n\nApplying the weighted AM-GM inequality between matching terms in the two sums yields \n\n$$\\begin{align*}(a^n+b^n)(c^n+d^n)^{n-1}&\\geq a^n c^{n(n-1)}+b^n d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^i b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*}$$",
+      "markdown": "# Solutions to the 64th William Lowell Putnam Mathematical Competition Saturday, December 6, 2003\n\nManjul Bhargava, Kiran Kedlaya, and Lenny Ng\n\nA1 There are $n$ such sums. More precisely, there is exactly one such sum with $k$ terms for each of $k=1,\\ldots,n$ (and clearly no others). To see this, note that if $n=a_{1}+a_{2}+\\cdots+a_{k}$ with $a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1$, then\n\n $$ \\begin{aligned}k a_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=k a_{1}+k-1.\\end{aligned} $$ \n\nHowever, there is a unique integer  $ a_1 $ satisfying these inequalities, namely  $ a_1 = \\lfloor n/k \\rfloor $. Moreover, once  $ a_1 $ is fixed, there are  $ k $ different possibilities for the sum  $ a_1 + a_2 + \\cdots + a_k $: if  $ i $ is the last integer such that  $ a_i = a_1 $, then the sum equals  $ ka_1 + (i - 1) $. The possible values of  $ i $ are  $ 1, \\ldots, k $, and exactly one of these sums comes out equal to  $ n $, proving our claim.\n\nNote: In summary, there is a unique partition of n with k terms that is “as equally spaced as possible”. One can also obtain essentially the same construction inductively: except for the all-ones sum, each partition of n is obtained by “augmenting” a unique partition of n - 1.\n\nA2 First solution: Assume without loss of generality that  $ a_{i} + b_{i} > 0 $ for each  $ i $ (otherwise both sides of the desired inequality are zero). Then the AM-GM inequality gives\n\n $$ \\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}\\\\ \\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),\\end{align*} $$ \n\nand likewise with the roles of a and b reversed. Adding these two inequalities and clearing denominators yields the desired result.\n\nSecond solution: Write the desired inequality in the form\n\n $$ (a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n}, $$ \n\nexpand both sides, and compare the terms on both sides in which $k$ of the terms are among the $a_{i}$. On the left, one has the product of each $k$-element subset of $\\{1,\\ldots,n\\}$; on the right, one has\n\n $$ \\binom{n}{k}\\left(a_{1}\\cdots a_{n}\\right)^{k/n}\\cdots\\left(b_{1}\\cdots b_{n}\\right)^{(n-k)/n}, $$ \n\nwhich is precisely  $ (^n)_k $ times the geometric mean of the terms on the left. Thus AM-GM shows that the terms under consideration on the left exceed those on the right; adding these inequalities over all  $ k $ yields the desired result.\n\nThird solution: Since both sides are continuous in each  $ a_i $, it is sufficient to prove the claim with  $ a_1, \\ldots, a_n $ all positive (the general case follows by taking limits as some of the  $ a_i $ tend to zero). Put  $ r_i = b_i / a_i $; then the given inequality is equivalent to\n\n\n\n $$ \\left(1+r_{1}\\right)^{1/n}\\cdots\\left(1+r_{n}\\right)^{1/n}\\geq1+\\left(r_{1}\\cdots r_{n}\\right)^{1/n}. $$ \n\nIn terms of the function\n\n $$ f(x)=\\log(1+e^{x}) $$ \n\nand the quantities  $ s_{i} = \\log r_{i} $, we can rewrite the desired inequality as\n\n $$ \\frac{1}{n}(f(s_{1})+\\cdots+f(s_{n}))\\geq f\\left(\\frac{s_{1}+\\cdots+s_{n}}{n}\\right). $$ \n\nThis will follow from Jensen’s inequality if we can verify that $f$ is a convex function; it is enough to check that $f''(x) > 0$ for all $x$. In fact,\n\n $$ f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}} $$ \n\nis an increasing function of $x$, so $f''(x) > 0$ and Jensen's inequality thus yields the desired result. (As long as the $a_i$ are all positive, equality holds when $s_1 = \\cdots = s_n$, i.e., when the vectors $(a_1, \\ldots, a_n)$ and $(b_1, \\ldots, b_n)$. Of course other equality cases crop up if some of the $a_i$ vanish, i.e., if $a_1 = b_1 = 0$.)\n\nFourth solution: We apply induction on n, the case n = 1 being evident. First we verify the auxiliary inequality\n\n $$ (a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(a c^{n-1}+b d^{n-1})^{n} $$ \n\nfor $a,b,c,d \\geq 0$. The left side can be written as\n\n $$ \\begin{align*}a^{n}c^{n(n-1)}&+b^{n}d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*} $$ \n\nApplying the weighted AM-GM inequality between matching terms in the two sums yields\n\n $$ \\begin{align*}(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}&\\geq a^{n} c^{n(n-1)}+b^{n} d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^{i} b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*} $$ ",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}a^{n}c^{n(n-1)}+&b^{n}d^{n(n-1)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1484.949462890625,
-            2305.359619140625,
-            2165.010498046875,
-            2623.647216796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}&\\\\\\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),&\\end{align*}",
-          "formula_region_id": 2,
-          "dt_polys": [
-            266.6715087890625,
-            1808.4481201171875,
-            1206.125,
-            2033.8011474609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}ka_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=ka_{1}+k-1.\\end{align*}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            393.10302734375,
-            783.72119140625,
-            1068.369384765625,
-            938.938232421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}(a^n+b^n)(c^n+d^n)^{n-1}&\\geq a^n c^{n(n-1)}+b^n d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^i b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            1353.87646484375,
-            2816.86376953125,
-            2302.942626953125,
-            3001.5546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{1}{n}(f(s_1)+\\cdots+f(s_n))\\geq f\\left(\\frac{s_1+\\cdots+s_n}{n}\\right).",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1451.286865234375,
-            1232.678466796875,
-            2199.618408203125,
-            1331.9638671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1585.630859375,
-            1555.965576171875,
-            2065.1015625,
-            1650.416259765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\binom{n}{k}}{\\left(a_{1}\\cdots a_{n}\\right)}^{k/n}\\cdots{\\left(b_{1}\\ldots b_{n}\\right)}^{\\left(n-k\\right)/n},",
-          "formula_region_id": 7,
-          "dt_polys": [
-            416.8455810546875,
-            2694.562744140625,
-            1049.7083740234375,
-            2790.487548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n},",
-          "formula_region_id": 8,
-          "dt_polys": [
-            265.83331298828125,
-            2366.19970703125,
-            1197.162353515625,
-            2415.5087890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1+r_{1})^{1/n}\\cdots(1+r_{n})^{1/n}\\geq1+(r_{1}\\cdots r_{n})^{1/n}.",
-          "formula_region_id": 9,
-          "dt_polys": [
-            1452.901611328125,
-            824.283447265625,
-            2198.690185546875,
-            874.781982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(ac^{n-1}+bd^{n-1})^{n}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            1471.77587890625,
-            2126.64697265625,
-            2183.350341796875,
-            2174.58056640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f(x)=\\log(1+e^x)",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1666.0654296875,
-            1009.386962890625,
-            1986.498291015625,
-            1053.58642578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}=\\lfloor n/k\\rfloor",
-          "formula_region_id": 12,
-          "dt_polys": [
-            671.8636474609375,
-            1035.86865234375,
-            861.5572509765625,
-            1082.8583984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\stackrel{\\sim}{f^{\\prime\\prime}}(x)>0",
-          "formula_region_id": 13,
-          "dt_polys": [
-            1420.1422119140625,
-            1468.05126953125,
-            1588.6451416015625,
-            1515.89599609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "r_{i}=b_{i}/a_{i}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            2008.154541015625,
-            691.7767333984375,
-            2178.083740234375,
-            734.0537109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n=a_{1}+a_{2}+",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1016.980712890625,
-            646.8055419921875,
-            1242.148681640625,
-            685.043212890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1",
-          "formula_region_id": 16,
-          "dt_polys": [
-            541.5810546875,
-            692.3154296875,
-            1010.5570068359375,
-            734.097412109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s_{1}=\\cdots=s_{n},",
-          "formula_region_id": 17,
-          "dt_polys": [
-            2105.06103515625,
-            1795.843994140625,
-            2335.44384765625,
-            1832.148193359375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f^{\\prime\\prime}(x)>0",
-          "formula_region_id": 18,
-          "dt_polys": [
-            1961.042236328125,
-            1693.619384765625,
-            2124.362060546875,
-            1739.92138671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "k a_{1}+(i-1)",
-          "formula_region_id": 19,
-          "dt_polys": [
-            670.858154296875,
-            1178.57763671875,
-            880.84375,
-            1224.4892578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s_{i}=\\log r_{i}",
-          "formula_region_id": 20,
-          "dt_polys": [
-            1722.798828125,
-            1106.40283203125,
-            1887.170654296875,
-            1145.740234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left(a_{1},\\ldots,a_{n}\\right)",
-          "formula_region_id": 21,
-          "dt_polys": [
-            1797.791015625,
-            1839.052001953125,
-            1986.1044921875,
-            1883.172607421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\{1,\\ldots,n\\}",
-          "formula_region_id": 22,
-          "dt_polys": [
-            326.00445556640625,
-            2603.2607421875,
-            489.51922607421875,
-            2649.8203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left(b_{1},\\ldots,b_{n}\\right)",
-          "formula_region_id": 23,
-          "dt_polys": [
-            2076.92431640625,
-            1838.923095703125,
-            2260.01220703125,
-            1882.409912109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}=a_{1}",
-          "formula_region_id": 24,
-          "dt_polys": [
-            1105.625732421875,
-            1140.15478515625,
-            1233.7109375,
-            1176.6572265625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}=b_{1}=0.)",
-          "formula_region_id": 25,
-          "dt_polys": [
-            1654.4678955078125,
-            1932.7349853515625,
-            1876.8179931640625,
-            1973.8939208984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "k=1,\\ldots,n",
-          "formula_region_id": 26,
-          "dt_polys": [
-            966.875244140625,
-            595.3079833984375,
-            1160.698974609375,
-            636.1602783203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1},\\ldots,a_{n}",
-          "formula_region_id": 27,
-          "dt_polys": [
-            2126.93408203125,
-            602.0758056640625,
-            2283.73876953125,
-            639.3729248046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{2}+\\cdots+a_{k}",
-          "formula_region_id": 28,
-          "dt_polys": [
-            323.239990234375,
-            1136.259765625,
-            544.9916381835938,
-            1176.4169921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}+b_{i}>0",
-          "formula_region_id": 29,
-          "dt_polys": [
-            323.4151611328125,
-            1660.306640625,
-            498.3099365234375,
-            1701.31494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "1,\\ldots,k,",
-          "formula_region_id": 30,
-          "dt_polys": [
-            466.82861328125,
-            1226.8116455078125,
-            592.9532470703125,
-            1269.7105712890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n-1",
-          "formula_region_id": 31,
-          "dt_polys": [
-            1123.41650390625,
-            1536.3411865234375,
-            1207.611328125,
-            1569.7891845703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\cdots+a_{k}",
-          "formula_region_id": 32,
-          "dt_polys": [
-            327.13238525390625,
-            695.2313842773438,
-            450.59320068359375,
-            732.9158325195312
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a,b,c,d\\geq0",
-          "formula_region_id": 33,
-          "dt_polys": [
-            1479.34228515625,
-            2225.54443359375,
-            1686.2236328125,
-            2265.07958984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n=",
-          "formula_region_id": 34,
-          "dt_polys": [
-            2275.461181640625,
-            2005.1488037109375,
-            2339.125732421875,
-            2036.8843994140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 35,
-          "dt_polys": [
-            1420.398193359375,
-            604.438232421875,
-            1458.885986328125,
-            640.169921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}+",
-          "formula_region_id": 36,
-          "dt_polys": [
-            1166.4031982421875,
-            1090.8851318359375,
-            1241.6676025390625,
-            1127.2620849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 37,
-          "dt_polys": [
-            2304.7333984375,
-            1894.963623046875,
-            2340.236328125,
-            1927.947998046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}",
-          "formula_region_id": 38,
-          "dt_polys": [
-            926.881103515625,
-            1000.01904296875,
-            966.748291015625,
-            1031.2734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 39,
-          "dt_polys": [
-            1635.321044921875,
-            701.0955810546875,
-            1671.976318359375,
-            732.7161865234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 40,
-          "dt_polys": [
-            1037.779052734375,
-            2520.85791015625,
-            1075.670654296875,
-            2552.15380859375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}",
-          "formula_region_id": 41,
-          "dt_polys": [
-            1162.91796875,
-            1045.306884765625,
-            1202.3515625,
-            1079.773193359375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 42,
-          "dt_polys": [
-            1420.479736328125,
-            1799.73095703125,
-            1456.387939453125,
-            1834.03955078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\binom{n}{k}",
-          "formula_region_id": 43,
-          "dt_polys": [
-            662.6072387695312,
-            2839.18603515625,
-            714.0029907226562,
-            2892.90673828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": " ``\\mathrm{as}",
-          "formula_region_id": 44,
-          "dt_polys": [
-            587.2800903320312,
-            1386.96142578125,
-            647.6885375976562,
-            1425.35888671875
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2550,
       "height": 3300,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9798278212547302,
-            "coordinate": [
-              315.7337951660156,
-              987.6649780273438,
-              1243.3287353515625,
-              1317.0849609375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9777899980545044,
-            "coordinate": [
-              1413.70654296875,
-              1691.87158203125,
-              2340.5810546875,
-              1975.20166015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.976104736328125,
-            "coordinate": [
-              316.5904235839844,
-              2839.537109375,
-              1244.5299072265625,
-              3069.669921875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.972824215888977,
-            "coordinate": [
-              316.5304870605469,
-              2461.31396484375,
-              1245.20361328125,
-              2648.53857421875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9708201289176941,
-            "coordinate": [
-              1413.650634765625,
-              547.31787109375,
-              2339.7080078125,
-              780.61865234375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9680400490760803,
-            "coordinate": [
-              316.5862731933594,
-              1339.416015625,
-              1243.4058837890625,
-              1574.34326171875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9673901796340942,
-            "coordinate": [
-              1484.949462890625,
-              2305.359619140625,
-              2165.010498046875,
-              2623.647216796875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9658357501029968,
-            "coordinate": [
-              266.6715087890625,
-              1808.4481201171875,
-              1206.125,
-              2033.8011474609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9650524854660034,
-            "coordinate": [
-              393.10302734375,
-              783.72119140625,
-              1068.369384765625,
-              938.938232421875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9648668169975281,
-            "coordinate": [
-              1414.32275390625,
-              1377.1591796875,
-              2338.353759765625,
-              1515.343994140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9632071852684021,
-            "coordinate": [
-              1353.87646484375,
-              2816.86376953125,
-              2302.942626953125,
-              3001.5546875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9597356915473938,
-            "coordinate": [
-              317.29388427734375,
-              2074.52392578125,
-              1243.234375,
-              2207.736328125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.958835780620575,
-            "coordinate": [
-              1451.286865234375,
-              1232.678466796875,
-              2199.618408203125,
-              1331.9638671875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9582042694091797,
-            "coordinate": [
-              1585.630859375,
-              1555.965576171875,
-              2065.1015625,
-              1650.416259765625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9557223320007324,
-            "coordinate": [
-              416.8455810546875,
-              2694.562744140625,
-              1049.7083740234375,
-              2790.487548828125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9436165690422058,
-            "coordinate": [
-              1414.043212890625,
-              1101.56787109375,
-              2337.708740234375,
-              1188.711181640625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9416135549545288,
-            "coordinate": [
-              1414.19140625,
-              2670.805908203125,
-              2337.50830078125,
-              2761.058837890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9360803365707397,
-            "coordinate": [
-              265.83331298828125,
-              2366.19970703125,
-              1197.162353515625,
-              2415.5087890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9334643483161926,
-            "coordinate": [
-              1452.901611328125,
-              824.283447265625,
-              2198.690185546875,
-              874.781982421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9332548379898071,
-            "coordinate": [
-              1471.77587890625,
-              2126.64697265625,
-              2183.350341796875,
-              2174.58056640625
-            ]
-          },
-          {
-            "cls_id": 10,
-            "label": "doc_title",
-            "score": 0.9329769015312195,
-            "coordinate": [
-              505.343994140625,
-              210.50164794921875,
-              2049.64501953125,
-              321.19134521484375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.930219292640686,
-            "coordinate": [
-              1666.0654296875,
-              1009.386962890625,
-              1986.498291015625,
-              1053.58642578125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9196087718009949,
-            "coordinate": [
-              317.7406311035156,
-              2234.652099609375,
-              1243.1614990234375,
-              2318.448974609375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9193282127380371,
-            "coordinate": [
-              1414.71484375,
-              1997.58056640625,
-              2340.544921875,
-              2087.896728515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.913314938545227,
-            "coordinate": [
-              1415.081787109375,
-              2223.8837890625,
-              2206.165771484375,
-              2264.6767578125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9089841842651367,
-            "coordinate": [
-              255.55667114257812,
-              1610.3399658203125,
-              1245.30810546875,
-              1750.8226318359375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8996314406394958,
-            "coordinate": [
-              851.3297119140625,
-              378.8798828125,
-              1706.7833251953125,
-              422.836669921875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8966194987297058,
-            "coordinate": [
-              255.0916748046875,
-              546.6629028320312,
-              1244.85498046875,
-              735.6261596679688
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8931999802589417,
-            "coordinate": [
-              1415.631103515625,
-              922.994873046875,
-              1816.930419921875,
-              959.152587890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.876438558101654,
-            "coordinate": [
-              671.8636474609375,
-              1035.86865234375,
-              861.5572509765625,
-              1082.8583984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8652271032333374,
-            "coordinate": [
-              1420.1422119140625,
-              1468.05126953125,
-              1588.6451416015625,
-              1515.89599609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8639559745788574,
-            "coordinate": [
-              2008.154541015625,
-              691.7767333984375,
-              2178.083740234375,
-              734.0537109375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8631240725517273,
-            "coordinate": [
-              1016.980712890625,
-              646.8055419921875,
-              1242.148681640625,
-              685.043212890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8584782481193542,
-            "coordinate": [
-              541.5810546875,
-              692.3154296875,
-              1010.5570068359375,
-              734.097412109375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8510724306106567,
-            "coordinate": [
-              2105.06103515625,
-              1795.843994140625,
-              2335.44384765625,
-              1832.148193359375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8441402316093445,
-            "coordinate": [
-              1961.042236328125,
-              1693.619384765625,
-              2124.362060546875,
-              1739.92138671875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8407530188560486,
-            "coordinate": [
-              670.858154296875,
-              1178.57763671875,
-              880.84375,
-              1224.4892578125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8385908007621765,
-            "coordinate": [
-              1722.798828125,
-              1106.40283203125,
-              1887.170654296875,
-              1145.740234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8373104929924011,
-            "coordinate": [
-              1797.791015625,
-              1839.052001953125,
-              1986.1044921875,
-              1883.172607421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8370987176895142,
-            "coordinate": [
-              326.00445556640625,
-              2603.2607421875,
-              489.51922607421875,
-              2649.8203125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8329477906227112,
-            "coordinate": [
-              2076.92431640625,
-              1838.923095703125,
-              2260.01220703125,
-              1882.409912109375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8309821486473083,
-            "coordinate": [
-              1105.625732421875,
-              1140.15478515625,
-              1233.7109375,
-              1176.6572265625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8277674913406372,
-            "coordinate": [
-              1654.4678955078125,
-              1932.7349853515625,
-              1876.8179931640625,
-              1973.8939208984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8274337649345398,
-            "coordinate": [
-              966.875244140625,
-              595.3079833984375,
-              1160.698974609375,
-              636.1602783203125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8205735087394714,
-            "coordinate": [
-              2126.93408203125,
-              602.0758056640625,
-              2283.73876953125,
-              639.3729248046875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8061338067054749,
-            "coordinate": [
-              323.239990234375,
-              1136.259765625,
-              544.9916381835938,
-              1176.4169921875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7976850867271423,
-            "coordinate": [
-              323.4151611328125,
-              1660.306640625,
-              498.3099365234375,
-              1701.31494140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7546013593673706,
-            "coordinate": [
-              466.82861328125,
-              1226.8116455078125,
-              592.9532470703125,
-              1269.7105712890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7245776653289795,
-            "coordinate": [
-              1123.41650390625,
-              1536.3411865234375,
-              1207.611328125,
-              1569.7891845703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6865179538726807,
-            "coordinate": [
-              327.13238525390625,
-              695.2313842773438,
-              450.59320068359375,
-              732.9158325195312
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6838698387145996,
-            "coordinate": [
-              1479.34228515625,
-              2225.54443359375,
-              1686.2236328125,
-              2265.07958984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6583362817764282,
-            "coordinate": [
-              2275.461181640625,
-              2005.1488037109375,
-              2339.125732421875,
-              2036.8843994140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6456577777862549,
-            "coordinate": [
-              1420.398193359375,
-              604.438232421875,
-              1458.885986328125,
-              640.169921875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6389252543449402,
-            "coordinate": [
-              1166.4031982421875,
-              1090.8851318359375,
-              1241.6676025390625,
-              1127.2620849609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6363585591316223,
-            "coordinate": [
-              2304.7333984375,
-              1894.963623046875,
-              2340.236328125,
-              1927.947998046875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5915491580963135,
-            "coordinate": [
-              926.881103515625,
-              1000.01904296875,
-              966.748291015625,
-              1031.2734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5595870018005371,
-            "coordinate": [
-              1635.321044921875,
-              701.0955810546875,
-              1671.976318359375,
-              732.7161865234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5318055152893066,
-            "coordinate": [
-              1037.779052734375,
-              2520.85791015625,
-              1075.670654296875,
-              2552.15380859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5115684866905212,
-            "coordinate": [
-              1162.91796875,
-              1045.306884765625,
-              1202.3515625,
-              1079.773193359375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.4636251926422119,
-            "coordinate": [
-              1420.479736328125,
-              1799.73095703125,
-              1456.387939453125,
-              1834.03955078125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.3711831271648407,
-            "coordinate": [
-              662.6072387695312,
-              2839.18603515625,
-              714.0029907226562,
-              2892.90673828125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.3684433102607727,
-            "coordinate": [
-              587.2800903320312,
-              1386.96142578125,
-              647.6885375976562,
-              1425.35888671875
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              506,
-              212
-            ],
-            [
-              2057,
-              216
-            ],
-            [
-              2057,
-              267
-            ],
-            [
-              506,
-              263
-            ]
-          ],
-          [
-            [
-              981,
-              277
-            ],
-            [
-              1584,
-              274
-            ],
-            [
-              1584,
-              321
-            ],
-            [
-              981,
-              324
-            ]
-          ],
-          [
-            [
-              854,
-              377
-            ],
-            [
-              1711,
-              379
-            ],
-            [
-              1711,
-              427
-            ],
-            [
-              854,
-              424
-            ]
-          ],
-          [
-            [
-              258,
-              548
-            ],
-            [
-              1247,
-              550
-            ],
-            [
-              1247,
-              591
-            ],
-            [
-              258,
-              589
-            ]
-          ],
-          [
-            [
-              1422,
-              550
-            ],
-            [
-              2344,
-              550
-            ],
-            [
-              2344,
-              587
-            ],
-            [
-              1422,
-              587
-            ]
-          ],
-          [
-            [
-              328,
-              599
-            ],
-            [
-              964,
-              599
-            ],
-            [
-              964,
-              633
-            ],
-            [
-              328,
-              633
-            ]
-          ],
-          [
-            [
-              1153,
-              591
-            ],
-            [
-              1255,
-              588
-            ],
-            [
-              1256,
-              640
-            ],
-            [
-              1154,
-              643
-            ]
-          ],
-          [
-            [
-              1455,
-              599
-            ],
-            [
-              2118,
-              597
-            ],
-            [
-              2118,
-              634
-            ],
-            [
-              1455,
-              636
-            ]
-          ],
-          [
-            [
-              2290,
-              593
-            ],
-            [
-              2349,
-              593
-            ],
-            [
-              2349,
-              639
-            ],
-            [
-              2290,
-              639
-            ]
-          ],
-          [
-            [
-              326,
-              645
-            ],
-            [
-              1017,
-              642
-            ],
-            [
-              1017,
-              682
-            ],
-            [
-              326,
-              685
-            ]
-          ],
-          [
-            [
-              1419,
-              644
-            ],
-            [
-              2346,
-              643
-            ],
-            [
-              2346,
-              687
-            ],
-            [
-              1419,
-              688
-            ]
-          ],
-          [
-            [
-              445,
-              690
-            ],
-            [
-              544,
-              690
-            ],
-            [
-              544,
-              734
-            ],
-            [
-              445,
-              734
-            ]
-          ],
-          [
-            [
-              1002,
-              690
-            ],
-            [
-              1108,
-              686
-            ],
-            [
-              1110,
-              733
-            ],
-            [
-              1003,
-              737
-            ]
-          ],
-          [
-            [
-              1420,
-              694
-            ],
-            [
-              1693,
-              691
-            ],
-            [
-              1694,
-              729
-            ],
-            [
-              1421,
-              732
-            ]
-          ],
-          [
-            [
-              1677,
-              694
-            ],
-            [
-              2001,
-              694
-            ],
-            [
-              2001,
-              732
-            ],
-            [
-              1677,
-              732
-            ]
-          ],
-          [
-            [
-              2173,
-              692
-            ],
-            [
-              2345,
-              690
-            ],
-            [
-              2346,
-              733
-            ],
-            [
-              2174,
-              735
-            ]
-          ],
-          [
-            [
-              1423,
-              742
-            ],
-            [
-              1956,
-              742
-            ],
-            [
-              1956,
-              782
-            ],
-            [
-              1423,
-              782
-            ]
-          ],
-          [
-            [
-              1421,
-              923
-            ],
-            [
-              1818,
-              925
-            ],
-            [
-              1818,
-              962
-            ],
-            [
-              1420,
-              960
-            ]
-          ],
-          [
-            [
-              323,
-              986
-            ],
-            [
-              1252,
-              987
-            ],
-            [
-              1252,
-              1034
-            ],
-            [
-              323,
-              1033
-            ]
-          ],
-          [
-            [
-              325,
-              1037
-            ],
-            [
-              665,
-              1039
-            ],
-            [
-              665,
-              1080
-            ],
-            [
-              325,
-              1078
-            ]
-          ],
-          [
-            [
-              864,
-              1038
-            ],
-            [
-              1159,
-              1041
-            ],
-            [
-              1158,
-              1079
-            ],
-            [
-              863,
-              1076
-            ]
-          ],
-          [
-            [
-              1208,
-              1034
-            ],
-            [
-              1253,
-              1034
-            ],
-            [
-              1253,
-              1080
-            ],
-            [
-              1208,
-              1080
-            ]
-          ],
-          [
-            [
-              323,
-              1083
-            ],
-            [
-              1163,
-              1085
-            ],
-            [
-              1163,
-              1129
-            ],
-            [
-              323,
-              1127
-            ]
-          ],
-          [
-            [
-              1422,
-              1101
-            ],
-            [
-              1720,
-              1103
-            ],
-            [
-              1720,
-              1144
-            ],
-            [
-              1421,
-              1142
-            ]
-          ],
-          [
-            [
-              1885,
-              1107
-            ],
-            [
-              2343,
-              1101
-            ],
-            [
-              2344,
-              1139
-            ],
-            [
-              1886,
-              1146
-            ]
-          ],
-          [
-            [
-              537,
-              1131
-            ],
-            [
-              1104,
-              1134
-            ],
-            [
-              1104,
-              1179
-            ],
-            [
-              537,
-              1175
-            ]
-          ],
-          [
-            [
-              1419,
-              1148
-            ],
-            [
-              1640,
-              1148
-            ],
-            [
-              1640,
-              1193
-            ],
-            [
-              1419,
-              1193
-            ]
-          ],
-          [
-            [
-              1234,
-              1160
-            ],
-            [
-              1247,
-              1160
-            ],
-            [
-              1247,
-              1175
-            ],
-            [
-              1234,
-              1175
-            ]
-          ],
-          [
-            [
-              324,
-              1181
-            ],
-            [
-              664,
-              1184
-            ],
-            [
-              664,
-              1225
-            ],
-            [
-              324,
-              1222
-            ]
-          ],
-          [
-            [
-              872,
-              1184
-            ],
-            [
-              1247,
-              1184
-            ],
-            [
-              1247,
-              1222
-            ],
-            [
-              872,
-              1222
-            ]
-          ],
-          [
-            [
-              322,
-              1226
-            ],
-            [
-              458,
-              1226
-            ],
-            [
-              458,
-              1269
-            ],
-            [
-              322,
-              1269
-            ]
-          ],
-          [
-            [
-              587,
-              1229
-            ],
-            [
-              1249,
-              1231
-            ],
-            [
-              1249,
-              1272
-            ],
-            [
-              587,
-              1271
-            ]
-          ],
-          [
-            [
-              325,
-              1279
-            ],
-            [
-              884,
-              1279
-            ],
-            [
-              884,
-              1320
-            ],
-            [
-              325,
-              1320
-            ]
-          ],
-          [
-            [
-              322,
-              1339
-            ],
-            [
-              1248,
-              1340
-            ],
-            [
-              1248,
-              1384
-            ],
-            [
-              322,
-              1383
-            ]
-          ],
-          [
-            [
-              1422,
-              1378
-            ],
-            [
-              2342,
-              1381
-            ],
-            [
-              2342,
-              1419
-            ],
-            [
-              1421,
-              1416
-            ]
-          ],
-          [
-            [
-              324,
-              1391
-            ],
-            [
-              582,
-              1391
-            ],
-            [
-              582,
-              1429
-            ],
-            [
-              324,
-              1429
-            ]
-          ],
-          [
-            [
-              659,
-              1390
-            ],
-            [
-              1250,
-              1388
-            ],
-            [
-              1250,
-              1431
-            ],
-            [
-              660,
-              1433
-            ]
-          ],
-          [
-            [
-              1421,
-              1426
-            ],
-            [
-              2345,
-              1426
-            ],
-            [
-              2345,
-              1466
-            ],
-            [
-              1421,
-              1466
-            ]
-          ],
-          [
-            [
-              323,
-              1437
-            ],
-            [
-              1249,
-              1437
-            ],
-            [
-              1249,
-              1480
-            ],
-            [
-              323,
-              1480
-            ]
-          ],
-          [
-            [
-              1586,
-              1473
-            ],
-            [
-              1871,
-              1476
-            ],
-            [
-              1870,
-              1514
-            ],
-            [
-              1586,
-              1511
-            ]
-          ],
-          [
-            [
-              323,
-              1485
-            ],
-            [
-              1249,
-              1484
-            ],
-            [
-              1249,
-              1528
-            ],
-            [
-              323,
-              1529
-            ]
-          ],
-          [
-            [
-              325,
-              1533
-            ],
-            [
-              1119,
-              1533
-            ],
-            [
-              1119,
-              1577
-            ],
-            [
-              325,
-              1577
-            ]
-          ],
-          [
-            [
-              258,
-              1609
-            ],
-            [
-              1250,
-              1611
-            ],
-            [
-              1250,
-              1655
-            ],
-            [
-              258,
-              1653
-            ]
-          ],
-          [
-            [
-              503,
-              1662
-            ],
-            [
-              1248,
-              1662
-            ],
-            [
-              1248,
-              1699
-            ],
-            [
-              503,
-              1699
-            ]
-          ],
-          [
-            [
-              1422,
-              1697
-            ],
-            [
-              1956,
-              1697
-            ],
-            [
-              1956,
-              1734
-            ],
-            [
-              1422,
-              1734
-            ]
-          ],
-          [
-            [
-              2122,
-              1695
-            ],
-            [
-              2344,
-              1695
-            ],
-            [
-              2344,
-              1733
-            ],
-            [
-              2122,
-              1733
-            ]
-          ],
-          [
-            [
-              326,
-              1708
-            ],
-            [
-              1249,
-              1708
-            ],
-            [
-              1249,
-              1751
-            ],
-            [
-              326,
-              1751
-            ]
-          ],
-          [
-            [
-              1420,
-              1743
-            ],
-            [
-              2346,
-              1743
-            ],
-            [
-              2346,
-              1786
-            ],
-            [
-              1420,
-              1786
-            ]
-          ],
-          [
-            [
-              1468,
-              1792
-            ],
-            [
-              2097,
-              1792
-            ],
-            [
-              2097,
-              1832
-            ],
-            [
-              1468,
-              1832
-            ]
-          ],
-          [
-            [
-              1420,
-              1841
-            ],
-            [
-              1788,
-              1841
-            ],
-            [
-              1788,
-              1878
-            ],
-            [
-              1420,
-              1878
-            ]
-          ],
-          [
-            [
-              1994,
-              1838
-            ],
-            [
-              2070,
-              1836
-            ],
-            [
-              2071,
-              1879
-            ],
-            [
-              1995,
-              1882
-            ]
-          ],
-          [
-            [
-              2247,
-              1835
-            ],
-            [
-              2351,
-              1835
-            ],
-            [
-              2351,
-              1880
-            ],
-            [
-              2247,
-              1880
-            ]
-          ],
-          [
-            [
-              1419,
-              1886
-            ],
-            [
-              2297,
-              1883
-            ],
-            [
-              2297,
-              1927
-            ],
-            [
-              1420,
-              1930
-            ]
-          ],
-          [
-            [
-              1420,
-              1933
-            ],
-            [
-              1656,
-              1933
-            ],
-            [
-              1656,
-              1974
-            ],
-            [
-              1420,
-              1974
-            ]
-          ],
-          [
-            [
-              1865,
-              1941
-            ],
-            [
-              1889,
-              1941
-            ],
-            [
-              1889,
-              1976
-            ],
-            [
-              1865,
-              1976
-            ]
-          ],
-          [
-            [
-              1419,
-              1996
-            ],
-            [
-              2275,
-              1998
-            ],
-            [
-              2275,
-              2039
-            ],
-            [
-              1418,
-              2036
-            ]
-          ],
-          [
-            [
-              1421,
-              2044
-            ],
-            [
-              2340,
-              2048
-            ],
-            [
-              2340,
-              2089
-            ],
-            [
-              1420,
-              2085
-            ]
-          ],
-          [
-            [
-              325,
-              2075
-            ],
-            [
-              1248,
-              2079
-            ],
-            [
-              1248,
-              2119
-            ],
-            [
-              325,
-              2116
-            ]
-          ],
-          [
-            [
-              324,
-              2125
-            ],
-            [
-              1247,
-              2124
-            ],
-            [
-              1247,
-              2164
-            ],
-            [
-              324,
-              2165
-            ]
-          ],
-          [
-            [
-              325,
-              2173
-            ],
-            [
-              623,
-              2173
-            ],
-            [
-              623,
-              2210
-            ],
-            [
-              325,
-              2210
-            ]
-          ],
-          [
-            [
-              1416,
-              2220
-            ],
-            [
-              1483,
-              2223
-            ],
-            [
-              1481,
-              2267
-            ],
-            [
-              1414,
-              2264
-            ]
-          ],
-          [
-            [
-              1687,
-              2224
-            ],
-            [
-              2209,
-              2227
-            ],
-            [
-              2209,
-              2264
-            ],
-            [
-              1686,
-              2261
-            ]
-          ],
-          [
-            [
-              323,
-              2235
-            ],
-            [
-              1247,
-              2236
-            ],
-            [
-              1247,
-              2277
-            ],
-            [
-              323,
-              2276
-            ]
-          ],
-          [
-            [
-              320,
-              2280
-            ],
-            [
-              416,
-              2283
-            ],
-            [
-              414,
-              2328
-            ],
-            [
-              318,
-              2325
-            ]
-          ],
-          [
-            [
-              326,
-              2465
-            ],
-            [
-              1248,
-              2461
-            ],
-            [
-              1248,
-              2501
-            ],
-            [
-              326,
-              2505
-            ]
-          ],
-          [
-            [
-              322,
-              2509
-            ],
-            [
-              1251,
-              2508
-            ],
-            [
-              1251,
-              2552
-            ],
-            [
-              322,
-              2553
-            ]
-          ],
-          [
-            [
-              324,
-              2559
-            ],
-            [
-              1252,
-              2559
-            ],
-            [
-              1252,
-              2599
-            ],
-            [
-              324,
-              2599
-            ]
-          ],
-          [
-            [
-              479,
-              2608
-            ],
-            [
-              854,
-              2605
-            ],
-            [
-              855,
-              2646
-            ],
-            [
-              479,
-              2649
-            ]
-          ],
-          [
-            [
-              1423,
-              2673
-            ],
-            [
-              2344,
-              2673
-            ],
-            [
-              2344,
-              2716
-            ],
-            [
-              1423,
-              2716
-            ]
-          ],
-          [
-            [
-              1422,
-              2720
-            ],
-            [
-              2064,
-              2720
-            ],
-            [
-              2064,
-              2760
-            ],
-            [
-              1422,
-              2760
-            ]
-          ],
-          [
-            [
-              325,
-              2840
-            ],
-            [
-              650,
-              2844
-            ],
-            [
-              649,
-              2888
-            ],
-            [
-              325,
-              2884
-            ]
-          ],
-          [
-            [
-              732,
-              2843
-            ],
-            [
-              1251,
-              2843
-            ],
-            [
-              1251,
-              2883
-            ],
-            [
-              732,
-              2883
-            ]
-          ],
-          [
-            [
-              323,
-              2891
-            ],
-            [
-              1249,
-              2889
-            ],
-            [
-              1249,
-              2930
-            ],
-            [
-              323,
-              2931
-            ]
-          ],
-          [
-            [
-              325,
-              2941
-            ],
-            [
-              1248,
-              2941
-            ],
-            [
-              1248,
-              2978
-            ],
-            [
-              325,
-              2978
-            ]
-          ],
-          [
-            [
-              326,
-              2988
-            ],
-            [
-              1248,
-              2988
-            ],
-            [
-              1248,
-              3028
-            ],
-            [
-              326,
-              3028
-            ]
-          ],
-          [
-            [
-              325,
-              3033
-            ],
-            [
-              562,
-              3035
-            ],
-            [
-              562,
-              3073
-            ],
-            [
-              325,
-              3071
-            ]
-          ],
-          [
-            [
-              1484,
-              2305
-            ],
-            [
-              2165,
-              2305
-            ],
-            [
-              2165,
-              2623
-            ],
-            [
-              1484,
-              2623
-            ]
-          ],
-          [
-            [
-              266,
-              1808
-            ],
-            [
-              1206,
-              1808
-            ],
-            [
-              1206,
-              2033
-            ],
-            [
-              266,
-              2033
-            ]
-          ],
-          [
-            [
-              393,
-              783
-            ],
-            [
-              1068,
-              783
-            ],
-            [
-              1068,
-              938
-            ],
-            [
-              393,
-              938
-            ]
-          ],
-          [
-            [
-              1353,
-              2816
-            ],
-            [
-              2302,
-              2816
-            ],
-            [
-              2302,
-              3001
-            ],
-            [
-              1353,
-              3001
-            ]
-          ],
-          [
-            [
-              1451,
-              1232
-            ],
-            [
-              2199,
-              1232
-            ],
-            [
-              2199,
-              1331
-            ],
-            [
-              1451,
-              1331
-            ]
-          ],
-          [
-            [
-              1585,
-              1555
-            ],
-            [
-              2065,
-              1555
-            ],
-            [
-              2065,
-              1650
-            ],
-            [
-              1585,
-              1650
-            ]
-          ],
-          [
-            [
-              416,
-              2694
-            ],
-            [
-              1049,
-              2694
-            ],
-            [
-              1049,
-              2790
-            ],
-            [
-              416,
-              2790
-            ]
-          ],
-          [
-            [
-              265,
-              2366
-            ],
-            [
-              1197,
-              2366
-            ],
-            [
-              1197,
-              2415
-            ],
-            [
-              265,
-              2415
-            ]
-          ],
-          [
-            [
-              1452,
-              824
-            ],
-            [
-              2198,
-              824
-            ],
-            [
-              2198,
-              874
-            ],
-            [
-              1452,
-              874
-            ]
-          ],
-          [
-            [
-              1471,
-              2126
-            ],
-            [
-              2183,
-              2126
-            ],
-            [
-              2183,
-              2174
-            ],
-            [
-              1471,
-              2174
-            ]
-          ],
-          [
-            [
-              1666,
-              1009
-            ],
-            [
-              1986,
-              1009
-            ],
-            [
-              1986,
-              1053
-            ],
-            [
-              1666,
-              1053
-            ]
-          ],
-          [
-            [
-              671,
-              1035
-            ],
-            [
-              861,
-              1035
-            ],
-            [
-              861,
-              1082
-            ],
-            [
-              671,
-              1082
-            ]
-          ],
-          [
-            [
-              1420,
-              1468
-            ],
-            [
-              1588,
-              1468
-            ],
-            [
-              1588,
-              1515
-            ],
-            [
-              1420,
-              1515
-            ]
-          ],
-          [
-            [
-              2008,
-              691
-            ],
-            [
-              2178,
-              691
-            ],
-            [
-              2178,
-              734
-            ],
-            [
-              2008,
-              734
-            ]
-          ],
-          [
-            [
-              1016,
-              646
-            ],
-            [
-              1242,
-              646
-            ],
-            [
-              1242,
-              685
-            ],
-            [
-              1016,
-              685
-            ]
-          ],
-          [
-            [
-              541,
-              692
-            ],
-            [
-              1010,
-              692
-            ],
-            [
-              1010,
-              734
-            ],
-            [
-              541,
-              734
-            ]
-          ],
-          [
-            [
-              2105,
-              1795
-            ],
-            [
-              2335,
-              1795
-            ],
-            [
-              2335,
-              1832
-            ],
-            [
-              2105,
-              1832
-            ]
-          ],
-          [
-            [
-              1961,
-              1693
-            ],
-            [
-              2124,
-              1693
-            ],
-            [
-              2124,
-              1739
-            ],
-            [
-              1961,
-              1739
-            ]
-          ],
-          [
-            [
-              670,
-              1178
-            ],
-            [
-              880,
-              1178
-            ],
-            [
-              880,
-              1224
-            ],
-            [
-              670,
-              1224
-            ]
-          ],
-          [
-            [
-              1722,
-              1106
-            ],
-            [
-              1887,
-              1106
-            ],
-            [
-              1887,
-              1145
-            ],
-            [
-              1722,
-              1145
-            ]
-          ],
-          [
-            [
-              1797,
-              1839
-            ],
-            [
-              1986,
-              1839
-            ],
-            [
-              1986,
-              1883
-            ],
-            [
-              1797,
-              1883
-            ]
-          ],
-          [
-            [
-              326,
-              2603
-            ],
-            [
-              489,
-              2603
-            ],
-            [
-              489,
-              2649
-            ],
-            [
-              326,
-              2649
-            ]
-          ],
-          [
-            [
-              2076,
-              1838
-            ],
-            [
-              2260,
-              1838
-            ],
-            [
-              2260,
-              1882
-            ],
-            [
-              2076,
-              1882
-            ]
-          ],
-          [
-            [
-              1105,
-              1140
-            ],
-            [
-              1233,
-              1140
-            ],
-            [
-              1233,
-              1176
-            ],
-            [
-              1105,
-              1176
-            ]
-          ],
-          [
-            [
-              1654,
-              1932
-            ],
-            [
-              1876,
-              1932
-            ],
-            [
-              1876,
-              1973
-            ],
-            [
-              1654,
-              1973
-            ]
-          ],
-          [
-            [
-              966,
-              595
-            ],
-            [
-              1160,
-              595
-            ],
-            [
-              1160,
-              636
-            ],
-            [
-              966,
-              636
-            ]
-          ],
-          [
-            [
-              2126,
-              602
-            ],
-            [
-              2283,
-              602
-            ],
-            [
-              2283,
-              639
-            ],
-            [
-              2126,
-              639
-            ]
-          ],
-          [
-            [
-              323,
-              1136
-            ],
-            [
-              544,
-              1136
-            ],
-            [
-              544,
-              1176
-            ],
-            [
-              323,
-              1176
-            ]
-          ],
-          [
-            [
-              323,
-              1660
-            ],
-            [
-              498,
-              1660
-            ],
-            [
-              498,
-              1701
-            ],
-            [
-              323,
-              1701
-            ]
-          ],
-          [
-            [
-              466,
-              1226
-            ],
-            [
-              592,
-              1226
-            ],
-            [
-              592,
-              1269
-            ],
-            [
-              466,
-              1269
-            ]
-          ],
-          [
-            [
-              1123,
-              1536
-            ],
-            [
-              1207,
-              1536
-            ],
-            [
-              1207,
-              1569
-            ],
-            [
-              1123,
-              1569
-            ]
-          ],
-          [
-            [
-              327,
-              695
-            ],
-            [
-              450,
-              695
-            ],
-            [
-              450,
-              732
-            ],
-            [
-              327,
-              732
-            ]
-          ],
-          [
-            [
-              1479,
-              2225
-            ],
-            [
-              1686,
-              2225
-            ],
-            [
-              1686,
-              2265
-            ],
-            [
-              1479,
-              2265
-            ]
-          ],
-          [
-            [
-              2275,
-              2005
-            ],
-            [
-              2339,
-              2005
-            ],
-            [
-              2339,
-              2036
-            ],
-            [
-              2275,
-              2036
-            ]
-          ],
-          [
-            [
-              1420,
-              604
-            ],
-            [
-              1458,
-              604
-            ],
-            [
-              1458,
-              640
-            ],
-            [
-              1420,
-              640
-            ]
-          ],
-          [
-            [
-              1166,
-              1090
-            ],
-            [
-              1241,
-              1090
-            ],
-            [
-              1241,
-              1127
-            ],
-            [
-              1166,
-              1127
-            ]
-          ],
-          [
-            [
-              2304,
-              1894
-            ],
-            [
-              2340,
-              1894
-            ],
-            [
-              2340,
-              1927
-            ],
-            [
-              2304,
-              1927
-            ]
-          ],
-          [
-            [
-              926,
-              1000
-            ],
-            [
-              966,
-              1000
-            ],
-            [
-              966,
-              1031
-            ],
-            [
-              926,
-              1031
-            ]
-          ],
-          [
-            [
-              1635,
-              701
-            ],
-            [
-              1671,
-              701
-            ],
-            [
-              1671,
-              732
-            ],
-            [
-              1635,
-              732
-            ]
-          ],
-          [
-            [
-              1037,
-              2520
-            ],
-            [
-              1075,
-              2520
-            ],
-            [
-              1075,
-              2552
-            ],
-            [
-              1037,
-              2552
-            ]
-          ],
-          [
-            [
-              1162,
-              1045
-            ],
-            [
-              1202,
-              1045
-            ],
-            [
-              1202,
-              1079
-            ],
-            [
-              1162,
-              1079
-            ]
-          ],
-          [
-            [
-              1420,
-              1799
-            ],
-            [
-              1456,
-              1799
-            ],
-            [
-              1456,
-              1834
-            ],
-            [
-              1420,
-              1834
-            ]
-          ],
-          [
-            [
-              662,
-              2839
-            ],
-            [
-              714,
-              2839
-            ],
-            [
-              714,
-              2892
-            ],
-            [
-              662,
-              2892
-            ]
-          ],
-          [
-            [
-              587,
-              1386
-            ],
-            [
-              647,
-              1386
-            ],
-            [
-              647,
-              1425
-            ],
-            [
-              587,
-              1425
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "Solutions to the 64th William Lowell Putnam Mathematical Competition",
-          "Saturday, December 6, 2003",
-          "Manjul Bhargava, Kiran Kedlaya, and Lenny Ng",
-          "A1 There are n such sums. More precisely, there is exactly",
-          "Third solution: Since both sides are continuous in each",
-          "one such sum with k terms for each of",
-          "(and",
-          ", it is sufficient to prove the claim with",
-          "all",
-          "clearly no others). To see this, note that if",
-          "positive (the general case follows by taking limits as",
-          "with",
-          ",then",
-          "tend to zero). Put",
-          "; then the",
-          "given inequality is equivalent to",
-          "In terms of the function",
-          "However, there is a unique integer satisfying these",
-          "inequalities, namely",
-          ". Moreover, once",
-          "is",
-          "fixed, there are k different possibilities for the sum",
-          "and the quantities",
-          ", we can rewrite the desired",
-          ": if i is the last integer such that",
-          "inequality as",
-          ",",
-          "then the sum equals",
-          "). The possible values",
-          "of i are",
-          ", and exactly one of these sums comes",
-          "out equal to n, proving our claim.",
-          "Note: In summary, there is a unique partition of n with",
-          "This will follow from Jensen's inequality if we can ver-",
-          "k terms that is",
-          "equally spaced as possible\". One",
-          "ify that f is a convex function; it is enough to check that",
-          "can also obtain essentially the same construction induc-",
-          "for all . In fact,",
-          "tively: except for the all-ones sum, each partition of n is",
-          "obtained by \"augmenting\" a unique partition of",
-          "A2 First solution: Assume without loss of generality that",
-          "for each i (otherwise both sides of the desired",
-          "is an increasing function of x, so",
-          "and Jensen's",
-          "inequality are zero). Then the AM-GM inequality gives",
-          "inequality thus yields the desired result. (As long as the",
-          "are all positive, equality holds when",
-          "i.e., when the vectors",
-          "and",
-          "1. Of",
-          "course other equality cases crop up if some of the",
-          "vanish, i.e., if",
-          ")",
-          "Fourth solution: We apply induction on n, the case",
-          "1 being evident. First we verify the auxiliary inequallity",
-          "and likewise with the roles of a and b reversed. Adding",
-          "these two inequalities and clearing denominators yields",
-          "the desired result.",
-          "for",
-          ". The left side can be written as",
-          "Second solution: Write the desired inequality in the",
-          "form",
-          "expand both sides, and compare the terms on both sides",
-          "in which k of the terms are among the . On the",
-          "left, one has the product of each k-element subset of",
-          ";on the right, one has",
-          "Applying the weighted AM-GM inequality between",
-          "matching terms in the two sums yields",
-          "which is precisely",
-          "times the geometric mean of",
-          "the terms on the left. Thus AM-GM shows that the",
-          "terms under consideration on the left exceed those on",
-          "the right; adding these inequalities over all k yields the",
-          "desired result.",
-          "\\begin{align*}a^{n}c^{n(n-1)}+&b^{n}d^{n(n-1)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*}",
-          "\\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}&\\\\\\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),&\\end{align*}",
-          "\\begin{align*}ka_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=ka_{1}+k-1.\\end{align*}",
-          "\\begin{align*}(a^n+b^n)(c^n+d^n)^{n-1}&\\geq a^n c^{n(n-1)}+b^n d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^i b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*}",
-          "\\frac{1}{n}(f(s_1)+\\cdots+f(s_n))\\geq f\\left(\\frac{s_1+\\cdots+s_n}{n}\\right).",
-          "f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}}",
-          "{\\binom{n}{k}}{\\left(a_{1}\\cdots a_{n}\\right)}^{k/n}\\cdots{\\left(b_{1}\\ldots b_{n}\\right)}^{\\left(n-k\\right)/n},",
-          "(a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n},",
-          "(1+r_{1})^{1/n}\\cdots(1+r_{n})^{1/n}\\geq1+(r_{1}\\cdots r_{n})^{1/n}.",
-          "(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(ac^{n-1}+bd^{n-1})^{n}",
-          "f(x)=\\log(1+e^x)",
-          "a_{1}=\\lfloor n/k\\rfloor",
-          "\\stackrel{\\sim}{f^{\\prime\\prime}}(x)>0",
-          "r_{i}=b_{i}/a_{i}",
-          "n=a_{1}+a_{2}+",
-          "a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1",
-          "s_{1}=\\cdots=s_{n},",
-          "f^{\\prime\\prime}(x)>0",
-          "k a_{1}+(i-1)",
-          "s_{i}=\\log r_{i}",
-          "\\left(a_{1},\\ldots,a_{n}\\right)",
-          "\\{1,\\ldots,n\\}",
-          "\\left(b_{1},\\ldots,b_{n}\\right)",
-          "a_{i}=a_{1}",
-          "a_{1}=b_{1}=0.)",
-          "k=1,\\ldots,n",
-          "a_{1},\\ldots,a_{n}",
-          "a_{2}+\\cdots+a_{k}",
-          "a_{i}+b_{i}>0",
-          "1,\\ldots,k,",
-          "n-1",
-          "\\cdots+a_{k}",
-          "a,b,c,d\\geq0",
-          "n=",
-          "a_{i}",
-          "a_{1}+",
-          "a_{i}",
-          "a_{1}",
-          "a_{i}",
-          "a_{i}",
-          "a_{1}",
-          "a_{i}",
-          "\\binom{n}{k}",
-          " ``\\mathrm{as}"
-        ],
-        "rec_scores": [
-          0.9680857062339783,
-          0.9662370085716248,
-          0.9882845282554626,
-          0.9773569703102112,
-          0.964366614818573,
-          0.9944725036621094,
-          0.9489869475364685,
-          0.9613879323005676,
-          0.999644935131073,
-          0.9773111343383789,
-          0.9657431244850159,
-          0.998518168926239,
-          0.9928826093673706,
-          0.9626436233520508,
-          0.920208752155304,
-          0.9845895767211914,
-          0.992203414440155,
-          0.9653148055076599,
-          0.9656497240066528,
-          0.9595756530761719,
-          0.9981951713562012,
-          0.9462406039237976,
-          0.9893849492073059,
-          0.9721716642379761,
-          0.9197737574577332,
-          0.9908205270767212,
-          0.7489352226257324,
-          0.9833256602287292,
-          0.9756437540054321,
-          0.9378384351730347,
-          0.9731560945510864,
-          0.9753038883209229,
-          0.9776633977890015,
-          0.9684762954711914,
-          0.9742966294288635,
-          0.9645135402679443,
-          0.9596472978591919,
-          0.9681437611579895,
-          0.951085090637207,
-          0.9693530201911926,
-          0.9858211874961853,
-          0.979368269443512,
-          0.9618256092071533,
-          0.9566515684127808,
-          0.9546309113502502,
-          0.9648404121398926,
-          0.9785796403884888,
-          0.9654724597930908,
-          0.9948992133140564,
-          0.9996973872184753,
-          0.8603576421737671,
-          0.9792922139167786,
-          0.9516161680221558,
-          0.8714693784713745,
-          0.9725301265716553,
-          0.9723798632621765,
-          0.9567854404449463,
-          0.9794405698776245,
-          0.9985730051994324,
-          0.9998995661735535,
-          0.985761821269989,
-          0.9694699048995972,
-          0.9999133348464966,
-          0.9534465670585632,
-          0.9462072849273682,
-          0.9536331295967102,
-          0.986616313457489,
-          0.9416764378547668,
-          0.9834436774253845,
-          0.94847571849823,
-          0.9740185141563416,
-          0.9392902255058289,
-          0.9818252921104431,
-          0.9562453627586365,
-          0.9648310542106628,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              506,
-              212
-            ],
-            [
-              2057,
-              216
-            ],
-            [
-              2057,
-              267
-            ],
-            [
-              506,
-              263
-            ]
-          ],
-          [
-            [
-              981,
-              277
-            ],
-            [
-              1584,
-              274
-            ],
-            [
-              1584,
-              321
-            ],
-            [
-              981,
-              324
-            ]
-          ],
-          [
-            [
-              854,
-              377
-            ],
-            [
-              1711,
-              379
-            ],
-            [
-              1711,
-              427
-            ],
-            [
-              854,
-              424
-            ]
-          ],
-          [
-            [
-              258,
-              548
-            ],
-            [
-              1247,
-              550
-            ],
-            [
-              1247,
-              591
-            ],
-            [
-              258,
-              589
-            ]
-          ],
-          [
-            [
-              1422,
-              550
-            ],
-            [
-              2344,
-              550
-            ],
-            [
-              2344,
-              587
-            ],
-            [
-              1422,
-              587
-            ]
-          ],
-          [
-            [
-              328,
-              599
-            ],
-            [
-              964,
-              599
-            ],
-            [
-              964,
-              633
-            ],
-            [
-              328,
-              633
-            ]
-          ],
-          [
-            [
-              1153,
-              591
-            ],
-            [
-              1255,
-              588
-            ],
-            [
-              1256,
-              640
-            ],
-            [
-              1154,
-              643
-            ]
-          ],
-          [
-            [
-              1455,
-              599
-            ],
-            [
-              2118,
-              597
-            ],
-            [
-              2118,
-              634
-            ],
-            [
-              1455,
-              636
-            ]
-          ],
-          [
-            [
-              2290,
-              593
-            ],
-            [
-              2349,
-              593
-            ],
-            [
-              2349,
-              639
-            ],
-            [
-              2290,
-              639
-            ]
-          ],
-          [
-            [
-              326,
-              645
-            ],
-            [
-              1017,
-              642
-            ],
-            [
-              1017,
-              682
-            ],
-            [
-              326,
-              685
-            ]
-          ],
-          [
-            [
-              1419,
-              644
-            ],
-            [
-              2346,
-              643
-            ],
-            [
-              2346,
-              687
-            ],
-            [
-              1419,
-              688
-            ]
-          ],
-          [
-            [
-              445,
-              690
-            ],
-            [
-              544,
-              690
-            ],
-            [
-              544,
-              734
-            ],
-            [
-              445,
-              734
-            ]
-          ],
-          [
-            [
-              1002,
-              690
-            ],
-            [
-              1108,
-              686
-            ],
-            [
-              1110,
-              733
-            ],
-            [
-              1003,
-              737
-            ]
-          ],
-          [
-            [
-              1677,
-              694
-            ],
-            [
-              2001,
-              694
-            ],
-            [
-              2001,
-              732
-            ],
-            [
-              1677,
-              732
-            ]
-          ],
-          [
-            [
-              2173,
-              692
-            ],
-            [
-              2345,
-              690
-            ],
-            [
-              2346,
-              733
-            ],
-            [
-              2174,
-              735
-            ]
-          ],
-          [
-            [
-              1423,
-              742
-            ],
-            [
-              1956,
-              742
-            ],
-            [
-              1956,
-              782
-            ],
-            [
-              1423,
-              782
-            ]
-          ],
-          [
-            [
-              1421,
-              923
-            ],
-            [
-              1818,
-              925
-            ],
-            [
-              1818,
-              962
-            ],
-            [
-              1420,
-              960
-            ]
-          ],
-          [
-            [
-              323,
-              986
-            ],
-            [
-              1252,
-              987
-            ],
-            [
-              1252,
-              1034
-            ],
-            [
-              323,
-              1033
-            ]
-          ],
-          [
-            [
-              325,
-              1037
-            ],
-            [
-              665,
-              1039
-            ],
-            [
-              665,
-              1080
-            ],
-            [
-              325,
-              1078
-            ]
-          ],
-          [
-            [
-              864,
-              1038
-            ],
-            [
-              1159,
-              1041
-            ],
-            [
-              1158,
-              1079
-            ],
-            [
-              863,
-              1076
-            ]
-          ],
-          [
-            [
-              1208,
-              1034
-            ],
-            [
-              1253,
-              1034
-            ],
-            [
-              1253,
-              1080
-            ],
-            [
-              1208,
-              1080
-            ]
-          ],
-          [
-            [
-              323,
-              1083
-            ],
-            [
-              1163,
-              1085
-            ],
-            [
-              1163,
-              1129
-            ],
-            [
-              323,
-              1127
-            ]
-          ],
-          [
-            [
-              1422,
-              1101
-            ],
-            [
-              1720,
-              1103
-            ],
-            [
-              1720,
-              1144
-            ],
-            [
-              1421,
-              1142
-            ]
-          ],
-          [
-            [
-              1885,
-              1107
-            ],
-            [
-              2343,
-              1101
-            ],
-            [
-              2344,
-              1139
-            ],
-            [
-              1886,
-              1146
-            ]
-          ],
-          [
-            [
-              537,
-              1131
-            ],
-            [
-              1104,
-              1134
-            ],
-            [
-              1104,
-              1179
-            ],
-            [
-              537,
-              1175
-            ]
-          ],
-          [
-            [
-              1419,
-              1148
-            ],
-            [
-              1640,
-              1148
-            ],
-            [
-              1640,
-              1193
-            ],
-            [
-              1419,
-              1193
-            ]
-          ],
-          [
-            [
-              1234,
-              1160
-            ],
-            [
-              1247,
-              1160
-            ],
-            [
-              1247,
-              1175
-            ],
-            [
-              1234,
-              1175
-            ]
-          ],
-          [
-            [
-              324,
-              1181
-            ],
-            [
-              664,
-              1184
-            ],
-            [
-              664,
-              1225
-            ],
-            [
-              324,
-              1222
-            ]
-          ],
-          [
-            [
-              872,
-              1184
-            ],
-            [
-              1247,
-              1184
-            ],
-            [
-              1247,
-              1222
-            ],
-            [
-              872,
-              1222
-            ]
-          ],
-          [
-            [
-              322,
-              1226
-            ],
-            [
-              458,
-              1226
-            ],
-            [
-              458,
-              1269
-            ],
-            [
-              322,
-              1269
-            ]
-          ],
-          [
-            [
-              587,
-              1229
-            ],
-            [
-              1249,
-              1231
-            ],
-            [
-              1249,
-              1272
-            ],
-            [
-              587,
-              1271
-            ]
-          ],
-          [
-            [
-              325,
-              1279
-            ],
-            [
-              884,
-              1279
-            ],
-            [
-              884,
-              1320
-            ],
-            [
-              325,
-              1320
-            ]
-          ],
-          [
-            [
-              322,
-              1339
-            ],
-            [
-              1248,
-              1340
-            ],
-            [
-              1248,
-              1384
-            ],
-            [
-              322,
-              1383
-            ]
-          ],
-          [
-            [
-              1422,
-              1378
-            ],
-            [
-              2342,
-              1381
-            ],
-            [
-              2342,
-              1419
-            ],
-            [
-              1421,
-              1416
-            ]
-          ],
-          [
-            [
-              324,
-              1391
-            ],
-            [
-              582,
-              1391
-            ],
-            [
-              582,
-              1429
-            ],
-            [
-              324,
-              1429
-            ]
-          ],
-          [
-            [
-              659,
-              1390
-            ],
-            [
-              1250,
-              1388
-            ],
-            [
-              1250,
-              1431
-            ],
-            [
-              660,
-              1433
-            ]
-          ],
-          [
-            [
-              1421,
-              1426
-            ],
-            [
-              2345,
-              1426
-            ],
-            [
-              2345,
-              1466
-            ],
-            [
-              1421,
-              1466
-            ]
-          ],
-          [
-            [
-              323,
-              1437
-            ],
-            [
-              1249,
-              1437
-            ],
-            [
-              1249,
-              1480
-            ],
-            [
-              323,
-              1480
-            ]
-          ],
-          [
-            [
-              1586,
-              1473
-            ],
-            [
-              1871,
-              1476
-            ],
-            [
-              1870,
-              1514
-            ],
-            [
-              1586,
-              1511
-            ]
-          ],
-          [
-            [
-              323,
-              1485
-            ],
-            [
-              1249,
-              1484
-            ],
-            [
-              1249,
-              1528
-            ],
-            [
-              323,
-              1529
-            ]
-          ],
-          [
-            [
-              325,
-              1533
-            ],
-            [
-              1119,
-              1533
-            ],
-            [
-              1119,
-              1577
-            ],
-            [
-              325,
-              1577
-            ]
-          ],
-          [
-            [
-              258,
-              1609
-            ],
-            [
-              1250,
-              1611
-            ],
-            [
-              1250,
-              1655
-            ],
-            [
-              258,
-              1653
-            ]
-          ],
-          [
-            [
-              503,
-              1662
-            ],
-            [
-              1248,
-              1662
-            ],
-            [
-              1248,
-              1699
-            ],
-            [
-              503,
-              1699
-            ]
-          ],
-          [
-            [
-              1422,
-              1697
-            ],
-            [
-              1956,
-              1697
-            ],
-            [
-              1956,
-              1734
-            ],
-            [
-              1422,
-              1734
-            ]
-          ],
-          [
-            [
-              2122,
-              1695
-            ],
-            [
-              2344,
-              1695
-            ],
-            [
-              2344,
-              1733
-            ],
-            [
-              2122,
-              1733
-            ]
-          ],
-          [
-            [
-              326,
-              1708
-            ],
-            [
-              1249,
-              1708
-            ],
-            [
-              1249,
-              1751
-            ],
-            [
-              326,
-              1751
-            ]
-          ],
-          [
-            [
-              1420,
-              1743
-            ],
-            [
-              2346,
-              1743
-            ],
-            [
-              2346,
-              1786
-            ],
-            [
-              1420,
-              1786
-            ]
-          ],
-          [
-            [
-              1468,
-              1792
-            ],
-            [
-              2097,
-              1792
-            ],
-            [
-              2097,
-              1832
-            ],
-            [
-              1468,
-              1832
-            ]
-          ],
-          [
-            [
-              1420,
-              1841
-            ],
-            [
-              1788,
-              1841
-            ],
-            [
-              1788,
-              1878
-            ],
-            [
-              1420,
-              1878
-            ]
-          ],
-          [
-            [
-              1994,
-              1838
-            ],
-            [
-              2070,
-              1836
-            ],
-            [
-              2071,
-              1879
-            ],
-            [
-              1995,
-              1882
-            ]
-          ],
-          [
-            [
-              2247,
-              1835
-            ],
-            [
-              2351,
-              1835
-            ],
-            [
-              2351,
-              1880
-            ],
-            [
-              2247,
-              1880
-            ]
-          ],
-          [
-            [
-              1419,
-              1886
-            ],
-            [
-              2297,
-              1883
-            ],
-            [
-              2297,
-              1927
-            ],
-            [
-              1420,
-              1930
-            ]
-          ],
-          [
-            [
-              1420,
-              1933
-            ],
-            [
-              1656,
-              1933
-            ],
-            [
-              1656,
-              1974
-            ],
-            [
-              1420,
-              1974
-            ]
-          ],
-          [
-            [
-              1865,
-              1941
-            ],
-            [
-              1889,
-              1941
-            ],
-            [
-              1889,
-              1976
-            ],
-            [
-              1865,
-              1976
-            ]
-          ],
-          [
-            [
-              1419,
-              1996
-            ],
-            [
-              2275,
-              1998
-            ],
-            [
-              2275,
-              2039
-            ],
-            [
-              1418,
-              2036
-            ]
-          ],
-          [
-            [
-              1421,
-              2044
-            ],
-            [
-              2340,
-              2048
-            ],
-            [
-              2340,
-              2089
-            ],
-            [
-              1420,
-              2085
-            ]
-          ],
-          [
-            [
-              325,
-              2075
-            ],
-            [
-              1248,
-              2079
-            ],
-            [
-              1248,
-              2119
-            ],
-            [
-              325,
-              2116
-            ]
-          ],
-          [
-            [
-              324,
-              2125
-            ],
-            [
-              1247,
-              2124
-            ],
-            [
-              1247,
-              2164
-            ],
-            [
-              324,
-              2165
-            ]
-          ],
-          [
-            [
-              325,
-              2173
-            ],
-            [
-              623,
-              2173
-            ],
-            [
-              623,
-              2210
-            ],
-            [
-              325,
-              2210
-            ]
-          ],
-          [
-            [
-              1416,
-              2220
-            ],
-            [
-              1483,
-              2223
-            ],
-            [
-              1481,
-              2267
-            ],
-            [
-              1414,
-              2264
-            ]
-          ],
-          [
-            [
-              1687,
-              2224
-            ],
-            [
-              2209,
-              2227
-            ],
-            [
-              2209,
-              2264
-            ],
-            [
-              1686,
-              2261
-            ]
-          ],
-          [
-            [
-              323,
-              2235
-            ],
-            [
-              1247,
-              2236
-            ],
-            [
-              1247,
-              2277
-            ],
-            [
-              323,
-              2276
-            ]
-          ],
-          [
-            [
-              320,
-              2280
-            ],
-            [
-              416,
-              2283
-            ],
-            [
-              414,
-              2328
-            ],
-            [
-              318,
-              2325
-            ]
-          ],
-          [
-            [
-              326,
-              2465
-            ],
-            [
-              1248,
-              2461
-            ],
-            [
-              1248,
-              2501
-            ],
-            [
-              326,
-              2505
-            ]
-          ],
-          [
-            [
-              322,
-              2509
-            ],
-            [
-              1251,
-              2508
-            ],
-            [
-              1251,
-              2552
-            ],
-            [
-              322,
-              2553
-            ]
-          ],
-          [
-            [
-              324,
-              2559
-            ],
-            [
-              1252,
-              2559
-            ],
-            [
-              1252,
-              2599
-            ],
-            [
-              324,
-              2599
-            ]
-          ],
-          [
-            [
-              479,
-              2608
-            ],
-            [
-              854,
-              2605
-            ],
-            [
-              855,
-              2646
-            ],
-            [
-              479,
-              2649
-            ]
-          ],
-          [
-            [
-              1423,
-              2673
-            ],
-            [
-              2344,
-              2673
-            ],
-            [
-              2344,
-              2716
-            ],
-            [
-              1423,
-              2716
-            ]
-          ],
-          [
-            [
-              1422,
-              2720
-            ],
-            [
-              2064,
-              2720
-            ],
-            [
-              2064,
-              2760
-            ],
-            [
-              1422,
-              2760
-            ]
-          ],
-          [
-            [
-              325,
-              2840
-            ],
-            [
-              650,
-              2844
-            ],
-            [
-              649,
-              2888
-            ],
-            [
-              325,
-              2884
-            ]
-          ],
-          [
-            [
-              732,
-              2843
-            ],
-            [
-              1251,
-              2843
-            ],
-            [
-              1251,
-              2883
-            ],
-            [
-              732,
-              2883
-            ]
-          ],
-          [
-            [
-              323,
-              2891
-            ],
-            [
-              1249,
-              2889
-            ],
-            [
-              1249,
-              2930
-            ],
-            [
-              323,
-              2931
-            ]
-          ],
-          [
-            [
-              325,
-              2941
-            ],
-            [
-              1248,
-              2941
-            ],
-            [
-              1248,
-              2978
-            ],
-            [
-              325,
-              2978
-            ]
-          ],
-          [
-            [
-              326,
-              2988
-            ],
-            [
-              1248,
-              2988
-            ],
-            [
-              1248,
-              3028
-            ],
-            [
-              326,
-              3028
-            ]
-          ],
-          [
-            [
-              325,
-              3033
-            ],
-            [
-              562,
-              3035
-            ],
-            [
-              562,
-              3073
-            ],
-            [
-              325,
-              3071
-            ]
-          ],
-          [
-            [
-              1484,
-              2305
-            ],
-            [
-              2165,
-              2305
-            ],
-            [
-              2165,
-              2623
-            ],
-            [
-              1484,
-              2623
-            ]
-          ],
-          [
-            [
-              266,
-              1808
-            ],
-            [
-              1206,
-              1808
-            ],
-            [
-              1206,
-              2033
-            ],
-            [
-              266,
-              2033
-            ]
-          ],
-          [
-            [
-              393,
-              783
-            ],
-            [
-              1068,
-              783
-            ],
-            [
-              1068,
-              938
-            ],
-            [
-              393,
-              938
-            ]
-          ],
-          [
-            [
-              1353,
-              2816
-            ],
-            [
-              2302,
-              2816
-            ],
-            [
-              2302,
-              3001
-            ],
-            [
-              1353,
-              3001
-            ]
-          ],
-          [
-            [
-              1451,
-              1232
-            ],
-            [
-              2199,
-              1232
-            ],
-            [
-              2199,
-              1331
-            ],
-            [
-              1451,
-              1331
-            ]
-          ],
-          [
-            [
-              1585,
-              1555
-            ],
-            [
-              2065,
-              1555
-            ],
-            [
-              2065,
-              1650
-            ],
-            [
-              1585,
-              1650
-            ]
-          ],
-          [
-            [
-              416,
-              2694
-            ],
-            [
-              1049,
-              2694
-            ],
-            [
-              1049,
-              2790
-            ],
-            [
-              416,
-              2790
-            ]
-          ],
-          [
-            [
-              265,
-              2366
-            ],
-            [
-              1197,
-              2366
-            ],
-            [
-              1197,
-              2415
-            ],
-            [
-              265,
-              2415
-            ]
-          ],
-          [
-            [
-              1452,
-              824
-            ],
-            [
-              2198,
-              824
-            ],
-            [
-              2198,
-              874
-            ],
-            [
-              1452,
-              874
-            ]
-          ],
-          [
-            [
-              1471,
-              2126
-            ],
-            [
-              2183,
-              2126
-            ],
-            [
-              2183,
-              2174
-            ],
-            [
-              1471,
-              2174
-            ]
-          ],
-          [
-            [
-              1666,
-              1009
-            ],
-            [
-              1986,
-              1009
-            ],
-            [
-              1986,
-              1053
-            ],
-            [
-              1666,
-              1053
-            ]
-          ],
-          [
-            [
-              671,
-              1035
-            ],
-            [
-              861,
-              1035
-            ],
-            [
-              861,
-              1082
-            ],
-            [
-              671,
-              1082
-            ]
-          ],
-          [
-            [
-              1420,
-              1468
-            ],
-            [
-              1588,
-              1468
-            ],
-            [
-              1588,
-              1515
-            ],
-            [
-              1420,
-              1515
-            ]
-          ],
-          [
-            [
-              2008,
-              691
-            ],
-            [
-              2178,
-              691
-            ],
-            [
-              2178,
-              734
-            ],
-            [
-              2008,
-              734
-            ]
-          ],
-          [
-            [
-              1016,
-              646
-            ],
-            [
-              1242,
-              646
-            ],
-            [
-              1242,
-              685
-            ],
-            [
-              1016,
-              685
-            ]
-          ],
-          [
-            [
-              541,
-              692
-            ],
-            [
-              1010,
-              692
-            ],
-            [
-              1010,
-              734
-            ],
-            [
-              541,
-              734
-            ]
-          ],
-          [
-            [
-              2105,
-              1795
-            ],
-            [
-              2335,
-              1795
-            ],
-            [
-              2335,
-              1832
-            ],
-            [
-              2105,
-              1832
-            ]
-          ],
-          [
-            [
-              1961,
-              1693
-            ],
-            [
-              2124,
-              1693
-            ],
-            [
-              2124,
-              1739
-            ],
-            [
-              1961,
-              1739
-            ]
-          ],
-          [
-            [
-              670,
-              1178
-            ],
-            [
-              880,
-              1178
-            ],
-            [
-              880,
-              1224
-            ],
-            [
-              670,
-              1224
-            ]
-          ],
-          [
-            [
-              1722,
-              1106
-            ],
-            [
-              1887,
-              1106
-            ],
-            [
-              1887,
-              1145
-            ],
-            [
-              1722,
-              1145
-            ]
-          ],
-          [
-            [
-              1797,
-              1839
-            ],
-            [
-              1986,
-              1839
-            ],
-            [
-              1986,
-              1883
-            ],
-            [
-              1797,
-              1883
-            ]
-          ],
-          [
-            [
-              326,
-              2603
-            ],
-            [
-              489,
-              2603
-            ],
-            [
-              489,
-              2649
-            ],
-            [
-              326,
-              2649
-            ]
-          ],
-          [
-            [
-              2076,
-              1838
-            ],
-            [
-              2260,
-              1838
-            ],
-            [
-              2260,
-              1882
-            ],
-            [
-              2076,
-              1882
-            ]
-          ],
-          [
-            [
-              1105,
-              1140
-            ],
-            [
-              1233,
-              1140
-            ],
-            [
-              1233,
-              1176
-            ],
-            [
-              1105,
-              1176
-            ]
-          ],
-          [
-            [
-              1654,
-              1932
-            ],
-            [
-              1876,
-              1932
-            ],
-            [
-              1876,
-              1973
-            ],
-            [
-              1654,
-              1973
-            ]
-          ],
-          [
-            [
-              966,
-              595
-            ],
-            [
-              1160,
-              595
-            ],
-            [
-              1160,
-              636
-            ],
-            [
-              966,
-              636
-            ]
-          ],
-          [
-            [
-              2126,
-              602
-            ],
-            [
-              2283,
-              602
-            ],
-            [
-              2283,
-              639
-            ],
-            [
-              2126,
-              639
-            ]
-          ],
-          [
-            [
-              323,
-              1136
-            ],
-            [
-              544,
-              1136
-            ],
-            [
-              544,
-              1176
-            ],
-            [
-              323,
-              1176
-            ]
-          ],
-          [
-            [
-              323,
-              1660
-            ],
-            [
-              498,
-              1660
-            ],
-            [
-              498,
-              1701
-            ],
-            [
-              323,
-              1701
-            ]
-          ],
-          [
-            [
-              466,
-              1226
-            ],
-            [
-              592,
-              1226
-            ],
-            [
-              592,
-              1269
-            ],
-            [
-              466,
-              1269
-            ]
-          ],
-          [
-            [
-              1123,
-              1536
-            ],
-            [
-              1207,
-              1536
-            ],
-            [
-              1207,
-              1569
-            ],
-            [
-              1123,
-              1569
-            ]
-          ],
-          [
-            [
-              327,
-              695
-            ],
-            [
-              450,
-              695
-            ],
-            [
-              450,
-              732
-            ],
-            [
-              327,
-              732
-            ]
-          ],
-          [
-            [
-              1479,
-              2225
-            ],
-            [
-              1686,
-              2225
-            ],
-            [
-              1686,
-              2265
-            ],
-            [
-              1479,
-              2265
-            ]
-          ],
-          [
-            [
-              2275,
-              2005
-            ],
-            [
-              2339,
-              2005
-            ],
-            [
-              2339,
-              2036
-            ],
-            [
-              2275,
-              2036
-            ]
-          ],
-          [
-            [
-              1420,
-              604
-            ],
-            [
-              1458,
-              604
-            ],
-            [
-              1458,
-              640
-            ],
-            [
-              1420,
-              640
-            ]
-          ],
-          [
-            [
-              1166,
-              1090
-            ],
-            [
-              1241,
-              1090
-            ],
-            [
-              1241,
-              1127
-            ],
-            [
-              1166,
-              1127
-            ]
-          ],
-          [
-            [
-              2304,
-              1894
-            ],
-            [
-              2340,
-              1894
-            ],
-            [
-              2340,
-              1927
-            ],
-            [
-              2304,
-              1927
-            ]
-          ],
-          [
-            [
-              926,
-              1000
-            ],
-            [
-              966,
-              1000
-            ],
-            [
-              966,
-              1031
-            ],
-            [
-              926,
-              1031
-            ]
-          ],
-          [
-            [
-              1635,
-              701
-            ],
-            [
-              1671,
-              701
-            ],
-            [
-              1671,
-              732
-            ],
-            [
-              1635,
-              732
-            ]
-          ],
-          [
-            [
-              1037,
-              2520
-            ],
-            [
-              1075,
-              2520
-            ],
-            [
-              1075,
-              2552
-            ],
-            [
-              1037,
-              2552
-            ]
-          ],
-          [
-            [
-              1162,
-              1045
-            ],
-            [
-              1202,
-              1045
-            ],
-            [
-              1202,
-              1079
-            ],
-            [
-              1162,
-              1079
-            ]
-          ],
-          [
-            [
-              1420,
-              1799
-            ],
-            [
-              1456,
-              1799
-            ],
-            [
-              1456,
-              1834
-            ],
-            [
-              1420,
-              1834
-            ]
-          ],
-          [
-            [
-              662,
-              2839
-            ],
-            [
-              714,
-              2839
-            ],
-            [
-              714,
-              2892
-            ],
-            [
-              662,
-              2892
-            ]
-          ],
-          [
-            [
-              587,
-              1386
-            ],
-            [
-              647,
-              1386
-            ],
-            [
-              647,
-              1425
-            ],
-            [
-              587,
-              1425
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            506.0,
-            212.0,
-            2057.0,
-            267.0
-          ],
-          [
-            981.0,
-            274.0,
-            1584.0,
-            324.0
-          ],
-          [
-            854.0,
-            377.0,
-            1711.0,
-            427.0
-          ],
-          [
-            258.0,
-            548.0,
-            1247.0,
-            591.0
-          ],
-          [
-            1422.0,
-            550.0,
-            2344.0,
-            587.0
-          ],
-          [
-            328.0,
-            599.0,
-            964.0,
-            633.0
-          ],
-          [
-            1153.0,
-            588.0,
-            1256.0,
-            643.0
-          ],
-          [
-            1455.0,
-            597.0,
-            2118.0,
-            636.0
-          ],
-          [
-            2290.0,
-            593.0,
-            2349.0,
-            639.0
-          ],
-          [
-            326.0,
-            642.0,
-            1017.0,
-            685.0
-          ],
-          [
-            1419.0,
-            643.0,
-            2346.0,
-            688.0
-          ],
-          [
-            445.0,
-            690.0,
-            544.0,
-            734.0
-          ],
-          [
-            1002.0,
-            686.0,
-            1110.0,
-            737.0
-          ],
-          [
-            1677.0,
-            694.0,
-            2001.0,
-            732.0
-          ],
-          [
-            2173.0,
-            690.0,
-            2346.0,
-            735.0
-          ],
-          [
-            1423.0,
-            742.0,
-            1956.0,
-            782.0
-          ],
-          [
-            1420.0,
-            923.0,
-            1818.0,
-            962.0
-          ],
-          [
-            966.748291015625,
-            986.0,
-            1252.0,
-            1034.0
-          ],
-          [
-            325.0,
-            1037.0,
-            665.0,
-            1080.0
-          ],
-          [
-            863.0,
-            1038.0,
-            1159.0,
-            1079.0
-          ],
-          [
-            1208.0,
-            1034.0,
-            1253.0,
-            1080.0
-          ],
-          [
-            323.0,
-            1083.0,
-            1163.0,
-            1129.0
-          ],
-          [
-            1421.0,
-            1101.0,
-            1720.0,
-            1144.0
-          ],
-          [
-            1885.0,
-            1101.0,
-            2344.0,
-            1146.0
-          ],
-          [
-            537.0,
-            1131.0,
-            1104.0,
-            1179.0
-          ],
-          [
-            1419.0,
-            1148.0,
-            1640.0,
-            1193.0
-          ],
-          [
-            1234.0,
-            1160.0,
-            1247.0,
-            1175.0
-          ],
-          [
-            324.0,
-            1181.0,
-            664.0,
-            1225.0
-          ],
-          [
-            872.0,
-            1184.0,
-            1247.0,
-            1222.0
-          ],
-          [
-            322.0,
-            1226.0,
-            458.0,
-            1269.0
-          ],
-          [
-            587.0,
-            1229.0,
-            1249.0,
-            1272.0
-          ],
-          [
-            325.0,
-            1279.0,
-            884.0,
-            1320.0
-          ],
-          [
-            322.0,
-            1339.0,
-            1248.0,
-            1384.0
-          ],
-          [
-            1421.0,
-            1378.0,
-            2342.0,
-            1419.0
-          ],
-          [
-            324.0,
-            1391.0,
-            582.0,
-            1429.0
-          ],
-          [
-            659.0,
-            1388.0,
-            1250.0,
-            1433.0
-          ],
-          [
-            1421.0,
-            1426.0,
-            2345.0,
-            1466.0
-          ],
-          [
-            323.0,
-            1437.0,
-            1249.0,
-            1480.0
-          ],
-          [
-            1586.0,
-            1473.0,
-            1871.0,
-            1514.0
-          ],
-          [
-            323.0,
-            1484.0,
-            1249.0,
-            1529.0
-          ],
-          [
-            325.0,
-            1533.0,
-            1119.0,
-            1577.0
-          ],
-          [
-            258.0,
-            1609.0,
-            1250.0,
-            1655.0
-          ],
-          [
-            503.0,
-            1662.0,
-            1248.0,
-            1699.0
-          ],
-          [
-            1422.0,
-            1697.0,
-            1956.0,
-            1734.0
-          ],
-          [
-            2122.0,
-            1695.0,
-            2344.0,
-            1733.0
-          ],
-          [
-            326.0,
-            1708.0,
-            1249.0,
-            1751.0
-          ],
-          [
-            1420.0,
-            1743.0,
-            2346.0,
-            1786.0
-          ],
-          [
-            1468.0,
-            1792.0,
-            2097.0,
-            1832.0
-          ],
-          [
-            1420.0,
-            1841.0,
-            1788.0,
-            1878.0
-          ],
-          [
-            1994.0,
-            1836.0,
-            2071.0,
-            1882.0
-          ],
-          [
-            2247.0,
-            1835.0,
-            2351.0,
-            1880.0
-          ],
-          [
-            1419.0,
-            1883.0,
-            2297.0,
-            1930.0
-          ],
-          [
-            1420.0,
-            1933.0,
-            1656.0,
-            1974.0
-          ],
-          [
-            1865.0,
-            1941.0,
-            1889.0,
-            1976.0
-          ],
-          [
-            1418.0,
-            1996.0,
-            2275.0,
-            2039.0
-          ],
-          [
-            1420.0,
-            2044.0,
-            2340.0,
-            2089.0
-          ],
-          [
-            325.0,
-            2075.0,
-            1248.0,
-            2119.0
-          ],
-          [
-            324.0,
-            2124.0,
-            1247.0,
-            2165.0
-          ],
-          [
-            325.0,
-            2173.0,
-            623.0,
-            2210.0
-          ],
-          [
-            1414.0,
-            2220.0,
-            1483.0,
-            2267.0
-          ],
-          [
-            1686.0,
-            2224.0,
-            2209.0,
-            2264.0
-          ],
-          [
-            323.0,
-            2235.0,
-            1247.0,
-            2277.0
-          ],
-          [
-            318.0,
-            2280.0,
-            416.0,
-            2328.0
-          ],
-          [
-            326.0,
-            2461.0,
-            1248.0,
-            2505.0
-          ],
-          [
-            1075.670654296875,
-            2508.0,
-            1251.0,
-            2553.0
-          ],
-          [
-            324.0,
-            2559.0,
-            1252.0,
-            2599.0
-          ],
-          [
-            479.0,
-            2605.0,
-            855.0,
-            2649.0
-          ],
-          [
-            1423.0,
-            2673.0,
-            2344.0,
-            2716.0
-          ],
-          [
-            1422.0,
-            2720.0,
-            2064.0,
-            2760.0
-          ],
-          [
-            325.0,
-            2840.0,
-            650.0,
-            2888.0
-          ],
-          [
-            732.0,
-            2843.0,
-            1251.0,
-            2883.0
-          ],
-          [
-            323.0,
-            2889.0,
-            1249.0,
-            2931.0
-          ],
-          [
-            325.0,
-            2941.0,
-            1248.0,
-            2978.0
-          ],
-          [
-            326.0,
-            2988.0,
-            1248.0,
-            3028.0
-          ],
-          [
-            325.0,
-            3033.0,
-            562.0,
-            3073.0
-          ],
-          [
-            1484.949462890625,
-            2305.359619140625,
-            2165.010498046875,
-            2623.647216796875
-          ],
-          [
-            266.6715087890625,
-            1808.4481201171875,
-            1206.125,
-            2033.8011474609375
-          ],
-          [
-            393.10302734375,
-            783.72119140625,
-            1068.369384765625,
-            938.938232421875
-          ],
-          [
-            1353.87646484375,
-            2816.86376953125,
-            2302.942626953125,
-            3001.5546875
-          ],
-          [
-            1451.286865234375,
-            1232.678466796875,
-            2199.618408203125,
-            1331.9638671875
-          ],
-          [
-            1585.630859375,
-            1555.965576171875,
-            2065.1015625,
-            1650.416259765625
-          ],
-          [
-            416.8455810546875,
-            2694.562744140625,
-            1049.7083740234375,
-            2790.487548828125
-          ],
-          [
-            265.83331298828125,
-            2366.19970703125,
-            1197.162353515625,
-            2415.5087890625
-          ],
-          [
-            1452.901611328125,
-            824.283447265625,
-            2198.690185546875,
-            874.781982421875
-          ],
-          [
-            1471.77587890625,
-            2126.64697265625,
-            2183.350341796875,
-            2174.58056640625
-          ],
-          [
-            1666.0654296875,
-            1009.386962890625,
-            1986.498291015625,
-            1053.58642578125
-          ],
-          [
-            671.8636474609375,
-            1035.86865234375,
-            861.5572509765625,
-            1082.8583984375
-          ],
-          [
-            1420.1422119140625,
-            1468.05126953125,
-            1588.6451416015625,
-            1515.89599609375
-          ],
-          [
-            2008.154541015625,
-            691.7767333984375,
-            2178.083740234375,
-            734.0537109375
-          ],
-          [
-            1016.980712890625,
-            646.8055419921875,
-            1242.148681640625,
-            685.043212890625
-          ],
-          [
-            541.5810546875,
-            692.3154296875,
-            1010.5570068359375,
-            734.097412109375
-          ],
-          [
-            2105.06103515625,
-            1795.843994140625,
-            2335.44384765625,
-            1832.148193359375
-          ],
-          [
-            1961.042236328125,
-            1693.619384765625,
-            2124.362060546875,
-            1739.92138671875
-          ],
-          [
-            670.858154296875,
-            1178.57763671875,
-            880.84375,
-            1224.4892578125
-          ],
-          [
-            1722.798828125,
-            1106.40283203125,
-            1887.170654296875,
-            1145.740234375
-          ],
-          [
-            1797.791015625,
-            1839.052001953125,
-            1986.1044921875,
-            1883.172607421875
-          ],
-          [
-            326.00445556640625,
-            2603.2607421875,
-            489.51922607421875,
-            2649.8203125
-          ],
-          [
-            2076.92431640625,
-            1838.923095703125,
-            2260.01220703125,
-            1882.409912109375
-          ],
-          [
-            1105.625732421875,
-            1140.15478515625,
-            1233.7109375,
-            1176.6572265625
-          ],
-          [
-            1654.4678955078125,
-            1932.7349853515625,
-            1876.8179931640625,
-            1973.8939208984375
-          ],
-          [
-            966.875244140625,
-            595.3079833984375,
-            1160.698974609375,
-            636.1602783203125
-          ],
-          [
-            2126.93408203125,
-            602.0758056640625,
-            2283.73876953125,
-            639.3729248046875
-          ],
-          [
-            323.239990234375,
-            1136.259765625,
-            544.9916381835938,
-            1176.4169921875
-          ],
-          [
-            323.4151611328125,
-            1660.306640625,
-            498.3099365234375,
-            1701.31494140625
-          ],
-          [
-            466.82861328125,
-            1226.8116455078125,
-            592.9532470703125,
-            1269.7105712890625
-          ],
-          [
-            1123.41650390625,
-            1536.3411865234375,
-            1207.611328125,
-            1569.7891845703125
-          ],
-          [
-            327.13238525390625,
-            695.2313842773438,
-            450.59320068359375,
-            732.9158325195312
-          ],
-          [
-            1479.34228515625,
-            2225.54443359375,
-            1686.2236328125,
-            2265.07958984375
-          ],
-          [
-            2275.461181640625,
-            2005.1488037109375,
-            2339.125732421875,
-            2036.8843994140625
-          ],
-          [
-            1420.398193359375,
-            604.438232421875,
-            1458.885986328125,
-            640.169921875
-          ],
-          [
-            1166.4031982421875,
-            1090.8851318359375,
-            1241.6676025390625,
-            1127.2620849609375
-          ],
-          [
-            2304.7333984375,
-            1894.963623046875,
-            2340.236328125,
-            1927.947998046875
-          ],
-          [
-            926.881103515625,
-            1000.01904296875,
-            966.748291015625,
-            1031.2734375
-          ],
-          [
-            1635.321044921875,
-            701.0955810546875,
-            1671.976318359375,
-            732.7161865234375
-          ],
-          [
-            1037.779052734375,
-            2520.85791015625,
-            1075.670654296875,
-            2552.15380859375
-          ],
-          [
-            1162.91796875,
-            1045.306884765625,
-            1202.3515625,
-            1079.773193359375
-          ],
-          [
-            1420.479736328125,
-            1799.73095703125,
-            1456.387939453125,
-            1834.03955078125
-          ],
-          [
-            662.6072387695312,
-            2839.18603515625,
-            714.0029907226562,
-            2892.90673828125
-          ],
-          [
-            587.2800903320312,
-            1386.96142578125,
-            647.6885375976562,
-            1425.35888671875
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}a^{n}c^{n(n-1)}+&b^{n}d^{n(n-1)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i}b^{n}c^{ni}d^{n(n-1-i)}\\\\+&\\sum_{i=1}^{n-1}\\binom{n-1}{i-1}a^{n}c^{n(i-1)}d^{n(n-i)}.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1484.949462890625,
-            2305.359619140625,
-            2165.010498046875,
-            2623.647216796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\left(\\frac{a_{1}\\cdots a_{n}}{(a_{1}+b_{1})\\cdots(a_{n}+b_{n})}\\right)^{1/n}&\\\\\\leq\\frac{1}{n}\\left(\\frac{a_{1}}{a_{1}+b_{1}}+\\cdots+\\frac{a_{n}}{a_{n}+b_{n}}\\right),&\\end{align*}",
-          "formula_region_id": 2,
-          "dt_polys": [
-            266.6715087890625,
-            1808.4481201171875,
-            1206.125,
-            2033.8011474609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}ka_{1}&=a_{1}+a_{1}+\\cdots+a_{1}\\\\&\\leq n\\leq a_{1}+(a_{1}+1)+\\cdots+(a_{1}+1)\\\\&=ka_{1}+k-1.\\end{align*}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            393.10302734375,
-            783.72119140625,
-            1068.369384765625,
-            938.938232421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}(a^n+b^n)(c^n+d^n)^{n-1}&\\geq a^n c^{n(n-1)}+b^n d^{n(n-1)}\\\\&+\\sum_{i=1}^{n-1}\\binom{n}{i}a^i b^{n-i}c^{(n-1)i}d^{(n-1)(n-i)},\\end{align*}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            1353.87646484375,
-            2816.86376953125,
-            2302.942626953125,
-            3001.5546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{1}{n}(f(s_1)+\\cdots+f(s_n))\\geq f\\left(\\frac{s_1+\\cdots+s_n}{n}\\right).",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1451.286865234375,
-            1232.678466796875,
-            2199.618408203125,
-            1331.9638671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f^{\\prime}(x)=\\frac{e^{x}}{1+e^{x}}=1-\\frac{1}{1+e^{x}}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1585.630859375,
-            1555.965576171875,
-            2065.1015625,
-            1650.416259765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\binom{n}{k}}{\\left(a_{1}\\cdots a_{n}\\right)}^{k/n}\\cdots{\\left(b_{1}\\ldots b_{n}\\right)}^{\\left(n-k\\right)/n},",
-          "formula_region_id": 7,
-          "dt_polys": [
-            416.8455810546875,
-            2694.562744140625,
-            1049.7083740234375,
-            2790.487548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(a_{1}+b_{1})\\cdots(a_{n}+b_{n})\\geq[(a_{1}\\cdots a_{n})^{1/n}+(b_{1}\\cdots b_{n})^{1/n}]^{n},",
-          "formula_region_id": 8,
-          "dt_polys": [
-            265.83331298828125,
-            2366.19970703125,
-            1197.162353515625,
-            2415.5087890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1+r_{1})^{1/n}\\cdots(1+r_{n})^{1/n}\\geq1+(r_{1}\\cdots r_{n})^{1/n}.",
-          "formula_region_id": 9,
-          "dt_polys": [
-            1452.901611328125,
-            824.283447265625,
-            2198.690185546875,
-            874.781982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(a^{n}+b^{n})(c^{n}+d^{n})^{n-1}\\geq(ac^{n-1}+bd^{n-1})^{n}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            1471.77587890625,
-            2126.64697265625,
-            2183.350341796875,
-            2174.58056640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f(x)=\\log(1+e^x)",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1666.0654296875,
-            1009.386962890625,
-            1986.498291015625,
-            1053.58642578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}=\\lfloor n/k\\rfloor",
-          "formula_region_id": 12,
-          "dt_polys": [
-            671.8636474609375,
-            1035.86865234375,
-            861.5572509765625,
-            1082.8583984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\stackrel{\\sim}{f^{\\prime\\prime}}(x)>0",
-          "formula_region_id": 13,
-          "dt_polys": [
-            1420.1422119140625,
-            1468.05126953125,
-            1588.6451416015625,
-            1515.89599609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "r_{i}=b_{i}/a_{i}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            2008.154541015625,
-            691.7767333984375,
-            2178.083740234375,
-            734.0537109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n=a_{1}+a_{2}+",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1016.980712890625,
-            646.8055419921875,
-            1242.148681640625,
-            685.043212890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}\\leq a_{2}\\leq\\cdots\\leq a_{k}\\leq a_{1}+1",
-          "formula_region_id": 16,
-          "dt_polys": [
-            541.5810546875,
-            692.3154296875,
-            1010.5570068359375,
-            734.097412109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s_{1}=\\cdots=s_{n},",
-          "formula_region_id": 17,
-          "dt_polys": [
-            2105.06103515625,
-            1795.843994140625,
-            2335.44384765625,
-            1832.148193359375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f^{\\prime\\prime}(x)>0",
-          "formula_region_id": 18,
-          "dt_polys": [
-            1961.042236328125,
-            1693.619384765625,
-            2124.362060546875,
-            1739.92138671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "k a_{1}+(i-1)",
-          "formula_region_id": 19,
-          "dt_polys": [
-            670.858154296875,
-            1178.57763671875,
-            880.84375,
-            1224.4892578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s_{i}=\\log r_{i}",
-          "formula_region_id": 20,
-          "dt_polys": [
-            1722.798828125,
-            1106.40283203125,
-            1887.170654296875,
-            1145.740234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left(a_{1},\\ldots,a_{n}\\right)",
-          "formula_region_id": 21,
-          "dt_polys": [
-            1797.791015625,
-            1839.052001953125,
-            1986.1044921875,
-            1883.172607421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\{1,\\ldots,n\\}",
-          "formula_region_id": 22,
-          "dt_polys": [
-            326.00445556640625,
-            2603.2607421875,
-            489.51922607421875,
-            2649.8203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left(b_{1},\\ldots,b_{n}\\right)",
-          "formula_region_id": 23,
-          "dt_polys": [
-            2076.92431640625,
-            1838.923095703125,
-            2260.01220703125,
-            1882.409912109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}=a_{1}",
-          "formula_region_id": 24,
-          "dt_polys": [
-            1105.625732421875,
-            1140.15478515625,
-            1233.7109375,
-            1176.6572265625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}=b_{1}=0.)",
-          "formula_region_id": 25,
-          "dt_polys": [
-            1654.4678955078125,
-            1932.7349853515625,
-            1876.8179931640625,
-            1973.8939208984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "k=1,\\ldots,n",
-          "formula_region_id": 26,
-          "dt_polys": [
-            966.875244140625,
-            595.3079833984375,
-            1160.698974609375,
-            636.1602783203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1},\\ldots,a_{n}",
-          "formula_region_id": 27,
-          "dt_polys": [
-            2126.93408203125,
-            602.0758056640625,
-            2283.73876953125,
-            639.3729248046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{2}+\\cdots+a_{k}",
-          "formula_region_id": 28,
-          "dt_polys": [
-            323.239990234375,
-            1136.259765625,
-            544.9916381835938,
-            1176.4169921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}+b_{i}>0",
-          "formula_region_id": 29,
-          "dt_polys": [
-            323.4151611328125,
-            1660.306640625,
-            498.3099365234375,
-            1701.31494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "1,\\ldots,k,",
-          "formula_region_id": 30,
-          "dt_polys": [
-            466.82861328125,
-            1226.8116455078125,
-            592.9532470703125,
-            1269.7105712890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n-1",
-          "formula_region_id": 31,
-          "dt_polys": [
-            1123.41650390625,
-            1536.3411865234375,
-            1207.611328125,
-            1569.7891845703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\cdots+a_{k}",
-          "formula_region_id": 32,
-          "dt_polys": [
-            327.13238525390625,
-            695.2313842773438,
-            450.59320068359375,
-            732.9158325195312
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a,b,c,d\\geq0",
-          "formula_region_id": 33,
-          "dt_polys": [
-            1479.34228515625,
-            2225.54443359375,
-            1686.2236328125,
-            2265.07958984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n=",
-          "formula_region_id": 34,
-          "dt_polys": [
-            2275.461181640625,
-            2005.1488037109375,
-            2339.125732421875,
-            2036.8843994140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 35,
-          "dt_polys": [
-            1420.398193359375,
-            604.438232421875,
-            1458.885986328125,
-            640.169921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}+",
-          "formula_region_id": 36,
-          "dt_polys": [
-            1166.4031982421875,
-            1090.8851318359375,
-            1241.6676025390625,
-            1127.2620849609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 37,
-          "dt_polys": [
-            2304.7333984375,
-            1894.963623046875,
-            2340.236328125,
-            1927.947998046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}",
-          "formula_region_id": 38,
-          "dt_polys": [
-            926.881103515625,
-            1000.01904296875,
-            966.748291015625,
-            1031.2734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 39,
-          "dt_polys": [
-            1635.321044921875,
-            701.0955810546875,
-            1671.976318359375,
-            732.7161865234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 40,
-          "dt_polys": [
-            1037.779052734375,
-            2520.85791015625,
-            1075.670654296875,
-            2552.15380859375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{1}",
-          "formula_region_id": 41,
-          "dt_polys": [
-            1162.91796875,
-            1045.306884765625,
-            1202.3515625,
-            1079.773193359375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "a_{i}",
-          "formula_region_id": 42,
-          "dt_polys": [
-            1420.479736328125,
-            1799.73095703125,
-            1456.387939453125,
-            1834.03955078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\binom{n}{k}",
-          "formula_region_id": 43,
-          "dt_polys": [
-            662.6072387695312,
-            2839.18603515625,
-            714.0029907226562,
-            2892.90673828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": " ``\\mathrm{as}",
-          "formula_region_id": 44,
-          "dt_polys": [
-            587.2800903320312,
-            1386.96142578125,
-            647.6885375976562,
-            1425.35888671875
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -7491,7 +929,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

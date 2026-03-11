@@ -8,28 +8,35 @@
           "block_label": "text",
           "block_content": "它们的村子散布在森林边缘的小丘上。这里，很多的黑甲虫村民，熙熙攘攘地往来。",
           "block_bbox": [
-            184,
-            105,
-            2533,
-            681
+            180,
+            99,
+            2548,
+            694
           ],
           "block_id": 0,
-          "block_order": 1
-        },
-        {
-          "block_label": "image",
-          "block_content": "黑甲虫村民，\n",
-          "block_bbox": [
-            0,
-            696,
-            2999,
-            2250
-          ],
-          "block_id": 1,
-          "block_order": null
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              180.0,
+              99.0
+            ],
+            [
+              2548.0,
+              99.0
+            ],
+            [
+              2548.0,
+              694.0
+            ],
+            [
+              180.0,
+              694.0
+            ]
+          ]
         }
       ],
-      "markdown": "它们的村子散布在森林边缘的小丘上。这里，很多的黑甲虫村民，熙熙攘攘地往来。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_0_696_2999_2250.jpg\" alt=\"Image\" width=\"99%\" /></div>\n",
+      "markdown": "它们的村子散布在森林边缘的小丘上。这里，很多的黑甲虫村民，熙熙攘攘地往来。",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -38,316 +45,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7626053094863892,
-            "coordinate": [
-              184.6279296875,
-              105.01205444335938,
-              2533.895751953125,
-              681.9287109375
-            ]
-          },
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.6302481293678284,
-            "coordinate": [
-              0,
-              696.1328125,
-              2999.7470703125,
-              2250
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              918,
-              78
-            ],
-            [
-              2475,
-              82
-            ],
-            [
-              2474,
-              316
-            ],
-            [
-              917,
-              312
-            ]
-          ],
-          [
-            [
-              147,
-              261
-            ],
-            [
-              2570,
-              261
-            ],
-            [
-              2570,
-              530
-            ],
-            [
-              147,
-              530
-            ]
-          ],
-          [
-            [
-              184,
-              475
-            ],
-            [
-              1254,
-              475
-            ],
-            [
-              1254,
-              681
-            ],
-            [
-              184,
-              681
-            ]
-          ],
-          [
-            [
-              1153,
-              498
-            ],
-            [
-              2447,
-              502
-            ],
-            [
-              2446,
-              699
-            ],
-            [
-              1153,
-              695
-            ]
-          ],
-          [
-            [
-              1024,
-              1023
-            ],
-            [
-              1305,
-              1023
-            ],
-            [
-              1305,
-              1196
-            ],
-            [
-              1024,
-              1196
-            ]
-          ],
-          [
-            [
-              232,
-              1136
-            ],
-            [
-              494,
-              1098
-            ],
-            [
-              503,
-              1162
-            ],
-            [
-              241,
-              1199
-            ]
-          ],
-          [
-            [
-              961,
-              1356
-            ],
-            [
-              1273,
-              1343
-            ],
-            [
-              1281,
-              1535
-            ],
-            [
-              969,
-              1548
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "它们的村子散布在森",
-          "林边缘的小丘上。这里，很多的",
-          "黑甲虫村民，",
-          "熙熙攘攘地往来。"
-        ],
-        "rec_scores": [
-          0.9990641474723816,
-          0.9943293333053589,
-          0.9927192330360413,
-          0.9958792924880981
-        ],
-        "rec_polys": [
-          [
-            [
-              918,
-              78
-            ],
-            [
-              2475,
-              82
-            ],
-            [
-              2474,
-              316
-            ],
-            [
-              917,
-              312
-            ]
-          ],
-          [
-            [
-              147,
-              261
-            ],
-            [
-              2570,
-              261
-            ],
-            [
-              2570,
-              530
-            ],
-            [
-              147,
-              530
-            ]
-          ],
-          [
-            [
-              184,
-              475
-            ],
-            [
-              1254,
-              475
-            ],
-            [
-              1254,
-              681
-            ],
-            [
-              184,
-              681
-            ]
-          ],
-          [
-            [
-              1153,
-              498
-            ],
-            [
-              2447,
-              502
-            ],
-            [
-              2446,
-              699
-            ],
-            [
-              1153,
-              695
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            917,
-            78,
-            2475,
-            316
-          ],
-          [
-            147,
-            261,
-            2570,
-            530
-          ],
-          [
-            184,
-            475,
-            1254,
-            681
-          ],
-          [
-            1153,
-            498,
-            2447,
-            699
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -356,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

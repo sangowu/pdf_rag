@@ -8,193 +8,125 @@
           "block_label": "number",
           "block_content": "236",
           "block_bbox": [
-            293,
-            198,
-            366,
-            236
+            291,
+            199,
+            378,
+            246
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              291.0,
+              199.0
+            ],
+            [
+              378.0,
+              199.0
+            ],
+            [
+              378.0,
+              246.0
+            ],
+            [
+              291.0,
+              246.0
+            ]
+          ]
         },
         {
           "block_label": "header",
-          "block_content": "9Calculus and Number Theory ",
+          "block_content": "9 Calculus and Number Theory",
           "block_bbox": [
-            1506,
-            196,
-            2133,
-            240
+            1501,
+            197,
+            2148,
+            253
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              1501.0,
+              197.0
+            ],
+            [
+              2148.0,
+              197.0
+            ],
+            [
+              2148.0,
+              253.0
+            ],
+            [
+              1501.0,
+              253.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Proof Firstly, from (9.14) we get ",
+          "block_content": "Proof Firstly, from (9.14) we get",
           "block_bbox": [
-            289,
-            337,
-            1035,
-            392
+            286,
+            336,
+            1046,
+            402
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              286.0,
+              336.0
+            ],
+            [
+              1046.0,
+              336.0
+            ],
+            [
+              1046.0,
+              402.0
+            ],
+            [
+              286.0,
+              402.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}\\left|P_n-\\sum_{k=1}^n\\frac{\\mu(k)}{k^2}\\right|&=\\left|\\sum_{k=1}^n\\mu(k)\\left(\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2-\\frac{1}{k^2}\\right)\\right|\\\\&\\leq\\sum_{k=1}^n\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|.\\end{align*}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|&=\\left|\\sum_{k=1}^{n}\\mu(k)\\left(\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}-\\frac{1}{k^{2}}\\right)\\right|\\\\&\\leq\\sum_{k=1}^{n}\\left|\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\right|.\\end{align*} $$ ",
           "block_bbox": [
             566,
-            456,
-            1685,
-            842
+            460,
+            1693,
+            849
           ],
           "block_id": 3,
-          "block_order": 2
-        },
-        {
-          "block_label": "text",
-          "block_content": "In order to estimate the last sum above, we claim that, given natural numbers n and k such that $1\\leq k\\leq n$ ,we have \n",
-          "block_bbox": [
-            287,
-            913,
-            2136,
-            1034
-          ],
-          "block_id": 4,
-          "block_order": 3
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|<\\frac{2}{nk}-\\frac{1}{n^2}.",
-          "block_bbox": [
-            881,
-            1095,
-            1550,
-            1230
-          ],
-          "block_id": 5,
-          "block_order": 4
-        },
-        {
-          "block_label": "text",
-          "block_content": "Indeed,",
-          "block_bbox": [
-            288,
-            1301,
-            461,
-            1347
-          ],
-          "block_id": 6,
-          "block_order": 5
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^2}{k^2}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{n^2}{k^2}\\\\&\\Rightarrow\\frac{1}{k^2}-\\frac{2}{kn}+\\frac{1}{n^2}<\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{1}{k^2}\\\\&\\Rightarrow0\\leq\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2<\\frac{2}{kn}-\\frac{1}{n^2},\\end{aligned}",
-          "block_bbox": [
-            572,
-            1417,
-            1863,
-            1867
-          ],
-          "block_id": 7,
-          "block_order": 6
-        },
-        {
-          "block_label": "text",
-          "block_content": "as wished.",
-          "block_bbox": [
-            288,
-            1931,
-            527,
-            1975
-          ],
-          "block_id": 8,
-          "block_order": 7
-        },
-        {
-          "block_label": "text",
-          "block_content": "Back to (9.15), we obtain from the above estimates that ",
-          "block_bbox": [
-            356,
-            1995,
-            1593,
-            2048
-          ],
-          "block_id": 9,
-          "block_order": 8
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}.",
-          "block_bbox": [
-            613,
-            2116,
-            1817,
-            2292
-          ],
-          "block_id": 10,
-          "block_order": 9
-        },
-        {
-          "block_label": "text",
-          "block_content": "Now, from L'Hôpital's rule we get ",
-          "block_bbox": [
-            288,
-            2360,
-            1063,
-            2414
-          ],
-          "block_id": 11,
-          "block_order": 10
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0.",
-          "block_bbox": [
-            638,
-            2485,
-            1796,
-            2652
-          ],
-          "block_id": 12,
-          "block_order": 11
-        },
-        {
-          "block_label": "text",
-          "block_content": "as $n\\rightarrow+\\infty$ . Hence,",
-          "block_bbox": [
-            287,
-            2726,
-            763,
-            2774
-          ],
-          "block_id": 13,
-          "block_order": 12
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0,",
-          "block_bbox": [
-            887,
-            2843,
-            1540,
-            3010
-          ],
-          "block_id": 14,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "and our previous estimates assure that ",
-          "block_bbox": [
-            289,
-            3086,
-            1138,
-            3139
-          ],
-          "block_id": 15,
-          "block_order": 14
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              566.0,
+              460.0
+            ],
+            [
+              1693.0,
+              460.0
+            ],
+            [
+              1693.0,
+              849.0
+            ],
+            [
+              566.0,
+              849.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -202,1567 +134,421 @@
           "block_bbox": [
             2005,
             627,
-            2136,
-            681
+            2144,
+            688
+          ],
+          "block_id": 4,
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              2005.0,
+              627.0
+            ],
+            [
+              2144.0,
+              627.0
+            ],
+            [
+              2144.0,
+              688.0
+            ],
+            [
+              2005.0,
+              688.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "In order to estimate the last sum above, we claim that, given natural numbers n and k such that  $ 1 \\leq k \\leq n $, we have",
+          "block_bbox": [
+            285,
+            913,
+            2149,
+            1044
+          ],
+          "block_id": 5,
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              285.0,
+              913.0
+            ],
+            [
+              2149.0,
+              913.0
+            ],
+            [
+              2149.0,
+              1044.0
+            ],
+            [
+              285.0,
+              1044.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\left|\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\right|<\\frac{2}{n k}-\\frac{1}{n^{2}}. $$ ",
+          "block_bbox": [
+            879,
+            1096,
+            1558,
+            1242
+          ],
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              879.0,
+              1096.0
+            ],
+            [
+              1558.0,
+              1096.0
+            ],
+            [
+              1558.0,
+              1242.0
+            ],
+            [
+              879.0,
+              1242.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Indeed,",
+          "block_bbox": [
+            287,
+            1301,
+            470,
+            1360
+          ],
+          "block_id": 7,
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              287.0,
+              1301.0
+            ],
+            [
+              470.0,
+              1301.0
+            ],
+            [
+              470.0,
+              1360.0
+            ],
+            [
+              287.0,
+              1360.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^{2}}{k^{2}}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\leq\\frac{n^{2}}{k^{2}}\\\\&\\Rightarrow\\frac{1}{k^{2}}-\\frac{2}{kn}+\\frac{1}{n^{2}}<\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\leq\\frac{1}{k^{2}}\\\\&\\Rightarrow0\\leq\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}<\\frac{2}{kn}-\\frac{1}{n^{2}},\\end{aligned} $$ ",
+          "block_bbox": [
+            571,
+            1419,
+            1870,
+            1879
+          ],
+          "block_id": 8,
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              571.0,
+              1419.0
+            ],
+            [
+              1870.0,
+              1419.0
+            ],
+            [
+              1870.0,
+              1879.0
+            ],
+            [
+              571.0,
+              1879.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "as wished.",
+          "block_bbox": [
+            289,
+            1931,
+            535,
+            1986
+          ],
+          "block_id": 9,
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              289.0,
+              1931.0
+            ],
+            [
+              535.0,
+              1931.0
+            ],
+            [
+              535.0,
+              1986.0
+            ],
+            [
+              289.0,
+              1986.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Back to (9.15), we obtain from the above estimates that",
+          "block_bbox": [
+            354,
+            1996,
+            1605,
+            2058
+          ],
+          "block_id": 10,
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              354.0,
+              1996.0
+            ],
+            [
+              1605.0,
+              1996.0
+            ],
+            [
+              1605.0,
+              2058.0
+            ],
+            [
+              354.0,
+              2058.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}. $$ ",
+          "block_bbox": [
+            613,
+            2120,
+            1821,
+            2301
+          ],
+          "block_id": 11,
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              613.0,
+              2120.0
+            ],
+            [
+              1821.0,
+              2120.0
+            ],
+            [
+              1821.0,
+              2301.0
+            ],
+            [
+              613.0,
+              2301.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Now, from L'Hôpital's rule we get",
+          "block_bbox": [
+            287,
+            2360,
+            1072,
+            2423
+          ],
+          "block_id": 12,
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              287.0,
+              2360.0
+            ],
+            [
+              1072.0,
+              2360.0
+            ],
+            [
+              1072.0,
+              2423.0
+            ],
+            [
+              287.0,
+              2423.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0 $$ ",
+          "block_bbox": [
+            636,
+            2489,
+            1805,
+            2658
+          ],
+          "block_id": 13,
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              636.0,
+              2489.0
+            ],
+            [
+              1805.0,
+              2489.0
+            ],
+            [
+              1805.0,
+              2658.0
+            ],
+            [
+              636.0,
+              2658.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "as  $ n \\rightarrow +\\infty $. Hence,",
+          "block_bbox": [
+            286,
+            2728,
+            768,
+            2784
+          ],
+          "block_id": 14,
+          "block_order": 13,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              286.0,
+              2728.0
+            ],
+            [
+              768.0,
+              2728.0
+            ],
+            [
+              768.0,
+              2784.0
+            ],
+            [
+              286.0,
+              2784.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0, $$ ",
+          "block_bbox": [
+            885,
+            2844,
+            1548,
+            3019
+          ],
+          "block_id": 15,
+          "block_order": 14,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              885.0,
+              2844.0
+            ],
+            [
+              1548.0,
+              2844.0
+            ],
+            [
+              1548.0,
+              3019.0
+            ],
+            [
+              885.0,
+              3019.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "and our previous estimates assure that",
+          "block_bbox": [
+            286,
+            3087,
+            1149,
+            3149
           ],
           "block_id": 16,
-          "block_order": null
+          "block_order": 15,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              286.0,
+              3087.0
+            ],
+            [
+              1149.0,
+              3087.0
+            ],
+            [
+              1149.0,
+              3149.0
+            ],
+            [
+              286.0,
+              3149.0
+            ]
+          ]
         }
       ],
-      "markdown": "Proof Firstly, from (9.14) we get \n\n$$\\begin{align*}\\left|P_n-\\sum_{k=1}^n\\frac{\\mu(k)}{k^2}\\right|&=\\left|\\sum_{k=1}^n\\mu(k)\\left(\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2-\\frac{1}{k^2}\\right)\\right|\\\\&\\leq\\sum_{k=1}^n\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|.\\end{align*}$$\n\nIn order to estimate the last sum above, we claim that, given natural numbers n and k such that $1\\leq k\\leq n$ ,we have \n\n\n\n$$\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|<\\frac{2}{nk}-\\frac{1}{n^2}.$$\n\nIndeed,\n\n$$\\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^2}{k^2}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{n^2}{k^2}\\\\&\\Rightarrow\\frac{1}{k^2}-\\frac{2}{kn}+\\frac{1}{n^2}<\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{1}{k^2}\\\\&\\Rightarrow0\\leq\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2<\\frac{2}{kn}-\\frac{1}{n^2},\\end{aligned}$$\n\nas wished.\n\nBack to (9.15), we obtain from the above estimates that \n\n$$\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}.$$\n\nNow, from L'Hôpital's rule we get \n\n$$\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0.$$\n\nas $n\\rightarrow+\\infty$ . Hence,\n\n$$\\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0,$$\n\nand our previous estimates assure that ",
+      "markdown": "Proof Firstly, from (9.14) we get\n\n $$ \\begin{align*}\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|&=\\left|\\sum_{k=1}^{n}\\mu(k)\\left(\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}-\\frac{1}{k^{2}}\\right)\\right|\\\\&\\leq\\sum_{k=1}^{n}\\left|\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\right|.\\end{align*} $$ \n\nIn order to estimate the last sum above, we claim that, given natural numbers n and k such that  $ 1 \\leq k \\leq n $, we have\n\n $$ \\left|\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\right|<\\frac{2}{n k}-\\frac{1}{n^{2}}. $$ \n\nIndeed,\n\n $$ \\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^{2}}{k^{2}}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\leq\\frac{n^{2}}{k^{2}}\\\\&\\Rightarrow\\frac{1}{k^{2}}-\\frac{2}{kn}+\\frac{1}{n^{2}}<\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}\\leq\\frac{1}{k^{2}}\\\\&\\Rightarrow0\\leq\\frac{1}{k^{2}}-\\frac{1}{n^{2}}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^{2}<\\frac{2}{kn}-\\frac{1}{n^{2}},\\end{aligned} $$ \n\nas wished.\n\nBack to (9.15), we obtain from the above estimates that\n\n $$ \\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}. $$ \n\nNow, from L'Hôpital's rule we get\n\n $$ \\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0 $$ \n\nas  $ n \\rightarrow +\\infty $. Hence,\n\n $$ \\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0, $$ \n\nand our previous estimates assure that",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\left|P_n-\\sum_{k=1}^n\\frac{\\mu(k)}{k^2}\\right|&=\\left|\\sum_{k=1}^n\\mu(k)\\left(\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2-\\frac{1}{k^2}\\right)\\right|\\\\&\\leq\\sum_{k=1}^n\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            566.4671630859375,
-            456.8185729980469,
-            1685.4927978515625,
-            842.083984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^2}{k^2}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{n^2}{k^2}\\\\&\\Rightarrow\\frac{1}{k^2}-\\frac{2}{kn}+\\frac{1}{n^2}<\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{1}{k^2}\\\\&\\Rightarrow0\\leq\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2<\\frac{2}{kn}-\\frac{1}{n^2},\\end{aligned}",
-          "formula_region_id": 2,
-          "dt_polys": [
-            572.0557861328125,
-            1417.4375,
-            1863.8209228515625,
-            1867.26220703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0,",
-          "formula_region_id": 3,
-          "dt_polys": [
-            887.96142578125,
-            2843.88671875,
-            1540.463134765625,
-            3010.88916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            613.898193359375,
-            2116.576416015625,
-            1817.653564453125,
-            2292.171630859375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0.",
-          "formula_region_id": 5,
-          "dt_polys": [
-            638.6220703125,
-            2485.9267578125,
-            1796.353515625,
-            2652.45703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|<\\frac{2}{nk}-\\frac{1}{n^2}.",
-          "formula_region_id": 6,
-          "dt_polys": [
-            881.4832763671875,
-            1095.41845703125,
-            1550.3367919921875,
-            1230.69775390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "1\\leq k\\leq n",
-          "formula_region_id": 7,
-          "dt_polys": [
-            644.6868896484375,
-            980.1839599609375,
-            874.14794921875,
-            1032.6971435546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\rightarrow+\\infty",
-          "formula_region_id": 8,
-          "dt_polys": [
-            351.9786376953125,
-            2731.4150390625,
-            579.7784423828125,
-            2773.4501953125
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2442,
       "height": 3702,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9680343270301819,
-            "coordinate": [
-              566.4671630859375,
-              456.8185729980469,
-              1685.4927978515625,
-              842.083984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9672998189926147,
-            "coordinate": [
-              572.0557861328125,
-              1417.4375,
-              1863.8209228515625,
-              1867.26220703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9671226143836975,
-            "coordinate": [
-              887.96142578125,
-              2843.88671875,
-              1540.463134765625,
-              3010.88916015625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9668256044387817,
-            "coordinate": [
-              613.898193359375,
-              2116.576416015625,
-              1817.653564453125,
-              2292.171630859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9659057855606079,
-            "coordinate": [
-              638.6220703125,
-              2485.9267578125,
-              1796.353515625,
-              2652.45703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9643552303314209,
-            "coordinate": [
-              881.4832763671875,
-              1095.41845703125,
-              1550.3367919921875,
-              1230.69775390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9529759287834167,
-            "coordinate": [
-              287.66741943359375,
-              913.9908447265625,
-              2136.267333984375,
-              1034.2388916015625
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9392275810241699,
-            "coordinate": [
-              2005.081787109375,
-              627.5233154296875,
-              2136.602783203125,
-              681.9493408203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9034398794174194,
-            "coordinate": [
-              356.43072509765625,
-              1995.504150390625,
-              1593.30517578125,
-              2048.09228515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9030293226242065,
-            "coordinate": [
-              288.3271789550781,
-              2360.314697265625,
-              1063.39453125,
-              2414.688720703125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9011294841766357,
-            "coordinate": [
-              287.91021728515625,
-              2726.8115234375,
-              763.0460815429688,
-              2774.5927734375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8994829654693604,
-            "coordinate": [
-              289.524658203125,
-              3086.36376953125,
-              1138.3369140625,
-              3139.03369140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8944060802459717,
-            "coordinate": [
-              288.5814208984375,
-              1301.7843017578125,
-              461.22509765625,
-              1347.2154541015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8933984637260437,
-            "coordinate": [
-              289.38189697265625,
-              337.22845458984375,
-              1035.873779296875,
-              392.201904296875
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.8925836086273193,
-            "coordinate": [
-              1506.812744140625,
-              196.30526733398438,
-              2133.287353515625,
-              240.90225219726562
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8897406458854675,
-            "coordinate": [
-              288.8165283203125,
-              1931.05322265625,
-              527.54736328125,
-              1975.53466796875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8712433576583862,
-            "coordinate": [
-              644.6868896484375,
-              980.1839599609375,
-              874.14794921875,
-              1032.6971435546875
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8670419454574585,
-            "coordinate": [
-              293.5313720703125,
-              198.53636169433594,
-              366.2161865234375,
-              236.43727111816406
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7258080244064331,
-            "coordinate": [
-              351.9786376953125,
-              2731.4150390625,
-              579.7784423828125,
-              2773.4501953125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              286,
-              191
-            ],
-            [
-              381,
-              191
-            ],
-            [
-              381,
-              249
-            ],
-            [
-              286,
-              249
-            ]
-          ],
-          [
-            [
-              1501,
-              191
-            ],
-            [
-              2145,
-              191
-            ],
-            [
-              2145,
-              249
-            ],
-            [
-              1501,
-              249
-            ]
-          ],
-          [
-            [
-              292,
-              333
-            ],
-            [
-              1041,
-              338
-            ],
-            [
-              1041,
-              399
-            ],
-            [
-              292,
-              394
-            ]
-          ],
-          [
-            [
-              1997,
-              620
-            ],
-            [
-              2152,
-              620
-            ],
-            [
-              2152,
-              691
-            ],
-            [
-              1997,
-              691
-            ]
-          ],
-          [
-            [
-              358,
-              913
-            ],
-            [
-              2145,
-              915
-            ],
-            [
-              2145,
-              968
-            ],
-            [
-              357,
-              966
-            ]
-          ],
-          [
-            [
-              296,
-              982
-            ],
-            [
-              639,
-              982
-            ],
-            [
-              639,
-              1030
-            ],
-            [
-              296,
-              1030
-            ]
-          ],
-          [
-            [
-              868,
-              981
-            ],
-            [
-              1091,
-              979
-            ],
-            [
-              1092,
-              1035
-            ],
-            [
-              869,
-              1037
-            ]
-          ],
-          [
-            [
-              894,
-              1230
-            ],
-            [
-              905,
-              1230
-            ],
-            [
-              905,
-              1240
-            ],
-            [
-              894,
-              1240
-            ]
-          ],
-          [
-            [
-              1250,
-              1230
-            ],
-            [
-              1261,
-              1230
-            ],
-            [
-              1261,
-              1240
-            ],
-            [
-              1250,
-              1240
-            ]
-          ],
-          [
-            [
-              289,
-              1295
-            ],
-            [
-              470,
-              1300
-            ],
-            [
-              469,
-              1362
-            ],
-            [
-              288,
-              1357
-            ]
-          ],
-          [
-            [
-              289,
-              1928
-            ],
-            [
-              535,
-              1925
-            ],
-            [
-              535,
-              1983
-            ],
-            [
-              290,
-              1987
-            ]
-          ],
-          [
-            [
-              355,
-              1994
-            ],
-            [
-              1601,
-              1994
-            ],
-            [
-              1601,
-              2053
-            ],
-            [
-              355,
-              2053
-            ]
-          ],
-          [
-            [
-              292,
-              2358
-            ],
-            [
-              1065,
-              2362
-            ],
-            [
-              1065,
-              2420
-            ],
-            [
-              292,
-              2415
-            ]
-          ],
-          [
-            [
-              578,
-              2721
-            ],
-            [
-              769,
-              2726
-            ],
-            [
-              767,
-              2783
-            ],
-            [
-              577,
-              2778
-            ]
-          ],
-          [
-            [
-              290,
-              2732
-            ],
-            [
-              354,
-              2732
-            ],
-            [
-              354,
-              2780
-            ],
-            [
-              290,
-              2780
-            ]
-          ],
-          [
-            [
-              1382,
-              3008
-            ],
-            [
-              1394,
-              3008
-            ],
-            [
-              1394,
-              3017
-            ],
-            [
-              1382,
-              3017
-            ]
-          ],
-          [
-            [
-              296,
-              3088
-            ],
-            [
-              1145,
-              3086
-            ],
-            [
-              1145,
-              3140
-            ],
-            [
-              296,
-              3143
-            ]
-          ],
-          [
-            [
-              566,
-              456
-            ],
-            [
-              1685,
-              456
-            ],
-            [
-              1685,
-              842
-            ],
-            [
-              566,
-              842
-            ]
-          ],
-          [
-            [
-              572,
-              1417
-            ],
-            [
-              1863,
-              1417
-            ],
-            [
-              1863,
-              1867
-            ],
-            [
-              572,
-              1867
-            ]
-          ],
-          [
-            [
-              887,
-              2843
-            ],
-            [
-              1540,
-              2843
-            ],
-            [
-              1540,
-              3010
-            ],
-            [
-              887,
-              3010
-            ]
-          ],
-          [
-            [
-              613,
-              2116
-            ],
-            [
-              1817,
-              2116
-            ],
-            [
-              1817,
-              2292
-            ],
-            [
-              613,
-              2292
-            ]
-          ],
-          [
-            [
-              638,
-              2485
-            ],
-            [
-              1796,
-              2485
-            ],
-            [
-              1796,
-              2652
-            ],
-            [
-              638,
-              2652
-            ]
-          ],
-          [
-            [
-              881,
-              1095
-            ],
-            [
-              1550,
-              1095
-            ],
-            [
-              1550,
-              1230
-            ],
-            [
-              881,
-              1230
-            ]
-          ],
-          [
-            [
-              644,
-              980
-            ],
-            [
-              874,
-              980
-            ],
-            [
-              874,
-              1032
-            ],
-            [
-              644,
-              1032
-            ]
-          ],
-          [
-            [
-              351,
-              2731
-            ],
-            [
-              579,
-              2731
-            ],
-            [
-              579,
-              2773
-            ],
-            [
-              351,
-              2773
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "236",
-          "9Calculus and Number Theory",
-          "Proof Firstly, from (9.14) we get",
-          "(9.15)",
-          "In order to estimate the last sum above, we claim that, given natural numbers n",
-          "and k such that",
-          ",we have",
-          "1",
-          "Indeed,",
-          "as wished.",
-          "Back to (9.15), we obtain from the above estimates that",
-          "Now, from L'Hôpital's rule we get",
-          ". Hence,",
-          "as",
-          "F",
-          "and our previous estimates assure that",
-          "\\begin{align*}\\left|P_n-\\sum_{k=1}^n\\frac{\\mu(k)}{k^2}\\right|&=\\left|\\sum_{k=1}^n\\mu(k)\\left(\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2-\\frac{1}{k^2}\\right)\\right|\\\\&\\leq\\sum_{k=1}^n\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|.\\end{align*}",
-          "\\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^2}{k^2}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{n^2}{k^2}\\\\&\\Rightarrow\\frac{1}{k^2}-\\frac{2}{kn}+\\frac{1}{n^2}<\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{1}{k^2}\\\\&\\Rightarrow0\\leq\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2<\\frac{2}{kn}-\\frac{1}{n^2},\\end{aligned}",
-          "\\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0,",
-          "\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}.",
-          "\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0.",
-          "\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|<\\frac{2}{nk}-\\frac{1}{n^2}.",
-          "1\\leq k\\leq n",
-          "n\\rightarrow+\\infty"
-        ],
-        "rec_scores": [
-          0.9998857378959656,
-          0.9717547297477722,
-          0.9539279341697693,
-          0.9997115135192871,
-          0.9837365746498108,
-          0.9730585217475891,
-          0.9914799332618713,
-          0.6458954811096191,
-          0.9609502553939819,
-          0.9981383085250854,
-          0.9826545715332031,
-          0.9550678730010986,
-          0.9667496085166931,
-          0.9991365671157837,
-          0.7548624873161316,
-          0.9863802194595337,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              286,
-              191
-            ],
-            [
-              381,
-              191
-            ],
-            [
-              381,
-              249
-            ],
-            [
-              286,
-              249
-            ]
-          ],
-          [
-            [
-              1501,
-              191
-            ],
-            [
-              2145,
-              191
-            ],
-            [
-              2145,
-              249
-            ],
-            [
-              1501,
-              249
-            ]
-          ],
-          [
-            [
-              292,
-              333
-            ],
-            [
-              1041,
-              338
-            ],
-            [
-              1041,
-              399
-            ],
-            [
-              292,
-              394
-            ]
-          ],
-          [
-            [
-              1997,
-              620
-            ],
-            [
-              2152,
-              620
-            ],
-            [
-              2152,
-              691
-            ],
-            [
-              1997,
-              691
-            ]
-          ],
-          [
-            [
-              358,
-              913
-            ],
-            [
-              2145,
-              915
-            ],
-            [
-              2145,
-              968
-            ],
-            [
-              357,
-              966
-            ]
-          ],
-          [
-            [
-              296,
-              982
-            ],
-            [
-              639,
-              982
-            ],
-            [
-              639,
-              1030
-            ],
-            [
-              296,
-              1030
-            ]
-          ],
-          [
-            [
-              868,
-              981
-            ],
-            [
-              1091,
-              979
-            ],
-            [
-              1092,
-              1035
-            ],
-            [
-              869,
-              1037
-            ]
-          ],
-          [
-            [
-              894,
-              1230
-            ],
-            [
-              905,
-              1230
-            ],
-            [
-              905,
-              1240
-            ],
-            [
-              894,
-              1240
-            ]
-          ],
-          [
-            [
-              289,
-              1295
-            ],
-            [
-              470,
-              1300
-            ],
-            [
-              469,
-              1362
-            ],
-            [
-              288,
-              1357
-            ]
-          ],
-          [
-            [
-              289,
-              1928
-            ],
-            [
-              535,
-              1925
-            ],
-            [
-              535,
-              1983
-            ],
-            [
-              290,
-              1987
-            ]
-          ],
-          [
-            [
-              355,
-              1994
-            ],
-            [
-              1601,
-              1994
-            ],
-            [
-              1601,
-              2053
-            ],
-            [
-              355,
-              2053
-            ]
-          ],
-          [
-            [
-              292,
-              2358
-            ],
-            [
-              1065,
-              2362
-            ],
-            [
-              1065,
-              2420
-            ],
-            [
-              292,
-              2415
-            ]
-          ],
-          [
-            [
-              578,
-              2721
-            ],
-            [
-              769,
-              2726
-            ],
-            [
-              767,
-              2783
-            ],
-            [
-              577,
-              2778
-            ]
-          ],
-          [
-            [
-              290,
-              2732
-            ],
-            [
-              354,
-              2732
-            ],
-            [
-              354,
-              2780
-            ],
-            [
-              290,
-              2780
-            ]
-          ],
-          [
-            [
-              1382,
-              3008
-            ],
-            [
-              1394,
-              3008
-            ],
-            [
-              1394,
-              3017
-            ],
-            [
-              1382,
-              3017
-            ]
-          ],
-          [
-            [
-              296,
-              3088
-            ],
-            [
-              1145,
-              3086
-            ],
-            [
-              1145,
-              3140
-            ],
-            [
-              296,
-              3143
-            ]
-          ],
-          [
-            [
-              566,
-              456
-            ],
-            [
-              1685,
-              456
-            ],
-            [
-              1685,
-              842
-            ],
-            [
-              566,
-              842
-            ]
-          ],
-          [
-            [
-              572,
-              1417
-            ],
-            [
-              1863,
-              1417
-            ],
-            [
-              1863,
-              1867
-            ],
-            [
-              572,
-              1867
-            ]
-          ],
-          [
-            [
-              887,
-              2843
-            ],
-            [
-              1540,
-              2843
-            ],
-            [
-              1540,
-              3010
-            ],
-            [
-              887,
-              3010
-            ]
-          ],
-          [
-            [
-              613,
-              2116
-            ],
-            [
-              1817,
-              2116
-            ],
-            [
-              1817,
-              2292
-            ],
-            [
-              613,
-              2292
-            ]
-          ],
-          [
-            [
-              638,
-              2485
-            ],
-            [
-              1796,
-              2485
-            ],
-            [
-              1796,
-              2652
-            ],
-            [
-              638,
-              2652
-            ]
-          ],
-          [
-            [
-              881,
-              1095
-            ],
-            [
-              1550,
-              1095
-            ],
-            [
-              1550,
-              1230
-            ],
-            [
-              881,
-              1230
-            ]
-          ],
-          [
-            [
-              644,
-              980
-            ],
-            [
-              874,
-              980
-            ],
-            [
-              874,
-              1032
-            ],
-            [
-              644,
-              1032
-            ]
-          ],
-          [
-            [
-              351,
-              2731
-            ],
-            [
-              579,
-              2731
-            ],
-            [
-              579,
-              2773
-            ],
-            [
-              351,
-              2773
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            286.0,
-            191.0,
-            381.0,
-            249.0
-          ],
-          [
-            1501.0,
-            191.0,
-            2145.0,
-            249.0
-          ],
-          [
-            292.0,
-            333.0,
-            1041.0,
-            399.0
-          ],
-          [
-            1997.0,
-            620.0,
-            2152.0,
-            691.0
-          ],
-          [
-            357.0,
-            913.0,
-            2145.0,
-            968.0
-          ],
-          [
-            296.0,
-            982.0,
-            639.0,
-            1030.0
-          ],
-          [
-            868.0,
-            979.0,
-            1092.0,
-            1037.0
-          ],
-          [
-            894.0,
-            1230.0,
-            905.0,
-            1240.0
-          ],
-          [
-            288.0,
-            1295.0,
-            470.0,
-            1362.0
-          ],
-          [
-            289.0,
-            1925.0,
-            535.0,
-            1987.0
-          ],
-          [
-            355.0,
-            1994.0,
-            1601.0,
-            2053.0
-          ],
-          [
-            292.0,
-            2358.0,
-            1065.0,
-            2420.0
-          ],
-          [
-            577.0,
-            2721.0,
-            769.0,
-            2783.0
-          ],
-          [
-            290.0,
-            2732.0,
-            354.0,
-            2780.0
-          ],
-          [
-            1382.0,
-            3008.0,
-            1394.0,
-            3017.0
-          ],
-          [
-            296.0,
-            3086.0,
-            1145.0,
-            3143.0
-          ],
-          [
-            566.4671630859375,
-            456.8185729980469,
-            1685.4927978515625,
-            842.083984375
-          ],
-          [
-            572.0557861328125,
-            1417.4375,
-            1863.8209228515625,
-            1867.26220703125
-          ],
-          [
-            887.96142578125,
-            2843.88671875,
-            1540.463134765625,
-            3010.88916015625
-          ],
-          [
-            613.898193359375,
-            2116.576416015625,
-            1817.653564453125,
-            2292.171630859375
-          ],
-          [
-            638.6220703125,
-            2485.9267578125,
-            1796.353515625,
-            2652.45703125
-          ],
-          [
-            881.4832763671875,
-            1095.41845703125,
-            1550.3367919921875,
-            1230.69775390625
-          ],
-          [
-            644.6868896484375,
-            980.1839599609375,
-            874.14794921875,
-            1032.6971435546875
-          ],
-          [
-            351.9786376953125,
-            2731.4150390625,
-            579.7784423828125,
-            2773.4501953125
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\left|P_n-\\sum_{k=1}^n\\frac{\\mu(k)}{k^2}\\right|&=\\left|\\sum_{k=1}^n\\mu(k)\\left(\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2-\\frac{1}{k^2}\\right)\\right|\\\\&\\leq\\sum_{k=1}^n\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            566.4671630859375,
-            456.8185729980469,
-            1685.4927978515625,
-            842.083984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}\\frac{n}{k}-1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor\\leq\\frac{n}{k}&\\Rightarrow\\frac{n^2}{k^2}-\\frac{2n}{k}+1<\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{n^2}{k^2}\\\\&\\Rightarrow\\frac{1}{k^2}-\\frac{2}{kn}+\\frac{1}{n^2}<\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\leq\\frac{1}{k^2}\\\\&\\Rightarrow0\\leq\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2<\\frac{2}{kn}-\\frac{1}{n^2},\\end{aligned}",
-          "formula_region_id": 2,
-          "dt_polys": [
-            572.0557861328125,
-            1417.4375,
-            1863.8209228515625,
-            1867.26220703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\lim_{n\\to+\\infty}\\left(\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}\\right)=0,",
-          "formula_region_id": 3,
-          "dt_polys": [
-            887.96142578125,
-            2843.88671875,
-            1540.463134765625,
-            3010.88916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|P_{n}-\\sum_{k=1}^{n}\\frac{\\mu(k)}{k^{2}}\\right|<\\sum_{k=1}^{n}\\left(\\frac{2}{nk}-\\frac{1}{n^{2}}\\right)=\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}-\\frac{1}{n}.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            613.898193359375,
-            2116.576416015625,
-            1817.653564453125,
-            2292.171630859375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{2}{n}\\sum_{k=1}^{n}\\frac{1}{k}<\\frac{2}{n}\\left(1+\\int_{1}^{n}\\frac{1}{t}dt\\right)=\\frac{2}{n}(\\log n+1)\\rightarrow0.",
-          "formula_region_id": 5,
-          "dt_polys": [
-            638.6220703125,
-            2485.9267578125,
-            1796.353515625,
-            2652.45703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|\\frac{1}{k^2}-\\frac{1}{n^2}\\left\\lfloor\\frac{n}{k}\\right\\rfloor^2\\right|<\\frac{2}{nk}-\\frac{1}{n^2}.",
-          "formula_region_id": 6,
-          "dt_polys": [
-            881.4832763671875,
-            1095.41845703125,
-            1550.3367919921875,
-            1230.69775390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "1\\leq k\\leq n",
-          "formula_region_id": 7,
-          "dt_polys": [
-            644.6868896484375,
-            980.1839599609375,
-            874.14794921875,
-            1032.6971435546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\rightarrow+\\infty",
-          "formula_region_id": 8,
-          "dt_polys": [
-            351.9786376953125,
-            2731.4150390625,
-            579.7784423828125,
-            2773.4501953125
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -1771,7 +557,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

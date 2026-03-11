@@ -9,276 +9,465 @@
           "block_content": "2080",
           "block_bbox": [
             79,
-            66,
-            111,
-            78
+            67,
+            116,
+            83
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              79.0,
+              67.0
+            ],
+            [
+              115.0,
+              67.0
+            ],
+            [
+              115.0,
+              82.0
+            ],
+            [
+              79.0,
+              82.0
+            ]
+          ]
         },
         {
           "block_label": "header",
           "block_content": "Y. Sun, P.S.P. Tse/Journal of Computational Physics 230 (2011) 2076–2094",
           "block_bbox": [
-            328,
-            66,
-            765,
-            81
+            327,
+            67,
+            771,
+            85
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              327.0,
+              67.0
+            ],
+            [
+              770.0,
+              67.0
+            ],
+            [
+              770.0,
+              84.0
+            ],
+            [
+              327.0,
+              84.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\partial_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l}}{\\Delta t},\\quad\\overline{{\\partial}}_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l-1}}{2\\Delta t},\\quad\\partial_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i j,k}^{l}}{\\Delta x_{1}},\\quad\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i-1j,k}^{l}}{2\\Delta x_{1}},",
+          "block_label": "display_formula",
+          "block_content": " $$ \\partial_{t}z_{i,j,k}^{l}=\\frac{z_{i,j,k}^{l+1}-z_{i,j,k}^{l}}{\\Delta t},\\quad\\overline{\\partial}_{t}z_{i,j,k}^{l}=\\frac{z_{i,j,k}^{l+1}-z_{i,j,k}^{l-1}}{2\\Delta t},\\quad\\partial_{x_{1}}z_{i,j,k}^{l}=\\frac{z_{i+1,j,k}^{l}-z_{i,j,k}^{l}}{\\Delta x_{1}},\\quad\\overline{\\partial}_{x_{1}}z_{i,j,k}^{l}=\\frac{z_{i+1,j,k}^{l}-z_{i-1,j,k}^{l}}{2\\Delta x_{1}}, $$ ",
           "block_bbox": [
             124,
             103,
-            819,
-            149
+            822,
+            153
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              124.0,
+              103.0
+            ],
+            [
+              822.0,
+              103.0
+            ],
+            [
+              822.0,
+              153.0
+            ],
+            [
+              124.0,
+              153.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "where the difference operators $\\partial_{t}$ ,$\\overline{{\\partial}}_{t}$ are the discretization of $\\frac{\\partial}{\\partial t}$ and the difference operators $\\partial_{x_{1}},\\overline{{\\partial}}_{x_{1}}$ are the discretization of $\\frac{\\partial}{\\partial x_{1}}$ . Via these notations and the properties of the difference operators $3.^{6}$ we present the statement of the local/global conservation laws for the different numerical methods.\n",
+          "block_content": "where the difference operators $\\partial_t$, $\\overline{\\partial}_t$ are the discretization of $\\frac{\\partial}{\\partial t}$, and the difference operators $\\partial_{x_1}$, $\\overline{\\partial}_{x_1}$ are the discretization of $\\frac{\\partial}{\\partial x_1}$. Via these notations and the properties of the difference operators, we present the statement of the local/global conservation laws for the different numerical methods.",
           "block_bbox": [
             76,
             161,
-            1014,
-            220
+            1019,
+            225
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              76.0,
+              161.0
+            ],
+            [
+              1019.0,
+              161.0
+            ],
+            [
+              1019.0,
+              225.0
+            ],
+            [
+              76.0,
+              225.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "3.1. Symplectic method for Maxwell's equations ",
+          "block_content": "3.1. Symplectic method for Maxwell's equations",
           "block_bbox": [
-            78,
-            245,
-            426,
-            263
+            77,
+            246,
+            431,
+            267
           ],
           "block_id": 4,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              77.0,
+              246.0
+            ],
+            [
+              430.0,
+              246.0
+            ],
+            [
+              430.0,
+              266.0
+            ],
+            [
+              77.0,
+              266.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "The following method is constructed based on the method of lines, i.e. discretizing the Hamiltonian PDEs in space, then applying the symplectic method to the resulting Hamiltonian ODEs (see for example [6,22). Later, we will show the method is also multisymplectic in the corresponding statement of multisymplecticity.\n",
+          "block_content": "The following method is constructed based on the method of lines, i.e. discretizing the Hamiltonian PDEs in space, then applying the symplectic method to the resulting Hamiltonian ODEs (see for example [6,22]). Later, we will show the method is also multisymplectic in the corresponding statement of multisymplicity.",
           "block_bbox": [
-            76,
-            287,
-            1014,
-            347
+            77,
+            288,
+            1018,
+            350
           ],
           "block_id": 5,
-          "block_order": 4
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              77.0,
+              288.0
+            ],
+            [
+              1018.0,
+              288.0
+            ],
+            [
+              1018.0,
+              350.0
+            ],
+            [
+              77.0,
+              350.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "For Maxwell's equations in Hamiltonian form, we use the central finite difference in space (which is leapfrog discretization) and implicit midpoint rule (which is symplectic) in time, it is easy to show that the Hamiltonian formulations in (5) and (7) for Maxwell's equations reduce to the same discretized system,",
           "block_bbox": [
             76,
-            350,
-            1013,
-            410
+            351,
+            1019,
+            414
           ],
           "block_id": 6,
-          "block_order": 5
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              76.0,
+              351.0
+            ],
+            [
+              1019.0,
+              351.0
+            ],
+            [
+              1019.0,
+              414.0
+            ],
+            [
+              76.0,
+              414.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\partial_{t}z_{i j,k}^{l}+M^{-1}K_{1}\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{2}\\overline{{\\partial}}_{x_{2}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{3}\\overline{{\\partial}}_{x_{3}}z_{i j,k}^{l+\\frac{1}{2}}=0,",
+          "block_label": "display_formula",
+          "block_content": " $$ \\partial_{t}z_{i,j,k}^{l}+M^{-1}K_{1}\\overline{\\partial}_{x_{1}}z_{i,j,k}^{l+\\frac{1}{2}}+M^{-1}K_{2}\\overline{\\partial}_{x_{2}}z_{i,j,k}^{l+\\frac{1}{2}}+M^{-1}K_{3}\\overline{\\partial}_{x_{3}}z_{i,j,k}^{l+\\frac{1}{2}}=0, $$ ",
           "block_bbox": [
             124,
-            422,
-            567,
-            452
+            424,
+            570,
+            456
           ],
           "block_id": 7,
-          "block_order": 6
-        },
-        {
-          "block_label": "text",
-          "block_content": "where indices $i,j,$  k denote spatial increments and index l denotes time increment, and matrices $M,K_1,\\cdots$ . as in (10). We refer to this particular discretization as the symplectic method, though it is also multisymplectic.",
-          "block_bbox": [
-            76,
-            464,
-            1014,
-            504
-          ],
-          "block_id": 8,
-          "block_order": 7
-        },
-        {
-          "block_label": "text",
-          "block_content": "The symplectic method (18) is second-order in space and time, and is unconditionally stable. Furthermore, this discrete system preserves two discretized global conservation laws: the first one is the discrete quadratic global conservation law based on (8),",
-          "block_bbox": [
-            76,
-            507,
-            1014,
-            566
-          ],
-          "block_id": 9,
-          "block_order": 8
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\frac{1}{2}\\partial_t\\left[\\mu\\mathbf{H}_{ij,k}^l\\cdot\\mathbf{H}_{ij,k}^l+\\varepsilon\\mathbf{E}_{ij,k}^l\\cdot\\mathbf{E}_{ij,k}^l\\right]=0.",
-          "block_bbox": [
-            124,
-            579,
-            393,
-            615
-          ],
-          "block_id": 10,
-          "block_order": 9
-        },
-        {
-          "block_label": "text",
-          "block_content": "The second discretized global conservation law for symplectic method is based on the helicity Hamiltonian functional (6)",
-          "block_bbox": [
-            77,
-            628,
-            1009,
-            646
-          ],
-          "block_id": 11,
-          "block_order": 10
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\partial_{t}\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i j,k}^{l}\\right]=0,",
-          "block_bbox": [
-            125,
-            658,
-            482,
-            700
-          ],
-          "block_id": 12,
-          "block_order": 11
-        },
-        {
-          "block_label": "text",
-          "block_content": "where $\\widehat{\\nabla}\\times=R_{1}\\partial_{x_{1}}+R_{2}\\partial_{x_{2}}+R_{3}\\partial_{x_{3}}$ . Furthermore, the scheme (18) is proved to be multisymplectic, since it preserves the following multisymplectic conservation law \n",
-          "block_bbox": [
-            76,
-            713,
-            1013,
-            753
-          ],
-          "block_id": 13,
-          "block_order": 12
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}\\partial_{t}\\Big[d\\mathbb{E}_{ij,k}^{l}\\wedge d\\mathbb{H}_{ij,k}^{l}\\Big]+\\partial_{x_{1}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]+\\partial_{x_{2}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]\\\\+\\partial_{x_{3}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]=0.\\end{align*} 21)",
-          "block_bbox": [
-            124,
-            763,
-            991,
-            854
-          ],
-          "block_id": 14,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "Besides the global conservation laws, for the scheme (18) applied to Maxwell's equations, we also have the following local conservation laws based on (13)-(15):",
-          "block_bbox": [
-            77,
-            866,
-            1013,
-            906
-          ],
-          "block_id": 15,
-          "block_order": 14
-        },
-        {
-          "block_label": "text",
-          "block_content": "The discrete quadratic conservation law is ",
-          "block_bbox": [
-            100,
-            909,
-            430,
-            926
-          ],
-          "block_id": 16,
-          "block_order": 15
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}&\\frac{1}{2}\\partial_t\\Big[\\mu\\mathbf{H}^l_{ij,k}\\cdot\\mathbf{H}^l_{ij,k}+\\varepsilon\\mathbf{E}^l_{ij,k}\\cdot\\mathbf{E}^l_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_1}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_2}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]\\\\&\\quad+\\frac{1}{2}\\partial_{x_3}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]=0.\\end{align*}",
-          "block_bbox": [
-            125,
-            938,
-            955,
-            1018
-          ],
-          "block_id": 17,
-          "block_order": 16
-        },
-        {
-          "block_label": "text",
-          "block_content": "The discrete energy conservation law is ",
-          "block_bbox": [
-            78,
-            1031,
-            385,
-            1048
-          ],
-          "block_id": 18,
-          "block_order": 17
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}&\\partial_{t}\\bigg[\\frac{1}{2\\varepsilon}\\mathbf{H}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}^l_{ij,k}+\\frac{1}{2\\mu}\\mathbf{E}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}^l_{ij,k}\\bigg]+\\partial_{x_1}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_1\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}\\bigg]\\\\&\\quad+\\partial_{x_2}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_2\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}\\bigg]+\\partial_{x_3}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_3\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}\\bigg]=0.\\end{align*}",
-          "block_bbox": [
-            124,
-            1059,
-            905,
-            1151
-          ],
-          "block_id": 19,
-          "block_order": 18
-        },
-        {
-          "block_label": "text",
-          "block_content": "The discrete momentum conservation law is ",
-          "block_bbox": [
-            78,
-            1163,
-            421,
-            1180
-          ],
-          "block_id": 20,
-          "block_order": 19
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              124.0,
+              424.0
+            ],
+            [
+              570.0,
+              424.0
+            ],
+            [
+              570.0,
+              456.0
+            ],
+            [
+              124.0,
+              456.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(18)",
           "block_bbox": [
-            981,
+            982,
             430,
-            1012,
-            449
+            1016,
+            452
           ],
-          "block_id": 21,
-          "block_order": null
+          "block_id": 8,
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              982.0,
+              430.0
+            ],
+            [
+              1015.0,
+              430.0
+            ],
+            [
+              1015.0,
+              451.0
+            ],
+            [
+              982.0,
+              451.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "where indices i, j, k denote spatial increments and index l denotes time increment, and matrices M,  $ K_{1}, \\ldots $ as in (10). We refer to this particular discretization as the symplectic method, though it is also multisymplectic.",
+          "block_bbox": [
+            77,
+            466,
+            1018,
+            507
+          ],
+          "block_id": 9,
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              77.0,
+              466.0
+            ],
+            [
+              1018.0,
+              466.0
+            ],
+            [
+              1018.0,
+              507.0
+            ],
+            [
+              77.0,
+              507.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The symplectic method (18) is second-order in space and time, and is unconditionally stable. Furthermore, this discrete system preserves two discretized global conservation laws: the first one is the discrete quadratic global conservation law based on (8),",
+          "block_bbox": [
+            77,
+            508,
+            1018,
+            570
+          ],
+          "block_id": 10,
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              77.0,
+              508.0
+            ],
+            [
+              1018.0,
+              508.0
+            ],
+            [
+              1018.0,
+              570.0
+            ],
+            [
+              77.0,
+              570.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\frac{1}{2}\\partial_{t}\\left[\\mu\\mathbf{H}_{i,j,k}^{l}\\cdot\\mathbf{H}_{i,j,k}^{l}+\\varepsilon\\mathbf{E}_{i,j,k}^{l}\\cdot\\mathbf{E}_{i,j,k}^{l}\\right]=0. $$ ",
+          "block_bbox": [
+            124,
+            580,
+            396,
+            620
+          ],
+          "block_id": 11,
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              124.0,
+              580.0
+            ],
+            [
+              396.0,
+              580.0
+            ],
+            [
+              396.0,
+              620.0
+            ],
+            [
+              124.0,
+              620.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(19)",
           "block_bbox": [
             982,
-            589,
-            1012,
-            609
+            590,
+            1015,
+            612
           ],
-          "block_id": 22,
-          "block_order": null
+          "block_id": 12,
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              982.0,
+              590.0
+            ],
+            [
+              1014.0,
+              590.0
+            ],
+            [
+              1014.0,
+              611.0
+            ],
+            [
+              982.0,
+              611.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The second discretized global conservation law for symplectic method is based on the helicity Hamiltonian functional (6)",
+          "block_bbox": [
+            76,
+            629,
+            1013,
+            651
+          ],
+          "block_id": 13,
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              76.0,
+              629.0
+            ],
+            [
+              1013.0,
+              629.0
+            ],
+            [
+              1013.0,
+              651.0
+            ],
+            [
+              76.0,
+              651.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\partial_{t}\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i,j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i,j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i,j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i,j,k}^{l}\\right]=0, $$ ",
+          "block_bbox": [
+            125,
+            659,
+            483,
+            705
+          ],
+          "block_id": 14,
+          "block_order": 13,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              125.0,
+              659.0
+            ],
+            [
+              483.0,
+              659.0
+            ],
+            [
+              483.0,
+              705.0
+            ],
+            [
+              125.0,
+              705.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -286,35 +475,364 @@
           "block_bbox": [
             982,
             671,
-            1012,
-            689
+            1015,
+            692
           ],
-          "block_id": 23,
-          "block_order": null
+          "block_id": 15,
+          "block_order": 14,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              982.0,
+              671.0
+            ],
+            [
+              1014.0,
+              671.0
+            ],
+            [
+              1014.0,
+              691.0
+            ],
+            [
+              982.0,
+              691.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "where  $ \\widehat{\\nabla} \\times = R_1 \\partial_{x_1} + R_2 \\partial_{x_2} + R_3 \\partial_{x_3} $, Furthermore, the scheme (18) is proved to be multisymplectic, since it preserves the following multisymplectic conservation law",
+          "block_bbox": [
+            76,
+            713,
+            1017,
+            758
+          ],
+          "block_id": 16,
+          "block_order": 15,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              76.0,
+              713.0
+            ],
+            [
+              1017.0,
+              713.0
+            ],
+            [
+              1017.0,
+              758.0
+            ],
+            [
+              76.0,
+              758.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}&\\partial_{t}\\Big[d\\mathbf{E}_{i,j,k}^{l}\\wedge d\\mathbf{H}_{i,j,k}^{l}\\Big]+\\partial_{x_{1}}\\Bigg[\\frac{1}{E}d\\mathbf{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbf{H}_{i,j,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbf{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\Bigg]+\\partial_{x_{2}}\\Bigg[\\frac{1}{E}d\\mathbf{H}_{i j-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbf{H}_{i,j,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbf{E}_{i j-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\Bigg]\\\\&+\\partial_{x_{3}}\\Bigg[\\frac{1}{E}d\\mathbf{H}_{i j,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbf{H}_{i j,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbf{E}_{i j,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\Bigg]=0.\\quad( 夢夢 )\\end{align*} $$ ",
+          "block_bbox": [
+            124,
+            765,
+            990,
+            857
+          ],
+          "block_id": 17,
+          "block_order": 16,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              124.0,
+              765.0
+            ],
+            [
+              990.0,
+              765.0
+            ],
+            [
+              990.0,
+              857.0
+            ],
+            [
+              124.0,
+              857.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
-          "block_content": "$\\begin{align*}\\partial_{t}\\Big[d\\mathbb{E}_{ij,k}^{l}\\wedge d\\mathbb{H}_{ij,k}^{l}\\Big]+\\partial_{x_{1}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]+\\partial_{x_{2}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]\\\\+\\partial_{x_{3}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]=0.\\end{align*}$ 21)",
+          "block_content": "(21)",
           "block_bbox": [
             982,
-            823,
-            1013,
-            843
+            824,
+            1015,
+            845
           ],
-          "block_id": 24,
-          "block_order": null
+          "block_id": 18,
+          "block_order": 17,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              982,
+              824
+            ],
+            [
+              982,
+              844
+            ],
+            [
+              1014,
+              844
+            ],
+            [
+              1014,
+              824
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Besides the global conservation laws, for the scheme (18) applied to Maxwell's equations, we also have the following local conservation laws based on (13)-(15):",
+          "block_bbox": [
+            78,
+            867,
+            1018,
+            911
+          ],
+          "block_id": 19,
+          "block_order": 18,
+          "group_id": 19,
+          "block_polygon_points": [
+            [
+              78.0,
+              867.0
+            ],
+            [
+              1018.0,
+              867.0
+            ],
+            [
+              1018.0,
+              911.0
+            ],
+            [
+              78.0,
+              911.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The discrete quadratic conservation law is",
+          "block_bbox": [
+            100,
+            910,
+            433,
+            930
+          ],
+          "block_id": 20,
+          "block_order": 19,
+          "group_id": 20,
+          "block_polygon_points": [
+            [
+              100,
+              910
+            ],
+            [
+              100,
+              929
+            ],
+            [
+              427,
+              929
+            ],
+            [
+              427,
+              910
+            ],
+            [
+              380,
+              910
+            ],
+            [
+              373,
+              910
+            ],
+            [
+              369,
+              910
+            ],
+            [
+              277,
+              910
+            ],
+            [
+              213,
+              910
+            ],
+            [
+              207,
+              910
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}&\\frac{1}{2}\\partial_{t}\\left[\\mu\\mathbf{H}_{i,j,k}^{l}\\cdot\\mathbf{H}_{i,j,k}^{l}+\\varepsilon\\mathbf{E}_{i,j,k}^{l}\\cdot\\mathbf{E}_{i,j,k}^{l}\\right]+\\frac{1}{2}\\partial_{x_{1}}\\left[\\mathbf{H}_{i,j,k}^{l+\\frac{1}{2}}\\cdot R_{1}\\mathbf{E}_{i-1,j,k}^{l+\\frac{1}{2}}+\\mathbf{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\cdot R_{1}\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\right]+\\frac{1}{2}\\partial_{x_{2}}\\left[\\mathbf{H}_{i,j,k}^{l+\\frac{1}{2}}\\cdot R_{2}\\mathbf{E}_{i,j-1,k}^{l+\\frac{1}{2}}+\\mathbf{H}_{i,j-1,k}^{l+\\frac{1}{2}}\\cdot R_{2}\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\right]\\\\&+\\frac{1}{2}\\partial_{x_{3}}\\left[\\mathbf{H}_{i,j,k}^{l+\\frac{1}{2}}\\cdot R_{3}\\mathbf{E}_{i,j,k-1}^{l+\\frac{1}{2}}+\\mathbf{H}_{i,j,k-1}^{l+\\frac{1}{2}}\\cdot R_{3}\\mathbf{E}_{i,j,k}^{l+\\frac{1}{2}}\\right]=0.\\end{align*} $$ ",
+          "block_bbox": [
+            125,
+            939,
+            957,
+            1021
+          ],
+          "block_id": 21,
+          "block_order": 20,
+          "group_id": 21,
+          "block_polygon_points": [
+            [
+              125.0,
+              939.0
+            ],
+            [
+              957.0,
+              939.0
+            ],
+            [
+              957.0,
+              1021.0
+            ],
+            [
+              125.0,
+              1021.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(22)",
           "block_bbox": [
             982,
-            991,
-            1012,
-            1011
+            992,
+            1015,
+            1014
+          ],
+          "block_id": 22,
+          "block_order": 21,
+          "group_id": 22,
+          "block_polygon_points": [
+            [
+              982.0,
+              992.0
+            ],
+            [
+              1014.0,
+              992.0
+            ],
+            [
+              1014.0,
+              1013.0
+            ],
+            [
+              982.0,
+              1013.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The discrete energy conservation law is",
+          "block_bbox": [
+            77,
+            1032,
+            388,
+            1053
+          ],
+          "block_id": 23,
+          "block_order": 22,
+          "group_id": 23,
+          "block_polygon_points": [
+            [
+              77.0,
+              1032.0
+            ],
+            [
+              387.0,
+              1032.0
+            ],
+            [
+              387.0,
+              1052.0
+            ],
+            [
+              77.0,
+              1052.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}\\partial_{t}&\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i j,k}^{l}\\right]+\\partial_{x_{1}}\\left[\\frac{1}{2\\varepsilon}\\partial_{t}\\mathbf{H}_{i j,k}^{l}\\cdot R_{1}\\mathbf{H}_{i-1,j,k}^{l+\\frac{1}{2}}+\\frac{1}{2\\mu}\\partial_{t}\\mathbf{E}_{i j,k}^{l}\\cdot R_{1}\\mathbf{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\right]\\\\&+\\partial_{x_{2}}\\left[\\frac{1}{2\\varepsilon}\\partial_{t}\\mathbf{H}_{i j,k}^{l}\\cdot R_{2}\\mathbf{H}_{i j-1,k}^{l+\\frac{1}{2}}+\\frac{1}{2\\mu}\\partial_{t}\\mathbf{E}_{i j,k}^{l}\\cdot R_{2}\\mathbf{E}_{i j-1,k}^{l+\\frac{1}{2}}\\right]+\\partial_{x_{3}}\\left[\\frac{1}{2\\varepsilon}\\partial_{t}\\mathbf{H}_{i j,k}^{l}\\cdot R_{3}\\mathbf{H}_{i j,k-1}^{l+\\frac{1}{2}}+\\frac{1}{2\\mu}\\partial_{t}\\mathbf{E}_{i j,k}^{l}\\cdot R_{3}\\mathbf{E}_{i j,k-1}^{l+\\frac{1}{2}}\\right]=0.\\end{align*} $$ ",
+          "block_bbox": [
+            126,
+            1060,
+            909,
+            1154
+          ],
+          "block_id": 24,
+          "block_order": 23,
+          "group_id": 24,
+          "block_polygon_points": [
+            [
+              126.0,
+              1060.0
+            ],
+            [
+              909.0,
+              1060.0
+            ],
+            [
+              909.0,
+              1154.0
+            ],
+            [
+              126.0,
+              1154.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The discrete momentum conservation law is",
+          "block_bbox": [
+            77,
+            1164,
+            426,
+            1185
           ],
           "block_id": 25,
-          "block_order": null
+          "block_order": 24,
+          "group_id": 25,
+          "block_polygon_points": [
+            [
+              77.0,
+              1164.0
+            ],
+            [
+              425.0,
+              1164.0
+            ],
+            [
+              425.0,
+              1184.0
+            ],
+            [
+              77.0,
+              1184.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
@@ -322,3326 +840,204 @@
           "block_bbox": [
             982,
             1119,
-            1012,
-            1138
+            1015,
+            1141
           ],
           "block_id": 26,
-          "block_order": null
+          "block_order": 25,
+          "group_id": 26,
+          "block_polygon_points": [
+            [
+              982.0,
+              1119.0
+            ],
+            [
+              1014.0,
+              1119.0
+            ],
+            [
+              1014.0,
+              1140.0
+            ],
+            [
+              982.0,
+              1140.0
+            ]
+          ]
         },
         {
           "block_label": "footnote",
-          "block_content": "6et  andarethefuctona d $i,\\partial,$ ∂ are the difrnce opeaors, th \n$\\begin{align*}&\\partial[q_i p_i]=q_{i+1}\\partial p_i+\\partial q_i p_i=\\partial q_i p_{i+1}+q_i\\partial p_i,\\\\&\\partial[q_{i+1}p_i]=\\partial q_{i+1}p_{i+1}+q_{i+1}\\partial p_i,\\\\&\\overline{\\partial}[q_i p_i]=\\overline{\\partial}q_i p_{i+1}+q_{i-1}\\overline{\\partial}p_i=\\overline{\\partial}p_i q_{i+1}+p_{i-1}\\overline{\\partial}q_i,\\\\&\\overline{\\partial}[q_i p_{i+1}]=q_{i+1}\\overline{\\partial}p_{i+1}+\\overline{\\partial}q_i p_i.\\end{align*}$ \n",
+          "block_content": " $ ^{6} $ Let  $ p_{i} $ and  $ q_{i} $ are the functions at grid i,  $ \\partial $,  $ \\overline{\\partial} $ are the difference operators, then",
           "block_bbox": [
             85,
             1265,
-            572,
-            1377
+            578,
+            1286
           ],
           "block_id": 27,
-          "block_order": null
+          "block_order": null,
+          "group_id": 27,
+          "block_polygon_points": [
+            [
+              85.0,
+              1265.0
+            ],
+            [
+              578.0,
+              1265.0
+            ],
+            [
+              578.0,
+              1286.0
+            ],
+            [
+              85.0,
+              1286.0
+            ]
+          ]
+        },
+        {
+          "block_label": "footnote",
+          "block_content": " $ \\partial[q_i p_i] = q_{i+1} \\partial p_i + \\partial q_i p_i = \\partial q_i p_{i+1} + q_i \\partial p_i, $",
+          "block_bbox": [
+            127,
+            1295,
+            385,
+            1314
+          ],
+          "block_id": 28,
+          "block_order": null,
+          "group_id": 28,
+          "block_polygon_points": [
+            [
+              127.0,
+              1295.0
+            ],
+            [
+              384.0,
+              1295.0
+            ],
+            [
+              384.0,
+              1313.0
+            ],
+            [
+              127.0,
+              1313.0
+            ]
+          ]
+        },
+        {
+          "block_label": "footnote",
+          "block_content": " $ \\partial[q_{i+1}p_i] = \\partial q_{i+1}p_{i+1} + q_{i+1} \\partial p_i, $",
+          "block_bbox": [
+            127,
+            1315,
+            315,
+            1335
+          ],
+          "block_id": 29,
+          "block_order": null,
+          "group_id": 29,
+          "block_polygon_points": [
+            [
+              127.0,
+              1315.0
+            ],
+            [
+              314.0,
+              1315.0
+            ],
+            [
+              314.0,
+              1334.0
+            ],
+            [
+              127.0,
+              1334.0
+            ]
+          ]
+        },
+        {
+          "block_label": "footnote",
+          "block_content": " $ \\overline{\\partial}[q_i p_i] = \\overline{\\partial} q_i p_{i+1} + q_{i-1} \\overline{\\partial} p_i = \\overline{\\partial} p_i q_{i+1} + p_{i-1} \\overline{\\partial} q_i, $",
+          "block_bbox": [
+            127,
+            1336,
+            408,
+            1356
+          ],
+          "block_id": 30,
+          "block_order": null,
+          "group_id": 30,
+          "block_polygon_points": [
+            [
+              127.0,
+              1336.0
+            ],
+            [
+              407.0,
+              1336.0
+            ],
+            [
+              407.0,
+              1355.0
+            ],
+            [
+              127.0,
+              1355.0
+            ]
+          ]
+        },
+        {
+          "block_label": "footnote",
+          "block_content": " $ \\overline{\\partial}[q_i p_{i+1}] = q_{i+1} \\overline{\\partial} p_{i+1} + \\overline{\\partial} q_i p_i. $",
+          "block_bbox": [
+            127,
+            1359,
+            304,
+            1379
+          ],
+          "block_id": 31,
+          "block_order": null,
+          "group_id": 31,
+          "block_polygon_points": [
+            [
+              127.0,
+              1359.0
+            ],
+            [
+              303.0,
+              1359.0
+            ],
+            [
+              303.0,
+              1378.0
+            ],
+            [
+              127.0,
+              1378.0
+            ]
+          ]
         }
       ],
       "markdown": "",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\partial_{t}\\bigg[\\frac{1}{2\\varepsilon}\\mathbf{H}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}^l_{ij,k}+\\frac{1}{2\\mu}\\mathbf{E}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}^l_{ij,k}\\bigg]+\\partial_{x_1}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_1\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}\\bigg]\\\\&\\quad+\\partial_{x_2}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_2\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}\\bigg]+\\partial_{x_3}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_3\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}\\bigg]=0.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            124.4627685546875,
-            1059.692626953125,
-            905.3968505859375,
-            1151.932373046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l}}{\\Delta t},\\quad\\overline{{\\partial}}_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l-1}}{2\\Delta t},\\quad\\partial_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i j,k}^{l}}{\\Delta x_{1}},\\quad\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i-1j,k}^{l}}{2\\Delta x_{1}},",
-          "formula_region_id": 2,
-          "dt_polys": [
-            124.7752685546875,
-            103.11444091796875,
-            819.0379638671875,
-            149.55987548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\partial_{t}\\Big[d\\mathbb{E}_{ij,k}^{l}\\wedge d\\mathbb{H}_{ij,k}^{l}\\Big]+\\partial_{x_{1}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]+\\partial_{x_{2}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]\\\\+\\partial_{x_{3}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]=0.\\end{align*}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            124.2691650390625,
-            763.3148193359375,
-            991.2149658203125,
-            854.2579345703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\frac{1}{2}\\partial_t\\Big[\\mu\\mathbf{H}^l_{ij,k}\\cdot\\mathbf{H}^l_{ij,k}+\\varepsilon\\mathbf{E}^l_{ij,k}\\cdot\\mathbf{E}^l_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_1}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_2}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]\\\\&\\quad+\\frac{1}{2}\\partial_{x_3}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]=0.\\end{align*}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            125.92266845703125,
-            938.008544921875,
-            955.4182739257812,
-            1018.4013671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i j,k}^{l}\\right]=0,",
-          "formula_region_id": 5,
-          "dt_polys": [
-            125.77531433105469,
-            658.7672119140625,
-            482.10076904296875,
-            700.894775390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}z_{i j,k}^{l}+M^{-1}K_{1}\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{2}\\overline{{\\partial}}_{x_{2}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{3}\\overline{{\\partial}}_{x_{3}}z_{i j,k}^{l+\\frac{1}{2}}=0,",
-          "formula_region_id": 6,
-          "dt_polys": [
-            124.788818359375,
-            422.62286376953125,
-            567.7930908203125,
-            452.57281494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{1}{2}\\partial_t\\left[\\mu\\mathbf{H}_{ij,k}^l\\cdot\\mathbf{H}_{ij,k}^l+\\varepsilon\\mathbf{E}_{ij,k}^l\\cdot\\mathbf{E}_{ij,k}^l\\right]=0.",
-          "formula_region_id": 7,
-          "dt_polys": [
-            124.81753540039062,
-            579.782470703125,
-            393.5332946777344,
-            615.9957275390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\widehat{\\nabla}\\times=R_{1}\\partial_{x_{1}}+R_{2}\\partial_{x_{2}}+R_{3}\\partial_{x_{3}}",
-          "formula_region_id": 8,
-          "dt_polys": [
-            133.0037841796875,
-            712.5980834960938,
-            336.2679443359375,
-            734.1400756835938
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{\\partial}{\\partial x_{1}}",
-          "formula_region_id": 9,
-          "dt_polys": [
-            79.82014465332031,
-            184.6168975830078,
-            97.50404357910156,
-            205.0039825439453
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\partial[q_i p_i]=q_{i+1}\\partial p_i+\\partial q_i p_i=\\partial q_i p_{i+1}+q_i\\partial p_i,\\\\&\\partial[q_{i+1}p_i]=\\partial q_{i+1}p_{i+1}+q_{i+1}\\partial p_i,\\\\&\\overline{\\partial}[q_i p_i]=\\overline{\\partial}q_i p_{i+1}+q_{i-1}\\overline{\\partial}p_i=\\overline{\\partial}p_i q_{i+1}+p_{i-1}\\overline{\\partial}q_i,\\\\&\\overline{\\partial}[q_i p_{i+1}]=q_{i+1}\\overline{\\partial}p_{i+1}+\\overline{\\partial}q_i p_i.\\end{align*}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            126.61572265625,
-            1293.6964111328125,
-            403.58740234375,
-            1375.9715576171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\overline{{\\partial}}_{t}",
-          "formula_region_id": 11,
-          "dt_polys": [
-            341.11090087890625,
-            161.8660888671875,
-            357.5765380859375,
-            180.79888916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}",
-          "formula_region_id": 12,
-          "dt_polys": [
-            315.45233154296875,
-            163.33319091796875,
-            330.70135498046875,
-            180.4520263671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{\\partial}{\\partial t}",
-          "formula_region_id": 13,
-          "dt_polys": [
-            542.7757568359375,
-            163.18576049804688,
-            556.4683837890625,
-            184.22128295898438
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "i,j,",
-          "formula_region_id": 14,
-          "dt_polys": [
-            188.4361572265625,
-            466.05303955078125,
-            210.11968994140625,
-            484.61639404296875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{x_{1}},\\overline{{\\partial}}_{x_{1}}",
-          "formula_region_id": 15,
-          "dt_polys": [
-            776.1187744140625,
-            162.36033630371094,
-            830.9813232421875,
-            181.84483337402344
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "i,\\partial,",
-          "formula_region_id": 16,
-          "dt_polys": [
-            329.3028564453125,
-            1267.1517333984375,
-            359.279541015625,
-            1282.1302490234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "M,K_1,\\cdots",
-          "formula_region_id": 17,
-          "dt_polys": [
-            800.6358642578125,
-            466.548583984375,
-            859.1678466796875,
-            484.1109619140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3.^{6}",
-          "formula_region_id": 18,
-          "dt_polys": [
-            607.7810668945312,
-            180.91799926757812,
-            620.0502319335938,
-            199.17340087890625
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 1089,
       "height": 1486,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9698039293289185,
-            "coordinate": [
-              76.87493896484375,
-              161.40380859375,
-              1014.1456909179688,
-              220.85787963867188
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9683191776275635,
-            "coordinate": [
-              76.62530517578125,
-              507.6041564941406,
-              1014.2453002929688,
-              566.5281982421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9679621458053589,
-            "coordinate": [
-              124.4627685546875,
-              1059.692626953125,
-              905.3968505859375,
-              1151.932373046875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9664055705070496,
-            "coordinate": [
-              76.62380981445312,
-              287.3687438964844,
-              1014.0185546875,
-              347.7121276855469
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9663301706314087,
-            "coordinate": [
-              76.47998046875,
-              350.49114990234375,
-              1013.9434814453125,
-              410.16546630859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.965212881565094,
-            "coordinate": [
-              124.7752685546875,
-              103.11444091796875,
-              819.0379638671875,
-              149.55987548828125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.964884877204895,
-            "coordinate": [
-              124.2691650390625,
-              763.3148193359375,
-              991.2149658203125,
-              854.2579345703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9634983539581299,
-            "coordinate": [
-              125.92266845703125,
-              938.008544921875,
-              955.4182739257812,
-              1018.4013671875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9593145251274109,
-            "coordinate": [
-              125.77531433105469,
-              658.7672119140625,
-              482.10076904296875,
-              700.894775390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9554026126861572,
-            "coordinate": [
-              76.63790893554688,
-              713.0149536132812,
-              1013.9952392578125,
-              753.5459594726562
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9521547555923462,
-            "coordinate": [
-              76.25518798828125,
-              464.9705810546875,
-              1014.2843627929688,
-              504.3011474609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.950459361076355,
-            "coordinate": [
-              124.788818359375,
-              422.62286376953125,
-              567.7930908203125,
-              452.57281494140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9492836594581604,
-            "coordinate": [
-              77.33111572265625,
-              866.822265625,
-              1013.9318237304688,
-              906.88623046875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9491612315177917,
-            "coordinate": [
-              124.81753540039062,
-              579.782470703125,
-              393.5332946777344,
-              615.9957275390625
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.9210540056228638,
-            "coordinate": [
-              78.46437072753906,
-              245.5340576171875,
-              426.5263671875,
-              263.1795654296875
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.9112013578414917,
-            "coordinate": [
-              328.0888977050781,
-              66.34173583984375,
-              765.285400390625,
-              81.16793823242188
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.909630298614502,
-            "coordinate": [
-              982.150146484375,
-              1119.1748046875,
-              1012.977783203125,
-              1138.9619140625
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9085435271263123,
-            "coordinate": [
-              982.1767578125,
-              823.4500732421875,
-              1013.016357421875,
-              843.0450439453125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9084919691085815,
-            "coordinate": [
-              982.060302734375,
-              991.8487548828125,
-              1012.703369140625,
-              1011.583984375
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9051715135574341,
-            "coordinate": [
-              982.1094970703125,
-              589.7979736328125,
-              1012.60205078125,
-              609.5167236328125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9050869941711426,
-            "coordinate": [
-              981.8599243164062,
-              430.136474609375,
-              1012.9317016601562,
-              449.4320068359375
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9040486812591553,
-            "coordinate": [
-              982.506103515625,
-              671.048095703125,
-              1012.462890625,
-              689.910888671875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9039296507835388,
-            "coordinate": [
-              77.106689453125,
-              628.3724365234375,
-              1009.77978515625,
-              646.9498291015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9012783765792847,
-            "coordinate": [
-              78.01921081542969,
-              1031.6072998046875,
-              385.74871826171875,
-              1048.7567138671875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8986567258834839,
-            "coordinate": [
-              78.47647094726562,
-              1163.3369140625,
-              421.9715881347656,
-              1180.37060546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8965004682540894,
-            "coordinate": [
-              133.0037841796875,
-              712.5980834960938,
-              336.2679443359375,
-              734.1400756835938
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8860738277435303,
-            "coordinate": [
-              100.70651245117188,
-              909.295654296875,
-              430.0387268066406,
-              926.382080078125
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8162524104118347,
-            "coordinate": [
-              79.76116943359375,
-              66.87586975097656,
-              111.4986572265625,
-              78.87480163574219
-            ]
-          },
-          {
-            "cls_id": 11,
-            "label": "footnote",
-            "score": 0.6900184750556946,
-            "coordinate": [
-              85.66368103027344,
-              1265.9755859375,
-              572.2383422851562,
-              1377.688232421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6504970788955688,
-            "coordinate": [
-              79.82014465332031,
-              184.6168975830078,
-              97.50404357910156,
-              205.0039825439453
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6331332921981812,
-            "coordinate": [
-              126.61572265625,
-              1293.6964111328125,
-              403.58740234375,
-              1375.9715576171875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6048467755317688,
-            "coordinate": [
-              341.11090087890625,
-              161.8660888671875,
-              357.5765380859375,
-              180.79888916015625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5851647257804871,
-            "coordinate": [
-              315.45233154296875,
-              163.33319091796875,
-              330.70135498046875,
-              180.4520263671875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5641839504241943,
-            "coordinate": [
-              542.7757568359375,
-              163.18576049804688,
-              556.4683837890625,
-              184.22128295898438
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.5338188409805298,
-            "coordinate": [
-              985.9205322265625,
-              629.0755615234375,
-              1008.2791748046875,
-              648.1339111328125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.4092220664024353,
-            "coordinate": [
-              188.4361572265625,
-              466.05303955078125,
-              210.11968994140625,
-              484.61639404296875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.37196680903434753,
-            "coordinate": [
-              776.1187744140625,
-              162.36033630371094,
-              830.9813232421875,
-              181.84483337402344
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.3626577854156494,
-            "coordinate": [
-              329.3028564453125,
-              1267.1517333984375,
-              359.279541015625,
-              1282.1302490234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.33478739857673645,
-            "coordinate": [
-              800.6358642578125,
-              466.548583984375,
-              859.1678466796875,
-              484.1109619140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.3199446499347687,
-            "coordinate": [
-              607.7810668945312,
-              180.91799926757812,
-              620.0502319335938,
-              199.17340087890625
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              78,
-              65
-            ],
-            [
-              116,
-              65
-            ],
-            [
-              116,
-              83
-            ],
-            [
-              78,
-              83
-            ]
-          ],
-          [
-            [
-              328,
-              65
-            ],
-            [
-              767,
-              66
-            ],
-            [
-              767,
-              83
-            ],
-            [
-              328,
-              82
-            ]
-          ],
-          [
-            [
-              80,
-              161
-            ],
-            [
-              775,
-              162
-            ],
-            [
-              775,
-              182
-            ],
-            [
-              80,
-              181
-            ]
-          ],
-          [
-            [
-              826,
-              162
-            ],
-            [
-              1018,
-              160
-            ],
-            [
-              1018,
-              181
-            ],
-            [
-              826,
-              182
-            ]
-          ],
-          [
-            [
-              96,
-              183
-            ],
-            [
-              1014,
-              183
-            ],
-            [
-              1014,
-              200
-            ],
-            [
-              96,
-              200
-            ]
-          ],
-          [
-            [
-              82,
-              206
-            ],
-            [
-              442,
-              206
-            ],
-            [
-              442,
-              220
-            ],
-            [
-              82,
-              220
-            ]
-          ],
-          [
-            [
-              81,
-              246
-            ],
-            [
-              426,
-              246
-            ],
-            [
-              426,
-              263
-            ],
-            [
-              81,
-              263
-            ]
-          ],
-          [
-            [
-              103,
-              286
-            ],
-            [
-              1015,
-              287
-            ],
-            [
-              1015,
-              307
-            ],
-            [
-              103,
-              306
-            ]
-          ],
-          [
-            [
-              79,
-              308
-            ],
-            [
-              1016,
-              307
-            ],
-            [
-              1016,
-              327
-            ],
-            [
-              79,
-              328
-            ]
-          ],
-          [
-            [
-              79,
-              329
-            ],
-            [
-              675,
-              329
-            ],
-            [
-              675,
-              349
-            ],
-            [
-              79,
-              349
-            ]
-          ],
-          [
-            [
-              102,
-              348
-            ],
-            [
-              1016,
-              349
-            ],
-            [
-              1016,
-              369
-            ],
-            [
-              102,
-              368
-            ]
-          ],
-          [
-            [
-              81,
-              371
-            ],
-            [
-              1016,
-              371
-            ],
-            [
-              1016,
-              389
-            ],
-            [
-              81,
-              389
-            ]
-          ],
-          [
-            [
-              79,
-              391
-            ],
-            [
-              592,
-              392
-            ],
-            [
-              592,
-              412
-            ],
-            [
-              79,
-              411
-            ]
-          ],
-          [
-            [
-              978,
-              427
-            ],
-            [
-              1019,
-              427
-            ],
-            [
-              1019,
-              454
-            ],
-            [
-              978,
-              454
-            ]
-          ],
-          [
-            [
-              81,
-              465
-            ],
-            [
-              798,
-              465
-            ],
-            [
-              798,
-              483
-            ],
-            [
-              81,
-              483
-            ]
-          ],
-          [
-            [
-              859,
-              464
-            ],
-            [
-              1017,
-              462
-            ],
-            [
-              1017,
-              483
-            ],
-            [
-              859,
-              486
-            ]
-          ],
-          [
-            [
-              80,
-              487
-            ],
-            [
-              790,
-              487
-            ],
-            [
-              790,
-              504
-            ],
-            [
-              80,
-              504
-            ]
-          ],
-          [
-            [
-              104,
-              508
-            ],
-            [
-              1016,
-              508
-            ],
-            [
-              1016,
-              525
-            ],
-            [
-              104,
-              525
-            ]
-          ],
-          [
-            [
-              78,
-              528
-            ],
-            [
-              1017,
-              527
-            ],
-            [
-              1017,
-              547
-            ],
-            [
-              78,
-              548
-            ]
-          ],
-          [
-            [
-              76,
-              546
-            ],
-            [
-              135,
-              546
-            ],
-            [
-              135,
-              571
-            ],
-            [
-              76,
-              571
-            ]
-          ],
-          [
-            [
-              978,
-              587
-            ],
-            [
-              1019,
-              587
-            ],
-            [
-              1019,
-              614
-            ],
-            [
-              978,
-              614
-            ]
-          ],
-          [
-            [
-              79,
-              627
-            ],
-            [
-              1012,
-              628
-            ],
-            [
-              1012,
-              648
-            ],
-            [
-              79,
-              647
-            ]
-          ],
-          [
-            [
-              979,
-              667
-            ],
-            [
-              1019,
-              667
-            ],
-            [
-              1019,
-              696
-            ],
-            [
-              979,
-              696
-            ]
-          ],
-          [
-            [
-              78,
-              712
-            ],
-            [
-              133,
-              712
-            ],
-            [
-              133,
-              734
-            ],
-            [
-              78,
-              734
-            ]
-          ],
-          [
-            [
-              334,
-              715
-            ],
-            [
-              1015,
-              715
-            ],
-            [
-              1015,
-              732
-            ],
-            [
-              334,
-              732
-            ]
-          ],
-          [
-            [
-              81,
-              738
-            ],
-            [
-              395,
-              738
-            ],
-            [
-              395,
-              752
-            ],
-            [
-              81,
-              752
-            ]
-          ],
-          [
-            [
-              984,
-              819
-            ],
-            [
-              1020,
-              819
-            ],
-            [
-              1020,
-              848
-            ],
-            [
-              984,
-              848
-            ]
-          ],
-          [
-            [
-              81,
-              868
-            ],
-            [
-              1015,
-              868
-            ],
-            [
-              1015,
-              885
-            ],
-            [
-              81,
-              885
-            ]
-          ],
-          [
-            [
-              79,
-              886
-            ],
-            [
-              375,
-              887
-            ],
-            [
-              375,
-              908
-            ],
-            [
-              79,
-              907
-            ]
-          ],
-          [
-            [
-              104,
-              910
-            ],
-            [
-              427,
-              910
-            ],
-            [
-              427,
-              927
-            ],
-            [
-              104,
-              927
-            ]
-          ],
-          [
-            [
-              976,
-              986
-            ],
-            [
-              1020,
-              986
-            ],
-            [
-              1020,
-              1019
-            ],
-            [
-              976,
-              1019
-            ]
-          ],
-          [
-            [
-              80,
-              1031
-            ],
-            [
-              385,
-              1031
-            ],
-            [
-              385,
-              1051
-            ],
-            [
-              80,
-              1051
-            ]
-          ],
-          [
-            [
-              977,
-              1113
-            ],
-            [
-              1020,
-              1113
-            ],
-            [
-              1020,
-              1146
-            ],
-            [
-              977,
-              1146
-            ]
-          ],
-          [
-            [
-              82,
-              1164
-            ],
-            [
-              422,
-              1164
-            ],
-            [
-              422,
-              1181
-            ],
-            [
-              82,
-              1181
-            ]
-          ],
-          [
-            [
-              89,
-              1263
-            ],
-            [
-              574,
-              1264
-            ],
-            [
-              574,
-              1284
-            ],
-            [
-              89,
-              1283
-            ]
-          ],
-          [
-            [
-              124,
-              1059
-            ],
-            [
-              905,
-              1059
-            ],
-            [
-              905,
-              1151
-            ],
-            [
-              124,
-              1151
-            ]
-          ],
-          [
-            [
-              124,
-              103
-            ],
-            [
-              819,
-              103
-            ],
-            [
-              819,
-              149
-            ],
-            [
-              124,
-              149
-            ]
-          ],
-          [
-            [
-              124,
-              763
-            ],
-            [
-              991,
-              763
-            ],
-            [
-              991,
-              854
-            ],
-            [
-              124,
-              854
-            ]
-          ],
-          [
-            [
-              125,
-              938
-            ],
-            [
-              955,
-              938
-            ],
-            [
-              955,
-              1018
-            ],
-            [
-              125,
-              1018
-            ]
-          ],
-          [
-            [
-              125,
-              658
-            ],
-            [
-              482,
-              658
-            ],
-            [
-              482,
-              700
-            ],
-            [
-              125,
-              700
-            ]
-          ],
-          [
-            [
-              124,
-              422
-            ],
-            [
-              567,
-              422
-            ],
-            [
-              567,
-              452
-            ],
-            [
-              124,
-              452
-            ]
-          ],
-          [
-            [
-              124,
-              579
-            ],
-            [
-              393,
-              579
-            ],
-            [
-              393,
-              615
-            ],
-            [
-              124,
-              615
-            ]
-          ],
-          [
-            [
-              133,
-              712
-            ],
-            [
-              336,
-              712
-            ],
-            [
-              336,
-              734
-            ],
-            [
-              133,
-              734
-            ]
-          ],
-          [
-            [
-              79,
-              184
-            ],
-            [
-              97,
-              184
-            ],
-            [
-              97,
-              205
-            ],
-            [
-              79,
-              205
-            ]
-          ],
-          [
-            [
-              126,
-              1293
-            ],
-            [
-              403,
-              1293
-            ],
-            [
-              403,
-              1375
-            ],
-            [
-              126,
-              1375
-            ]
-          ],
-          [
-            [
-              341,
-              161
-            ],
-            [
-              357,
-              161
-            ],
-            [
-              357,
-              180
-            ],
-            [
-              341,
-              180
-            ]
-          ],
-          [
-            [
-              315,
-              163
-            ],
-            [
-              330,
-              163
-            ],
-            [
-              330,
-              180
-            ],
-            [
-              315,
-              180
-            ]
-          ],
-          [
-            [
-              542,
-              163
-            ],
-            [
-              556,
-              163
-            ],
-            [
-              556,
-              184
-            ],
-            [
-              542,
-              184
-            ]
-          ],
-          [
-            [
-              188,
-              466
-            ],
-            [
-              210,
-              466
-            ],
-            [
-              210,
-              484
-            ],
-            [
-              188,
-              484
-            ]
-          ],
-          [
-            [
-              776,
-              162
-            ],
-            [
-              830,
-              162
-            ],
-            [
-              830,
-              181
-            ],
-            [
-              776,
-              181
-            ]
-          ],
-          [
-            [
-              329,
-              1267
-            ],
-            [
-              359,
-              1267
-            ],
-            [
-              359,
-              1282
-            ],
-            [
-              329,
-              1282
-            ]
-          ],
-          [
-            [
-              800,
-              466
-            ],
-            [
-              859,
-              466
-            ],
-            [
-              859,
-              484
-            ],
-            [
-              800,
-              484
-            ]
-          ],
-          [
-            [
-              607,
-              180
-            ],
-            [
-              620,
-              180
-            ],
-            [
-              620,
-              199
-            ],
-            [
-              607,
-              199
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "2080",
-          "Y. Sun, P.S.P. Tse/Journal of Computational Physics 230 (2011) 2076–2094",
-          "where the difference operators, are the discretization of , and the difference operators",
-          "are the discretization of",
-          ". Via these notations and the properties of the difference operators, we present the statement of the local/global conser-",
-          "vation laws for the different numerical methods.",
-          "3.1. Symplectic method for Maxwell's equations",
-          "The following method is constructed based on the method of lines, i.e. discretizing the Hamiltonian PDEs in space, then",
-          "applying the symplectic method to the resulting Hamiltonian ODEs (see for example [6,22). Later, we will show the method",
-          "is also multisymplectic in the corresponding statement of multisymplecticity.",
-          "For Maxwell's equations in Hamiltonian form, we use the central finite difference in space (which is leapfrog discretiza-",
-          "tion) and implicit midpoint rule (which is symplectic) in time, it is easy to show that the Hamiltonian formulations in (5) and",
-          "(7) for Maxwell's equations reduce to the same discretized system,",
-          "(18)",
-          "where indices , k denote spatial increments and index l denotes time increment, and matrices",
-          ". as in (10). We refer",
-          "to this particular discretization as the symplectic method, though it is also multisymplectic.",
-          "The symplectic method (18) is second-order in space and time, and is unconditionally stable. Furthermore, this discrete",
-          "system preserves two discretized global conservation laws: the first one is the discrete quadratic global conservation law based",
-          "on (8),",
-          "(19)",
-          "The second discretized global conservation law for symplectic method is based on the helicity Hamiltonian functional (6)",
-          "(20)",
-          "where",
-          ". Furthermore, the scheme (18) is proved to be multisymplectic, since it preserves the fol-",
-          "lowing multisymplectic conservation law",
-          "21)",
-          "Besides the global conservation laws, for the scheme (18) applied to Maxwell's equations, we also have the following local",
-          "conservation laws based on (13)-(15):",
-          "The discrete quadratic conservation law is",
-          "(22)",
-          "The discrete energy conservation law is",
-          "(23)",
-          "The discrete momentum conservation law is",
-          "6  Let pi and i are the functions at grid  ∂ are the diference operators, then",
-          "\\begin{align*}&\\partial_{t}\\bigg[\\frac{1}{2\\varepsilon}\\mathbf{H}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}^l_{ij,k}+\\frac{1}{2\\mu}\\mathbf{E}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}^l_{ij,k}\\bigg]+\\partial_{x_1}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_1\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}\\bigg]\\\\&\\quad+\\partial_{x_2}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_2\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}\\bigg]+\\partial_{x_3}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_3\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}\\bigg]=0.\\end{align*}",
-          "\\partial_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l}}{\\Delta t},\\quad\\overline{{\\partial}}_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l-1}}{2\\Delta t},\\quad\\partial_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i j,k}^{l}}{\\Delta x_{1}},\\quad\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i-1j,k}^{l}}{2\\Delta x_{1}},",
-          "\\begin{align*}\\partial_{t}\\Big[d\\mathbb{E}_{ij,k}^{l}\\wedge d\\mathbb{H}_{ij,k}^{l}\\Big]+\\partial_{x_{1}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]+\\partial_{x_{2}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]\\\\+\\partial_{x_{3}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]=0.\\end{align*}",
-          "\\begin{align*}&\\frac{1}{2}\\partial_t\\Big[\\mu\\mathbf{H}^l_{ij,k}\\cdot\\mathbf{H}^l_{ij,k}+\\varepsilon\\mathbf{E}^l_{ij,k}\\cdot\\mathbf{E}^l_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_1}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_2}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]\\\\&\\quad+\\frac{1}{2}\\partial_{x_3}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]=0.\\end{align*}",
-          "\\partial_{t}\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i j,k}^{l}\\right]=0,",
-          "\\partial_{t}z_{i j,k}^{l}+M^{-1}K_{1}\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{2}\\overline{{\\partial}}_{x_{2}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{3}\\overline{{\\partial}}_{x_{3}}z_{i j,k}^{l+\\frac{1}{2}}=0,",
-          "\\frac{1}{2}\\partial_t\\left[\\mu\\mathbf{H}_{ij,k}^l\\cdot\\mathbf{H}_{ij,k}^l+\\varepsilon\\mathbf{E}_{ij,k}^l\\cdot\\mathbf{E}_{ij,k}^l\\right]=0.",
-          "\\widehat{\\nabla}\\times=R_{1}\\partial_{x_{1}}+R_{2}\\partial_{x_{2}}+R_{3}\\partial_{x_{3}}",
-          "\\frac{\\partial}{\\partial x_{1}}",
-          "\\begin{align*}&\\partial[q_i p_i]=q_{i+1}\\partial p_i+\\partial q_i p_i=\\partial q_i p_{i+1}+q_i\\partial p_i,\\\\&\\partial[q_{i+1}p_i]=\\partial q_{i+1}p_{i+1}+q_{i+1}\\partial p_i,\\\\&\\overline{\\partial}[q_i p_i]=\\overline{\\partial}q_i p_{i+1}+q_{i-1}\\overline{\\partial}p_i=\\overline{\\partial}p_i q_{i+1}+p_{i-1}\\overline{\\partial}q_i,\\\\&\\overline{\\partial}[q_i p_{i+1}]=q_{i+1}\\overline{\\partial}p_{i+1}+\\overline{\\partial}q_i p_i.\\end{align*}",
-          "\\overline{{\\partial}}_{t}",
-          "\\partial_{t}",
-          "\\frac{\\partial}{\\partial t}",
-          "i,j,",
-          "\\partial_{x_{1}},\\overline{{\\partial}}_{x_{1}}",
-          "i,\\partial,",
-          "M,K_1,\\cdots",
-          "3.^{6}"
-        ],
-        "rec_scores": [
-          0.9998006820678711,
-          0.927922785282135,
-          0.9553807973861694,
-          0.9739733338356018,
-          0.9473892450332642,
-          0.9365925788879395,
-          0.972215473651886,
-          0.9619874954223633,
-          0.9134110808372498,
-          0.9338299632072449,
-          0.9362210631370544,
-          0.9418377876281738,
-          0.9529057145118713,
-          0.9983015656471252,
-          0.9570284485816956,
-          0.9341803193092346,
-          0.9598138928413391,
-          0.949794590473175,
-          0.9418178796768188,
-          0.9180424809455872,
-          0.9984259605407715,
-          0.9605711698532104,
-          0.9983087182044983,
-          0.9994188547134399,
-          0.9498860836029053,
-          0.9634758234024048,
-          0.9981557726860046,
-          0.9649443030357361,
-          0.9559300541877747,
-          0.973761260509491,
-          0.9987820982933044,
-          0.9819797873497009,
-          0.997220516204834,
-          0.9676976799964905,
-          0.8901017308235168,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              78,
-              65
-            ],
-            [
-              116,
-              65
-            ],
-            [
-              116,
-              83
-            ],
-            [
-              78,
-              83
-            ]
-          ],
-          [
-            [
-              328,
-              65
-            ],
-            [
-              767,
-              66
-            ],
-            [
-              767,
-              83
-            ],
-            [
-              328,
-              82
-            ]
-          ],
-          [
-            [
-              80,
-              161
-            ],
-            [
-              775,
-              162
-            ],
-            [
-              775,
-              182
-            ],
-            [
-              80,
-              181
-            ]
-          ],
-          [
-            [
-              826,
-              162
-            ],
-            [
-              1018,
-              160
-            ],
-            [
-              1018,
-              181
-            ],
-            [
-              826,
-              182
-            ]
-          ],
-          [
-            [
-              96,
-              183
-            ],
-            [
-              1014,
-              183
-            ],
-            [
-              1014,
-              200
-            ],
-            [
-              96,
-              200
-            ]
-          ],
-          [
-            [
-              82,
-              206
-            ],
-            [
-              442,
-              206
-            ],
-            [
-              442,
-              220
-            ],
-            [
-              82,
-              220
-            ]
-          ],
-          [
-            [
-              81,
-              246
-            ],
-            [
-              426,
-              246
-            ],
-            [
-              426,
-              263
-            ],
-            [
-              81,
-              263
-            ]
-          ],
-          [
-            [
-              103,
-              286
-            ],
-            [
-              1015,
-              287
-            ],
-            [
-              1015,
-              307
-            ],
-            [
-              103,
-              306
-            ]
-          ],
-          [
-            [
-              79,
-              308
-            ],
-            [
-              1016,
-              307
-            ],
-            [
-              1016,
-              327
-            ],
-            [
-              79,
-              328
-            ]
-          ],
-          [
-            [
-              79,
-              329
-            ],
-            [
-              675,
-              329
-            ],
-            [
-              675,
-              349
-            ],
-            [
-              79,
-              349
-            ]
-          ],
-          [
-            [
-              102,
-              348
-            ],
-            [
-              1016,
-              349
-            ],
-            [
-              1016,
-              369
-            ],
-            [
-              102,
-              368
-            ]
-          ],
-          [
-            [
-              81,
-              371
-            ],
-            [
-              1016,
-              371
-            ],
-            [
-              1016,
-              389
-            ],
-            [
-              81,
-              389
-            ]
-          ],
-          [
-            [
-              79,
-              391
-            ],
-            [
-              592,
-              392
-            ],
-            [
-              592,
-              412
-            ],
-            [
-              79,
-              411
-            ]
-          ],
-          [
-            [
-              978,
-              427
-            ],
-            [
-              1019,
-              427
-            ],
-            [
-              1019,
-              454
-            ],
-            [
-              978,
-              454
-            ]
-          ],
-          [
-            [
-              81,
-              465
-            ],
-            [
-              798,
-              465
-            ],
-            [
-              798,
-              483
-            ],
-            [
-              81,
-              483
-            ]
-          ],
-          [
-            [
-              859,
-              464
-            ],
-            [
-              1017,
-              462
-            ],
-            [
-              1017,
-              483
-            ],
-            [
-              859,
-              486
-            ]
-          ],
-          [
-            [
-              80,
-              487
-            ],
-            [
-              790,
-              487
-            ],
-            [
-              790,
-              504
-            ],
-            [
-              80,
-              504
-            ]
-          ],
-          [
-            [
-              104,
-              508
-            ],
-            [
-              1016,
-              508
-            ],
-            [
-              1016,
-              525
-            ],
-            [
-              104,
-              525
-            ]
-          ],
-          [
-            [
-              78,
-              528
-            ],
-            [
-              1017,
-              527
-            ],
-            [
-              1017,
-              547
-            ],
-            [
-              78,
-              548
-            ]
-          ],
-          [
-            [
-              76,
-              546
-            ],
-            [
-              135,
-              546
-            ],
-            [
-              135,
-              571
-            ],
-            [
-              76,
-              571
-            ]
-          ],
-          [
-            [
-              978,
-              587
-            ],
-            [
-              1019,
-              587
-            ],
-            [
-              1019,
-              614
-            ],
-            [
-              978,
-              614
-            ]
-          ],
-          [
-            [
-              79,
-              627
-            ],
-            [
-              1012,
-              628
-            ],
-            [
-              1012,
-              648
-            ],
-            [
-              79,
-              647
-            ]
-          ],
-          [
-            [
-              979,
-              667
-            ],
-            [
-              1019,
-              667
-            ],
-            [
-              1019,
-              696
-            ],
-            [
-              979,
-              696
-            ]
-          ],
-          [
-            [
-              78,
-              712
-            ],
-            [
-              133,
-              712
-            ],
-            [
-              133,
-              734
-            ],
-            [
-              78,
-              734
-            ]
-          ],
-          [
-            [
-              334,
-              715
-            ],
-            [
-              1015,
-              715
-            ],
-            [
-              1015,
-              732
-            ],
-            [
-              334,
-              732
-            ]
-          ],
-          [
-            [
-              81,
-              738
-            ],
-            [
-              395,
-              738
-            ],
-            [
-              395,
-              752
-            ],
-            [
-              81,
-              752
-            ]
-          ],
-          [
-            [
-              984,
-              819
-            ],
-            [
-              1020,
-              819
-            ],
-            [
-              1020,
-              848
-            ],
-            [
-              984,
-              848
-            ]
-          ],
-          [
-            [
-              81,
-              868
-            ],
-            [
-              1015,
-              868
-            ],
-            [
-              1015,
-              885
-            ],
-            [
-              81,
-              885
-            ]
-          ],
-          [
-            [
-              79,
-              886
-            ],
-            [
-              375,
-              887
-            ],
-            [
-              375,
-              908
-            ],
-            [
-              79,
-              907
-            ]
-          ],
-          [
-            [
-              104,
-              910
-            ],
-            [
-              427,
-              910
-            ],
-            [
-              427,
-              927
-            ],
-            [
-              104,
-              927
-            ]
-          ],
-          [
-            [
-              976,
-              986
-            ],
-            [
-              1020,
-              986
-            ],
-            [
-              1020,
-              1019
-            ],
-            [
-              976,
-              1019
-            ]
-          ],
-          [
-            [
-              80,
-              1031
-            ],
-            [
-              385,
-              1031
-            ],
-            [
-              385,
-              1051
-            ],
-            [
-              80,
-              1051
-            ]
-          ],
-          [
-            [
-              977,
-              1113
-            ],
-            [
-              1020,
-              1113
-            ],
-            [
-              1020,
-              1146
-            ],
-            [
-              977,
-              1146
-            ]
-          ],
-          [
-            [
-              82,
-              1164
-            ],
-            [
-              422,
-              1164
-            ],
-            [
-              422,
-              1181
-            ],
-            [
-              82,
-              1181
-            ]
-          ],
-          [
-            [
-              89,
-              1263
-            ],
-            [
-              574,
-              1264
-            ],
-            [
-              574,
-              1284
-            ],
-            [
-              89,
-              1283
-            ]
-          ],
-          [
-            [
-              124,
-              1059
-            ],
-            [
-              905,
-              1059
-            ],
-            [
-              905,
-              1151
-            ],
-            [
-              124,
-              1151
-            ]
-          ],
-          [
-            [
-              124,
-              103
-            ],
-            [
-              819,
-              103
-            ],
-            [
-              819,
-              149
-            ],
-            [
-              124,
-              149
-            ]
-          ],
-          [
-            [
-              124,
-              763
-            ],
-            [
-              991,
-              763
-            ],
-            [
-              991,
-              854
-            ],
-            [
-              124,
-              854
-            ]
-          ],
-          [
-            [
-              125,
-              938
-            ],
-            [
-              955,
-              938
-            ],
-            [
-              955,
-              1018
-            ],
-            [
-              125,
-              1018
-            ]
-          ],
-          [
-            [
-              125,
-              658
-            ],
-            [
-              482,
-              658
-            ],
-            [
-              482,
-              700
-            ],
-            [
-              125,
-              700
-            ]
-          ],
-          [
-            [
-              124,
-              422
-            ],
-            [
-              567,
-              422
-            ],
-            [
-              567,
-              452
-            ],
-            [
-              124,
-              452
-            ]
-          ],
-          [
-            [
-              124,
-              579
-            ],
-            [
-              393,
-              579
-            ],
-            [
-              393,
-              615
-            ],
-            [
-              124,
-              615
-            ]
-          ],
-          [
-            [
-              133,
-              712
-            ],
-            [
-              336,
-              712
-            ],
-            [
-              336,
-              734
-            ],
-            [
-              133,
-              734
-            ]
-          ],
-          [
-            [
-              79,
-              184
-            ],
-            [
-              97,
-              184
-            ],
-            [
-              97,
-              205
-            ],
-            [
-              79,
-              205
-            ]
-          ],
-          [
-            [
-              126,
-              1293
-            ],
-            [
-              403,
-              1293
-            ],
-            [
-              403,
-              1375
-            ],
-            [
-              126,
-              1375
-            ]
-          ],
-          [
-            [
-              341,
-              161
-            ],
-            [
-              357,
-              161
-            ],
-            [
-              357,
-              180
-            ],
-            [
-              341,
-              180
-            ]
-          ],
-          [
-            [
-              315,
-              163
-            ],
-            [
-              330,
-              163
-            ],
-            [
-              330,
-              180
-            ],
-            [
-              315,
-              180
-            ]
-          ],
-          [
-            [
-              542,
-              163
-            ],
-            [
-              556,
-              163
-            ],
-            [
-              556,
-              184
-            ],
-            [
-              542,
-              184
-            ]
-          ],
-          [
-            [
-              188,
-              466
-            ],
-            [
-              210,
-              466
-            ],
-            [
-              210,
-              484
-            ],
-            [
-              188,
-              484
-            ]
-          ],
-          [
-            [
-              776,
-              162
-            ],
-            [
-              830,
-              162
-            ],
-            [
-              830,
-              181
-            ],
-            [
-              776,
-              181
-            ]
-          ],
-          [
-            [
-              329,
-              1267
-            ],
-            [
-              359,
-              1267
-            ],
-            [
-              359,
-              1282
-            ],
-            [
-              329,
-              1282
-            ]
-          ],
-          [
-            [
-              800,
-              466
-            ],
-            [
-              859,
-              466
-            ],
-            [
-              859,
-              484
-            ],
-            [
-              800,
-              484
-            ]
-          ],
-          [
-            [
-              607,
-              180
-            ],
-            [
-              620,
-              180
-            ],
-            [
-              620,
-              199
-            ],
-            [
-              607,
-              199
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            78.0,
-            65.0,
-            116.0,
-            83.0
-          ],
-          [
-            328.0,
-            65.0,
-            767.0,
-            83.0
-          ],
-          [
-            330.70135498046875,
-            161.0,
-            775.0,
-            182.0
-          ],
-          [
-            826.0,
-            160.0,
-            1018.0,
-            182.0
-          ],
-          [
-            620.0502319335938,
-            183.0,
-            1014.0,
-            200.0
-          ],
-          [
-            82.0,
-            206.0,
-            442.0,
-            220.0
-          ],
-          [
-            81.0,
-            246.0,
-            426.0,
-            263.0
-          ],
-          [
-            103.0,
-            286.0,
-            1015.0,
-            307.0
-          ],
-          [
-            79.0,
-            307.0,
-            1016.0,
-            328.0
-          ],
-          [
-            79.0,
-            329.0,
-            675.0,
-            349.0
-          ],
-          [
-            102.0,
-            348.0,
-            1016.0,
-            369.0
-          ],
-          [
-            81.0,
-            371.0,
-            1016.0,
-            389.0
-          ],
-          [
-            79.0,
-            391.0,
-            592.0,
-            412.0
-          ],
-          [
-            978.0,
-            427.0,
-            1019.0,
-            454.0
-          ],
-          [
-            210.1197052001953,
-            465.0,
-            798.0,
-            483.0
-          ],
-          [
-            859.0,
-            462.0,
-            1017.0,
-            486.0
-          ],
-          [
-            80.0,
-            487.0,
-            790.0,
-            504.0
-          ],
-          [
-            104.0,
-            508.0,
-            1016.0,
-            525.0
-          ],
-          [
-            78.0,
-            527.0,
-            1017.0,
-            548.0
-          ],
-          [
-            76.0,
-            546.0,
-            135.0,
-            571.0
-          ],
-          [
-            978.0,
-            587.0,
-            1019.0,
-            614.0
-          ],
-          [
-            79.0,
-            627.0,
-            1012.0,
-            648.0
-          ],
-          [
-            979.0,
-            667.0,
-            1019.0,
-            696.0
-          ],
-          [
-            78.0,
-            712.0,
-            133.0,
-            734.0
-          ],
-          [
-            334.0,
-            715.0,
-            1015.0,
-            732.0
-          ],
-          [
-            81.0,
-            738.0,
-            395.0,
-            752.0
-          ],
-          [
-            984.0,
-            819.0,
-            1020.0,
-            848.0
-          ],
-          [
-            81.0,
-            868.0,
-            1015.0,
-            885.0
-          ],
-          [
-            79.0,
-            886.0,
-            375.0,
-            908.0
-          ],
-          [
-            104.0,
-            910.0,
-            427.0,
-            927.0
-          ],
-          [
-            976.0,
-            986.0,
-            1020.0,
-            1019.0
-          ],
-          [
-            80.0,
-            1031.0,
-            385.0,
-            1051.0
-          ],
-          [
-            977.0,
-            1113.0,
-            1020.0,
-            1146.0
-          ],
-          [
-            82.0,
-            1164.0,
-            422.0,
-            1181.0
-          ],
-          [
-            359.279541015625,
-            1263.0,
-            574.0,
-            1284.0
-          ],
-          [
-            124.4627685546875,
-            1059.692626953125,
-            905.3968505859375,
-            1151.932373046875
-          ],
-          [
-            124.7752685546875,
-            103.11444091796875,
-            819.0379638671875,
-            149.55987548828125
-          ],
-          [
-            124.2691650390625,
-            763.3148193359375,
-            991.2149658203125,
-            854.2579345703125
-          ],
-          [
-            125.92266845703125,
-            938.008544921875,
-            955.4182739257812,
-            1018.4013671875
-          ],
-          [
-            125.77531433105469,
-            658.7672119140625,
-            482.10076904296875,
-            700.894775390625
-          ],
-          [
-            124.788818359375,
-            422.62286376953125,
-            567.7930908203125,
-            452.57281494140625
-          ],
-          [
-            124.81753540039062,
-            579.782470703125,
-            393.5332946777344,
-            615.9957275390625
-          ],
-          [
-            133.0037841796875,
-            712.5980834960938,
-            336.2679443359375,
-            734.1400756835938
-          ],
-          [
-            79.82014465332031,
-            184.6168975830078,
-            97.50404357910156,
-            205.0039825439453
-          ],
-          [
-            126.61572265625,
-            1293.6964111328125,
-            403.58740234375,
-            1375.9715576171875
-          ],
-          [
-            341.11090087890625,
-            161.8660888671875,
-            357.5765380859375,
-            180.79888916015625
-          ],
-          [
-            315.45233154296875,
-            163.33319091796875,
-            330.70135498046875,
-            180.4520263671875
-          ],
-          [
-            542.7757568359375,
-            163.18576049804688,
-            556.4683837890625,
-            184.22128295898438
-          ],
-          [
-            188.4361572265625,
-            466.05303955078125,
-            210.11968994140625,
-            484.61639404296875
-          ],
-          [
-            776.1187744140625,
-            162.36033630371094,
-            830.9813232421875,
-            181.84483337402344
-          ],
-          [
-            329.3028564453125,
-            1267.1517333984375,
-            359.279541015625,
-            1282.1302490234375
-          ],
-          [
-            800.6358642578125,
-            466.548583984375,
-            859.1678466796875,
-            484.1109619140625
-          ],
-          [
-            607.7810668945312,
-            180.91799926757812,
-            620.0502319335938,
-            199.17340087890625
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\partial_{t}\\bigg[\\frac{1}{2\\varepsilon}\\mathbf{H}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}^l_{ij,k}+\\frac{1}{2\\mu}\\mathbf{E}^l_{ij,k}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}^l_{ij,k}\\bigg]+\\partial_{x_1}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_1\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}\\bigg]\\\\&\\quad+\\partial_{x_2}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_2\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}\\bigg]+\\partial_{x_3}\\bigg[\\frac{1}{2\\varepsilon}\\partial_t\\mathbf{H}^l_{ij,k}\\cdot R_3\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}+\\frac{1}{2\\mu}\\partial_t\\mathbf{E}^l_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}\\bigg]=0.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            124.4627685546875,
-            1059.692626953125,
-            905.3968505859375,
-            1151.932373046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l}}{\\Delta t},\\quad\\overline{{\\partial}}_{t}z_{i j,k}^{l}=\\frac{z_{i j,k}^{l+1}-z_{i j,k}^{l-1}}{2\\Delta t},\\quad\\partial_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i j,k}^{l}}{\\Delta x_{1}},\\quad\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l}=\\frac{z_{i+1j,k}^{l}-z_{i-1j,k}^{l}}{2\\Delta x_{1}},",
-          "formula_region_id": 2,
-          "dt_polys": [
-            124.7752685546875,
-            103.11444091796875,
-            819.0379638671875,
-            149.55987548828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\partial_{t}\\Big[d\\mathbb{E}_{ij,k}^{l}\\wedge d\\mathbb{H}_{ij,k}^{l}\\Big]+\\partial_{x_{1}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{i-1,j,k}^{l+\\frac{1}{2}}\\wedge R_{1}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]+\\partial_{x_{2}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij-1,k}^{l+\\frac{1}{2}}\\wedge R_{2}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]\\\\+\\partial_{x_{3}}\\Big[\\frac{1}{\\varepsilon}d\\mathbb{H}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{H}_{ij,k}^{l+\\frac{1}{2}}+\\frac{1}{\\mu}d\\mathbb{E}_{ij,k-1}^{l+\\frac{1}{2}}\\wedge R_{3}d\\mathbb{E}_{ij,k}^{l+\\frac{1}{2}}\\Big]=0.\\end{align*}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            124.2691650390625,
-            763.3148193359375,
-            991.2149658203125,
-            854.2579345703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\frac{1}{2}\\partial_t\\Big[\\mu\\mathbf{H}^l_{ij,k}\\cdot\\mathbf{H}^l_{ij,k}+\\varepsilon\\mathbf{E}^l_{ij,k}\\cdot\\mathbf{E}^l_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_1}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{i-1j,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{i-1j,k}\\cdot R_1\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]+\\frac{1}{2}\\partial_{x_2}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij-1,k}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij-1,k}\\cdot R_2\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]\\\\&\\quad+\\frac{1}{2}\\partial_{x_3}\\Big[\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k-1}+\\mathbf{H}^{l+\\frac{1}{2}}_{ij,k-1}\\cdot R_3\\mathbf{E}^{l+\\frac{1}{2}}_{ij,k}\\Big]=0.\\end{align*}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            125.92266845703125,
-            938.008544921875,
-            955.4182739257812,
-            1018.4013671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}\\left[\\frac{1}{2\\varepsilon}\\mathbf{H}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{H}_{i j,k}^{l}+\\frac{1}{2\\mu}\\mathbf{E}_{i j,k}^{l}\\cdot\\widehat{\\nabla}\\times\\mathbf{E}_{i j,k}^{l}\\right]=0,",
-          "formula_region_id": 5,
-          "dt_polys": [
-            125.77531433105469,
-            658.7672119140625,
-            482.10076904296875,
-            700.894775390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}z_{i j,k}^{l}+M^{-1}K_{1}\\overline{{\\partial}}_{x_{1}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{2}\\overline{{\\partial}}_{x_{2}}z_{i j,k}^{l+\\frac{1}{2}}+M^{-1}K_{3}\\overline{{\\partial}}_{x_{3}}z_{i j,k}^{l+\\frac{1}{2}}=0,",
-          "formula_region_id": 6,
-          "dt_polys": [
-            124.788818359375,
-            422.62286376953125,
-            567.7930908203125,
-            452.57281494140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{1}{2}\\partial_t\\left[\\mu\\mathbf{H}_{ij,k}^l\\cdot\\mathbf{H}_{ij,k}^l+\\varepsilon\\mathbf{E}_{ij,k}^l\\cdot\\mathbf{E}_{ij,k}^l\\right]=0.",
-          "formula_region_id": 7,
-          "dt_polys": [
-            124.81753540039062,
-            579.782470703125,
-            393.5332946777344,
-            615.9957275390625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\widehat{\\nabla}\\times=R_{1}\\partial_{x_{1}}+R_{2}\\partial_{x_{2}}+R_{3}\\partial_{x_{3}}",
-          "formula_region_id": 8,
-          "dt_polys": [
-            133.0037841796875,
-            712.5980834960938,
-            336.2679443359375,
-            734.1400756835938
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{\\partial}{\\partial x_{1}}",
-          "formula_region_id": 9,
-          "dt_polys": [
-            79.82014465332031,
-            184.6168975830078,
-            97.50404357910156,
-            205.0039825439453
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}&\\partial[q_i p_i]=q_{i+1}\\partial p_i+\\partial q_i p_i=\\partial q_i p_{i+1}+q_i\\partial p_i,\\\\&\\partial[q_{i+1}p_i]=\\partial q_{i+1}p_{i+1}+q_{i+1}\\partial p_i,\\\\&\\overline{\\partial}[q_i p_i]=\\overline{\\partial}q_i p_{i+1}+q_{i-1}\\overline{\\partial}p_i=\\overline{\\partial}p_i q_{i+1}+p_{i-1}\\overline{\\partial}q_i,\\\\&\\overline{\\partial}[q_i p_{i+1}]=q_{i+1}\\overline{\\partial}p_{i+1}+\\overline{\\partial}q_i p_i.\\end{align*}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            126.61572265625,
-            1293.6964111328125,
-            403.58740234375,
-            1375.9715576171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\overline{{\\partial}}_{t}",
-          "formula_region_id": 11,
-          "dt_polys": [
-            341.11090087890625,
-            161.8660888671875,
-            357.5765380859375,
-            180.79888916015625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{t}",
-          "formula_region_id": 12,
-          "dt_polys": [
-            315.45233154296875,
-            163.33319091796875,
-            330.70135498046875,
-            180.4520263671875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\frac{\\partial}{\\partial t}",
-          "formula_region_id": 13,
-          "dt_polys": [
-            542.7757568359375,
-            163.18576049804688,
-            556.4683837890625,
-            184.22128295898438
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "i,j,",
-          "formula_region_id": 14,
-          "dt_polys": [
-            188.4361572265625,
-            466.05303955078125,
-            210.11968994140625,
-            484.61639404296875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\partial_{x_{1}},\\overline{{\\partial}}_{x_{1}}",
-          "formula_region_id": 15,
-          "dt_polys": [
-            776.1187744140625,
-            162.36033630371094,
-            830.9813232421875,
-            181.84483337402344
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "i,\\partial,",
-          "formula_region_id": 16,
-          "dt_polys": [
-            329.3028564453125,
-            1267.1517333984375,
-            359.279541015625,
-            1282.1302490234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "M,K_1,\\cdots",
-          "formula_region_id": 17,
-          "dt_polys": [
-            800.6358642578125,
-            466.548583984375,
-            859.1678466796875,
-            484.1109619140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3.^{6}",
-          "formula_region_id": 18,
-          "dt_polys": [
-            607.7810668945312,
-            180.91799926757812,
-            620.0502319335938,
-            199.17340087890625
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -3650,7 +1046,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

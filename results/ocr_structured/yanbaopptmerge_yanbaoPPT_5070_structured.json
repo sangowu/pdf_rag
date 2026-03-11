@@ -5,31 +5,38 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "text",
+          "block_label": "paragraph_title",
           "block_content": "感谢聆听！",
           "block_bbox": [
-            930,
-            749,
-            1817,
-            983
+            934,
+            756,
+            1818,
+            977
           ],
           "block_id": 0,
-          "block_order": 1
-        },
-        {
-          "block_label": "text",
-          "block_content": "e ",
-          "block_bbox": [
-            1484,
-            1169,
-            2335,
-            1533
-          ],
-          "block_id": 1,
-          "block_order": 2
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              934.0,
+              756.0
+            ],
+            [
+              1818.0,
+              756.0
+            ],
+            [
+              1818.0,
+              977.0
+            ],
+            [
+              934.0,
+              977.0
+            ]
+          ]
         }
       ],
-      "markdown": "感谢聆听！\n\ne ",
+      "markdown": "## 感谢聆听！",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -38,169 +45,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.45286428928375244,
-            "coordinate": [
-              930.4705810546875,
-              749.6807861328125,
-              1817.4498291015625,
-              983.0526123046875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.27423974871635437,
-            "coordinate": [
-              1484.7705078125,
-              1169.483154296875,
-              2335.6669921875,
-              1533.494384765625
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              909,
-              749
-            ],
-            [
-              1829,
-              746
-            ],
-            [
-              1829,
-              990
-            ],
-            [
-              910,
-              993
-            ]
-          ],
-          [
-            [
-              1843,
-              1233
-            ],
-            [
-              2347,
-              1201
-            ],
-            [
-              2364,
-              1472
-            ],
-            [
-              1860,
-              1504
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "感谢聆听！",
-          "e"
-        ],
-        "rec_scores": [
-          0.9865486025810242,
-          0.5128723382949829
-        ],
-        "rec_polys": [
-          [
-            [
-              909,
-              749
-            ],
-            [
-              1829,
-              746
-            ],
-            [
-              1829,
-              990
-            ],
-            [
-              910,
-              993
-            ]
-          ],
-          [
-            [
-              1843,
-              1233
-            ],
-            [
-              2347,
-              1201
-            ],
-            [
-              2364,
-              1472
-            ],
-            [
-              1860,
-              1504
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            909,
-            746,
-            1829,
-            993
-          ],
-          [
-            1843,
-            1201,
-            2364,
-            1504
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -209,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

@@ -5,2993 +5,612 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "paragraph_title",
-          "block_content": "3.2 Power Series ",
-          "block_bbox": [
-            291,
-            196,
-            642,
-            238
-          ],
-          "block_id": 0,
-          "block_order": 1
-        },
-        {
-          "block_label": "text",
-          "block_content": "For future use, we notice that changing x by ax in the equality of the previous example, we get \n",
-          "block_bbox": [
-            285,
-            338,
-            2136,
-            460
-          ],
-          "block_id": 1,
-          "block_order": 2
-        },
-        {
-          "block_label": "formula",
-          "block_content": "e^{ax}=\\sum_{n\\geq0}\\frac{a^n}{n!}x^n ",
-          "block_bbox": [
-            1026,
-            526,
-            1400,
-            687
-          ],
-          "block_id": 2,
-          "block_order": 3
-        },
-        {
-          "block_label": "text",
-          "block_content": "for every $x\\in\\mathbb{R}$ ",
-          "block_bbox": [
-            287,
-            757,
-            658,
-            807
-          ],
-          "block_id": 3,
-          "block_order": 4
-        },
-        {
-          "block_label": "text",
-          "block_content": "A variation of the argument used in Example 3.8 allows us to expand $f(x)=$ $(1+x)^{\\alpha}$ in power series when $|x|<1$ (and for a fixed real number $\\alpha\\neq0)$ ",
-          "block_bbox": [
-            286,
-            824,
-            2139,
-            947
-          ],
-          "block_id": 4,
-          "block_order": 5
-        },
-        {
-          "block_label": "text",
-          "block_content": "To this end, given $\\alpha\\in\\mathbb{R}$ .and $n\\in\\mathbb{Z}\\setminus$ . {0}, we begin by defining the generalized binomial number $\\binom{\\alpha}{n}$ by letting ${\\textstyle{\\binom{\\alpha}{0}}=1}$ and, for $n\\geq1$ ,",
-          "block_bbox": [
-            286,
-            957,
-            2138,
-            1088
-          ],
-          "block_id": 5,
-          "block_order": 6
-        },
-        {
-          "block_label": "formula",
-          "block_content": "{\\binom{\\alpha}{n}}={\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\dots(\\alpha-n+1)}{n!}}.",
-          "block_bbox": [
-            741,
-            1156,
-            1689,
-            1286
-          ],
-          "block_id": 6,
-          "block_order": 7
-        },
-        {
-          "block_label": "text",
-          "block_content": "Lemma 3.9 Given $\\alpha\\in\\mathbb{R}$ . and $n\\in\\mathbb{N}$ , we have:",
-          "block_bbox": [
-            287,
-            1359,
-            1355,
-            1411
-          ],
-          "block_id": 7,
-          "block_order": 8
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{array}{r l}&{(a)\\quad{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n}}+{\\binom{\\alpha-1}{n-1}}.}\\\\ &{(b)\\quad\\frac{n}{\\alpha}{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n-1}},f o r\\quad e v e r y\\quad\\alpha\\neq0.}\\\\ &{(c)\\quad\\left|{\\binom{\\alpha}{n}}\\right|\\leq1\\quad w h e n e v e r\\quad|\\alpha|\\leq1.}\\end{array}",
-          "block_bbox": [
-            287,
-            1447,
-            1090,
-            1681
-          ],
-          "block_id": 8,
-          "block_order": 9
-        },
-        {
-          "block_label": "text",
-          "block_content": "Proof ",
-          "block_bbox": [
-            289,
-            1717,
-            433,
-            1769
-          ],
-          "block_id": 9,
-          "block_order": 10
-        },
-        {
-          "block_label": "text",
-          "block_content": "(a) Is an easy computation:",
-          "block_bbox": [
-            287,
-            1819,
-            916,
-            1870
-          ],
-          "block_id": 10,
-          "block_order": 11
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\begin{align*}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{align*}",
-          "block_bbox": [
-            498,
-            1939,
-            2036,
-            2719
-          ],
-          "block_id": 11,
-          "block_order": 12
-        },
-        {
-          "block_label": "text",
-          "block_content": "(b) Follows immediately from (3.9).",
-          "block_bbox": [
-            283,
-            2786,
-            1113,
-            2840
-          ],
-          "block_id": 12,
-          "block_order": 13
-        },
-        {
-          "block_label": "text",
-          "block_content": "(c)$\\mathrm{I f}\\:|\\alpha|\\leq1$ , it follows from (3.9) and the triangle inequality that ",
-          "block_bbox": [
-            284,
-            2919,
-            1778,
-            2977
-          ],
-          "block_id": 13,
-          "block_order": 14
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(|\\alpha|+1)(|\\alpha|+2)\\ldots(|\\alpha|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\ldots\\cdot n}{n!}=1.",
-          "block_bbox": [
-            477,
-            3042,
-            2042,
-            3179
-          ],
-          "block_id": 14,
-          "block_order": 15
-        },
-        {
           "block_label": "number",
           "block_content": "75",
           "block_bbox": [
-            2090,
+            2086,
             198,
-            2137,
-            236
+            2149,
+            248
           ],
-          "block_id": 15,
-          "block_order": null
+          "block_id": 0,
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              2086.0,
+              198.0
+            ],
+            [
+              2149.0,
+              198.0
+            ],
+            [
+              2149.0,
+              248.0
+            ],
+            [
+              2086.0,
+              248.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "For future use, we notice that changing x by ax in the equality of the previous example, we get",
+          "block_bbox": [
+            283,
+            336,
+            2150,
+            472
+          ],
+          "block_id": 1,
+          "block_order": 1,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              283.0,
+              336.0
+            ],
+            [
+              2150.0,
+              336.0
+            ],
+            [
+              2150.0,
+              472.0
+            ],
+            [
+              283.0,
+              472.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ e^{ax}=\\sum_{n\\geq0}\\frac{a^{n}}{n!}x^{n} $$ ",
+          "block_bbox": [
+            1025,
+            527,
+            1407,
+            695
+          ],
+          "block_id": 2,
+          "block_order": 2,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              1025.0,
+              527.0
+            ],
+            [
+              1407.0,
+              527.0
+            ],
+            [
+              1407.0,
+              695.0
+            ],
+            [
+              1025.0,
+              695.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(3.8)",
           "block_bbox": [
-            2033,
+            2031,
             567,
-            2136,
-            620
+            2143,
+            628
           ],
-          "block_id": 16,
-          "block_order": null
+          "block_id": 3,
+          "block_order": 3,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              2031.0,
+              567.0
+            ],
+            [
+              2143.0,
+              567.0
+            ],
+            [
+              2143.0,
+              628.0
+            ],
+            [
+              2031.0,
+              628.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "for every  $ x \\in \\mathbb{R} $.",
+          "block_bbox": [
+            287,
+            757,
+            663,
+            816
+          ],
+          "block_id": 4,
+          "block_order": 4,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              287.0,
+              757.0
+            ],
+            [
+              663.0,
+              757.0
+            ],
+            [
+              663.0,
+              816.0
+            ],
+            [
+              287.0,
+              816.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "A variation of the argument used in Example 3.8 allows us to expand  $ f(x) = (1 + x)^{\\alpha} $ in power series when  $ |x| < 1 $ (and for a fixed real number  $ \\alpha \\neq 0 $).",
+          "block_bbox": [
+            287,
+            822,
+            2145,
+            954
+          ],
+          "block_id": 5,
+          "block_order": 5,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              286.0086364746094,
+              837.9051513671875
+            ],
+            [
+              2143.008544921875,
+              821.9053955078125
+            ],
+            [
+              2144.000244140625,
+              937.000244140625
+            ],
+            [
+              287.000244140625,
+              953.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "To this end, given  $ \\alpha \\in \\mathbb{R} $ and  $ n \\in \\mathbb{Z} \\setminus \\{0\\} $, we begin by defining the generalized binomial number  $ \\binom{\\alpha}{n} $ by letting  $ \\binom{\\alpha}{0} = 1 $ and, for  $ n \\geq 1 $,",
+          "block_bbox": [
+            285,
+            957,
+            2148,
+            1092
+          ],
+          "block_id": 6,
+          "block_order": 6,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              285.0,
+              957.0
+            ],
+            [
+              2148.0,
+              957.0
+            ],
+            [
+              2148.0,
+              1092.0
+            ],
+            [
+              285.0,
+              1092.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\binom{\\alpha}{n}=\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)}{n!}. $$ ",
+          "block_bbox": [
+            743,
+            1153,
+            1694,
+            1294
+          ],
+          "block_id": 7,
+          "block_order": 7,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              743.0,
+              1153.0
+            ],
+            [
+              1694.0,
+              1153.0
+            ],
+            [
+              1694.0,
+              1294.0
+            ],
+            [
+              743.0,
+              1294.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(3.9)",
           "block_bbox": [
-            2033,
+            2031,
             1198,
-            2136,
-            1250
+            2143,
+            1257
+          ],
+          "block_id": 8,
+          "block_order": 8,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              2031.0,
+              1198.0
+            ],
+            [
+              2143.0,
+              1198.0
+            ],
+            [
+              2143.0,
+              1257.0
+            ],
+            [
+              2031.0,
+              1257.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Lemma 3.9 Given  $ \\alpha \\in \\mathbb{R} $ and  $ n \\in \\mathbb{N} $, we have:",
+          "block_bbox": [
+            285,
+            1358,
+            1363,
+            1420
+          ],
+          "block_id": 9,
+          "block_order": 9,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              285.0,
+              1358.0
+            ],
+            [
+              1363.0,
+              1358.0
+            ],
+            [
+              1363.0,
+              1420.0
+            ],
+            [
+              285.0,
+              1420.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(a)  $ \\binom{\\alpha}{n} = \\binom{\\alpha-1}{n} + \\binom{\\alpha-1}{n-1}. $",
+          "block_bbox": [
+            287,
+            1446,
+            866,
+            1532
+          ],
+          "block_id": 10,
+          "block_order": 10,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              287.0,
+              1446.0
+            ],
+            [
+              866.0,
+              1446.0
+            ],
+            [
+              866.0,
+              1532.0
+            ],
+            [
+              287.0,
+              1532.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(b)  $ \\frac{n}{\\alpha}\\binom{\\alpha}{n}=\\binom{\\alpha-1}{n-1} $, for every  $ \\alpha\\neq0 $.",
+          "block_bbox": [
+            290,
+            1536,
+            1091,
+            1611
+          ],
+          "block_id": 11,
+          "block_order": 11,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              290.0,
+              1536.0
+            ],
+            [
+              1091.0,
+              1536.0
+            ],
+            [
+              1091.0,
+              1611.0
+            ],
+            [
+              290.0,
+              1611.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(c)  $ \\left|\\binom{\\alpha}{n}\\right|\\leq1 $ whenever  $ |\\alpha|\\leq1 $.",
+          "block_bbox": [
+            290,
+            1614,
+            1022,
+            1687
+          ],
+          "block_id": 12,
+          "block_order": 12,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              290.0,
+              1614.0
+            ],
+            [
+              1022.0,
+              1614.0
+            ],
+            [
+              1022.0,
+              1687.0
+            ],
+            [
+              290.0,
+              1687.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "Proof",
+          "block_bbox": [
+            289,
+            1716,
+            441,
+            1781
+          ],
+          "block_id": 13,
+          "block_order": 13,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              289.0,
+              1716.0
+            ],
+            [
+              441.0,
+              1716.0
+            ],
+            [
+              441.0,
+              1781.0
+            ],
+            [
+              289.0,
+              1781.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(a) Is an easy computation:",
+          "block_bbox": [
+            288,
+            1818,
+            924,
+            1881
+          ],
+          "block_id": 14,
+          "block_order": 14,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              288.0,
+              1818.0
+            ],
+            [
+              924.0,
+              1818.0
+            ],
+            [
+              924.0,
+              1881.0
+            ],
+            [
+              288.0,
+              1881.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{aligned}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{aligned} $$ ",
+          "block_bbox": [
+            501,
+            1937,
+            2044,
+            2726
+          ],
+          "block_id": 15,
+          "block_order": 15,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              501.0,
+              1937.0
+            ],
+            [
+              2044.0,
+              1937.0
+            ],
+            [
+              2044.0,
+              2726.0
+            ],
+            [
+              501.0,
+              2726.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(b) Follows immediately from (3.9).",
+          "block_bbox": [
+            284,
+            2785,
+            1119,
+            2852
+          ],
+          "block_id": 16,
+          "block_order": 16,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              284.0,
+              2785.0
+            ],
+            [
+              1119.0,
+              2785.0
+            ],
+            [
+              1119.0,
+              2852.0
+            ],
+            [
+              284.0,
+              2852.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "(c) If  $ |\\alpha| \\leq 1 $, it follows from (3.9) and the triangle inequality that",
+          "block_bbox": [
+            285,
+            2918,
+            1787,
+            2987
           ],
           "block_id": 17,
-          "block_order": null
+          "block_order": 17,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              285.0,
+              2918.0
+            ],
+            [
+              1787.0,
+              2918.0
+            ],
+            [
+              1787.0,
+              2987.0
+            ],
+            [
+              285.0,
+              2987.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(\\left|\\alpha\\right|+1)(\\left|\\alpha\\right|+2)\\cdots(\\left|\\alpha\\right|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\cdots\\cdot n}{n!}=1. $$ ",
+          "block_bbox": [
+            480,
+            3041,
+            2047,
+            3188
+          ],
+          "block_id": 18,
+          "block_order": 18,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              480.0,
+              3041.0
+            ],
+            [
+              2047.0,
+              3041.0
+            ],
+            [
+              2047.0,
+              3188.0
+            ],
+            [
+              480.0,
+              3188.0
+            ]
+          ]
         }
       ],
-      "markdown": "### 3.2 Power Series \n\nFor future use, we notice that changing x by ax in the equality of the previous example, we get \n\n\n\n$$e^{ax}=\\sum_{n\\geq0}\\frac{a^n}{n!}x^n $$\n\nfor every $x\\in\\mathbb{R}$ \n\nA variation of the argument used in Example 3.8 allows us to expand $f(x)=$ $(1+x)^{\\alpha}$ in power series when $|x|<1$ (and for a fixed real number $\\alpha\\neq0)$ \n\nTo this end, given $\\alpha\\in\\mathbb{R}$ .and $n\\in\\mathbb{Z}\\setminus$ . {0}, we begin by defining the generalized binomial number $\\binom{\\alpha}{n}$ by letting ${\\textstyle{\\binom{\\alpha}{0}}=1}$ and, for $n\\geq1$ ,\n\n$${\\binom{\\alpha}{n}}={\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\dots(\\alpha-n+1)}{n!}}.$$\n\nLemma 3.9 Given $\\alpha\\in\\mathbb{R}$ . and $n\\in\\mathbb{N}$ , we have:\n\n$$\\begin{array}{r l}&{(a)\\quad{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n}}+{\\binom{\\alpha-1}{n-1}}.}\\\\ &{(b)\\quad\\frac{n}{\\alpha}{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n-1}},f o r\\quad e v e r y\\quad\\alpha\\neq0.}\\\\ &{(c)\\quad\\left|{\\binom{\\alpha}{n}}\\right|\\leq1\\quad w h e n e v e r\\quad|\\alpha|\\leq1.}\\end{array}$$\n\nProof \n\n(a) Is an easy computation:\n\n$$\\begin{align*}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{align*}$$\n\n(b) Follows immediately from (3.9).\n\n(c)$\\mathrm{I f}\\:|\\alpha|\\leq1$ , it follows from (3.9) and the triangle inequality that \n\n$$\\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(|\\alpha|+1)(|\\alpha|+2)\\ldots(|\\alpha|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\ldots\\cdot n}{n!}=1.$$",
+      "markdown": "For future use, we notice that changing x by ax in the equality of the previous example, we get\n\n $$ e^{ax}=\\sum_{n\\geq0}\\frac{a^{n}}{n!}x^{n} $$ \n\nfor every  $ x \\in \\mathbb{R} $.\n\nA variation of the argument used in Example 3.8 allows us to expand  $ f(x) = (1 + x)^{\\alpha} $ in power series when  $ |x| < 1 $ (and for a fixed real number  $ \\alpha \\neq 0 $).\n\nTo this end, given  $ \\alpha \\in \\mathbb{R} $ and  $ n \\in \\mathbb{Z} \\setminus \\{0\\} $, we begin by defining the generalized binomial number  $ \\binom{\\alpha}{n} $ by letting  $ \\binom{\\alpha}{0} = 1 $ and, for  $ n \\geq 1 $,\n\n $$ \\binom{\\alpha}{n}=\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)}{n!}. $$ \n\nLemma 3.9 Given  $ \\alpha \\in \\mathbb{R} $ and  $ n \\in \\mathbb{N} $, we have:\n\n(a)  $ \\binom{\\alpha}{n} = \\binom{\\alpha-1}{n} + \\binom{\\alpha-1}{n-1}. $\n\n(b)  $ \\frac{n}{\\alpha}\\binom{\\alpha}{n}=\\binom{\\alpha-1}{n-1} $, for every  $ \\alpha\\neq0 $.\n\n(c)  $ \\left|\\binom{\\alpha}{n}\\right|\\leq1 $ whenever  $ |\\alpha|\\leq1 $.\n\nProof\n\n(a) Is an easy computation:\n\n $$ \\begin{aligned}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{aligned} $$ \n\n(b) Follows immediately from (3.9).\n\n(c) If  $ |\\alpha| \\leq 1 $, it follows from (3.9) and the triangle inequality that\n\n $$ \\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(\\left|\\alpha\\right|+1)(\\left|\\alpha\\right|+2)\\cdots(\\left|\\alpha\\right|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\cdots\\cdot n}{n!}=1. $$ ",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            498.7100830078125,
-            1939.3720703125,
-            2036.7584228515625,
-            2719.43310546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e^{ax}=\\sum_{n\\geq0}\\frac{a^n}{n!}x^n",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1026.386962890625,
-            526.686279296875,
-            1400.442138671875,
-            687.293701171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\binom{\\alpha}{n}}={\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\dots(\\alpha-n+1)}{n!}}.",
-          "formula_region_id": 3,
-          "dt_polys": [
-            741.25732421875,
-            1156.0557861328125,
-            1689.51806640625,
-            1286.6536865234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(|\\alpha|+1)(|\\alpha|+2)\\ldots(|\\alpha|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\ldots\\cdot n}{n!}=1.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            477.160400390625,
-            3042.41259765625,
-            2042.855712890625,
-            3179.78955078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f(x)=",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1961.775390625,
-            826.010009765625,
-            2137.7802734375,
-            880.901123046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\textstyle{\\binom{\\alpha}{0}}=1}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1032.2890625,
-            1018.645751953125,
-            1197.2001953125,
-            1089.27099609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1+x)^{\\alpha}",
-          "formula_region_id": 7,
-          "dt_polys": [
-            297.72509765625,
-            890.4107055664062,
-            490.3697509765625,
-            944.6470336914062
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "|x|<1",
-          "formula_region_id": 8,
-          "dt_polys": [
-            987.4298095703125,
-            892.6522216796875,
-            1150.6361083984375,
-            945.8218994140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{I f}\\:|\\alpha|\\leq1",
-          "formula_region_id": 9,
-          "dt_polys": [
-            385.167236328125,
-            2921.24267578125,
-            603.4035034179688,
-            2978.73486328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\in\\mathbb{N}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            986.6258544921875,
-            1361.7890625,
-            1128.6641845703125,
-            1410.24072265625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\neq0)",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1796.61279296875,
-            893.8041381835938,
-            1949.861328125,
-            945.6467895507812
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x\\in\\mathbb{R}",
-          "formula_region_id": 12,
-          "dt_polys": [
-            508.09271240234375,
-            759.7322998046875,
-            647.8759155273438,
-            807.9818115234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\geq1",
-          "formula_region_id": 13,
-          "dt_polys": [
-            1397.07666015625,
-            1025.85546875,
-            1529.0615234375,
-            1077.60595703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\in\\mathbb{R}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            769.3399047851562,
-            963.1168212890625,
-            913.5328979492188,
-            1009.7188720703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\in\\mathbb{R}",
-          "formula_region_id": 15,
-          "dt_polys": [
-            738.7613525390625,
-            1362.757568359375,
-            879.0247802734375,
-            1409.412353515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\binom{\\alpha}{n}",
-          "formula_region_id": 16,
-          "dt_polys": [
-            722.8310546875,
-            1017.805419921875,
-            788.045654296875,
-            1091.064208984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{array}{r l}&{(a)\\quad{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n}}+{\\binom{\\alpha-1}{n-1}}.}\\\\ &{(b)\\quad\\frac{n}{\\alpha}{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n-1}},f o r\\quad e v e r y\\quad\\alpha\\neq0.}\\\\ &{(c)\\quad\\left|{\\binom{\\alpha}{n}}\\right|\\leq1\\quad w h e n e v e r\\quad|\\alpha|\\leq1.}\\end{array}",
-          "formula_region_id": 17,
-          "dt_polys": [
-            287.3757629394531,
-            1447.3631591796875,
-            1090.054443359375,
-            1681.0811767578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\in\\mathbb{Z}\\setminus",
-          "formula_region_id": 18,
-          "dt_polys": [
-            1019.3495483398438,
-            959.80712890625,
-            1195.28564453125,
-            1012.931640625
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2442,
       "height": 3702,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9683559536933899,
-            "coordinate": [
-              498.7100830078125,
-              1939.3720703125,
-              2036.7584228515625,
-              2719.43310546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9645909070968628,
-            "coordinate": [
-              1026.386962890625,
-              526.686279296875,
-              1400.442138671875,
-              687.293701171875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9633675813674927,
-            "coordinate": [
-              741.25732421875,
-              1156.0557861328125,
-              1689.51806640625,
-              1286.6536865234375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9616477489471436,
-            "coordinate": [
-              285.2900390625,
-              338.05523681640625,
-              2136.4775390625,
-              460.32281494140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9591852426528931,
-            "coordinate": [
-              286.794921875,
-              824.557861328125,
-              2139.982421875,
-              947.6064453125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9588205814361572,
-            "coordinate": [
-              477.160400390625,
-              3042.41259765625,
-              2042.855712890625,
-              3179.78955078125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9539942741394043,
-            "coordinate": [
-              286.12030029296875,
-              957.6533203125,
-              2138.298095703125,
-              1088.4169921875
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9267843961715698,
-            "coordinate": [
-              2033.3916015625,
-              567.7637939453125,
-              2136.400390625,
-              620.7681884765625
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9257413744926453,
-            "coordinate": [
-              2033.381591796875,
-              1198.1708984375,
-              2136.218994140625,
-              1250.58984375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9197755455970764,
-            "coordinate": [
-              284.13671875,
-              2919.606689453125,
-              1778.96337890625,
-              2977.795166015625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9095611572265625,
-            "coordinate": [
-              283.399169921875,
-              2786.53515625,
-              1113.79833984375,
-              2840.458984375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9005898237228394,
-            "coordinate": [
-              287.2764892578125,
-              757.302978515625,
-              658.3321533203125,
-              807.0377197265625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8993300199508667,
-            "coordinate": [
-              287.37652587890625,
-              1819.2152099609375,
-              916.0891723632812,
-              1870.6968994140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8973650336265564,
-            "coordinate": [
-              289.35711669921875,
-              1717.5166015625,
-              433.35345458984375,
-              1769.27978515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8970984816551208,
-            "coordinate": [
-              287.5704345703125,
-              1359.040771484375,
-              1355.2242431640625,
-              1411.077880859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8676589131355286,
-            "coordinate": [
-              1961.775390625,
-              826.010009765625,
-              2137.7802734375,
-              880.901123046875
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8527754545211792,
-            "coordinate": [
-              2090.67529296875,
-              198.98361206054688,
-              2137.17529296875,
-              236.99649047851562
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8402940034866333,
-            "coordinate": [
-              1032.2890625,
-              1018.645751953125,
-              1197.2001953125,
-              1089.27099609375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8259013295173645,
-            "coordinate": [
-              297.72509765625,
-              890.4107055664062,
-              490.3697509765625,
-              944.6470336914062
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8204711079597473,
-            "coordinate": [
-              987.4298095703125,
-              892.6522216796875,
-              1150.6361083984375,
-              945.8218994140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7788823246955872,
-            "coordinate": [
-              385.167236328125,
-              2921.24267578125,
-              603.4035034179688,
-              2978.73486328125
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.750533938407898,
-            "coordinate": [
-              291.6290283203125,
-              196.77828979492188,
-              642.6970825195312,
-              238.67422485351562
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7360395193099976,
-            "coordinate": [
-              986.6258544921875,
-              1361.7890625,
-              1128.6641845703125,
-              1410.24072265625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7328954339027405,
-            "coordinate": [
-              1796.61279296875,
-              893.8041381835938,
-              1949.861328125,
-              945.6467895507812
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7201467752456665,
-            "coordinate": [
-              508.09271240234375,
-              759.7322998046875,
-              647.8759155273438,
-              807.9818115234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7118332982063293,
-            "coordinate": [
-              1397.07666015625,
-              1025.85546875,
-              1529.0615234375,
-              1077.60595703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6979867219924927,
-            "coordinate": [
-              769.3399047851562,
-              963.1168212890625,
-              913.5328979492188,
-              1009.7188720703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.64734947681427,
-            "coordinate": [
-              738.7613525390625,
-              1362.757568359375,
-              879.0247802734375,
-              1409.412353515625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6305458545684814,
-            "coordinate": [
-              722.8310546875,
-              1017.805419921875,
-              788.045654296875,
-              1091.064208984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6288110613822937,
-            "coordinate": [
-              287.3757629394531,
-              1447.3631591796875,
-              1090.054443359375,
-              1681.0811767578125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5867151618003845,
-            "coordinate": [
-              1019.3495483398438,
-              959.80712890625,
-              1195.28564453125,
-              1012.931640625
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              286,
-              190
-            ],
-            [
-              655,
-              190
-            ],
-            [
-              655,
-              249
-            ],
-            [
-              286,
-              249
-            ]
-          ],
-          [
-            [
-              2083,
-              191
-            ],
-            [
-              2152,
-              193
-            ],
-            [
-              2150,
-              249
-            ],
-            [
-              2081,
-              247
-            ]
-          ],
-          [
-            [
-              354,
-              330
-            ],
-            [
-              2147,
-              334
-            ],
-            [
-              2147,
-              401
-            ],
-            [
-              353,
-              397
-            ]
-          ],
-          [
-            [
-              295,
-              406
-            ],
-            [
-              667,
-              409
-            ],
-            [
-              666,
-              467
-            ],
-            [
-              294,
-              464
-            ]
-          ],
-          [
-            [
-              2025,
-              559
-            ],
-            [
-              2152,
-              559
-            ],
-            [
-              2152,
-              632
-            ],
-            [
-              2025,
-              632
-            ]
-          ],
-          [
-            [
-              291,
-              757
-            ],
-            [
-              504,
-              762
-            ],
-            [
-              502,
-              818
-            ],
-            [
-              290,
-              812
-            ]
-          ],
-          [
-            [
-              359,
-              819
-            ],
-            [
-              1950,
-              821
-            ],
-            [
-              1950,
-              882
-            ],
-            [
-              358,
-              880
-            ]
-          ],
-          [
-            [
-              502,
-              894
-            ],
-            [
-              982,
-              893
-            ],
-            [
-              982,
-              947
-            ],
-            [
-              502,
-              948
-            ]
-          ],
-          [
-            [
-              1166,
-              891
-            ],
-            [
-              1794,
-              890
-            ],
-            [
-              1794,
-              944
-            ],
-            [
-              1166,
-              945
-            ]
-          ],
-          [
-            [
-              359,
-              955
-            ],
-            [
-              765,
-              958
-            ],
-            [
-              765,
-              1015
-            ],
-            [
-              358,
-              1013
-            ]
-          ],
-          [
-            [
-              902,
-              956
-            ],
-            [
-              1020,
-              952
-            ],
-            [
-              1022,
-              1013
-            ],
-            [
-              904,
-              1017
-            ]
-          ],
-          [
-            [
-              1181,
-              955
-            ],
-            [
-              2149,
-              953
-            ],
-            [
-              2149,
-              1018
-            ],
-            [
-              1181,
-              1020
-            ]
-          ],
-          [
-            [
-              294,
-              1025
-            ],
-            [
-              714,
-              1023
-            ],
-            [
-              714,
-              1075
-            ],
-            [
-              294,
-              1077
-            ]
-          ],
-          [
-            [
-              798,
-              1021
-            ],
-            [
-              1026,
-              1023
-            ],
-            [
-              1026,
-              1087
-            ],
-            [
-              797,
-              1085
-            ]
-          ],
-          [
-            [
-              1190,
-              1021
-            ],
-            [
-              1400,
-              1021
-            ],
-            [
-              1400,
-              1081
-            ],
-            [
-              1190,
-              1081
-            ]
-          ],
-          [
-            [
-              1530,
-              1059
-            ],
-            [
-              1548,
-              1059
-            ],
-            [
-              1548,
-              1076
-            ],
-            [
-              1530,
-              1076
-            ]
-          ],
-          [
-            [
-              2025,
-              1191
-            ],
-            [
-              2152,
-              1191
-            ],
-            [
-              2152,
-              1264
-            ],
-            [
-              2025,
-              1264
-            ]
-          ],
-          [
-            [
-              292,
-              1359
-            ],
-            [
-              734,
-              1359
-            ],
-            [
-              734,
-              1413
-            ],
-            [
-              292,
-              1413
-            ]
-          ],
-          [
-            [
-              871,
-              1356
-            ],
-            [
-              991,
-              1356
-            ],
-            [
-              991,
-              1416
-            ],
-            [
-              871,
-              1416
-            ]
-          ],
-          [
-            [
-              1118,
-              1360
-            ],
-            [
-              1358,
-              1356
-            ],
-            [
-              1359,
-              1416
-            ],
-            [
-              1119,
-              1419
-            ]
-          ],
-          [
-            [
-              287,
-              1710
-            ],
-            [
-              442,
-              1710
-            ],
-            [
-              442,
-              1784
-            ],
-            [
-              287,
-              1784
-            ]
-          ],
-          [
-            [
-              293,
-              1815
-            ],
-            [
-              919,
-              1815
-            ],
-            [
-              919,
-              1879
-            ],
-            [
-              293,
-              1879
-            ]
-          ],
-          [
-            [
-              288,
-              2784
-            ],
-            [
-              1117,
-              2784
-            ],
-            [
-              1117,
-              2851
-            ],
-            [
-              288,
-              2851
-            ]
-          ],
-          [
-            [
-              288,
-              2917
-            ],
-            [
-              371,
-              2917
-            ],
-            [
-              371,
-              2987
-            ],
-            [
-              288,
-              2987
-            ]
-          ],
-          [
-            [
-              604,
-              2921
-            ],
-            [
-              1782,
-              2923
-            ],
-            [
-              1782,
-              2980
-            ],
-            [
-              603,
-              2978
-            ]
-          ],
-          [
-            [
-              2096,
-              3178
-            ],
-            [
-              2149,
-              3178
-            ],
-            [
-              2149,
-              3227
-            ],
-            [
-              2096,
-              3227
-            ]
-          ],
-          [
-            [
-              498,
-              1939
-            ],
-            [
-              2036,
-              1939
-            ],
-            [
-              2036,
-              2719
-            ],
-            [
-              498,
-              2719
-            ]
-          ],
-          [
-            [
-              1026,
-              526
-            ],
-            [
-              1400,
-              526
-            ],
-            [
-              1400,
-              687
-            ],
-            [
-              1026,
-              687
-            ]
-          ],
-          [
-            [
-              741,
-              1156
-            ],
-            [
-              1689,
-              1156
-            ],
-            [
-              1689,
-              1286
-            ],
-            [
-              741,
-              1286
-            ]
-          ],
-          [
-            [
-              477,
-              3042
-            ],
-            [
-              2042,
-              3042
-            ],
-            [
-              2042,
-              3179
-            ],
-            [
-              477,
-              3179
-            ]
-          ],
-          [
-            [
-              1961,
-              826
-            ],
-            [
-              2137,
-              826
-            ],
-            [
-              2137,
-              880
-            ],
-            [
-              1961,
-              880
-            ]
-          ],
-          [
-            [
-              1032,
-              1018
-            ],
-            [
-              1197,
-              1018
-            ],
-            [
-              1197,
-              1089
-            ],
-            [
-              1032,
-              1089
-            ]
-          ],
-          [
-            [
-              297,
-              890
-            ],
-            [
-              490,
-              890
-            ],
-            [
-              490,
-              944
-            ],
-            [
-              297,
-              944
-            ]
-          ],
-          [
-            [
-              987,
-              892
-            ],
-            [
-              1150,
-              892
-            ],
-            [
-              1150,
-              945
-            ],
-            [
-              987,
-              945
-            ]
-          ],
-          [
-            [
-              385,
-              2921
-            ],
-            [
-              603,
-              2921
-            ],
-            [
-              603,
-              2978
-            ],
-            [
-              385,
-              2978
-            ]
-          ],
-          [
-            [
-              986,
-              1361
-            ],
-            [
-              1128,
-              1361
-            ],
-            [
-              1128,
-              1410
-            ],
-            [
-              986,
-              1410
-            ]
-          ],
-          [
-            [
-              1796,
-              893
-            ],
-            [
-              1949,
-              893
-            ],
-            [
-              1949,
-              945
-            ],
-            [
-              1796,
-              945
-            ]
-          ],
-          [
-            [
-              508,
-              759
-            ],
-            [
-              647,
-              759
-            ],
-            [
-              647,
-              807
-            ],
-            [
-              508,
-              807
-            ]
-          ],
-          [
-            [
-              1397,
-              1025
-            ],
-            [
-              1529,
-              1025
-            ],
-            [
-              1529,
-              1077
-            ],
-            [
-              1397,
-              1077
-            ]
-          ],
-          [
-            [
-              769,
-              963
-            ],
-            [
-              913,
-              963
-            ],
-            [
-              913,
-              1009
-            ],
-            [
-              769,
-              1009
-            ]
-          ],
-          [
-            [
-              738,
-              1362
-            ],
-            [
-              879,
-              1362
-            ],
-            [
-              879,
-              1409
-            ],
-            [
-              738,
-              1409
-            ]
-          ],
-          [
-            [
-              722,
-              1017
-            ],
-            [
-              788,
-              1017
-            ],
-            [
-              788,
-              1091
-            ],
-            [
-              722,
-              1091
-            ]
-          ],
-          [
-            [
-              287,
-              1447
-            ],
-            [
-              1090,
-              1447
-            ],
-            [
-              1090,
-              1681
-            ],
-            [
-              287,
-              1681
-            ]
-          ],
-          [
-            [
-              1019,
-              959
-            ],
-            [
-              1195,
-              959
-            ],
-            [
-              1195,
-              1012
-            ],
-            [
-              1019,
-              1012
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "3.2 Power Series",
-          "75",
-          "For future use, we notice that changing x by ax in the equality of the previous",
-          "example, we get",
-          "(3.8)",
-          "for every",
-          "A variation of the argument used in Example 3.8 allows us to expand",
-          "in power series when",
-          "(and for a fixed real number",
-          "To this end, given",
-          ".and",
-          ". {0}, we begin by defining the generalized",
-          "binomial number",
-          "by letting",
-          "and, for",
-          ",",
-          "(3.9)",
-          "Lemma 3.9 Given",
-          ". and",
-          ", we have:",
-          "Proof",
-          "(a) Is an easy computation:",
-          "(b) Follows immediately from (3.9).",
-          "(c)",
-          ", it follows from (3.9) and the triangle inequality that",
-          "\\begin{align*}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{align*}",
-          "e^{ax}=\\sum_{n\\geq0}\\frac{a^n}{n!}x^n",
-          "{\\binom{\\alpha}{n}}={\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\dots(\\alpha-n+1)}{n!}}.",
-          "\\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(|\\alpha|+1)(|\\alpha|+2)\\ldots(|\\alpha|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\ldots\\cdot n}{n!}=1.",
-          "f(x)=",
-          "{\\textstyle{\\binom{\\alpha}{0}}=1}",
-          "(1+x)^{\\alpha}",
-          "|x|<1",
-          "\\mathrm{I f}\\:|\\alpha|\\leq1",
-          "n\\in\\mathbb{N}",
-          "\\alpha\\neq0)",
-          "x\\in\\mathbb{R}",
-          "n\\geq1",
-          "\\alpha\\in\\mathbb{R}",
-          "\\alpha\\in\\mathbb{R}",
-          "\\binom{\\alpha}{n}",
-          "\\begin{array}{r l}&{(a)\\quad{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n}}+{\\binom{\\alpha-1}{n-1}}.}\\\\ &{(b)\\quad\\frac{n}{\\alpha}{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n-1}},f o r\\quad e v e r y\\quad\\alpha\\neq0.}\\\\ &{(c)\\quad\\left|{\\binom{\\alpha}{n}}\\right|\\leq1\\quad w h e n e v e r\\quad|\\alpha|\\leq1.}\\end{array}",
-          "n\\in\\mathbb{Z}\\setminus"
-        ],
-        "rec_scores": [
-          0.9483664035797119,
-          0.9997803568840027,
-          0.9690988063812256,
-          0.9773786067962646,
-          0.9996926188468933,
-          0.9984927773475647,
-          0.9814593195915222,
-          0.9534777402877808,
-          0.9730591773986816,
-          0.9874070286750793,
-          0.8991697430610657,
-          0.9368119239807129,
-          0.9925674200057983,
-          0.9821192026138306,
-          0.9618626236915588,
-          0.7497238516807556,
-          0.9997503161430359,
-          0.9492679238319397,
-          0.866106390953064,
-          0.9752162098884583,
-          0.9876238107681274,
-          0.9241328835487366,
-          0.9603679180145264,
-          0.9865748286247253,
-          0.9548928141593933,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              286,
-              190
-            ],
-            [
-              655,
-              190
-            ],
-            [
-              655,
-              249
-            ],
-            [
-              286,
-              249
-            ]
-          ],
-          [
-            [
-              2083,
-              191
-            ],
-            [
-              2152,
-              193
-            ],
-            [
-              2150,
-              249
-            ],
-            [
-              2081,
-              247
-            ]
-          ],
-          [
-            [
-              354,
-              330
-            ],
-            [
-              2147,
-              334
-            ],
-            [
-              2147,
-              401
-            ],
-            [
-              353,
-              397
-            ]
-          ],
-          [
-            [
-              295,
-              406
-            ],
-            [
-              667,
-              409
-            ],
-            [
-              666,
-              467
-            ],
-            [
-              294,
-              464
-            ]
-          ],
-          [
-            [
-              2025,
-              559
-            ],
-            [
-              2152,
-              559
-            ],
-            [
-              2152,
-              632
-            ],
-            [
-              2025,
-              632
-            ]
-          ],
-          [
-            [
-              291,
-              757
-            ],
-            [
-              504,
-              762
-            ],
-            [
-              502,
-              818
-            ],
-            [
-              290,
-              812
-            ]
-          ],
-          [
-            [
-              359,
-              819
-            ],
-            [
-              1950,
-              821
-            ],
-            [
-              1950,
-              882
-            ],
-            [
-              358,
-              880
-            ]
-          ],
-          [
-            [
-              502,
-              894
-            ],
-            [
-              982,
-              893
-            ],
-            [
-              982,
-              947
-            ],
-            [
-              502,
-              948
-            ]
-          ],
-          [
-            [
-              1166,
-              891
-            ],
-            [
-              1794,
-              890
-            ],
-            [
-              1794,
-              944
-            ],
-            [
-              1166,
-              945
-            ]
-          ],
-          [
-            [
-              359,
-              955
-            ],
-            [
-              765,
-              958
-            ],
-            [
-              765,
-              1015
-            ],
-            [
-              358,
-              1013
-            ]
-          ],
-          [
-            [
-              902,
-              956
-            ],
-            [
-              1020,
-              952
-            ],
-            [
-              1022,
-              1013
-            ],
-            [
-              904,
-              1017
-            ]
-          ],
-          [
-            [
-              1181,
-              955
-            ],
-            [
-              2149,
-              953
-            ],
-            [
-              2149,
-              1018
-            ],
-            [
-              1181,
-              1020
-            ]
-          ],
-          [
-            [
-              294,
-              1025
-            ],
-            [
-              714,
-              1023
-            ],
-            [
-              714,
-              1075
-            ],
-            [
-              294,
-              1077
-            ]
-          ],
-          [
-            [
-              798,
-              1021
-            ],
-            [
-              1026,
-              1023
-            ],
-            [
-              1026,
-              1087
-            ],
-            [
-              797,
-              1085
-            ]
-          ],
-          [
-            [
-              1190,
-              1021
-            ],
-            [
-              1400,
-              1021
-            ],
-            [
-              1400,
-              1081
-            ],
-            [
-              1190,
-              1081
-            ]
-          ],
-          [
-            [
-              1530,
-              1059
-            ],
-            [
-              1548,
-              1059
-            ],
-            [
-              1548,
-              1076
-            ],
-            [
-              1530,
-              1076
-            ]
-          ],
-          [
-            [
-              2025,
-              1191
-            ],
-            [
-              2152,
-              1191
-            ],
-            [
-              2152,
-              1264
-            ],
-            [
-              2025,
-              1264
-            ]
-          ],
-          [
-            [
-              292,
-              1359
-            ],
-            [
-              734,
-              1359
-            ],
-            [
-              734,
-              1413
-            ],
-            [
-              292,
-              1413
-            ]
-          ],
-          [
-            [
-              871,
-              1356
-            ],
-            [
-              991,
-              1356
-            ],
-            [
-              991,
-              1416
-            ],
-            [
-              871,
-              1416
-            ]
-          ],
-          [
-            [
-              1118,
-              1360
-            ],
-            [
-              1358,
-              1356
-            ],
-            [
-              1359,
-              1416
-            ],
-            [
-              1119,
-              1419
-            ]
-          ],
-          [
-            [
-              287,
-              1710
-            ],
-            [
-              442,
-              1710
-            ],
-            [
-              442,
-              1784
-            ],
-            [
-              287,
-              1784
-            ]
-          ],
-          [
-            [
-              293,
-              1815
-            ],
-            [
-              919,
-              1815
-            ],
-            [
-              919,
-              1879
-            ],
-            [
-              293,
-              1879
-            ]
-          ],
-          [
-            [
-              288,
-              2784
-            ],
-            [
-              1117,
-              2784
-            ],
-            [
-              1117,
-              2851
-            ],
-            [
-              288,
-              2851
-            ]
-          ],
-          [
-            [
-              288,
-              2917
-            ],
-            [
-              371,
-              2917
-            ],
-            [
-              371,
-              2987
-            ],
-            [
-              288,
-              2987
-            ]
-          ],
-          [
-            [
-              604,
-              2921
-            ],
-            [
-              1782,
-              2923
-            ],
-            [
-              1782,
-              2980
-            ],
-            [
-              603,
-              2978
-            ]
-          ],
-          [
-            [
-              498,
-              1939
-            ],
-            [
-              2036,
-              1939
-            ],
-            [
-              2036,
-              2719
-            ],
-            [
-              498,
-              2719
-            ]
-          ],
-          [
-            [
-              1026,
-              526
-            ],
-            [
-              1400,
-              526
-            ],
-            [
-              1400,
-              687
-            ],
-            [
-              1026,
-              687
-            ]
-          ],
-          [
-            [
-              741,
-              1156
-            ],
-            [
-              1689,
-              1156
-            ],
-            [
-              1689,
-              1286
-            ],
-            [
-              741,
-              1286
-            ]
-          ],
-          [
-            [
-              477,
-              3042
-            ],
-            [
-              2042,
-              3042
-            ],
-            [
-              2042,
-              3179
-            ],
-            [
-              477,
-              3179
-            ]
-          ],
-          [
-            [
-              1961,
-              826
-            ],
-            [
-              2137,
-              826
-            ],
-            [
-              2137,
-              880
-            ],
-            [
-              1961,
-              880
-            ]
-          ],
-          [
-            [
-              1032,
-              1018
-            ],
-            [
-              1197,
-              1018
-            ],
-            [
-              1197,
-              1089
-            ],
-            [
-              1032,
-              1089
-            ]
-          ],
-          [
-            [
-              297,
-              890
-            ],
-            [
-              490,
-              890
-            ],
-            [
-              490,
-              944
-            ],
-            [
-              297,
-              944
-            ]
-          ],
-          [
-            [
-              987,
-              892
-            ],
-            [
-              1150,
-              892
-            ],
-            [
-              1150,
-              945
-            ],
-            [
-              987,
-              945
-            ]
-          ],
-          [
-            [
-              385,
-              2921
-            ],
-            [
-              603,
-              2921
-            ],
-            [
-              603,
-              2978
-            ],
-            [
-              385,
-              2978
-            ]
-          ],
-          [
-            [
-              986,
-              1361
-            ],
-            [
-              1128,
-              1361
-            ],
-            [
-              1128,
-              1410
-            ],
-            [
-              986,
-              1410
-            ]
-          ],
-          [
-            [
-              1796,
-              893
-            ],
-            [
-              1949,
-              893
-            ],
-            [
-              1949,
-              945
-            ],
-            [
-              1796,
-              945
-            ]
-          ],
-          [
-            [
-              508,
-              759
-            ],
-            [
-              647,
-              759
-            ],
-            [
-              647,
-              807
-            ],
-            [
-              508,
-              807
-            ]
-          ],
-          [
-            [
-              1397,
-              1025
-            ],
-            [
-              1529,
-              1025
-            ],
-            [
-              1529,
-              1077
-            ],
-            [
-              1397,
-              1077
-            ]
-          ],
-          [
-            [
-              769,
-              963
-            ],
-            [
-              913,
-              963
-            ],
-            [
-              913,
-              1009
-            ],
-            [
-              769,
-              1009
-            ]
-          ],
-          [
-            [
-              738,
-              1362
-            ],
-            [
-              879,
-              1362
-            ],
-            [
-              879,
-              1409
-            ],
-            [
-              738,
-              1409
-            ]
-          ],
-          [
-            [
-              722,
-              1017
-            ],
-            [
-              788,
-              1017
-            ],
-            [
-              788,
-              1091
-            ],
-            [
-              722,
-              1091
-            ]
-          ],
-          [
-            [
-              287,
-              1447
-            ],
-            [
-              1090,
-              1447
-            ],
-            [
-              1090,
-              1681
-            ],
-            [
-              287,
-              1681
-            ]
-          ],
-          [
-            [
-              1019,
-              959
-            ],
-            [
-              1195,
-              959
-            ],
-            [
-              1195,
-              1012
-            ],
-            [
-              1019,
-              1012
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            286.0,
-            190.0,
-            655.0,
-            249.0
-          ],
-          [
-            2081.0,
-            191.0,
-            2152.0,
-            249.0
-          ],
-          [
-            353.0,
-            330.0,
-            2147.0,
-            401.0
-          ],
-          [
-            294.0,
-            406.0,
-            667.0,
-            467.0
-          ],
-          [
-            2025.0,
-            559.0,
-            2152.0,
-            632.0
-          ],
-          [
-            290.0,
-            757.0,
-            504.0,
-            818.0
-          ],
-          [
-            358.0,
-            819.0,
-            1950.0,
-            882.0
-          ],
-          [
-            502.0,
-            893.0,
-            982.0,
-            948.0
-          ],
-          [
-            1166.0,
-            890.0,
-            1794.0,
-            945.0
-          ],
-          [
-            358.0,
-            955.0,
-            765.0,
-            1015.0
-          ],
-          [
-            902.0,
-            952.0,
-            1022.0,
-            1017.0
-          ],
-          [
-            1181.0,
-            953.0,
-            2149.0,
-            1020.0
-          ],
-          [
-            294.0,
-            1023.0,
-            714.0,
-            1077.0
-          ],
-          [
-            797.0,
-            1021.0,
-            1026.0,
-            1087.0
-          ],
-          [
-            1190.0,
-            1021.0,
-            1400.0,
-            1081.0
-          ],
-          [
-            1530.0,
-            1059.0,
-            1548.0,
-            1076.0
-          ],
-          [
-            2025.0,
-            1191.0,
-            2152.0,
-            1264.0
-          ],
-          [
-            292.0,
-            1359.0,
-            734.0,
-            1413.0
-          ],
-          [
-            871.0,
-            1356.0,
-            991.0,
-            1416.0
-          ],
-          [
-            1118.0,
-            1356.0,
-            1359.0,
-            1419.0
-          ],
-          [
-            287.0,
-            1710.0,
-            442.0,
-            1784.0
-          ],
-          [
-            293.0,
-            1815.0,
-            919.0,
-            1879.0
-          ],
-          [
-            288.0,
-            2784.0,
-            1117.0,
-            2851.0
-          ],
-          [
-            288.0,
-            2917.0,
-            371.0,
-            2987.0
-          ],
-          [
-            603.0,
-            2921.0,
-            1782.0,
-            2980.0
-          ],
-          [
-            498.7100830078125,
-            1939.3720703125,
-            2036.7584228515625,
-            2719.43310546875
-          ],
-          [
-            1026.386962890625,
-            526.686279296875,
-            1400.442138671875,
-            687.293701171875
-          ],
-          [
-            741.25732421875,
-            1156.0557861328125,
-            1689.51806640625,
-            1286.6536865234375
-          ],
-          [
-            477.160400390625,
-            3042.41259765625,
-            2042.855712890625,
-            3179.78955078125
-          ],
-          [
-            1961.775390625,
-            826.010009765625,
-            2137.7802734375,
-            880.901123046875
-          ],
-          [
-            1032.2890625,
-            1018.645751953125,
-            1197.2001953125,
-            1089.27099609375
-          ],
-          [
-            297.72509765625,
-            890.4107055664062,
-            490.3697509765625,
-            944.6470336914062
-          ],
-          [
-            987.4298095703125,
-            892.6522216796875,
-            1150.6361083984375,
-            945.8218994140625
-          ],
-          [
-            385.167236328125,
-            2921.24267578125,
-            603.4035034179688,
-            2978.73486328125
-          ],
-          [
-            986.6258544921875,
-            1361.7890625,
-            1128.6641845703125,
-            1410.24072265625
-          ],
-          [
-            1796.61279296875,
-            893.8041381835938,
-            1949.861328125,
-            945.6467895507812
-          ],
-          [
-            508.09271240234375,
-            759.7322998046875,
-            647.8759155273438,
-            807.9818115234375
-          ],
-          [
-            1397.07666015625,
-            1025.85546875,
-            1529.0615234375,
-            1077.60595703125
-          ],
-          [
-            769.3399047851562,
-            963.1168212890625,
-            913.5328979492188,
-            1009.7188720703125
-          ],
-          [
-            738.7613525390625,
-            1362.757568359375,
-            879.0247802734375,
-            1409.412353515625
-          ],
-          [
-            722.8310546875,
-            1017.805419921875,
-            788.045654296875,
-            1091.064208984375
-          ],
-          [
-            287.3757629394531,
-            1447.3631591796875,
-            1090.054443359375,
-            1681.0811767578125
-          ],
-          [
-            1019.3495483398438,
-            959.80712890625,
-            1195.28564453125,
-            1012.931640625
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{align*}\\binom{\\alpha}{n}-\\binom{\\alpha-1}{n}&=\\frac{1}{n!}\\alpha(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&\\quad-\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n)\\\\&=\\frac{1}{n!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)(\\alpha-(\\alpha-n))\\\\&=\\frac{1}{(n-1)!}(\\alpha-1)(\\alpha-2)\\ldots(\\alpha-n+1)\\\\&=\\binom{\\alpha-1}{n-1}.\\end{align*}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            498.7100830078125,
-            1939.3720703125,
-            2036.7584228515625,
-            2719.43310546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "e^{ax}=\\sum_{n\\geq0}\\frac{a^n}{n!}x^n",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1026.386962890625,
-            526.686279296875,
-            1400.442138671875,
-            687.293701171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\binom{\\alpha}{n}}={\\frac{\\alpha(\\alpha-1)(\\alpha-2)\\dots(\\alpha-n+1)}{n!}}.",
-          "formula_region_id": 3,
-          "dt_polys": [
-            741.25732421875,
-            1156.0557861328125,
-            1689.51806640625,
-            1286.6536865234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\left|\\binom{\\alpha}{n}\\right|\\leq\\frac{|\\alpha|(|\\alpha|+1)(|\\alpha|+2)\\ldots(|\\alpha|+n-1)}{n!}\\leq\\frac{1\\cdot2\\cdot\\ldots\\cdot n}{n!}=1.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            477.160400390625,
-            3042.41259765625,
-            2042.855712890625,
-            3179.78955078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "f(x)=",
-          "formula_region_id": 5,
-          "dt_polys": [
-            1961.775390625,
-            826.010009765625,
-            2137.7802734375,
-            880.901123046875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\textstyle{\\binom{\\alpha}{0}}=1}",
-          "formula_region_id": 6,
-          "dt_polys": [
-            1032.2890625,
-            1018.645751953125,
-            1197.2001953125,
-            1089.27099609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "(1+x)^{\\alpha}",
-          "formula_region_id": 7,
-          "dt_polys": [
-            297.72509765625,
-            890.4107055664062,
-            490.3697509765625,
-            944.6470336914062
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "|x|<1",
-          "formula_region_id": 8,
-          "dt_polys": [
-            987.4298095703125,
-            892.6522216796875,
-            1150.6361083984375,
-            945.8218994140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{I f}\\:|\\alpha|\\leq1",
-          "formula_region_id": 9,
-          "dt_polys": [
-            385.167236328125,
-            2921.24267578125,
-            603.4035034179688,
-            2978.73486328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\in\\mathbb{N}",
-          "formula_region_id": 10,
-          "dt_polys": [
-            986.6258544921875,
-            1361.7890625,
-            1128.6641845703125,
-            1410.24072265625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\neq0)",
-          "formula_region_id": 11,
-          "dt_polys": [
-            1796.61279296875,
-            893.8041381835938,
-            1949.861328125,
-            945.6467895507812
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x\\in\\mathbb{R}",
-          "formula_region_id": 12,
-          "dt_polys": [
-            508.09271240234375,
-            759.7322998046875,
-            647.8759155273438,
-            807.9818115234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\geq1",
-          "formula_region_id": 13,
-          "dt_polys": [
-            1397.07666015625,
-            1025.85546875,
-            1529.0615234375,
-            1077.60595703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\in\\mathbb{R}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            769.3399047851562,
-            963.1168212890625,
-            913.5328979492188,
-            1009.7188720703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\alpha\\in\\mathbb{R}",
-          "formula_region_id": 15,
-          "dt_polys": [
-            738.7613525390625,
-            1362.757568359375,
-            879.0247802734375,
-            1409.412353515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\binom{\\alpha}{n}",
-          "formula_region_id": 16,
-          "dt_polys": [
-            722.8310546875,
-            1017.805419921875,
-            788.045654296875,
-            1091.064208984375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{array}{r l}&{(a)\\quad{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n}}+{\\binom{\\alpha-1}{n-1}}.}\\\\ &{(b)\\quad\\frac{n}{\\alpha}{\\binom{\\alpha}{n}}={\\binom{\\alpha-1}{n-1}},f o r\\quad e v e r y\\quad\\alpha\\neq0.}\\\\ &{(c)\\quad\\left|{\\binom{\\alpha}{n}}\\right|\\leq1\\quad w h e n e v e r\\quad|\\alpha|\\leq1.}\\end{array}",
-          "formula_region_id": 17,
-          "dt_polys": [
-            287.3757629394531,
-            1447.3631591796875,
-            1090.054443359375,
-            1681.0811767578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "n\\in\\mathbb{Z}\\setminus",
-          "formula_region_id": 18,
-          "dt_polys": [
-            1019.3495483398438,
-            959.80712890625,
-            1195.28564453125,
-            1012.931640625
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -3000,7 +619,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

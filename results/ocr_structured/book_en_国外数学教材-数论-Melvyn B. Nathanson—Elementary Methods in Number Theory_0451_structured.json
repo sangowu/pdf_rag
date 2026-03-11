@@ -8,1335 +8,516 @@
           "block_label": "number",
           "block_content": "448",
           "block_bbox": [
-            358,
+            356,
             162,
-            436,
-            200
+            446,
+            210
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              356.0,
+              162.0
+            ],
+            [
+              446.0,
+              162.0
+            ],
+            [
+              446.0,
+              210.0
+            ],
+            [
+              356.0,
+              210.0
+            ]
+          ]
         },
         {
           "block_label": "header",
-          "block_content": "14. Sums of an Even Number of Squares ",
+          "block_content": "14. Sums of an Even Number of Squares",
           "block_bbox": [
-            552,
-            158,
-            1481,
-            207
+            551,
+            159,
+            1489,
+            216
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              551.0,
+              159.0
+            ],
+            [
+              1489.0,
+              159.0
+            ],
+            [
+              1489.0,
+              216.0
+            ],
+            [
+              551.0,
+              216.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}{=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4})}\\\\ {}&{{}+5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}+u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\\\ \\end{aligned}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{array}{r l}{=}&{{}\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4}}\\\\ &{+~5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ &{+~u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\displaystyle\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\end{array} $$ ",
           "block_bbox": [
-            535,
-            278,
-            2011,
-            1118
+            526,
+            277,
+            2025,
+            1123
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              526.0,
+              277.0
+            ],
+            [
+              2025.0,
+              277.0
+            ],
+            [
+              2025.0,
+              1123.0
+            ],
+            [
+              526.0,
+              1123.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "by Exercise 1 in Section 14.3.",
           "block_bbox": [
-            350,
-            1185,
-            1075,
-            1235
+            349,
+            1184,
+            1081,
+            1244
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              349.0,
+              1184.0
+            ],
+            [
+              1081.0,
+              1184.0
+            ],
+            [
+              1081.0,
+              1244.0
+            ],
+            [
+              349.0,
+              1244.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "The upshot of this analysis is the following three identities:",
           "block_bbox": [
-            406,
-            1250,
-            1855,
-            1306
+            407,
+            1251,
+            1862,
+            1314
           ],
           "block_id": 4,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              407.0,
+              1251.0
+            ],
+            [
+              1862.0,
+              1251.0
+            ],
+            [
+              1862.0,
+              1314.0
+            ],
+            [
+              407.0,
+              1314.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}{}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{(\\bmod2)}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n+1)^{2}}\\\\ {}&{{}\\qquad-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.}\\\\ \\end{aligned} − 3u2)3",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{array}{r l}{\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}&{{}}\\\\ {+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}&{{}}\\end{array} $$ ",
           "block_bbox": [
-            608,
-            1369,
-            1950,
-            2194
+            606,
+            1370,
+            1944,
+            1643
           ],
           "block_id": 5,
-          "block_order": 4
-        },
-        {
-          "block_label": "text",
-          "block_content": "We shall eliminate the terms ",
-          "block_bbox": [
-            352,
-            2260,
-            1059,
-            2308
-          ],
-          "block_id": 6,
-          "block_order": 5
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}).",
-          "block_bbox": [
-            822,
-            2369,
-            1692,
-            2535
-          ],
-          "block_id": 7,
-          "block_order": 6
-        },
-        {
-          "block_label": "text",
-          "block_content": "and ",
-          "block_bbox": [
-            353,
-            2603,
-            453,
-            2646
-          ],
-          "block_id": 8,
-          "block_order": 7
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1{\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}).",
-          "block_bbox": [
-            825,
-            2658,
-            1689,
-            2826
-          ],
-          "block_id": 9,
-          "block_order": 8
-        },
-        {
-          "block_label": "text",
-          "block_content": "from these equations as follows: Multiply equation (14.18) by 16 and add to equation (14.16), then multiply equation (14.17) by 40/3 and subtract.We obtain \n",
-          "block_bbox": [
-            348,
-            2872,
-            2155,
-            3053
-          ],
-          "block_id": 10,
-          "block_order": 9
-        },
-        {
-          "block_label": "formula",
-          "block_content": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}",
-          "block_bbox": [
-            443,
-            3116,
-            2102,
-            3285
-          ],
-          "block_id": 11,
-          "block_order": 10
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              606.0,
+              1370.0
+            ],
+            [
+              1944.0,
+              1370.0
+            ],
+            [
+              1944.0,
+              1643.0
+            ],
+            [
+              606.0,
+              1643.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(14.16)",
           "block_bbox": [
-            1987,
-            1564,
-            2149,
-            1626
+            1986,
+            1566,
+            2156,
+            1630
           ],
-          "block_id": 12,
-          "block_order": null
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              1986.0,
+              1566.0
+            ],
+            [
+              2156.0,
+              1566.0
+            ],
+            [
+              2156.0,
+              1630.0
+            ],
+            [
+              1986.0,
+              1630.0
+            ]
+          ]
         },
         {
-          "block_label": "formula_number",
-          "block_content": "(14.17)",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{array}{c}{\\displaystyle\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1(\\bmod2)}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n-3u^{2})^{3}}\\\\ {-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},\\qquad(14.17}\\end{array} $$ ",
           "block_bbox": [
-            1986,
-            1847,
-            2149,
-            1908
+            607,
+            1654,
+            2132,
+            1923
           ],
-          "block_id": 13,
-          "block_order": null
+          "block_id": 7,
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              607.0,
+              1654.0
+            ],
+            [
+              2132.0,
+              1654.0
+            ],
+            [
+              2132.0,
+              1923.0
+            ],
+            [
+              607.0,
+              1923.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{align*}\\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}&(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})\\\\ &+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.\\end{align*} $$ ",
+          "block_bbox": [
+            604,
+            1934,
+            1941,
+            2200
+          ],
+          "block_id": 8,
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              604.0,
+              1934.0
+            ],
+            [
+              1941.0,
+              1934.0
+            ],
+            [
+              1941.0,
+              2200.0
+            ],
+            [
+              604.0,
+              2200.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(14.18)",
           "block_bbox": [
-            1986,
-            2128,
-            2149,
-            2190
+            1985,
+            2130,
+            2156,
+            2196
+          ],
+          "block_id": 9,
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              1985.0,
+              2130.0
+            ],
+            [
+              2156.0,
+              2130.0
+            ],
+            [
+              2156.0,
+              2196.0
+            ],
+            [
+              1985.0,
+              2196.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "We shall eliminate the terms",
+          "block_bbox": [
+            352,
+            2260,
+            1067,
+            2320
+          ],
+          "block_id": 10,
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              352.0,
+              2260.0
+            ],
+            [
+              1067.0,
+              2260.0
+            ],
+            [
+              1067.0,
+              2320.0
+            ],
+            [
+              352.0,
+              2320.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}) $$ ",
+          "block_bbox": [
+            817,
+            2370,
+            1698,
+            2545
+          ],
+          "block_id": 11,
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              817.0,
+              2370.0
+            ],
+            [
+              1698.0,
+              2370.0
+            ],
+            [
+              1698.0,
+              2545.0
+            ],
+            [
+              817.0,
+              2545.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "and",
+          "block_bbox": [
+            351,
+            2605,
+            462,
+            2659
+          ],
+          "block_id": 12,
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              351.0,
+              2605.0
+            ],
+            [
+              462.0,
+              2605.0
+            ],
+            [
+              462.0,
+              2659.0
+            ],
+            [
+              351.0,
+              2659.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}) $$ ",
+          "block_bbox": [
+            819,
+            2658,
+            1695,
+            2834
+          ],
+          "block_id": 13,
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              819.0,
+              2658.0
+            ],
+            [
+              1695.0,
+              2658.0
+            ],
+            [
+              1695.0,
+              2834.0
+            ],
+            [
+              819.0,
+              2834.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "from these equations as follows: Multiply equation (14.18) by 16 and add to equation (14.16), then multiply equation (14.17) by 40/3 and subtract. We obtain",
+          "block_bbox": [
+            349,
+            2873,
+            2164,
+            3066
           ],
           "block_id": 14,
-          "block_order": null
+          "block_order": 13,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              349.0,
+              2873.0
+            ],
+            [
+              2164.0,
+              2873.0
+            ],
+            [
+              2164.0,
+              3066.0
+            ],
+            [
+              349.0,
+              3066.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2} $$ ",
+          "block_bbox": [
+            441,
+            3116,
+            2110,
+            3294
+          ],
+          "block_id": 15,
+          "block_order": 14,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              441.0,
+              3116.0
+            ],
+            [
+              2110.0,
+              3116.0
+            ],
+            [
+              2110.0,
+              3294.0
+            ],
+            [
+              441.0,
+              3294.0
+            ]
+          ]
         }
       ],
-      "markdown": "$$\\begin{aligned}{=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4})}\\\\ {}&{{}+5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}+u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\\\ \\end{aligned}$$\n\nby Exercise 1 in Section 14.3.\n\nThe upshot of this analysis is the following three identities:\n\n$$\\begin{aligned}{}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{(\\bmod2)}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n+1)^{2}}\\\\ {}&{{}\\qquad-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.}\\\\ \\end{aligned} − 3u2)3$$\n\nWe shall eliminate the terms \n\n$$\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}).$$\n\nand \n\n$$\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1{\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}).$$\n\nfrom these equations as follows: Multiply equation (14.18) by 16 and add to equation (14.16), then multiply equation (14.17) by 40/3 and subtract.We obtain \n\n\n\n$$\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}$$",
+      "markdown": " $$ \\begin{array}{r l}{=}&{{}\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4}}\\\\ &{+~5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ &{+~u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\displaystyle\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\end{array} $$ \n\nby Exercise 1 in Section 14.3.\n\nThe upshot of this analysis is the following three identities:\n\n $$ \\begin{array}{r l}{\\displaystyle\\sum_{\\stackrel{u^{2}+d\\delta=n}{\\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}&{{}}\\\\ {+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}&{{}}\\end{array} $$ \n\n $$ \\begin{array}{c}{\\displaystyle\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1(\\bmod2)}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n-3u^{2})^{3}}\\\\ {-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},\\qquad(14.17}\\end{array} $$ \n\n $$ \\begin{align*}\\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}&(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})\\\\ &+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.\\end{align*} $$ \n\nWe shall eliminate the terms\n\n $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}) $$ \n\nand\n\n $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}) $$ \n\nfrom these equations as follows: Multiply equation (14.18) by 16 and add to equation (14.16), then multiply equation (14.17) by 40/3 and subtract. We obtain\n\n $$ \\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{\\substack{u^{2}+d\\delta=n\\\\ \\delta\\equiv1\\pmod{2}}}(-1)^{(\\delta-1)/2} $$ ",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4})}\\\\ {}&{{}+5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}+u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\\\ \\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            535.2191162109375,
-            278.3221435546875,
-            2011.3897705078125,
-            1118.4356689453125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1{\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}).",
-          "formula_region_id": 2,
-          "dt_polys": [
-            825.4638671875,
-            2658.53857421875,
-            1689.733154296875,
-            2826.2744140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}).",
-          "formula_region_id": 3,
-          "dt_polys": [
-            822.4151611328125,
-            2369.200439453125,
-            1692.2874755859375,
-            2535.423095703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            443.09088134765625,
-            3116.4462890625,
-            2102.1513671875,
-            3285.1806640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{(\\bmod2)}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n+1)^{2}}\\\\ {}&{{}\\qquad-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.}\\\\ \\end{aligned}",
-          "formula_region_id": 5,
-          "dt_polys": [
-            608.5130615234375,
-            1369.69189453125,
-            1950.8052978515625,
-            2194.68408203125
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2506,
       "height": 3468,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9678540825843811,
-            "coordinate": [
-              348.628662109375,
-              2872.72998046875,
-              2155.009521484375,
-              3053.97802734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9667087197303772,
-            "coordinate": [
-              535.2191162109375,
-              278.3221435546875,
-              2011.3897705078125,
-              1118.4356689453125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9660441875457764,
-            "coordinate": [
-              825.4638671875,
-              2658.53857421875,
-              1689.733154296875,
-              2826.2744140625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9658113718032837,
-            "coordinate": [
-              822.4151611328125,
-              2369.200439453125,
-              1692.2874755859375,
-              2535.423095703125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9650498628616333,
-            "coordinate": [
-              443.09088134765625,
-              3116.4462890625,
-              2102.1513671875,
-              3285.1806640625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9589807391166687,
-            "coordinate": [
-              608.5130615234375,
-              1369.69189453125,
-              1950.8052978515625,
-              2194.68408203125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9389625787734985,
-            "coordinate": [
-              1986.39794921875,
-              2128.71533203125,
-              2149.05419921875,
-              2190.73486328125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9346004128456116,
-            "coordinate": [
-              1986.400146484375,
-              1847.023193359375,
-              2149.066162109375,
-              1908.565673828125
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.9270745515823364,
-            "coordinate": [
-              1987.6419677734375,
-              1564.63232421875,
-              2149.16455078125,
-              1626.462890625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9054233431816101,
-            "coordinate": [
-              352.6253356933594,
-              2260.02685546875,
-              1059.2613525390625,
-              2308.12158203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9051030278205872,
-            "coordinate": [
-              350.1197814941406,
-              1185.166259765625,
-              1075.9373779296875,
-              1235.022216796875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.903410792350769,
-            "coordinate": [
-              406.52044677734375,
-              1250.86376953125,
-              1855.427001953125,
-              1306.2919921875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8870478868484497,
-            "coordinate": [
-              353.7425537109375,
-              2603.35302734375,
-              453.841064453125,
-              2646.24365234375
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8772209882736206,
-            "coordinate": [
-              358.5843505859375,
-              162.75135803222656,
-              436.333251953125,
-              200.6687469482422
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.5549792647361755,
-            "coordinate": [
-              552.1724853515625,
-              158.74026489257812,
-              1481.4671630859375,
-              207.0655517578125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              355,
-              157
-            ],
-            [
-              449,
-              157
-            ],
-            [
-              449,
-              212
-            ],
-            [
-              355,
-              212
-            ]
-          ],
-          [
-            [
-              550,
-              156
-            ],
-            [
-              1484,
-              161
-            ],
-            [
-              1484,
-              212
-            ],
-            [
-              550,
-              208
-            ]
-          ],
-          [
-            [
-              354,
-              1182
-            ],
-            [
-              1079,
-              1174
-            ],
-            [
-              1080,
-              1239
-            ],
-            [
-              355,
-              1248
-            ]
-          ],
-          [
-            [
-              412,
-              1249
-            ],
-            [
-              1858,
-              1249
-            ],
-            [
-              1858,
-              1311
-            ],
-            [
-              412,
-              1311
-            ]
-          ],
-          [
-            [
-              1979,
-              1557
-            ],
-            [
-              2163,
-              1557
-            ],
-            [
-              2163,
-              1634
-            ],
-            [
-              1979,
-              1634
-            ]
-          ],
-          [
-            [
-              1934,
-              1651
-            ],
-            [
-              2140,
-              1643
-            ],
-            [
-              2144,
-              1736
-            ],
-            [
-              1937,
-              1744
-            ]
-          ],
-          [
-            [
-              1981,
-              1843
-            ],
-            [
-              2161,
-              1843
-            ],
-            [
-              2161,
-              1913
-            ],
-            [
-              1981,
-              1913
-            ]
-          ],
-          [
-            [
-              1980,
-              2124
-            ],
-            [
-              2160,
-              2121
-            ],
-            [
-              2161,
-              2195
-            ],
-            [
-              1981,
-              2198
-            ]
-          ],
-          [
-            [
-              360,
-              2259
-            ],
-            [
-              1059,
-              2262
-            ],
-            [
-              1059,
-              2313
-            ],
-            [
-              359,
-              2310
-            ]
-          ],
-          [
-            [
-              352,
-              2598
-            ],
-            [
-              460,
-              2596
-            ],
-            [
-              461,
-              2658
-            ],
-            [
-              354,
-              2661
-            ]
-          ],
-          [
-            [
-              353,
-              2869
-            ],
-            [
-              2164,
-              2868
-            ],
-            [
-              2164,
-              2932
-            ],
-            [
-              353,
-              2933
-            ]
-          ],
-          [
-            [
-              354,
-              2939
-            ],
-            [
-              2160,
-              2939
-            ],
-            [
-              2160,
-              2999
-            ],
-            [
-              354,
-              2999
-            ]
-          ],
-          [
-            [
-              355,
-              3002
-            ],
-            [
-              617,
-              3005
-            ],
-            [
-              616,
-              3061
-            ],
-            [
-              354,
-              3058
-            ]
-          ],
-          [
-            [
-              535,
-              278
-            ],
-            [
-              2011,
-              278
-            ],
-            [
-              2011,
-              1118
-            ],
-            [
-              535,
-              1118
-            ]
-          ],
-          [
-            [
-              825,
-              2658
-            ],
-            [
-              1689,
-              2658
-            ],
-            [
-              1689,
-              2826
-            ],
-            [
-              825,
-              2826
-            ]
-          ],
-          [
-            [
-              822,
-              2369
-            ],
-            [
-              1692,
-              2369
-            ],
-            [
-              1692,
-              2535
-            ],
-            [
-              822,
-              2535
-            ]
-          ],
-          [
-            [
-              443,
-              3116
-            ],
-            [
-              2102,
-              3116
-            ],
-            [
-              2102,
-              3285
-            ],
-            [
-              443,
-              3285
-            ]
-          ],
-          [
-            [
-              608,
-              1369
-            ],
-            [
-              1950,
-              1369
-            ],
-            [
-              1950,
-              2194
-            ],
-            [
-              608,
-              2194
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "448",
-          "14. Sums of an Even Number of Squares",
-          "by Exercise 1 in Section 14.3.",
-          "The upshot of this analysis is the following three identities:",
-          "(14.16)",
-          "− 3u2)3",
-          "(14.17)",
-          "(14.18)",
-          "We shall eliminate the terms",
-          "and",
-          "from these equations as follows: Multiply equation (14.18) by 16 and add",
-          "to equation (14.16), then multiply equation (14.17) by 40/3 and subtract.",
-          "We obtain",
-          "\\begin{aligned}{=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4})}\\\\ {}&{{}+5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}+u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\\\ \\end{aligned}",
-          "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1{\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}).",
-          "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}).",
-          "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}",
-          "\\begin{aligned}{}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{(\\bmod2)}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n+1)^{2}}\\\\ {}&{{}\\qquad-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.}\\\\ \\end{aligned}"
-        ],
-        "rec_scores": [
-          0.9998040199279785,
-          0.9681567549705505,
-          0.9947291612625122,
-          0.9691392779350281,
-          0.9997827410697937,
-          0.831145703792572,
-          0.9998483657836914,
-          0.9997765421867371,
-          0.9731670618057251,
-          0.9998176693916321,
-          0.9616127014160156,
-          0.9812883138656616,
-          0.9982340335845947,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              355,
-              157
-            ],
-            [
-              449,
-              157
-            ],
-            [
-              449,
-              212
-            ],
-            [
-              355,
-              212
-            ]
-          ],
-          [
-            [
-              550,
-              156
-            ],
-            [
-              1484,
-              161
-            ],
-            [
-              1484,
-              212
-            ],
-            [
-              550,
-              208
-            ]
-          ],
-          [
-            [
-              354,
-              1182
-            ],
-            [
-              1079,
-              1174
-            ],
-            [
-              1080,
-              1239
-            ],
-            [
-              355,
-              1248
-            ]
-          ],
-          [
-            [
-              412,
-              1249
-            ],
-            [
-              1858,
-              1249
-            ],
-            [
-              1858,
-              1311
-            ],
-            [
-              412,
-              1311
-            ]
-          ],
-          [
-            [
-              1979,
-              1557
-            ],
-            [
-              2163,
-              1557
-            ],
-            [
-              2163,
-              1634
-            ],
-            [
-              1979,
-              1634
-            ]
-          ],
-          [
-            [
-              1934,
-              1651
-            ],
-            [
-              2140,
-              1643
-            ],
-            [
-              2144,
-              1736
-            ],
-            [
-              1937,
-              1744
-            ]
-          ],
-          [
-            [
-              1981,
-              1843
-            ],
-            [
-              2161,
-              1843
-            ],
-            [
-              2161,
-              1913
-            ],
-            [
-              1981,
-              1913
-            ]
-          ],
-          [
-            [
-              1980,
-              2124
-            ],
-            [
-              2160,
-              2121
-            ],
-            [
-              2161,
-              2195
-            ],
-            [
-              1981,
-              2198
-            ]
-          ],
-          [
-            [
-              360,
-              2259
-            ],
-            [
-              1059,
-              2262
-            ],
-            [
-              1059,
-              2313
-            ],
-            [
-              359,
-              2310
-            ]
-          ],
-          [
-            [
-              352,
-              2598
-            ],
-            [
-              460,
-              2596
-            ],
-            [
-              461,
-              2658
-            ],
-            [
-              354,
-              2661
-            ]
-          ],
-          [
-            [
-              353,
-              2869
-            ],
-            [
-              2164,
-              2868
-            ],
-            [
-              2164,
-              2932
-            ],
-            [
-              353,
-              2933
-            ]
-          ],
-          [
-            [
-              354,
-              2939
-            ],
-            [
-              2160,
-              2939
-            ],
-            [
-              2160,
-              2999
-            ],
-            [
-              354,
-              2999
-            ]
-          ],
-          [
-            [
-              355,
-              3002
-            ],
-            [
-              617,
-              3005
-            ],
-            [
-              616,
-              3061
-            ],
-            [
-              354,
-              3058
-            ]
-          ],
-          [
-            [
-              535,
-              278
-            ],
-            [
-              2011,
-              278
-            ],
-            [
-              2011,
-              1118
-            ],
-            [
-              535,
-              1118
-            ]
-          ],
-          [
-            [
-              825,
-              2658
-            ],
-            [
-              1689,
-              2658
-            ],
-            [
-              1689,
-              2826
-            ],
-            [
-              825,
-              2826
-            ]
-          ],
-          [
-            [
-              822,
-              2369
-            ],
-            [
-              1692,
-              2369
-            ],
-            [
-              1692,
-              2535
-            ],
-            [
-              822,
-              2535
-            ]
-          ],
-          [
-            [
-              443,
-              3116
-            ],
-            [
-              2102,
-              3116
-            ],
-            [
-              2102,
-              3285
-            ],
-            [
-              443,
-              3285
-            ]
-          ],
-          [
-            [
-              608,
-              1369
-            ],
-            [
-              1950,
-              1369
-            ],
-            [
-              1950,
-              2194
-            ],
-            [
-              608,
-              2194
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            355.0,
-            157.0,
-            449.0,
-            212.0
-          ],
-          [
-            550.0,
-            156.0,
-            1484.0,
-            212.0
-          ],
-          [
-            354.0,
-            1174.0,
-            1080.0,
-            1248.0
-          ],
-          [
-            412.0,
-            1249.0,
-            1858.0,
-            1311.0
-          ],
-          [
-            1979.0,
-            1557.0,
-            2163.0,
-            1634.0
-          ],
-          [
-            1934.0,
-            1643.0,
-            2144.0,
-            1744.0
-          ],
-          [
-            1981.0,
-            1843.0,
-            2161.0,
-            1913.0
-          ],
-          [
-            1980.0,
-            2121.0,
-            2161.0,
-            2198.0
-          ],
-          [
-            359.0,
-            2259.0,
-            1059.0,
-            2313.0
-          ],
-          [
-            352.0,
-            2596.0,
-            461.0,
-            2661.0
-          ],
-          [
-            353.0,
-            2868.0,
-            2164.0,
-            2933.0
-          ],
-          [
-            354.0,
-            2939.0,
-            2160.0,
-            2999.0
-          ],
-          [
-            354.0,
-            3002.0,
-            617.0,
-            3061.0
-          ],
-          [
-            535.2191162109375,
-            278.3221435546875,
-            2011.3897705078125,
-            1118.4356689453125
-          ],
-          [
-            825.4638671875,
-            2658.53857421875,
-            1689.733154296875,
-            2826.2744140625
-          ],
-          [
-            822.4151611328125,
-            2369.200439453125,
-            1692.2874755859375,
-            2535.423095703125
-          ],
-          [
-            443.09088134765625,
-            3116.4462890625,
-            2102.1513671875,
-            3285.1806640625
-          ],
-          [
-            608.5130615234375,
-            1369.69189453125,
-            1950.8052978515625,
-            2194.68408203125
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{5}\\delta-10d^{4}u^{2}+10d^{3}\\delta u^{2}-20d^{2}u^{4})}\\\\ {}&{{}+5d\\delta u^{4}-2u^{6})}\\\\ {=}&{{}\\sum_{{u^{2}\\atop\\delta\\equiv1}{d\\delta=n\\atop(\\bmod2)}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}+u^{4}(5n-7u^{2}))}\\\\ {=}&{{}\\left\\{\\ell^{5}\\sum_{j=1}^{\\ell}(-1)^{\\ell-j}(2j-1)\\right\\}_{n=\\ell^{2}}}\\\\ {=}&{{}\\{n^{3}\\}_{n=\\ell^{2}}}\\\\ \\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            535.2191162109375,
-            278.3221435546875,
-            2011.3897705078125,
-            1118.4356689453125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1{\\pmod{2}}}(-1)^{(\\delta-1)/2}\\delta^{2}u^{2}(n-3u^{2}).",
-          "formula_region_id": 2,
-          "dt_polys": [
-            825.4638671875,
-            2658.53857421875,
-            1689.733154296875,
-            2826.2744140625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}d^{2}u^{2}(n-3u^{2}).",
-          "formula_region_id": 3,
-          "dt_polys": [
-            822.4151611328125,
-            2369.200439453125,
-            1692.2874755859375,
-            2535.423095703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(n-11u^{2})(16d^{4}+\\delta^{4})+\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}",
-          "formula_region_id": 4,
-          "dt_polys": [
-            443.09088134765625,
-            3116.4462890625,
-            2102.1513671875,
-            3285.1806640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{(\\bmod2)}}(-1)^{(\\delta-1)/2}(\\delta^{4}(n-11u^{2})+40\\delta^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+16u^{4}(5n-7u^{2}))=\\left\\{16n^{3}-40n^{2}+25n\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}((3\\delta^{2}u^{2}+12d^{2}u^{2})(n-3u^{2})+(n+1)^{2}}\\\\ {}&{{}\\qquad-12u^{2}(n-u^{2})(n-3u^{2}))=\\left\\{4n^{3}-3n^{2}\\right\\}_{n=\\ell^{2}},}\\\\ {}&{{}\\sum_{u^{2}+d\\delta=n\\atop\\delta\\equiv1\\pmod{2}}(-1)^{(\\delta-1)/2}(d^{4}(n-11u^{2})+10d^{2}u^{2}(n-3u^{2})}\\\\ {}&{{}\\qquad+u^{4}(5n-7u^{2}))=\\{n^{3}\\}_{n=\\ell^{2}}.}\\\\ \\end{aligned}",
-          "formula_region_id": 5,
-          "dt_polys": [
-            608.5130615234375,
-            1369.69189453125,
-            1950.8052978515625,
-            2194.68408203125
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -1345,7 +526,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

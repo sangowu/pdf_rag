@@ -5,43 +5,69 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "header",
-          "block_content": "门\n\n",
-          "block_bbox": [
-            137,
-            218,
-            727,
-            467
-          ],
-          "block_id": 0,
-          "block_order": null
-        },
-        {
           "block_label": "image",
           "block_content": "",
           "block_bbox": [
-            268,
-            453,
-            2821,
-            1587
+            243,
+            446,
+            2828,
+            1593
           ],
-          "block_id": 1,
-          "block_order": null
+          "block_id": 0,
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              243.0,
+              446.0
+            ],
+            [
+              2828.0,
+              446.0
+            ],
+            [
+              2828.0,
+              1593.0
+            ],
+            [
+              243.0,
+              1593.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "马、斑马、驴、犀牛、牛、羊、虎、狗、猪、兔、鼠、蛇、企鹅、鲨鱼、龟、蛙这些动物都有脊柱、它们同属于脊索动物门中的脊椎动物亚门。",
           "block_bbox": [
-            150,
-            1610,
-            2727,
-            2103
+            152,
+            1609,
+            2745,
+            2115
           ],
-          "block_id": 2,
-          "block_order": 1
+          "block_id": 1,
+          "block_order": 1,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              152.0,
+              1609.0
+            ],
+            [
+              2745.0,
+              1609.0
+            ],
+            [
+              2745.0,
+              2115.0
+            ],
+            [
+              152.0,
+              2115.0
+            ]
+          ]
         }
       ],
-      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_268_453_2821_1587.jpg\" alt=\"Image\" width=\"85%\" /></div>\n\n\n马、斑马、驴、犀牛、牛、羊、虎、狗、猪、兔、鼠、蛇、企鹅、鲨鱼、龟、蛙这些动物都有脊柱、它们同属于脊索动物门中的脊椎动物亚门。",
+      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_243_446_2828_1593.jpg\" alt=\"Image\" width=\"86%\" /></div>\n\n\n马、斑马、驴、犀牛、牛、羊、虎、狗、猪、兔、鼠、蛇、企鹅、鲨鱼、龟、蛙这些动物都有脊柱、它们同属于脊索动物门中的脊椎动物亚门。",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -50,308 +76,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9126527905464172,
-            "coordinate": [
-              150.42431640625,
-              1610.653076171875,
-              2727.15234375,
-              2103.41357421875
-            ]
-          },
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.7747003436088562,
-            "coordinate": [
-              268.2313232421875,
-              453.83074951171875,
-              2821.5244140625,
-              1587.431396484375
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.5794689655303955,
-            "coordinate": [
-              137.88629150390625,
-              218.953125,
-              727.5430297851562,
-              467.97235107421875
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              340,
-              251
-            ],
-            [
-              495,
-              251
-            ],
-            [
-              495,
-              407
-            ],
-            [
-              340,
-              407
-            ]
-          ],
-          [
-            [
-              224,
-              409
-            ],
-            [
-              675,
-              398
-            ],
-            [
-              677,
-              464
-            ],
-            [
-              225,
-              475
-            ]
-          ],
-          [
-            [
-              2300,
-              1153
-            ],
-            [
-              2964,
-              1159
-            ],
-            [
-              2960,
-              1644
-            ],
-            [
-              2296,
-              1638
-            ]
-          ],
-          [
-            [
-              415,
-              1601
-            ],
-            [
-              2706,
-              1596
-            ],
-            [
-              2706,
-              1745
-            ],
-            [
-              415,
-              1750
-            ]
-          ],
-          [
-            [
-              151,
-              1779
-            ],
-            [
-              2746,
-              1779
-            ],
-            [
-              2746,
-              1935
-            ],
-            [
-              151,
-              1935
-            ]
-          ],
-          [
-            [
-              148,
-              1960
-            ],
-            [
-              2559,
-              1960
-            ],
-            [
-              2559,
-              2119
-            ],
-            [
-              148,
-              2119
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "门",
-          "马、斑马、驴、犀牛、牛、羊、虎、狗、猪、",
-          "兔、鼠、蛇、企鹅、鲨鱼、龟、蛙这些动物都有脊",
-          "柱、它们同属于脊索动物门中的脊椎动物亚门。"
-        ],
-        "rec_scores": [
-          0.999735414981842,
-          0.998468279838562,
-          0.9958468079566956,
-          0.9944232106208801
-        ],
-        "rec_polys": [
-          [
-            [
-              340,
-              251
-            ],
-            [
-              495,
-              251
-            ],
-            [
-              495,
-              407
-            ],
-            [
-              340,
-              407
-            ]
-          ],
-          [
-            [
-              415,
-              1601
-            ],
-            [
-              2706,
-              1596
-            ],
-            [
-              2706,
-              1745
-            ],
-            [
-              415,
-              1750
-            ]
-          ],
-          [
-            [
-              151,
-              1779
-            ],
-            [
-              2746,
-              1779
-            ],
-            [
-              2746,
-              1935
-            ],
-            [
-              151,
-              1935
-            ]
-          ],
-          [
-            [
-              148,
-              1960
-            ],
-            [
-              2559,
-              1960
-            ],
-            [
-              2559,
-              2119
-            ],
-            [
-              148,
-              2119
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            340,
-            251,
-            495,
-            407
-          ],
-          [
-            415,
-            1596,
-            2706,
-            1750
-          ],
-          [
-            151,
-            1779,
-            2746,
-            1935
-          ],
-          [
-            148,
-            1960,
-            2559,
-            2119
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -360,7 +92,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

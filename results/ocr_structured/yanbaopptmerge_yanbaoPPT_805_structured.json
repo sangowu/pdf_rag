@@ -6,18 +6,37 @@
       "parsing_res_list": [
         {
           "block_label": "text",
-          "block_content": "学习第二节：我们的大地给予我们足够的食品，我们将共享。\n我们的天空给予我们遍地的彩虹，我们将保卫它们。\n",
+          "block_content": "我们的天空给予我们遍地的彩虹，\n我们将保卫它们。",
           "block_bbox": [
-            236,
-            380,
-            2652,
-            1697
+            241,
+            1219,
+            2660,
+            1718
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              241.0,
+              1219.0
+            ],
+            [
+              2660.0,
+              1219.0
+            ],
+            [
+              2660.0,
+              1718.0
+            ],
+            [
+              241.0,
+              1718.0
+            ]
+          ]
         }
       ],
-      "markdown": "学习第二节：我们的大地给予我们足够的食品，我们将共享。\n\n我们的天空给予我们遍地的彩虹，我们将保卫它们。\n\n",
+      "markdown": "我们的天空给予我们遍地的彩虹，\n\n我们将保卫它们。",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -26,348 +45,14 @@
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8594840168952942,
-            "coordinate": [
-              235.716552734375,
-              611.46044921875,
-              2643.01025390625,
-              1080.48486328125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7563238143920898,
-            "coordinate": [
-              239.593994140625,
-              1219.509765625,
-              2639.337646484375,
-              1690.4052734375
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.649054765701294,
-            "coordinate": [
-              808.300537109375,
-              380.7816162109375,
-              1717.505126953125,
-              543.2203369140625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.3444167375564575,
-            "coordinate": [
-              237.28466796875,
-              1220.410888671875,
-              2640.671875,
-              1384.820556640625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.33187374472618103,
-            "coordinate": [
-              236.1573486328125,
-              380.896484375,
-              2652.43017578125,
-              1697.34375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.27862051129341125,
-            "coordinate": [
-              363.38189697265625,
-              1527.3489990234375,
-              1610.158203125,
-              1691.9281005859375
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              793,
-              355
-            ],
-            [
-              1731,
-              350
-            ],
-            [
-              1732,
-              574
-            ],
-            [
-              794,
-              579
-            ]
-          ],
-          [
-            [
-              218,
-              584
-            ],
-            [
-              2673,
-              584
-            ],
-            [
-              2673,
-              819
-            ],
-            [
-              218,
-              819
-            ]
-          ],
-          [
-            [
-              227,
-              900
-            ],
-            [
-              1164,
-              900
-            ],
-            [
-              1164,
-              1117
-            ],
-            [
-              227,
-              1117
-            ]
-          ],
-          [
-            [
-              219,
-              1194
-            ],
-            [
-              2669,
-              1197
-            ],
-            [
-              2669,
-              1428
-            ],
-            [
-              218,
-              1425
-            ]
-          ],
-          [
-            [
-              351,
-              1502
-            ],
-            [
-              1632,
-              1509
-            ],
-            [
-              1631,
-              1735
-            ],
-            [
-              350,
-              1728
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "学习第二节：",
-          "我们的大地给予我们足够的食品，",
-          "我们将共享。",
-          "我们的天空给予我们遍地的彩虹，",
-          "我们将保卫它们。"
-        ],
-        "rec_scores": [
-          0.9378244280815125,
-          0.9977347254753113,
-          0.9992420077323914,
-          0.9883661270141602,
-          0.9993876218795776
-        ],
-        "rec_polys": [
-          [
-            [
-              793,
-              355
-            ],
-            [
-              1731,
-              350
-            ],
-            [
-              1732,
-              574
-            ],
-            [
-              794,
-              579
-            ]
-          ],
-          [
-            [
-              218,
-              584
-            ],
-            [
-              2673,
-              584
-            ],
-            [
-              2673,
-              819
-            ],
-            [
-              218,
-              819
-            ]
-          ],
-          [
-            [
-              227,
-              900
-            ],
-            [
-              1164,
-              900
-            ],
-            [
-              1164,
-              1117
-            ],
-            [
-              227,
-              1117
-            ]
-          ],
-          [
-            [
-              219,
-              1194
-            ],
-            [
-              2669,
-              1197
-            ],
-            [
-              2669,
-              1428
-            ],
-            [
-              218,
-              1425
-            ]
-          ],
-          [
-            [
-              351,
-              1502
-            ],
-            [
-              1632,
-              1509
-            ],
-            [
-              1631,
-              1735
-            ],
-            [
-              350,
-              1728
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            793,
-            350,
-            1732,
-            579
-          ],
-          [
-            218,
-            584,
-            2673,
-            819
-          ],
-          [
-            227,
-            900,
-            1164,
-            1117
-          ],
-          [
-            218,
-            1194,
-            2669,
-            1428
-          ],
-          [
-            350,
-            1502,
-            1632,
-            1735
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -376,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

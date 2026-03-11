@@ -8,3106 +8,578 @@
           "block_label": "number",
           "block_content": "186",
           "block_bbox": [
-            630,
-            213,
-            694,
-            247
+            629,
+            212,
+            703,
+            256
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              629.0,
+              212.0
+            ],
+            [
+              703.0,
+              212.0
+            ],
+            [
+              703.0,
+              256.0
+            ],
+            [
+              629.0,
+              256.0
+            ]
+          ]
         },
         {
           "block_label": "header",
-          "block_content": "Chapter 7. THE ZETA FUNCTION AND PRIME NUMBER THEOREM ",
+          "block_content": "Chapter 7. THE ZETA FUNCTION AND PRIME NUMBER THEOREM",
           "block_bbox": [
-            773,
-            216,
-            1994,
-            249
+            772,
+            217,
+            2007,
+            259
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              772.0,
+              217.0
+            ],
+            [
+              2007.0,
+              217.0
+            ],
+            [
+              2007.0,
+              259.0
+            ],
+            [
+              772.0,
+              259.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "which holds for $0\\leq x<1$ , we find that ",
+          "block_content": "which holds for  $ 0 \\leq x < 1 $, we find that",
           "block_bbox": [
-            623,
-            312,
-            1380,
-            354
+            624,
+            313,
+            1388,
+            362
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              624.0,
+              313.0
+            ],
+            [
+              1388.0,
+              313.0
+            ],
+            [
+              1388.0,
+              362.0
+            ],
+            [
+              624.0,
+              362.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\log\\zeta(s)=\\log\\prod_{p}{\\frac{1}{1-p^{-s}}}=\\sum_{p}\\log\\left({\\frac{1}{1-p^{-s}}}\\right)=\\sum_{p,m}{\\frac{p^{-m s}}{m}}.",
+          "block_label": "display_formula",
+          "block_content": " $$ \\log\\zeta(s)=\\log\\prod_{p}\\frac{1}{1-p^{-s}}=\\sum_{p}\\log\\left(\\frac{1}{1-p^{-s}}\\right)=\\sum_{p,m}\\frac{p^{-m s}}{m}. $$ ",
           "block_bbox": [
-            732,
-            405,
-            1889,
-            538
+            731,
+            406,
+            1895,
+            545
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              731.0,
+              406.0
+            ],
+            [
+              1895.0,
+              406.0
+            ],
+            [
+              1895.0,
+              545.0
+            ],
+            [
+              731.0,
+              545.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Since the double sum converges absolutely, we need not specify the order of summation. Seethe Note atthe end of this chapter. The formula thenholdsforall $\\mathrm{R e}(s)>1$ byanalytic continuation. Notethat,by Theorem 6.2 in Chapter 3, log $\\zeta(s)$ is well defined in the simply connected half-plane $\\mathrm{R e}(s)>1$ ,sinceζ has no zeros there. Finally, it is clear that we have \n",
+          "block_content": "Since the double sum converges absolutely, we need not specify the order of summation. See the Note at the end of this chapter. The formula then holds for all  $ \\mathrm{Re}(s) > 1 $ by analytic continuation. Note that, by Theorem 6.2 in Chapter 3,  $ \\log \\zeta(s) $ is well defined in the simply connected half-plane  $ \\mathrm{Re}(s) > 1 $, since  $ \\zeta $ has no zeros there. Finally, it is clear that we have",
           "block_bbox": [
-            620,
+            618,
             585,
-            1997,
-            892
+            2010,
+            906
           ],
           "block_id": 4,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              618.0,
+              585.0
+            ],
+            [
+              2010.0,
+              585.0
+            ],
+            [
+              2010.0,
+              906.0
+            ],
+            [
+              618.0,
+              906.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\sum_{p,m}{\\frac{p^{-m s}}{m}}=\\sum_{n=1}^{\\infty}c_{n}n^{-s},",
+          "block_label": "display_formula",
+          "block_content": " $$ \\sum_{p,m}\\frac{p^{-m s}}{m}=\\sum_{n=1}^{\\infty}c_{n}n^{-s}, $$ ",
           "block_bbox": [
-            1082,
-            927,
-            1541,
-            1061
+            1080,
+            931,
+            1546,
+            1070
           ],
           "block_id": 5,
-          "block_order": 4
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              1080.0,
+              931.0
+            ],
+            [
+              1546.0,
+              931.0
+            ],
+            [
+              1546.0,
+              1070.0
+            ],
+            [
+              1080.0,
+              1070.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "where $c_{n}=1/m{\\mathrm{~i f~}}n=p^{m}{\\mathrm{~a n d~}}c_{n}=0$ otherwise.",
-          "block_bbox": [
-            622,
-            1117,
-            1560,
-            1162
-          ],
-          "block_id": 6,
-          "block_order": 5
-        },
-        {
-          "block_label": "text",
-          "block_content": "The proof of the theorem we shall give depends on a simple trick that is based on the following inequality.\n",
+          "block_content": "where  $ c_{n}=1/m $ if  $ n=p^{m} $ and  $ c_{n}=0 $ otherwise.",
           "block_bbox": [
             621,
+            1117,
+            1568,
+            1170
+          ],
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              621.0,
+              1117.0
+            ],
+            [
+              1568.0,
+              1117.0
+            ],
+            [
+              1568.0,
+              1170.0
+            ],
+            [
+              621.0,
+              1170.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The proof of the theorem we shall give depends on a simple trick that is based on the following inequality.",
+          "block_bbox": [
+            620,
             1201,
-            1996,
-            1298
+            2008,
+            1306
           ],
           "block_id": 7,
-          "block_order": 6
+          "block_order": 6,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              620.0,
+              1201.0
+            ],
+            [
+              2008.0,
+              1201.0
+            ],
+            [
+              2008.0,
+              1306.0
+            ],
+            [
+              620.0,
+              1306.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Lemma 1.4 If $^{\\mathrm{~\\scriptsize~\\cdot~}}\\theta\\in\\mathbb{R}$ ,then $3+4\\cos\\theta+\\cos2\\theta\\geq0$ ",
+          "block_content": "Lemma 1.4 If  $ \\theta \\in \\mathbb{R} $, then  $ 3 + 4 \\cos \\theta + \\cos 2\\theta \\geq 0 $.",
           "block_bbox": [
-            623,
+            622,
             1341,
-            1618,
-            1381
+            1622,
+            1391
           ],
           "block_id": 8,
-          "block_order": 7
+          "block_order": 7,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              622.0,
+              1341.0
+            ],
+            [
+              1622.0,
+              1341.0
+            ],
+            [
+              1622.0,
+              1391.0
+            ],
+            [
+              622.0,
+              1391.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "This follows at once from the simple observation ",
+          "block_content": "This follows at once from the simple observation",
           "block_bbox": [
-            666,
-            1427,
-            1602,
-            1466
+            664,
+            1428,
+            1610,
+            1476
           ],
           "block_id": 9,
-          "block_order": 8
+          "block_order": 8,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              664.0,
+              1428.0
+            ],
+            [
+              1610.0,
+              1428.0
+            ],
+            [
+              1610.0,
+              1476.0
+            ],
+            [
+              664.0,
+              1476.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}.",
+          "block_label": "display_formula",
+          "block_content": " $$ 3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}. $$ ",
           "block_bbox": [
-            973,
-            1527,
-            1646,
-            1572
+            974,
+            1526,
+            1653,
+            1582
           ],
           "block_id": 10,
-          "block_order": 9
+          "block_order": 9,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              974.0,
+              1526.0
+            ],
+            [
+              1653.0,
+              1526.0
+            ],
+            [
+              1653.0,
+              1582.0
+            ],
+            [
+              974.0,
+              1582.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Corollary 1.5$\\mathit{I f}\\:\\sigma>1$ and t is real, then ",
+          "block_content": "Corollary 1.5 If  $ \\sigma > 1 $ and t is real, then",
           "block_bbox": [
             622,
             1631,
-            1453,
-            1675
+            1459,
+            1683
           ],
           "block_id": 11,
-          "block_order": 10
+          "block_order": 10,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              622.0,
+              1631.0
+            ],
+            [
+              1459.0,
+              1631.0
+            ],
+            [
+              1459.0,
+              1683.0
+            ],
+            [
+              622.0,
+              1683.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0.",
+          "block_label": "display_formula",
+          "block_content": " $$ \\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0. $$ ",
           "block_bbox": [
-            977,
-            1728,
-            1645,
-            1779
+            976,
+            1729,
+            1652,
+            1789
           ],
           "block_id": 12,
-          "block_order": 11
+          "block_order": 11,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              976.0,
+              1729.0
+            ],
+            [
+              1652.0,
+              1729.0
+            ],
+            [
+              1652.0,
+              1789.0
+            ],
+            [
+              976.0,
+              1789.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Proof. Let $s=\\sigma+i t$ and note that ",
+          "block_content": "Proof. Let  $ s = \\sigma + it $ and note that",
           "block_bbox": [
             668,
-            1836,
-            1371,
-            1877
+            1837,
+            1378,
+            1885
           ],
           "block_id": 13,
-          "block_order": 12
+          "block_order": 12,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              668.0,
+              1837.0
+            ],
+            [
+              1378.0,
+              1837.0
+            ],
+            [
+              1378.0,
+              1885.0
+            ],
+            [
+              668.0,
+              1885.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\operatorname{R e}(n^{-s})=\\operatorname{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n).",
+          "block_label": "display_formula",
+          "block_content": " $$ \\mathrm{R e}(n^{-s})=\\mathrm{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n). $$ ",
           "block_bbox": [
-            652,
+            650,
             1933,
-            1967,
-            1984
+            1973,
+            1993
           ],
           "block_id": 14,
-          "block_order": 13
+          "block_order": 13,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              650.0,
+              1933.0
+            ],
+            [
+              1973.0,
+              1933.0
+            ],
+            [
+              1973.0,
+              1993.0
+            ],
+            [
+              650.0,
+              1993.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "Therefore,",
           "block_bbox": [
-            623,
-            2041,
-            826,
-            2080
+            625,
+            2043,
+            834,
+            2091
           ],
           "block_id": 15,
-          "block_order": 14
+          "block_order": 14,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              625.0,
+              2043.0
+            ],
+            [
+              834.0,
+              2043.0
+            ],
+            [
+              834.0,
+              2091.0
+            ],
+            [
+              625.0,
+              2091.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}{}&{{}\\operatorname{l o g}|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3\\operatorname{l o g}|\\zeta(\\sigma)|+4\\operatorname{l o g}|\\zeta(\\sigma+i t)|+\\operatorname{l o g}|\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma)]+4{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+i t)]+{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+2i t)]}\\\\ {={}}&{{}\\sum c_{n}n^{-\\sigma}(3+4\\operatorname{c o s}\\theta_{n}+\\operatorname{c o s}2\\theta_{n})\\thinspace,}\\\\ \\end{aligned}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{aligned}&\\log\\left|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+it)\\zeta(\\sigma+2it)\\right|\\\\=&3\\log\\left|\\zeta(\\sigma)\\right|+4\\log\\left|\\zeta(\\sigma+it)\\right|+\\log\\left|\\zeta(\\sigma+2it)\\right|\\\\=&3Re[\\log\\zeta(\\sigma)]+4Re[\\log\\zeta(\\sigma+it)]+Re[\\log\\zeta(\\sigma+2it)]\\\\=&\\sum c_{n}n^{-\\sigma}(3+4\\cos\\theta_{n}+\\cos2\\theta_{n}),\\end{aligned} $$ ",
           "block_bbox": [
             784,
-            2124,
-            1850,
-            2418
+            2123,
+            1856,
+            2431
           ],
           "block_id": 16,
-          "block_order": 15
+          "block_order": 15,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              784.0,
+              2123.0
+            ],
+            [
+              1856.0,
+              2123.0
+            ],
+            [
+              1856.0,
+              2431.0
+            ],
+            [
+              784.0,
+              2431.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "where $\\theta_{n}=t\\log n$ . The positivity now follows from Lemma 1.4, and the fact that $c_{n}\\geq0$ \n",
+          "block_content": "where  $ \\theta_n = t \\log n $. The positivity now follows from Lemma 1.4, and the fact that  $ c_n \\geq 0 $.",
           "block_bbox": [
-            619,
+            617,
             2470,
-            1998,
-            2568
+            2008,
+            2576
           ],
           "block_id": 17,
-          "block_order": 16
+          "block_order": 16,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              617.0,
+              2470.0
+            ],
+            [
+              2008.0,
+              2470.0
+            ],
+            [
+              2008.0,
+              2576.0
+            ],
+            [
+              617.0,
+              2576.0
+            ]
+          ]
         }
       ],
-      "markdown": "which holds for $0\\leq x<1$ , we find that \n\n$$\\log\\zeta(s)=\\log\\prod_{p}{\\frac{1}{1-p^{-s}}}=\\sum_{p}\\log\\left({\\frac{1}{1-p^{-s}}}\\right)=\\sum_{p,m}{\\frac{p^{-m s}}{m}}.$$\n\nSince the double sum converges absolutely, we need not specify the order of summation. Seethe Note atthe end of this chapter. The formula thenholdsforall $\\mathrm{R e}(s)>1$ byanalytic continuation. Notethat,by Theorem 6.2 in Chapter 3, log $\\zeta(s)$ is well defined in the simply connected half-plane $\\mathrm{R e}(s)>1$ ,sinceζ has no zeros there. Finally, it is clear that we have \n\n\n\n$$\\sum_{p,m}{\\frac{p^{-m s}}{m}}=\\sum_{n=1}^{\\infty}c_{n}n^{-s},$$\n\nwhere $c_{n}=1/m{\\mathrm{~i f~}}n=p^{m}{\\mathrm{~a n d~}}c_{n}=0$ otherwise.\n\nThe proof of the theorem we shall give depends on a simple trick that is based on the following inequality.\n\n\n\nLemma 1.4 If $^{\\mathrm{~\\scriptsize~\\cdot~}}\\theta\\in\\mathbb{R}$ ,then $3+4\\cos\\theta+\\cos2\\theta\\geq0$ \n\nThis follows at once from the simple observation \n\n$$3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}.$$\n\nCorollary 1.5$\\mathit{I f}\\:\\sigma>1$ and t is real, then \n\n$$\\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0.$$\n\nProof. Let $s=\\sigma+i t$ and note that \n\n$$\\operatorname{R e}(n^{-s})=\\operatorname{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n).$$\n\nTherefore,\n\n$$\\begin{aligned}{}&{{}\\operatorname{l o g}|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3\\operatorname{l o g}|\\zeta(\\sigma)|+4\\operatorname{l o g}|\\zeta(\\sigma+i t)|+\\operatorname{l o g}|\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma)]+4{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+i t)]+{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+2i t)]}\\\\ {={}}&{{}\\sum c_{n}n^{-\\sigma}(3+4\\operatorname{c o s}\\theta_{n}+\\operatorname{c o s}2\\theta_{n})\\thinspace,}\\\\ \\end{aligned}$$\n\nwhere $\\theta_{n}=t\\log n$ . The positivity now follows from Lemma 1.4, and the fact that $c_{n}\\geq0$ \n\n",
+      "markdown": "which holds for  $ 0 \\leq x < 1 $, we find that\n\n $$ \\log\\zeta(s)=\\log\\prod_{p}\\frac{1}{1-p^{-s}}=\\sum_{p}\\log\\left(\\frac{1}{1-p^{-s}}\\right)=\\sum_{p,m}\\frac{p^{-m s}}{m}. $$ \n\nSince the double sum converges absolutely, we need not specify the order of summation. See the Note at the end of this chapter. The formula then holds for all  $ \\mathrm{Re}(s) > 1 $ by analytic continuation. Note that, by Theorem 6.2 in Chapter 3,  $ \\log \\zeta(s) $ is well defined in the simply connected half-plane  $ \\mathrm{Re}(s) > 1 $, since  $ \\zeta $ has no zeros there. Finally, it is clear that we have\n\n $$ \\sum_{p,m}\\frac{p^{-m s}}{m}=\\sum_{n=1}^{\\infty}c_{n}n^{-s}, $$ \n\nwhere  $ c_{n}=1/m $ if  $ n=p^{m} $ and  $ c_{n}=0 $ otherwise.\n\nThe proof of the theorem we shall give depends on a simple trick that is based on the following inequality.\n\nLemma 1.4 If  $ \\theta \\in \\mathbb{R} $, then  $ 3 + 4 \\cos \\theta + \\cos 2\\theta \\geq 0 $.\n\nThis follows at once from the simple observation\n\n $$ 3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}. $$ \n\nCorollary 1.5 If  $ \\sigma > 1 $ and t is real, then\n\n $$ \\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0. $$ \n\nProof. Let  $ s = \\sigma + it $ and note that\n\n $$ \\mathrm{R e}(n^{-s})=\\mathrm{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n). $$ \n\nTherefore,\n\n $$ \\begin{aligned}&\\log\\left|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+it)\\zeta(\\sigma+2it)\\right|\\\\=&3\\log\\left|\\zeta(\\sigma)\\right|+4\\log\\left|\\zeta(\\sigma+it)\\right|+\\log\\left|\\zeta(\\sigma+2it)\\right|\\\\=&3Re[\\log\\zeta(\\sigma)]+4Re[\\log\\zeta(\\sigma+it)]+Re[\\log\\zeta(\\sigma+2it)]\\\\=&\\sum c_{n}n^{-\\sigma}(3+4\\cos\\theta_{n}+\\cos2\\theta_{n}),\\end{aligned} $$ \n\nwhere  $ \\theta_n = t \\log n $. The positivity now follows from Lemma 1.4, and the fact that  $ c_n \\geq 0 $.",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{}&{{}\\operatorname{l o g}|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3\\operatorname{l o g}|\\zeta(\\sigma)|+4\\operatorname{l o g}|\\zeta(\\sigma+i t)|+\\operatorname{l o g}|\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma)]+4{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+i t)]+{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+2i t)]}\\\\ {={}}&{{}\\sum c_{n}n^{-\\sigma}(3+4\\operatorname{c o s}\\theta_{n}+\\operatorname{c o s}2\\theta_{n})\\thinspace,}\\\\ \\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            784.57861328125,
-            2124.6865234375,
-            1850.81689453125,
-            2418.517578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{p,m}{\\frac{p^{-m s}}{m}}=\\sum_{n=1}^{\\infty}c_{n}n^{-s},",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1082.92626953125,
-            927.9918212890625,
-            1541.47998046875,
-            1061.7156982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\log\\zeta(s)=\\log\\prod_{p}{\\frac{1}{1-p^{-s}}}=\\sum_{p}\\log\\left({\\frac{1}{1-p^{-s}}}\\right)=\\sum_{p,m}{\\frac{p^{-m s}}{m}}.",
-          "formula_region_id": 3,
-          "dt_polys": [
-            732.5177001953125,
-            405.84283447265625,
-            1889.7711181640625,
-            538.6837158203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            977.2903442382812,
-            1728.0386962890625,
-            1645.092041015625,
-            1779.0130615234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}.",
-          "formula_region_id": 5,
-          "dt_polys": [
-            973.95166015625,
-            1527.28857421875,
-            1646.86328125,
-            1572.466552734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\operatorname{R e}(n^{-s})=\\operatorname{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n).",
-          "formula_region_id": 6,
-          "dt_polys": [
-            652.29833984375,
-            1933.711181640625,
-            1967.75634765625,
-            1984.653076171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{R e}(s)>1",
-          "formula_region_id": 7,
-          "dt_polys": [
-            995.032470703125,
-            690.5064697265625,
-            1180.716552734375,
-            739.5474853515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{R e}(s)>1",
-          "formula_region_id": 8,
-          "dt_polys": [
-            830.9610595703125,
-            800.061279296875,
-            1015.7835693359375,
-            846.591552734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "c_{n}\\geq0",
-          "formula_region_id": 9,
-          "dt_polys": [
-            806.677001953125,
-            2527.682373046875,
-            933.443603515625,
-            2569.465087890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\theta_{n}=t\\log n",
-          "formula_region_id": 10,
-          "dt_polys": [
-            751.91943359375,
-            2473.6142578125,
-            969.59375,
-            2515.4384765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "0\\leq x<1",
-          "formula_region_id": 11,
-          "dt_polys": [
-            932.0877075195312,
-            314.5563659667969,
-            1118.278076171875,
-            353.1989440917969
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s=\\sigma+i t",
-          "formula_region_id": 12,
-          "dt_polys": [
-            902.1715087890625,
-            1840.033203125,
-            1093.5087890625,
-            1876.23974609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathit{I f}\\:\\sigma>1",
-          "formula_region_id": 13,
-          "dt_polys": [
-            938.3504638671875,
-            1633.59228515625,
-            1090.5286865234375,
-            1675.044189453125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "^{\\mathrm{~\\scriptsize~\\cdot~}}\\theta\\in\\mathbb{R}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            928.7630615234375,
-            1342.794921875,
-            1047.5703125,
-            1383.06787109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3+4\\cos\\theta+\\cos2\\theta\\geq0",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1168.127685546875,
-            1342.4588623046875,
-            1610.263916015625,
-            1382.2960205078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\zeta(s)",
-          "formula_region_id": 16,
-          "dt_polys": [
-            1199.369873046875,
-            746.3489990234375,
-            1273.376708984375,
-            796.5731201171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "c_{n}=1/m{\\mathrm{~i f~}}n=p^{m}{\\mathrm{~a n d~}}c_{n}=0",
-          "formula_region_id": 17,
-          "dt_polys": [
-            752.29052734375,
-            1119.39111328125,
-            1360.2919921875,
-            1162.7216796875
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 2550,
       "height": 3300,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9825308918952942,
-            "coordinate": [
-              620.1978759765625,
-              585.60693359375,
-              1997.6824951171875,
-              892.7392578125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9676406979560852,
-            "coordinate": [
-              784.57861328125,
-              2124.6865234375,
-              1850.81689453125,
-              2418.517578125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9666563272476196,
-            "coordinate": [
-              1082.92626953125,
-              927.9918212890625,
-              1541.47998046875,
-              1061.7156982421875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9665738940238953,
-            "coordinate": [
-              732.5177001953125,
-              405.84283447265625,
-              1889.7711181640625,
-              538.6837158203125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9508299827575684,
-            "coordinate": [
-              621.67626953125,
-              1201.22021484375,
-              1996.298828125,
-              1298.94580078125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9504818916320801,
-            "coordinate": [
-              619.909912109375,
-              2470.3603515625,
-              1998.071044921875,
-              2568.20947265625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9454817175865173,
-            "coordinate": [
-              977.2903442382812,
-              1728.0386962890625,
-              1645.092041015625,
-              1779.0130615234375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9370702505111694,
-            "coordinate": [
-              973.95166015625,
-              1527.28857421875,
-              1646.86328125,
-              1572.466552734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9363918304443359,
-            "coordinate": [
-              652.29833984375,
-              1933.711181640625,
-              1967.75634765625,
-              1984.653076171875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9099918603897095,
-            "coordinate": [
-              668.248046875,
-              1836.62109375,
-              1371.542236328125,
-              1877.6171875
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.9059048295021057,
-            "coordinate": [
-              773.785400390625,
-              216.47518920898438,
-              1994.496826171875,
-              249.99502563476562
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9019307494163513,
-            "coordinate": [
-              623.579345703125,
-              312.13897705078125,
-              1380.46533203125,
-              354.3629150390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8972421288490295,
-            "coordinate": [
-              666.07275390625,
-              1427.4678955078125,
-              1602.5810546875,
-              1466.7572021484375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8847230672836304,
-            "coordinate": [
-              622.3294677734375,
-              1117.318115234375,
-              1560.4927978515625,
-              1162.358154296875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8824177980422974,
-            "coordinate": [
-              623.99755859375,
-              2041.9228515625,
-              826.45849609375,
-              2080.57666015625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8615307807922363,
-            "coordinate": [
-              995.032470703125,
-              690.5064697265625,
-              1180.716552734375,
-              739.5474853515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8529250025749207,
-            "coordinate": [
-              622.662109375,
-              1631.16943359375,
-              1453.130126953125,
-              1675.726806640625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.850888192653656,
-            "coordinate": [
-              830.9610595703125,
-              800.061279296875,
-              1015.7835693359375,
-              846.591552734375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8218826651573181,
-            "coordinate": [
-              806.677001953125,
-              2527.682373046875,
-              933.443603515625,
-              2569.465087890625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8199886679649353,
-            "coordinate": [
-              751.91943359375,
-              2473.6142578125,
-              969.59375,
-              2515.4384765625
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.8112208843231201,
-            "coordinate": [
-              630.778564453125,
-              213.9800567626953,
-              694.645263671875,
-              247.2068634033203
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8049425482749939,
-            "coordinate": [
-              932.0877075195312,
-              314.5563659667969,
-              1118.278076171875,
-              353.1989440917969
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7073452472686768,
-            "coordinate": [
-              902.1715087890625,
-              1840.033203125,
-              1093.5087890625,
-              1876.23974609375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.5642238259315491,
-            "coordinate": [
-              623.720947265625,
-              1341.0325927734375,
-              1618.4501953125,
-              1381.3067626953125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5607719421386719,
-            "coordinate": [
-              938.3504638671875,
-              1633.59228515625,
-              1090.5286865234375,
-              1675.044189453125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5084822177886963,
-            "coordinate": [
-              928.7630615234375,
-              1342.794921875,
-              1047.5703125,
-              1383.06787109375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.5061472058296204,
-            "coordinate": [
-              1168.127685546875,
-              1342.4588623046875,
-              1610.263916015625,
-              1382.2960205078125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.4164891541004181,
-            "coordinate": [
-              1199.369873046875,
-              746.3489990234375,
-              1273.376708984375,
-              796.5731201171875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.38149741291999817,
-            "coordinate": [
-              752.29052734375,
-              1119.39111328125,
-              1360.2919921875,
-              1162.7216796875
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              624,
-              206
-            ],
-            [
-              706,
-              209
-            ],
-            [
-              704,
-              259
-            ],
-            [
-              622,
-              256
-            ]
-          ],
-          [
-            [
-              776,
-              220
-            ],
-            [
-              2003,
-              220
-            ],
-            [
-              2003,
-              254
-            ],
-            [
-              776,
-              254
-            ]
-          ],
-          [
-            [
-              629,
-              311
-            ],
-            [
-              926,
-              313
-            ],
-            [
-              926,
-              356
-            ],
-            [
-              628,
-              353
-            ]
-          ],
-          [
-            [
-              1112,
-              311
-            ],
-            [
-              1384,
-              311
-            ],
-            [
-              1384,
-              359
-            ],
-            [
-              1112,
-              359
-            ]
-          ],
-          [
-            [
-              627,
-              583
-            ],
-            [
-              2005,
-              584
-            ],
-            [
-              2005,
-              631
-            ],
-            [
-              627,
-              630
-            ]
-          ],
-          [
-            [
-              626,
-              637
-            ],
-            [
-              2007,
-              638
-            ],
-            [
-              2007,
-              685
-            ],
-            [
-              626,
-              684
-            ]
-          ],
-          [
-            [
-              626,
-              691
-            ],
-            [
-              982,
-              691
-            ],
-            [
-              982,
-              735
-            ],
-            [
-              626,
-              735
-            ]
-          ],
-          [
-            [
-              1191,
-              689
-            ],
-            [
-              2011,
-              689
-            ],
-            [
-              2011,
-              746
-            ],
-            [
-              1191,
-              746
-            ]
-          ],
-          [
-            [
-              627,
-              747
-            ],
-            [
-              1196,
-              749
-            ],
-            [
-              1196,
-              793
-            ],
-            [
-              626,
-              791
-            ]
-          ],
-          [
-            [
-              1277,
-              746
-            ],
-            [
-              2007,
-              746
-            ],
-            [
-              2007,
-              793
-            ],
-            [
-              1277,
-              793
-            ]
-          ],
-          [
-            [
-              625,
-              799
-            ],
-            [
-              824,
-              801
-            ],
-            [
-              823,
-              849
-            ],
-            [
-              624,
-              847
-            ]
-          ],
-          [
-            [
-              1009,
-              802
-            ],
-            [
-              2007,
-              800
-            ],
-            [
-              2007,
-              847
-            ],
-            [
-              1009,
-              849
-            ]
-          ],
-          [
-            [
-              626,
-              854
-            ],
-            [
-              788,
-              854
-            ],
-            [
-              788,
-              899
-            ],
-            [
-              626,
-              899
-            ]
-          ],
-          [
-            [
-              627,
-              1115
-            ],
-            [
-              749,
-              1115
-            ],
-            [
-              749,
-              1162
-            ],
-            [
-              627,
-              1162
-            ]
-          ],
-          [
-            [
-              1366,
-              1117
-            ],
-            [
-              1564,
-              1117
-            ],
-            [
-              1564,
-              1162
-            ],
-            [
-              1366,
-              1162
-            ]
-          ],
-          [
-            [
-              669,
-              1199
-            ],
-            [
-              2004,
-              1199
-            ],
-            [
-              2004,
-              1247
-            ],
-            [
-              669,
-              1247
-            ]
-          ],
-          [
-            [
-              626,
-              1254
-            ],
-            [
-              1312,
-              1259
-            ],
-            [
-              1312,
-              1303
-            ],
-            [
-              625,
-              1298
-            ]
-          ],
-          [
-            [
-              625,
-              1338
-            ],
-            [
-              937,
-              1338
-            ],
-            [
-              937,
-              1390
-            ],
-            [
-              625,
-              1390
-            ]
-          ],
-          [
-            [
-              1035,
-              1337
-            ],
-            [
-              1168,
-              1334
-            ],
-            [
-              1169,
-              1388
-            ],
-            [
-              1036,
-              1391
-            ]
-          ],
-          [
-            [
-              669,
-              1425
-            ],
-            [
-              1605,
-              1427
-            ],
-            [
-              1605,
-              1471
-            ],
-            [
-              669,
-              1469
-            ]
-          ],
-          [
-            [
-              631,
-              1632
-            ],
-            [
-              923,
-              1632
-            ],
-            [
-              923,
-              1677
-            ],
-            [
-              631,
-              1677
-            ]
-          ],
-          [
-            [
-              1108,
-              1634
-            ],
-            [
-              1452,
-              1634
-            ],
-            [
-              1452,
-              1675
-            ],
-            [
-              1108,
-              1675
-            ]
-          ],
-          [
-            [
-              671,
-              1829
-            ],
-            [
-              900,
-              1831
-            ],
-            [
-              899,
-              1887
-            ],
-            [
-              670,
-              1885
-            ]
-          ],
-          [
-            [
-              1092,
-              1836
-            ],
-            [
-              1375,
-              1836
-            ],
-            [
-              1375,
-              1880
-            ],
-            [
-              1092,
-              1880
-            ]
-          ],
-          [
-            [
-              625,
-              2036
-            ],
-            [
-              831,
-              2041
-            ],
-            [
-              830,
-              2093
-            ],
-            [
-              624,
-              2088
-            ]
-          ],
-          [
-            [
-              626,
-              2468
-            ],
-            [
-              749,
-              2470
-            ],
-            [
-              748,
-              2517
-            ],
-            [
-              625,
-              2515
-            ]
-          ],
-          [
-            [
-              966,
-              2469
-            ],
-            [
-              2004,
-              2469
-            ],
-            [
-              2004,
-              2516
-            ],
-            [
-              966,
-              2516
-            ]
-          ],
-          [
-            [
-              625,
-              2522
-            ],
-            [
-              802,
-              2525
-            ],
-            [
-              801,
-              2570
-            ],
-            [
-              624,
-              2567
-            ]
-          ],
-          [
-            [
-              364,
-              2870
-            ],
-            [
-              409,
-              2872
-            ],
-            [
-              406,
-              2956
-            ],
-            [
-              361,
-              2955
-            ]
-          ],
-          [
-            [
-              2211,
-              2877
-            ],
-            [
-              2238,
-              2877
-            ],
-            [
-              2238,
-              2953
-            ],
-            [
-              2211,
-              2953
-            ]
-          ],
-          [
-            [
-              784,
-              2124
-            ],
-            [
-              1850,
-              2124
-            ],
-            [
-              1850,
-              2418
-            ],
-            [
-              784,
-              2418
-            ]
-          ],
-          [
-            [
-              1082,
-              927
-            ],
-            [
-              1541,
-              927
-            ],
-            [
-              1541,
-              1061
-            ],
-            [
-              1082,
-              1061
-            ]
-          ],
-          [
-            [
-              732,
-              405
-            ],
-            [
-              1889,
-              405
-            ],
-            [
-              1889,
-              538
-            ],
-            [
-              732,
-              538
-            ]
-          ],
-          [
-            [
-              977,
-              1728
-            ],
-            [
-              1645,
-              1728
-            ],
-            [
-              1645,
-              1779
-            ],
-            [
-              977,
-              1779
-            ]
-          ],
-          [
-            [
-              973,
-              1527
-            ],
-            [
-              1646,
-              1527
-            ],
-            [
-              1646,
-              1572
-            ],
-            [
-              973,
-              1572
-            ]
-          ],
-          [
-            [
-              652,
-              1933
-            ],
-            [
-              1967,
-              1933
-            ],
-            [
-              1967,
-              1984
-            ],
-            [
-              652,
-              1984
-            ]
-          ],
-          [
-            [
-              995,
-              690
-            ],
-            [
-              1180,
-              690
-            ],
-            [
-              1180,
-              739
-            ],
-            [
-              995,
-              739
-            ]
-          ],
-          [
-            [
-              830,
-              800
-            ],
-            [
-              1015,
-              800
-            ],
-            [
-              1015,
-              846
-            ],
-            [
-              830,
-              846
-            ]
-          ],
-          [
-            [
-              806,
-              2527
-            ],
-            [
-              933,
-              2527
-            ],
-            [
-              933,
-              2569
-            ],
-            [
-              806,
-              2569
-            ]
-          ],
-          [
-            [
-              751,
-              2473
-            ],
-            [
-              969,
-              2473
-            ],
-            [
-              969,
-              2515
-            ],
-            [
-              751,
-              2515
-            ]
-          ],
-          [
-            [
-              932,
-              314
-            ],
-            [
-              1118,
-              314
-            ],
-            [
-              1118,
-              353
-            ],
-            [
-              932,
-              353
-            ]
-          ],
-          [
-            [
-              902,
-              1840
-            ],
-            [
-              1093,
-              1840
-            ],
-            [
-              1093,
-              1876
-            ],
-            [
-              902,
-              1876
-            ]
-          ],
-          [
-            [
-              938,
-              1633
-            ],
-            [
-              1090,
-              1633
-            ],
-            [
-              1090,
-              1675
-            ],
-            [
-              938,
-              1675
-            ]
-          ],
-          [
-            [
-              928,
-              1342
-            ],
-            [
-              1047,
-              1342
-            ],
-            [
-              1047,
-              1383
-            ],
-            [
-              928,
-              1383
-            ]
-          ],
-          [
-            [
-              1168,
-              1342
-            ],
-            [
-              1610,
-              1342
-            ],
-            [
-              1610,
-              1382
-            ],
-            [
-              1168,
-              1382
-            ]
-          ],
-          [
-            [
-              1199,
-              746
-            ],
-            [
-              1273,
-              746
-            ],
-            [
-              1273,
-              796
-            ],
-            [
-              1199,
-              796
-            ]
-          ],
-          [
-            [
-              752,
-              1119
-            ],
-            [
-              1360,
-              1119
-            ],
-            [
-              1360,
-              1162
-            ],
-            [
-              752,
-              1162
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "186",
-          "Chapter 7. THE ZETA FUNCTION AND PRIME NUMBER THEOREM",
-          "which holds for",
-          ", we find that",
-          "Since the double sum converges absolutely, we need not specify the order",
-          "of summation. Seethe Note atthe end of this chapter. The formula",
-          "thenholdsforall",
-          "byanalytic continuation. Notethat,by",
-          "Theorem 6.2 in Chapter 3, log",
-          "is well defined in the simply connected",
-          "half-plane",
-          ",sinceζ has no zeros there. Finally, it is clear that",
-          "we have",
-          "where",
-          "otherwise.",
-          "The proof of the theorem we shall give depends on a simple trick that",
-          "is based on the following inequality.",
-          "Lemma 1.4 If",
-          ",then",
-          "This follows at once from the simple observation",
-          "Corollary 1.5",
-          "and t is real, then",
-          "Proof. Let",
-          "and note that",
-          "Therefore,",
-          "where",
-          ". The positivity now follows from Lemma 1.4, and the",
-          "fact that",
-          "—",
-          "—",
-          "\\begin{aligned}{}&{{}\\operatorname{l o g}|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3\\operatorname{l o g}|\\zeta(\\sigma)|+4\\operatorname{l o g}|\\zeta(\\sigma+i t)|+\\operatorname{l o g}|\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma)]+4{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+i t)]+{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+2i t)]}\\\\ {={}}&{{}\\sum c_{n}n^{-\\sigma}(3+4\\operatorname{c o s}\\theta_{n}+\\operatorname{c o s}2\\theta_{n})\\thinspace,}\\\\ \\end{aligned}",
-          "\\sum_{p,m}{\\frac{p^{-m s}}{m}}=\\sum_{n=1}^{\\infty}c_{n}n^{-s},",
-          "\\log\\zeta(s)=\\log\\prod_{p}{\\frac{1}{1-p^{-s}}}=\\sum_{p}\\log\\left({\\frac{1}{1-p^{-s}}}\\right)=\\sum_{p,m}{\\frac{p^{-m s}}{m}}.",
-          "\\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0.",
-          "3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}.",
-          "\\operatorname{R e}(n^{-s})=\\operatorname{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n).",
-          "\\mathrm{R e}(s)>1",
-          "\\mathrm{R e}(s)>1",
-          "c_{n}\\geq0",
-          "\\theta_{n}=t\\log n",
-          "0\\leq x<1",
-          "s=\\sigma+i t",
-          "\\mathit{I f}\\:\\sigma>1",
-          "^{\\mathrm{~\\scriptsize~\\cdot~}}\\theta\\in\\mathbb{R}",
-          "3+4\\cos\\theta+\\cos2\\theta\\geq0",
-          "\\zeta(s)",
-          "c_{n}=1/m{\\mathrm{~i f~}}n=p^{m}{\\mathrm{~a n d~}}c_{n}=0"
-        ],
-        "rec_scores": [
-          0.9997947216033936,
-          0.9474900960922241,
-          0.9628156423568726,
-          0.9281181693077087,
-          0.9754407405853271,
-          0.9461876153945923,
-          0.979743242263794,
-          0.9529567360877991,
-          0.9691718816757202,
-          0.9715490341186523,
-          0.9997175335884094,
-          0.9390535354614258,
-          0.9972453713417053,
-          0.9996622204780579,
-          0.9994872808456421,
-          0.9785625338554382,
-          0.9773984551429749,
-          0.9651515483856201,
-          0.9954259991645813,
-          0.987622082233429,
-          0.9988594651222229,
-          0.9605072140693665,
-          0.9606026411056519,
-          0.9877633452415466,
-          0.9994880557060242,
-          0.9998483657836914,
-          0.9418424963951111,
-          0.9700582027435303,
-          0.8702002167701721,
-          0.6551548838615417,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              624,
-              206
-            ],
-            [
-              706,
-              209
-            ],
-            [
-              704,
-              259
-            ],
-            [
-              622,
-              256
-            ]
-          ],
-          [
-            [
-              776,
-              220
-            ],
-            [
-              2003,
-              220
-            ],
-            [
-              2003,
-              254
-            ],
-            [
-              776,
-              254
-            ]
-          ],
-          [
-            [
-              629,
-              311
-            ],
-            [
-              926,
-              313
-            ],
-            [
-              926,
-              356
-            ],
-            [
-              628,
-              353
-            ]
-          ],
-          [
-            [
-              1112,
-              311
-            ],
-            [
-              1384,
-              311
-            ],
-            [
-              1384,
-              359
-            ],
-            [
-              1112,
-              359
-            ]
-          ],
-          [
-            [
-              627,
-              583
-            ],
-            [
-              2005,
-              584
-            ],
-            [
-              2005,
-              631
-            ],
-            [
-              627,
-              630
-            ]
-          ],
-          [
-            [
-              626,
-              637
-            ],
-            [
-              2007,
-              638
-            ],
-            [
-              2007,
-              685
-            ],
-            [
-              626,
-              684
-            ]
-          ],
-          [
-            [
-              626,
-              691
-            ],
-            [
-              982,
-              691
-            ],
-            [
-              982,
-              735
-            ],
-            [
-              626,
-              735
-            ]
-          ],
-          [
-            [
-              1191,
-              689
-            ],
-            [
-              2011,
-              689
-            ],
-            [
-              2011,
-              746
-            ],
-            [
-              1191,
-              746
-            ]
-          ],
-          [
-            [
-              627,
-              747
-            ],
-            [
-              1196,
-              749
-            ],
-            [
-              1196,
-              793
-            ],
-            [
-              626,
-              791
-            ]
-          ],
-          [
-            [
-              1277,
-              746
-            ],
-            [
-              2007,
-              746
-            ],
-            [
-              2007,
-              793
-            ],
-            [
-              1277,
-              793
-            ]
-          ],
-          [
-            [
-              625,
-              799
-            ],
-            [
-              824,
-              801
-            ],
-            [
-              823,
-              849
-            ],
-            [
-              624,
-              847
-            ]
-          ],
-          [
-            [
-              1009,
-              802
-            ],
-            [
-              2007,
-              800
-            ],
-            [
-              2007,
-              847
-            ],
-            [
-              1009,
-              849
-            ]
-          ],
-          [
-            [
-              626,
-              854
-            ],
-            [
-              788,
-              854
-            ],
-            [
-              788,
-              899
-            ],
-            [
-              626,
-              899
-            ]
-          ],
-          [
-            [
-              627,
-              1115
-            ],
-            [
-              749,
-              1115
-            ],
-            [
-              749,
-              1162
-            ],
-            [
-              627,
-              1162
-            ]
-          ],
-          [
-            [
-              1366,
-              1117
-            ],
-            [
-              1564,
-              1117
-            ],
-            [
-              1564,
-              1162
-            ],
-            [
-              1366,
-              1162
-            ]
-          ],
-          [
-            [
-              669,
-              1199
-            ],
-            [
-              2004,
-              1199
-            ],
-            [
-              2004,
-              1247
-            ],
-            [
-              669,
-              1247
-            ]
-          ],
-          [
-            [
-              626,
-              1254
-            ],
-            [
-              1312,
-              1259
-            ],
-            [
-              1312,
-              1303
-            ],
-            [
-              625,
-              1298
-            ]
-          ],
-          [
-            [
-              625,
-              1338
-            ],
-            [
-              937,
-              1338
-            ],
-            [
-              937,
-              1390
-            ],
-            [
-              625,
-              1390
-            ]
-          ],
-          [
-            [
-              1035,
-              1337
-            ],
-            [
-              1168,
-              1334
-            ],
-            [
-              1169,
-              1388
-            ],
-            [
-              1036,
-              1391
-            ]
-          ],
-          [
-            [
-              669,
-              1425
-            ],
-            [
-              1605,
-              1427
-            ],
-            [
-              1605,
-              1471
-            ],
-            [
-              669,
-              1469
-            ]
-          ],
-          [
-            [
-              631,
-              1632
-            ],
-            [
-              923,
-              1632
-            ],
-            [
-              923,
-              1677
-            ],
-            [
-              631,
-              1677
-            ]
-          ],
-          [
-            [
-              1108,
-              1634
-            ],
-            [
-              1452,
-              1634
-            ],
-            [
-              1452,
-              1675
-            ],
-            [
-              1108,
-              1675
-            ]
-          ],
-          [
-            [
-              671,
-              1829
-            ],
-            [
-              900,
-              1831
-            ],
-            [
-              899,
-              1887
-            ],
-            [
-              670,
-              1885
-            ]
-          ],
-          [
-            [
-              1092,
-              1836
-            ],
-            [
-              1375,
-              1836
-            ],
-            [
-              1375,
-              1880
-            ],
-            [
-              1092,
-              1880
-            ]
-          ],
-          [
-            [
-              625,
-              2036
-            ],
-            [
-              831,
-              2041
-            ],
-            [
-              830,
-              2093
-            ],
-            [
-              624,
-              2088
-            ]
-          ],
-          [
-            [
-              626,
-              2468
-            ],
-            [
-              749,
-              2470
-            ],
-            [
-              748,
-              2517
-            ],
-            [
-              625,
-              2515
-            ]
-          ],
-          [
-            [
-              966,
-              2469
-            ],
-            [
-              2004,
-              2469
-            ],
-            [
-              2004,
-              2516
-            ],
-            [
-              966,
-              2516
-            ]
-          ],
-          [
-            [
-              625,
-              2522
-            ],
-            [
-              802,
-              2525
-            ],
-            [
-              801,
-              2570
-            ],
-            [
-              624,
-              2567
-            ]
-          ],
-          [
-            [
-              364,
-              2870
-            ],
-            [
-              409,
-              2872
-            ],
-            [
-              406,
-              2956
-            ],
-            [
-              361,
-              2955
-            ]
-          ],
-          [
-            [
-              2211,
-              2877
-            ],
-            [
-              2238,
-              2877
-            ],
-            [
-              2238,
-              2953
-            ],
-            [
-              2211,
-              2953
-            ]
-          ],
-          [
-            [
-              784,
-              2124
-            ],
-            [
-              1850,
-              2124
-            ],
-            [
-              1850,
-              2418
-            ],
-            [
-              784,
-              2418
-            ]
-          ],
-          [
-            [
-              1082,
-              927
-            ],
-            [
-              1541,
-              927
-            ],
-            [
-              1541,
-              1061
-            ],
-            [
-              1082,
-              1061
-            ]
-          ],
-          [
-            [
-              732,
-              405
-            ],
-            [
-              1889,
-              405
-            ],
-            [
-              1889,
-              538
-            ],
-            [
-              732,
-              538
-            ]
-          ],
-          [
-            [
-              977,
-              1728
-            ],
-            [
-              1645,
-              1728
-            ],
-            [
-              1645,
-              1779
-            ],
-            [
-              977,
-              1779
-            ]
-          ],
-          [
-            [
-              973,
-              1527
-            ],
-            [
-              1646,
-              1527
-            ],
-            [
-              1646,
-              1572
-            ],
-            [
-              973,
-              1572
-            ]
-          ],
-          [
-            [
-              652,
-              1933
-            ],
-            [
-              1967,
-              1933
-            ],
-            [
-              1967,
-              1984
-            ],
-            [
-              652,
-              1984
-            ]
-          ],
-          [
-            [
-              995,
-              690
-            ],
-            [
-              1180,
-              690
-            ],
-            [
-              1180,
-              739
-            ],
-            [
-              995,
-              739
-            ]
-          ],
-          [
-            [
-              830,
-              800
-            ],
-            [
-              1015,
-              800
-            ],
-            [
-              1015,
-              846
-            ],
-            [
-              830,
-              846
-            ]
-          ],
-          [
-            [
-              806,
-              2527
-            ],
-            [
-              933,
-              2527
-            ],
-            [
-              933,
-              2569
-            ],
-            [
-              806,
-              2569
-            ]
-          ],
-          [
-            [
-              751,
-              2473
-            ],
-            [
-              969,
-              2473
-            ],
-            [
-              969,
-              2515
-            ],
-            [
-              751,
-              2515
-            ]
-          ],
-          [
-            [
-              932,
-              314
-            ],
-            [
-              1118,
-              314
-            ],
-            [
-              1118,
-              353
-            ],
-            [
-              932,
-              353
-            ]
-          ],
-          [
-            [
-              902,
-              1840
-            ],
-            [
-              1093,
-              1840
-            ],
-            [
-              1093,
-              1876
-            ],
-            [
-              902,
-              1876
-            ]
-          ],
-          [
-            [
-              938,
-              1633
-            ],
-            [
-              1090,
-              1633
-            ],
-            [
-              1090,
-              1675
-            ],
-            [
-              938,
-              1675
-            ]
-          ],
-          [
-            [
-              928,
-              1342
-            ],
-            [
-              1047,
-              1342
-            ],
-            [
-              1047,
-              1383
-            ],
-            [
-              928,
-              1383
-            ]
-          ],
-          [
-            [
-              1168,
-              1342
-            ],
-            [
-              1610,
-              1342
-            ],
-            [
-              1610,
-              1382
-            ],
-            [
-              1168,
-              1382
-            ]
-          ],
-          [
-            [
-              1199,
-              746
-            ],
-            [
-              1273,
-              746
-            ],
-            [
-              1273,
-              796
-            ],
-            [
-              1199,
-              796
-            ]
-          ],
-          [
-            [
-              752,
-              1119
-            ],
-            [
-              1360,
-              1119
-            ],
-            [
-              1360,
-              1162
-            ],
-            [
-              752,
-              1162
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            622.0,
-            206.0,
-            706.0,
-            259.0
-          ],
-          [
-            776.0,
-            220.0,
-            2003.0,
-            254.0
-          ],
-          [
-            628.0,
-            311.0,
-            926.0,
-            356.0
-          ],
-          [
-            1112.0,
-            311.0,
-            1384.0,
-            359.0
-          ],
-          [
-            627.0,
-            583.0,
-            2005.0,
-            631.0
-          ],
-          [
-            626.0,
-            637.0,
-            2007.0,
-            685.0
-          ],
-          [
-            626.0,
-            691.0,
-            982.0,
-            735.0
-          ],
-          [
-            1191.0,
-            689.0,
-            2011.0,
-            746.0
-          ],
-          [
-            626.0,
-            747.0,
-            1196.0,
-            793.0
-          ],
-          [
-            1277.0,
-            746.0,
-            2007.0,
-            793.0
-          ],
-          [
-            624.0,
-            799.0,
-            824.0,
-            849.0
-          ],
-          [
-            1009.0,
-            800.0,
-            2007.0,
-            849.0
-          ],
-          [
-            626.0,
-            854.0,
-            788.0,
-            899.0
-          ],
-          [
-            627.0,
-            1115.0,
-            749.0,
-            1162.0
-          ],
-          [
-            1366.0,
-            1117.0,
-            1564.0,
-            1162.0
-          ],
-          [
-            669.0,
-            1199.0,
-            2004.0,
-            1247.0
-          ],
-          [
-            625.0,
-            1254.0,
-            1312.0,
-            1303.0
-          ],
-          [
-            625.0,
-            1338.0,
-            937.0,
-            1390.0
-          ],
-          [
-            1035.0,
-            1334.0,
-            1169.0,
-            1391.0
-          ],
-          [
-            669.0,
-            1425.0,
-            1605.0,
-            1471.0
-          ],
-          [
-            631.0,
-            1632.0,
-            923.0,
-            1677.0
-          ],
-          [
-            1108.0,
-            1634.0,
-            1452.0,
-            1675.0
-          ],
-          [
-            670.0,
-            1829.0,
-            900.0,
-            1887.0
-          ],
-          [
-            1092.0,
-            1836.0,
-            1375.0,
-            1880.0
-          ],
-          [
-            624.0,
-            2036.0,
-            831.0,
-            2093.0
-          ],
-          [
-            625.0,
-            2468.0,
-            749.0,
-            2517.0
-          ],
-          [
-            966.0,
-            2469.0,
-            2004.0,
-            2516.0
-          ],
-          [
-            624.0,
-            2522.0,
-            802.0,
-            2570.0
-          ],
-          [
-            361.0,
-            2870.0,
-            409.0,
-            2956.0
-          ],
-          [
-            2211.0,
-            2877.0,
-            2238.0,
-            2953.0
-          ],
-          [
-            784.57861328125,
-            2124.6865234375,
-            1850.81689453125,
-            2418.517578125
-          ],
-          [
-            1082.92626953125,
-            927.9918212890625,
-            1541.47998046875,
-            1061.7156982421875
-          ],
-          [
-            732.5177001953125,
-            405.84283447265625,
-            1889.7711181640625,
-            538.6837158203125
-          ],
-          [
-            977.2903442382812,
-            1728.0386962890625,
-            1645.092041015625,
-            1779.0130615234375
-          ],
-          [
-            973.95166015625,
-            1527.28857421875,
-            1646.86328125,
-            1572.466552734375
-          ],
-          [
-            652.29833984375,
-            1933.711181640625,
-            1967.75634765625,
-            1984.653076171875
-          ],
-          [
-            995.032470703125,
-            690.5064697265625,
-            1180.716552734375,
-            739.5474853515625
-          ],
-          [
-            830.9610595703125,
-            800.061279296875,
-            1015.7835693359375,
-            846.591552734375
-          ],
-          [
-            806.677001953125,
-            2527.682373046875,
-            933.443603515625,
-            2569.465087890625
-          ],
-          [
-            751.91943359375,
-            2473.6142578125,
-            969.59375,
-            2515.4384765625
-          ],
-          [
-            932.0877075195312,
-            314.5563659667969,
-            1118.278076171875,
-            353.1989440917969
-          ],
-          [
-            902.1715087890625,
-            1840.033203125,
-            1093.5087890625,
-            1876.23974609375
-          ],
-          [
-            938.3504638671875,
-            1633.59228515625,
-            1090.5286865234375,
-            1675.044189453125
-          ],
-          [
-            928.7630615234375,
-            1342.794921875,
-            1047.5703125,
-            1383.06787109375
-          ],
-          [
-            1168.127685546875,
-            1342.4588623046875,
-            1610.263916015625,
-            1382.2960205078125
-          ],
-          [
-            1199.369873046875,
-            746.3489990234375,
-            1273.376708984375,
-            796.5731201171875
-          ],
-          [
-            752.29052734375,
-            1119.39111328125,
-            1360.2919921875,
-            1162.7216796875
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}{}&{{}\\operatorname{l o g}|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3\\operatorname{l o g}|\\zeta(\\sigma)|+4\\operatorname{l o g}|\\zeta(\\sigma+i t)|+\\operatorname{l o g}|\\zeta(\\sigma+2i t)|}\\\\ {={}}&{{}3{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma)]+4{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+i t)]+{\\operatorname{R e}}[\\operatorname{l o g}\\zeta(\\sigma+2i t)]}\\\\ {={}}&{{}\\sum c_{n}n^{-\\sigma}(3+4\\operatorname{c o s}\\theta_{n}+\\operatorname{c o s}2\\theta_{n})\\thinspace,}\\\\ \\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            784.57861328125,
-            2124.6865234375,
-            1850.81689453125,
-            2418.517578125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\sum_{p,m}{\\frac{p^{-m s}}{m}}=\\sum_{n=1}^{\\infty}c_{n}n^{-s},",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1082.92626953125,
-            927.9918212890625,
-            1541.47998046875,
-            1061.7156982421875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\log\\zeta(s)=\\log\\prod_{p}{\\frac{1}{1-p^{-s}}}=\\sum_{p}\\log\\left({\\frac{1}{1-p^{-s}}}\\right)=\\sum_{p,m}{\\frac{p^{-m s}}{m}}.",
-          "formula_region_id": 3,
-          "dt_polys": [
-            732.5177001953125,
-            405.84283447265625,
-            1889.7711181640625,
-            538.6837158203125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\log|\\zeta^{3}(\\sigma)\\zeta^{4}(\\sigma+i t)\\zeta(\\sigma+2i t)|\\geq0.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            977.2903442382812,
-            1728.0386962890625,
-            1645.092041015625,
-            1779.0130615234375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3+4\\cos\\theta+\\cos2\\theta=2(1+\\cos\\theta)^{2}.",
-          "formula_region_id": 5,
-          "dt_polys": [
-            973.95166015625,
-            1527.28857421875,
-            1646.86328125,
-            1572.466552734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\operatorname{R e}(n^{-s})=\\operatorname{R e}(e^{-(\\sigma+i t)\\log n})=e^{-\\sigma\\log n}\\cos(t\\log n)=n^{-\\sigma}\\cos(t\\log n).",
-          "formula_region_id": 6,
-          "dt_polys": [
-            652.29833984375,
-            1933.711181640625,
-            1967.75634765625,
-            1984.653076171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{R e}(s)>1",
-          "formula_region_id": 7,
-          "dt_polys": [
-            995.032470703125,
-            690.5064697265625,
-            1180.716552734375,
-            739.5474853515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathrm{R e}(s)>1",
-          "formula_region_id": 8,
-          "dt_polys": [
-            830.9610595703125,
-            800.061279296875,
-            1015.7835693359375,
-            846.591552734375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "c_{n}\\geq0",
-          "formula_region_id": 9,
-          "dt_polys": [
-            806.677001953125,
-            2527.682373046875,
-            933.443603515625,
-            2569.465087890625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\theta_{n}=t\\log n",
-          "formula_region_id": 10,
-          "dt_polys": [
-            751.91943359375,
-            2473.6142578125,
-            969.59375,
-            2515.4384765625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "0\\leq x<1",
-          "formula_region_id": 11,
-          "dt_polys": [
-            932.0877075195312,
-            314.5563659667969,
-            1118.278076171875,
-            353.1989440917969
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "s=\\sigma+i t",
-          "formula_region_id": 12,
-          "dt_polys": [
-            902.1715087890625,
-            1840.033203125,
-            1093.5087890625,
-            1876.23974609375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathit{I f}\\:\\sigma>1",
-          "formula_region_id": 13,
-          "dt_polys": [
-            938.3504638671875,
-            1633.59228515625,
-            1090.5286865234375,
-            1675.044189453125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "^{\\mathrm{~\\scriptsize~\\cdot~}}\\theta\\in\\mathbb{R}",
-          "formula_region_id": 14,
-          "dt_polys": [
-            928.7630615234375,
-            1342.794921875,
-            1047.5703125,
-            1383.06787109375
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "3+4\\cos\\theta+\\cos2\\theta\\geq0",
-          "formula_region_id": 15,
-          "dt_polys": [
-            1168.127685546875,
-            1342.4588623046875,
-            1610.263916015625,
-            1382.2960205078125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\zeta(s)",
-          "formula_region_id": 16,
-          "dt_polys": [
-            1199.369873046875,
-            746.3489990234375,
-            1273.376708984375,
-            796.5731201171875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "c_{n}=1/m{\\mathrm{~i f~}}n=p^{m}{\\mathrm{~a n d~}}c_{n}=0",
-          "formula_region_id": 17,
-          "dt_polys": [
-            752.29052734375,
-            1119.39111328125,
-            1360.2919921875,
-            1162.7216796875
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -3116,7 +588,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

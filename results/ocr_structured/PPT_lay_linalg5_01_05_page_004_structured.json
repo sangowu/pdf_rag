@@ -5,901 +5,271 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "header",
-          "block_content": "HOMOGENEOUSLINEAR SYSTEMS ",
+          "block_label": "paragraph_title",
+          "block_content": "HOMOGENEOUS LINEAR SYSTEMS",
           "block_bbox": [
-            165,
-            191,
-            2038,
-            306
+            158,
+            189,
+            2054,
+            327
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              158.0,
+              189.0
+            ],
+            [
+              2054.0,
+              189.0
+            ],
+            [
+              2054.0,
+              327.0
+            ],
+            [
+              158.0,
+              327.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{-3}}}&{{{-2}}}&{{{4}}}&{{{0}}} \\\\{{{6}}}&{{{1}}}&{{{-8}}}&{{{0}}}\\end{bmatrix}\\sim\\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{0}}}&{{{3}}}&{{{0}}}&{{{0}}} \\\\{{{0}}}&{{{-9}}}&{{{0}}}&{{{0}}}\\end{bmatrix}\\sim\\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{0}}}&{{{3}}}&{{{0}}}&{{{0}}} \\\\{{{0}}}&{{{0}}}&{{{0}}}&{{{0}}}\\end{bmatrix} $$ ",
           "block_bbox": [
-            137,
-            413,
-            2848,
-            942
+            139,
+            416,
+            2866,
+            953
           ],
           "block_id": 1,
-          "block_order": 1
+          "block_order": 2,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              139.0,
+              416.0
+            ],
+            [
+              2866.0,
+              416.0
+            ],
+            [
+              2866.0,
+              953.0
+            ],
+            [
+              139.0,
+              953.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Since $x_{3}$ is a free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}.$ ",
+          "block_content": "Since  $ x_{3} $ is a free variable, Ax = 0 has nontrivial solutions (one for each choice of  $ x_{3} $.)",
           "block_bbox": [
-            164,
-            1029,
-            2550,
-            1290
+            169,
+            1032,
+            2558,
+            1298
           ],
           "block_id": 2,
-          "block_order": 2
+          "block_order": 3,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              169.0,
+              1032.0
+            ],
+            [
+              2558.0,
+              1032.0
+            ],
+            [
+              2558.0,
+              1298.0
+            ],
+            [
+              169.0,
+              1298.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
+          "block_label": "text",
+          "block_content": "■ Continue the row reduction of  $ [A\\quad0] $ to reduced",
           "block_bbox": [
-            167,
-            1333,
-            2546,
-            2194
+            171,
+            1336,
+            2560,
+            1468
           ],
           "block_id": 3,
-          "block_order": 3
+          "block_order": 4,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              171.0,
+              1336.0
+            ],
+            [
+              2560.0,
+              1336.0
+            ],
+            [
+              2560.0,
+              1468.0
+            ],
+            [
+              171.0,
+              1468.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "echelon form:",
+          "block_bbox": [
+            270,
+            1484,
+            947,
+            1597
+          ],
+          "block_id": 4,
+          "block_order": 5,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              270.0,
+              1484.0
+            ],
+            [
+              947.0,
+              1484.0
+            ],
+            [
+              947.0,
+              1597.0
+            ],
+            [
+              270.0,
+              1597.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{bmatrix} {1}&{0}&{\\displaystyle -\\frac{4}{3}}&{0} \\\\ {0}&{1}&{0}&{0} \\\\ {0}&{0}&{0}&{0} \\end{bmatrix} \\quad \\begin{aligned} x_{1}-\\displaystyle \\frac{4}{3}x_{3}&=0\\\\x_{2}&=0\\\\0&=0 \\end{aligned} $$ ",
+          "block_bbox": [
+            987,
+            1476,
+            2441,
+            2180
+          ],
+          "block_id": 5,
+          "block_order": 6,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              987.0,
+              1476.0
+            ],
+            [
+              2441.0,
+              1476.0
+            ],
+            [
+              2441.0,
+              2180.0
+            ],
+            [
+              987.0,
+              2180.0
+            ]
+          ]
         },
         {
           "block_label": "footer",
-          "block_content": "Slide 1.5- 4",
+          "block_content": "© 2016 Pearson Education, Inc.",
+          "block_bbox": [
+            182,
+            2151,
+            907,
+            2213
+          ],
+          "block_id": 6,
+          "block_order": null,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              182.0,
+              2151.0
+            ],
+            [
+              907.0,
+              2151.0
+            ],
+            [
+              907.0,
+              2213.0
+            ],
+            [
+              182.0,
+              2213.0
+            ]
+          ]
+        },
+        {
+          "block_label": "number",
+          "block_content": "Slide 1.5-4",
           "block_bbox": [
             2549,
-            2151,
-            2818,
-            2198
+            2152,
+            2830,
+            2212
           ],
-          "block_id": 4,
-          "block_order": null
+          "block_id": 7,
+          "block_order": null,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              2549.0,
+              2152.0
+            ],
+            [
+              2830.0,
+              2152.0
+            ],
+            [
+              2830.0,
+              2212.0
+            ],
+            [
+              2549.0,
+              2212.0
+            ]
+          ]
         }
       ],
-      "markdown": "$$\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}$$\n\nSince $x_{3}$ is a free variable,$A\\mathbf{x}=0$ has nontrivial solutions (one for each choice of $x_{3}.$ \n\n$${\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}$$",
+      "markdown": "## HOMOGENEOUS LINEAR SYSTEMS\n\n $$ \\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{-3}}}&{{{-2}}}&{{{4}}}&{{{0}}} \\\\{{{6}}}&{{{1}}}&{{{-8}}}&{{{0}}}\\end{bmatrix}\\sim\\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{0}}}&{{{3}}}&{{{0}}}&{{{0}}} \\\\{{{0}}}&{{{-9}}}&{{{0}}}&{{{0}}}\\end{bmatrix}\\sim\\begin{bmatrix}{{{3}}}&{{{5}}}&{{{-4}}}&{{{0}}} \\\\{{{0}}}&{{{3}}}&{{{0}}}&{{{0}}} \\\\{{{0}}}&{{{0}}}&{{{0}}}&{{{0}}}\\end{bmatrix} $$ \n\nSince  $ x_{3} $ is a free variable, Ax = 0 has nontrivial solutions (one for each choice of  $ x_{3} $.)\n\n■ Continue the row reduction of  $ [A\\quad0] $ to reduced\n\nechelon form:\n\n $$ \\begin{bmatrix} {1}&{0}&{\\displaystyle -\\frac{4}{3}}&{0} \\\\ {0}&{1}&{0}&{0} \\\\ {0}&{0}&{0}&{0} \\end{bmatrix} \\quad \\begin{aligned} x_{1}-\\displaystyle \\frac{4}{3}x_{3}&=0\\\\x_{2}&=0\\\\0&=0 \\end{aligned} $$ ",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            137.6458740234375,
-            413.4891357421875,
-            2848.97265625,
-            942.4898681640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "A\\mathbf{x}=0",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1528.37060546875,
-            1031.500244140625,
-            1871.327880859375,
-            1132.818603515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x_{3}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            569.7955932617188,
-            1063.5966796875,
-            670.8488159179688,
-            1159.206298828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x_{3}.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            1836.68359375,
-            1188.883056640625,
-            1951.2041015625,
-            1296.1845703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
-          "formula_region_id": 5,
-          "dt_polys": [
-            167.1817626953125,
-            1333.953369140625,
-            2546.2001953125,
-            2194.2080078125
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9618529081344604,
-            "coordinate": [
-              137.6458740234375,
-              413.4891357421875,
-              2848.97265625,
-              942.4898681640625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9517152905464172,
-            "coordinate": [
-              164.05224609375,
-              1029.9979248046875,
-              2550.4658203125,
-              1290.4986572265625
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8535083532333374,
-            "coordinate": [
-              1528.37060546875,
-              1031.500244140625,
-              1871.327880859375,
-              1132.818603515625
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.7317896485328674,
-            "coordinate": [
-              165.082763671875,
-              191.12210083007812,
-              2038.248046875,
-              306.131103515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.7075386047363281,
-            "coordinate": [
-              178.23162841796875,
-              2150.70849609375,
-              896.6426391601562,
-              2201.68017578125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6712295413017273,
-            "coordinate": [
-              569.7955932617188,
-              1063.5966796875,
-              670.8488159179688,
-              1159.206298828125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6090410351753235,
-            "coordinate": [
-              1836.68359375,
-              1188.883056640625,
-              1951.2041015625,
-              1296.1845703125
-            ]
-          },
-          {
-            "cls_id": 14,
-            "label": "footer",
-            "score": 0.5131712555885315,
-            "coordinate": [
-              2549.6162109375,
-              2151.62548828125,
-              2818.529296875,
-              2198.85205078125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.42412522435188293,
-            "coordinate": [
-              167.1817626953125,
-              1333.953369140625,
-              2546.2001953125,
-              2194.2080078125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              181,
-              203
-            ],
-            [
-              1494,
-              201
-            ],
-            [
-              1494,
-              310
-            ],
-            [
-              182,
-              312
-            ]
-          ],
-          [
-            [
-              1521,
-              203
-            ],
-            [
-              2045,
-              203
-            ],
-            [
-              2045,
-              311
-            ],
-            [
-              1521,
-              311
-            ]
-          ],
-          [
-            [
-              280,
-              1032
-            ],
-            [
-              563,
-              1029
-            ],
-            [
-              564,
-              1143
-            ],
-            [
-              281,
-              1145
-            ]
-          ],
-          [
-            [
-              670,
-              1029
-            ],
-            [
-              1509,
-              1029
-            ],
-            [
-              1509,
-              1155
-            ],
-            [
-              670,
-              1155
-            ]
-          ],
-          [
-            [
-              1889,
-              1030
-            ],
-            [
-              2559,
-              1026
-            ],
-            [
-              2559,
-              1141
-            ],
-            [
-              1889,
-              1144
-            ]
-          ],
-          [
-            [
-              276,
-              1170
-            ],
-            [
-              1843,
-              1159
-            ],
-            [
-              1844,
-              1285
-            ],
-            [
-              277,
-              1297
-            ]
-          ],
-          [
-            [
-              2551,
-              2152
-            ],
-            [
-              2827,
-              2152
-            ],
-            [
-              2827,
-              2208
-            ],
-            [
-              2551,
-              2208
-            ]
-          ],
-          [
-            [
-              774,
-              2193
-            ],
-            [
-              805,
-              2193
-            ],
-            [
-              805,
-              2204
-            ],
-            [
-              774,
-              2204
-            ]
-          ],
-          [
-            [
-              137,
-              413
-            ],
-            [
-              2848,
-              413
-            ],
-            [
-              2848,
-              942
-            ],
-            [
-              137,
-              942
-            ]
-          ],
-          [
-            [
-              1528,
-              1031
-            ],
-            [
-              1871,
-              1031
-            ],
-            [
-              1871,
-              1132
-            ],
-            [
-              1528,
-              1132
-            ]
-          ],
-          [
-            [
-              569,
-              1063
-            ],
-            [
-              670,
-              1063
-            ],
-            [
-              670,
-              1159
-            ],
-            [
-              569,
-              1159
-            ]
-          ],
-          [
-            [
-              1836,
-              1188
-            ],
-            [
-              1951,
-              1188
-            ],
-            [
-              1951,
-              1296
-            ],
-            [
-              1836,
-              1296
-            ]
-          ],
-          [
-            [
-              167,
-              1333
-            ],
-            [
-              2546,
-              1333
-            ],
-            [
-              2546,
-              2194
-            ],
-            [
-              167,
-              2194
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "HOMOGENEOUSLINEAR",
-          "SYSTEMS",
-          "Since",
-          "is a free variable,",
-          "has nontrivial",
-          "solutions (one for each choice of",
-          "Slide 1.5- 4",
-          "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
-          "A\\mathbf{x}=0",
-          "x_{3}",
-          "x_{3}.",
-          "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}"
-        ],
-        "rec_scores": [
-          0.997460663318634,
-          0.9994034767150879,
-          0.9997240304946899,
-          0.9769698977470398,
-          0.9982131123542786,
-          0.956627368927002,
-          0.9296867847442627,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              181,
-              203
-            ],
-            [
-              1494,
-              201
-            ],
-            [
-              1494,
-              310
-            ],
-            [
-              182,
-              312
-            ]
-          ],
-          [
-            [
-              1521,
-              203
-            ],
-            [
-              2045,
-              203
-            ],
-            [
-              2045,
-              311
-            ],
-            [
-              1521,
-              311
-            ]
-          ],
-          [
-            [
-              280,
-              1032
-            ],
-            [
-              563,
-              1029
-            ],
-            [
-              564,
-              1143
-            ],
-            [
-              281,
-              1145
-            ]
-          ],
-          [
-            [
-              670,
-              1029
-            ],
-            [
-              1509,
-              1029
-            ],
-            [
-              1509,
-              1155
-            ],
-            [
-              670,
-              1155
-            ]
-          ],
-          [
-            [
-              1889,
-              1030
-            ],
-            [
-              2559,
-              1026
-            ],
-            [
-              2559,
-              1141
-            ],
-            [
-              1889,
-              1144
-            ]
-          ],
-          [
-            [
-              276,
-              1170
-            ],
-            [
-              1843,
-              1159
-            ],
-            [
-              1844,
-              1285
-            ],
-            [
-              277,
-              1297
-            ]
-          ],
-          [
-            [
-              2551,
-              2152
-            ],
-            [
-              2827,
-              2152
-            ],
-            [
-              2827,
-              2208
-            ],
-            [
-              2551,
-              2208
-            ]
-          ],
-          [
-            [
-              137,
-              413
-            ],
-            [
-              2848,
-              413
-            ],
-            [
-              2848,
-              942
-            ],
-            [
-              137,
-              942
-            ]
-          ],
-          [
-            [
-              1528,
-              1031
-            ],
-            [
-              1871,
-              1031
-            ],
-            [
-              1871,
-              1132
-            ],
-            [
-              1528,
-              1132
-            ]
-          ],
-          [
-            [
-              569,
-              1063
-            ],
-            [
-              670,
-              1063
-            ],
-            [
-              670,
-              1159
-            ],
-            [
-              569,
-              1159
-            ]
-          ],
-          [
-            [
-              1836,
-              1188
-            ],
-            [
-              1951,
-              1188
-            ],
-            [
-              1951,
-              1296
-            ],
-            [
-              1836,
-              1296
-            ]
-          ],
-          [
-            [
-              167,
-              1333
-            ],
-            [
-              2546,
-              1333
-            ],
-            [
-              2546,
-              2194
-            ],
-            [
-              167,
-              2194
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            181.0,
-            201.0,
-            1494.0,
-            312.0
-          ],
-          [
-            1521.0,
-            203.0,
-            2045.0,
-            311.0
-          ],
-          [
-            280.0,
-            1029.0,
-            564.0,
-            1145.0
-          ],
-          [
-            670.0,
-            1029.0,
-            1509.0,
-            1155.0
-          ],
-          [
-            1889.0,
-            1026.0,
-            2559.0,
-            1144.0
-          ],
-          [
-            276.0,
-            1159.0,
-            1844.0,
-            1297.0
-          ],
-          [
-            2551.0,
-            2152.0,
-            2827.0,
-            2208.0
-          ],
-          [
-            137.6458740234375,
-            413.4891357421875,
-            2848.97265625,
-            942.4898681640625
-          ],
-          [
-            1528.37060546875,
-            1031.500244140625,
-            1871.327880859375,
-            1132.818603515625
-          ],
-          [
-            569.7955932617188,
-            1063.5966796875,
-            670.8488159179688,
-            1159.206298828125
-          ],
-          [
-            1836.68359375,
-            1188.883056640625,
-            1951.2041015625,
-            1296.1845703125
-          ],
-          [
-            167.1817626953125,
-            1333.953369140625,
-            2546.2001953125,
-            2194.2080078125
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\-3\\quad-2\\quad4\\quad0\\\\6\\quad1\\quad-8\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad-9\\quad0\\quad0\\end{aligned}\\right]\\sim\\left[\\begin{aligned}3\\quad5\\quad-4\\quad0\\\\0\\quad3\\quad0\\quad0\\\\0\\quad0\\quad0\\quad0\\end{aligned}\\right]\\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            137.6458740234375,
-            413.4891357421875,
-            2848.97265625,
-            942.4898681640625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "A\\mathbf{x}=0",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1528.37060546875,
-            1031.500244140625,
-            1871.327880859375,
-            1132.818603515625
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x_{3}",
-          "formula_region_id": 3,
-          "dt_polys": [
-            569.7955932617188,
-            1063.5966796875,
-            670.8488159179688,
-            1159.206298828125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "x_{3}.",
-          "formula_region_id": 4,
-          "dt_polys": [
-            1836.68359375,
-            1188.883056640625,
-            1951.2041015625,
-            1296.1845703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "{\\scriptstyle{\\mathrm{~\\tiny~C O n t i n u e~t h e~r o w~r e d u c t i o n~o f~}}}{\\left[\\begin{aligned}{A\\quad0}&{{}\\right]{\\mathrm{t o~}}r e d u c e d}\\\\ {{\\mathrm{~\\tiny~e c h e l o n~f o r m:~}}{\\left[\\begin{aligned}{1\\quad0\\quad-{\\frac{4}{3}}\\quad0}\\\\ {0\\quad1\\quad0\\quad0}\\\\ {0\\quad0\\quad0\\quad0}\\end{aligned}\\right]}}&{{}}&{x_{\\mathrm{1}}-{\\frac{4}{3}}x_{\\mathrm{3}}=0}\\\\ {}&{{}}&{x_{\\mathrm{2}}=0}\\\\ {}&{{}}&{0=0}\\end{aligned}}",
-          "formula_region_id": 5,
-          "dt_polys": [
-            167.1817626953125,
-            1333.953369140625,
-            2546.2001953125,
-            2194.2080078125
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -908,7 +278,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

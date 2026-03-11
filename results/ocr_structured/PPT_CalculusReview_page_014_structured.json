@@ -6,453 +6,177 @@
       "parsing_res_list": [
         {
           "block_label": "paragraph_title",
-          "block_content": "Gradients ",
+          "block_content": "Gradients",
           "block_bbox": [
-            1093,
-            195,
-            1893,
-            351
+            1084,
+            187,
+            1911,
+            388
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              1084.0,
+              187.0
+            ],
+            [
+              1911.0,
+              187.0
+            ],
+            [
+              1911.0,
+              388.0
+            ],
+            [
+              1084.0,
+              388.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "del C (or grad C)",
+          "block_content": "• del C (or grad C)",
           "block_bbox": [
-            167,
-            550,
-            1201,
-            675
+            162,
+            542,
+            1206,
+            695
           ],
           "block_id": 1,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              162.0,
+              542.0
+            ],
+            [
+              1206.0,
+              542.0
+            ],
+            [
+              1206.0,
+              695.0
+            ],
+            [
+              162.0,
+              695.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\nabla C=\\mathbf{i}{\\frac{\\partial C}{\\partial x}}+\\mathbf{j}{\\frac{\\partial C}{\\partial y}}",
+          "block_label": "display_formula",
+          "block_content": " $$ \\nabla C=\\mathbf{i}\\frac{\\partial C}{\\partial x}+\\mathbf{j}\\frac{\\partial C}{\\partial y} $$ ",
           "block_bbox": [
-            686,
-            858,
-            2110,
-            1337
+            681,
+            850,
+            2120,
+            1350
           ],
           "block_id": 2,
-          "block_order": 3
+          "block_order": 3,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              681.0,
+              850.0
+            ],
+            [
+              2120.0,
+              850.0
+            ],
+            [
+              2120.0,
+              1350.0
+            ],
+            [
+              681.0,
+              1350.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Diffusion (Fick's1st Law):",
+          "block_content": "• Diffusion (Fick's 1 $ ^{st} $ Law):",
           "block_bbox": [
-            165,
-            1558,
-            1600,
-            1681
+            163,
+            1553,
+            1612,
+            1696
           ],
           "block_id": 3,
-          "block_order": 4
+          "block_order": 4,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              163.0,
+              1553.0
+            ],
+            [
+              1612.0,
+              1553.0
+            ],
+            [
+              1612.0,
+              1696.0
+            ],
+            [
+              163.0,
+              1696.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\mathbf{J}=-D\\nabla C ",
+          "block_label": "display_formula",
+          "block_content": " $$ \\mathbf{J}=-D\\nabla C $$ ",
           "block_bbox": [
-            911,
-            1810,
-            2013,
-            2014
+            912,
+            1803,
+            2033,
+            2040
           ],
           "block_id": 4,
-          "block_order": 5
+          "block_order": 5,
+          "group_id": 4,
+          "block_polygon_points": [
+            [
+              912.0,
+              1803.0
+            ],
+            [
+              2033.0,
+              1803.0
+            ],
+            [
+              2033.0,
+              2040.0
+            ],
+            [
+              912.0,
+              2040.0
+            ]
+          ]
         }
       ],
-      "markdown": "## Gradients \n\ndel C (or grad C)\n\n$$\\nabla C=\\mathbf{i}{\\frac{\\partial C}{\\partial x}}+\\mathbf{j}{\\frac{\\partial C}{\\partial y}}$$\n\nDiffusion (Fick's1st Law):\n\n$$\\mathbf{J}=-D\\nabla C $$",
+      "markdown": "## Gradients\n\n• del C (or grad C)\n\n $$ \\nabla C=\\mathbf{i}\\frac{\\partial C}{\\partial x}+\\mathbf{j}\\frac{\\partial C}{\\partial y} $$ \n\n• Diffusion (Fick's 1 $ ^{st} $ Law):\n\n $$ \\mathbf{J}=-D\\nabla C $$ ",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\nabla C=\\mathbf{i}{\\frac{\\partial C}{\\partial x}}+\\mathbf{j}{\\frac{\\partial C}{\\partial y}}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            686.94580078125,
-            858.5655517578125,
-            2110.375,
-            1337.7908935546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathbf{J}=-D\\nabla C",
-          "formula_region_id": 2,
-          "dt_polys": [
-            911.5012817382812,
-            1810.515380859375,
-            2013.917724609375,
-            2014.781005859375
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 3000,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9388687014579773,
-            "coordinate": [
-              686.94580078125,
-              858.5655517578125,
-              2110.375,
-              1337.7908935546875
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9102728962898254,
-            "coordinate": [
-              911.5012817382812,
-              1810.515380859375,
-              2013.917724609375,
-              2014.781005859375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8768057823181152,
-            "coordinate": [
-              165.8929443359375,
-              1558.4189453125,
-              1600.6563720703125,
-              1681.7607421875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.8385937213897705,
-            "coordinate": [
-              167.3087158203125,
-              550.9434204101562,
-              1201.9224853515625,
-              675.4588012695312
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.6977056860923767,
-            "coordinate": [
-              1093.14453125,
-              195.41915893554688,
-              1893.15673828125,
-              351.8122863769531
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              1094,
-              191
-            ],
-            [
-              1903,
-              193
-            ],
-            [
-              1903,
-              371
-            ],
-            [
-              1094,
-              368
-            ]
-          ],
-          [
-            [
-              261,
-              530
-            ],
-            [
-              1219,
-              530
-            ],
-            [
-              1219,
-              704
-            ],
-            [
-              261,
-              704
-            ]
-          ],
-          [
-            [
-              268,
-              1528
-            ],
-            [
-              1618,
-              1535
-            ],
-            [
-              1617,
-              1710
-            ],
-            [
-              267,
-              1702
-            ]
-          ],
-          [
-            [
-              686,
-              858
-            ],
-            [
-              2110,
-              858
-            ],
-            [
-              2110,
-              1337
-            ],
-            [
-              686,
-              1337
-            ]
-          ],
-          [
-            [
-              911,
-              1810
-            ],
-            [
-              2013,
-              1810
-            ],
-            [
-              2013,
-              2014
-            ],
-            [
-              911,
-              2014
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "Gradients",
-          "del C (or grad C)",
-          "Diffusion (Fick's1st Law):",
-          "\\nabla C=\\mathbf{i}{\\frac{\\partial C}{\\partial x}}+\\mathbf{j}{\\frac{\\partial C}{\\partial y}}",
-          "\\mathbf{J}=-D\\nabla C"
-        ],
-        "rec_scores": [
-          0.9998651146888733,
-          0.9291154146194458,
-          0.8955592513084412,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              1094,
-              191
-            ],
-            [
-              1903,
-              193
-            ],
-            [
-              1903,
-              371
-            ],
-            [
-              1094,
-              368
-            ]
-          ],
-          [
-            [
-              261,
-              530
-            ],
-            [
-              1219,
-              530
-            ],
-            [
-              1219,
-              704
-            ],
-            [
-              261,
-              704
-            ]
-          ],
-          [
-            [
-              268,
-              1528
-            ],
-            [
-              1618,
-              1535
-            ],
-            [
-              1617,
-              1710
-            ],
-            [
-              267,
-              1702
-            ]
-          ],
-          [
-            [
-              686,
-              858
-            ],
-            [
-              2110,
-              858
-            ],
-            [
-              2110,
-              1337
-            ],
-            [
-              686,
-              1337
-            ]
-          ],
-          [
-            [
-              911,
-              1810
-            ],
-            [
-              2013,
-              1810
-            ],
-            [
-              2013,
-              2014
-            ],
-            [
-              911,
-              2014
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            1094.0,
-            191.0,
-            1903.0,
-            371.0
-          ],
-          [
-            261.0,
-            530.0,
-            1219.0,
-            704.0
-          ],
-          [
-            267.0,
-            1528.0,
-            1618.0,
-            1710.0
-          ],
-          [
-            686.94580078125,
-            858.5655517578125,
-            2110.375,
-            1337.7908935546875
-          ],
-          [
-            911.5012817382812,
-            1810.515380859375,
-            2013.917724609375,
-            2014.781005859375
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\nabla C=\\mathbf{i}{\\frac{\\partial C}{\\partial x}}+\\mathbf{j}{\\frac{\\partial C}{\\partial y}}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            686.94580078125,
-            858.5655517578125,
-            2110.375,
-            1337.7908935546875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\mathbf{J}=-D\\nabla C",
-          "formula_region_id": 2,
-          "dt_polys": [
-            911.5012817382812,
-            1810.515380859375,
-            2013.917724609375,
-            2014.781005859375
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -461,7 +185,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

@@ -5,31 +5,100 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "doc_title",
-          "block_content": "备战2022新高考作文 热点素材(三）\n 第10讲新时代中国青年",
+          "block_label": "header_image",
+          "block_content": "",
           "block_bbox": [
-            431,
-            643,
-            3541,
-            1603
+            1708,
+            295,
+            2113,
+            543
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              1708.0,
+              295.0
+            ],
+            [
+              2113.0,
+              295.0
+            ],
+            [
+              2113.0,
+              543.0
+            ],
+            [
+              1708.0,
+              543.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "第 10 讲 新时代中国青年",
+          "block_bbox": [
+            425,
+            1361,
+            3539,
+            1612
+          ],
+          "block_id": 1,
+          "block_order": 1,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              424.999755859375,
+              1383.999755859375
+            ],
+            [
+              3536.221923828125,
+              1360.871826171875
+            ],
+            [
+              3537.999755859375,
+              1600.0
+            ],
+            [
+              426.777587890625,
+              1623.1279296875
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "2021.11",
           "block_bbox": [
             3204,
-            1793,
-            3684,
-            1920
+            1792,
+            3692,
+            1933
           ],
-          "block_id": 1,
-          "block_order": 2
+          "block_id": 2,
+          "block_order": 2,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              3204.0,
+              1792.0
+            ],
+            [
+              3692.0,
+              1792.0
+            ],
+            [
+              3692.0,
+              1933.0
+            ],
+            [
+              3204.0,
+              1933.0
+            ]
+          ]
         }
       ],
-      "markdown": "# 备战2022新高考作文 热点素材(三）  第10讲新时代中国青年\n\n2021.11",
+      "markdown": "第 10 讲 新时代中国青年\n\n2021.11",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -38,311 +107,14 @@
       "width": 4001,
       "height": 2250,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 10,
-            "label": "doc_title",
-            "score": 0.5501272082328796,
-            "coordinate": [
-              431.0291748046875,
-              643.7478637695312,
-              3541.20166015625,
-              1603.004638671875
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.3577432334423065,
-            "coordinate": [
-              437.34619140625,
-              1356.121826171875,
-              3526.62158203125,
-              1601.427734375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.35699886083602905,
-            "coordinate": [
-              3204.1826171875,
-              1793.410888671875,
-              3684.314453125,
-              1920.847900390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.32129546999931335,
-            "coordinate": [
-              1151.963134765625,
-              996.9717407226562,
-              2613.554931640625,
-              1201.21630859375
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.30928122997283936,
-            "coordinate": [
-              797.1739501953125,
-              644.90478515625,
-              3175.77294921875,
-              870.0216064453125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              3580,
-              331
-            ],
-            [
-              3740,
-              352
-            ],
-            [
-              3722,
-              496
-            ],
-            [
-              3562,
-              476
-            ]
-          ],
-          [
-            [
-              756,
-              612
-            ],
-            [
-              3219,
-              612
-            ],
-            [
-              3219,
-              920
-            ],
-            [
-              756,
-              920
-            ]
-          ],
-          [
-            [
-              1116,
-              964
-            ],
-            [
-              2655,
-              971
-            ],
-            [
-              2654,
-              1251
-            ],
-            [
-              1115,
-              1244
-            ]
-          ],
-          [
-            [
-              374,
-              1294
-            ],
-            [
-              3596,
-              1294
-            ],
-            [
-              3596,
-              1673
-            ],
-            [
-              374,
-              1673
-            ]
-          ],
-          [
-            [
-              3224,
-              1804
-            ],
-            [
-              3688,
-              1804
-            ],
-            [
-              3688,
-              1920
-            ],
-            [
-              3224,
-              1920
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "备战2022新高考作文",
-          "热点素材(三）",
-          "第10讲新时代中国青年",
-          "2021.11"
-        ],
-        "rec_scores": [
-          0.9933652877807617,
-          0.9051818251609802,
-          0.9938520789146423,
-          0.9975601434707642
-        ],
-        "rec_polys": [
-          [
-            [
-              756,
-              612
-            ],
-            [
-              3219,
-              612
-            ],
-            [
-              3219,
-              920
-            ],
-            [
-              756,
-              920
-            ]
-          ],
-          [
-            [
-              1116,
-              964
-            ],
-            [
-              2655,
-              971
-            ],
-            [
-              2654,
-              1251
-            ],
-            [
-              1115,
-              1244
-            ]
-          ],
-          [
-            [
-              374,
-              1294
-            ],
-            [
-              3596,
-              1294
-            ],
-            [
-              3596,
-              1673
-            ],
-            [
-              374,
-              1673
-            ]
-          ],
-          [
-            [
-              3224,
-              1804
-            ],
-            [
-              3688,
-              1804
-            ],
-            [
-              3688,
-              1920
-            ],
-            [
-              3224,
-              1920
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            756,
-            612,
-            3219,
-            920
-          ],
-          [
-            1115,
-            964,
-            2655,
-            1251
-          ],
-          [
-            374,
-            1294,
-            3596,
-            1673
-          ],
-          [
-            3224,
-            1804,
-            3688,
-            1920
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -351,7 +123,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

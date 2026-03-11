@@ -5,31 +5,69 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "text",
+          "block_label": "paragraph_title",
           "block_content": "课后作业",
           "block_bbox": [
-            236,
-            140,
-            925,
-            355
+            280,
+            141,
+            897,
+            312
           ],
           "block_id": 0,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              280.0,
+              141.0
+            ],
+            [
+              897.0,
+              141.0
+            ],
+            [
+              897.0,
+              312.0
+            ],
+            [
+              280.0,
+              312.0
+            ]
+          ]
         },
         {
           "block_label": "text",
           "block_content": "推荐阅读：毕淑敏《向日葵冰花》。",
           "block_bbox": [
-            288,
+            292,
             540,
-            2360,
-            670
+            2368,
+            689
           ],
           "block_id": 1,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              292.0,
+              540.0
+            ],
+            [
+              2368.0,
+              540.0
+            ],
+            [
+              2368.0,
+              689.0
+            ],
+            [
+              292.0,
+              689.0
+            ]
+          ]
         }
       ],
-      "markdown": "课后作业\n\n推荐阅读：毕淑敏《向日葵冰花》。",
+      "markdown": "## 课后作业\n\n推荐阅读：毕淑敏《向日葵冰花》。",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -38,225 +76,14 @@
       "width": 3000,
       "height": 1688,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9178587198257446,
-            "coordinate": [
-              288.272216796875,
-              540.498046875,
-              2360.919677734375,
-              670.81884765625
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.6281748414039612,
-            "coordinate": [
-              282.6296691894531,
-              143.33441162109375,
-              895.4208984375,
-              300.08575439453125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.2896536886692047,
-            "coordinate": [
-              236.79931640625,
-              140.93133544921875,
-              925.091552734375,
-              355.87933349609375
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              277,
-              134
-            ],
-            [
-              905,
-              142
-            ],
-            [
-              903,
-              328
-            ],
-            [
-              274,
-              320
-            ]
-          ],
-          [
-            [
-              277,
-              522
-            ],
-            [
-              2376,
-              518
-            ],
-            [
-              2377,
-              704
-            ],
-            [
-              277,
-              707
-            ]
-          ],
-          [
-            [
-              2559,
-              1394
-            ],
-            [
-              2958,
-              1405
-            ],
-            [
-              2951,
-              1627
-            ],
-            [
-              2553,
-              1616
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "课后作业",
-          "推荐阅读：毕淑敏《向日葵冰花》。",
-          "**"
-        ],
-        "rec_scores": [
-          0.9995830655097961,
-          0.9790470600128174,
-          0.6368247866630554
-        ],
-        "rec_polys": [
-          [
-            [
-              277,
-              134
-            ],
-            [
-              905,
-              142
-            ],
-            [
-              903,
-              328
-            ],
-            [
-              274,
-              320
-            ]
-          ],
-          [
-            [
-              277,
-              522
-            ],
-            [
-              2376,
-              518
-            ],
-            [
-              2377,
-              704
-            ],
-            [
-              277,
-              707
-            ]
-          ],
-          [
-            [
-              2559,
-              1394
-            ],
-            [
-              2958,
-              1405
-            ],
-            [
-              2951,
-              1627
-            ],
-            [
-              2553,
-              1616
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            274,
-            134,
-            905,
-            328
-          ],
-          [
-            277,
-            518,
-            2377,
-            707
-          ],
-          [
-            2553,
-            1394,
-            2958,
-            1627
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -265,7 +92,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

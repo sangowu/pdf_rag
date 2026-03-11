@@ -5,19 +5,38 @@
     "core_content": {
       "parsing_res_list": [
         {
-          "block_label": "image",
-          "block_content": "视网膜的后方\n\n矫正\n\n",
+          "block_label": "text",
+          "block_content": "远视眼\n晶状体曲度过小或眼球\n前后径过短使物像落在\n视网膜的后方",
           "block_bbox": [
-            135,
-            133,
-            3642,
-            1967
+            839,
+            445,
+            2027,
+            1019
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": 1,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              839.0,
+              445.0
+            ],
+            [
+              2027.0,
+              445.0
+            ],
+            [
+              2027.0,
+              1019.0
+            ],
+            [
+              839.0,
+              1019.0
+            ]
+          ]
         }
       ],
-      "markdown": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_135_133_3642_1967.jpg\" alt=\"Image\" width=\"92%\" /></div>\n",
+      "markdown": "远视眼\n\n晶状体曲度过小或眼球\n\n前后径过短使物像落在\n\n视网膜的后方",
       "tables": [],
       "formulas": [],
       "seals": []
@@ -26,196 +45,14 @@
       "width": 3780,
       "height": 2126,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.8798468708992004,
-            "coordinate": [
-              135.8233642578125,
-              133.72412109375,
-              3642.1328125,
-              1967.278564453125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              1069,
-              872
-            ],
-            [
-              1789,
-              869
-            ],
-            [
-              1790,
-              1008
-            ],
-            [
-              1070,
-              1012
-            ]
-          ],
-          [
-            [
-              1045,
-              1143
-            ],
-            [
-              1161,
-              1146
-            ],
-            [
-              1159,
-              1207
-            ],
-            [
-              1044,
-              1205
-            ]
-          ],
-          [
-            [
-              825,
-              1187
-            ],
-            [
-              1059,
-              1172
-            ],
-            [
-              1091,
-              1670
-            ],
-            [
-              857,
-              1685
-            ]
-          ],
-          [
-            [
-              870,
-              1751
-            ],
-            [
-              1006,
-              1768
-            ],
-            [
-              991,
-              1887
-            ],
-            [
-              856,
-              1870
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "视网膜的后方",
-          "矫正"
-        ],
-        "rec_scores": [
-          0.9987847208976746,
-          0.9720114469528198
-        ],
-        "rec_polys": [
-          [
-            [
-              1069,
-              872
-            ],
-            [
-              1789,
-              869
-            ],
-            [
-              1790,
-              1008
-            ],
-            [
-              1070,
-              1012
-            ]
-          ],
-          [
-            [
-              825,
-              1187
-            ],
-            [
-              1059,
-              1172
-            ],
-            [
-              1091,
-              1670
-            ],
-            [
-              857,
-              1685
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            1069,
-            869,
-            1790,
-            1012
-          ],
-          [
-            825,
-            1172,
-            1091,
-            1685
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -224,7 +61,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }

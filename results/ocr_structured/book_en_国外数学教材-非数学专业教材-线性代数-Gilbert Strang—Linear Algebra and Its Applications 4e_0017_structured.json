@@ -8,2480 +8,795 @@
           "block_label": "number",
           "block_content": "8",
           "block_bbox": [
-            474,
-            241,
-            503,
-            283
+            473,
+            240,
+            515,
+            295
           ],
           "block_id": 0,
-          "block_order": null
+          "block_order": null,
+          "group_id": 0,
+          "block_polygon_points": [
+            [
+              473.0,
+              240.0
+            ],
+            [
+              515.0,
+              240.0
+            ],
+            [
+              515.0,
+              295.0
+            ],
+            [
+              473.0,
+              295.0
+            ]
+          ]
         },
         {
           "block_label": "header",
-          "block_content": "Chapter 1 Matrices and Gaussian Elimination ",
+          "block_content": "Chapter 1 Matrices and Gaussian Elimination",
           "block_bbox": [
-            1218,
-            234,
-            2243,
-            290
+            1216,
+            236,
+            2260,
+            305
           ],
           "block_id": 1,
-          "block_order": null
+          "block_order": null,
+          "group_id": 1,
+          "block_polygon_points": [
+            [
+              1216.0,
+              236.0
+            ],
+            [
+              2260.0,
+              236.0
+            ],
+            [
+              2260.0,
+              305.0
+            ],
+            [
+              1216.0,
+              305.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible.Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.",
+          "block_content": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible. Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.",
           "block_bbox": [
-            460,
-            397,
-            2994,
-            940
+            461,
+            401,
+            3014,
+            955
           ],
           "block_id": 2,
-          "block_order": 1
+          "block_order": 1,
+          "group_id": 2,
+          "block_polygon_points": [
+            [
+              461.0,
+              401.0
+            ],
+            [
+              3014.0,
+              401.0
+            ],
+            [
+              3014.0,
+              955.0
+            ],
+            [
+              461.0,
+              955.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Row picture: Intersection of planes Column picture: Combination of columns ",
+          "block_content": "Row picture: Intersection of planes\nColumn picture: Combination of columns",
           "block_bbox": [
-            520,
-            1077,
-            2949,
-            1155
+            525,
+            1079,
+            1566,
+            1165
           ],
           "block_id": 3,
-          "block_order": 2
+          "block_order": 2,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              525.0,
+              1079.0
+            ],
+            [
+              1566.0,
+              1079.0
+            ],
+            [
+              1566.0,
+              1165.0
+            ],
+            [
+              525.0,
+              1165.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "",
+          "block_bbox": [
+            1706,
+            1080,
+            2952,
+            1164
+          ],
+          "block_id": 4,
+          "block_order": 3,
+          "group_id": 3,
+          "block_polygon_points": [
+            [
+              1706.0,
+              1080.0
+            ],
+            [
+              2952.0,
+              1080.0
+            ],
+            [
+              2952.0,
+              1164.0
+            ],
+            [
+              1706.0,
+              1164.0
+            ]
+          ]
         },
         {
           "block_label": "paragraph_title",
-          "block_content": "The Singular Case ",
+          "block_content": "The Singular Case",
           "block_bbox": [
-            467,
-            1352,
-            1103,
-            1426
+            469,
+            1353,
+            1119,
+            1438
           ],
-          "block_id": 4,
-          "block_order": 3
+          "block_id": 5,
+          "block_order": 4,
+          "group_id": 5,
+          "block_polygon_points": [
+            [
+              469.0,
+              1353.0
+            ],
+            [
+              1119.0,
+              1353.0
+            ],
+            [
+              1119.0,
+              1438.0
+            ],
+            [
+              469.0,
+              1438.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "Suppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n",
+          "block_content": "Suppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations  $ 2u + v + w = 5 $ and  $ 4u + 2v + 2w = 11 $ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions, parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.",
           "block_bbox": [
-            461,
-            1531,
-            2993,
-            2067
+            462,
+            1533,
+            3012,
+            2084
           ],
-          "block_id": 5,
-          "block_order": 4
+          "block_id": 6,
+          "block_order": 5,
+          "group_id": 6,
+          "block_polygon_points": [
+            [
+              462.0,
+              1533.0
+            ],
+            [
+              3012.0,
+              1533.0
+            ],
+            [
+              3012.0,
+              2084.0
+            ],
+            [
+              462.0,
+              2084.0
+            ]
+          ]
         },
         {
           "block_label": "image",
-          "block_content": "two parallel planes no intersection line of intersection all planes parallel (a)(b)(c)(d)",
+          "block_content": "",
           "block_bbox": [
-            596,
-            2125,
-            2842,
-            2880
+            594,
+            2130,
+            1064,
+            2714
           ],
-          "block_id": 6,
-          "block_order": null
+          "block_id": 7,
+          "block_order": null,
+          "group_id": 7,
+          "block_polygon_points": [
+            [
+              594.0,
+              2130.0
+            ],
+            [
+              1064.0,
+              2130.0
+            ],
+            [
+              1064.0,
+              2714.0
+            ],
+            [
+              594.0,
+              2714.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "two parallel planes",
+          "block_bbox": [
+            640,
+            2734,
+            1135,
+            2796
+          ],
+          "block_id": 8,
+          "block_order": null,
+          "group_id": 8,
+          "block_polygon_points": [
+            [
+              640.0,
+              2734.0
+            ],
+            [
+              1135.0,
+              2734.0
+            ],
+            [
+              1135.0,
+              2796.0
+            ],
+            [
+              640.0,
+              2796.0
+            ]
+          ]
         },
         {
           "block_label": "figure_title",
-          "block_content": "Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).",
+          "block_content": "(a)",
           "block_bbox": [
-            740,
-            2962,
-            2716,
-            3022
-          ],
-          "block_id": 7,
-          "block_order": null
-        },
-        {
-          "block_label": "text",
-          "block_content": "The most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ \n",
-          "block_bbox": [
-            460,
-            3179,
-            2993,
-            3535
-          ],
-          "block_id": 8,
-          "block_order": 5
-        },
-        {
-          "block_label": "paragraph_title",
-          "block_content": "No solution, as in Figure 1.5b ",
-          "block_bbox": [
-            810,
-            3708,
-            1716,
-            3781
+            849,
+            2814,
+            928,
+            2885
           ],
           "block_id": 9,
-          "block_order": 6
+          "block_order": null,
+          "group_id": 9,
+          "block_polygon_points": [
+            [
+              849.0,
+              2814.0
+            ],
+            [
+              928.0,
+              2814.0
+            ],
+            [
+              928.0,
+              2885.0
+            ],
+            [
+              849.0,
+              2885.0
+            ]
+          ]
         },
         {
-          "block_label": "formula",
-          "block_content": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
+          "block_label": "image",
+          "block_content": "",
           "block_bbox": [
-            1870,
-            3615,
-            2631,
-            3876
+            1168,
+            2132,
+            1634,
+            2714
           ],
           "block_id": 10,
-          "block_order": 7
+          "block_order": null,
+          "group_id": 10,
+          "block_polygon_points": [
+            [
+              1168.0,
+              2132.0
+            ],
+            [
+              1634.0,
+              2132.0
+            ],
+            [
+              1634.0,
+              2714.0
+            ],
+            [
+              1168.0,
+              2714.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "no intersection",
+          "block_bbox": [
+            1271,
+            2738,
+            1663,
+            2798
+          ],
+          "block_id": 11,
+          "block_order": null,
+          "group_id": 11,
+          "block_polygon_points": [
+            [
+              1271.0,
+              2738.0
+            ],
+            [
+              1663.0,
+              2738.0
+            ],
+            [
+              1663.0,
+              2798.0
+            ],
+            [
+              1271.0,
+              2798.0
+            ]
+          ]
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "(b)",
+          "block_bbox": [
+            1427,
+            2813,
+            1508,
+            2883
+          ],
+          "block_id": 12,
+          "block_order": null,
+          "group_id": 12,
+          "block_polygon_points": [
+            [
+              1427.0,
+              2813.0
+            ],
+            [
+              1508.0,
+              2813.0
+            ],
+            [
+              1508.0,
+              2883.0
+            ],
+            [
+              1427.0,
+              2883.0
+            ]
+          ]
+        },
+        {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            1820,
+            2130,
+            2275,
+            2712
+          ],
+          "block_id": 13,
+          "block_order": null,
+          "group_id": 13,
+          "block_polygon_points": [
+            [
+              1820.0,
+              2130.0
+            ],
+            [
+              2275.0,
+              2130.0
+            ],
+            [
+              2275.0,
+              2712.0
+            ],
+            [
+              1820.0,
+              2712.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "line of intersection",
+          "block_bbox": [
+            1803,
+            2735,
+            2290,
+            2797
+          ],
+          "block_id": 14,
+          "block_order": null,
+          "group_id": 14,
+          "block_polygon_points": [
+            [
+              1803.0,
+              2735.0
+            ],
+            [
+              2290.0,
+              2735.0
+            ],
+            [
+              2290.0,
+              2797.0
+            ],
+            [
+              1803.0,
+              2797.0
+            ]
+          ]
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "(c)",
+          "block_bbox": [
+            2010,
+            2813,
+            2086,
+            2883
+          ],
+          "block_id": 15,
+          "block_order": null,
+          "group_id": 15,
+          "block_polygon_points": [
+            [
+              2010.0,
+              2813.0
+            ],
+            [
+              2086.0,
+              2813.0
+            ],
+            [
+              2086.0,
+              2883.0
+            ],
+            [
+              2010.0,
+              2883.0
+            ]
+          ]
+        },
+        {
+          "block_label": "image",
+          "block_content": "",
+          "block_bbox": [
+            2329,
+            2127,
+            2798,
+            2711
+          ],
+          "block_id": 16,
+          "block_order": null,
+          "group_id": 16,
+          "block_polygon_points": [
+            [
+              2329.0,
+              2127.0
+            ],
+            [
+              2798.0,
+              2127.0
+            ],
+            [
+              2798.0,
+              2711.0
+            ],
+            [
+              2329.0,
+              2711.0
+            ]
+          ]
+        },
+        {
+          "block_label": "vision_footnote",
+          "block_content": "all planes parallel",
+          "block_bbox": [
+            2393,
+            2730,
+            2857,
+            2799
+          ],
+          "block_id": 17,
+          "block_order": null,
+          "group_id": 17,
+          "block_polygon_points": [
+            [
+              2393.0,
+              2730.0
+            ],
+            [
+              2857.0,
+              2730.0
+            ],
+            [
+              2857.0,
+              2799.0
+            ],
+            [
+              2393.0,
+              2799.0
+            ]
+          ]
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "(d)",
+          "block_bbox": [
+            2586,
+            2812,
+            2668,
+            2886
+          ],
+          "block_id": 18,
+          "block_order": null,
+          "group_id": 18,
+          "block_polygon_points": [
+            [
+              2586.0,
+              2812.0
+            ],
+            [
+              2668.0,
+              2812.0
+            ],
+            [
+              2668.0,
+              2886.0
+            ],
+            [
+              2586.0,
+              2886.0
+            ]
+          ]
+        },
+        {
+          "block_label": "figure_title",
+          "block_content": "Figure 1.5: Singular cases: no solution for (a), (b), or (d), an infinity of solutions for (c).",
+          "block_bbox": [
+            740,
+            2964,
+            2729,
+            3036
+          ],
+          "block_id": 19,
+          "block_order": null,
+          "group_id": 19,
+          "block_polygon_points": [
+            [
+              740.0,
+              2964.0
+            ],
+            [
+              2729.0,
+              2964.0
+            ],
+            [
+              2729.0,
+              3036.0
+            ],
+            [
+              740.0,
+              3036.0
+            ]
+          ]
         },
         {
           "block_label": "text",
-          "block_content": "The first two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0=1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
+          "block_content": "The most common difficulty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection. This corresponds to a singular system with  $ b = (2, 5, 6) $:",
           "block_bbox": [
-            463,
-            3956,
-            2993,
-            4217
+            462,
+            3180,
+            3011,
+            3545
           ],
-          "block_id": 11,
-          "block_order": 8
+          "block_id": 20,
+          "block_order": 6,
+          "group_id": 20,
+          "block_polygon_points": [
+            [
+              462.0,
+              3180.0
+            ],
+            [
+              3011.0,
+              3180.0
+            ],
+            [
+              3011.0,
+              3545.0
+            ],
+            [
+              462.0,
+              3545.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "No solution, as in Figure 1.5b",
+          "block_bbox": [
+            807,
+            3706,
+            1730,
+            3795
+          ],
+          "block_id": 21,
+          "block_order": 7,
+          "group_id": 21,
+          "block_polygon_points": [
+            [
+              807.0,
+              3706.0
+            ],
+            [
+              1730.0,
+              3706.0
+            ],
+            [
+              1730.0,
+              3795.0
+            ],
+            [
+              807.0,
+              3795.0
+            ]
+          ]
+        },
+        {
+          "block_label": "display_formula",
+          "block_content": " $$ \\begin{array}{lllllll}  &u&+&\\nu&+&w&=&2\\\\ &2u& & &+&3w&=&5\\\\ &3u&+&\\nu&+&4w&=&6. \\end{array} $$ ",
+          "block_bbox": [
+            1870,
+            3616,
+            2641,
+            3891
+          ],
+          "block_id": 22,
+          "block_order": 8,
+          "group_id": 22,
+          "block_polygon_points": [
+            [
+              1870.0,
+              3616.0
+            ],
+            [
+              2641.0,
+              3616.0
+            ],
+            [
+              2641.0,
+              3891.0
+            ],
+            [
+              1870.0,
+              3891.0
+            ]
+          ]
         },
         {
           "block_label": "formula_number",
           "block_content": "(3)",
           "block_bbox": [
             2912,
-            3714,
-            2993,
-            3781
+            3713,
+            3002,
+            3789
           ],
-          "block_id": 12,
-          "block_order": null
+          "block_id": 23,
+          "block_order": 9,
+          "group_id": 23,
+          "block_polygon_points": [
+            [
+              2912.0,
+              3713.0
+            ],
+            [
+              3002.0,
+              3713.0
+            ],
+            [
+              3002.0,
+              3789.0
+            ],
+            [
+              2912.0,
+              3789.0
+            ]
+          ]
+        },
+        {
+          "block_label": "text",
+          "block_content": "The first two left sides add up to the third. On the right side that fails:  $ 2+5 \\neq 6 $. Equation 1 plus equation 2 minus equation 3 is the impossible statement 0 = 1. Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
+          "block_bbox": [
+            465,
+            3955,
+            3012,
+            4230
+          ],
+          "block_id": 24,
+          "block_order": 10,
+          "group_id": 24,
+          "block_polygon_points": [
+            [
+              465.0,
+              3955.0
+            ],
+            [
+              3012.0,
+              3955.0
+            ],
+            [
+              3012.0,
+              4230.0
+            ],
+            [
+              465.0,
+              4230.0
+            ]
+          ]
         }
       ],
-      "markdown": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible.Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.\n\nRow picture: Intersection of planes Column picture: Combination of columns \n\n## The Singular Case \n\nSuppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations $2u+v+w=5and4u+2v+2w=11$ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_596_2125_2842_2880.jpg\" alt=\"Image\" width=\"67%\" /></div>\n\n\n<div style=\"text-align: center;\">Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).</div>\n\n\nThe most common diffi culty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection.This corresponds to a singular system with $b=(2,5,6)$ \n\n\n\n### No solution, as in Figure 1.5b \n\n$$\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}$$\n\nThe first two left sides add up to the third. On the right side that fails:$2+5\\ne6$ . Equation 1 plus equation 2 minus equation 3 is the impossible statement $0=1$ . Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
+      "markdown": "Our true goal is to look beyond two or three dimensions into n dimensions. With n equations in n unknowns, there are n planes in the row picture. There are n vectors in the column picture, plus a vector b on the right side. The equations ask for a linear combination of the n columns that equals b. For certain equations that will be impossible. Paradoxically, the way to understand the good case is to study the bad one. Therefore we look at the geometry exactly when it breaks down, in the singular case.\n\nRow picture: Intersection of planes\n\nColumn picture: Combination of columns\n\n\n\n## The Singular Case\n\nSuppose we are again in three dimensions, and the three planes in the row picture do not intersect. What can go wrong? One possibility is that two planes may be parallel. The equations  $ 2u + v + w = 5 $ and  $ 4u + 2v + 2w = 11 $ are inconsistent—and parallel planes give no solution (Figure 1.5a shows an end view). In two dimensions, parallel lines are the only possibility for breakdown. But three planes in three dimensions can be in trouble without being parallel.\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_594_2130_1064_2714.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\ntwo parallel planes\n\n<div style=\"text-align: center;\">(a)</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1168_2132_1634_2714.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\nno intersection\n\n<div style=\"text-align: center;\">(b)</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1820_2130_2275_2712.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\nline of intersection\n\n<div style=\"text-align: center;\">(c)</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2329_2127_2798_2711.jpg\" alt=\"Image\" width=\"14%\" /></div>\n\n\nall planes parallel\n\n<div style=\"text-align: center;\">(d)</div>\n\n\n<div style=\"text-align: center;\">Figure 1.5: Singular cases: no solution for (a), (b), or (d), an infinity of solutions for (c).</div>\n\n\nThe most common difficulty is shown in Figure 1.5b. From the end view the planes form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The third plane is not parallel to the other planes, but it is parallel to their line of intersection. This corresponds to a singular system with  $ b = (2, 5, 6) $:\n\nNo solution, as in Figure 1.5b\n\n $$ \\begin{array}{lllllll}  &u&+&\\nu&+&w&=&2\\\\ &2u& & &+&3w&=&5\\\\ &3u&+&\\nu&+&4w&=&6. \\end{array} $$ \n\nThe first two left sides add up to the third. On the right side that fails:  $ 2+5 \\neq 6 $. Equation 1 plus equation 2 minus equation 3 is the impossible statement 0 = 1. Thus the equations are inconsistent, as Gaussian elimination will systematically discover.",
       "tables": [],
-      "formulas": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1870.15283203125,
-            3615.185546875,
-            2631.7861328125,
-            3876.6669921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "b=(2,5,6)",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1720.109375,
-            3456.265380859375,
-            2067.49853515625,
-            3532.147216796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "2+5\\ne6",
-          "formula_region_id": 3,
-          "dt_polys": [
-            2435.888427734375,
-            3958.90283203125,
-            2702.497802734375,
-            4029.82861328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "0=1",
-          "formula_region_id": 4,
-          "dt_polys": [
-            2261.73486328125,
-            4053.41845703125,
-            2418.15283203125,
-            4115.48095703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "2u+v+w=5and4u+2v+2w=11",
-          "formula_region_id": 5,
-          "dt_polys": [
-            766.2139892578125,
-            1716.34375,
-            1901.9510498046875,
-            1788.24658203125
-          ]
-        }
-      ],
+      "formulas": [],
       "seals": []
     },
     "metadata": {
       "width": 3308,
       "height": 4678,
       "doc_preprocessor_res": {},
-      "layout_det_res": {
-        "input_path": null,
-        "page_index": null,
-        "boxes": [
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.983458399772644,
-            "coordinate": [
-              461.6107177734375,
-              1531.1142578125,
-              2993.4296875,
-              2067.78515625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9782832860946655,
-            "coordinate": [
-              460.56591796875,
-              397.84893798828125,
-              2994.84765625,
-              940.6647338867188
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9743704795837402,
-            "coordinate": [
-              460.930419921875,
-              3179.27587890625,
-              2993.279052734375,
-              3535.07275390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.9706935286521912,
-            "coordinate": [
-              463.4686279296875,
-              3956.673828125,
-              2993.03857421875,
-              4217.40380859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.9400563836097717,
-            "coordinate": [
-              1870.15283203125,
-              3615.185546875,
-              2631.7861328125,
-              3876.6669921875
-            ]
-          },
-          {
-            "cls_id": 6,
-            "label": "figure_title",
-            "score": 0.9012822508811951,
-            "coordinate": [
-              740.3726196289062,
-              2962.81298828125,
-              2716.51318359375,
-              3022.82861328125
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.8974007368087769,
-            "coordinate": [
-              467.903564453125,
-              1352.81298828125,
-              1103.20458984375,
-              1426.22021484375
-            ]
-          },
-          {
-            "cls_id": 17,
-            "label": "formula_number",
-            "score": 0.8915495276451111,
-            "coordinate": [
-              2912.92724609375,
-              3714.598388671875,
-              2993.33837890625,
-              3781.266357421875
-            ]
-          },
-          {
-            "cls_id": 12,
-            "label": "header",
-            "score": 0.8913531303405762,
-            "coordinate": [
-              1218.591552734375,
-              234.63223266601562,
-              2243.833740234375,
-              290.1548767089844
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.8160001635551453,
-            "coordinate": [
-              1720.109375,
-              3456.265380859375,
-              2067.49853515625,
-              3532.147216796875
-            ]
-          },
-          {
-            "cls_id": 3,
-            "label": "number",
-            "score": 0.7936387658119202,
-            "coordinate": [
-              474.4808654785156,
-              241.41978454589844,
-              503.3744812011719,
-              283.5450439453125
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.7657619118690491,
-            "coordinate": [
-              2435.888427734375,
-              3958.90283203125,
-              2702.497802734375,
-              4029.82861328125
-            ]
-          },
-          {
-            "cls_id": 0,
-            "label": "paragraph_title",
-            "score": 0.7522327899932861,
-            "coordinate": [
-              810.2261962890625,
-              3708.6572265625,
-              1716.3179931640625,
-              3781.6630859375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.6969252824783325,
-            "coordinate": [
-              2261.73486328125,
-              4053.41845703125,
-              2418.15283203125,
-              4115.48095703125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.6608052849769592,
-            "coordinate": [
-              520.652099609375,
-              1077.339111328125,
-              2949.422607421875,
-              1155.613037109375
-            ]
-          },
-          {
-            "cls_id": 1,
-            "label": "image",
-            "score": 0.5719470977783203,
-            "coordinate": [
-              596.0494384765625,
-              2125.4794921875,
-              2842.4306640625,
-              2880.6611328125
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.47090935707092285,
-            "coordinate": [
-              1709.858642578125,
-              1079.8565673828125,
-              2945.559814453125,
-              1154.2926025390625
-            ]
-          },
-          {
-            "cls_id": 2,
-            "label": "text",
-            "score": 0.4219350814819336,
-            "coordinate": [
-              523.5089111328125,
-              1079.658203125,
-              1557.4388427734375,
-              1155.20458984375
-            ]
-          },
-          {
-            "cls_id": 7,
-            "label": "formula",
-            "score": 0.33882737159729004,
-            "coordinate": [
-              766.2139892578125,
-              1716.34375,
-              1901.9510498046875,
-              1788.24658203125
-            ]
-          }
-        ]
-      },
-      "region_det_res": {},
-      "overall_ocr_res": {
-        "input_path": null,
-        "page_index": null,
-        "model_settings": {
-          "use_doc_preprocessor": false,
-          "use_textline_orientation": false
-        },
-        "dt_polys": [
-          [
-            [
-              471,
-              236
-            ],
-            [
-              515,
-              236
-            ],
-            [
-              515,
-              295
-            ],
-            [
-              471,
-              295
-            ]
-          ],
-          [
-            [
-              1224,
-              241
-            ],
-            [
-              2254,
-              236
-            ],
-            [
-              2254,
-              292
-            ],
-            [
-              1224,
-              297
-            ]
-          ],
-          [
-            [
-              553,
-              398
-            ],
-            [
-              3010,
-              395
-            ],
-            [
-              3010,
-              474
-            ],
-            [
-              553,
-              476
-            ]
-          ],
-          [
-            [
-              473,
-              494
-            ],
-            [
-              3009,
-              488
-            ],
-            [
-              3010,
-              567
-            ],
-            [
-              474,
-              573
-            ]
-          ],
-          [
-            [
-              470,
-              585
-            ],
-            [
-              3003,
-              585
-            ],
-            [
-              3003,
-              663
-            ],
-            [
-              470,
-              663
-            ]
-          ],
-          [
-            [
-              466,
-              677
-            ],
-            [
-              3005,
-              678
-            ],
-            [
-              3005,
-              760
-            ],
-            [
-              466,
-              759
-            ]
-          ],
-          [
-            [
-              469,
-              774
-            ],
-            [
-              3007,
-              774
-            ],
-            [
-              3007,
-              853
-            ],
-            [
-              469,
-              853
-            ]
-          ],
-          [
-            [
-              470,
-              864
-            ],
-            [
-              2649,
-              867
-            ],
-            [
-              2649,
-              946
-            ],
-            [
-              470,
-              944
-            ]
-          ],
-          [
-            [
-              528,
-              1079
-            ],
-            [
-              1562,
-              1083
-            ],
-            [
-              1562,
-              1159
-            ],
-            [
-              527,
-              1155
-            ]
-          ],
-          [
-            [
-              1712,
-              1082
-            ],
-            [
-              2950,
-              1082
-            ],
-            [
-              2950,
-              1157
-            ],
-            [
-              1712,
-              1157
-            ]
-          ],
-          [
-            [
-              470,
-              1353
-            ],
-            [
-              1115,
-              1351
-            ],
-            [
-              1115,
-              1430
-            ],
-            [
-              470,
-              1433
-            ]
-          ],
-          [
-            [
-              470,
-              1530
-            ],
-            [
-              3011,
-              1529
-            ],
-            [
-              3011,
-              1608
-            ],
-            [
-              470,
-              1609
-            ]
-          ],
-          [
-            [
-              469,
-              1623
-            ],
-            [
-              3011,
-              1620
-            ],
-            [
-              3011,
-              1703
-            ],
-            [
-              469,
-              1706
-            ]
-          ],
-          [
-            [
-              471,
-              1721
-            ],
-            [
-              763,
-              1718
-            ],
-            [
-              764,
-              1796
-            ],
-            [
-              472,
-              1799
-            ]
-          ],
-          [
-            [
-              1918,
-              1717
-            ],
-            [
-              3008,
-              1717
-            ],
-            [
-              3008,
-              1796
-            ],
-            [
-              1918,
-              1796
-            ]
-          ],
-          [
-            [
-              470,
-              1809
-            ],
-            [
-              3011,
-              1803
-            ],
-            [
-              3011,
-              1886
-            ],
-            [
-              470,
-              1892
-            ]
-          ],
-          [
-            [
-              470,
-              1906
-            ],
-            [
-              3008,
-              1899
-            ],
-            [
-              3009,
-              1978
-            ],
-            [
-              470,
-              1985
-            ]
-          ],
-          [
-            [
-              470,
-              2000
-            ],
-            [
-              1354,
-              1997
-            ],
-            [
-              1355,
-              2072
-            ],
-            [
-              470,
-              2075
-            ]
-          ],
-          [
-            [
-              638,
-              2727
-            ],
-            [
-              1133,
-              2725
-            ],
-            [
-              1134,
-              2793
-            ],
-            [
-              638,
-              2795
-            ]
-          ],
-          [
-            [
-              1806,
-              2733
-            ],
-            [
-              2286,
-              2736
-            ],
-            [
-              2286,
-              2792
-            ],
-            [
-              1805,
-              2789
-            ]
-          ],
-          [
-            [
-              2394,
-              2724
-            ],
-            [
-              2860,
-              2723
-            ],
-            [
-              2860,
-              2792
-            ],
-            [
-              2394,
-              2793
-            ]
-          ],
-          [
-            [
-              1270,
-              2737
-            ],
-            [
-              1658,
-              2734
-            ],
-            [
-              1659,
-              2790
-            ],
-            [
-              1270,
-              2793
-            ]
-          ],
-          [
-            [
-              839,
-              2803
-            ],
-            [
-              937,
-              2803
-            ],
-            [
-              937,
-              2890
-            ],
-            [
-              839,
-              2890
-            ]
-          ],
-          [
-            [
-              1423,
-              2802
-            ],
-            [
-              1517,
-              2806
-            ],
-            [
-              1513,
-              2891
-            ],
-            [
-              1419,
-              2887
-            ]
-          ],
-          [
-            [
-              2003,
-              2804
-            ],
-            [
-              2091,
-              2804
-            ],
-            [
-              2091,
-              2889
-            ],
-            [
-              2003,
-              2889
-            ]
-          ],
-          [
-            [
-              2577,
-              2802
-            ],
-            [
-              2678,
-              2802
-            ],
-            [
-              2678,
-              2889
-            ],
-            [
-              2577,
-              2889
-            ]
-          ],
-          [
-            [
-              751,
-              2965
-            ],
-            [
-              2724,
-              2965
-            ],
-            [
-              2724,
-              3027
-            ],
-            [
-              751,
-              3027
-            ]
-          ],
-          [
-            [
-              552,
-              3174
-            ],
-            [
-              3006,
-              3178
-            ],
-            [
-              3006,
-              3257
-            ],
-            [
-              552,
-              3254
-            ]
-          ],
-          [
-            [
-              469,
-              3271
-            ],
-            [
-              3007,
-              3270
-            ],
-            [
-              3007,
-              3348
-            ],
-            [
-              469,
-              3349
-            ]
-          ],
-          [
-            [
-              471,
-              3365
-            ],
-            [
-              3005,
-              3362
-            ],
-            [
-              3005,
-              3441
-            ],
-            [
-              471,
-              3443
-            ]
-          ],
-          [
-            [
-              469,
-              3456
-            ],
-            [
-              1716,
-              3459
-            ],
-            [
-              1716,
-              3538
-            ],
-            [
-              469,
-              3534
-            ]
-          ],
-          [
-            [
-              809,
-              3712
-            ],
-            [
-              1722,
-              3708
-            ],
-            [
-              1722,
-              3784
-            ],
-            [
-              810,
-              3788
-            ]
-          ],
-          [
-            [
-              2900,
-              3703
-            ],
-            [
-              3015,
-              3703
-            ],
-            [
-              3015,
-              3797
-            ],
-            [
-              2900,
-              3797
-            ]
-          ],
-          [
-            [
-              469,
-              3952
-            ],
-            [
-              2426,
-              3956
-            ],
-            [
-              2426,
-              4035
-            ],
-            [
-              469,
-              4030
-            ]
-          ],
-          [
-            [
-              2696,
-              3954
-            ],
-            [
-              3008,
-              3954
-            ],
-            [
-              3008,
-              4036
-            ],
-            [
-              2696,
-              4036
-            ]
-          ],
-          [
-            [
-              473,
-              4050
-            ],
-            [
-              2264,
-              4050
-            ],
-            [
-              2264,
-              4132
-            ],
-            [
-              473,
-              4132
-            ]
-          ],
-          [
-            [
-              2422,
-              4050
-            ],
-            [
-              3004,
-              4055
-            ],
-            [
-              3003,
-              4127
-            ],
-            [
-              2421,
-              4122
-            ]
-          ],
-          [
-            [
-              472,
-              4140
-            ],
-            [
-              2501,
-              4145
-            ],
-            [
-              2501,
-              4224
-            ],
-            [
-              472,
-              4220
-            ]
-          ],
-          [
-            [
-              1870,
-              3615
-            ],
-            [
-              2631,
-              3615
-            ],
-            [
-              2631,
-              3876
-            ],
-            [
-              1870,
-              3876
-            ]
-          ],
-          [
-            [
-              1720,
-              3456
-            ],
-            [
-              2067,
-              3456
-            ],
-            [
-              2067,
-              3532
-            ],
-            [
-              1720,
-              3532
-            ]
-          ],
-          [
-            [
-              2435,
-              3958
-            ],
-            [
-              2702,
-              3958
-            ],
-            [
-              2702,
-              4029
-            ],
-            [
-              2435,
-              4029
-            ]
-          ],
-          [
-            [
-              2261,
-              4053
-            ],
-            [
-              2418,
-              4053
-            ],
-            [
-              2418,
-              4115
-            ],
-            [
-              2261,
-              4115
-            ]
-          ],
-          [
-            [
-              766,
-              1716
-            ],
-            [
-              1901,
-              1716
-            ],
-            [
-              1901,
-              1788
-            ],
-            [
-              766,
-              1788
-            ]
-          ]
-        ],
-        "text_det_params": {
-          "limit_side_len": 736,
-          "limit_type": "min",
-          "thresh": 0.3,
-          "max_side_limit": 4000,
-          "box_thresh": 0.6,
-          "unclip_ratio": 1.5
-        },
-        "text_type": "general",
-        "textline_orientation_angles": [
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1,
-          -1
-        ],
-        "text_rec_score_thresh": 0.5,
-        "return_word_box": false,
-        "rec_texts": [
-          "8",
-          "Chapter 1 Matrices and Gaussian Elimination",
-          "Our true goal is to look beyond two or three dimensions into n dimensions. With n",
-          "equations in n unknowns, there are n planes in the row picture. There are n vectors in",
-          "the column picture, plus a vector b on the right side. The equations ask for a linear com-",
-          "bination of the n columns that equals b. For certain equations that will be impossible.",
-          "Paradoxically, the way to understand the good case is to study the bad one. Therefore",
-          "we look at the geometry exactly when it breaks down, in the singular case.",
-          "Row picture: Intersection of planes",
-          "Column picture: Combination of columns",
-          "The Singular Case",
-          "Suppose we are again in three dimensions, and the three planes in the row picture do not",
-          "intersect. What can go wrong? One possibility is that two planes may be parallel. The",
-          "equations",
-          "are inconsistent—and parallel planes",
-          "give no solution (Figure 1.5a shows an end view). In two dimensions,parallel lines",
-          "are the only possibility for breakdown. But three planes in three dimensions can be in",
-          "trouble without being parallel.",
-          "two parallel planes",
-          "line of intersection",
-          "all planes parallel",
-          "no intersection",
-          "(a)",
-          "(b)",
-          "(c)",
-          "(d)",
-          "Figure 1.5: Singular cases: no solution for (a),(b), or (d), an infinity of solutions for (c).",
-          "The most common diffi culty is shown in Figure 1.5b. From the end view the planes",
-          "form a triangle. Every pair of planes intersects in a line, and those lines are parallel. The",
-          "third plane is not parallel to the other planes, but it is parallel to their line of intersection.",
-          "This corresponds to a singular system with",
-          "No solution, as in Figure 1.5b",
-          "(3)",
-          "The first two left sides add up to the third. On the right side that fails:",
-          ". Equation",
-          "1 plus equation 2 minus equation 3 is the impossible statement",
-          ". Thus the equations",
-          "are inconsistent, as Gaussian elimination will systematically discover.",
-          "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
-          "b=(2,5,6)",
-          "2+5\\ne6",
-          "0=1",
-          "2u+v+w=5and4u+2v+2w=11"
-        ],
-        "rec_scores": [
-          0.9998481273651123,
-          0.9693806767463684,
-          0.9763847589492798,
-          0.9603025913238525,
-          0.9651702046394348,
-          0.9723868370056152,
-          0.9755685329437256,
-          0.9777122735977173,
-          0.9974479675292969,
-          0.9890666007995605,
-          0.9879481196403503,
-          0.975633442401886,
-          0.9619028568267822,
-          0.9997290372848511,
-          0.9763202667236328,
-          0.9724385142326355,
-          0.9730913043022156,
-          0.9842973351478577,
-          0.9874823689460754,
-          0.9993945360183716,
-          0.9761402010917664,
-          0.9994356632232666,
-          0.995852530002594,
-          0.998493492603302,
-          0.8844190239906311,
-          0.9965026378631592,
-          0.9073632955551147,
-          0.9621540307998657,
-          0.9635162949562073,
-          0.9466404914855957,
-          0.9717063903808594,
-          0.9696807265281677,
-          0.9901487827301025,
-          0.9452069997787476,
-          0.9616118669509888,
-          0.9601521492004395,
-          0.9559705853462219,
-          0.955659806728363,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "rec_polys": [
-          [
-            [
-              471,
-              236
-            ],
-            [
-              515,
-              236
-            ],
-            [
-              515,
-              295
-            ],
-            [
-              471,
-              295
-            ]
-          ],
-          [
-            [
-              1224,
-              241
-            ],
-            [
-              2254,
-              236
-            ],
-            [
-              2254,
-              292
-            ],
-            [
-              1224,
-              297
-            ]
-          ],
-          [
-            [
-              553,
-              398
-            ],
-            [
-              3010,
-              395
-            ],
-            [
-              3010,
-              474
-            ],
-            [
-              553,
-              476
-            ]
-          ],
-          [
-            [
-              473,
-              494
-            ],
-            [
-              3009,
-              488
-            ],
-            [
-              3010,
-              567
-            ],
-            [
-              474,
-              573
-            ]
-          ],
-          [
-            [
-              470,
-              585
-            ],
-            [
-              3003,
-              585
-            ],
-            [
-              3003,
-              663
-            ],
-            [
-              470,
-              663
-            ]
-          ],
-          [
-            [
-              466,
-              677
-            ],
-            [
-              3005,
-              678
-            ],
-            [
-              3005,
-              760
-            ],
-            [
-              466,
-              759
-            ]
-          ],
-          [
-            [
-              469,
-              774
-            ],
-            [
-              3007,
-              774
-            ],
-            [
-              3007,
-              853
-            ],
-            [
-              469,
-              853
-            ]
-          ],
-          [
-            [
-              470,
-              864
-            ],
-            [
-              2649,
-              867
-            ],
-            [
-              2649,
-              946
-            ],
-            [
-              470,
-              944
-            ]
-          ],
-          [
-            [
-              528,
-              1079
-            ],
-            [
-              1562,
-              1083
-            ],
-            [
-              1562,
-              1159
-            ],
-            [
-              527,
-              1155
-            ]
-          ],
-          [
-            [
-              1712,
-              1082
-            ],
-            [
-              2950,
-              1082
-            ],
-            [
-              2950,
-              1157
-            ],
-            [
-              1712,
-              1157
-            ]
-          ],
-          [
-            [
-              470,
-              1353
-            ],
-            [
-              1115,
-              1351
-            ],
-            [
-              1115,
-              1430
-            ],
-            [
-              470,
-              1433
-            ]
-          ],
-          [
-            [
-              470,
-              1530
-            ],
-            [
-              3011,
-              1529
-            ],
-            [
-              3011,
-              1608
-            ],
-            [
-              470,
-              1609
-            ]
-          ],
-          [
-            [
-              469,
-              1623
-            ],
-            [
-              3011,
-              1620
-            ],
-            [
-              3011,
-              1703
-            ],
-            [
-              469,
-              1706
-            ]
-          ],
-          [
-            [
-              471,
-              1721
-            ],
-            [
-              763,
-              1718
-            ],
-            [
-              764,
-              1796
-            ],
-            [
-              472,
-              1799
-            ]
-          ],
-          [
-            [
-              1918,
-              1717
-            ],
-            [
-              3008,
-              1717
-            ],
-            [
-              3008,
-              1796
-            ],
-            [
-              1918,
-              1796
-            ]
-          ],
-          [
-            [
-              470,
-              1809
-            ],
-            [
-              3011,
-              1803
-            ],
-            [
-              3011,
-              1886
-            ],
-            [
-              470,
-              1892
-            ]
-          ],
-          [
-            [
-              470,
-              1906
-            ],
-            [
-              3008,
-              1899
-            ],
-            [
-              3009,
-              1978
-            ],
-            [
-              470,
-              1985
-            ]
-          ],
-          [
-            [
-              470,
-              2000
-            ],
-            [
-              1354,
-              1997
-            ],
-            [
-              1355,
-              2072
-            ],
-            [
-              470,
-              2075
-            ]
-          ],
-          [
-            [
-              638,
-              2727
-            ],
-            [
-              1133,
-              2725
-            ],
-            [
-              1134,
-              2793
-            ],
-            [
-              638,
-              2795
-            ]
-          ],
-          [
-            [
-              1806,
-              2733
-            ],
-            [
-              2286,
-              2736
-            ],
-            [
-              2286,
-              2792
-            ],
-            [
-              1805,
-              2789
-            ]
-          ],
-          [
-            [
-              2394,
-              2724
-            ],
-            [
-              2860,
-              2723
-            ],
-            [
-              2860,
-              2792
-            ],
-            [
-              2394,
-              2793
-            ]
-          ],
-          [
-            [
-              1270,
-              2737
-            ],
-            [
-              1658,
-              2734
-            ],
-            [
-              1659,
-              2790
-            ],
-            [
-              1270,
-              2793
-            ]
-          ],
-          [
-            [
-              839,
-              2803
-            ],
-            [
-              937,
-              2803
-            ],
-            [
-              937,
-              2890
-            ],
-            [
-              839,
-              2890
-            ]
-          ],
-          [
-            [
-              1423,
-              2802
-            ],
-            [
-              1517,
-              2806
-            ],
-            [
-              1513,
-              2891
-            ],
-            [
-              1419,
-              2887
-            ]
-          ],
-          [
-            [
-              2003,
-              2804
-            ],
-            [
-              2091,
-              2804
-            ],
-            [
-              2091,
-              2889
-            ],
-            [
-              2003,
-              2889
-            ]
-          ],
-          [
-            [
-              2577,
-              2802
-            ],
-            [
-              2678,
-              2802
-            ],
-            [
-              2678,
-              2889
-            ],
-            [
-              2577,
-              2889
-            ]
-          ],
-          [
-            [
-              751,
-              2965
-            ],
-            [
-              2724,
-              2965
-            ],
-            [
-              2724,
-              3027
-            ],
-            [
-              751,
-              3027
-            ]
-          ],
-          [
-            [
-              552,
-              3174
-            ],
-            [
-              3006,
-              3178
-            ],
-            [
-              3006,
-              3257
-            ],
-            [
-              552,
-              3254
-            ]
-          ],
-          [
-            [
-              469,
-              3271
-            ],
-            [
-              3007,
-              3270
-            ],
-            [
-              3007,
-              3348
-            ],
-            [
-              469,
-              3349
-            ]
-          ],
-          [
-            [
-              471,
-              3365
-            ],
-            [
-              3005,
-              3362
-            ],
-            [
-              3005,
-              3441
-            ],
-            [
-              471,
-              3443
-            ]
-          ],
-          [
-            [
-              469,
-              3456
-            ],
-            [
-              1716,
-              3459
-            ],
-            [
-              1716,
-              3538
-            ],
-            [
-              469,
-              3534
-            ]
-          ],
-          [
-            [
-              809,
-              3712
-            ],
-            [
-              1722,
-              3708
-            ],
-            [
-              1722,
-              3784
-            ],
-            [
-              810,
-              3788
-            ]
-          ],
-          [
-            [
-              2900,
-              3703
-            ],
-            [
-              3015,
-              3703
-            ],
-            [
-              3015,
-              3797
-            ],
-            [
-              2900,
-              3797
-            ]
-          ],
-          [
-            [
-              469,
-              3952
-            ],
-            [
-              2426,
-              3956
-            ],
-            [
-              2426,
-              4035
-            ],
-            [
-              469,
-              4030
-            ]
-          ],
-          [
-            [
-              2696,
-              3954
-            ],
-            [
-              3008,
-              3954
-            ],
-            [
-              3008,
-              4036
-            ],
-            [
-              2696,
-              4036
-            ]
-          ],
-          [
-            [
-              473,
-              4050
-            ],
-            [
-              2264,
-              4050
-            ],
-            [
-              2264,
-              4132
-            ],
-            [
-              473,
-              4132
-            ]
-          ],
-          [
-            [
-              2422,
-              4050
-            ],
-            [
-              3004,
-              4055
-            ],
-            [
-              3003,
-              4127
-            ],
-            [
-              2421,
-              4122
-            ]
-          ],
-          [
-            [
-              472,
-              4140
-            ],
-            [
-              2501,
-              4145
-            ],
-            [
-              2501,
-              4224
-            ],
-            [
-              472,
-              4220
-            ]
-          ],
-          [
-            [
-              1870,
-              3615
-            ],
-            [
-              2631,
-              3615
-            ],
-            [
-              2631,
-              3876
-            ],
-            [
-              1870,
-              3876
-            ]
-          ],
-          [
-            [
-              1720,
-              3456
-            ],
-            [
-              2067,
-              3456
-            ],
-            [
-              2067,
-              3532
-            ],
-            [
-              1720,
-              3532
-            ]
-          ],
-          [
-            [
-              2435,
-              3958
-            ],
-            [
-              2702,
-              3958
-            ],
-            [
-              2702,
-              4029
-            ],
-            [
-              2435,
-              4029
-            ]
-          ],
-          [
-            [
-              2261,
-              4053
-            ],
-            [
-              2418,
-              4053
-            ],
-            [
-              2418,
-              4115
-            ],
-            [
-              2261,
-              4115
-            ]
-          ],
-          [
-            [
-              766,
-              1716
-            ],
-            [
-              1901,
-              1716
-            ],
-            [
-              1901,
-              1788
-            ],
-            [
-              766,
-              1788
-            ]
-          ]
-        ],
-        "rec_boxes": [
-          [
-            471.0,
-            236.0,
-            515.0,
-            295.0
-          ],
-          [
-            1224.0,
-            236.0,
-            2254.0,
-            297.0
-          ],
-          [
-            553.0,
-            395.0,
-            3010.0,
-            476.0
-          ],
-          [
-            473.0,
-            488.0,
-            3010.0,
-            573.0
-          ],
-          [
-            470.0,
-            585.0,
-            3003.0,
-            663.0
-          ],
-          [
-            466.0,
-            677.0,
-            3005.0,
-            760.0
-          ],
-          [
-            469.0,
-            774.0,
-            3007.0,
-            853.0
-          ],
-          [
-            470.0,
-            864.0,
-            2649.0,
-            946.0
-          ],
-          [
-            527.0,
-            1079.0,
-            1562.0,
-            1159.0
-          ],
-          [
-            1712.0,
-            1082.0,
-            2950.0,
-            1157.0
-          ],
-          [
-            470.0,
-            1351.0,
-            1115.0,
-            1433.0
-          ],
-          [
-            470.0,
-            1529.0,
-            3011.0,
-            1609.0
-          ],
-          [
-            469.0,
-            1620.0,
-            3011.0,
-            1706.0
-          ],
-          [
-            471.0,
-            1718.0,
-            764.0,
-            1799.0
-          ],
-          [
-            1918.0,
-            1717.0,
-            3008.0,
-            1796.0
-          ],
-          [
-            470.0,
-            1803.0,
-            3011.0,
-            1892.0
-          ],
-          [
-            470.0,
-            1899.0,
-            3009.0,
-            1985.0
-          ],
-          [
-            470.0,
-            1997.0,
-            1355.0,
-            2075.0
-          ],
-          [
-            638.0,
-            2725.0,
-            1134.0,
-            2795.0
-          ],
-          [
-            1805.0,
-            2733.0,
-            2286.0,
-            2792.0
-          ],
-          [
-            2394.0,
-            2723.0,
-            2860.0,
-            2793.0
-          ],
-          [
-            1270.0,
-            2734.0,
-            1659.0,
-            2793.0
-          ],
-          [
-            839.0,
-            2803.0,
-            937.0,
-            2890.0
-          ],
-          [
-            1419.0,
-            2802.0,
-            1517.0,
-            2891.0
-          ],
-          [
-            2003.0,
-            2804.0,
-            2091.0,
-            2889.0
-          ],
-          [
-            2577.0,
-            2802.0,
-            2678.0,
-            2889.0
-          ],
-          [
-            751.0,
-            2965.0,
-            2724.0,
-            3027.0
-          ],
-          [
-            552.0,
-            3174.0,
-            3006.0,
-            3257.0
-          ],
-          [
-            469.0,
-            3270.0,
-            3007.0,
-            3349.0
-          ],
-          [
-            471.0,
-            3362.0,
-            3005.0,
-            3443.0
-          ],
-          [
-            469.0,
-            3456.0,
-            1716.0,
-            3538.0
-          ],
-          [
-            809.0,
-            3708.0,
-            1722.0,
-            3788.0
-          ],
-          [
-            2900.0,
-            3703.0,
-            3015.0,
-            3797.0
-          ],
-          [
-            469.0,
-            3952.0,
-            2426.0,
-            4035.0
-          ],
-          [
-            2696.0,
-            3954.0,
-            3008.0,
-            4036.0
-          ],
-          [
-            473.0,
-            4050.0,
-            2264.0,
-            4132.0
-          ],
-          [
-            2421.0,
-            4050.0,
-            3004.0,
-            4127.0
-          ],
-          [
-            472.0,
-            4140.0,
-            2501.0,
-            4224.0
-          ],
-          [
-            1870.15283203125,
-            3615.185546875,
-            2631.7861328125,
-            3876.6669921875
-          ],
-          [
-            1720.109375,
-            3456.265380859375,
-            2067.49853515625,
-            3532.147216796875
-          ],
-          [
-            2435.888427734375,
-            3958.90283203125,
-            2702.497802734375,
-            4029.82861328125
-          ],
-          [
-            2261.73486328125,
-            4053.41845703125,
-            2418.15283203125,
-            4115.48095703125
-          ],
-          [
-            766.2139892578125,
-            1716.34375,
-            1901.9510498046875,
-            1788.24658203125
-          ]
-        ]
-      },
-      "table_res_list": [],
-      "seal_res_list": [],
-      "chart_res_list": [],
-      "formula_res_list": [
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "\\begin{aligned}u\\quad+\\quad&v\\quad+\\quad&w\\quad=\\quad2,\\\\2u\\quad&+\\quad&3w\\quad=\\quad5,\\\\3u\\quad+\\quad&v\\quad+\\quad&4w\\quad=\\quad6.\\end{aligned}",
-          "formula_region_id": 1,
-          "dt_polys": [
-            1870.15283203125,
-            3615.185546875,
-            2631.7861328125,
-            3876.6669921875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "b=(2,5,6)",
-          "formula_region_id": 2,
-          "dt_polys": [
-            1720.109375,
-            3456.265380859375,
-            2067.49853515625,
-            3532.147216796875
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "2+5\\ne6",
-          "formula_region_id": 3,
-          "dt_polys": [
-            2435.888427734375,
-            3958.90283203125,
-            2702.497802734375,
-            4029.82861328125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "0=1",
-          "formula_region_id": 4,
-          "dt_polys": [
-            2261.73486328125,
-            4053.41845703125,
-            2418.15283203125,
-            4115.48095703125
-          ]
-        },
-        {
-          "input_path": null,
-          "page_index": null,
-          "rec_formula": "2u+v+w=5and4u+2v+2w=11",
-          "formula_region_id": 5,
-          "dt_polys": [
-            766.2139892578125,
-            1716.34375,
-            1901.9510498046875,
-            1788.24658203125
-          ]
-        }
-      ],
-      "imgs_in_doc": [],
       "model_settings": {
         "use_doc_preprocessor": false,
-        "use_seal_recognition": false,
-        "use_table_recognition": true,
-        "use_formula_recognition": true,
+        "use_layout_detection": true,
         "use_chart_recognition": false,
-        "use_region_detection": true,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
         "format_block_content": false,
+        "merge_layout_blocks": true,
         "markdown_ignore_labels": [
           "number",
           "footnote",
@@ -2490,7 +805,8 @@
           "footer",
           "footer_image",
           "aside_text"
-        ]
+        ],
+        "return_layout_polygon_points": true
       }
     }
   }
