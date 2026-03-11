@@ -77,6 +77,18 @@ retrieval:
   method: "hybrid"   # "vector" | "bm25" | "hybrid"
   rrf_k: 60          # RRF constant (only for hybrid)
 
+# Reranker Settings (bge-reranker-v2-m3; optional, used after retrieval)
+# When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
+reranker:
+  enabled: true
+  top_r: 20
+  model_name: "BAAI/bge-reranker-v2-m3"
+  local_model_path: "models/bge-reranker-v2-m3"
+  device: "cuda"
+  torch_dtype: "bfloat16"
+  batch_size: 32
+  max_length: 512
+
 # ChromaDB Settings
 chromadb:
   persist_directory: "vectors/chroma_db"
@@ -107,17 +119,6 @@ llm:
     min_p: 0.0        # 推荐：MinP=0
     do_sample: true
 
-# Reranker Settings (bge-reranker-v2-m3; optional, used after retrieval)
-# When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
-reranker:
-  enabled: true
-  top_r: 15
-  model_name: "BAAI/bge-reranker-v2-m3"
-  local_model_path: "models/bge-reranker-v2-m3"
-  device: "cuda"
-  torch_dtype: "bfloat16"
-  batch_size: 32
-  max_length: 512
 
 # Evaluation Settings
 evaluation:
