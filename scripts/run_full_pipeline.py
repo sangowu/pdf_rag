@@ -90,7 +90,7 @@ def run_generate_gold(config: dict) -> None:
     from scripts import generate_qa_from_chunks
     argv_saved = sys.argv
     try:
-        sys.argv = ["scripts/generate_qa_from_chunks.py"]
+        sys.argv = ["scripts/generate_qa_from_chunks.py", "--mode", "llm"]
         generate_qa_from_chunks.main()
     finally:
         sys.argv = argv_saved

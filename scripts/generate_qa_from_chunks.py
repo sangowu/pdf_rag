@@ -79,12 +79,18 @@ QA_QUESTION_PROMPT = """你现在要为一个问答数据集生成中文问题�
 {answer}
 ---"""
 
-QA_PROMPT = """Based on the following passage, generate exactly one question-answer pair.
-Requirements:
-- The answer MUST be a continuous substring of the passage (copy from the passage).
-- Output valid JSON only, no other text: {"question": "...", "answer": "..."}
+QA_PROMPT = """你是一个问答数据集构建助手。请根据下面的文档片段，生成恰好一对问答。
 
-Passage:
+要求：
+- 问题和答案的语言必须与文档片段的语言一致（中文文档用中文，英文文档用英文）。
+- 问题必须是完整句子，以问号结尾。
+- 问题要足够具体，使得只有阅读本段内容才能回答，避免泛泛而问。
+- 问题长度不少于 8 个词（中文）或 6 个单词（英文）。
+- 答案必须是文档片段中的连续原文子串，直接从原文复制，不得改写。
+- 不要在问题里直接完整复述答案内容。
+- 只输出一个 JSON 对象，格式为 {{"question": "...", "answer": "..."}}，不要输出任何解释性文字。
+
+文档片段：
 ---
 {text}
 ---"""
@@ -559,7 +565,7 @@ def run_llm_mode(
     backend: str = "api",
     api_client: Optional[OpenAI] = None,
 ) -> None:
-    """Generate one QA per chunk using LLM (original behavior)."""
+    """Generate one QA per chunk using LLM; also writes gold_answers.csv for evaluation."""
     if backend == "api" and api_client is None:
         raise ValueError("API backend selected for llm mode but api_client is None")
     chunks = load_chunks(chunks_path)
@@ -568,6 +574,7 @@ def run_llm_mode(
         return
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     qid = 0
+    gold_rows: list[dict] = []
     with open(output_path, "w", encoding="utf-8") as out:
         for chunk in tqdm(chunks, desc="Generating QA"):
             text = chunk.get("text", "")
@@ -578,16 +585,32 @@ def run_llm_mode(
             if not question or not answer:
                 continue
             qid += 1
+            chunk_id = chunk.get("chunk_id", "")
             record = {
                 "qid": f"qa_{qid}",
                 "question": question,
                 "answer": answer,
-                "chunk_id": chunk.get("chunk_id", ""),
+                "chunk_id": chunk_id,
                 "file_name": chunk.get("file_name", ""),
                 "page_index": chunk.get("page_index", 0),
             }
             out.write(json.dumps(record, ensure_ascii=False) + "\n")
+            gold_rows.append({
+                "question": question,
+                "gold_answer": answer,
+                "gold_chunk_ids": chunk_id,
+                "num_gold_chunks": 1,
+                "doc_file_name": chunk.get("file_name", ""),
+            })
     logger.info("Wrote %d QA pairs to %s", qid, output_path)
+    if gold_rows:
+        import csv
+        os.makedirs(os.path.dirname(GOLD_ANSWERS_CSV_PATH) or ".", exist_ok=True)
+        with open(GOLD_ANSWERS_CSV_PATH, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=["question", "gold_answer", "gold_chunk_ids", "num_gold_chunks", "doc_file_name"])
+            writer.writeheader()
+            writer.writerows(gold_rows)
+        logger.info("Wrote %d gold answers to %s", len(gold_rows), GOLD_ANSWERS_CSV_PATH)
 
 
 def main() -> None:
@@ -596,7 +619,7 @@ def main() -> None:
     parser.add_argument(
         "--mode",
         choices=("normalized", "llm"),
-        default="normalized",
+        default="llm",
         help="normalized: A from normalized_data + chunk from all_chunks, Q by LLM; llm: one QA per chunk via LLM",
     )
     parser.add_argument(
