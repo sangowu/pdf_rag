@@ -6,6 +6,7 @@ from src.utils import load_config
 import json
 import torch
 from modelscope import AutoModel, AutoTokenizer
+from tqdm import tqdm
 config = load_config()
 
 embedding_cfg = config.get("embedding", {})
@@ -105,8 +106,8 @@ class VectorStore:
         if not new_table:
             return
         coll = self._init_chroma_client()
-        for i in range(0, len(new_table), batch_size):
-            batch = new_table[i:i+batch_size]
+        total_batches = (len(new_table) + batch_size - 1) // batch_size
+        for i in tqdm(range(0, len(new_table), batch_size), total=total_batches, desc="Chroma upsert", unit="batch"):
             ids = [d["chunk_id"] for d in batch]
             texts = [d["text"] for d in batch]
             embeddings = [d["embedding"] for d in batch]
@@ -222,7 +223,8 @@ class VectorStore:
         text_list, _ = self._extract_text_and_metadata(all_chunk_data)
         new_table = []
         start = 0
-        for text_batch in self._batch_text(text_list):
+        total_batches = (len(text_list) + self.batch_size - 1) // self.batch_size
+        for text_batch in tqdm(self._batch_text(text_list), total=total_batches, desc="Embedding", unit="batch"):
             vectors = self._embed_text_batch(text_batch)
             for i, vector in enumerate(vectors):
                 idx = start + i
