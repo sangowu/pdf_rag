@@ -27,18 +27,26 @@ class VectorStore:
         self._parent_collection = None
         self.top_k = config.get("evaluation", {}).get("top_k", 5)
 
+    @staticmethod
+    def _derive_collection_name(base_name: str) -> str:
+        """Append chunk strategy to collection name for automatic isolation between strategies."""
+        chunk_strategy = config.get("chunking", {}).get("type", "fixed")
+        return f"{base_name}_{chunk_strategy}"
+
     def _init_chroma_client(self):
         if self._chroma_collection is not None:
             return self._chroma_collection
         chroma_cfg = config.get("chromadb", {})
         persist_dir = chroma_cfg.get("persist_directory", "vectors/chroma_db")
-        collection_name = chroma_cfg.get("collection_name", "pdf_chunks")
+        base_name = chroma_cfg.get("collection_name", "pdf_chunks")
+        collection_name = self._derive_collection_name(base_name)
         distance_fn = chroma_cfg.get("distance_fn", "cosine")
         self._chroma_client = chromadb.PersistentClient(path=persist_dir)
         self._chroma_collection = self._chroma_client.get_or_create_collection(
             name=collection_name,
             metadata={"hnsw:space": "cosine" if distance_fn == "cosine" else "l2"},
         )
+        logger.info("Using Chroma collection: %s", collection_name)
         return self._chroma_collection
 
     def _init_parent_collection(self):
@@ -46,7 +54,8 @@ class VectorStore:
             return self._parent_collection
         chroma_cfg = config.get("chromadb", {})
         persist_dir = chroma_cfg.get("persist_directory", "vectors/chroma_db")
-        name = chroma_cfg.get("parent_collection_name", "parent_chunks")
+        base_name = chroma_cfg.get("parent_collection_name", "parent_chunks")
+        name = self._derive_collection_name(base_name)
         if self._chroma_client is None:
             self._chroma_client = chromadb.PersistentClient(path=persist_dir)
         self._parent_collection = self._chroma_client.get_or_create_collection(
@@ -60,6 +69,8 @@ class VectorStore:
             "page_index": int(row.get("page_index", 0)),
             "chunk_index": int(row.get("chunk_index", 0)),
             "char_count": int(row.get("char_count", 0)),
+            "chunk_strategy": config.get("chunking", {}).get("type", "fixed"),
+            "embedding_model": embedding_cfg.get("model", "BAAI/bge-m3"),
         }
         if row.get("parent_chunk_id"):
             meta["parent_chunk_id"] = str(row["parent_chunk_id"])
