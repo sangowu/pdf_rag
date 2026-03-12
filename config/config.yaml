@@ -25,7 +25,10 @@ ocr:
     batch_size: 4
 
 # Chunking Settings
-# type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style); "parent_child" = parent_child chunking + recursive
+# type: "fixed"        = fixed-size sliding window (chunk_size / chunk_overlap)
+#       "recursive"    = try separators in order (LangChain RecursiveCharacterTextSplitter style)
+#       "parent_child" = large parent chunks indexed + small child chunks retrieved
+#       "semantic"     = BGE-M3 sentence embeddings; cut where cosine similarity drops below (mean - breakpoint_threshold * std)
 chunking:
   type: "parent_child"
   chunk_size: 800
