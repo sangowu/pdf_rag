@@ -18,6 +18,17 @@ _embed_model = None
 import logging
 logger = logging.getLogger(__name__)
 
+
+def unload_embed_model() -> None:
+    """Release BGE-M3 from GPU memory. Call before loading a large LLM."""
+    global _embed_tokenizer, _embed_model
+    import gc
+    _embed_model = None
+    _embed_tokenizer = None
+    gc.collect()
+    torch.cuda.empty_cache()
+    logger.info("Embedding model unloaded from GPU.")
+
 class VectorStore:
     def __init__(self):
         self.all_chunk_path = config.get("paths", {}).get("all_chunk_path")

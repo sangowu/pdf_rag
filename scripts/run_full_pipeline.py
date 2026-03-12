@@ -173,6 +173,8 @@ def main() -> None:
     if not args.skip_embed:
         run_embedding(config)
     if not args.skip_gold:
+        from src.vector_store import unload_embed_model
+        unload_embed_model()
         run_generate_gold(config)
     if not args.skip_eval:
         run_evaluate(config, eval_prefix=args.eval_prefix)
