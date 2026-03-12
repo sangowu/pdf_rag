@@ -25,9 +25,9 @@ ocr:
     batch_size: 4
 
 # Chunking Settings
-# type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style)
+# type: "fixed" = fixed-size sliding window; "recursive" = try separators in order (LangChain RecursiveCharacterTextSplitter style); "parent_child" = parent_child chunking + recursive
 chunking:
-  type: "fixed"
+  type: "parent_child"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
@@ -65,7 +65,7 @@ chunking:
 embedding:
   model: "BAAI/bge-m3"  
   dimension: 1024
-  batch_size: 64
+  batch_size: 128
 
   mode: "local"
   local_model_path: "models/bge-m3"  
@@ -74,19 +74,19 @@ embedding:
 
 # Retrieval: vector (embedding+Chroma), bm25, or hybrid (RRF of both)
 retrieval:
-  method: "vector"   # "vector" | "bm25" | "hybrid"
+  method: "hybrid"   # "vector" | "bm25" | "hybrid"
   rrf_k: 60          # RRF constant (only for hybrid)
 
 # Reranker Settings (bge-reranker-v2-m3; optional, used after retrieval)
 # When enabled: first-stage retrieves top_r, reranker scores and returns top evaluation.top_k
 reranker:
-  enabled: false
+  enabled: true
   top_r: 20
   model_name: "BAAI/bge-reranker-v2-m3"
   local_model_path: "models/bge-reranker-v2-m3"
   device: "cuda"
   torch_dtype: "bfloat16"
-  batch_size: 32
+  batch_size: 24
   max_length: 512
 
 # ChromaDB Settings
@@ -111,7 +111,7 @@ llm:
     device: "cuda"
     # Batch size for local LLM generation (QA from chunks)
     batch_size: 32
-    max_tokens: 512
+    max_tokens: 256
     torch_dtype: "bfloat16"
     load_in_4bit: true  # 4-bit NF4 quantization; set false to load in full torch_dtype
     do_sample: true
