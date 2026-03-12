@@ -146,12 +146,10 @@ class VectorStore:
             ).to(model.device)
             with torch.no_grad():
                 outputs = model(**encoded)
-            if hasattr(outputs, "pooler_output"):
-                emb = outputs.pooler_output[0]
-            else:
-                last_hidden = outputs[0]
-                emb = last_hidden.mean(dim=1)[0]
-            query_embedding = emb.cpu().tolist()
+            # Must match _embed_text_batch: CLS token + L2 normalize
+            emb = outputs.last_hidden_state[:, 0]
+            emb = torch.nn.functional.normalize(emb, p=2, dim=1)
+            query_embedding = emb[0].cpu().tolist()
         embed_time_s = time.perf_counter() - t_embed_start
 
         t_chroma_start = time.perf_counter()
