@@ -119,6 +119,7 @@ class VectorStore:
         coll = self._init_chroma_client()
         total_batches = (len(new_table) + batch_size - 1) // batch_size
         for i in tqdm(range(0, len(new_table), batch_size), total=total_batches, desc="Chroma upsert", unit="batch"):
+            batch = new_table[i:i+batch_size]
             ids = [d["chunk_id"] for d in batch]
             texts = [d["text"] for d in batch]
             embeddings = [d["embedding"] for d in batch]
