@@ -142,7 +142,8 @@ def plot_metrics(
     ax1.set_xlabel("K")
     ax1.set_ylabel("Hit rate")
     ax1.set_title("Hit@K")
-    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=4, frameon=True, fontsize=6)
+    ax1.set_ylim(0, 1.05)
+    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22), ncol=4, frameon=True, fontsize=6)
     ax1.grid(True, alpha=0.3)
     ax1.set_xticks(sorted(set(k for d in dfs for k in d["k"])))
 
