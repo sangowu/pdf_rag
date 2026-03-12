@@ -137,13 +137,18 @@ def plot_metrics(
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 
     # Hit@K curve
-    for df, label in zip(dfs, labels):
+    sorted_pairs = sorted(zip(labels, dfs), key=lambda x: x[0])
+    sorted_labels, sorted_dfs = zip(*sorted_pairs) if sorted_pairs else ([], [])
+    for label, df in zip(sorted_labels, sorted_dfs):
         ax1.plot(df["k"], df["hit_rate"], marker="o", label=label)
     ax1.set_xlabel("K")
     ax1.set_ylabel("Hit rate")
     ax1.set_title("Hit@K")
-    ax1.set_ylim(0, 1.05)
-    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22), ncol=4, frameon=True, fontsize=6)
+    # Dynamic y-axis: start slightly below min value, end at 1.02
+    all_hit_rates = [v for df in dfs for v in df["hit_rate"]]
+    y_min = max(0.0, min(all_hit_rates) - 0.05)
+    ax1.set_ylim(round(y_min, 1), 1.02)
+    ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.26), ncol=4, frameon=True, fontsize=6)
     ax1.grid(True, alpha=0.3)
     ax1.set_xticks(sorted(set(k for d in dfs for k in d["k"])))
 
