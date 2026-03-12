@@ -77,6 +77,87 @@ class ChunkManager:
     def _generate_chunk_id(self, file_name, page_index, chunk_index):
         return f"{file_name}_p{page_index}_c{chunk_index}"
 
+    def _split_text_semantic(self, text: str) -> list[dict]:
+        import re
+        import numpy as np
+        from src.vector_store import VectorStore
+
+        chunk_cfg = config.get("chunking", {})
+        threshold_factor = chunk_cfg.get("breakpoint_threshold", 1.5)
+        min_chunk_size   = chunk_cfg.get("min_chunk_size", 100)
+        max_chunk_size   = chunk_cfg.get("max_chunk_size", 1200)
+
+        # 1. 按句子切分（中英文标点）
+        sentence_endings = r'(?<=[。！？.!?])\s*'
+        sentences = [s.strip() for s in re.split(sentence_endings, text) if s.strip()]
+        if not sentences:
+            return [{"chunk_index": 0, "chunks_content": text, "char_count": len(text)}]
+
+        # 2. 批量 embedding（复用 VectorStore 的本地模型）
+        import torch
+        vs = VectorStore()
+        tokenizer, model = vs._ensure_local_embed_model()
+        embeddings = []
+        batch_size = 32
+        for i in range(0, len(sentences), batch_size):
+            batch = sentences[i:i+batch_size]
+            encoded = tokenizer(batch, padding=True, truncation=True,
+                                max_length=512, return_tensors="pt").to(model.device)
+            with torch.no_grad():
+                out = model(**encoded)
+            emb = out.last_hidden_state[:, 0]
+            emb = torch.nn.functional.normalize(emb, p=2, dim=1)
+            embeddings.extend(emb.cpu().tolist())
+
+        # 3. 计算相邻句子余弦相似度（已 L2 normalize，点积 = cosine）
+        sims = []
+        for i in range(len(embeddings) - 1):
+            a = np.array(embeddings[i])
+            b = np.array(embeddings[i + 1])
+            sims.append(float(np.dot(a, b)))
+
+        # 4. 找断点：相似度低于 (mean - threshold * std) 的位置
+        if sims:
+            mean_sim = np.mean(sims)
+            std_sim  = np.std(sims)
+            cutoff   = mean_sim - threshold_factor * std_sim
+            breakpoints = {i + 1 for i, s in enumerate(sims) if s < cutoff}
+        else:
+            breakpoints = set()
+
+        # 5. 按断点合并句子成 chunk，同时处理 min/max_chunk_size
+        chunks = []
+        current = ""
+        chunk_index = 0
+        for i, sentence in enumerate(sentences):
+            if i in breakpoints and len(current) >= min_chunk_size:
+                chunks.append({
+                    "chunk_index": chunk_index,
+                    "chunks_content": current.strip(),
+                    "char_count": len(current.strip()),
+                })
+                chunk_index += 1
+                current = sentence
+            else:
+                current += sentence
+                if len(current) >= max_chunk_size:
+                    chunks.append({
+                        "chunk_index": chunk_index,
+                        "chunks_content": current.strip(),
+                        "char_count": len(current.strip()),
+                    })
+                    chunk_index += 1
+                    current = ""
+
+        if current.strip():
+            chunks.append({
+                "chunk_index": chunk_index,
+                "chunks_content": current.strip(),
+                "char_count": len(current.strip()),
+            })
+
+        return chunks if chunks else [{"chunk_index": 0, "chunks_content": text, "char_count": len(text)}]
+
     def _split_parent_child(self, text, file_name, page_index):
         from langchain_text_splitters import RecursiveCharacterTextSplitter
         chunk_cfg = config.get("chunking", {})
@@ -142,6 +223,8 @@ class ChunkManager:
                 chunks = self._split_text_by_chunk_size(block_content_all)
             elif self.chunk_type == "recursive":
                 chunks = self._split_text_recursive(block_content_all)
+            elif self.chunk_type == "semantic":
+                chunks = self._split_text_semantic(block_content_all)
             else:
                 raise ValueError(f"Invalid chunk type: {self.chunk_type}")
             for chunk in chunks:

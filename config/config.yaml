@@ -55,6 +55,11 @@ chunking:
   # Optional: only for recursive; whether to keep separator at end of chunk (default false)
   keep_separator: false
 
+  # Semantic chunking (used when type is "semantic")
+  breakpoint_threshold: 1.5   # breakpoint at (mean - N * std); lower = more chunks
+  min_chunk_size: 100          # don't cut if current chunk is too short
+  max_chunk_size: 1200         # force cut if chunk exceeds this size
+
   # Parent-Child chunking (used when type is "parent_child")
   parent_chunk_size: 800
   parent_chunk_overlap: 200
