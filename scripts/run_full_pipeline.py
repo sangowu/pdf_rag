@@ -1,6 +1,7 @@
 # scripts/run_full_pipeline.py
 import argparse
 import logging
+import random
 import sys
 from pathlib import Path
 
@@ -12,7 +13,12 @@ from src.vector_store import VectorStore
 from src.ocr_evaluator import RAGEvaluator
 
 
-def run_chunking(config: dict, file_limit: int | None = None) -> None:
+def run_chunking(
+    config: dict,
+    file_limit: int | None = None,
+    debug_n: int | None = None,
+    debug_seed: int = 42,
+) -> None:
     """Run chunking over OCR structured JSONs; writes per-chunk schemas and all_chunks.json."""
     paths = config.get("paths", {})
     ocr_structured_dir = paths.get("ocr_structured_dir", "results/ocr_structured")
@@ -26,6 +32,13 @@ def run_chunking(config: dict, file_limit: int | None = None) -> None:
         limit_msg = "no limit" if effective_limit is None else str(effective_limit)
         logging.warning("No OCR structured JSONs under %s (limit=%s); skipping chunking.", ocr_structured_dir, limit_msg)
         return
+
+    # Debug mode: randomly sample a subset of files
+    if debug_n is not None and len(file_list) > debug_n:
+        total = len(file_list)
+        random.seed(debug_seed)
+        file_list = random.sample(file_list, debug_n)
+        logging.info("DEBUG mode: sampled %d / %d files (seed=%d)", debug_n, total, debug_seed)
 
     all_chunk = []
     all_parent_chunk = []
@@ -130,11 +143,32 @@ def main() -> None:
         default=None,
         help="Max OCR JSON files to chunk; 0 = no limit (full-scale). Default: from config chunking.file_limit.",
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Debug mode: randomly sample --debug-n files from ocr_structured for faster iteration.",
+    )
+    parser.add_argument(
+        "--debug-n",
+        type=int,
+        default=200,
+        help="Number of files to sample in debug mode (default: 200).",
+    )
+    parser.add_argument(
+        "--debug-seed",
+        type=int,
+        default=42,
+        help="Random seed for debug sampling, ensures reproducibility (default: 42).",
+    )
     args = parser.parse_args()
+
+    debug_n = args.debug_n if args.debug else None
+    if args.debug:
+        logging.info("DEBUG mode enabled: sampling %d files (seed=%d)", args.debug_n, args.debug_seed)
 
     file_limit = args.chunk_limit if args.chunk_limit is not None else default_file_limit
     if not args.skip_chunk:
-        run_chunking(config, file_limit=file_limit)
+        run_chunking(config, file_limit=file_limit, debug_n=debug_n, debug_seed=args.debug_seed)
         run_chunk_size_stats(config)
     if not args.skip_embed:
         run_embedding(config)
