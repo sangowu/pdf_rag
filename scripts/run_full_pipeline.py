@@ -155,13 +155,12 @@ def run_ragas(config: dict, eval_prefix: str | None = None) -> None:
             "contexts": contexts,
         })
 
-    unload_local_model()
-
     mode = config.get("ragas", {}).get("mode", "local")
     prefix = f"{eval_prefix}_" if eval_prefix else ""
     output_path = f"results/{prefix}ragas_results.csv"
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     _run_ragas(dataset, mode=mode, output_path=output_path)
+    unload_local_model()
 
 
 def run_plot(config: dict) -> None:

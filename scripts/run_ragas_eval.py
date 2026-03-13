@@ -92,15 +92,15 @@ def main() -> None:
 
     logger.info("Answer generation done: %d items", len(dataset))
 
-    # 4. Unload LLM before RAGAS (RAGAS will reload for judge if local)
-    from scripts.generate_qa_from_chunks import unload_local_model
-    unload_local_model()
-
-    # 5. RAGAS evaluation
+    # 4. RAGAS evaluation (model stays loaded — RAGAS judge reuses it)
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     df = run_ragas(dataset, mode=args.mode, output_path=output_path)
 
     # 6. Summary
+    # 6. Unload LLM after everything is done
+    from scripts.generate_qa_from_chunks import unload_local_model
+    unload_local_model()
+
     print("\n=== RAGAS Results ===")
     for col in ["faithfulness", "answer_relevancy", "llm_context_precision_without_reference"]:
         if col in df.columns:
