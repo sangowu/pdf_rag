@@ -69,7 +69,8 @@ def run_ragas(
     """
     from datasets import Dataset
     from ragas import evaluate
-    from ragas.metrics import faithfulness, answer_relevancy, context_precision
+    from ragas.metrics import faithfulness, answer_relevancy
+    from ragas.metrics import LLMContextPrecisionWithoutReference
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
 
@@ -79,17 +80,14 @@ def run_ragas(
     hf_dataset = Dataset.from_list(dataset)
     result = evaluate(
         dataset=hf_dataset,
-        metrics=[faithfulness, answer_relevancy, context_precision],
+        metrics=[faithfulness, answer_relevancy, LLMContextPrecisionWithoutReference()],
         llm=llm,
         embeddings=emb,
     )
     df = result.to_pandas()
-    logger.info(
-        "RAGAS scores — faithfulness: %.4f | answer_relevancy: %.4f | context_precision: %.4f",
-        df["faithfulness"].mean(),
-        df["answer_relevancy"].mean(),
-        df["context_precision"].mean(),
-    )
+    for col in ["faithfulness", "answer_relevancy", "llm_context_precision_without_reference"]:
+        if col in df.columns:
+            logger.info("RAGAS %s: %.4f", col, df[col].mean())
     if output_path:
         df.to_csv(output_path, index=False)
         logger.info("RAGAS results saved to %s", output_path)

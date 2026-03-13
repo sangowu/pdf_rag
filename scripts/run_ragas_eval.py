@@ -102,9 +102,9 @@ def main() -> None:
 
     # 6. Summary
     print("\n=== RAGAS Results ===")
-    for col in ["faithfulness", "answer_relevancy", "context_precision"]:
+    for col in ["faithfulness", "answer_relevancy", "llm_context_precision_without_reference"]:
         if col in df.columns:
-            print(f"  {col:<22}: {df[col].mean():.4f}")
+            print(f"  {col:<45}: {df[col].mean():.4f}")
 
 
 if __name__ == "__main__":
