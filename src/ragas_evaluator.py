@@ -73,9 +73,13 @@ def run_ragas(
     from ragas.metrics import LLMContextPrecisionWithoutReference
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
+    from ragas.run_config import RunConfig
 
     llm = LangchainLLMWrapper(_build_llm(mode))
     emb = LangchainEmbeddingsWrapper(_BGEEmbeddings())
+
+    # max_workers=1: local GPU model cannot run concurrently; timeout=600s per call
+    run_config = RunConfig(max_workers=1, timeout=600)
 
     hf_dataset = Dataset.from_list(dataset)
     result = evaluate(
@@ -83,6 +87,7 @@ def run_ragas(
         metrics=[faithfulness, answer_relevancy, LLMContextPrecisionWithoutReference()],
         llm=llm,
         embeddings=emb,
+        run_config=run_config,
     )
     df = result.to_pandas()
     for col in ["faithfulness", "answer_relevancy", "llm_context_precision_without_reference"]:
