@@ -136,10 +136,12 @@ evaluation:
 
 # RAGAS Settings (end-to-end answer quality evaluation)
 ragas:
-  mode: "local"    # "local" = Qwen3-8B as judge; "api" = external LLM API
+  mode: "api"          # "local" = Qwen3-8B as judge; "api" = external LLM API
+  sample_size: 50      # number of QA pairs sampled for RAGAS (independent of pipeline sample)
   api:
-    model: "gpt-4o-mini"
-    base_url: null   # null = OpenAI official; set for compatible endpoints
+    model: "Qwen/Qwen3-30B-A3B-Instruct-2507"
+    base_url: "https://api-inference.modelscope.cn/v1"
+    # api_key: read from env var MODELSCOPE_API_KEY
 
 # Paths
 # pipeline_version: set to a short label (e.g. "fixed", "recursive") to keep chunk/embedding outputs per version; leave empty to overwrite.

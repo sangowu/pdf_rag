@@ -1,4 +1,5 @@
 import logging
+import os
 import pandas as pd
 from typing import Optional
 from src.utils import load_config
@@ -7,7 +8,7 @@ logger = logging.getLogger(__name__)
 config = load_config()
 
 
-# ── LangChain LLM wrapper (reuses loaded Qwen3) ──────────────────────────────
+# ── LangChain LLM wrapper (reuses loaded local Qwen3) ────────────────────────
 from langchain_core.language_models.llms import LLM
 from langchain_core.callbacks import CallbackManagerForLLMRun
 
@@ -49,28 +50,29 @@ def _build_llm(mode: str):
     if mode == "api":
         from langchain_openai import ChatOpenAI
         api_cfg = config.get("ragas", {}).get("api", {})
+        api_key = os.getenv("MODELSCOPE_API_KEY") or api_cfg.get("api_key", "")
         return ChatOpenAI(
-            model=api_cfg.get("model", "gpt-4o-mini"),
-            base_url=api_cfg.get("base_url") or None,
+            model=api_cfg.get("model", "Qwen/Qwen3-30B-A3B-Instruct-2507"),
+            base_url=api_cfg.get("base_url", "https://api-inference.modelscope.cn/v1"),
+            api_key=api_key,
         )
     return _LocalQwenLLM()
 
 
 def run_ragas(
     dataset: list[dict],
-    mode: str = "local",
+    mode: str = "api",
     output_path: Optional[str] = None,
 ) -> pd.DataFrame:
     """
     Run RAGAS evaluation on dataset.
 
     Each item requires: {"question": str, "answer": str, "contexts": list[str]}
-    Metrics: faithfulness, answer_relevancy, context_precision (no ground_truth needed)
+    Metrics: faithfulness, answer_relevancy (no ground_truth needed; 2 calls per item)
     """
     from datasets import Dataset
     from ragas import evaluate
     from ragas.metrics import faithfulness, answer_relevancy
-    from ragas.metrics import LLMContextPrecisionWithoutReference
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
     from ragas.run_config import RunConfig
@@ -78,19 +80,23 @@ def run_ragas(
     llm = LangchainLLMWrapper(_build_llm(mode))
     emb = LangchainEmbeddingsWrapper(_BGEEmbeddings())
 
-    # max_workers=1: local GPU model cannot run concurrently; timeout=600s per call
-    run_config = RunConfig(max_workers=1, timeout=600)
+    if mode == "api":
+        # API can handle some concurrency; keep low to avoid rate limits
+        run_config = RunConfig(max_workers=2, timeout=60, max_retries=3)
+    else:
+        # Local GPU: must be serial, long timeout
+        run_config = RunConfig(max_workers=1, timeout=600)
 
     hf_dataset = Dataset.from_list(dataset)
     result = evaluate(
         dataset=hf_dataset,
-        metrics=[faithfulness, answer_relevancy, LLMContextPrecisionWithoutReference()],
+        metrics=[faithfulness, answer_relevancy],
         llm=llm,
         embeddings=emb,
         run_config=run_config,
     )
     df = result.to_pandas()
-    for col in ["faithfulness", "answer_relevancy", "llm_context_precision_without_reference"]:
+    for col in ["faithfulness", "answer_relevancy"]:
         if col in df.columns:
             logger.info("RAGAS %s: %.4f", col, df[col].mean())
     if output_path:
