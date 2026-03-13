@@ -66,6 +66,17 @@ def load_timing(path: Path) -> dict:
     }
 
 
+def load_ragas_metrics(path: Path) -> dict:
+    df = pd.read_csv(path)
+    if df.empty:
+        return {}
+    result = {}
+    for col in ["faithfulness", "answer_relevancy"]:
+        if col in df.columns:
+            result[col] = round(float(df[col].dropna().mean()), 4)
+    return result
+
+
 def load_answer_metrics(path: Path) -> dict:
     df = pd.read_csv(path)
     if df.empty:
@@ -171,6 +182,29 @@ def section_timing(
     return lines
 
 
+def section_ragas(
+    ragas_by_label: dict[str, dict],
+    baseline: str,
+) -> list[str]:
+    lines = ["## Answer Quality (RAGAS)\n"]
+
+    base = ragas_by_label.get(baseline, {})
+    header = ["Experiment", "Faithfulness", "Answer Relevancy", "ΔFaithfulness", "ΔAnswer Relevancy"]
+    lines.append("| " + " | ".join(header) + " |")
+    lines.append("| " + " | ".join(["---"] * len(header)) + " |")
+
+    for label, m in sorted(ragas_by_label.items(), key=lambda x: (x[0] != baseline, x[0])):
+        row = [f"**{label}**" if label == baseline else label]
+        row.append(_pct(m.get("faithfulness", 0)))
+        row.append(_pct(m.get("answer_relevancy", 0)))
+        row.append("—" if label == baseline else _delta(m.get("faithfulness", 0), base.get("faithfulness", 0)))
+        row.append("—" if label == baseline else _delta(m.get("answer_relevancy", 0), base.get("answer_relevancy", 0)))
+        lines.append("| " + " | ".join(row) + " |")
+
+    lines.append("")
+    return lines
+
+
 def section_answer(
     answer_by_label: dict[str, dict],
     baseline: str,
@@ -219,6 +253,7 @@ def generate_report(results_dir: str, baseline: str, output: str) -> None:
     metrics_map = discover(rd, "*_metrics.csv", "_metrics")
     timing_map = discover(rd, "*_eval_timing.csv", "_eval_timing")
     answer_map = discover(rd, "*_answer_metrics.csv", "_answer_metrics")
+    ragas_map = discover(rd, "*_ragas_results.csv", "_ragas_results")
 
     # Exclude per-query detail files
     timing_map = {k: v for k, v in timing_map.items() if "detail" not in k}
@@ -248,6 +283,13 @@ def generate_report(results_dir: str, baseline: str, output: str) -> None:
         except Exception as e:
             logger.warning("Failed to load %s: %s", path, e)
 
+    ragas_by_label: dict[str, dict] = {}
+    for label, path in ragas_map.items():
+        try:
+            ragas_by_label[label] = load_ragas_metrics(path)
+        except Exception as e:
+            logger.warning("Failed to load %s: %s", path, e)
+
     # Determine k values from available metrics
     k_list: list[int] = []
     for df in metrics_by_label.values():
@@ -269,6 +311,9 @@ def generate_report(results_dir: str, baseline: str, output: str) -> None:
 
     if timing_by_label:
         lines += section_timing(timing_by_label, baseline)
+
+    if ragas_by_label:
+        lines += section_ragas(ragas_by_label, baseline)
 
     if answer_by_label:
         lines += section_answer(answer_by_label, baseline)
