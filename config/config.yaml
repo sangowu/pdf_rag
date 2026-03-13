@@ -134,6 +134,13 @@ evaluation:
   top_k: 5
   num_samples: 10
 
+# RAGAS Settings (end-to-end answer quality evaluation)
+ragas:
+  mode: "local"    # "local" = Qwen3-8B as judge; "api" = external LLM API
+  api:
+    model: "gpt-4o-mini"
+    base_url: null   # null = OpenAI official; set for compatible endpoints
+
 # Paths
 # pipeline_version: set to a short label (e.g. "fixed", "recursive") to keep chunk/embedding outputs per version; leave empty to overwrite.
 paths:
@@ -150,3 +157,4 @@ paths:
   all_chunk_path: "results/chunk_results/all_chunks.json"
   all_parent_chunk_path: "results/chunk_results/all_parent_chunks.json"
   normalized_data_path: "data/answers/normalized_data.json"
+  qa_pairs_path: "data/answers/qa_pairs.jsonl"
