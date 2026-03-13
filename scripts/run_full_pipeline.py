@@ -120,6 +120,60 @@ def run_evaluate(config: dict, eval_prefix: str | None = None) -> None:
     except Exception:  # noqa: BLE001
         pass
 
+
+def run_ragas(config: dict, eval_prefix: str | None = None) -> None:
+    from src.answer_generator import generate_answer
+    from src.ragas_evaluator import run_ragas as _run_ragas
+    from scripts.generate_qa_from_chunks import _ensure_local_model_loaded, unload_local_model
+    import json
+    from tqdm import tqdm
+
+    paths = config.get("paths", {})
+    qa_path = paths.get("qa_pairs_path", "data/answers/qa_pairs.jsonl")
+    if not Path(qa_path).exists():
+        logging.warning("qa_pairs.jsonl not found at %s; skipping RAGAS eval.", qa_path)
+        return
+
+    with open(qa_path, "r", encoding="utf-8") as f:
+        qa_pairs = [json.loads(line) for line in f if line.strip()]
+    logging.info("RAGAS: loaded %d QA pairs", len(qa_pairs))
+
+    _ensure_local_model_loaded()
+
+    from src.vector_store import VectorStore
+    vs = VectorStore()
+    top_k = config.get("evaluation", {}).get("top_k", 5)
+    dataset = []
+    for item in tqdm(qa_pairs, desc="Generating answers", unit="qa"):
+        question = item.get("question", "").strip()
+        if not question:
+            continue
+        contexts = vs.search_by_text(question, k=top_k)["documents"][0]
+        dataset.append({
+            "question": question,
+            "answer": generate_answer(question, contexts),
+            "contexts": contexts,
+        })
+
+    unload_local_model()
+
+    mode = config.get("ragas", {}).get("mode", "local")
+    prefix = f"{eval_prefix}_" if eval_prefix else ""
+    output_path = f"results/{prefix}ragas_results.csv"
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    _run_ragas(dataset, mode=mode, output_path=output_path)
+
+
+def run_plot(config: dict) -> None:
+    try:
+        from scripts.plot_metrics import main as plot_main
+        argv_saved = sys.argv
+        sys.argv = ["scripts/plot_metrics.py"]
+        plot_main()
+        sys.argv = argv_saved
+    except Exception as e:
+        logging.warning("plot_metrics failed: %s", e)
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
     config = load_config()
@@ -132,6 +186,8 @@ def main() -> None:
     parser.add_argument("--skip-embed", action="store_true")
     parser.add_argument("--skip-gold", action="store_true")
     parser.add_argument("--skip-eval", action="store_true")
+    parser.add_argument("--skip-ragas", action="store_true")
+    parser.add_argument("--skip-plot", action="store_true")
     parser.add_argument(
         "--eval-prefix",
         default=None,
@@ -178,6 +234,10 @@ def main() -> None:
         run_generate_gold(config)
     if not args.skip_eval:
         run_evaluate(config, eval_prefix=args.eval_prefix)
+    if not args.skip_ragas:
+        run_ragas(config, eval_prefix=args.eval_prefix)
+    if not args.skip_plot:
+        run_plot(config)
 
 if __name__ == "__main__":
     main()
