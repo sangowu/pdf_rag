@@ -131,40 +131,51 @@ def plot_metrics(
     if len(labels) != len(csv_paths):
         raise ValueError("labels length must match csv_paths")
 
+    # Strip common "debug_" prefix from labels for brevity
+    display_labels = [l.removeprefix("debug_") for l in labels]
+
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+    line_styles = ["-", "--", "-.", ":"]
+    markers = ["o", "s", "^", "D", "v", "P", "X", "*", "h", "+", "x", "1", "2"]
 
-    # Hit@K curve
-    sorted_pairs = sorted(zip(labels, dfs), key=lambda x: x[0])
-    sorted_labels, sorted_dfs = zip(*sorted_pairs) if sorted_pairs else ([], [])
-    for label, df in zip(sorted_labels, sorted_dfs):
-        ax1.plot(df["k"], df["hit_rate"], marker="o", label=label)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5))
+
+    # Hit@K curve — sorted by label, alternating line styles for readability
+    sorted_triples = sorted(zip(display_labels, dfs, range(len(dfs))), key=lambda x: x[0])
+    for i, (label, df, _) in enumerate(sorted_triples):
+        ax1.plot(
+            df["k"], df["hit_rate"],
+            marker=markers[i % len(markers)],
+            linestyle=line_styles[i % len(line_styles)],
+            label=label,
+        )
     ax1.set_xlabel("K")
     ax1.set_ylabel("Hit rate")
     ax1.set_title("Hit@K")
-    # Dynamic y-axis: start slightly below min value, end at 1.02
     all_hit_rates = [v for df in dfs for v in df["hit_rate"]]
     y_min = max(0.0, min(all_hit_rates) - 0.05)
-    ax1.set_ylim(round(y_min, 1), 1.02)
+    ax1.set_ylim(y_min, 1.02)
     ax1.legend(loc="upper center", bbox_to_anchor=(0.5, -0.26), ncol=4, frameon=True, fontsize=6)
     ax1.grid(True, alpha=0.3)
     ax1.set_xticks(sorted(set(k for d in dfs for k in d["k"])))
 
-    # MRR bar (one bar per version)
-    mrrs = []
-    for df in dfs:
-        # MRR is constant across k in our format; take last row or first
-        mrr = float(df["mrr"].iloc[-1]) if len(df) else 0.0
-        mrrs.append(mrr)
-    x = range(len(labels))
-    ax2.bar(x, mrrs, color="steelblue", alpha=0.8)
-    ax2.set_xticks(x)
-    ax2.set_xticklabels(labels, rotation=45, ha="right")
-    ax2.set_ylabel("MRR")
+    # MRR — horizontal bar chart, sorted ascending so best is at top
+    mrr_pairs = sorted(zip(display_labels, dfs), key=lambda x: float(x[1]["mrr"].iloc[-1]))
+    mrr_labels = [p[0] for p in mrr_pairs]
+    mrr_vals   = [float(p[1]["mrr"].iloc[-1]) for p in mrr_pairs]
+    y = range(len(mrr_labels))
+    ax2.barh(list(y), mrr_vals, color="steelblue", alpha=0.8)
+    ax2.set_yticks(list(y))
+    ax2.set_yticklabels(mrr_labels, fontsize=7)
+    ax2.set_xlabel("MRR")
     ax2.set_title("Mean Reciprocal Rank")
-    ax2.set_ylim(0, 1.0)
+    mrr_min = max(0.0, min(mrr_vals) - 0.05)
+    ax2.set_xlim(mrr_min, 1.0)
+    ax2.grid(True, alpha=0.3, axis="x")
+    for i, v in enumerate(mrr_vals):
+        ax2.text(v + 0.002, i, f"{v:.3f}", va="center", fontsize=6)
 
     if title:
         fig.suptitle(title, fontsize=12, y=1.02)
