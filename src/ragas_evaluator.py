@@ -3,6 +3,9 @@ import os
 import pandas as pd
 from typing import Optional
 from src.utils import load_config
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 config = load_config()
