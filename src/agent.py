@@ -127,7 +127,8 @@ def _execute_tool(name: str, args: dict, vs, top_k: int) -> tuple[str, dict]:
         numbered = "\n\n".join(
             f"[{i}] {c.strip()}" for i, c in enumerate(contexts, 1) if c.strip()
         )
-        return numbered[:3000], {"contexts": contexts, "sources": sources}
+        instruction = "\n\nUsing the passages above, answer the user's question. Cite each passage inline as [1], [2], etc. after the sentence that uses it."
+        return numbered[:3000] + instruction, {"contexts": contexts, "sources": sources}
 
     return f"Unknown tool: {name}", {}
 
