@@ -106,11 +106,13 @@ chromadb:
 
 # LLM Settings (local transformers)
 llm:
-  mode: "local"  # 默认使用本地模型；可选 "local" 或 "api"
-  
-  # API 模式配置（备用）
+  mode: "api"    # "api" = ModelScope API; "local" = local transformers
+
+  # API 模式配置
   api:
     model: "Qwen/Qwen3-8B"
+    base_url: "https://api-inference.modelscope.cn/v1"
+    # api_key: read from env var MODELSCOPE_API_KEY
   
   # 本地模式配置（默认）
   local:
