@@ -2,6 +2,7 @@
 Gradio demo for PDF Parser RAG.
 
 Calls FastAPI /query endpoint and displays answer + retrieved contexts + latency.
+Answer block shows inline [1][2]... citation badges with hover tooltips showing source info.
 
 Usage:
     # Make sure FastAPI is running first:
@@ -18,10 +19,33 @@ import gradio as gr
 
 DEFAULT_API_URL = "http://localhost:8000"
 
+CITATION_STYLE = """
+    display: inline-block;
+    margin-left: 2px;
+    padding: 0 5px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    border-radius: 4px;
+    font-size: 0.78em;
+    font-weight: 600;
+    cursor: help;
+    border-bottom: 1px dashed #1a73e8;
+    position: relative;
+"""
+
+
+def _citation_html(index: int, tooltip: str) -> str:
+    """Render a [N] badge with native title tooltip."""
+    return (
+        f'<span title="{tooltip}" style="{CITATION_STYLE}">'
+        f'[{index}]'
+        f'</span>'
+    )
+
 
 def query(api_url: str, question: str, top_k: int):
     if not question.strip():
-        return "请输入问题。", "", ""
+        return "<p style='color:gray'>请输入问题。</p>", "", ""
 
     try:
         resp = requests.post(
@@ -32,17 +56,33 @@ def query(api_url: str, question: str, top_k: int):
         resp.raise_for_status()
         data = resp.json()
     except requests.exceptions.ConnectionError:
-        return "❌ 无法连接到 API 服务，请确认 FastAPI 已启动。", "", ""
+        return "<p style='color:red'>❌ 无法连接到 API 服务，请确认 FastAPI 已启动。</p>", "", ""
     except requests.exceptions.Timeout:
-        return "❌ 请求超时，请稍后重试。", "", ""
+        return "<p style='color:red'>❌ 请求超时，请稍后重试。</p>", "", ""
     except Exception as e:
-        return f"❌ 请求失败：{e}", "", ""
+        return f"<p style='color:red'>❌ 请求失败：{e}</p>", "", ""
 
     answer = data.get("answer", "")
-
-    # Format retrieved contexts with sources
     contexts = data.get("contexts", [])
     sources = data.get("sources", [])
+
+    # Build citation badges appended to answer
+    badges = ""
+    for i, src in enumerate(sources, 1):
+        file_name = src.get("file_name", "未知文件")
+        page = src.get("page_index", "?")
+        chunk = src.get("chunk_index", "?")
+        tooltip = f"{file_name} | 第 {page} 页 | chunk #{chunk}"
+        badges += _citation_html(i, tooltip)
+
+    answer_html = (
+        f"<div style='font-size:1rem; line-height:1.7; padding:12px'>"
+        f"{answer}"
+        f"<span style='margin-left:6px'>{badges}</span>"
+        f"</div>"
+    )
+
+    # Format retrieved contexts
     context_md = ""
     for i, ctx in enumerate(contexts, 1):
         src = sources[i - 1] if i - 1 < len(sources) else {}
@@ -66,7 +106,7 @@ def query(api_url: str, question: str, top_k: int):
         f"LLM: `{meta.get('llm_mode', '')}`"
     )
 
-    return answer, context_md, latency_md
+    return answer_html, context_md, latency_md
 
 
 def build_demo(api_url: str) -> gr.Blocks:
@@ -90,7 +130,8 @@ def build_demo(api_url: str) -> gr.Blocks:
             with gr.Column(scale=1):
                 latency_output = gr.Markdown(label="延迟信息")
 
-        answer_output = gr.Textbox(label="答案", lines=4, interactive=False)
+        # HTML component so citation badges render properly
+        answer_output = gr.HTML(label="答案")
 
         with gr.Accordion("检索到的上下文", open=False):
             context_output = gr.Markdown()
