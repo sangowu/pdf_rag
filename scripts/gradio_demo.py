@@ -117,7 +117,7 @@ def build_demo(api_url: str) -> gr.Blocks:
         with gr.Row():
             # Left: chat
             with gr.Column(scale=4):
-                chatbot = gr.Chatbot(label="对话", height=560)
+                chatbot = gr.Chatbot(label="对话", height=560, sanitize_html=False)
                 with gr.Row():
                     msg_input = gr.Textbox(
                         placeholder="输入问题，按 Enter 发送...",
