@@ -128,24 +128,19 @@ def build_demo(api_url: str) -> gr.Blocks:
                 latency_output = gr.Markdown(label="延迟")
                 sources_output = gr.Markdown(label="来源")
 
-        # history_state: list of {"role": ..., "content": ...} for API
-        # chatbot_history: list of (user_str, assistant_str) tuples for display
+        # Gradio 6.0: Chatbot natively uses [{role, content}] messages format
         history_state = gr.State([])
 
         def on_submit(question, history, top_k):
             if not question.strip():
-                # Convert history to display tuples
-                display = _to_tuples(history)
-                return display, "", "", history, ""
+                return history, "", "", history, ""
 
-            # Append user turn to API history
             history = history + [{"role": "user", "content": question}]
 
             for h, src, lat in chat(api_url, question, history, top_k):
                 pass
 
-            display = _to_tuples(h)
-            return display, src, lat, h, ""
+            return h, src, lat, h, ""
 
         send_btn.click(
             fn=on_submit,
@@ -165,19 +160,6 @@ def build_demo(api_url: str) -> gr.Blocks:
     return demo
 
 
-def _to_tuples(history: list[dict]) -> list[tuple]:
-    """Convert [{role, content}] to [(user, assistant)] tuples for gr.Chatbot."""
-    tuples = []
-    i = 0
-    while i < len(history):
-        if history[i]["role"] == "user":
-            user_msg = history[i]["content"]
-            asst_msg = history[i + 1]["content"] if i + 1 < len(history) else None
-            tuples.append((user_msg, asst_msg))
-            i += 2
-        else:
-            i += 1
-    return tuples
 
 
 def main():
