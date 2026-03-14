@@ -30,9 +30,15 @@ config = load_config()
 # Schema
 # ---------------------------------------------------------------------------
 
+class HistoryMessage(BaseModel):
+    role: str   # "user" | "assistant"
+    content: str
+
+
 class QueryRequest(BaseModel):
     question: str = Field(..., min_length=1, max_length=1000)
     top_k: int = Field(default=5, ge=1, le=20)
+    history: list[HistoryMessage] = Field(default_factory=list)
 
 
 class LatencyBreakdown(BaseModel):
@@ -143,8 +149,9 @@ def query(req: QueryRequest):
     t1 = time.perf_counter()
 
     # 2. Answer generation (API or local, controlled by config llm.mode)
+    history = [{"role": m.role, "content": m.content} for m in req.history]
     try:
-        answer = generate_answer(req.question, contexts, mode=llm_mode)
+        answer = generate_answer(req.question, contexts, mode=llm_mode, history=history)
     except Exception as e:
         logger.error("Answer generation failed: %s", e)
         raise HTTPException(status_code=500, detail=f"Generation error: {e}")

@@ -1,171 +1,177 @@
 """
-Gradio demo for PDF Parser RAG.
+Gradio chat demo for PDF Parser RAG.
 
-Calls FastAPI /query endpoint and displays answer + retrieved contexts + latency.
-Answer block shows inline [1][2]... citation badges with hover tooltips showing source info.
+Multi-turn chat interface calling FastAPI /query endpoint.
+Each assistant message includes inline [N] citation badges with hover tooltips.
 
 Usage:
-    # Make sure FastAPI is running first:
     uvicorn src.api.main:app --host 0.0.0.0 --port 8000
-
-    # Then start Gradio:
     python scripts/gradio_demo.py
-    python scripts/gradio_demo.py --api-url http://localhost:8000
+    python scripts/gradio_demo.py --api-url http://localhost:8000 --share
 """
 
 import argparse
+import re
 import requests
 import gradio as gr
 
 DEFAULT_API_URL = "http://localhost:8000"
 
-CITATION_STYLE = """
-    display: inline-block;
-    margin-left: 2px;
-    padding: 0 5px;
-    background: #e8f0fe;
-    color: #1a73e8;
-    border-radius: 4px;
-    font-size: 0.78em;
-    font-weight: 600;
-    cursor: help;
-    border-bottom: 1px dashed #1a73e8;
-    position: relative;
-"""
+BADGE_STYLE = (
+    "display:inline-block;margin-left:2px;padding:0 5px;"
+    "background:#e8f0fe;color:#1a73e8;border-radius:4px;"
+    "font-size:0.78em;font-weight:600;cursor:help;"
+    "border-bottom:1px dashed #1a73e8;"
+)
 
 
-def _citation_html(index: int, tooltip: str) -> str:
-    """Render a [N] badge with native title tooltip."""
-    return (
-        f'<span title="{tooltip}" style="{CITATION_STYLE}">'
-        f'[{index}]'
-        f'</span>'
-    )
+def _badge(index: int, tooltip: str) -> str:
+    return f'<span title="{tooltip}" style="{BADGE_STYLE}">[{index}]</span>'
 
 
-def query(api_url: str, question: str, top_k: int):
-    if not question.strip():
-        return "<p style='color:gray'>请输入问题。</p>", "", ""
-
-    try:
-        resp = requests.post(
-            f"{api_url}/query",
-            json={"question": question.strip(), "top_k": top_k},
-            timeout=60,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-    except requests.exceptions.ConnectionError:
-        return "<p style='color:red'>❌ 无法连接到 API 服务，请确认 FastAPI 已启动。</p>", "", ""
-    except requests.exceptions.Timeout:
-        return "<p style='color:red'>❌ 请求超时，请稍后重试。</p>", "", ""
-    except Exception as e:
-        return f"<p style='color:red'>❌ 请求失败：{e}</p>", "", ""
-
-    answer = data.get("answer", "")
-    contexts = data.get("contexts", [])
-    sources = data.get("sources", [])
-
-    # Build tooltip map: index -> HTML badge
-    import re
+def _render_answer(answer: str, sources: list[dict]) -> str:
+    """Replace [N] in answer text with HTML tooltip badges."""
     badge_map = {}
     for i, src in enumerate(sources, 1):
         file_name = src.get("file_name", "未知文件")
         page = src.get("page_index", "?")
         chunk = src.get("chunk_index", "?")
-        tooltip = f"{file_name} | 第 {page} 页 | chunk #{chunk}"
-        badge_map[i] = _citation_html(i, tooltip)
+        badge_map[i] = _badge(i, f"{file_name} | 第 {page} 页 | chunk #{chunk}")
 
-    # Replace [N] in answer text with tooltip badges
     def _replace(m):
         n = int(m.group(1))
         return badge_map.get(n, m.group(0))
 
-    answer_with_badges = re.sub(r"\[(\d+)\]", _replace, answer)
+    return re.sub(r"\[(\d+)\]", _replace, answer)
 
-    answer_html = (
-        f"<div style='font-size:1rem; line-height:1.7; padding:12px'>"
-        f"{answer_with_badges}"
-        f"</div>"
-    )
 
-    # Format retrieved contexts
-    context_md = ""
-    for i, ctx in enumerate(contexts, 1):
-        src = sources[i - 1] if i - 1 < len(sources) else {}
-        file_name = src.get("file_name", "")
-        page = src.get("page_index", "")
-        chunk = src.get("chunk_index", "")
-        source_label = f"`{file_name}` &nbsp;第 {page} 页 &nbsp;chunk #{chunk}" if file_name else ""
-        context_md += f"**[{i}]** {source_label}\n\n{ctx.strip()}\n\n---\n\n"
+def _sources_md(sources: list[dict]) -> str:
+    if not sources:
+        return ""
+    lines = ["**来源**\n"]
+    for i, src in enumerate(sources, 1):
+        lines.append(f"**[{i}]** `{src.get('file_name','')}` 第 {src.get('page_index','?')} 页 chunk #{src.get('chunk_index','?')}")
+    return "\n\n".join(lines)
 
-    # Format latency
+
+def chat(api_url: str, question: str, history: list, top_k: int):
+    """Called on each user message. Yields (history, sources_md, latency_md) incrementally."""
+    if not question.strip():
+        yield history, "", ""
+        return
+
+    # Convert Gradio history [{role, content}] to API format
+    api_history = [{"role": m["role"], "content": m["content"]} for m in history]
+
+    try:
+        resp = requests.post(
+            f"{api_url}/query",
+            json={"question": question.strip(), "top_k": top_k, "history": api_history},
+            timeout=60,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+    except requests.exceptions.ConnectionError:
+        history.append({"role": "assistant", "content": "❌ 无法连接到 API 服务，请确认 FastAPI 已启动。"})
+        yield history, "", ""
+        return
+    except Exception as e:
+        history.append({"role": "assistant", "content": f"❌ 请求失败：{e}"})
+        yield history, "", ""
+        return
+
+    answer = data.get("answer", "")
+    sources = data.get("sources", [])
     lat = data.get("latency", {})
     meta = data.get("metadata", {})
+
+    answer_html = _render_answer(answer, sources)
+    history.append({"role": "assistant", "content": answer_html})
+
     latency_md = (
-        f"| 阶段 | 耗时 |\n"
-        f"|---|---|\n"
+        f"| 阶段 | 耗时 |\n|---|---|\n"
         f"| 检索 | {lat.get('retrieve_ms', 0):.0f} ms |\n"
         f"| 答案生成 | {lat.get('generate_ms', 0):.0f} ms |\n"
         f"| **总计** | **{lat.get('total_ms', 0):.0f} ms** |\n\n"
-        f"Chunk 策略: `{meta.get('chunk_strategy', '')}` &nbsp;|&nbsp; "
-        f"Collection: `{meta.get('collection', '')}` &nbsp;|&nbsp; "
-        f"LLM: `{meta.get('llm_mode', '')}`"
+        f"策略: `{meta.get('chunk_strategy','')}` | LLM: `{meta.get('llm_mode','')}`"
     )
 
-    return answer_html, context_md, latency_md
+    yield history, _sources_md(sources), latency_md
 
 
 def build_demo(api_url: str) -> gr.Blocks:
-    with gr.Blocks(title="PDF Parser RAG Demo", theme=gr.themes.Soft()) as demo:
-        gr.Markdown("# PDF Parser RAG Demo")
-        gr.Markdown("基于 OmniDocBench 的检索增强问答系统")
+    with gr.Blocks(title="PDF Parser RAG", theme=gr.themes.Soft()) as demo:
+        gr.Markdown("# PDF Parser RAG")
+        gr.Markdown("基于 OmniDocBench 的多轮检索增强问答")
 
         with gr.Row():
-            with gr.Column(scale=3):
-                question_input = gr.Textbox(
-                    label="问题",
-                    placeholder="输入你的问题...",
-                    lines=2,
+            # Left: chat
+            with gr.Column(scale=4):
+                chatbot = gr.Chatbot(
+                    label="对话",
+                    height=560,
+                    type="messages",
+                    render_markdown=True,
+                    show_copy_button=True,
                 )
+                with gr.Row():
+                    msg_input = gr.Textbox(
+                        placeholder="输入问题，按 Enter 发送...",
+                        show_label=False,
+                        scale=5,
+                        container=False,
+                    )
+                    send_btn = gr.Button("发送", variant="primary", scale=1)
+                    clear_btn = gr.Button("清空", scale=1)
+
+            # Right: metadata panel
+            with gr.Column(scale=1):
                 top_k_slider = gr.Slider(
                     minimum=1, maximum=10, value=5, step=1,
                     label="检索 Top-K",
                 )
-                submit_btn = gr.Button("提交", variant="primary")
+                latency_output = gr.Markdown(label="延迟")
+                sources_output = gr.Markdown(label="来源")
 
-            with gr.Column(scale=1):
-                latency_output = gr.Markdown(label="延迟信息")
+        # State: keep chat history
+        history_state = gr.State([])
 
-        # HTML component so citation badges render properly
-        answer_output = gr.HTML(label="答案")
+        def on_submit(question, history, top_k):
+            if not question.strip():
+                return history, "", "", history, ""
+            history = history + [{"role": "user", "content": question}]
+            for h, src, lat in chat(api_url, question, history, top_k):
+                pass
+            return h, src, lat, h, ""
 
-        with gr.Accordion("检索到的上下文", open=False):
-            context_output = gr.Markdown()
-
-        submit_btn.click(
-            fn=lambda q, k: query(api_url, q, k),
-            inputs=[question_input, top_k_slider],
-            outputs=[answer_output, context_output, latency_output],
+        send_btn.click(
+            fn=on_submit,
+            inputs=[msg_input, history_state, top_k_slider],
+            outputs=[chatbot, sources_output, latency_output, history_state, msg_input],
         )
-        question_input.submit(
-            fn=lambda q, k: query(api_url, q, k),
-            inputs=[question_input, top_k_slider],
-            outputs=[answer_output, context_output, latency_output],
+        msg_input.submit(
+            fn=on_submit,
+            inputs=[msg_input, history_state, top_k_slider],
+            outputs=[chatbot, sources_output, latency_output, history_state, msg_input],
+        )
+        clear_btn.click(
+            fn=lambda: ([], [], "", ""),
+            outputs=[chatbot, history_state, sources_output, latency_output],
         )
 
     return demo
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Gradio demo for PDF Parser RAG.")
-    parser.add_argument("--api-url", default=DEFAULT_API_URL, help="FastAPI base URL")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--api-url", default=DEFAULT_API_URL)
     parser.add_argument("--port", type=int, default=7860)
-    parser.add_argument("--share", action="store_true", help="Create public Gradio link")
+    parser.add_argument("--share", action="store_true")
     args = parser.parse_args()
 
-    demo = build_demo(args.api_url)
-    demo.launch(server_name="0.0.0.0", server_port=args.port, share=args.share)
+    build_demo(args.api_url).launch(
+        server_name="0.0.0.0", server_port=args.port, share=args.share
+    )
 
 
 if __name__ == "__main__":

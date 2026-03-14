@@ -47,7 +47,7 @@ def _build_prompt(question: str, contexts: list[str]) -> str:
     )
 
 
-def _generate_api(prompt: str) -> str:
+def _generate_api(prompt: str, history: list[dict] | None = None) -> str:
     from openai import OpenAI
     llm_cfg = config.get("llm", {})
     api_cfg = llm_cfg.get("api", {})
@@ -55,9 +55,10 @@ def _generate_api(prompt: str) -> str:
     base_url = api_cfg.get("base_url", "https://api-inference.modelscope.cn/v1")
     model = api_cfg.get("model", "Qwen/Qwen3-8B")
     client = OpenAI(base_url=base_url, api_key=api_key)
+    messages = list(history or []) + [{"role": "user", "content": prompt}]
     response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         max_tokens=512,
         temperature=0.7,
         extra_body={"enable_thinking": False},
@@ -65,11 +66,17 @@ def _generate_api(prompt: str) -> str:
     return response.choices[0].message.content.strip()
 
 
-def generate_answer(question: str, contexts: list[str], mode: str | None = None) -> str:
+def generate_answer(
+    question: str,
+    contexts: list[str],
+    mode: str | None = None,
+    history: list[dict] | None = None,
+) -> str:
     """Generate an answer from retrieved contexts.
 
     Args:
         mode: "api" | "local" | None (None reads from config llm.mode)
+        history: list of {"role": "user"/"assistant", "content": "..."} for multi-turn
     """
     if mode is None:
         mode = config.get("llm", {}).get("mode", "local")
@@ -77,7 +84,7 @@ def generate_answer(question: str, contexts: list[str], mode: str | None = None)
     prompt = _build_prompt(question, contexts)
 
     if mode == "api":
-        return _generate_api(prompt)
+        return _generate_api(prompt, history=history)
 
     from scripts.generate_qa_from_chunks import _generate_with_backend
     return _generate_with_backend(prompt, backend="local", api_client=None)
