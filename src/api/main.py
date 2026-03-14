@@ -64,6 +64,7 @@ class QueryResponse(BaseModel):
 class AgentResponse(BaseModel):
     answer: str
     used_rag: bool
+    rewritten_query: str | None
     contexts: list[str]
     sources: list[SourceInfo]
     latency_ms: float
@@ -214,6 +215,7 @@ def agent_query(req: QueryRequest):
     return AgentResponse(
         answer=result.answer,
         used_rag=result.used_rag,
+        rewritten_query=result.rewritten_query,
         contexts=result.contexts,
         sources=[
             SourceInfo(

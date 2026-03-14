@@ -82,11 +82,16 @@ def chat(api_url: str, question: str, history: list, top_k: int, agent_mode: boo
 
     answer_html = _render_answer(answer, sources)
 
-    # Agent mode: show whether RAG was triggered
+    # Agent mode: show whether RAG was triggered and if query was rewritten
     if agent_mode:
         used_rag = data.get("used_rag", False)
-        tag = "🔍 已检索文档" if used_rag else "💬 直接回答（未检索）"
-        answer_html = f"<div style='color:gray;font-size:0.8em;margin-bottom:4px'>{tag}</div>" + answer_html
+        rewritten = data.get("rewritten_query")
+        tags = []
+        if rewritten:
+            tags.append(f"✏️ 改写为：<em>{rewritten}</em>")
+        tags.append("🔍 已检索文档" if used_rag else "💬 直接回答（未检索）")
+        tag_html = " &nbsp;|&nbsp; ".join(tags)
+        answer_html = f"<div style='color:gray;font-size:0.8em;margin-bottom:4px'>{tag_html}</div>" + answer_html
         latency_md = f"**总计**: {data.get('latency_ms', 0):.0f} ms | Agent 模式"
     else:
         lat = data.get("latency", {})
