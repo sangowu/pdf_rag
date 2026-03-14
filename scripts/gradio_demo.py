@@ -100,20 +100,15 @@ def chat(api_url: str, question: str, history: list, top_k: int):
 
 
 def build_demo(api_url: str) -> gr.Blocks:
-    with gr.Blocks(title="PDF Parser RAG", theme=gr.themes.Soft()) as demo:
+    # Gradio 6.0: theme moved to launch(); Chatbot uses tuple format [(user, assistant)]
+    with gr.Blocks(title="PDF Parser RAG") as demo:
         gr.Markdown("# PDF Parser RAG")
         gr.Markdown("基于 OmniDocBench 的多轮检索增强问答")
 
         with gr.Row():
             # Left: chat
             with gr.Column(scale=4):
-                chatbot = gr.Chatbot(
-                    label="对话",
-                    height=560,
-                    type="messages",
-                    render_markdown=True,
-                    show_copy_button=True,
-                )
+                chatbot = gr.Chatbot(label="对话", height=560)
                 with gr.Row():
                     msg_input = gr.Textbox(
                         placeholder="输入问题，按 Enter 发送...",
@@ -133,16 +128,24 @@ def build_demo(api_url: str) -> gr.Blocks:
                 latency_output = gr.Markdown(label="延迟")
                 sources_output = gr.Markdown(label="来源")
 
-        # State: keep chat history
+        # history_state: list of {"role": ..., "content": ...} for API
+        # chatbot_history: list of (user_str, assistant_str) tuples for display
         history_state = gr.State([])
 
         def on_submit(question, history, top_k):
             if not question.strip():
-                return history, "", "", history, ""
+                # Convert history to display tuples
+                display = _to_tuples(history)
+                return display, "", "", history, ""
+
+            # Append user turn to API history
             history = history + [{"role": "user", "content": question}]
+
             for h, src, lat in chat(api_url, question, history, top_k):
                 pass
-            return h, src, lat, h, ""
+
+            display = _to_tuples(h)
+            return display, src, lat, h, ""
 
         send_btn.click(
             fn=on_submit,
@@ -162,6 +165,21 @@ def build_demo(api_url: str) -> gr.Blocks:
     return demo
 
 
+def _to_tuples(history: list[dict]) -> list[tuple]:
+    """Convert [{role, content}] to [(user, assistant)] tuples for gr.Chatbot."""
+    tuples = []
+    i = 0
+    while i < len(history):
+        if history[i]["role"] == "user":
+            user_msg = history[i]["content"]
+            asst_msg = history[i + 1]["content"] if i + 1 < len(history) else None
+            tuples.append((user_msg, asst_msg))
+            i += 2
+        else:
+            i += 1
+    return tuples
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-url", default=DEFAULT_API_URL)
@@ -170,7 +188,10 @@ def main():
     args = parser.parse_args()
 
     build_demo(args.api_url).launch(
-        server_name="0.0.0.0", server_port=args.port, share=args.share
+        server_name="0.0.0.0",
+        server_port=args.port,
+        share=args.share,
+        theme=gr.themes.Soft(),
     )
 
 
