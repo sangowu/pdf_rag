@@ -40,11 +40,17 @@ def query(api_url: str, question: str, top_k: int):
 
     answer = data.get("answer", "")
 
-    # Format retrieved contexts
+    # Format retrieved contexts with sources
     contexts = data.get("contexts", [])
+    sources = data.get("sources", [])
     context_md = ""
     for i, ctx in enumerate(contexts, 1):
-        context_md += f"**[{i}]** {ctx.strip()}\n\n---\n\n"
+        src = sources[i - 1] if i - 1 < len(sources) else {}
+        file_name = src.get("file_name", "")
+        page = src.get("page_index", "")
+        chunk = src.get("chunk_index", "")
+        source_label = f"`{file_name}` &nbsp;第 {page} 页 &nbsp;chunk #{chunk}" if file_name else ""
+        context_md += f"**[{i}]** {source_label}\n\n{ctx.strip()}\n\n---\n\n"
 
     # Format latency
     lat = data.get("latency", {})

@@ -41,9 +41,16 @@ class LatencyBreakdown(BaseModel):
     total_ms: float
 
 
+class SourceInfo(BaseModel):
+    file_name: str
+    page_index: int
+    chunk_index: int
+
+
 class QueryResponse(BaseModel):
     answer: str
     contexts: list[str]
+    sources: list[SourceInfo]
     latency: LatencyBreakdown
     metadata: dict
 
@@ -120,6 +127,15 @@ def query(req: QueryRequest):
     try:
         result = vs.search_by_text(req.question, k=req.top_k)
         contexts: list[str] = result["documents"][0]
+        raw_metas: list[dict] = (result.get("metadatas") or [[]])[0]
+        sources = [
+            SourceInfo(
+                file_name=m.get("file_name", ""),
+                page_index=int(m.get("page_index", 0)),
+                chunk_index=int(m.get("chunk_index", 0)),
+            )
+            for m in raw_metas
+        ]
     except Exception as e:
         logger.error("Retrieval failed: %s", e)
         raise HTTPException(status_code=500, detail=f"Retrieval error: {e}")
@@ -147,6 +163,7 @@ def query(req: QueryRequest):
     return QueryResponse(
         answer=answer,
         contexts=contexts,
+        sources=sources,
         latency=LatencyBreakdown(
             retrieve_ms=retrieve_ms,
             generate_ms=generate_ms,
