@@ -61,6 +61,14 @@ class QueryResponse(BaseModel):
     metadata: dict
 
 
+class AgentResponse(BaseModel):
+    answer: str
+    used_rag: bool
+    contexts: list[str]
+    sources: list[SourceInfo]
+    latency_ms: float
+
+
 class HealthResponse(BaseModel):
     status: str
     collection: str
@@ -182,6 +190,40 @@ def query(req: QueryRequest):
             "llm_mode": llm_mode,
             "top_k": req.top_k,
         },
+    )
+
+
+@app.post("/agent/query", response_model=AgentResponse)
+def agent_query(req: QueryRequest):
+    from src.agent import run_agent
+    vs: VectorStore = app.state.vs
+    history = [{"role": m.role, "content": m.content} for m in req.history]
+
+    t0 = time.perf_counter()
+    try:
+        result = run_agent(req.question, vs=vs, top_k=req.top_k, history=history)
+    except Exception as e:
+        logger.error("Agent failed: %s", e)
+        raise HTTPException(status_code=500, detail=f"Agent error: {e}")
+    latency_ms = round((time.perf_counter() - t0) * 1000, 1)
+
+    logger.info(
+        "agent query=%r used_rag=%s latency=%.0fms",
+        req.question[:50], result.used_rag, latency_ms,
+    )
+    return AgentResponse(
+        answer=result.answer,
+        used_rag=result.used_rag,
+        contexts=result.contexts,
+        sources=[
+            SourceInfo(
+                file_name=s["file_name"],
+                page_index=s["page_index"],
+                chunk_index=s["chunk_index"],
+            )
+            for s in result.sources
+        ],
+        latency_ms=latency_ms,
     )
 
 

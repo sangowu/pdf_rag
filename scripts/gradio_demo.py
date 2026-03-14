@@ -54,18 +54,17 @@ def _sources_md(sources: list[dict]) -> str:
     return "\n\n".join(lines)
 
 
-def chat(api_url: str, question: str, history: list, top_k: int):
-    """Called on each user message. Yields (history, sources_md, latency_md) incrementally."""
+def chat(api_url: str, question: str, history: list, top_k: int, agent_mode: bool):
+    """Called on each user message. Returns (history, sources_md, latency_md)."""
     if not question.strip():
-        yield history, "", ""
-        return
+        return history, "", ""
 
-    # Convert Gradio history [{role, content}] to API format
     api_history = [{"role": m["role"], "content": m["content"]} for m in history]
+    endpoint = "/agent/query" if agent_mode else "/query"
 
     try:
         resp = requests.post(
-            f"{api_url}/query",
+            f"{api_url}{endpoint}",
             json={"question": question.strip(), "top_k": top_k, "history": api_history},
             timeout=60,
         )
@@ -73,30 +72,35 @@ def chat(api_url: str, question: str, history: list, top_k: int):
         data = resp.json()
     except requests.exceptions.ConnectionError:
         history.append({"role": "assistant", "content": "❌ 无法连接到 API 服务，请确认 FastAPI 已启动。"})
-        yield history, "", ""
-        return
+        return history, "", ""
     except Exception as e:
         history.append({"role": "assistant", "content": f"❌ 请求失败：{e}"})
-        yield history, "", ""
-        return
+        return history, "", ""
 
     answer = data.get("answer", "")
     sources = data.get("sources", [])
-    lat = data.get("latency", {})
-    meta = data.get("metadata", {})
 
     answer_html = _render_answer(answer, sources)
+
+    # Agent mode: show whether RAG was triggered
+    if agent_mode:
+        used_rag = data.get("used_rag", False)
+        tag = "🔍 已检索文档" if used_rag else "💬 直接回答（未检索）"
+        answer_html = f"<div style='color:gray;font-size:0.8em;margin-bottom:4px'>{tag}</div>" + answer_html
+        latency_md = f"**总计**: {data.get('latency_ms', 0):.0f} ms | Agent 模式"
+    else:
+        lat = data.get("latency", {})
+        meta = data.get("metadata", {})
+        latency_md = (
+            f"| 阶段 | 耗时 |\n|---|---|\n"
+            f"| 检索 | {lat.get('retrieve_ms', 0):.0f} ms |\n"
+            f"| 答案生成 | {lat.get('generate_ms', 0):.0f} ms |\n"
+            f"| **总计** | **{lat.get('total_ms', 0):.0f} ms** |\n\n"
+            f"策略: `{meta.get('chunk_strategy','')}` | LLM: `{meta.get('llm_mode','')}`"
+        )
+
     history.append({"role": "assistant", "content": answer_html})
-
-    latency_md = (
-        f"| 阶段 | 耗时 |\n|---|---|\n"
-        f"| 检索 | {lat.get('retrieve_ms', 0):.0f} ms |\n"
-        f"| 答案生成 | {lat.get('generate_ms', 0):.0f} ms |\n"
-        f"| **总计** | **{lat.get('total_ms', 0):.0f} ms** |\n\n"
-        f"策略: `{meta.get('chunk_strategy','')}` | LLM: `{meta.get('llm_mode','')}`"
-    )
-
-    yield history, _sources_md(sources), latency_md
+    return history, _sources_md(sources), latency_md
 
 
 def build_demo(api_url: str) -> gr.Blocks:
@@ -121,6 +125,10 @@ def build_demo(api_url: str) -> gr.Blocks:
 
             # Right: metadata panel
             with gr.Column(scale=1):
+                agent_toggle = gr.Checkbox(
+                    label="Agent 模式（自动判断是否检索）",
+                    value=False,
+                )
                 top_k_slider = gr.Slider(
                     minimum=1, maximum=10, value=5, step=1,
                     label="检索 Top-K",
@@ -131,25 +139,22 @@ def build_demo(api_url: str) -> gr.Blocks:
         # Gradio 6.0: Chatbot natively uses [{role, content}] messages format
         history_state = gr.State([])
 
-        def on_submit(question, history, top_k):
+        def on_submit(question, history, top_k, agent_mode):
             if not question.strip():
                 return history, "", "", history, ""
 
             history = history + [{"role": "user", "content": question}]
-
-            for h, src, lat in chat(api_url, question, history, top_k):
-                pass
-
+            h, src, lat = chat(api_url, question, history, top_k, agent_mode)
             return h, src, lat, h, ""
 
         send_btn.click(
             fn=on_submit,
-            inputs=[msg_input, history_state, top_k_slider],
+            inputs=[msg_input, history_state, top_k_slider, agent_toggle],
             outputs=[chatbot, sources_output, latency_output, history_state, msg_input],
         )
         msg_input.submit(
             fn=on_submit,
-            inputs=[msg_input, history_state, top_k_slider],
+            inputs=[msg_input, history_state, top_k_slider, agent_toggle],
             outputs=[chatbot, sources_output, latency_output, history_state, msg_input],
         )
         clear_btn.click(
