@@ -66,19 +66,26 @@ def query(api_url: str, question: str, top_k: int):
     contexts = data.get("contexts", [])
     sources = data.get("sources", [])
 
-    # Build citation badges appended to answer
-    badges = ""
+    # Build tooltip map: index -> HTML badge
+    import re
+    badge_map = {}
     for i, src in enumerate(sources, 1):
         file_name = src.get("file_name", "未知文件")
         page = src.get("page_index", "?")
         chunk = src.get("chunk_index", "?")
         tooltip = f"{file_name} | 第 {page} 页 | chunk #{chunk}"
-        badges += _citation_html(i, tooltip)
+        badge_map[i] = _citation_html(i, tooltip)
+
+    # Replace [N] in answer text with tooltip badges
+    def _replace(m):
+        n = int(m.group(1))
+        return badge_map.get(n, m.group(0))
+
+    answer_with_badges = re.sub(r"\[(\d+)\]", _replace, answer)
 
     answer_html = (
         f"<div style='font-size:1rem; line-height:1.7; padding:12px'>"
-        f"{answer}"
-        f"<span style='margin-left:6px'>{badges}</span>"
+        f"{answer_with_badges}"
         f"</div>"
     )
 

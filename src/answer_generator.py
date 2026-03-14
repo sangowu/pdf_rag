@@ -8,9 +8,9 @@ config = load_config()
 logger = logging.getLogger(__name__)
 
 ANSWER_PROMPT_ZH = """\
-根据以下参考内容，简洁准确地回答问题。只使用参考内容中的信息，不要添加额外知识。
+根据以下编号参考内容，简洁准确地回答问题。只使用参考内容中的信息，不要添加额外知识。
+回答时在使用某条参考内容的句子末尾加上对应编号，格式为 [1]、[2] 等。
 
-参考内容：
 {context}
 
 问题：{question}
@@ -18,10 +18,10 @@ ANSWER_PROMPT_ZH = """\
 回答："""
 
 ANSWER_PROMPT_EN = """\
-Based on the following context, answer the question concisely and accurately. \
-Only use information from the context provided.
+Based on the following numbered context passages, answer the question concisely and accurately. \
+Only use information from the context provided. \
+After each sentence that uses a specific passage, cite it inline as [1], [2], etc.
 
-Context:
 {context}
 
 Question: {question}
@@ -37,10 +37,13 @@ def _detect_lang(text: str) -> str:
 
 
 def _build_prompt(question: str, contexts: list[str]) -> str:
-    context_text = "\n\n".join(c.strip() for c in contexts if c.strip())
+    # Number each context so the LLM can cite them inline
+    numbered = "\n\n".join(
+        f"[{i}] {c.strip()}" for i, c in enumerate(contexts, 1) if c.strip()
+    )
     lang = _detect_lang(question)
     return (ANSWER_PROMPT_ZH if lang == "zh" else ANSWER_PROMPT_EN).format(
-        context=context_text[:3000], question=question
+        context=numbered[:3000], question=question
     )
 
 
