@@ -159,7 +159,16 @@ def run_agent(
     or skip any/all tools and answer directly.
     """
     client, model = _get_client()
-    messages = list(history or []) + [{"role": "user", "content": question}]
+    system_msg = {
+        "role": "system",
+        "content": (
+            "You are a helpful assistant with access to a document knowledge base. "
+            "When you retrieve documents, cite the source inline after each relevant sentence "
+            "using the format [1], [2], etc. matching the numbered passages provided. "
+            "If you answer without retrieval, do not add any citations."
+        ),
+    }
+    messages = [system_msg] + list(history or []) + [{"role": "user", "content": question}]
 
     # Accumulated state across tool rounds
     extra: dict = {"contexts": [], "sources": [], "rewritten_query": None, "used_rag": False}
