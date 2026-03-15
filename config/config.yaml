@@ -30,7 +30,7 @@ ocr:
 #       "parent_child" = large parent chunks indexed + small child chunks retrieved
 #       "semantic"     = BGE-M3 sentence embeddings; cut where cosine similarity drops below (mean - breakpoint_threshold * std)
 chunking:
-  type: "recursive"
+  type: "semantic"
   chunk_size: 800
   chunk_overlap: 200
   # Max number of OCR structured JSON files to chunk; 0 = no limit (full-scale)
