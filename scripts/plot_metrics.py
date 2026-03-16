@@ -360,13 +360,16 @@ def plot_eval_timing(
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    ncols = 2 + int(has_latency) + int(has_stream)
-    fig, axes = plt.subplots(1, ncols, figsize=(6 * ncols, 4))
-    if ncols == 2:
-        axes = list(axes)
-    ax1, ax2 = axes[0], axes[1]
-    ax3 = axes[2] if has_latency else None
-    ax4 = axes[2 + int(has_latency)] if has_stream else None
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    ax1 = axes[0, 0]
+    ax2 = axes[0, 1]
+    ax3 = axes[1, 0] if has_latency else None
+    ax4 = axes[1, 1] if has_stream else None
+    # hide unused subplots
+    if not has_latency:
+        axes[1, 0].set_visible(False)
+    if not has_stream:
+        axes[1, 1].set_visible(False)
 
     x = range(len(labels))
     width = 0.35
