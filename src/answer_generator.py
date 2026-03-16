@@ -135,9 +135,15 @@ def _generate_local_stream(prompt: str):
     gen_kwargs["streamer"] = streamer
 
     thread = threading.Thread(target=model.generate, kwargs=gen_kwargs, daemon=True)
+    t0_stream = time.perf_counter()
     thread.start()
+    token_count = 0
     for token in streamer:
+        token_count += 1
+        elapsed = (time.perf_counter() - t0_stream) * 1000
+        logger.debug("[local_stream] token #%d at %.0f ms: %r", token_count, elapsed, token[:20] if token else "")
         yield token
+    logger.debug("[local_stream] done: %d tokens in %.0f ms", token_count, (time.perf_counter() - t0_stream) * 1000)
     thread.join()
 
 

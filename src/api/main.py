@@ -235,10 +235,14 @@ def query_stream(req: QueryRequest):
     def event_stream():
         yield f"data: {json.dumps({'type': 'meta', 'sources': [s.model_dump() for s in sources], 'contexts': contexts})}\n\n"
         t_first = None
+        t_stream_start = time.perf_counter()
+        token_n = 0
         try:
             for token in generate_answer_stream(req.question, contexts, mode=llm_mode, history=history):
                 if t_first is None:
                     t_first = time.perf_counter()
+                token_n += 1
+                logger.debug("[event_stream] yielding token #%d at %.0f ms", token_n, (time.perf_counter() - t_stream_start) * 1000)
                 yield f"data: {json.dumps({'type': 'token', 'text': token})}\n\n"
         except Exception as e:
             logger.error("Stream generation failed: %s", e)
