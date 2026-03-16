@@ -108,9 +108,12 @@ def _generate_api_stream(prompt: str, history: list[dict] | None = None):
 
 
 def _generate_local_stream(prompt: str):
-    """Yield tokens from local model one by one using TextIteratorStreamer + background thread."""
-    import threading
-    from transformers import TextIteratorStreamer
+    """True per-token streaming via direct model forward pass with KV cache.
+
+    Bypasses model.generate() to work around unsloth/modelscope models that
+    batch all generated tokens into a single streamer.put() call.
+    """
+    import torch
     from scripts.generate_qa_from_chunks import _ensure_local_model_loaded
 
     local_cfg = config.get("llm", {}).get("local", {})
@@ -120,31 +123,60 @@ def _generate_local_stream(prompt: str):
     chat_text = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
     )
-    inputs = tokenizer([chat_text], return_tensors="pt").to(model.device)
+    input_ids = tokenizer(chat_text, return_tensors="pt").input_ids.to(model.device)
 
-    gen_kwargs = {
-        **inputs,
-        "max_new_tokens": int(local_cfg.get("max_tokens", 256)),
-        "do_sample": bool(local_cfg.get("do_sample", False)),
-    }
-    if gen_kwargs["do_sample"]:
-        gen_kwargs["temperature"] = float(local_cfg.get("temperature", 0.7))
-        gen_kwargs["min_p"]       = float(local_cfg.get("min_p", 0.0))
+    max_new_tokens = int(local_cfg.get("max_tokens", 256))
+    do_sample      = bool(local_cfg.get("do_sample", False))
+    temperature    = float(local_cfg.get("temperature", 0.7)) if do_sample else 1.0
+    min_p          = float(local_cfg.get("min_p", 0.0)) if do_sample else 0.0
+    eos_id         = tokenizer.eos_token_id
 
-    streamer = TextIteratorStreamer(tokenizer, skip_prompt=True, skip_special_tokens=True)
-    gen_kwargs["streamer"] = streamer
-
-    thread = threading.Thread(target=model.generate, kwargs=gen_kwargs, daemon=True)
+    generated_ids = []
+    prev_text = ""
     t0_stream = time.perf_counter()
-    thread.start()
-    token_count = 0
-    for token in streamer:
-        token_count += 1
-        elapsed = (time.perf_counter() - t0_stream) * 1000
-        logger.debug("[local_stream] token #%d at %.0f ms: %r", token_count, elapsed, token[:20] if token else "")
-        yield token
-    logger.debug("[local_stream] done: %d tokens in %.0f ms", token_count, (time.perf_counter() - t0_stream) * 1000)
-    thread.join()
+
+    with torch.no_grad():
+        # Prefill: process full prompt, obtain KV cache
+        outputs = model(input_ids, use_cache=True)
+        past    = outputs.past_key_values
+        logits  = outputs.logits[:, -1, :]   # (1, vocab_size)
+
+        for step in range(max_new_tokens):
+            # ---- sampling ----
+            if do_sample:
+                if temperature != 1.0:
+                    logits = logits / temperature
+                if min_p > 0:
+                    probs     = torch.softmax(logits, dim=-1)
+                    threshold = min_p * probs.max(dim=-1, keepdim=True).values
+                    logits    = logits.masked_fill(probs < threshold, float("-inf"))
+                probs      = torch.softmax(logits, dim=-1)
+                next_token = torch.multinomial(probs, num_samples=1)
+            else:
+                next_token = logits.argmax(dim=-1, keepdim=True)
+
+            token_id = next_token[0, 0].item()
+            generated_ids.append(token_id)
+
+            # Incremental text decode: decode full sequence, yield NEW characters
+            text  = tokenizer.decode(generated_ids, skip_special_tokens=True)
+            delta = text[len(prev_text):]
+            if delta:
+                elapsed = (time.perf_counter() - t0_stream) * 1000
+                logger.debug("[local_stream] token #%d at %.0f ms: %r", step + 1, elapsed, delta[:20])
+                prev_text = text
+                yield delta
+
+            if token_id == eos_id:
+                break
+
+            # Single-token decode step (reuses KV cache — O(n) not O(n²))
+            outputs = model(next_token, past_key_values=past, use_cache=True)
+            past    = outputs.past_key_values
+            logits  = outputs.logits[:, -1, :]
+
+    logger.debug("[local_stream] done: %d steps, %d yields in %.0f ms",
+                 len(generated_ids), len(prev_text), (time.perf_counter() - t0_stream) * 1000)
 
 
 def generate_answer_stream(
