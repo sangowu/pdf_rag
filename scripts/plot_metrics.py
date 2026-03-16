@@ -32,6 +32,7 @@ CHUNK_SIZE_STATS_GLOB = "*_chunk_size_stats.csv"
 CHUNK_SIZE_DIST_GLOB = "*_chunk_size_distribution.csv"
 CHUNK_SIZE_PLOT_DEFAULT = "results/plot/chunk_size_plot.png"
 EVAL_TIMING_GLOB = "*_eval_timing.csv"
+LATENCY_GLOB = "*_latency.csv"
 EVAL_TIMING_PLOT_DEFAULT = "results/plot/eval_timing_plot.png"
 
 
@@ -90,6 +91,18 @@ def discover_eval_timing_csv(results_dir: str) -> tuple[list[str], list[str]]:
         for p in files
     ]
     return paths, labels
+
+
+def discover_latency_csv(results_dir: str) -> dict[str, str]:
+    """Find all *_latency.csv under results_dir; return {label: path}. Label = prefix."""
+    root = Path(results_dir)
+    if not root.is_dir():
+        return {}
+    result = {}
+    for p in root.glob(LATENCY_GLOB):
+        label = p.stem.replace("_latency", "") if p.stem.endswith("_latency") else p.stem
+        result[label] = str(p)
+    return result
 
 
 def load_metrics(csv_path: str) -> pd.DataFrame:
@@ -264,8 +277,9 @@ def plot_eval_timing(
     title: Optional[str] = None,
 ) -> None:
     """
-    Auto-discover *_eval_timing.csv under results_dir, then plot mean time per stage
-    (embed, chroma, rerank, total) as grouped bar chart for comparison.
+    Auto-discover *_eval_timing.csv under results_dir and plot retrieval timing.
+    If matching *_latency.csv files exist (from benchmark_latency.py), adds a third
+    panel showing TTFT and LLM generate time per configuration.
     """
     if not HAS_MATPLOTLIB:
         raise RuntimeError("matplotlib is required for plotting. Install with: pip install matplotlib")
@@ -277,50 +291,97 @@ def plot_eval_timing(
             "Run evaluation with output_prefix (e.g. run_evaluator --prefix base) first."
         )
 
-    rows = []
+    retrieval_rows = []
     for p in paths:
         df = pd.read_csv(p)
         if len(df) == 0:
             continue
         row = df.iloc[0]
-        rows.append({
+        retrieval_rows.append({
             "embed_mean_s": float(row.get("embed_mean_s", 0)),
             "chroma_mean_s": float(row.get("chroma_mean_s", 0)),
             "rerank_mean_s": float(row.get("rerank_mean_s", 0)),
             "total_mean_s": float(row.get("total_mean_s", 0)),
         })
-    if not rows:
+    if not retrieval_rows:
         raise ValueError("No timing data rows in discovered CSV files.")
+
+    # Load matching latency CSVs (TTFT + generate, from benchmark_latency.py)
+    latency_map = discover_latency_csv(results_dir)
+    latency_rows = []
+    for label in labels:
+        if label in latency_map:
+            df = pd.read_csv(latency_map[label])
+            if len(df) > 0:
+                row = df.iloc[0]
+                latency_rows.append({
+                    "ttft_mean_ms": float(row.get("ttft_mean_ms", 0)),
+                    "generate_mean_ms": float(row.get("generate_mean_ms", 0)),
+                })
+            else:
+                latency_rows.append(None)
+        else:
+            latency_rows.append(None)
+    has_latency = any(r is not None for r in latency_rows)
 
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
+    ncols = 3 if has_latency else 2
+    fig, axes = plt.subplots(1, ncols, figsize=(6 * ncols, 4))
+    ax1, ax2 = axes[0], axes[1]
+    ax3 = axes[2] if has_latency else None
+
     x = range(len(labels))
     width = 0.35
+    display_labels = [l.removeprefix("debug_") for l in labels]
 
-    # Left: embed + chroma (small scale, 0 ~ 0.05s typically)
-    ax1.bar([i - width / 2 for i in x], [r["embed_mean_s"] for r in rows], width, label="embed (mean s)", color="steelblue", alpha=0.8)
-    ax1.bar([i + width / 2 for i in x], [r["chroma_mean_s"] for r in rows], width, label="chroma (mean s)", color="seagreen", alpha=0.8)
+    # Panel 1: embed + chroma
+    ax1.bar([i - width / 2 for i in x], [r["embed_mean_s"] for r in retrieval_rows], width, label="embed", color="steelblue", alpha=0.8)
+    ax1.bar([i + width / 2 for i in x], [r["chroma_mean_s"] for r in retrieval_rows], width, label="chroma", color="seagreen", alpha=0.8)
     ax1.set_xticks(x)
-    ax1.set_xticklabels(labels, rotation=15, ha="right")
+    ax1.set_xticklabels(display_labels, rotation=15, ha="right", fontsize=7)
     ax1.set_ylabel("Time (s)")
-    ax1.set_title("Embed + vector search (mean per query)")
+    ax1.set_title("Embed + vector search (mean/query)")
     ax1.legend()
     ax1.grid(True, alpha=0.3)
 
-    # Right: rerank + total (log scale so both ~0.03s and ~20s are visible)
-    rerank_vals = [r["rerank_mean_s"] for r in rows]
-    total_vals = [r["total_mean_s"] for r in rows]
-    ax2.bar([i - width / 2 for i in x], [max(v, 0.001) for v in rerank_vals], width, label="rerank (mean s)", color="coral", alpha=0.8)
-    ax2.bar([i + width / 2 for i in x], [max(v, 0.001) for v in total_vals], width, label="total (mean s)", color="purple", alpha=0.8)
+    # Panel 2: rerank + retrieval total (log scale)
+    rerank_vals = [r["rerank_mean_s"] for r in retrieval_rows]
+    total_vals = [r["total_mean_s"] for r in retrieval_rows]
+    ax2.bar([i - width / 2 for i in x], [max(v, 0.001) for v in rerank_vals], width, label="rerank", color="coral", alpha=0.8)
+    ax2.bar([i + width / 2 for i in x], [max(v, 0.001) for v in total_vals], width, label="retrieval total", color="purple", alpha=0.8)
     ax2.set_xticks(x)
-    ax2.set_xticklabels(labels, rotation=15, ha="right")
+    ax2.set_xticklabels(display_labels, rotation=15, ha="right", fontsize=7)
     ax2.set_ylabel("Time (s)")
     ax2.set_yscale("log")
-    ax2.set_title("Rerank + total (mean per query, log scale)")
+    ax2.set_title("Rerank + retrieval total (log scale)")
     ax2.legend()
     ax2.grid(True, alpha=0.3, which="both")
+
+    # Panel 3 (optional): TTFT + generate time from benchmark_latency.py
+    if ax3 is not None:
+        valid_idx = [i for i, r in enumerate(latency_rows) if r is not None]
+        x3 = [i for i in x if i in valid_idx]
+        xlabels3 = [display_labels[i] for i in x3]
+        ttft_vals = [latency_rows[i]["ttft_mean_ms"] for i in x3]
+        gen_vals  = [latency_rows[i]["generate_mean_ms"] for i in x3]
+
+        ax3.bar([i - width / 2 for i in range(len(x3))], ttft_vals, width, label="TTFT (ms)", color="darkorange", alpha=0.8)
+        ax3.bar([i + width / 2 for i in range(len(x3))], gen_vals,  width, label="generate (ms)", color="teal", alpha=0.8)
+        ax3.set_xticks(range(len(x3)))
+        ax3.set_xticklabels(xlabels3, rotation=15, ha="right", fontsize=7)
+        ax3.set_ylabel("Time (ms)")
+        ax3.set_title("LLM latency: TTFT + generate (mean/query)")
+        ax3.legend()
+        ax3.grid(True, alpha=0.3)
+        for j, (tv, gv) in enumerate(zip(ttft_vals, gen_vals)):
+            ax3.text(j - width / 2, tv + 1, f"{tv:.0f}", ha="center", fontsize=6)
+            ax3.text(j + width / 2, gv + 1, f"{gv:.0f}", ha="center", fontsize=6)
+
+        missing = [display_labels[i] for i in x if i not in valid_idx]
+        if missing:
+            logger.warning("No latency CSV found for: %s. Run benchmark_latency.py --prefix <name>.", missing)
 
     if title:
         fig.suptitle(title, fontsize=12, y=1.02)

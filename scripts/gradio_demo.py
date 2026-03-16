@@ -11,11 +11,15 @@ Usage:
 """
 
 import argparse
+import json
 import re
 import requests
 import gradio as gr
+from src.utils import load_config
 
 DEFAULT_API_URL = "http://localhost:8000"
+_config = load_config()
+STREAMING_ENABLED = _config.get("llm", {}).get("streaming", True)
 
 BADGE_STYLE = (
     "display:inline-block;margin-left:2px;padding:0 5px;"
@@ -99,6 +103,7 @@ def chat(api_url: str, question: str, history: list, top_k: int, agent_mode: boo
         latency_md = (
             f"| 阶段 | 耗时 |\n|---|---|\n"
             f"| 检索 | {lat.get('retrieve_ms', 0):.0f} ms |\n"
+            f"| **TTFT** | **{lat.get('ttft_ms', 0):.0f} ms** |\n"
             f"| 答案生成 | {lat.get('generate_ms', 0):.0f} ms |\n"
             f"| **总计** | **{lat.get('total_ms', 0):.0f} ms** |\n\n"
             f"策略: `{meta.get('chunk_strategy','')}` | LLM: `{meta.get('llm_mode','')}`"
@@ -146,11 +151,66 @@ def build_demo(api_url: str) -> gr.Blocks:
 
         def on_submit(question, history, top_k, agent_mode):
             if not question.strip():
-                return history, "", "", history, ""
+                yield history, "", "", history, ""
+                return
 
             history = history + [{"role": "user", "content": question}]
-            h, src, lat = chat(api_url, question, history, top_k, agent_mode)
-            return h, src, lat, h, ""
+
+            # Agent mode or streaming disabled: fall back to regular call
+            if agent_mode or not STREAMING_ENABLED:
+                h, src, lat = chat(api_url, question, history, top_k, agent_mode)
+                yield h, src, lat, h, ""
+                return
+
+            # Streaming mode via /query/stream (SSE)
+            api_history = [{"role": m["role"], "content": m["content"]} for m in history]
+            try:
+                resp = requests.post(
+                    f"{api_url}/query/stream",
+                    json={"question": question.strip(), "top_k": top_k, "history": api_history},
+                    stream=True,
+                    timeout=60,
+                )
+                resp.raise_for_status()
+            except requests.exceptions.ConnectionError:
+                err_h = history + [{"role": "assistant", "content": "❌ 无法连接到 API 服务，请确认 FastAPI 已启动。"}]
+                yield err_h, "", "", err_h, ""
+                return
+            except Exception as e:
+                err_h = history + [{"role": "assistant", "content": f"❌ 请求失败：{e}"}]
+                yield err_h, "", "", err_h, ""
+                return
+
+            sources = []
+            accumulated = ""
+            for line in resp.iter_lines():
+                if not line or not line.startswith(b"data: "):
+                    continue
+                try:
+                    data = json.loads(line[6:])
+                except Exception:
+                    continue
+
+                if data["type"] == "meta":
+                    sources = data["sources"]
+                elif data["type"] == "token":
+                    accumulated += data["text"]
+                    partial_h = history + [{"role": "assistant", "content": accumulated}]
+                    yield partial_h, "", "", history, ""
+                elif data["type"] == "error":
+                    err_h = history + [{"role": "assistant", "content": f"❌ 生成失败：{data.get('detail', '')}"}]
+                    yield err_h, "", "", err_h, ""
+                    return
+                elif data["type"] == "done":
+                    answer_html = _render_answer(accumulated, sources)
+                    final_h = history + [{"role": "assistant", "content": answer_html}]
+                    lat = (
+                        f"| 阶段 | 耗时 |\n|---|---|\n"
+                        f"| 检索 | {data.get('retrieve_ms', 0):.0f} ms |\n"
+                        f"| **TTFT** | **{data.get('ttft_ms', 0):.0f} ms** |\n"
+                        f"| **总计** | **{data.get('total_ms', 0):.0f} ms** |"
+                    )
+                    yield final_h, _sources_md(sources), lat, final_h, ""
 
         send_btn.click(
             fn=on_submit,

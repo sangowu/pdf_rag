@@ -107,6 +107,7 @@ chromadb:
 # LLM Settings (local transformers)
 llm:
   mode: "local"    # "api" = ModelScope API; "local" = local transformers
+  streaming: true  # true = /query/stream (SSE, token-by-token); false = /query (full response)
 
   # API 模式配置
   api:

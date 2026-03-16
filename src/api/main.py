@@ -10,16 +10,18 @@ Usage:
     python -m src.api.main
 """
 
+import json
 import logging
 import time
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from src.utils import load_config
 from src.vector_store import VectorStore
-from src.answer_generator import generate_answer
+from src.answer_generator import generate_answer, generate_answer_timed, generate_answer_stream
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -43,6 +45,7 @@ class QueryRequest(BaseModel):
 
 class LatencyBreakdown(BaseModel):
     retrieve_ms: float
+    ttft_ms: float
     generate_ms: float
     total_ms: float
 
@@ -160,7 +163,7 @@ def query(req: QueryRequest):
     # 2. Answer generation (API or local, controlled by config llm.mode)
     history = [{"role": m.role, "content": m.content} for m in req.history]
     try:
-        answer = generate_answer(req.question, contexts, mode=llm_mode, history=history)
+        answer, ttft_ms = generate_answer_timed(req.question, contexts, mode=llm_mode, history=history)
     except Exception as e:
         logger.error("Answer generation failed: %s", e)
         raise HTTPException(status_code=500, detail=f"Generation error: {e}")
@@ -172,8 +175,8 @@ def query(req: QueryRequest):
     total_ms = round((t2 - t0) * 1000, 1)
 
     logger.info(
-        "query=%r retrieve=%.0fms generate=%.0fms total=%.0fms",
-        req.question[:50], retrieve_ms, generate_ms, total_ms,
+        "query=%r retrieve=%.0fms ttft=%.0fms generate=%.0fms total=%.0fms",
+        req.question[:50], retrieve_ms, ttft_ms, generate_ms, total_ms,
     )
 
     return QueryResponse(
@@ -182,6 +185,7 @@ def query(req: QueryRequest):
         sources=sources,
         latency=LatencyBreakdown(
             retrieve_ms=retrieve_ms,
+            ttft_ms=ttft_ms,
             generate_ms=generate_ms,
             total_ms=total_ms,
         ),
@@ -192,6 +196,65 @@ def query(req: QueryRequest):
             "top_k": req.top_k,
         },
     )
+
+
+@app.post("/query/stream")
+def query_stream(req: QueryRequest):
+    """SSE endpoint: streams answer tokens after retrieval completes.
+
+    Event types:
+        {"type": "meta",  "sources": [...], "contexts": [...]}
+        {"type": "token", "text": "..."}
+        {"type": "done"}
+        {"type": "error", "detail": "..."}
+    """
+    t_request_start = time.perf_counter()
+    vs: VectorStore = app.state.vs
+    llm_mode = config.get("llm", {}).get("mode", "local")
+
+    # Retrieval is synchronous and must finish before streaming starts
+    try:
+        result = vs.search_by_text(req.question, k=req.top_k)
+        contexts: list[str] = result["documents"][0]
+        raw_metas: list[dict] = (result.get("metadatas") or [[]])[0]
+        sources = [
+            SourceInfo(
+                file_name=m.get("file_name", ""),
+                page_index=int(m.get("page_index", 0)),
+                chunk_index=int(m.get("chunk_index", 0)),
+            )
+            for m in raw_metas
+        ]
+    except Exception as e:
+        logger.error("Retrieval failed: %s", e)
+        raise HTTPException(status_code=500, detail=f"Retrieval error: {e}")
+
+    history = [{"role": m.role, "content": m.content} for m in req.history]
+    t_retrieve_done = time.perf_counter()
+
+    def event_stream():
+        yield f"data: {json.dumps({'type': 'meta', 'sources': [s.model_dump() for s in sources], 'contexts': contexts})}\n\n"
+        t_first = None
+        try:
+            for token in generate_answer_stream(req.question, contexts, mode=llm_mode, history=history):
+                if t_first is None:
+                    t_first = time.perf_counter()
+                yield f"data: {json.dumps({'type': 'token', 'text': token})}\n\n"
+        except Exception as e:
+            logger.error("Stream generation failed: %s", e)
+            yield f"data: {json.dumps({'type': 'error', 'detail': str(e)})}\n\n"
+            return
+        t_done = time.perf_counter()
+        retrieve_ms = round((t_retrieve_done - t_request_start) * 1000, 1)
+        ttft_ms = round((t_first - t_retrieve_done) * 1000, 1) if t_first else 0
+        total_ms = round((t_done - t_request_start) * 1000, 1)
+        logger.info(
+            "stream query=%r retrieve=%.0fms ttft=%.0fms total=%.0fms",
+            req.question[:50], retrieve_ms, ttft_ms, total_ms,
+        )
+        yield f"data: {json.dumps({'type': 'done', 'retrieve_ms': retrieve_ms, 'ttft_ms': ttft_ms, 'total_ms': total_ms})}\n\n"
+
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 
 @app.post("/agent/query", response_model=AgentResponse)
