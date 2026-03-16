@@ -105,6 +105,18 @@ def discover_latency_csv(results_dir: str) -> dict[str, str]:
     return result
 
 
+def discover_stream_comparison_csv(results_dir: str) -> dict[str, str]:
+    """Find all *_stream_comparison.csv; return {label: path}."""
+    root = Path(results_dir)
+    if not root.is_dir():
+        return {}
+    result = {}
+    for p in root.glob("*_stream_comparison.csv"):
+        label = p.stem.replace("_stream_comparison", "")
+        result[label] = str(p)
+    return result
+
+
 def load_metrics(csv_path: str) -> pd.DataFrame:
     """Load metrics CSV; expected columns: k, hit_rate, avg_hit_rate, mrr."""
     path = Path(csv_path)
@@ -324,13 +336,37 @@ def plot_eval_timing(
             latency_rows.append(None)
     has_latency = any(r is not None for r in latency_rows)
 
+    # Load stream comparison CSVs (from test_stream_ttft.py)
+    stream_map = discover_stream_comparison_csv(results_dir)
+    stream_rows = []
+    for label in labels:
+        if label in stream_map:
+            df = pd.read_csv(stream_map[label])
+            if len(df) > 0:
+                row = df.iloc[0]
+                stream_rows.append({
+                    "ns_client_ttft_mean_ms":     float(row.get("ns_client_ttft_mean_ms", 0)),
+                    "stream_client_ttft_mean_ms": float(row.get("stream_client_ttft_mean_ms", 0)),
+                    "ns_client_total_mean_ms":    float(row.get("ns_client_total_mean_ms", 0)),
+                    "stream_client_total_mean_ms":float(row.get("stream_client_total_mean_ms", 0)),
+                    "ttft_saving_mean_ms":        float(row.get("ttft_saving_mean_ms", 0)),
+                })
+            else:
+                stream_rows.append(None)
+        else:
+            stream_rows.append(None)
+    has_stream = any(r is not None for r in stream_rows)
+
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    ncols = 3 if has_latency else 2
+    ncols = 2 + int(has_latency) + int(has_stream)
     fig, axes = plt.subplots(1, ncols, figsize=(6 * ncols, 4))
+    if ncols == 2:
+        axes = list(axes)
     ax1, ax2 = axes[0], axes[1]
     ax3 = axes[2] if has_latency else None
+    ax4 = axes[2 + int(has_latency)] if has_stream else None
 
     x = range(len(labels))
     width = 0.35
@@ -382,6 +418,37 @@ def plot_eval_timing(
         missing = [display_labels[i] for i in x if i not in valid_idx]
         if missing:
             logger.warning("No latency CSV found for: %s. Run benchmark_latency.py --prefix <name>.", missing)
+
+    # Panel 4 (optional): stream vs non-stream client TTFT
+    if ax4 is not None:
+        valid_idx4 = [i for i, r in enumerate(stream_rows) if r is not None]
+        x4 = list(range(len(valid_idx4)))
+        xlabels4 = [display_labels[i] for i in valid_idx4]
+        ns_ttft    = [stream_rows[i]["ns_client_ttft_mean_ms"]     for i in valid_idx4]
+        st_ttft    = [stream_rows[i]["stream_client_ttft_mean_ms"] for i in valid_idx4]
+        ns_total   = [stream_rows[i]["ns_client_total_mean_ms"]    for i in valid_idx4]
+        st_total   = [stream_rows[i]["stream_client_total_mean_ms"] for i in valid_idx4]
+        savings    = [stream_rows[i]["ttft_saving_mean_ms"]        for i in valid_idx4]
+
+        w4 = 0.2
+        pos = [i for i in x4]
+        ax4.bar([p - 1.5*w4 for p in pos], ns_ttft,  w4, label="non-stream TTFT",  color="steelblue",  alpha=0.85)
+        ax4.bar([p - 0.5*w4 for p in pos], st_ttft,  w4, label="stream TTFT",      color="darkorange",  alpha=0.85)
+        ax4.bar([p + 0.5*w4 for p in pos], ns_total, w4, label="non-stream total",  color="steelblue",  alpha=0.35)
+        ax4.bar([p + 1.5*w4 for p in pos], st_total, w4, label="stream total",      color="darkorange",  alpha=0.35)
+        ax4.set_xticks(pos)
+        ax4.set_xticklabels(xlabels4, rotation=15, ha="right", fontsize=7)
+        ax4.set_ylabel("Time (ms)")
+        ax4.set_title("Client-perceived TTFT: stream vs non-stream")
+        ax4.legend(fontsize=6)
+        ax4.grid(True, alpha=0.3)
+        for j, (ns, st, sv) in enumerate(zip(ns_ttft, st_ttft, savings)):
+            ax4.annotate(f"−{sv:.0f}ms", xy=(j, st), xytext=(0, 4),
+                         textcoords="offset points", ha="center", fontsize=6, color="green")
+
+        missing4 = [display_labels[i] for i in range(len(labels)) if i not in valid_idx4]
+        if missing4:
+            logger.warning("No stream comparison CSV for: %s. Run test_stream_ttft.py --prefix <name>.", missing4)
 
     if title:
         fig.suptitle(title, fontsize=12, y=1.02)
