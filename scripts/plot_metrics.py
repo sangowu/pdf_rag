@@ -8,6 +8,7 @@ By default runs all three (metrics + chunk size + timing). Use --no-chunk-size o
 """
 
 import argparse
+import csv
 import logging
 from pathlib import Path
 from typing import Optional
@@ -113,6 +114,18 @@ def discover_stream_comparison_csv(results_dir: str) -> dict[str, str]:
     result = {}
     for p in root.glob("*_stream_comparison.csv"):
         label = p.stem.replace("_stream_comparison", "")
+        result[label] = str(p)
+    return result
+
+
+def discover_itl_details_csv(results_dir: str) -> dict[str, str]:
+    """Find all *_itl_details.csv (per-token ITL rows); return {label: path}."""
+    root = Path(results_dir)
+    if not root.is_dir():
+        return {}
+    result = {}
+    for p in root.glob("*_itl_details.csv"):
+        label = p.stem.replace("_itl_details", "")
         result[label] = str(p)
     return result
 
@@ -357,19 +370,38 @@ def plot_eval_timing(
             stream_rows.append(None)
     has_stream = any(r is not None for r in stream_rows)
 
+    # Load ITL details CSVs (per-token inter-token latency, from test_stream_ttft.py)
+    itl_map = discover_itl_details_csv(results_dir)
+    itl_data: dict[str, list[float]] = {}   # {label: [itl_ms, ...]}
+    for label in labels:
+        if label in itl_map:
+            with open(itl_map[label], encoding="utf-8") as f:
+                itl_data[label] = [float(r["itl_ms"]) for r in csv.DictReader(f)]
+    has_itl = bool(itl_data)
+
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    # Layout: 2×2 base; expand to 2×3 when ITL distribution panel is available
+    ncols = 3 if has_itl else 2
+    figsize = (21, 10) if ncols == 3 else (14, 10)
+    fig, axes = plt.subplots(2, ncols, figsize=figsize)
+
     ax1 = axes[0, 0]
     ax2 = axes[0, 1]
     ax3 = axes[1, 0] if has_latency else None
     ax4 = axes[1, 1] if has_stream else None
-    # hide unused subplots
+    ax5 = axes[1, 2] if (ncols == 3 and has_itl) else None
+
+    # hide unused panels
     if not has_latency:
         axes[1, 0].set_visible(False)
     if not has_stream:
         axes[1, 1].set_visible(False)
+    if ncols == 3 and not has_itl:
+        axes[1, 2].set_visible(False)
+    if ncols == 3:
+        axes[0, 2].set_visible(False)  # top-right cell always empty in 2×3
 
     x = range(len(labels))
     width = 0.35
@@ -422,36 +454,65 @@ def plot_eval_timing(
         if missing:
             logger.warning("No latency CSV found for: %s. Run benchmark_latency.py --prefix <name>.", missing)
 
-    # Panel 4 (optional): stream vs non-stream client TTFT
+    # Panel 4 (optional): client-perceived TTFT — stream first-token vs non-stream total
     if ax4 is not None:
         valid_idx4 = [i for i, r in enumerate(stream_rows) if r is not None]
         x4 = list(range(len(valid_idx4)))
-        xlabels4 = [display_labels[i] for i in valid_idx4]
-        ns_ttft    = [stream_rows[i]["ns_client_ttft_mean_ms"]     for i in valid_idx4]
-        st_ttft    = [stream_rows[i]["stream_client_ttft_mean_ms"] for i in valid_idx4]
-        ns_total   = [stream_rows[i]["ns_client_total_mean_ms"]    for i in valid_idx4]
-        st_total   = [stream_rows[i]["stream_client_total_mean_ms"] for i in valid_idx4]
-        savings    = [stream_rows[i]["ttft_saving_mean_ms"]        for i in valid_idx4]
+        xlabels4  = [display_labels[i] for i in valid_idx4]
+        ns_total  = [stream_rows[i]["ns_client_total_mean_ms"]     for i in valid_idx4]
+        st_ttft   = [stream_rows[i]["stream_client_ttft_mean_ms"]  for i in valid_idx4]
+        st_total  = [stream_rows[i]["stream_client_total_mean_ms"] for i in valid_idx4]
+        savings   = [stream_rows[i]["ttft_saving_mean_ms"]         for i in valid_idx4]
 
-        w4 = 0.2
-        pos = [i for i in x4]
-        ax4.bar([p - 1.5*w4 for p in pos], ns_ttft,  w4, label="non-stream TTFT",  color="steelblue",  alpha=0.85)
-        ax4.bar([p - 0.5*w4 for p in pos], st_ttft,  w4, label="stream TTFT",      color="darkorange",  alpha=0.85)
-        ax4.bar([p + 0.5*w4 for p in pos], ns_total, w4, label="non-stream total",  color="steelblue",  alpha=0.35)
-        ax4.bar([p + 1.5*w4 for p in pos], st_total, w4, label="stream total",      color="darkorange",  alpha=0.35)
-        ax4.set_xticks(pos)
+        w4 = 0.25
+        ax4.bar([p - w4 for p in x4], ns_total, w4*2, label="non-stream: all chars visible", color="steelblue", alpha=0.80)
+        ax4.bar([p + w4 for p in x4], st_ttft,  w4*2, label="stream: first token (TTFT)",   color="darkorange", alpha=0.80)
+        ax4.set_xticks(x4)
         ax4.set_xticklabels(xlabels4, rotation=15, ha="right", fontsize=7)
         ax4.set_ylabel("Time (ms)")
-        ax4.set_title("Client-perceived TTFT: stream vs non-stream")
-        ax4.legend(fontsize=6)
+        ax4.set_title("Client-perceived latency: non-stream total vs stream TTFT")
+        ax4.legend(fontsize=7)
         ax4.grid(True, alpha=0.3)
-        for j, (ns, st, sv) in enumerate(zip(ns_ttft, st_ttft, savings)):
-            ax4.annotate(f"−{sv:.0f}ms", xy=(j, st), xytext=(0, 4),
-                         textcoords="offset points", ha="center", fontsize=6, color="green")
+        for j, (nt, st, sv) in enumerate(zip(ns_total, st_ttft, savings)):
+            ax4.text(j - w4, nt + 5, f"{nt:.0f}", ha="center", fontsize=6)
+            ax4.text(j + w4, st + 5, f"{st:.0f}", ha="center", fontsize=6)
+            ax4.annotate(f"−{sv:.0f}ms", xy=(j + w4, st), xytext=(0, 14),
+                         textcoords="offset points", ha="center", fontsize=6, color="green",
+                         arrowprops=dict(arrowstyle="-", color="green", lw=0.8))
 
         missing4 = [display_labels[i] for i in range(len(labels)) if i not in valid_idx4]
         if missing4:
             logger.warning("No stream comparison CSV for: %s. Run test_stream_ttft.py --prefix <name>.", missing4)
+
+    # Panel 5 (optional): inter-token latency distribution (box plot per config)
+    if ax5 is not None:
+        itl_labels = [l for l in labels if l in itl_data and itl_data[l]]
+        itl_series  = [itl_data[l] for l in itl_labels]
+        display_itl = [l.removeprefix("debug_") for l in itl_labels]
+
+        bp = ax5.boxplot(
+            itl_series,
+            labels=display_itl,
+            patch_artist=True,
+            showfliers=False,
+            medianprops=dict(color="red", linewidth=1.5),
+        )
+        colors = ["steelblue", "seagreen", "darkorange", "purple", "coral"]
+        for patch, color in zip(bp["boxes"], colors * 10):
+            patch.set_facecolor(color)
+            patch.set_alpha(0.6)
+
+        # annotate mean + p95 per config
+        for j, (lbl, series) in enumerate(zip(itl_labels, itl_series), 1):
+            mean_v = sum(series) / len(series)
+            p95_v  = sorted(series)[int(len(series) * 0.95)]
+            ax5.text(j, mean_v, f"μ={mean_v:.0f}", ha="center", va="bottom", fontsize=6, color="navy")
+            ax5.text(j, p95_v,  f"p95={p95_v:.0f}", ha="center", va="bottom", fontsize=5, color="gray")
+
+        ax5.set_ylabel("Inter-token latency (ms)")
+        ax5.set_title("Streaming inter-token latency distribution (outliers hidden)")
+        ax5.grid(True, alpha=0.3, axis="y")
+        ax5.tick_params(axis="x", labelsize=7)
 
     if title:
         fig.suptitle(title, fontsize=12, y=1.02)
