@@ -107,24 +107,54 @@ def _generate_api_stream(prompt: str, history: list[dict] | None = None):
             yield delta
 
 
+def _generate_local_stream(prompt: str):
+    """Yield tokens from local model one by one using TextIteratorStreamer + background thread."""
+    import threading
+    from transformers import TextIteratorStreamer
+    from scripts.generate_qa_from_chunks import _ensure_local_model_loaded
+
+    local_cfg = config.get("llm", {}).get("local", {})
+    tokenizer, model = _ensure_local_model_loaded()
+
+    messages = [{"role": "user", "content": prompt}]
+    chat_text = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
+    )
+    inputs = tokenizer([chat_text], return_tensors="pt").to(model.device)
+
+    gen_kwargs = {
+        **inputs,
+        "max_new_tokens": int(local_cfg.get("max_tokens", 256)),
+        "do_sample": bool(local_cfg.get("do_sample", False)),
+    }
+    if gen_kwargs["do_sample"]:
+        gen_kwargs["temperature"] = float(local_cfg.get("temperature", 0.7))
+        gen_kwargs["min_p"]       = float(local_cfg.get("min_p", 0.0))
+
+    streamer = TextIteratorStreamer(tokenizer, skip_prompt=True, skip_special_tokens=True)
+    gen_kwargs["streamer"] = streamer
+
+    thread = threading.Thread(target=model.generate, kwargs=gen_kwargs, daemon=True)
+    thread.start()
+    for token in streamer:
+        yield token
+    thread.join()
+
+
 def generate_answer_stream(
     question: str,
     contexts: list[str],
     mode: str | None = None,
     history: list[dict] | None = None,
 ):
-    """Generator: yields answer text chunks token by token.
-
-    Local mode has no token-level streaming — yields the full answer in one chunk.
-    """
+    """Generator: yields answer text chunks token by token (both API and local modes)."""
     if mode is None:
         mode = config.get("llm", {}).get("mode", "local")
     prompt = _build_prompt(question, contexts)
     if mode == "api":
         yield from _generate_api_stream(prompt, history=history)
     else:
-        from scripts.generate_qa_from_chunks import _generate_with_backend
-        yield _generate_with_backend(prompt, backend="local", api_client=None)
+        yield from _generate_local_stream(prompt)
 
 
 def generate_answer_timed(
@@ -133,21 +163,22 @@ def generate_answer_timed(
     mode: str | None = None,
     history: list[dict] | None = None,
 ) -> tuple[str, float]:
-    """Returns (answer, ttft_ms).
-
-    API mode: TTFT measured via internal streaming.
-    Local mode: TTFT approximated as total generation time (model.generate is blocking).
-    """
+    """Returns (answer, ttft_ms). TTFT measured via token streaming for both API and local."""
     if mode is None:
         mode = config.get("llm", {}).get("mode", "local")
     prompt = _build_prompt(question, contexts)
     if mode == "api":
         return _generate_api_timed(prompt, history=history)
-    from scripts.generate_qa_from_chunks import _generate_with_backend
+    # Local: use streaming to get true TTFT
     t0 = time.perf_counter()
-    answer = _generate_with_backend(prompt, backend="local", api_client=None)
-    ttft_ms = round((time.perf_counter() - t0) * 1000, 1)  # no token-level streaming in local
-    return answer, ttft_ms
+    t_first = None
+    chunks = []
+    for token in _generate_local_stream(prompt):
+        if t_first is None:
+            t_first = time.perf_counter()
+        chunks.append(token)
+    ttft_ms = round((t_first - t0) * 1000, 1) if t_first else 0.0
+    return "".join(chunks).strip(), ttft_ms
 
 
 def generate_answer(
